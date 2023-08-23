@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+   <TITLE>Lines tangent to 2n-2 spheres in R^n: Calculations</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<TABLE>
+<TR><TD><A HREF="Figure1.html"><IMG SRC="12-lines-s0.gif"></A></TD>
+     </TD> &nbsp;  &nbsp; <TD>
+ <TD> &nbsp;<H2> Calculations from the paper<BR>
+      &nbsp; `<A HREF="../../ps/spheres.ps.gz">Lines tangent to 2<I>n</I>-2 spheres in
+      <B>R</B><SUP><I>n</I></SUP></A>' </H2>
+      &nbsp; &nbsp; &nbsp; &nbsp; by
+<A HREF="../../index.html">Frank Sottile</A> and
+<A HREF="http://www-m9.mathematik.uni-frankfurt.de/~theobald/">Thorsten Theobald</A>.
+<BR><BR><B>Abstract</B>
+We show that there are 3 x 2<SUP><I>n</I>-1</SUP> complex common tangent lines to
+2<I>n</I>-2 general spheres in <B>R</B><SUP><I>n</I></SUP> and that there is a choice 
+of spheres with all common tangents real.
+<BR><BR></TD>
+<TD><A HREF="AffineDep.html"><IMG SRC="AffineDep-lines-sm.gif"></A></TD>
+     </TD></TR>
+
+</TABLE>
+
+
+<HR>
+
+<TABLE border=1>
+<TR><TD align=top>
+<A HREF="tetrahedron.sing">tetrahedron.sing</A> &nbsp; </TD>
+   <TD align=top>  Solves the case of n=3 with 4 spheres at the corners of a
+	           tetrahedron.</TD></TR>
+
+<TR><TD align=top>
+<A HREF="AffineInd.maple">AffineInd.maple</A></TD>
+    <TD align=top> This file creates a Singular file to compute the 
+                   Groebner basis for the example of Section 3 where 
+                   we have one of the 3 factors of the ideal.
+                   This was crucial for the proof of Theorem 5. </TD></TR>
+<TR><TD align=top>
+<A HREF="AffineInd-Ideals">AffineInd-Ideals</A></TD>
+     <TD align=top>   Output of the Singular code from <A
+     HREF="AffineInd.maple">AffineInd.maple</A></TD></TR>
+
+<TR><TD align=top>
+<A HREF="Dependent.maple">Dependent.maple</A></TD>
+    <TD align=top>   This is the maple file accompanying the proof in
+            Section 4.   It runs the computation of the proof, and prints out
+	    commentary. &nbsp;
+            <A HREF="Dependent.out">Here</A> is its output</TD></TR>
+
+<TR><TD align=top>
+<A HREF="GenQuad4.maple">GenQuad4.maple</A></TD>
+  <TD align=top> This maple file creates a Singular file to compute the ideal
+      of lines in 4-space tangent to 6 general quadrics. &nbsp; 
+     <A HREF="GenQuad4.sing">Here</A> is the Singular code it creates. &nbsp; 
+     <A HREF="GenQuad4.out">Here</A> is the output of that code.</TD></TR>
+<TR> <TD>&nbsp;</TD><TD>&nbsp</TD> </TR>
+<TR><TD align=top>
+<A HREF="Figure1.maple">Figure1.maple</A></TD>
+  <TD align=top>  Draws Figure 1, the 12 lines tangent to 
+                  spheres at vertices of a regular tetrahedron.
+                  The ideal as computed in 
+		  <A HREF="tetrahedron.sing">tetrahedron.sing</A> has three
+		  components, and we color the components with different
+		  colors. &nbsp; 
+                  <A HREF="Figure1.html">Figure1.html</A>  </TD></TR>
+
+<TR><TD>
+<A HREF="Figure2.maple">Figure2.maple</A></TD>
+  <TD align=top>  Draws the skeleton of Figure 2, the discriminant 
+                  locus of Theorem 4 in the paper.&nbsp; 
+                  <A HREF="Figure2.html">Figure2.html</A></TD></TR>
+
+</TABLE>
+<BR>
+<BR>
+<I>Based upon work supported by the National Science Foundation 
+    under Grant No. 0070494.</I><BR> 
+
+<I> Last modified: 22 May 2001 by Frank Sottile</I>
+
+</BODY>
+</HTML>

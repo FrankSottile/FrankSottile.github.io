@@ -1,0 +1,112 @@
+y*h*f*b*a*d+ 2*y*f*b*x*a*d+ 2*y*g*e*b*x*a+y*g*e*x*a*c+ 4*y*g*b*x*a*d+y*h*f
+*b*d-y*h*f*a*c-y*h*e*b*a+ 4*y*f*b*x*d-2*y*f*x*a*c+ 6*y*g*e*b*x+y*g*e*x*c+ 4
+*y*g*b*x*d-y*g*b*a*d-4*y*g*x*a*c-2*y*e*b*x*a+h*f*b*a*d-y*h*f*c+ 4*y*h*f*d-y
+*h*e*b-4*y*f*x*c+ 4*y*f*x*d+ 3*y*g*e*x-y*g*b*d-4*y*g*x*c+ 3*y*g*x*d+y*g*a*c
+-4*y*e*b*x+ 2*h*f*b*d-h*f*a*c-h*e*b*a-g*b*a*d+ 3*y*h*f-4*y*h*e+ 2*y*f*x+ 2*y
+*g*x+y*g*c-4*y*g*d-4*y*e*x-2*h*f*c+ 2*h*f*d-2*h*e*b-2*g*b*d+g*a*c+ 5*y*h-3*
+y*g+ 3*y*x+ 6*h*f-2*h*e+ 2*g*c-2*g*d+ 4*y+ 6*h-6*g+ 3;
+ 6*y*h*f*b*a*d+y*f*b*x*a*d+ 2*y*g*e*b*x*a+ 4*y*g*e*x*a*c+ 2*y*g*b*x*a*d+y*
+h*f*b*d-6*y*h*f*a*c-6*y*h*e*b*a+ 5*y*f*b*x*d-y*f*x*a*c+ 4*y*g*e*b*x+ 2*y*g*
+e*x*c+ 4*y*g*b*x*d-6*y*g*b*a*d-2*y*g*x*a*c-y*e*b*x*a+ 6*h*f*b*a*d-y*h*f*c+
+ 6*y*h*f*d-y*h*e*b-5*y*f*x*c+ 4*y*f*x*d+ 2*y*g*e*x-y*g*b*d-4*y*g*x*c+ 3*y*g*
+x*d+ 6*y*g*a*c-5*y*e*b*x+ 5*h*f*b*d-6*h*f*a*c-6*h*e*b*a-6*g*b*a*d+ 6*y*h*f
+-6*y*h*e+ 3*y*f*x+y*g*x+y*g*c-6*y*g*d-4*y*e*x-5*h*f*c+ 4*h*f*d-5*h*e*b-5*g*b
+*d+ 6*g*a*c+ 3*y*h-6*y*g+ 6*y*x+h*f-4*h*e+ 5*g*c-4*g*d+ 6*y+ 4*h-g+ 3;
+ 6*y*h*f*b*a*d+y*f*b*x*a*d+ 2*y*g*e*b*x*a+ 2*y*g*e*x*a*c+ 3*y*g*b*x*a*d+ 4
+*y*h*f*b*d-6*y*h*f*a*c-6*y*h*e*b*a+ 4*y*f*b*x*d-y*f*x*a*c+ 6*y*g*e*b*x+ 6*y
+*g*e*x*c+ 3*y*g*b*x*d-6*y*g*b*a*d-3*y*g*x*a*c-y*e*b*x*a+ 5*h*f*b*a*d-4*y*h*
+f*c+ 4*y*h*f*d-4*y*h*e*b-4*y*f*x*c+ 5*y*f*x*d+ 4*y*g*e*x-4*y*g*b*d-3*y*g*x*
+c+ 3*y*g*x*d+ 6*y*g*a*c-4*y*e*b*x+ 3*h*f*b*d-5*h*f*a*c-5*h*e*b*a-5*g*b*a*d+
+ 4*y*h*f-4*y*h*e+ 2*y*f*x+ 4*y*g*x+ 4*y*g*c-4*y*g*d-5*y*e*x-3*h*f*c+h*f*d-3*
+h*e*b-3*g*b*d+ 5*g*a*c+y*h-4*y*g+y*x+ 4*h*f-h*e+ 3*g*c-g*d+ 2*y+ 6*h-4*g+ 4
+;
+ 6*y*h*f*b*a*d+ 3*y*f*b*x*a*d+y*g*e*b*x*a+ 5*y*g*e*x*a*c+ 5*y*g*b*x*a*d+ 4
+*y*h*f*b*d-6*y*h*f*a*c-6*y*h*e*b*a+ 5*y*f*b*x*d-3*y*f*x*a*c+ 6*y*g*e*b*x+y*
+g*e*x*c+ 4*y*g*b*x*d-6*y*g*b*a*d-5*y*g*x*a*c-3*y*e*b*x*a+ 2*h*f*b*a*d-4*y*h
+*f*c+ 2*y*h*f*d-4*y*h*e*b-5*y*f*x*c+ 3*y*f*x*d+y*g*e*x-4*y*g*b*d-4*y*g*x*c+
+ 2*y*g*x*d+ 6*y*g*a*c-5*y*e*b*x+ 2*h*f*b*d-2*h*f*a*c-2*h*e*b*a-2*g*b*a*d+ 4*
+y*h*f-2*y*h*e+ 6*y*f*x+ 4*y*g*x+ 4*y*g*c-2*y*g*d-3*y*e*x-2*h*f*c+ 6*h*f*d-2
+*h*e*b-2*g*b*d+ 2*g*a*c+ 6*y*h-4*y*g+ 5*y*x+ 4*h*f-6*h*e+ 2*g*c-6*g*d+ 2*y+
+ 5*h-4*g+ 5;
+y*h*f*b*a*d+ 3*y*f*b*x*a*d+ 3*y*g*e*b*x*a+ 5*y*g*e*x*a*c+ 4*y*g*b*x*a*d+ 5
+*y*h*f*b*d-y*h*f*a*c-y*h*e*b*a+ 2*y*f*b*x*d-3*y*f*x*a*c+ 4*y*g*e*b*x+y*g*e*
+x*c+ 3*y*g*b*x*d-y*g*b*a*d-4*y*g*x*a*c-3*y*e*b*x*a+ 4*h*f*b*a*d-5*y*h*f*c+
+ 2*y*h*f*d-5*y*h*e*b-2*y*f*x*c+ 3*y*f*x*d+ 3*y*g*e*x-5*y*g*b*d-3*y*g*x*c+ 5*
+y*g*x*d+y*g*a*c-2*y*e*b*x+ 5*h*f*b*d-4*h*f*a*c-4*h*e*b*a-4*g*b*a*d+ 5*y*h*f
+-2*y*h*e+ 6*y*f*x+ 5*y*g*x+ 5*y*g*c-2*y*g*d-3*y*e*x-5*h*f*c+ 4*h*f*d-5*h*e*b
+-5*g*b*d+ 4*g*a*c+y*h-5*y*g+ 6*y*x+ 6*h*f-4*h*e+ 5*g*c-4*g*d+y+ 5*h-6*g+ 3;
+ 6*y*h*f*b*a*d+ 6*y*f*b*x*a*d+y*g*e*b*x*a+ 4*y*g*e*x*a*c+ 6*y*g*b*x*a*d+ 6
+*y*h*f*b*d-6*y*h*f*a*c-6*y*h*e*b*a+ 5*y*f*b*x*d-6*y*f*x*a*c+y*g*e*b*x+ 4*y*
+g*e*x*c+y*g*b*x*d-6*y*g*b*a*d-6*y*g*x*a*c-6*y*e*b*x*a+ 3*h*f*b*a*d-6*y*h*f*
+c+ 5*y*h*f*d-6*y*h*e*b-5*y*f*x*c+y*f*x*d+ 4*y*g*e*x-6*y*g*b*d-y*g*x*c+ 3*y*
+g*x*d+ 6*y*g*a*c-5*y*e*b*x+ 4*h*f*b*d-3*h*f*a*c-3*h*e*b*a-3*g*b*a*d+ 3*y*h*
+f-5*y*h*e+ 3*y*f*x+ 5*y*g*x+ 6*y*g*c-5*y*g*d-y*e*x-4*h*f*c+ 4*h*f*d-4*h*e*b
+-4*g*b*d+ 3*g*a*c+ 2*y*h-3*y*g+ 4*y*x+ 4*h*f-4*h*e+ 4*g*c-4*g*d+y+ 4*h-4*g+
+ 6;
+ 4*y*h*f*b*a*d+ 6*y*f*b*x*a*d+y*g*e*b*x*a+ 3*y*g*e*x*a*c+y*g*b*x*a*d+ 2*y*
+h*f*b*d-4*y*h*f*a*c-4*y*h*e*b*a+ 3*y*f*b*x*d-6*y*f*x*a*c+ 4*y*g*e*b*x+ 3*y*
+g*e*x*c+ 5*y*g*b*x*d-4*y*g*b*a*d-y*g*x*a*c-6*y*e*b*x*a+ 2*h*f*b*a*d-2*y*h*f
+*c+ 3*y*h*f*d-2*y*h*e*b-3*y*f*x*c+ 3*y*f*x*d+y*g*e*x-2*y*g*b*d-5*y*g*x*c+ 6
+*y*g*x*d+ 4*y*g*a*c-3*y*e*b*x+ 5*h*f*b*d-2*h*f*a*c-2*h*e*b*a-2*g*b*a*d+ 4*y
+*h*f-3*y*h*e+ 6*y*f*x+ 6*y*g*x+ 2*y*g*c-3*y*g*d-3*y*e*x-5*h*f*c+ 3*h*f*d-5*
+h*e*b-5*g*b*d+ 2*g*a*c+ 6*y*h-4*y*g+ 4*y*x+ 4*h*f-3*h*e+ 5*g*c-3*g*d+ 2*y+
+ 2*h-4*g+ 2;
+ 4*y*h*f*b*a*d+ 6*y*f*b*x*a*d+ 2*y*g*e*b*x*a+y*g*e*x*a*c+y*g*b*x*a*d+ 3*y*
+h*f*b*d-4*y*h*f*a*c-4*y*h*e*b*a+ 5*y*f*b*x*d-6*y*f*x*a*c+ 4*y*g*e*b*x+ 2*y*
+g*e*x*c+ 4*y*g*b*x*d-4*y*g*b*a*d-y*g*x*a*c-6*y*e*b*x*a+ 5*h*f*b*a*d-3*y*h*f
+*c+ 2*y*h*f*d-3*y*h*e*b-5*y*f*x*c+y*f*x*d+ 3*y*g*e*x-3*y*g*b*d-4*y*g*x*c+ 4
+*y*g*x*d+ 4*y*g*a*c-5*y*e*b*x+ 2*h*f*b*d-5*h*f*a*c-5*h*e*b*a-5*g*b*a*d+ 3*y
+*h*f-2*y*h*e+ 2*y*f*x+ 4*y*g*x+ 3*y*g*c-2*y*g*d-y*e*x-2*h*f*c+ 4*h*f*d-2*h*
+e*b-2*g*b*d+ 5*g*a*c+ 3*y*h-3*y*g+ 6*y*x+ 6*h*f-4*h*e+ 2*g*c-4*g*d+ 3*y+h-6
+*g+ 2;
+ 3*y*h*f*b*a*d+ 5*y*f*b*x*a*d+y*g*e*b*x*a+ 3*y*g*e*x*a*c+ 6*y*g*b*x*a*d+ 2
+*y*h*f*b*d-3*y*h*f*a*c-3*y*h*e*b*a+ 4*y*f*b*x*d-5*y*f*x*a*c+ 6*y*g*e*b*x+ 4
+*y*g*e*x*c+ 2*y*g*b*x*d-3*y*g*b*a*d-6*y*g*x*a*c-5*y*e*b*x*a+ 2*h*f*b*a*d-2*
+y*h*f*c+ 2*y*h*f*d-2*y*h*e*b-4*y*f*x*c+ 5*y*f*x*d+ 2*y*g*e*x-2*y*g*b*d-2*y*
+g*x*c+ 4*y*g*x*d+ 3*y*g*a*c-4*y*e*b*x+ 3*h*f*b*d-2*h*f*a*c-2*h*e*b*a-2*g*b*
+a*d+ 3*y*h*f-2*y*h*e+ 6*y*f*x+ 6*y*g*x+ 2*y*g*c-2*y*g*d-5*y*e*x-3*h*f*c+ 4*
+h*f*d-3*h*e*b-3*g*b*d+ 2*g*a*c+ 5*y*h-3*y*g+ 6*y*x+ 5*h*f-4*h*e+ 3*g*c-4*g*
+d+ 5*y+ 6*h-5*g+ 5;
+ 4*y*h*f*b*a*d+ 3*y*f*b*x*a*d+ 4*y*g*e*b*x*a+ 5*y*g*e*x*a*c+ 2*y*g*b*x*a*d
++ 2*y*h*f*b*d-4*y*h*f*a*c-4*y*h*e*b*a+ 5*y*f*b*x*d-3*y*f*x*a*c+ 5*y*g*e*b*x
++ 6*y*g*e*x*c+ 5*y*g*b*x*d-4*y*g*b*a*d-2*y*g*x*a*c-3*y*e*b*x*a+ 2*h*f*b*a*d
+-2*y*h*f*c+ 4*y*h*f*d-2*y*h*e*b-5*y*f*x*c+ 5*y*f*x*d+ 4*y*g*e*x-2*y*g*b*d-5*
+y*g*x*c+ 6*y*g*x*d+ 4*y*g*a*c-5*y*e*b*x+ 4*h*f*b*d-2*h*f*a*c-2*h*e*b*a-2*g*
+b*a*d+ 6*y*h*f-4*y*h*e+ 2*y*f*x+ 3*y*g*x+ 2*y*g*c-4*y*g*d-5*y*e*x-4*h*f*c+
+ 3*h*f*d-4*h*e*b-4*g*b*d+ 2*g*a*c+ 3*y*h-6*y*g+ 4*y*x+ 6*h*f-3*h*e+ 4*g*c-3*
+g*d+ 3*y+h-6*g+ 4;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                 77.470000000 =  0h 1m17s470ms
+User time in seconds was                        77.420000000 =  0h 1m17s420ms
+System CPU time in seconds was                   0.050000000 =  0h 0m 0s 50ms
+Non-I/O page faults was                        614
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+
+THE TRIANGULATION :
+
+Dimension without lifting : 10
+Number of simplices : 3965
+
+
+
+The volume : 4136
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                  8.580000000 =  0h 0m 8s580ms
+User time in seconds was                         8.210000000 =  0h 0m 8s210ms
+System CPU time in seconds was                   0.370000000 =  0h 0m 0s370ms
+Non-I/O page faults was                          1
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0

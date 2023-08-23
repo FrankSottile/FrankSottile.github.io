@@ -1,0 +1,473 @@
+<HTML>
+<HEAD>
+   <TITLE>Khovanskii-Rolle continuation for real solutions</TITLE>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>Khovanskii-Rolle continuation for real solutions</H1>
+
+<font size=+2>
+  <A HREF="http://www.math.colostate.edu/~bates/">Dan Bates</A> and
+   <A HREF="http://www.math.tamu.edu/~sottile/index.html">Frank Sottile</A>
+</font><BR>
+
+<hr>
+
+<p>
+
+<h2>The purpose</h2>
+
+<font size=+1>
+
+Numerical homotopy methods [<A href="#SW">SW</A>] can compute all nondegeneration solutions of
+a polynomial polynomial systems.  
+To find only the nondegenerate real solutions of a polynomial system with 
+homotopy, one must first compute all nondegenerate complex solutions.  
+There are examples of
+systems with thousands of complex solutions but only a few real solutions, so
+this procedure can be inefficient. 
+
+<p>
+The goal of this project is to develop a method to find only real solutions of
+a polynomial system via curve-following (related to homotopy methods, but
+without the homotopies).  The method is rooted in fewnomial theory
+(particularly the Khovanskii-Rolle theorem and Gale Duality) and constitutes
+the first known continuation method that produces only the real solutions
+without also producing the complex solutions. 
+
+<p>
+This page describes the method for the case of two equations in two variables -
+the simplest nontrivial case.  Rather than giving all details of the general
+method (see [<a href="#BaS">BaS</a>]), we focus on an illustrating example.  Extensions
+to larger systems are under development. 
+
+<p>
+The software/scripts may be obtained from links at the <a href="#end">end</a> of this page.
+
+
+<hr>
+
+<h2>Overview of the method</h2>
+
+<h3>Basic notions</h3>
+
+Given a polynomial system <b>h(x)</b> with <b>n</b> polynomials whose support
+consists of <b>n+L+1</b> monomials in <b>n</b> variables, we may use Gale
+duality [<a href="BiS">BiS</a>] to change to a system <b>g(y)</b> of <b>L</b> polynomials in
+<b>L</b> variables.  
+For this to be practical, <b>L</b> should be small (this is a
+<em>few</em>nomial system).  
+
+<p>
+One key observation is that there is a (algorithmic) scheme-theoretic
+isomorphism between the real solutions of the original system <b>f(x)</b> and
+the real solutions of the Gale dual system <b>g(y)</b>.  Thus, given the
+solutions to one, it is not hard to find the solutions of the other.
+
+<p>
+The other key to this method is to the Khovanskii-Rolle theorem [<a href="K">K</a>].  
+Suppose that we have smooth functions <b>f<sub>1</sub></b>,...,<b>f<sub>L-1</sub></b>,<b>g</b>
+on a domain <b>D</b> of <b>R<sup>L</sup></b>
+with finitely many common zeroes in <b>D</b>, and such that the common zeroes of all but
+the last functions, <b>f<sub>1</sub></b>,...,<b>f<sub>L-1</sub></b>, is a
+smooth curve <b>C</b> in <b>D</b>. 
+Let <b>J</b> be the Jacobian determinant of the functions
+<b>f<sub>1</sub></b>,...,<b>f<sub>L-1</sub></b>,<b>g</b>.
+
+The Khovanskii-Rolle theorem then says, roughly, that between any two zeroes of 
+<b>g</b> along an arc of <b>C</b> there is at least one zero of <b>J</b>.
+The following picture illustrates the Khovanskii-Rolle Theorem when <b>L=2</b>.
+
+<center>
+ <IMG SRC="KhRo.png"><br><br>
+ <img ALIGN="MIDDLE" src="dfdga.png">, 
+ <img ALIGN="MIDDLE" src="dfdgc.png">,
+ and <img ALIGN="MIDDLE" src="dfdgb.png">.
+</center>
+
+
+
+<h3>The method</h3>
+
+With those tools (Gale duality and the Khovanskii-Rolle theorem) in hand, we now give
+pseudocode for the method in the case <b>L=2</b>: 
+
+<p>
+
+<u><b>Input</b></u>: The Gale dual system <b>g<sub>1</sub>(y<sub>1</sub>,
+y<sub>2</sub>)</b>,  <b>g<sub>1</sub>(y<sub>1</sub>, y<sub>2</sub>)</b>. 
+<p>
+<u><b>Output</b></u>:  All real solutions in the polyhedron <b>P</b> in
+<b>R<sup>2</sup></b> (with variables <b>y_1, y_2</b>)
+corresponding to the positive orthant of <b>R<sup>n</sup></b> (with variables <b>x</b>).  
+<p>
+<u><b>Method</b></u>:
+<p>
+<ol>
+
+ <li>Form <b>J<sub>2</sub></b> (the Jacobian determinant of <b>g<sub>1</sub></b>
+   and <b>g<sub>2</sub></b>) and <b>J<sub>1</sub></b> (the Jacobian determinant of
+   <b>g<sub>1</sub></b> and <b>J<sub>2</sub></b>).  
+   After multiplying by linear forms defining the edges of <b>P</b>, these have
+   degrees  <b>n</b> and <b>2n</b>, respectively.<br><br>
+
+ <li>Find all real solutions of the polynomial system
+   <b>J<sub>1</sub>=J<sub>2</sub>=0</b>. 
+   (At most <b>2n<sup>2</sup></b>.)<br>  <br>
+
+ <li>Starting from those points AND points on the boundary of <b>P</b> at which
+   <b>J<sub>1</sub>=0</b> (at most <b>n</b> times the number of edges of
+   <b>P</b>), track along the curve 
+   <b>J<sub>1</sub>=0</b> in search of points at which <b>g<sub>2</sub>=0</b>. <br><br>
+
+ <li>Starting from the solutions found in the previous step AND point on the
+   boundary of <b>P</b> at which <b>g<sub>2</sub>=0</b> (necessarily vertices), track 
+   along the curve <b>g<sub>2</sub>=0</b> in search of points at which
+   <b>g<sub>1</sub>=0</b>.  Return these points.  
+
+</ol>
+
+<h3>A few remarks about the pseudocode</h3>
+
+<ol>
+ <li>  Output:  One can in fact find solutions away from a certain hyperplane
+  arrangement (not just within a certain polyhedron); the polyhedron
+  corresponding to the positive orthant in the original variables is just the
+  basic case. 
+
+ <li>  Step 2:  This can be done numerically or symbolically.  (We use numerical homotopy.)  
+  The system to be solved here is much smaller than the initial system (if the original
+  system is indeed a fewnomial system).  
+<!--Thus, although we are computing a handful of extraneous complex solutions at this step, we are computing far  fewer than we would if we simply used homotopy methods on the original system. -->
+
+ <li>  Steps 3 and 4:  The boundary starting points are easily computed.  The
+  curve-following is carried out by standard predictor-corrector schemes.  
+  We track the curve in both directions from an interior starting point and into <b>P</b> for
+  starting points on its boundary.
+  The edge inequalities tell us when a curve has left <b>P</b>.
+
+ <li>  Steps 3 and 4:  Points on these curves where the
+  target function (e.g., <b>g<sub>2</sub></b> in Step 3) vanishes are found by
+  monitoring the sign of the target function and repeated bisection.
+  This procedure could be fooled with two very near solutions, but that may be
+  detected by monitoring the sign of the Jacobian as well.
+
+ <li>  Step 4:  The curves are singular at the vertices, but may be
+  approximated by monomial curves near the vertices (as explained in [<a href="#BS">BS</a>]).  
+  This allows the tracing of curves near the vertices using a hybrid of the
+  standard and monomial tracing procedures.  
+
+</ol>
+
+
+<!--<h3>Further remarks</h3>-->
+
+
+<hr>
+
+<h2>A basic example</h2>
+
+<font size=+1>
+We describe our computation to find all  positive real solutions of the system of equations
+
+<center>
+ <table>
+  <tr><td align=right><font size=+1>
+ <b>t</b><sup>-1</sup><b>u</b><sup>691</sup><b>v</b><sup>5</sup><b>w</b><sup>5</sup>
+  </td><td><font size=+1>
+  &nbsp; = &nbsp;  3500(3-<b>t</b>)</tr>
+  <!-------------------------------------------------------->
+  <tr><td align=right><font size=+1>
+ <b>t</b><sup>-1</sup><b>u</b><sup>463</sup><b>v</b><sup>5</sup><b>w</b><sup>5</sup>
+  </td><td><font size=+1>&nbsp; = &nbsp; 3500(7-2<b>t</b>-<b>v</b>)</tr>
+  <!-------------------------------------------------------->
+  <tr><td align=right><font size=+1>
+ <b>t</b><sup>1</sup><b>u</b><sup>492</sup>
+  </td><td><font size=+1>&nbsp; = &nbsp; <b>v</b>+2<b>t</b> - 4</tr>
+  <!-------------------------------------------------------->
+  <tr><td align=right><font size=+1>
+ <b>w</b>
+  </td><td><font size=+1>&nbsp; = &nbsp; 9-2<b>t</b>-2<b>v</b>.</tr>
+</table>
+  <!-------------------------------------------------------->
+</center>
+
+Under the substitution <b>x</b>=<b>t</b>
+and <b>y</b>=<b>t</b><sup>1</sup><b>u</b><sup>492</sup>,
+this is Gale-dual to the system
+
+<center>
+<font color=blue>3500<sup>12</sup><b>x</b><sup>8</sup><b>y</b><sup>4</sup>
+       (3-<b>y</b>)<sup>45</sup> &nbsp; - &nbsp; 
+     (3-<b>x</b>)<sup>33</sup>(4-2<b>x</b>+<b>y</b>)<sup>60</sup>
+       (2<b>x</b>-<b>y</b>+1)<sup>60</sup>
+    &nbsp; &nbsp; =  &nbsp; &nbsp; 0</font>
+<BR>
+<font color=red>3500<sup>12</sup><b>x</b><sup>27</sup>(3-<b>x</b>)<sup>8</sup>
+      (3-<b>y</b>)<sup>4</sup> &nbsp; - &nbsp; 
+     <b>y</b><sup>15</sup>(4-2<b>x</b>+<b>y</b>)<sup>60</sup>
+      (2<b>x</b><b>-y</b>+1)<sup>60</sup>
+    &nbsp; &nbsp; =  &nbsp; &nbsp; 0 </font>
+</center>
+in the interior of the hexagon below.
+<center>
+<!------------------------------------------------>
+<table>
+ <TR>
+  <TD rowspan=6> 
+   <img src="hex.gif">
+  </TD>
+  <TD align=right>
+    <b>x</b> &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+ <TR>
+  <TD align=right>
+    <b>y</b> &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+ <TR>
+  <TD align=right>
+    (3-<b>x</b>) &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+ <TR>
+  <TD align=right>
+    (3-<b>y</b>) &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+ <TR>
+  <TD align=right>
+    (2<b>x</b><b>-y</b>+1) &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+ <TR>
+  <TD align=right>
+   &nbsp; &nbsp;  (4-2<b>x</b>+<b>y</b>) &nbsp; > &nbsp; 0
+  </TD>
+ </TR>
+</table>
+<!------------------------------------------------>
+</center>
+We find all positive real solutions to the original system of equations by solveing the
+Gale-dual system in the hexagon.<br><br>
+
+
+<p>
+The six edges of the hexagon define an arrangement <b>A</b> of six lines in the plane, and
+the system makes sense in the complement <b>M<sub>A</sub></b> of this arrangement,
+as a subset of <b>C</b><sup>2</sup>.
+The system has 7663 solutions in <b>M<sub>A</sub></b>, but only six in
+the interior of the hexagon, corresponding to positive real solutions of the polynomial system 
+for which the polynomials above are the Gale dual.<BR>
+
+
+<p>
+Here is a picture of the two curves defined be each polynomial in the system and 
+a list of these six solutions.
+<BR>
+<center>
+<!------------------------------------------------>
+<table border=1>
+ <TR>
+  <TD rowspan=6> 
+   <img src="initial_curves.gif">
+  </TD>
+  <TD><font size=+1>
+   &nbsp; (2.79663357, 2.79663357)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font size=+1>
+   &nbsp; (2.26761325, 2.26761325)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font size=+1>
+   &nbsp; (1.02038373, 0.88143449)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font size=+1>
+   &nbsp; (0.79676549, 1.11264683)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font size=+1>
+   &nbsp; (0.73238675, 0.73238675)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font size=+1>
+   &nbsp; (0.20336643, 0.20336643)&nbsp;&nbsp;</font>
+  </TD>
+ </TR>
+</table>
+<!------------------------------------------------>
+</center>
+
+&nbsp; &nbsp; 
+To find these six solutions, we first solve the system of Jacobian determinants 
+described above, namely: 
+
+<p>
+
+<center>
+<font color=green>
+2736-15476x+2564y +32874x<sup>2</sup>-21075xy+6969y<sup>2</sup>
+-10060x<sup>3</sup>-7576x<sup>2</sup>y+8041xy<sup>2</sup>-869y<sup>3</sup>  + 7680x<sup>3</sup>y-7680x<sup>2</sup>y<sup>2</sup>+1920xy<sup>3</sup> &nbsp; &nbsp; =  &nbsp; &nbsp; 0,
+</font>
+<br>
+   8357040x-2492208y
+   -25754040x<sup>2</sup>+4129596xy-10847844y<sup>2</sup>
+   -37659600x<sup>3</sup>+164344612x<sup>2</sup>y-65490898xy<sup>2</sup>+17210718y<sup>3</sup>  +75054960x<sup>4</sup>
+  -249192492x<sup>3</sup>y+55060800x<sup>2</sup>y<sup>2</sup>+16767555xy<sup>3</sup>-2952855y<sup>4</sup> -36280440x<sup>5</sup>
+   +143877620x<sup>4</sup>y+35420786x<sup>3</sup>y<sup>2</sup>-80032121x<sup>2</sup>y<sup>3</sup>+19035805xy<sup>4</sup>-1128978y<sup>5</sup> +5432400x<sup>6</sup>
+   -33799848x<sup>5</sup>y-62600532x<sup>4</sup>y<sup>2</sup>+71422518x<sup>3</sup>y<sup>3</sup>
+             -13347072x<sup>2</sup>y<sup>4</sup>-1836633xy<sup>5</sup>+211167y<sup>6</sup>
+   +2358480x<sup>6</sup>y+21170832x<sup>5</sup>y<sup>2</sup>-13447848x<sup>4</sup>y<sup>3</sup>-8858976x<sup>3</sup>y<sup>4</sup>+7622421x<sup>2</sup>y<sup>5</sup>-1312365xy<sup>6</sup>
+   -1597440x<sup>6</sup>y<sup>2</sup>-1228800x<sup>5</sup>y<sup>3</sup>+4239360x<sup>4</sup>y<sup>4</sup>-2519040x<sup>3</sup>y<sup>5</sup>+453120x<sup>2</sup>y<sup>6</sup>  &nbsp; &nbsp; =  &nbsp; &nbsp; 0.
+</center>
+
+<p>
+
+Here is a picture of the curves corresponding to those equations.
+
+<center>
+<img src="Jac_curves.gif">
+</center>
+
+Standard numerical homotopy software can find the points of intersection of these two curves as
+well as the points where the <font color=green>green</font> curve meets the boundary
+of <b>P</b>.  The computation of these points involves the tracking of 56 homotopy paths.
+There are 5 points in the interior and 2 points on the boundary. 
+
+<p>
+From the Khovanskii-Rolle theorem, we are guaranteed that any solutions of the
+<font color=red>red</font> curve on the <font color=green>green</font> curve
+must fall between points on the <font color=green>green</font> curve 
+described in the previous paragraph.  Furthermore, any two intersections of the
+<font color=red>red</font> and <font color=green>green</font> curves will have
+one of these starting points between them. 
+We find these points where the <font color=red>red</font> curve meets the 
+<font color=green>green</font> curve by curve-tracking along the 
+<font color=green>green</font> curve.
+
+<center>
+<img src="round_one_curves.gif">
+</center>
+
+This yields 4 points on the interior of <b>P</b>.  
+The <font color=red>red</font> curve vanishes at four vertices of <b>P</b> as well.  
+Starting at those points and the points found in the previous
+step, we can now track along the <font color=red>red</font> curve to find points
+where it intersects the <font color=blue>blue</font> curve.  
+
+<center>
+<img src="round_two_curves.gif">
+</center>
+
+Ultimately, we find all six intersections of the <font color=red>red</font> and
+<font color=blue>blue</font> curves in the interior of <b>P</b> after tracing
+just 30 curves (6 of which are immediately terminated due to being outside
+<b>P</b>) and following 56 homotopy paths.  This is in comparison to a standard
+homotopy method which would involve following 15326 paths leading to 7663 complex
+solutions. 
+
+
+<p>
+
+<hr>
+
+<h2> Planned extensions </h2>
+
+We intend to generalize this method to arbitary <b>L</b> (we have restricted to the
+case <b>L=2</b> thusfar, for simplicity).  
+
+<hr>
+
+<h2> Scripts for running this problem </h2>
+
+The procedure described above has been implemented by the authors in Maple as a set of several
+scripts.  These scripts use Bertini as a blackbox for finding all complex roots of a
+polynomials system.  PHC or HOM4PS-2.0 could be substituted for Bertini, though that has not
+yet been implemented. 
+
+<p>
+
+Also, please note that this code is still under development and is neither fully general nor
+completely tested (though we have tested several polynomial systems with it). 
+
+<p>
+
+<A href="KhRo.tar.gz">KhRo, a set of Maple scripts</a> (tar.gz file)
+
+<p>
+
+You need to place a copy of (or link to) Bertini (the one appropriate to your
+computer) in the directory "bertini_files" that you will find when you untar
+KhRo.  You can find Bertini at the following website: 
+
+<p>
+
+<a href="http://www.nd.edu/~sommese/bertini/">Bertini</a> (free, but not open source)
+
+
+<HR>
+
+<h2> Further reading </h2>
+
+<!----------------------------------------------------------------------->
+ <A NAME="BaS">[BaS]</A>
+   Daniel&nbsp;J.&nbsp;Bates and F.&nbsp;Sottile, 
+   <a href="../../pdf/Rolle.pdf"><I>Khovanskii-Rolle continuation for real
+   solutions</I></a>,
+      <a href="http://www.springerlink.com/content/k7v750156533g171/">Foundations of Computational
+       Mathematics</a>, Volume 11, Number 5 (2011), 563-587. DOI: 10.1007/s10208-011-9097-1.  25 pages.
+<p>
+<!----------------------------------------------------------------------->
+ <A NAME="BBS">[BBS]</A>
+   Daniel&nbsp;J.&nbsp;Bates, Fr&eacute;d&eacute;ric Bihan, and F.&nbsp;Sottile, 
+   <a href="../../pdf/BBS.pdf"><EM>Bounds on the number of real solutions to
+   polynomial equations</EM></a>,  IMRN, 2007, 2007:rnm114-7.
+<p>
+<!----------------------------------------------------------------------->
+ <A NAME="BiS">[BiS]</A>
+   Fr&eacute;d&eacute;ric Bihan and F.&nbsp;Sottile, 
+  <a href="../../pdf/Gale.pdf"> <EM>Gale duality for complete intersection</EM></a>,  
+   Annales de l'Institut Fourier, Tome 58 (2008) fasicule 3, pp.&nbsp;877--891.
+<p>
+<!----------------------------------------------------------------------->
+<A NAME="K">[K]</A>
+   Askold Khovanskii (translated by Smilka Zdavkovska), 
+   <EM>Fewnomials</EM>,  
+   <it>AMS</it>, 1991.
+</font>
+<p>
+<!----------------------------------------------------------------------->
+<A NAME="SW">[SW]</A>
+   Andrew Sommese and Charles&nbsp;W.&nbsp;Wampler, 
+   <EM>The numerical solution of systems of polynomials</EM>,  
+   <it>World Scientific</it>, 2005.
+</font>
+<HR>
+<!----------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------->
+<I>Work of Sottile supported by the National Science Foundation 
+    under CAREER Grant DMS-0538734 and grants DMS-0701050 and DMS-0915211.</I><BR>
+<I>Work of Bates supported by the National Science Foundation 
+    under grant DMS-0914674.</I><BR>
+<i>This work was also supported in part by the Institute for Mathematics and its
+   Applications with funds provided by the National Science Foundation</I>.<br>
+<I><FONT SIZE =-2>Any opinions, findings and conclusions or recomendations expressed in
+    this material are those of the authors and do not necessarily reflect the views of
+    the National Science Foundation).</FONT> 
+<!---------------------------------------------------------------------->
+<HR>
+<FONT COLOR="AA00AA"><I>Modified since: 4 August 2009 by Dan Bates and/or Frank Sottile</I></font>
+<A NAME="end"></A>
+</BODY>
+</HTML>

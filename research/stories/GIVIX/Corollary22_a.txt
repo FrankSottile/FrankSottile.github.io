@@ -1,0 +1,261 @@
+    |\^/|     Maple 2021 (X86 64 LINUX)
+._|\|   |/|_. Copyright (c) Maplesoft, a division of Waterloo Maple Inc. 2021
+ \  MAPLE  /  All rights reserved. Maple is a trademark of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#Corollary22_a.maple
+#
+#   This is the maple computation reported in the proof of Corollary 22 
+#
+#  It is for the Schubert problem (3,1)*(4,1)*(1,1,1)*(2,1,1)*(2,1,1) = 6
+#
+# Frank Sottile
+# 7 December 2018
+#################################################################################
+#interface(quiet=true):
+> kernelopts(printbytes=false):
+
+> die:=rand(-1..2):
+
+> with(LinearAlgebra):
+
+# These are local coordinates for (3,1) * (4,1)
+#  The second row with last three entries x, w+x, w-x is a bit sneaky
+#  The block structure of its columns will be important.
+#  Rows 1 and 4 give a 2-plane in cols (12789) that meets a 2-plane
+#   and a complementary 3-plane
+
+> Coords := Matrix([
+>  [ 0, 0,   0, 0, 0, 0,   1, a, b],
+>  [ 0, 0,   0, 1, z, y,   x, w+x, w-x],
+>  [ 0, 1,   v, u, t, s,   0, 0, 0],
+>  [ 1, c,   0, 0, 0, 0,   0, 0, 0]]):
+
+#  These are 3-planes in the C^2 given by columns 1,2,7,8,9 that are in 
+#   a particular special position.  They are the intersections of the
+#   three seven planes defining (111), (211), (211)
+
+> LI := Matrix([
+>  [1, 1,  0, 0, 0, 0,  1, 1, 1],
+>  [1, 2,  0, 0, 0, 0,  2, 2, 0],
+>  [1, 3,  0, 0, 0, 0,  3, 0, 3]]):
+
+> LII := Matrix([
+>  [1, 1,  0, 0, 0, 0,  2, 2, 2],
+>  [1, 2,  0, 0, 0, 0,  3, 3, 0],
+>  [1, 3,  0, 0, 0, 0,  1, 0, 1]]):
+
+> LIII := Matrix([
+>  [1, 1,  0, 0, 0, 0,  3, 3, 3],
+>  [1, 2,  0, 0, 0, 0,  2, 2, 0],
+>  [1, 3,  0, 0, 0, 0,  1, 0, 1]]):
+
+#r:=2:
+#LR := [seq(die()+r,i=1..9)]:
+#LR := [seq(r,i=1..8),1+2*r]:
+# The first two are an attempt to find the 'right' general row for the last row of LaI.
+> LR := [1,2,3,seq(r,i=1..5),1]:
+
+> LaI := Matrix(3,9,die):
+> LaIlr := Matrix(1,9,LR):
+> LaII := Matrix(4,9,die):
+> LaIII := Matrix(4,9,die):
+
+> CLLI   := Matrix([[Coords], [LI],   [LaI], [LaIlr]]) ;
+           [0     0    0    0     0     0    1       a             b       ]
+           [                                                               ]
+           [0     0    0    1     z     y    x     w + x         w - x     ]
+           [                                                               ]
+           [0     1    v    u     t     s    0       0             0       ]
+           [                                                               ]
+           [1     c    0    0     0     0    0       0             0       ]
+           [                                                               ]
+           [1     1    0    0     0     0    1       1             1       ]
+           [                                                               ]
+   CLLI := [1     2    0    0     0     0    2       2             0       ]
+           [                                                               ]
+           [1     3    0    0     0     0    3       0             3       ]
+           [                                                               ]
+           [-1    1    1    0     -1    2    0       0             1       ]
+           [                                                               ]
+           [2     2    0    -1    1     2    -1      2            -1       ]
+           [                                                               ]
+           [0     1    0    0     2     2    1       1            -1       ]
+           [                                                               ]
+           [:     :    :    :     :     :    :       :      "11 x 9 Matrix"]
+
+> CLLII  := Matrix([[Coords], [LII],  [LaII]]) :
+> CLLIII := Matrix([[Coords], [LIII], [LaIII]]) :
+
+> COLS :=[seq(ii,ii=1..9)]:
+#
+#  These are the equations for the auxillaray problem in G(2,5)
+#    given by rows 1 and 4 of the coordinates and columns 1,2,7,8,9
+#
+> SEqs:=[
+> Determinant(SubMatrix(CLLI, [1,4,5,6,7], [1,2,7,8,9])),
+> Determinant(SubMatrix(CLLII, [1,4,5,6,7], [1,2,7,8,9])),
+> Determinant(SubMatrix(CLLIII, [1,4,5,6,7], [1,2,7,8,9]))];
+SEqs := [4 a c + 3 b c - c - 6, -3 a c + b c + 15 a + b + 5 c - 19,
+
+    -4 a c - b c + 16 a + 4 b + 7 c - 22]
+
+> GB:=Groebner[Basis](SEqs,plex(a,b,c));
+                3      2               2                 2
+        GB := [c  - 6 c  + 11 c - 6, -c  + b + 4 c - 4, c  + 2 a - 3 c]
+
+> factor(GB[1]);
+                            (c - 1) (c - 2) (c - 3)
+
+
+#  
+#  As this factors, it shows that the three solutions correspond to c=1,2,3
+#   which are defined over Q (and are constant)
+
+
+> Eqs:=[]:
+
+> for ROWS in combinat[choose]([seq(ii,ii=5..11)],5) do
+>   Eqs:=[Eqs[],Determinant(SubMatrix(CLLI, [1,2,3,4,ROWS[]], COLS))
+>              ,Determinant(SubMatrix(CLLII, [1,2,3,4,ROWS[]], COLS))
+>              ,Determinant(SubMatrix(CLLIII, [1,2,3,4,ROWS[]], COLS))]:
+> end do:
+> for CLS in combinat[choose](COLS,8) do
+>   Eqs:=[Eqs[],Determinant(SubMatrix(CLLI, [1,2,3,4,8,9,10,11], CLS))
+>              ,Determinant(SubMatrix(CLLII, [1,2,3,4,8,9,10,11], CLS))]:
+> end do:
+
+
+> GG:=Groebner[Basis](subs(r=5,Eqs),lexdeg([z,y,x,w,v,u,t,s],[a,b,c])):
+> GG:=Groebner[Basis](GG,plex(z,y,x,w,v,u,t,s,a,b,c)):
+> with(PolynomialIdeals):
+> J:=<GG>:
+> NumberOfSolutions(J);
+                                       6
+
+#
+#  There are six solutions when r=5, which is what is expected.
+#
+
+#
+#  We check that for each value of c=1,2,3 there are two solutions to the Schubert problem.
+#
+> GG:=Groebner[Basis](subs(c=1,Eqs),plex(a,b,z,y,x,w,v,u,t,s)):
+> S1:=GG[1];
+                    3                 2                                    2
+S1 := (22452836420 r  + 744861864740 r  - 957200347395 r - 4165487405640) s
+
+                     3                 2
+     + (-6610791122 r  - 158976367854 r  + 2926854738468 r + 13296750258600) s
+
+                  3                2
+     + 511817372 r  + 12819766948 r  - 74058708780 r - 1062249112656
+
+> GG:=Groebner[Basis](subs(c=2,Eqs),plex(a,b,z,y,x,w,v,u,t,s)):
+> S2:=GG[1];
+                  3               2                               2
+S2 := (334439424 r  - 3447328448 r  - 4111399960 r + 5222397950) s
+
+                     3                2
+     + (-1204013088 r  + 12621056108 r  - 596061013 r - 153870741360) s
+
+                 3              2
+     + 87867396 r  - 896779281 r  - 2006574838 r + 21438702040
+
+> GG:=Groebner[Basis](subs(c=3,Eqs),plex(a,b,z,y,x,w,v,u,t,s)):
+> S3:=GG[1];
+                     3                   2
+S3 := (667968477445 r  - 18510173870505 r  - 89812153574605 r - 59584111133280)
+
+     2
+    s  +
+
+                   3                   2
+    (263125884652 r  - 10229275365424 r  - 49831270599300 r - 49127949147744) s
+
+                     3                 2
+     - 161004428640 r  + 234843886928 r  + 4841402924032 r + 5440886604672
+
+
+#
+#  Let us compute their discriminants as functions of 4
+#
+> D1:= primpart(expand(coeff(S1,s^2)^2 - 4* coeff(S1,s)*subs(s=0,S1)));
+                             6                            5
+D1 := 517663934258890301936 r  + 34112985882331119642976 r
+
+                                 4                              3
+     + 512037224826094848505144 r  - 1865510065815266914134264 r
+
+                                  2
+     - 5779491577777407304437111 r  + 24349567999226966722051632 r
+
+     + 73849129980170612035176000
+
+> D2:= primpart(expand(coeff(S2,s^2)^2 - 4* coeff(S2,s)*subs(s=0,S2)));
+                          6                        5                         4
+D2 := 133755926873841792 r  - 2765174596595051472 r  + 11238244823928361408 r
+
+                             3                          2
+     + 72083218561169158371 r  - 414538953266024353774 r
+
+     - 306710066823381374160 r + 3305607336777985425025
+
+> D3:= primpart(expand(coeff(S3,s^2)^2 - 4* coeff(S3,s)*subs(s=0,S3)));
+                                6                               5
+D3 := 615639617735350694661145 r  - 31563433879504345246409114 r
+
+                                    4                                 3
+     + 195064478192494353582661007 r  + 3452817170549889196699862506 r
+
+                                      2
+     + 11505835383835744311694034665 r  + 12738652636829350817541162432 r
+
+     + 4619464701274931758918198272
+
+#
+#  Check that these are relatively prime
+#
+> Groebner[Basis]([D1,D2], plex(s));
+                                      [1]
+
+> Groebner[Basis]([D1,D3], plex(s));
+                                      [1]
+
+> Groebner[Basis]([D3,D2], plex(s));
+                                      [1]
+
+#
+#   As these are relatively prime, their branch points in the r-line are distinct.
+#
+#
+#  Numerically find the roots of the discriminants
+#
+> fsolve(D1=0,complex);
+-34.5850982582566, -33.7489681125059, -2.45166082659013 - 1.02250273432741 I,
+
+    -2.45166082659013 + 1.02250273432741 I,
+
+    3.66972497555520 - 1.96326235994256 I,
+
+    3.66972497555520 + 1.96326235994256 I
+
+> fsolve(D2=0,complex);
+-4.30836264730747, -3.15012638403953, 3.93901254462345 - 1.46866819576399 I,
+
+    3.93901254462345 + 1.46866819576399 I,
+
+    10.1268752182803 - 0.695145760639154 I,
+
+    10.1268752182803 + 0.695145760639154 I
+
+> fsolve(D3=0,complex);
+-3.62606276835724, -3.36262649098632, -0.854131919260252 - 0.164153803231484 I,
+
+    -0.854131919260252 + 0.164153803231484 I, 20.7362765002864,
+
+    39.2300117251826
+
+
+> quit;
+memory used=4819.1MB, alloc=210.2MB, time=15.96

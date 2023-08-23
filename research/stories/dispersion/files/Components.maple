@@ -1,0 +1,67 @@
+#Components.maple
+#
+#  This file takes  a set of edges, and then determines the number of 
+#   connected components in a 4 x 4 array of fundamental domains.
+#   'c' and 'd' are reserved [c,i,j] <--> vertex c in position i,j
+#################################################################################
+interface(quiet=true):
+read("ComponentsP.maple"):
+
+n := 4:   # indices will range from 0..n  
+
+#  There are 9 edges with Edges[r] the rth edge. 
+#   Each is a pair [[h,t],[p,q]] is the edge between [h,i,j] and [t,i+p,j+q],
+#     but also between [t,i,j] and [h,i-p,j-q]
+##################################################
+
+
+S:= {3,4,5,8,9,2}:     # a subset of edges
+#S:= {1,4,7,8}:     # a subset of edges
+
+Dscnt :={}:
+for S in combinat[powerset](9) do
+ ##################################################
+ Neighb := mkNeighbors(S):
+ ##################################################
+ #
+ #  partitions the vertices into components
+ #
+ #  make all vertices
+ V:={seq(seq([c,ii,jj],jj=0..n),ii=0..n),seq(seq([d,ii,jj],jj=0..n),ii=0..n)}:     
+ Comp:=[]:           # list of components
+
+ while V<>{} do
+  v:=op(1,V):
+  V := V minus {v}:
+  cpt := {v}:
+  new := {v}:
+  while new<>{}  do
+   Nbhr := {}:
+   for w in new do
+    Nbhr := Nbhr union Neighb[w]:
+   end do:
+   new := Nbhr minus cpt:
+   cpt := cpt union Nbhr:
+   V := V minus new:
+  end do:
+  Comp := [Comp[],cpt]:
+ end do:
+ ##################################################
+ #
+ #  Now to restrict to the components in i,j=1..2
+ #
+ RComp:=[]:
+ for cpt in Comp do
+  rcpt := {}:
+  for v in cpt do
+   if 0 < v[2] and 0 < v[3] and v[2] < n and v[3] < n then rcpt := rcpt union {v}: end if:
+  end do:
+  if rcpt<>{} then RComp := [RComp[], rcpt]: end if:
+ end do:
+
+ if nops(RComp)>1 then Dscnt := Dscnt union {S}: end if:
+
+end do:
+
+nops(Dscnt);
+Dscnt;

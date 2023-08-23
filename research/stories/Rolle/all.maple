@@ -1,0 +1,61 @@
+#all.maple
+#
+#       |   |
+#     1 | 2 | 3
+#    ---+---+---
+#     4 | 5 | 6 
+#    ---+---+---
+#     7 | 8 | 9
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11):
+
+################################################################################
+l:=[-4,-0.0001,0.0001,2.999,3.0001,6.5]:
+m:=[-4,-0.0001,0.0001,2.999,3.0001,6.5]:
+#
+#   The hexagon
+#
+P:=[plottools[line]([l[1],0],[l[6],0],color=magenta,thickness=3),
+    plottools[line]([l[1],2*l[1]-4],[l[6],2*l[6]-4],color=magenta,thickness=3),
+    plottools[line]([3,l[1]],[3,l[6]],color=magenta,thickness=3),
+    plottools[line]([l[1],3],[l[6],3],color=magenta,thickness=3),
+    plottools[line]([l[1],1+2*l[1]],[l[6],1+2*l[6]],color=magenta,thickness=3),
+    plottools[line]([0,l[1]],[0,l[6]],color=magenta,thickness=3)]:
+################################################################################
+
+L:=[abs(x), abs(y), abs(3-x), abs(3-y), abs(4-2*x+y), abs(2*x-y+1)]:
+a:=[2/3, 1/3, -11/4, 15/4, -5, -5]:
+b:=[9/4,-5/4,2/3,1/3,-5,-5]:
+
+f:=log(3500)+sum(a[i]*log(L[i]),i=1..6):
+g:=log(3500)+sum(b[i]*log(L[i]),i=1..6):
+
+#plotsetup(gif,plotoutput="1.gif",plotoptions=`height=400,width=400`):
+A:=[seq(seq(implicitplot(f,x=l[2*i-1]..l[2*i],y=m[2*j-1]..m[2*j],grid=[100,100],color=blue,thickness=2),i=1..3),j=1..3)]:
+B:=[seq(seq(implicitplot(g,x=l[2*i-1]..l[2*i],y=m[2*j-1]..m[2*j],grid=[100,100],color=red,thickness=2),i=1..3),j=1..3)]:
+
+display(A,B,P[],view=[l[1]-0.1..l[6]+0.1,m[1]-0.1..m[6]+0.1],scaling=CONSTRAINED);
+
+
+X:=implicitplot(f,x=3.0001..6.5,y=5..20,grid=[100,150],color=blue,thickness=2):
+Y:=implicitplot(g,x=3.0001..6.5,y=5..20,grid=[100,150],color=red,thickness=2):
+display(X,Y);
+
+
+X:=implicitplot(f,x=0.0001..2.999,y=5..20,grid=[100,150],color=blue,thickness=2):
+Y:=implicitplot(g,x=0.0001..2.999,y=5..20,grid=[100,150],color=red,thickness=2):
+display(X,Y);
+
+
+
+X:=implicitplot(f,x=0.0001..2.999,y=-20..-5,grid=[100,150],color=blue,thickness=2):
+Y:=implicitplot(g,x=0.0001..2.999,y=-20..-5,grid=[100,150],color=red,thickness=2):
+display(X,Y);
+
+
+X:=implicitplot(f,x=-8..-0.0001,y=-20..-5,grid=[100,150],color=blue,thickness=2):
+Y:=implicitplot(g,x=-8..-0.0001,y=-20..-5,grid=[100,150],color=red,thickness=2):
+display(X,Y);
+

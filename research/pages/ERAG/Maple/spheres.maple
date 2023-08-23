@@ -1,0 +1,115 @@
+#spheres.maple
+#
+#
+#G[1]=p(3)
+#G[2]=p(2)
+#G[3]=v(1)
+#G[4]=p(1)^2+(-r^2+2)
+#G[5]=p(1)*v(2)*v(3)+(r^2-2)*v(2)^2+(r^2-2)*v(3)^2
+#G[6]=p(1)*v(2)^2+p(1)*v(3)^2+v(2)*v(3)
+#G[7]=p(1)*v(3)^3+(-r^2+2)*v(2)^3+(-r^2+3)*v(2)*v(3)^2
+#G[8]=(-r^2+2)*v(2)^4+(-2*r^2+5)*v(2)^2*v(3)^2+(-r^2+2)*v(3)^4
+#
+#We can easily factor this last component:  Set X := (r^2 - 2)^(1/2).
+#Then this last component is the four lines
+#
+#   ( X, 0, 0) + t ( 0,  1 + 2 (9 - 4r^2)^(1/2), 2X)
+#   ( X, 0, 0) + t ( 0,  1 - 2 (9 - 4r^2)^(1/2), 2X)
+#
+#   (-X, 0, 0) + t ( 0, -1 + 2 (9 - 4r^2)^(1/2), 2X)
+#   (-X, 0, 0) + t ( 0, -1 - 2 (9 - 4r^2)^(1/2), 2X)
+#
+#The point on each line closest to the origin is when t=0, so they
+#all have distance r^2-2 from the origin.
+#
+#This shows that the range  sqrt(2) < r < 3/2  is necessary and sufficient
+#for the 12 lines to be real.
+#
+with(plots):
+
+dot := proc(a,b)
+  linalg[dotprod](a,b,`orthogonal`)
+end:
+
+EQ := proc(X,r)
+     simplify(dot(V,V)*(dot(P,P)-2*dot(P,X)+dot(X,X))-dot(V,X)^2
+              -r^2*dot(V,V))
+end:
+
+V:=[]:     P:=[]:
+for i from 1 to 3 do
+ V:=[V[],v.i]:   P:=[P[],p.i]:
+od:
+
+V:=vector(V):    P:=vector(P):
+
+P1:=[ 1, 1, 1]:
+P2:=[ 1,-1,-1]:
+P3:=[-1, 1,-1]:
+P4:=[-1,-1, 1]:
+
+for i from 1 to 4 do
+ for j from 4 to 3 do
+  P.i := [P.i[],0]:
+ od:
+ X.i := linalg[vector](P.i):
+od:
+
+EQS:=[EQ(X1,r),EQ(X2,r),EQ(X3,r),EQ(X4,r)]:
+
+#EQS1:=[]:
+#for i from 1 to 4 do EQS1:=[EQS1[],subs(v1=0,p2=0,p3=0,EQ[i])]: od:
+
+G:=Groebner[gbasis]([EQS[],v1,p2,p3,p1^2-r^2+2],plex(v2,v3,p1,p2,p3,v1));
+
+PS:=[solve(G[4]=0,p1)];
+solve(subs(p1=PS[2],G[5])=0,v2);
+
+#quit;#
+
+r:=1.49:
+X:=(r^2 - 2)^(1/2):
+Y:= (17*r^2-18-4*r^4)^(1/2):
+
+Z:=1*X:
+
+rr:=r*.98:
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+#   The Four Spheres
+S1:=plot3d([1+rr*sin(ph)*cos(th),1+rr*sin(ph)*sin(th),1+rr*cos(ph)],ph=0..Pi,
+        th=-Pi..Pi,grid=[10,30],color=gold):
+S2:=plot3d([1+rr*sin(ph)*cos(th),-1+rr*sin(ph)*sin(th),-1+rr*cos(ph)],ph=0..Pi,
+        th=-Pi..Pi,grid=[10,30],color=gold):
+S3:=plot3d([-1+rr*sin(ph)*cos(th),1+rr*sin(ph)*sin(th),-1+rr*cos(ph)],ph=0..Pi,
+        th=-Pi..Pi,grid=[10,30],color=gold):
+S4:=plot3d([-1+rr*sin(ph)*cos(th),-1+rr*sin(ph)*sin(th),1+rr*cos(ph)],ph=0..Pi,
+        th=-Pi..Pi,grid=[10,30],color=gold):
+
+T1:=spacecurve([ X,t*( Y-X)/2/X^2,t],t=-7..7,color=green,thickness=3,numpoints=20):
+T2:=spacecurve([ X,t*(-Y-X)/2/X^2,t],t=-7..7,color=green,thickness=3,numpoints=20):
+T3:=spacecurve([-X,t*( Y+X)/2/X^2,t],t=-7..7,color=green,thickness=3,numpoints=20):
+T4:=spacecurve([-X,t*(-Y+X)/2/X^2,t],t=-7..7,color=green,thickness=3,numpoints=20):
+
+T5:=spacecurve([t, X,t*( Y-X)/2/X^2],t=-7..7,color=red,thickness=3,numpoints=20):
+T6:=spacecurve([t, X,t*(-Y-X)/2/X^2],t=-7..7,color=red,thickness=3,numpoints=20):
+T7:=spacecurve([t,-X,t*( Y+X)/2/X^2],t=-7..7,color=red,thickness=3,numpoints=20):
+T8:=spacecurve([t,-X,t*(-Y+X)/2/X^2],t=-7..7,color=red,thickness=3,numpoints=20):
+
+T9:=spacecurve([t*( Y-X)/2/X^2,t, X],t=-7..7,color=blue,thickness=3,numpoints=20):
+T10:=spacecurve([t*(-Y-X)/2/X^2,t, X],t=-7..7,color=blue,thickness=3,numpoints=20):
+T11:=spacecurve([t*( Y+X)/2/X^2,t,-X],t=-7..7,color=blue,thickness=3,numpoints=20):
+T12:=spacecurve([t*(-Y+X)/2/X^2,t,-X],t=-7..7,color=blue,thickness=3,numpoints=20):
+
+plotsetup(ps,plotoutput=`12lines.eps`,plotoptions=`color,portrait,width=3in,height=3in`);
+display3d(S1,S2,S3,S4,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,view=[-7..7,-7..7,-7..7],orientation=[45,55]);
+
+
+
+
+
+
+
+
+

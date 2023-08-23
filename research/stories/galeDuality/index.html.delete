@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>KhRo: Software for computing real solutions to fewnomials using Khovanskii-Rolle continuation</title>
+  <link rel="shortcut icon" href="images/KhRo.ico"> 
+  <link href="KhRo.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<!---------------------------------------------------------------------->
+<table>
+ <tr valign=top>
+  <td>
+   <img src="images/MasterFunctions.png">
+  </td>
+  <td width=15> </td>
+  <td>
+   <h1> Khovanskii-Rolle Continuation:<br> Software for  computing real solutions
+    to fewnomials using Khovanskii-Rolle continuation</h1>  
+   <font size="+2"> 
+   <A HREF="http://www.math.colostate.edu/~bates/">Dan Bates</A>, 
+   <a href="http://www.nd.edu/~jhauenst/">Jonathan Hauenstein</A>, 
+   <A HREF="http://www.matthewniemerg.com/">Matthew Niemerg</A>,  and
+   <a href="http://www.math.tamu.edu/~sottile/index.html">Frank Sottile</a>
+   </font><br><br>
+
+  </td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------->
+<br> &nbsp; &nbsp; 
+ Fewnomials are systems of polynomials with <font color=blue>few</font> mo<font color=blue>nomials</font>.
+ Khovanskii [<a href="#Kh">Kh</a>] showed that they have relatively few real solutions, independent of their number
+ of complex solutions, and it is a challenge to compute their real solutions without also computing complex solutions.
+ The improvement in Khovanskii's fewnomial bound by Bates, Bihan, and Sottile
+ [<a href="#BBS">BBS</a>,<a href="#BiSo">BiSo</a>] leads to a new continuation
+ algorithm for computing the real solutions to a system of fewnomials.<br><br>
+
+ &nbsp; &nbsp; 
+ This algorithm was described by Bates and Sottile [<a href="BaSo">BaSo</a>], who also provided a proof-of-concept
+ implementation in Maple.
+ The algorithm works by converting the fewnomial system into an equivalent Gale dual system, and then solving that
+ Gale system.
+ Work of Bates, Hauenstein, Niemerg, and Sottile [<a href="BHNS">BHNS</a>] describes algorithms and an
+ implementation for creating the dual Gale system given a fewnomial system, as well as methods to convert solutions
+ between the two equivalent systems.
+ Future projects will be concerned with tracking singular curves, and also a proper implementation of the
+ algorithm. 
+<br><br>
+
+<!--&nbsp; &nbsp; 
+ This page contains links to the software as well as descriptions of the algorithms and software.
+<br>-->
+<hr>
+<h3>Web pages containing further details and software for each project.</h3>
+
+<dl>
+  <li>
+    <a href="BaSo/index.html">Khovanskii-Rolle continuation for real solutions</a> by 
+    <A HREF="http://www.math.colostate.edu/~bates/">Dan Bates</A> and
+    <a href="http://www.math.tamu.edu/~sottile/index.html">Frank Sottile</a>.
+     This web page describes the algorithm and includes maple scripts for our proof-of-concept implementation.
+  </li>
+
+  <li>
+   <a href="http://www.matthewniemerg.com/software"><tt>galeDuality</tt></a> by 
+   <A HREF="http://www.math.colostate.edu/~bates/">Dan Bates</A>, 
+   <a href="http://www.nd.edu/~jhauenst/">Jonathan Hauenstein</A>, 
+   <A HREF="http://www.matthewniemerg.com/">Matthew Niemerg</A>,  and
+   <a href="http://www.math.tamu.edu/~sottile/index.html">Frank Sottile</a>.
+    This page contains links to our software. <!-- and information on our test suite. -->
+  </li>
+</dl>
+  
+
+<!----------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------->
+<b>Bibliography</b><br>
+
+<!----------------------------------------------------------------------->
+ <A NAME="BHNS">[BHNS]</A>
+   Daniel&nbsp;J.&nbsp;Bates, Jonathan Hauenstein, Matthew Niemerg, and F.&nbsp;Sottile, 
+   <a href="http://www.math.tamu.edu/~sottile/research/pdf/Dual.pdf"></a><I>Software for the Gale transform of
+ fewnomial systems and a Descartes rule for fewnomials</I>,   Almost Done.
+  <p>
+<!----------------------------------------------------------------------->
+ <A NAME="BaS">[BaSo]</A>
+   Daniel&nbsp;J.&nbsp;Bates and F.&nbsp;Sottile, 
+   <a href="http://www.math.tamu.edu/~sottile/research/pdf/Rolle.pdf"><I>Khovanskii-Rolle continuation for real
+   solutions</I></a>,   <a href="http://www.springerlink.com/content/k7v750156533g171/">Foundations of
+  Computational Mathematics</a>, Volume 11, Number 5 (2011), 563-587. DOI: 10.1007/s10208-011-9097-1.  25 pages.
+  <p>
+<!----------------------------------------------------------------------->
+ <A NAME="BBS">[BBS]</A>
+   Daniel&nbsp;J.&nbsp;Bates, Fr&eacute;d&eacute;ric Bihan, and F.&nbsp;Sottile, 
+   <a href="http://www.math.tamu.edu/~sottile/research/pdf/BBS.pdf"><EM>Bounds on the number of real solutions to
+   polynomial equations</EM></a>,  IMRN, 2007, 2007:rnm114-7.
+<p>
+<!----------------------------------------------------------------------->
+ <A NAME="BiS">[BiSo]</A>
+   Fr&eacute;d&eacute;ric Bihan and F.&nbsp;Sottile, 
+  <a href="http://www.math.tamu.edu/~sottile/research/pdf/Gale.pdf"> <EM>Gale duality for complete
+ intersection</EM></a>,  Annales de l'Institut Fourier, Tome 58 (2008) fasicule 3, pp.&nbsp;877--891.
+<p>
+<!----------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------->
+<A NAME="Kh">[Kh]</A>
+   Askold Khovanskii (translated by Smilka Zdavkovska), 
+   <EM>Fewnomials</EM>,  
+   <it>AMS</it>, 1991.
+</font>
+
+<!---------------------------------------------------------------------->
+<hr>
+Research supported by the National Science Foundation under grants DMS-0915211, DMS-1115668, DMS-1262428, DARPA YFA, and Sloan Research Fellowship.
+<font color=red></font>
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<font color="#aa00aa">
+<i><!-- hhmts start -->Last modified: Mon May 18 20:56:01 CDT 2015 <!-- hhmts end --></i>
+</font>
+</body>
+</html>

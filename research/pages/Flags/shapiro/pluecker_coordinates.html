@@ -1,0 +1,106 @@
+<HTML> 
+<HEAD> 
+   <TITLE>Pluecker Coordinates</TITLE> 
+</HEAD> 
+<BODY BGCOLOR=#FFFFFF> 
+<!----------------   Navigation Panel   ---------------------->
+<!-- <A HREF=".html"><IMG SRC="../images/back.gif"></A> -->
+ <A HREF="shapiro.html#discriminant"><IMG SRC="../images/up.gif"></A>
+<!--  <A HREF=".html"><IMG SRC="../images/next.gif"></A> -->
+ <BR>
+<!--  <B> Next:</B> 
+  <A HREF=".html"></A>
+  <BR> -->
+ <B> Up:&nbsp; &nbsp; </B> 
+  <A HREF="shapiro.html#discriminant">Shapiro's Conjecture</A>
+  <BR>
+<!-- <B> Back:</B> 
+  <A HREF="../overview.html">Overview</A> 
+  <BR> -->
+<!-------------   End of Navigation Panel   ------------------->
+<HR>
+<font size=+3><B>Pl&uuml;cker Coordinates for the Grassmannian</B></FONT>
+<!-------------------------------------------------------------------------->
+<HR>
+ 
+<P>&nbsp; &nbsp;
+  There are at least two coordinate schemes for the set of lines in 3-space, 
+  both of which generalize to other Grassmannians, and to the flag manifolds
+  which are the subject of this web page.
+  First, are the global Pl&uuml;cker coordinates.
+
+  It is easiest to work not with lines in projective 3-space 
+  <B>P</B><SUP><SMALL>3</SMALL></SUP>, but with 2-dimensional linear subspaces
+  of the 4-dimensional vector space
+  <B>K</B><SUP><SMALL>4</SMALL></SUP>, where <B>K</B> is our field.
+  Such a 2-plane <I>H</I> is the row space of a 2 by 4 matrix, called a
+  representation matrix for <I>H</I> and also written
+  <I>H</I>.
+  Let the entries be
+  <i>x</i><SUB><SMALL><i>i</i>,<i>j</i></SMALL></SUB> for 
+  <i>i</i>=1,2 and <i>j</i>=0,1,2,3.
+  It is a classic fact (see Chapter 2 
+  of&nbsp;[<A HREF="../bibliography.html#PW">PW</A>]) that the linear subspace
+  <I>H</I> is determined by the sextuple of the 2 by 2 minors of the matrix
+  <I>H</I>, up to a scalar.
+  This sextuple is called the Pl&uuml;cker coordinates for the 2-plane <I>H</I>.
+  They are
+<CENTER>
+  <i>p</i><SUB><SMALL><i>i</i>,<i>j</i></SMALL></SUB>
+   &nbsp;:=&nbsp;
+  <i>x</i><SUB><SMALL>1,<i>i</i></SMALL></SUB>
+  <i>x</i><SUB><SMALL>2,<i>j</i></SMALL></SUB>
+   - 
+  <i>x</i><SUB><SMALL>1,<i>j</i></SMALL></SUB>
+  <i>x</i><SUB><SMALL>2,<i>i</i></SMALL></SUB> . 
+</CENTER>
+
+ The association of a 2-plane <I>H</I> to its Pl&uuml;cker coordinates
+ gives an embedding of the Grassmannian of lines in projective 3-space
+ (equivalently, of 2-dimensional linear subspaces of 4-space) into a 
+ 5-dimensional projective space.
+ The image is exactly those sextuples
+ [<i>p</i><SUB><SMALL>01</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>02</SMALL></SUB>,&nbsp; <i>p</i><SUB><SMALL>03</SMALL></SUB>,&nbsp; <i>p</i><SUB><SMALL>12</SMALL></SUB>,&nbsp; <i>p</i><SUB><SMALL>13</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>23</SMALL></SUB>]
+ which satisfy the quadratic Pl&uuml;cker equation 
+<CENTER>
+   <i>p</i><SUB><SMALL>03</SMALL></SUB>
+   <i>p</i><SUB><SMALL>12</SMALL></SUB>
+   &nbsp;-&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB>
+    <i>p</i><SUB><SMALL>02</SMALL></SUB>
+   &nbsp;+&nbsp;<i>p</i><SUB><SMALL>01</SMALL></SUB>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+   &nbsp; &nbsp;=&nbsp; &nbsp;0&nbsp;.</TD>
+ </CENTER>
+
+ Another way to give coordinates assumes that the first Pl&uuml;cker coordinate
+ <i>p</i><SUB><SMALL>01</SMALL></SUB> does not vanish.
+ Then dividing the Pl&uuml;cker coordinates by 
+ <i>p</i><SUB><SMALL>01</SMALL></SUB> gives a vector
+ (1,&nbsp;<i>p</i><SUB><SMALL>02</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>03</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>12</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>23</SMALL></SUB>), 
+  where
+ <i>p</i><SUB><SMALL>23</SMALL></SUB>&nbsp;=&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB><i>p</i><SUB><SMALL>02</SMALL></SUB>&nbsp;-&nbsp;<i>p</i><SUB><SMALL>03</SMALL></SUB><i>p</i><SUB><SMALL>12</SMALL></SUB>.
+
+  Thus the four coordinates
+  (<i>p</i><SUB><SMALL>02</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>03</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>12</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB>)
+  determine <i>H</I>.
+  Another way to see this is that such 2-planes <i>H</I> are those
+  with a representation matrix of the form
+  [<I>I</I><SUB><SMALL>2</SMALL></SUB> : <I>Y</I>],
+  where <I>I</I><SUB><SMALL>2</SMALL></SUB> is the 2 by 2 identity matrix and
+  <I>Y</I> is the 2 by 2 matrix whose entries are
+  -<i>p</i><SUB><SMALL>12</SMALL></SUB>, 
+  -<i>p</i><SUB><SMALL>13</SMALL></SUB> in its first row and 
+  <i>p</i><SUB><SMALL>02</SMALL></SUB>, 
+  <i>p</i><SUB><SMALL>03</SMALL></SUB> in its second row.
+  We call <I>Y</I> the standard local coordinates for the Grassmannian.
+
+
+  <A NAME="bottom"></A>
+
+<!-------------------------------------------------------------------------->
+<HR>
+<I><FONT COLOR=#BB00FF>Last Modified Saturday 20 September 2003
+    by <A HREF="../../../index.html">Frank Sottile</A></FONT></I>
+<HR>
+</BODY> 
+</HTML> 

@@ -1,0 +1,60 @@
+Reality and Control of Linear Systems	May 1997, MSRI
+
+-Frank Sottile
+
+
+During the period of January - May 1997, I examined literally thousands of
+cases of the following problem:
+
+Given a 6x2-matrix of integral polynomials F(s), whose maximal minors
+have degree 8, and a degree 8 polynomial phi(s) all of whose (distinct)
+roots are integers, which 6x4-matrices Coords of local coordinates on
+the Grassmannian of 4-planes in C^6 satisfy the following relation:
+  
+           phi(s) := determinant  [F(s) : Coords].
+
+Specifically, I wanted to know how many of the 14 solutions were real
+and how many were complex.
+
+Questions like this arise in the theory of control of linear systems,
+and I wanted to use methods at my disposal to investigate these. 
+The file poles.html contains a detailed summary of that search.
+Briefly, I randomly generated (in SINGULAR) 500 different matrices F(s)
+using several different schemes for generating the coefficients.   Then, 
+for 400, I considered 25 different 8-tuples of integers as the roots of 
+phi(s) (for 100, I considered 50 different 8-tuples).  The file 
+compilation.mapl (a maple script) contains the data from that search, 
+at least the number of real solutions to each of the 15,000 problems 
+considered. 
+
+During this search, I noticed several matrices F(s), which gave the same
+number of real points for each polynomial phi(s) tested.  All of these were
+examined further for many other polynomials phi(s), and for each, there were
+polynomials phi(s) that gave different numbers of real and complex roots.  
+In all, there were about 8,000 further evaluations.
+
+This leads to the following question:
+
+What is the behaviour of the number of real vs. complex roots
+for a given real matrix of polynomials F(s)?
+
+From Shapiros's conjecture, if F(s) osculates the rational normal curve,
+then we always expect the same, maximal, number of real roots.
+
+Are there any other F(s) which always give the same number of real
+roots, or do other F(s) always give different numbers of real roots, for
+different phi(s)?
+
+Perhaps the cleanest possible answer is that there is a dichotomy:
+
+Either a matrix F(s) comes from planes osculating the rational normal
+curve, and hence always gives all real solutions, 
+
+or
+
+Every possible number of real solutions occurs for F(s) and different
+phi(s).
+
+
+I have also investigated Shapiros's conjecture in a number of cases.
+That search is detailed elsewhere.

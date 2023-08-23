@@ -1,0 +1,105 @@
+#makeTree.maple
+#
+#  This makes an xfig 3.2 file drawing a tree from the permutation
+#
+interface(quiet=true):
+read(`LodayProcedures`);
+
+##########################################################################
+makeLine2:=proc(V1,V2)
+local line2:
+ line2:=cat(convert(V1[1],string),` `,convert(V1[2],string),` `):
+ line2:=cat(line2,convert(V2[1],string),` `,convert(V2[2],string),`\n`):
+ line2
+end:
+##########################################################################
+drawTree:=proc(vertex,tree)
+local i,treeL,treeR,vertexL,vertexR,Position:
+global file,Line1:
+#                            Finds position of peak in tree
+ for i from 1 to nops(tree) do
+  if tree[i]=nops(tree) then Position:=i: fi:
+ od:
+
+ treeL:=Std(tree[1..Position-1]);
+ vertexL:=[vertex[1]-(nops(tree)-Position+1)*300,
+           vertex[2]-(nops(tree)-Position+1)*300];
+
+ fprintf(file,Line1):
+ fprintf(file,makeLine2(vertex,[vertexL[1],vertexL[2]])):
+
+ if nops(treeL)>1 then  drawTree(vertexL,treeL): fi:
+ if nops(treeL)=1 then 
+  fprintf(file,Line1):
+  fprintf(file,makeLine2(vertexL,[vertexL[1]-300,vertexL[2]-300])):
+  fprintf(file,Line1):
+  fprintf(file,makeLine2(vertexL,[vertexL[1]+300,vertexL[2]-300])):
+ fi:
+
+ treeR:=Std(tree[Position+1..nops(tree)]);
+ vertexR:=[vertex[1]+(Position)*300,vertex[2]-(Position)*300];
+ fprintf(file,Line1):
+ fprintf(file,makeLine2(vertex,[vertexR[1],vertexR[2]])):
+
+ if nops(treeR)>1 then  drawTree(vertexR,treeR): fi:
+ if nops(treeR)=1 then 
+  fprintf(file,Line1):
+  fprintf(file,makeLine2(vertexR,[vertexR[1]-300,vertexR[2]-300])):
+  fprintf(file,Line1):
+  fprintf(file,makeLine2(vertexR,[vertexR[1]+300,vertexR[2]-300])):
+ fi:
+
+end: 
+##############################################################
+
+#
+#   These lines make the first line of each segment
+#
+Color:=1:      # Blue
+Thickness:=3:  
+Line1:=cat(`2 1 0 `,convert(Thickness,string),` `,convert(Color,string)):
+Line1:=cat(Line1,`0 7 50 0 -1 0.000 0 0 -1 0 0 2\n        `):
+
+for N from 1 to 6 do
+ for tree in Trees[N] do
+
+  vertex:=[N*300,N*300]:
+
+  fname:=`../figures/`:
+  for i in tree do fname:=cat(fname,convert(i,symbol)): od:
+  fname:=cat(fname,`.fig`):
+  lprint(fname);
+  file:=fopen(fname,WRITE):
+
+  fprintf(file,`#FIG 3.2 \nLandscape \nCenter \nInches \n`):
+  fprintf(file,`Letter   \n100.00 \nSingle \n-2 \n1200 2 \n`):
+
+  fprintf(file,Line1):
+  fprintf(file,makeLine2([vertex[1],vertex[2]+300],vertex)):
+
+  drawTree(vertex,tree):
+
+  fclose(file):
+ od:
+od:
+
+quit;
+        _ Thickness
+       /
+      |   _ Color
+      |  /                              Number of points
+      | |                             /
+2 1 0 2 0 7 50 0 -1 0.000 0 0 -1 0 0 2
+         1200 1800 1800 2400
+
+2 1 0 1 1 7 50 0 -1 0.000 0 0 -1 0 0 2
+         900 1200 900 1350
+2 1 0 1 1 7 50 0 -1 0.000 0 0 -1 0 0 2
+         1050 450 600 900
+2 1 0 1 1 7 50 0 -1 0.000 0 0 -1 0 0 2
+         900 600 750 450
+2 1 0 1 1 7 50 0 -1 0.000 0 0 -1 0 0 2
+         1350 450 1500 600
+2 1 0 1 1 7 50 0 -1 0.000 0 0 -1 0 0 2
+         750 750 450 450
+

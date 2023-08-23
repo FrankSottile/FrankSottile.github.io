@@ -1,0 +1,70 @@
+#2e5p2.maple
+#
+#	This is an attempt to show Shapiro's
+#	Conjecture for the case of 2-planes in C^7 satisfying
+#	(13)^5 = 6.
+#
+#	We compute the discriminant, a degree 30 polynomial!
+#interface(quiet=true):
+with(Ore_algebra):
+with(linalg):
+with(Groebner):
+
+SmMat := s -> matrix([
+		[ 1 , s ,s^2, s^3 , s^4 ,  s^5 ,   s^6],
+		[ 0 , 1 ,2*s,3*s^2,4*s^3, 5*s^4, 6*s^5],
+		[ 0 , 0 , 1 , 3*s ,6*s^2,10*s^3,15*s^4],
+		[ 0 , 0 , 0 ,  1  , 4*s ,10*s^2,20*s^3],
+		[ 1 ,x12,x13, x14 ,  0  ,  0   ,   0  ],
+		[ 0 , 0 , 0 ,  1  , x25 , x26  ,  x27 ]]):
+
+
+AA:=op(2,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,5,6])))):
+BB:=op(2,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,5,7])))):
+CC:=op(2,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,6,7])))):
+DD:=op(3,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,5,6,7])))):
+EE:=op(3,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,4,5,6,7])))):
+FF:=op(3,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,3,4,5,6,7])))):
+GG:=op(3,factor(det(submatrix(SmMat(s),[1,2,3,4,5,6],[2,3,4,5,6,7])))):
+G:=gbasis([AA,BB,CC,DD,EE,FF,GG],
+	wdeg([1,2,3,1,2,3],[x12,x13,x14,x25,x26,x27])):
+
+#for i from 1 to nops(G) do indets(G[i]);  od;
+
+equations:=[]:
+for P in G do
+ equations:=[equations[],P,subs(s=t,P),subs(s=u,P)]:
+od:
+kernelopts(gcfreq=10000000):
+GB:=gbasis(equations,wdeg([1,2,3,1,2,3],[x12,x13,x14,x25,x26,x27])):
+
+#  First 3 equations are linear in some variables:
+#sort(GB[1],[x12]);
+#sort(GB[2],[x13]);
+#sort(GB[3],[x27]);
+
+X27:=solve(GB[3]=0,x27):
+
+GB2:=[]:
+for i from 4 to nops(GB) do
+GB2:=[GB2[],simplify(subs(x27=X27,GB[i]))]: od:
+
+#for i from 1 to 9 do indets(GB2[i]); od:
+
+with(Groebner):
+
+G:=gbasis(GB2,wdeg([1,2,3],[x25,x26,x14])):
+
+GG:=gbasis(G,wdeg([1,2,7],[x25,x26,x14])):
+for i from 1 to 5 do indets(GG[i]); od:
+
+G:=gbasis([GG[1],GG[2],GG[3],GG[4]],wdeg([1,7],[x25,x26])):
+
+Elim:=G[1]:
+lprint(Elim):
+Disc:=primpart(discrim(Elim,x25)):
+
+lprint(Disc);
+time();
+quit;
+

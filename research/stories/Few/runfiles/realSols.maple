@@ -1,0 +1,64 @@
+interface(quiet=true):
+#
+#  We look at real solutions to 
+#
+# f(z)*g(z)^p*z^(l+k) - h(z) = 0,
+#
+#  f, g, and h all have degree k
+#
+################################################
+read("data"):
+_seed:=Instance+1:
+################################################
+for i from 0 to trunc((k+1)/2) do 
+ die[i]:=rand(-7^(2+2*i)..7^(2+2*i)):
+end do:
+################################################
+makePoly:=proc(R)
+#
+#  This make a random polynomial of degree k
+#
+ local f, i:
+ global die, k:
+ f:=0:
+ if R=1 then
+   for i from 0 to k do 
+    f:=f+die[min(i,k-i)]()*z^i:
+   end do:
+  else
+   for i from 0 to k do 
+    f:=f+die[trunc((k+1)/2)]()*z^i:
+   end do:
+ end if:  
+ return(f)
+end proc:
+################################################
+
+for i from 1 to Iterations do
+ for R from 0 to 1 do 
+  N:=nops(realroot(makePoly(R)*makePoly(R)^p*z^(k+l)-makePoly(R))):
+  data[trunc(N/2)+1]:= data[trunc(N/2)+1]+1:
+ end do
+end do:
+########################################################################
+file:=fopen("data",WRITE):
+fprintf(file, "#data.%d.%d.%d.%d\n",k,p,l,(p+2)*k+l):
+fprintf(file, "#\n"):
+fprintf(file, "# We study the maximum number of real solutions to \n"):
+fprintf(file, "#\n"):
+fprintf(file, "# f(z)*g(z)^%d*z^%d - h(z) = 0,\n",p,k+l):
+fprintf(file, "#\n"):
+fprintf(file, "#  f, g, and h all have degree %d.\n",k):
+fprintf(file, "#\n"):
+fprintf(file, "#######################################################\n"):
+fprintf(file, "k:=%d:\n",k):
+fprintf(file, "p:=%d:\n",p):
+fprintf(file, "l:=%d:\n",l):
+fprintf(file, "Iterations:=%d:\n",Iterations):
+fprintf(file, "Instance:=%d:\n",Instance+1):
+fprintf(file, "deg:=%d:   #   Degree of the enumerative problem\n",(p+2)*k+l):
+fprintf(file, "data:=%a:\n",data):
+fprintf(file, "Time:=%4.2f:\n",Time+time()):
+fprintf(file, "##############################################################\n"):
+fclose(file):
+quit;

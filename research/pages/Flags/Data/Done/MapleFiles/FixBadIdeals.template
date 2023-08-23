@@ -1,0 +1,75 @@
+#
+#  This is a template for fixing the unfixable:  A large computation
+# with some bad Ideals for which it is infeasible to repeat the
+# whole calculation with different points
+#
+#
+
+
+##############################################################################
+read("data.1"):
+
+Tablea:=array(Table):
+PreTimea:=PreTime:
+GroebnerTimea:=GroebnerTime:
+RealTimea:=RealTime:
+##############################################################################
+
+##############################################################################
+read("data.501"):
+##############################################################################
+
+
+
+
+for i from 1 to nops(Table) do
+ if sum(BTable[i][jk],jk=1..7)<>1 then 
+   lprint(Table[i], BTable[i], NTable[i]);
+ end if:
+ for j from 1 to 7 do 
+   Tablea[i,j]:=Tablea[i,j]-BTable[i][j]+NTable[i][j]:#
+ end do
+end do:
+PreTime:=PreTime+NPreTime-BPreTime;
+GroebnerTime:=GroebnerTime+NGroebnerTime-BGroebnerTime;
+RealTime:= RealTime+NRealTime-BRealTime;
+
+
+N:=nops(Table[1]):
+Numbers:={seq(sum(Tablea[l,jk],jk=1..N),l=1..nops(Table))}:
+if nops(Numbers)>1 then
+ printf("Bad Ideals in %s on %s in file   %s\n",Label,Machine,NAME);
+ lprint(Numbers);
+fi:
+
+Table:=eval(Tablea):
+
+makeDataFile():
+
+quit:
+
+
+
+
+#CheckSums.maple
+#
+# This examines each of the data files, printing the names of those which 
+# do not have every row of the tables agree.
+#
+interface(quiet=true):
+
+read("data"):
+N:=nops(Table[1]):
+Numbers:={seq(sum(Table[i][j],j=1..N),i=1..nops(Table))}:
+if nops(Numbers)>1 then
+ printf("Bad Ideals in %s on %s in file   %s\n",Label,Machine,NAME);
+fi:
+ lprint(Numbers);
+
+for i from 1 to nops(Necklaces) do 
+ if sum(Table[i][j],j=1..N) <> max(op(Numbers)) then 
+   lprint(Necklaces[i],Table[i]);
+ end if:
+end do:
+
+quit:

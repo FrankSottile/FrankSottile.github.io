@@ -1,0 +1,91 @@
+#makeSingular
+#
+# Frank Sottile
+# 27 February 2001
+# Amherst, MA
+#
+#######################################################################
+#
+#   This file creates a Singular input file in the first step of 
+# computing the 21 maximally inflected quintics with a given choice 
+# of flexes and a single cusp at \infty
+#
+#  Run with 
+#      - maple -q -c "i:=loopVariable" makeSingular 
+#
+interface(quiet=true):
+Infl:=[-3,-2,-1,0,1,2,3]:
+
+RatNorm:=linalg[vector]([1,s,s^2,s^3,s^4,s^5  ]):
+
+M:=linalg[det](linalg[matrix]([
+[1,s,s^2,  s^3,s^4  ,   s^5],
+[0,1,2*s,3*s^2,4*s^3, 5*s^4],
+[0,0,1  ,3*s  ,6*s^2,10*s^3],
+[1,0, a , b   ,  0  ,  c   ],
+[0,1, d , e   ,  0  ,  f   ],
+[0,0, 0 , 0   ,  1  ,  g   ]])):
+
+Eqs:=[
+ subs(s=Infl[1],M),
+ subs(s=Infl[2],M),
+ subs(s=Infl[3],M),
+ subs(s=Infl[4],M),
+ subs(s=Infl[5],M),
+ subs(s=Infl[6],M),
+ subs(s=Infl[7],M)]:
+
+##############################################################
+#
+#    Make the Singular inputfile
+#
+##############################################################
+
+file := fopen(`A.sing`,WRITE):
+
+fprintf(file,`option(redSB);  \n`):
+fprintf(file,`ring S=0, (a,b,c,d,e,f,g), lp;  \n`):
+fprintf(file,`ideal H; \n`):
+fprintf(file,`ring R=0, (a,b,c,d,e,f,g), dp; \n`):
+fprintf(file,`ideal I = \n`):
+for eq in Eqs do 
+  fprintf(file,cat(convert(eq,string),`,\n`)):
+od:
+fprintf(file,`0; \n`):
+fprintf(file,`ideal Eqs=std(I); \n`):
+fprintf(file,`setring S; \n`):
+fprintf(file,`H = fglm(R,Eqs); \n`):
+fprintf(file,`short=0; \n`):
+#
+# Now that the computation is done, make the maple file with the equations
+#
+fprintf(file,`print(\"Eqs:=[ \");\n`):
+fprintf(file,`H[1];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[2];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[3];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[4];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[5];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[6];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`H[7];\n`):
+fprintf(file,`if ( ncols(H)==8 )\n`):
+fprintf(file,` {\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`  H[8];\n`):
+fprintf(file,` }\n`):
+fprintf(file,`if ( ncols(H)==9 )\n`):
+fprintf(file,` {\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`  H[8];\n`):
+fprintf(file,`print(\",\");\n`):
+fprintf(file,`  H[9];\n`):
+fprintf(file,` }\n`):
+fprintf(file,`print(\"]:\");\n`):
+fprintf(file,`quit;\n`):
+quit;
+

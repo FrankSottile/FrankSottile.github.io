@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Constructive Lower Bounds</TITLE> 
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="3.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="3.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.2.html">2.iii.b.  Fewnomial Upper Bounds</A><BR>
+ <B> Up:</B> <A HREF="3.html">2.iii. Real Solutions to Sparse Polynomial Systems</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+
+<A NAME="sec:SparsePS"></A>
+<H2>2.iii.a. Constructive Lower Bounds</H2>
+
+<P>
+By the example in Section&nbsp;<A HREF="2.1.html#eq:simplex">2.ii.a</A>, if
+<I>P</I> is the convex hull of 
+<I>v</I><SUB>0</SUB>, <I>v</I><SUB>1</SUB>, ..., <I>v<SUB>n</SUB></I>, 
+a lattice simplex with no interior lattice points, then 
+a general system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) is equivalent to
+the system of binomials 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A
+NAME="eq:binomial_system"></A>
+<I>y</I><SUB>1</SUB><SUP><I>d</I><SUB>1</SUB></SUP> = <I>a</I><SUB>1</SUB>, &nbsp;
+<I>y</I><SUB>2</SUB><SUP><I>d</I><SUB>2</SUB></SUP> = <I>a</I><SUB>2</SUB>, &nbsp;
+..., &nbsp; <I>y<SUB>n</SUB><SUP>d<SUB>n</SUB></SUP></I> = <I>a<SUB>n</SUB></I>
+ &nbsp;.</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with each <I>a<SUB>i</SUB></I> non zero.
+Here, <I>d</I><SUB>1</SUB>, <I>d</I><SUB>3</SUB>, ..., <I>d<SUB>n</SUB></I>
+are the invariant factors of the matrix whose <I>i</I>th column is 
+<I>v<SUB>i</SUB></I> - <I>v</I><SUB>0</SUB> and 
+<I>d</I><SUB>1</SUB><I>d</I><SUB>3</SUB>...<I>d<SUB>n</SUB></I>
+ is the normalized volume of <I>P</I>.
+Following Sturmfels&nbsp;[<A HREF="../bibliography.html#St94b">Stu1</A>], let 
+<I>e</I>(<I>P</I>) be the number of these invariant factors which are even.
+If <I>e</I>(<I>P</I>)=0, so that <I>d</I> is odd, then <I>P</I> is an odd
+cell. 
+
+<P>
+<P>
+<DIV><A NAME="prop:simplex"><B>Proposition  2.5</B></A> &nbsp; 
+The polynomial system&nbsp;(<A HREF="#eq:binomial_system">2.5</A>) has 
+2<SUP><I>e</I>(<I>P</I>)</SUP> real
+solutions if <I>a<SUB>i</SUB></I> > 0 whenever <I>d<SUB>i</SUB></I> is even, and 
+no real solutions otherwise.
+In particular, if <I>P</I> is an odd cell, then there is at least one real
+solution.</DIV><P></P> 
+
+<P>
+<P>
+<DIV><B>Theorem  2.6</B> (Sturmfels&nbsp;[<A
+HREF="../bibliography.html#St94b">Stu1</A>, Corollary 2.3])
+ The maximum number <I>r</I>(<I>P</I>) of real solutions to a sparse
+ polynomial system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) with common
+ Newton polytope <I>P</I> is at least the the number of odd cells in
+ any regular triangulation <I>P<SUB>w</SUB></I> of <I>P</I>.
+</DIV><P></P>
+
+<P>
+<B>Proof.</B>
+ In the limit as <I>t</I> approaches zero, the lifted system&nbsp;(<A
+ HREF="2.3.html#eq:spHomotopy">2.4</A>) given by a
+ regular triangulation <I>P<SUB>w</SUB></I> of <I>P</I> becomes the
+ disjunction of facial subsystems 
+ of&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>), one for each facet 
+ <I>F</I> of <I>P<SUB>w</SUB></I>.
+ Thus the number
+ of real solutions in the limit is a constructive lower bound for 
+ <I>r</I>(<I>P</I>).
+
+ By Proposition&nbsp;<A HREF="#prop:simplex">2.5</A>, the number of odd cells
+ in <I>P<SUB>w</SUB></I> is a 
+ lower bound on the number of real solutions to the facial subsystem given by
+ the facets of <I>P<SUB>w</SUB></I>.
+Q.E.D.
+<BR>
+
+<P>
+Proposition&nbsp;<A HREF="#prop:simplex">2.5</A> also gives an upper
+bound on the 
+limiting number of real solutions <I>r</I> of the lifted
+system&nbsp;(<A HREF="2.3.html#eq:spHomotopy">2.4</A>) as <I>t</I> approaches
+zero (this is due to Sturmfels&nbsp;[<A HREF="../bibliography.html#St94b">Stu1</A>,
+Theorem 2.2].) <A NAME="eq:limit-bound"></A>
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR><TD>  <TABLE ALIGN="CENTER">
+ <TR VALIGN="MIDDLE"><TD VALIGN="CENTER" NOWRAP>
+   <I>r</I> is at most</TD><TD> <IMG SRC="Sigma.gif"> </TD><TD VALIGN="CENTER">
+      2<SUP><I>e</I>(<I>F</I>)</SUP> &nbsp; ,</TD>
+  </TABLE></TD>
+ <TD WIDTH=10 ALIGN="RIGHT">
+(2.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+the sum over all facets <I>F</I> of the regular triangulation
+<I>P<SUB>w</SUB></I> of <I>P</I>.
+More sophisticated accounting of the possible signs of the coefficients of
+facial subsystems improves this bound.
+This accounting is accomplished in&nbsp;[<A
+ HREF="../bibliography.html#PS96">PS</A>] and&nbsp;[<A
+ HREF="../bibliography.html#IR96">IR</A>], leading to a
+combinatorial upper bound for such limiting systems.
+Itenberg and Roy&nbsp;[<A HREF="../bibliography.html#IR96">IR</A>] show there
+is a system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) for 
+which this upper bound is attained, and thus this combinatorial upper bound
+for limiting systems is a lower bound for <I>r</I>(<I>P</I>), the maximum
+number of real solutions to a system with common Newton polytope <I>P</I>.
+
+<P>
+Itenberg and Roy then conjectured that this combinatorial bound was in
+fact the global bound, that is, they conjectured that the maximal number of
+real solutions occurs in limiting systems.
+They also gave a similar bound for <I>r</I><SUB>+</SUB>(<I>P</I>), the number
+of solutions with positive coordinates.
+This was too optimistic, for Li and Wang&nbsp;[<A
+HREF="../bibliography.html#LW98">LW</A>] found a 
+remarkably simple counterexample to this conjecture of Itenberg and Roy
+<BR><P></P>
+<DIV ALIGN="CENTER">
+  <I>y</I> - <I>x</I> - 1 &nbsp; = &nbsp; 
+  200 - 100<I>y</I><SUP>3</SUP> + 900<I>x</I><SUP>3</SUP> - 
+  <I>x</I><SUP>3</SUP><I>y</I><SUP>3</SUP> &nbsp; = &nbsp; 0 .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This system has 3 positive solutions
+<BR><P></P>
+<DIV ALIGN="CENTER">
+(0.317659, 1.317659),  &nbsp;  (.659995, 1.659995),
+ &nbsp; and &nbsp;  (8.12058, 9.12058) ,
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+but the combinatorial upper bound is 2.
+Thus systems with the maximal number of real solutions cannot  in general be
+constructed with these limiting techniques.
+
+<P>
+We still have more questions than answers.
+Among the questions are:
+
+<OL>
+<LI>Improve this lower bound for <I>r</I>(<I>P</I>) (or for 
+    <I>r</I><SUB>+</SUB>(<I>P</I>) of Itenberg and Roy. 
+    </LI>
+<LI>Find new general methods to construct systems with many real solutions.
+    </LI>
+<LI>Determine which polytopes <I>P</I> have the property that
+      <I>r</I>(<I>P</I>) < <I>n</I>!Vol<I>P</I>, that is, not all the
+      solutions can be real. 
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="3.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="3.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.2.html">2.iii.b.  Fewnomial Upper Bounds</A><BR>
+ <B> Up:</B> <A HREF="3.html">2.iii. Real Solutions to Sparse Polynomial Systems</A><BR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

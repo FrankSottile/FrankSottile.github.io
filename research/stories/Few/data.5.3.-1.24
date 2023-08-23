@@ -1,0 +1,18 @@
+#data.5.3.-1.24
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^3*z^4 - h(z) = 0,
+#
+#  f, g, and h all have degree 5.
+#
+#######################################################
+k:=5:
+p:=3:
+l:=-1:
+Iterations:=500:
+Instance:=1000:
+deg:=24:   #   Degree of the enumerative problem
+data:=[246, 133796, 344547, 343446, 155842, 22037, 86, 0, 0, 0, 0, 0, 0]:
+Time:=608204.39:
+##############################################################

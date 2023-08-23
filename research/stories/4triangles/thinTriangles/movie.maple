@@ -1,0 +1,81 @@
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions="width=3in,height=2.5in"):
+read("procedures.maple"):
+read("transversals"):Digits:=50:    #  This is the 4 thin triangles with 62 common transversals
+#######################################################################
+macro(fblue=COLOR(RGB, .8, .8, 1)):
+macro(eblue=COLOR(RGB, .5, .5, 1)):
+macro(dblue=COLOR(RGB, 0,0,.8)):
+macro(fred=COLOR(RGB, 1, .8, .8)):
+macro(ered=COLOR(RGB, 1, .5, .5)):
+macro(dred=COLOR(RGB, .8,0,0)):
+macro(fgreen=COLOR(RGB, .8, 1, .8)):
+macro(egreen=COLOR(RGB, .5, 1, .5)):
+macro(dgreen=COLOR(RGB, 0,.8,0)):
+macro(fmagenta=COLOR(RGB, 1, .8, 1)):
+macro(emagenta=COLOR(RGB, 1, .5, 1)):
+macro(dmagenta=COLOR(RGB, .8, 0, .8)):
+#######################################################################
+H := (t, a) ->  [t, a, t*a]:
+Hrotate := subs(t=u+v, a=u-v, H(t,a)):
+Hplot := plot3d(Hrotate(u,v), u=-1..1, v=-1..1, grid=[20,20], color=yellow):
+#######################################################################
+l1:=[H(-1/2,1),  H(1/2,1)]:
+l2:=[H(-1/2,-1), H(1/2,-1)]:
+l3:=[[1/2,1/2,1/4], [-1/2,-1/2,1/4]]:
+l4:=[H(-1/2,0),  H(1/2,0)]:
+lx := subs(t=0, MakeRegulus(l1, l4, l2, t)):
+ly := subs(t=1, MakeRegulus(l1, l4, l2, t)):
+##############################################################################
+l1plot:=spacecurve([ParameterizeLine(l1,t)[],t=-0.5..1.5],color=dblue,thickness=2,numpoints=2):
+l2plot:=spacecurve([ParameterizeLine(l2,t)[],t=-0.5..1.5],color=dred,thickness=2,numpoints=2):
+l3plot:=spacecurve([ParameterizeLine(l3,t)[],t=-1..2],color=dgreen,thickness=2,numpoints=2):
+l4plot:=spacecurve([ParameterizeLine(l4,t)[],t=-1.5..2.5],color=dmagenta,thickness=2,numpoints=2):
+lxplot:=spacecurve([ParameterizeLine(lx,t)[],t=-0.5..2.5],color=black,thickness=2,numpoints=2):
+lyplot:=spacecurve([ParameterizeLine(ly,t)[],t=-0.5..2.5],color=black,thickness=2,numpoints=2):
+PL:=[Hplot,l1plot, l2plot, l3plot, l4plot, lxplot, lyplot]:
+#display3d(PL[], title=Title, orientation=[0,0],scaling=CONSTRAINED,axes=boxed);
+#######################################################################
+
+Angle:=0:
+TR:=Rotate(Triangles,Angle):
+T1:=maketriangle(TR[1],dblue,   eblue,2,20):
+T2:=maketriangle(TR[2],dred,    ered,2,20):
+T3:=maketriangle(TR[3],dgreen,  egreen,2,20):
+T4:=maketriangle(TR[4],dmagenta,emagenta,2,20):
+Lines:=makeLines(Angle,black, 0,3):
+
+#plotsetup(gif,plotoutput="B.gif",plotoptions=`height=600,width=600`):
+#display(T1,T2,T3,T4,Lines[],Hplot,view=[-11..10,-10..8,-12..12],orientation=[105,50]);
+#display(T1,T2,T3,T4,Lines[],Hplot,view=[-11..10,-10..8,-12..12],orientation=[0,0]);
+
+############################################################################################
+
+DSeq:=[]:
+#for Angle from 0 to 358 by 2 do
+#for Angle from 0 to 356 by 4 do
+#for Angle from 0 to 350 by 10 do
+#
+for Angle from 0 to 330 by 30 do
+ 
+ HR:=ROTATE([tt, aa, tt*aa],Angle):
+ Hrotate := subs(tt=u+v, aa=u-v, HR):
+ Hplot := plot3d(Hrotate(u,v), u=-1..1, v=-1..1, grid=[20,20], color=yellow):
+
+ TR:=Rotate(Triangles,Angle):
+ T1:=maketriangle(TR[1],dblue,   eblue,2,20):
+ T2:=maketriangle(TR[2],dred,    ered,2,20):
+ T3:=maketriangle(TR[3],dgreen,  egreen,2,20):
+ T4:=maketriangle(TR[4],dmagenta,emagenta,2,20):
+ Lines:=makeLines(Angle,black, 0, 3):
+
+ DSeq:=[op(DSeq),[T1,T2,T3,T4,Lines[],Hplot]]:
+end do:
+
+#plotsetup(gif,plotoutput="A.gif",plotoptions=`height=1200,width=1200`):
+#display(seq(display(op(DSeq[k])), k=1..nops(DSeq)),insequence=true,
+#  view=[-15..15,-15..15,-13..13],orientation=[105,60]);
+
+time();

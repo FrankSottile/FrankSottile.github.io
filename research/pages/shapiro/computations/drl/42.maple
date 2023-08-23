@@ -1,0 +1,63 @@
+############################################################################
+#42.maple                                                                  #
+#                                                                          #
+#   This MAPLE code sets up a Singular file which computes a              #
+#   Degree reverse Lexicographic Groebner basis.                           #
+#                                                                          #
+#   It treats the enumerative problem of 8 codimension 1 Schubert          #
+#   hypersurfaces in Grass(2,6), each defined by a codimension 2-plane.    # 
+#   There are 14 2-planes meeting 8 codimension 2 linear subspaces         # 
+#   of C^6.                                                                #
+#                                                                          #
+#   				                    seconds                #
+#   Computing a drl Gr\"obner basis  (SINGULAR)       .04                  #
+#   				                                           #
+############################################################################
+interface(quiet=true):
+
+Eq := s -> simplify(linalg[det](linalg[matrix]([
+              [1,s,s^2, s^3 , s^4 ,   s^5],
+              [0,1,2*s,3*s^2,4*s^3, 5*s^4],
+              [0,0, 1 , 3*s ,6*s^2,10*s^3],
+              [0,0, 0 ,  1  ,4*s  ,10*s^2],
+              [1,0, a ,  c  ,  e  ,  g   ],
+              [0,1, b ,  d  ,  f  ,  h   ]]))):
+
+eqs:=[]:
+for i from 1 to 8 do eqs:=[eqs[],Eq(9-i)]: od:
+
+lprint(`//Execute this with:`);
+lprint(`//Singular --ticks-per-sec=100<42.sing`);
+lprint(`//`);
+lprint(`timer=1;`);
+lprint(`//`);
+lprint(`ring R= 0 , (a,b,c,d,e,f,g,h),dp;`);
+lprint(`ideal I=`);
+for i from 1 to 8 do  
+lprint(eqs[i],`,`);  od:
+lprint(`0;`);
+lprint(`int t=timer;`);
+lprint(`ideal G;`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);`);
+lprint(`int s=timer-t;`);
+
+lprint(`print("Time to compute 50 drl Groebner bases: "); `);
+lprint(`s;`);
+lprint(`print("Time units, counts per second:");`);
+lprint(`system("--ticks-per-sec");`);
+lprint(`degree(G);`);
+lprint(`ncols(G);`);
+lprint(`print(G);`);
+
+lprint(`quit;`);
+
+quit;

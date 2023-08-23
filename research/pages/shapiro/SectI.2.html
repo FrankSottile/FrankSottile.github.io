@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+   <TITLE>Linear systems</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectI.1.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectI.3.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>1.ii. Linear systems</H2>
+
+(For a nice survey of linear systems and the pole placement problem, and
+methods developed to study it, see 
+[<a href="http:Bib.html">By</a>].)<BR><BR>
+
+<B>Consider the following problem:</B>
+<BR>
+
+We wish to understand and control the behaviour of a 
+(mechanical) linkage driven by torques <I>u<SUB>i</SUB></I>
+applied to each joint with measured angular displacements 
+<I>y<SUB>i</SUB></I>:
+<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<IMG SRC="figures/linkage.gif">
+</TABLE>
+
+
+Setting <I>v<SUB>i</SUB></I> := <I>i</I> th angular velocity, this evolves
+according to the linearized Newton equation:<BR>
+
+<TABLE ALIGN=center>
+<TR><TD><I>dv<SUB>i</SUB></I> /<I>dt</I> 
+      &nbsp; = &nbsp <I>I<SUB>i</SUB> u<SUB>i</SUB>
+<TR><TD><I>dy<SUB>i</SUB></I> /<I>dt</I> 
+      &nbsp; = &nbsp <I>v<SUB>i</SUB></I>
+</TABLE>
+<BR>
+
+
+&#160;&#160;
+More generally, consider a physical system with <I>m</I> inputs
+and <I>p</I> outputs, which we model as vectors <I>u</I> in 
+<B>R</B><SUP><I>m</I></SUP> and <I>y</I> in 
+<B>R</B><SUP><I>p</I></SUP>.
+If this system is linear, or is near equilibrium, then there are <I>n</I> 
+internal states <I>x</I>, which we consider as a vector in 
+<B>R</B><SUP><I>n</I></SUP>, such that the system is governed by a first
+order linear evolution equation:
+<BR>
+
+<TABLE ALIGN=center>
+<TR><TD><I>dx</I>/<I>dt</I> 
+      &nbsp;= &nbsp <I>Ax</I> + <I>Bu</I>
+<TR><TD>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<I>y</I> 
+      &nbsp;= &nbsp <I>Cx</I>
+</TABLE>
+<BR>
+
+We represent this schematically:<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<IMG SRC="figures/system.gif"  ALIGN=center height=100 width=500>
+</TABLE>
+
+
+The Fourier transform of the first equation gives
+<I>sx</I> = <I>Ax</I> + <I>Bu</I>.&#160;
+If we solve this for <I>x</I> and substitute into the second equation,
+we obtain:
+<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<I>y</I>&#160;=&#160;<I>C</I>(<I>s</I>I - <I>A</I>)<SUP>-1</SUP><I>Bu</I>.
+</TABLE>
+
+The multiplier 
+<I>C</I>(<I>s</I>I - <I>A</I>)<SUP>-1</SUP><I>B</I>
+is called the <I>transfer function</I>.
+This <I>p</I> by <I>m</I>-matrix of rational functions determines the response
+of the measured quantities <I>y</I> in terms of the inputs <I>u</I>, in the
+frequency domain.
+
+<HR>
+<A HREF="SectI.1.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectI.3.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>
+<!-- 
+-->

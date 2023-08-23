@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<P>
+
+<H1>Enumerative Real Algebraic Geometry</H1>
+<A Href="http://www.math.tamu.edu/~sottile"><STRONG>Frank Sottile</STRONG></A> &nbsp;
+<A HREF="mailto:sottile@math.tamu.edu">sottile@math.tamu.edu</A>
+<BR>
+4 August 2002
+<P>
+<I>2000 Mathematics Subject Classification</I> 
+14P99, 12D10, 14N10, 14N15, 14M15, 14M25, 14M17 
+<BR>
+<HR>
+<A NAME="section2"></A>
+<A NAME="section1"></A>
+<A NAME="toc"></A>
+
+<H2>Table of Contents</H2>
+
+<DD><A HREF="abstract.html">Summary</A>
+<OL>
+ <LI><A HREF="S1/1.html">Introduction</A>
+<A NAME="section3"></A>
+ <LI><A HREF="S2/index.html">Polynomial Systems</A>
+
+   <OL type = i>
+    <LI> <A HREF="S2/1.html">Sparse Polynomial Systems</A>
+    <LI> <A HREF="S2/2.html">The Polyhedral Homotopy Algorithm</A>
+    <LI> <A HREF="S2/3.html">Real Solutions to Sparse Polynomial Systems</A>
+   </OL>
+
+<A NAME="section4"></A>
+ <LI><A HREF="S3/index.html">Enumerative Real Algebraic Geometry</A>
+
+  <OL type = i>
+   <LI> <A HREF="S3/1.html">Enumerative Real Algebraic Geometry</A>
+   <LI> <A HREF="S3/2.html">Problems not involving general conditions</A>
+   <LI> <A HREF="S3/3.html">The Stewart-Gough Platform</A>
+   <LI> <A HREF="S3/4.html">Real rational cubics through 8 points in 
+                        <B>R</B><SUP>2</SUP></A>
+   <LI> <A HREF="S3/5.html">Common tangent lines to Spheres in 
+                        <B>R</B><SUP><I>n</I></SUP></A>
+  </OL>
+<A NAME="section5"></A>
+ <LI><A HREF="S4/index.html">Schubert Calculus</A>
+  <OL type = i>
+   <LI> <A HREF="S4/1.html">The Schubert Calculus of Lines</A>
+   <LI> <A HREF="S4/2.html">The Special Schubert Calculus</A>
+   <LI> <A HREF="S4/3.html">Further Extensions of the Schubert Calculus</A>
+  </OL>
+
+<A NAME="section6"></A>
+<LI><A HREF="S5/index.html">The Conjecture of Shapiro and Shapiro</A>
+
+ <OL type = i>
+  <LI> <A HREF="S5/1.html">The Conjecture of Shapiro and Shapiro for Grassmannians</A>
+  <LI> <A HREF="S5/2.html">Rational functions with real critical points</A>
+  <LI> <A HREF="S5/3.html">Extensions of the Conjecture of Shapiro</A>
+ </OL>
+
+<LI><A HREF="S6/index.html">Lower Bounds in the Schubert calculus</A>
+
+ <OL type = i>
+  <LI> <A HREF="S6/1.html">Real Degree of Grassmann varieties</A>
+  <LI> <A HREF="S6/2.html">Lower bounds in the Schubert calculus of flags?</A>
+ </OL>
+
+<LI><A HREF="Acknowledgements.html">Acknowledgements</A>
+<LI><A HREF="bibliography.html">Bibliography</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+</BODY>
+</HTML>

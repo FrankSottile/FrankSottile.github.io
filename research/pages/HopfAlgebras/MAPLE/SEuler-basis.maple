@@ -1,0 +1,238 @@
+#SEuler-basis.maple
+#
+#  Frank Sottile
+#  30 March 2002
+#
+#  Bases for the Eulerian subalgebra of QSym and SSym 
+#  are computed here.
+#
+###################################################################
+interface(quiet=true):
+###################################################################
+Collect := proc(L)
+local S,T,ind,COEFFS,collected ;
+ S:={}:
+ for T in L do 
+  S:=S union {T[2]}:
+ od:
+ for ind in S do 
+  COEFFS[ind]:=0:
+ od:
+ for T in L do 
+  COEFFS[T[2]]:=COEFFS[T[2]]+T[1]:
+ od:
+ collected:=[]:
+ for ind in S do
+  collected:=[collected[],[COEFFS[ind],ind]]:
+ od:
+ collected
+end:
+###################################################################
+CollShort := proc(L)
+local S,T,ind,COEFFS,collected ;
+ S:={}:
+ for T in L do 
+  S:=S union {T[2]}:
+ od:
+ for ind in S do 
+  COEFFS[ind]:=0:
+ od:
+ for T in L do 
+  COEFFS[T[2]]:=COEFFS[T[2]]+T[1]:
+ od:
+ collected:=[]:
+ for ind in S do
+  if COEFFS[ind]<>0 then 
+   collected:=[collected[],[COEFFS[ind],ind]]:
+  fi:
+ od:
+ collected
+end:
+#####################################################################
+Des := proc(u)
+#
+#  The descents of u
+#
+ local i, des:
+ des:=[]: 
+ for i from 1 to nops(u)-1 do
+  if u[i]>u[i+1] then des:=[des[],i]: fi:
+ od:
+ des
+end:
+#########################################################################
+GlobalDescent := proc(u)
+#
+#   Computes the global descents of u
+#
+local n, p, GD:
+ n:=nops(u):
+ GD:=[]:
+ for p from 1 to n-1 do
+  if min(u[1..p][])= n+1-p then GD := [GD[],p]: fi:
+ od:
+ GD
+end:
+##########################################################################
+SMCoprod := proc(Term)
+local u,coprod,gd,i,Pr;
+ u:=Term[2]:
+ gd:=[0,GlobalDescent(u)[],nops(u)]:
+ coprod:=[]:
+ for i from 1 to nops(gd) do
+  Pr:=Split(u,gd[i]):
+  coprod:=[coprod[],[Term[1],Pr[1],Pr[2]]]:
+ od:
+ coprod
+end:
+###################################################################
+#
+#   The Zeta function of SSym
+#
+SZeta := proc(u)
+ local zeta:
+ zeta:=0:
+ if nops(Des(u))=0 then zeta:=1: fi:
+ zeta
+end:
+###################################################################
+#
+#  The Mobius function in the M-basis of SSym
+#
+SMMu := proc(u)
+ local zeta:
+ zeta:=0:
+ if Des(u)=GlobalDescent(u) then zeta:=-(-1)^(nops(Des(u))): fi:
+ if u=[] then zeta:=1: fi:
+ zeta
+end:
+################################################
+SM_Al := proc(u)
+ SMMu(u) - (-1)^nops(u)*SZeta(u)
+end:
+###################################################################
+read(MalvenutoProcedures):
+
+
+ Th:=[ [1,[]] ]:
+#################################
+ Th:=[ [1, [1]] ]:
+#################################
+ Th:=[ [1, [1,2]],  [2, [2,1]] ]:
+#################################
+ Th:=[ [1, [1,2,3]] ]: 
+ Th:=[ [1, [2,1,3]] ]: 
+ Th:=[ [1, [1,3,2]] ]: 
+ Th:=[ [1, [3,1,2]], [1, [2,3,1]], [2, [3,2,1]] ]:
+#################################
+
+ Th:=[ [1, [2,1,3,4]] ]:
+ Th:=[ [1, [1,3,2,4]] ]:
+ Th:=[ [1, [1,2,4,3]] ]:
+
+ Th:=[ [1, [2,3,1,4]] ]:
+ Th:=[ [1, [2,1,4,3]] ]:
+ Th:=[ [1, [3,1,2,4]] ]:
+ Th:=[ [1, [1,3,4,2]] ]:
+ Th:=[ [1, [1,4,2,3]] ]:
+
+ Th:=[ [1, [3,2,1,4]] ]:
+ Th:=[ [1, [2,4,1,3]] ]:
+ Th:=[ [1, [3,1,4,2]] ]:
+ Th:=[ [1, [1,4,3,2]] ]:
+
+ Th:=[ [1, [3,2,4,1]] ]:
+ Th:=[ [1, [2,4,3,1]] ]:
+ Th:=[ [1, [4,2,1,3]] ]:
+ Th:=[ [1, [4,1,3,2]] ]:
+
+#  16 automatically in Euler
+
+ Th:=[ [1, [1,2,3,4]], [2, [4,1,2,3]], [2, [3,4,1,2]], [2, [2,3,4,1]], 
+       [4, [4,3,1,2]], [4, [4,2,3,1]], [4, [3,4,2,1]], [8, [4,3,2,1]] ]:
+ Th:=[                 [2, [4,1,2,3]], [2, [3,4,1,2]],               
+       [4, [4,3,1,2]], [4, [4,2,3,1]], [4, [3,4,2,1]], [8, [4,3,2,1]] ]:
+ Th:=[                 [2, [3,4,1,2]], [2, [2,3,4,1]], 
+       [4, [4,3,1,2]], [4, [4,2,3,1]], [4, [3,4,2,1]], [8, [4,3,2,1]] ]:
+
+IdAlId:=[]:
+ for MF in Th do 
+  for Term in SMCoprod(MF) do
+   for T in SMCoprod([Term[1],Term[2]]) do
+    IdAlId:=[IdAlId[],[T[1]*SM_Al(T[3]),[T[2],Term[3]]]]:
+   od:
+  od:
+ od:
+
+CollShort(IdAlId);
+quit;
+
+for n from 3 to 3 do 
+
+ Th:=[]:  Vars:={}:
+ for w in combinat[permute](n) do
+  if nops(GlobalDescent(w))<>0 or w=[seq(i,i=1..n)] then
+   A:=cat(`a`);
+   for Val in w do 
+    A:=cat(A,convert(Val,symbol)):
+   od:
+   Th:=[Th[],[A,w]]:
+   Vars:=Vars union {A}:
+  fi:
+ od:
+
+ 
+ IdAlId:=[]:
+ for MF in Th do 
+  for Term in SMCoprod(MF) do
+   for T in SMCoprod([Term[1],Term[2]]) do
+    IdAlId:=[IdAlId[],[T[1]*SM_Al(T[3]),[T[2],Term[3]]]]:
+   od:
+  od:
+ od:
+
+ Eqs:={}:
+ for Pair in  CollShort(IdAlId) do
+  Eqs:= Eqs union {Pair[1]=0}:
+ od:
+
+for eq in Eqs do
+lprint(eq);
+od:
+
+
+od:
+
+quit;
+
+
+# This bit of code computes the dimension of the Eulerial Subalgebra
+
+ COLS:=convert(indets(Eqs),list):
+ Eqs:=convert(Eqs,list):
+ C:=nops(COLS):
+ R:=nops(Eqs):
+ f:= x -> 0:
+ M:=linalg[matrix](R,C,f):
+ for i from 1 to R do
+  eq:=Eqs[i]:
+  if whattype(op(1,expand(2*eq)))<>`*` then 
+    for term in op(1,expand(2*eq)) do
+     for j from 1 to C do
+      if op(2,term)=COLS[j] then M[i,j]:=op(1,term): fi:
+     od:
+    od:
+   else
+    term:=op(1,expand(2*eq)):
+    for j from 1 to C do
+     if op(2,term)=COLS[j] then M[i,j]:=op(1,term): fi:
+    od:
+   fi:
+ od:
+
+
+ lprint(n!-linalg[rank](M));
+
+od:
+quit;
+

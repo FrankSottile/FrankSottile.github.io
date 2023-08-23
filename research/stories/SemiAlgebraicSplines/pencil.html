@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Pencils of quadrics</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<table>
+ <tr>
+   <td valign="top">
+   <h1>Pencils of Quadrics</h1>
+     <font size="+2"> 
+      <A HREF="http://math.okstate.edu/people/mdipasq/">Michael DiPasquale</A>, 
+      <a href="../../index.html">Frank Sottile</a>, and Lanyin (Larry) Sun. &nbsp;
+    </td>
+    <td valign=top>
+     <font size="+2">
+     <a href="index.html">Return</a> to Semialgebraic Splines.<br><br><br>
+     </font>
+    </td>
+  </tr>
+</table>
+<hr>
+<font size="+2">
+
+&nbsp; &nbsp;
+ We display cell complexes &Delta; that subdivide the unit circle with three faces, three edges,
+ and one vertex (at the origin).
+   In these cell complexes the curves underlying the edges form a pencil of quadrics.
+   Such a pencil defines a zero-scheme in <b>CP</b><sup>2</sup> of degree four.
+   In our paper we show that when the curves are members of a pencil of curves. the dimensions of the spline
+   modules (their Hilbert functions) do not depend upon the actual edges, but only on their number and
+   degrees.
+
+&nbsp; &nbsp;
+In particular, the geometry of the curves has no effect.
+The eight cell complexes below illustrate this.
+Each pencil in the first four defines four reduced points, either four real points in the finite part of 
+<b>CP</b><sup>2</sup> or four real points with two at infinity, and then the same with two real and two
+complex, the second pair being either in the finite part of <b>CP</b><sup>2</sup> or at infinity.
+The others involve one or more double points.
+
+<table border=1>
+ <!--------------------------------------------------------------------------->
+ <tr>
+   <td align=center> <img src="4r.png">  <br>
+   <font size=+2>Four real finite points</font> </td>
+   <td align=center>  <img src="2r2ir.png"><br>
+   <font size=+2>Four real points, two at infinity</font> </td>
+   <td align=center>  <img src="2r2c.png"> <br>
+   <font size=+2>Two real two complex, all finite</font> </td>
+ </tr>
+ <!--------------------------------------------------------------------------->
+ <tr>
+   <td align=center> <img src="2r2ic.png"> <br>
+   <font size=+2>Two complex points at infinity</font></td>
+   <td align=center>  <img src="2r1d.png"><br>
+   <font size=+2>Two real and one double point</font></td>
+   <td align=center> <img src="2r1id.png"><br>
+   <font size=+2>Two real and one double point at infinity</font></td>
+ </tr>
+ <!--------------------------------------------------------------------------->
+ <tr>
+   <td align=center> <img src="2d.png"> <br>
+   <font size=+2>Two real double points</font></td>
+   <td align=center>    <img src="1r1it.png"><br>
+   <font size=+2>Two real and one triple point at infinity</font>  </td>
+ </tr>
+ <!--------------------------------------------------------------------------->
+ <tr>
+ </tr>
+ <!--------------------------------------------------------------------------->
+</table><br>
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+The following table gives the Hilbert function for all these cell complexes given by three
+ quadrics in a pencil.<br>
+They were generated with the Macaulay2 file <a href="pencil.m2"><tt>pencil.m2</tt></a>.
+<br>
+
+
+<table border=1>
+<tr>
+  <th>r\d</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
+  <th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th>
+  <th>17</th><th>18</th><th>19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th>
+  <th>25</th><th>26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th><th>32</th>
+  <th>33</th><th>34</th><th>35</th><th>36</th><th>37</th><th>38</th><th>39</th><th>40</th>
+</tr>
+<tr>
+  <th>0</th><td>1</td><td>3</td><td>7</td><td>13</td><td>22</td><td>34</td><td>49</td>
+  <td>67</td><td>88</td><td>112</td><td>139</td><td>169</td><td>202</td><td>238</td>
+  <td>277</td><td>319</td><td>364</td><td>412</td><td>463</td><td>517</td><td>574</td>
+  <td>634</td><td>697</td><td>763</td><td>832</td><td>904</td><td>979</td><td>1057</td>
+  <td>1138</td><td>1222</td><td>1309</td><td>1399</td><td>1492</td><td>1588</td>
+  <td>1687</td><td>1789</td><td>1894</td><td>2002</td><td>2113</td><td>2227</td><td>2344</td>
+</tr>
+<tr>
+  <th>1</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>30</td>
+  <td>42</td><td>57</td><td>75</td><td>96</td><td>120</td><td>147</td><td>177</td>
+  <td>210</td><td>246</td><td>285</td><td>327</td><td>372</td><td>420</td><td>471</td>
+  <td>525</td><td>582</td><td>642</td><td>705</td><td>771</td><td>840</td><td>912</td>
+  <td>987</td><td>1065</td><td>1146</td><td>1230</td><td>1317</td><td>1407</td><td>1500</td>
+  <td>1596</td><td>1695</td><td>1797</td><td>1902</td><td>2010</td><td>2121</td>
+</tr>
+<tr>
+  <th>2</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>46</td><td>58</td><td>73</td><td>91</td><td>112</td><td>136</td>
+  <td>163</td><td>193</td><td>226</td><td>262</td><td>301</td><td>343</td><td>388</td>
+  <td>436</td><td>487</td><td>541</td><td>598</td><td>658</td><td>721</td><td>787</td>
+  <td>856</td><td>928</td><td>1003</td><td>1081</td><td>1162</td><td>1246</td><td>1333</td>
+  <td>1423</td><td>1516</td><td>1612</td><td>1711</td><td>1813</td><td>1918</td>
+</tr>
+<tr>
+  <th>3</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>93</td><td>111</td><td>132</td>
+  <td>156</td><td>183</td><td>213</td><td>246</td><td>282</td><td>321</td><td>363</td>
+  <td>408</td><td>456</td><td>507</td><td>561</td><td>618</td><td>678</td><td>741</td>
+  <td>807</td><td>876</td><td>948</td><td>1023</td><td>1101</td><td>1182</td><td>1266</td>
+  <td>1353</td><td>1443</td><td>1536</td><td>1632</td><td>1731</td>
+</tr>
+<tr>
+  <th>4</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>121</td><td>139</td><td>160</td><td>184</td><td>211</td><td>241</td><td>274</td>
+  <td>310</td><td>349</td><td>391</td><td>436</td><td>484</td><td>535</td><td>589</td>
+  <td>646</td><td>706</td><td>769</td><td>835</td><td>904</td><td>976</td><td>1051</td>
+  <td>1129</td><td>1210</td><td>1294</td><td>1381</td><td>1471</td><td>1564</td>
+</tr>
+<tr>
+  <th>5</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>192</td><td>216</td><td>243</td>
+  <td>273</td><td>306</td><td>342</td><td>381</td><td>423</td><td>468</td><td>516</td>
+  <td>567</td><td>621</td><td>678</td><td>738</td><td>801</td><td>867</td><td>936</td>
+  <td>1008</td><td>1083</td><td>1161</td><td>1242</td><td>1326</td><td>1413</td>
+</tr>
+<tr>
+  <th>6</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>232</td>
+  <td>256</td><td>283</td><td>313</td><td>346</td><td>382</td><td>421</td><td>463</td>
+  <td>508</td><td>556</td><td>607</td><td>661</td><td>718</td><td>778</td><td>841</td>
+  <td>907</td><td>976</td><td>1048</td><td>1123</td><td>1201</td><td>1282</td>
+</tr>
+<tr>
+  <th>7</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>327</td><td>357</td><td>390</td><td>426</td><td>465</td><td>507</td><td>552</td><td>600</td><td>651</td><td>705</td><td>762</td><td>822</td><td>885</td><td>951</td><td>1020</td><td>1092</td><td>1167</td>
+</tr>
+<tr>
+    <th>8</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>325</td><td>351</td><td>379</td><td>409</td><td>442</td><td>478</td><td>517</td><td>559</td><td>604</td><td>652</td><td>703</td><td>757</td><td>814</td><td>874</td><td>937</td><td>1003</td><td>1072</td>
+</tr>
+<tr>
+    <th>9</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>325</td><td>351</td><td>378</td><td>406</td><td>435</td><td>465</td><td>498</td><td>534</td><td>573</td><td>615</td><td>660</td><td>708</td><td>759</td><td>813</td><td>870</td><td>930</td><td>993</td>
+</tr>
+<tr>
+    <th>10</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>325</td><td>351</td><td>378</td><td>406</td><td>435</td><td>465</td><td>496</td><td>528</td><td>562</td><td>598</td><td>637</td><td>679</td><td>724</td><td>772</td><td>823</td><td>877</td><td>934</td>
+</tr>
+<tr>
+    <th>11</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>325</td><td>351</td><td>378</td><td>406</td><td>435</td><td>465</td><td>496</td><td>528</td><td>561</td><td>595</td><td>630</td><td>666</td><td>705</td><td>747</td><td>792</td><td>840</td><td>891</td>
+</tr>
+<tr>
+    <th>12</th><td>1</td><td>3</td><td>6</td><td>10</td><td>15</td><td>21</td><td>28</td>
+  <td>36</td><td>45</td><td>55</td><td>66</td><td>78</td><td>91</td><td>105</td>
+  <td>120</td><td>136</td><td>153</td><td>171</td><td>190</td><td>210</td><td>231</td><td>253</td><td>276</td><td>300</td><td>325</td><td>351</td><td>378</td><td>406</td><td>435</td><td>465</td><td>496</td><td>528</td><td>561</td><td>595</td><td>630</td><td>666</td><td>703</td><td>741</td><td>781</td><td>823</td><td>868</td>
+  
+</tr>
+</table>
+
+
+
+
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<address></address>
+<i><!-- hhmts start -->Last modified: Thu Feb 18 23:05:59 CST 2016 <!-- hhmts end --></i>
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12943815-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

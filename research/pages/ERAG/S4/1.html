@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: The Schubert Calculus of Lines</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.html">4.ii.  The Special Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">Table of Contents</A> <BR>
+<HR>
+<!--End of Navigation Panel-->
+<A NAME="sec:SchubertCalculus"></A>
+<H1>4.i. The Schubert Calculus of Lines</H1>
+
+<P>
+The first non-trivial instance of the Schubert calculus is the question posed
+at the beginning of Section&nbsp;<A HREF="../S3/1.html">3.i</A>.
+
+<P><A NAME="4lines"></A>
+<P>
+<DIV><B>Question  4.1</B> &nbsp; 
+How many lines in space meet four general lines 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, <I>l</I><SUB>3</SUB>, 
+and <I>l</I><SUB>4</SUB>?
+</DIV><P></P>
+
+<P>
+Three pairwise skew lines  <I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, and 
+<I>l</I><SUB>3</SUB> lie on a unique 
+smooth quadric surface <I>Q</I>.
+There are two families of lines that foliate <I>Q</I>--one family includes 
+  <I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, and 
+<I>l</I><SUB>3</SUB>  and the other consists of the lines meeting each
+of   <I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, and 
+<I>l</I><SUB>3</SUB>.
+The fourth line <I>l</I><SUB>4</SUB> meets <I>Q</I> in two points, and each of
+these points determines a line in the second family.
+Thus there are 2 lines <I>m</I><SUB>1</SUB> and  <I>m</I><SUB>2</SUB>  in
+space that meet general lines  
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, <I>l</I><SUB>3</SUB>, 
+and <I>l</I><SUB>4</SUB>.
+Figure&nbsp;<A HREF="#fig:4lines">10</A> shows this configuration.
+<A NAME="fig:4lines"></A>
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<TR><TD align=center><IMG SRC="4lines.png"></TD></TR>
+<TR><TD> &nbsp; </TD></TR>
+<TR><TD align=center><STRONG>Figure 10:</STRONG>
+       The two lines meeting four general lines in space.</TD></TR>
+</TABLE>
+</DIV><P></P>
+Figure&nbsp;<A HREF="#fig:4lines">10</A> also shows how the two lines can be
+real--if <I>l</I><SUB>4</SUB> meets <I>Q</I> in two real points.
+(The two lines are complex when <I>l</I><SUB>4</SUB> meets <I>Q</I>
+in two complex conjugate points.) 
+
+<P>
+The classical Schubert calculus is a vast generalization of this problem of
+four lines.
+In the 1980's Speiser suggested to Fulton that the classical
+Schubert calculus may be a good testing ground for
+Question&nbsp;<A HREF="../S3/index.html#ques:reality">3.1</A>.
+This was also considered by Chiavacci and Escamilla-Castillo&nbsp;[<A
+ HREF="../bibliography.html#CEC88">CE-C</A>].
+We will discuss increasingly more general versions of the Schubert calculus,
+and the status of Question&nbsp;<A
+HREF="../S3/index.html#ques:reality">3.1</A> for each. 
+
+<P>
+Consider first more general problems involving lines.
+The space of lines in <B>P</B><SUP><I>n</I></SUP> is a smooth projective
+variety of dimension 2<I>n</I>&nbsp;-&nbsp;2 called the Grassmannian of lines in 
+<B>P</B><SUP><I>n</I></SUP>.
+The set of lines meeting a linear subspace <I>L</I> of dimension 
+<I>n</I>-1-<I>l</I> has
+codimension <I>l</I> in the Grassmannian.
+Thus given general linear subspaces 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I>, 
+of <B>P</B><SUP><I>n</I></SUP> with
+the dimension of <I>L<SUB>i</SUB></I> equal to 
+<I>n</I>-1-<I>l<SUB>i</SUB></I>, where we have 
+<I>l</I><SUB>1</SUB>&nbsp;+&nbsp;<I>l</I><SUB>2</SUB>&nbsp;+&nbsp;...&nbsp;+&nbsp;<I>l<SUB>s</SUB></I>&nbsp;=&nbsp;2<I>n</I>&nbsp;-&nbsp;2,
+we expect (and there are  indeed) finitely many lines in 
+<B>P</B><SUP><I>n</I></SUP> meeting each linear subspace 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I>.
+Schubert&nbsp;[<A HREF="../bibliography.html#Sch1886a">Sch3</A>] discovered
+algorithms for computing this number 
+<I>d</I>(<I>l</I><SUB>1</SUB>,<I>l</I><SUB>2</SUB>,...,<I>L<SUB>s</SUB></I>)
+of lines.
+For example, if each <I>l<SUB>i</SUB></I> is 1, so that 
+<I>s</I>&nbsp;=&nbsp;2<I>n</I>&nbsp;-&nbsp;2, then this number is the
+<I>n</I>th Catalan number<A HREF="#Cn"><SUP>&#167;</SUP></A>
+<A NAME="eq:Catalan"></A><BR>
+
+
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+ <IMG SRC="Catalan.png"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Thus there are <I>C<SUB>n</SUB></I> lines meeting each of 
+2<I>n</I>&nbsp;-&nbsp;2 codimension 2 planes
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., 
+<I>L</I><SUB>2<I>n</I>-2</SUB> in 
+<B>P</B><SUP><I>n</I></SUP>. 
+
+<P>
+These enumerative problems of lines in <B>P</B><SUP><I>n</I></SUP>
+meeting general linear subspaces furnished the first infinite family of
+non-trivial enumerative problems known to be fully real.
+<A NAME="thm:reality"></A> 
+
+<P>
+<DIV><B>Theorem  4.2</B> ([<A HREF="../bibliography.html#So97a">So1</A>,
+ Theorem C)  &nbsp;  Given positive integers 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l<SUB>s</SUB></I>
+ with
+ <I>l</I><SUB>1</SUB>&nbsp;+&nbsp;<I>l</I><SUB>2</SUB>&nbsp;+&nbsp;...&nbsp;+&nbsp;<I>l<SUB>s</SUB></I>&nbsp;=&nbsp;2<I>n</I>&nbsp;-&nbsp;2,
+ there  exist real linear subspaces 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I>, 
+ of <B>P</B><SUP><I>n</I></SUP> with 
+ dim<I>L<SUB>i</SUB></I>&nbsp;=&nbsp;<I>n</I>-1-<I>l<SUB>i</SUB></I>  such
+ that there are exactly 
+<I>d</I>(<I>l</I><SUB>1</SUB>,<I>l</I><SUB>2</SUB>,...,<I>L<SUB>s</SUB></I>)
+ complex lines meeting each subspace <I>L<SUB>i</SUB></I>, and each of these
+ lines is real.
+</DIV><P></P>
+
+<P>
+<HR>
+
+<A NAME="Cn"></A><SUP>&#167;</SUP>This indexing of the Catalan numbers is shifted
+from that of some other authors.
+
+<BR><HR>
+<!--Navigation Panel-->
+ <A HREF="2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.html">4.ii.  The Special Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">Table of Contents</A><BR>
+ <HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

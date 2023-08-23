@@ -1,0 +1,78 @@
+#A3.maple
+#
+# Frank Sottile
+# This draws the moment graph for type A_3
+#
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+Rot:=proc(v)
+ return([(2*v[1]-v[3])/sqrt(5), v[2], (v[1]+2*v[3])/sqrt(5)])
+end proc:
+
+#
+#  These integer points are the vertices of the permutahedron inscribed in the
+#  cube with vertices all reflections of [2,2,2] in the coordinate  planes 
+#
+Vertices:=[[ 3, 1,0],[ 1, 3,0], [0, 3, 1], [0, 1, 3], [ 1,0, 3], [ 3,0, 1],
+           [-3, 1,0],[-1, 3,0], [0,-3, 1], [0,-1, 3], [-1,0, 3], [-3,0, 1],
+	   [ 3,-1,0],[ 1,-3,0], [0, 3,-1], [0, 1,-3], [ 1,0,-3], [ 3,0,-1],
+	   [-3,-1,0],[-1,-3,0], [0,-3,-1], [0,-1,-3], [-1,0,-3], [-3,0,-1]]:
+Vertices:=[[ 2, 1,0],[ 1, 2,0], [0, 2, 1], [0, 1, 2], [ 1,0, 2], [ 2,0, 1],
+           [-2, 1,0],[-1, 2,0], [0,-2, 1], [0,-1, 2], [-1,0, 2], [-2,0, 1],
+	   [ 2,-1,0],[ 1,-2,0], [0, 2,-1], [0, 1,-2], [ 1,0,-2], [ 2,0,-1],
+	   [-2,-1,0],[-1,-2,0], [0,-2,-1], [0,-1,-2], [-1,0,-2], [-2,0,-1]]:
+ED:=[[1,-1,0],[1,0,-1],[0,1,-1],[1,1,0],[1,0,1],[0,1,1]]:
+for i from 1 to 6 do for j from 1 to 3 do ED[i][j]:=ED[i][j]/sqrt(2): end do: end do:
+
+for i from 1 to 24 do
+  Vertices[i] := Rot(Vertices[i]):
+end do:
+for i from 1 to 6 do
+  ED[i] := Rot(ED[i]):
+end do:
+
+
+Col:=[blue,red,green,magenta,brown,coral]:
+#V:=pointplot3d(Vertices,symbol=point,color=black):
+#
+V:=[]: for vert in Vertices do V:=[V[],sphere(vert,0.1,style=patchnogrid,grid=[9,11],color=black)]: end do:
+
+Dir:={}:
+Edges:=[]:
+for i from 1 to 23 do
+ for j from i+1 to 24 do
+  vv:=[seq(Vertices[i][ii]-Vertices[j][ii], ii=1..3)]:
+  g := sqrt(vv[1]^2+vv[2]^2+vv[3]^2);
+  vv := [seq(vv[ii]/g, ii=1..3)]:
+#  lprint(Vertices[i],Vertices[j],vv);
+#  if (vv[1]<0 or (vv[1]=0 and vv[2]<0) ) then vv := [seq(-vv[ii], ii=1..3)]: end if:
+  for jj from 1 to 6 do
+   if abs(sum(vv[ii]*ED[jj][ii],ii=1..3))= 1  then
+#     Edges := [Edges[], line(Vertices[i],Vertices[j], numpoints=2,color=Col[jj],thickness=2)]:
+     Edges := [Edges[], line(Vertices[i],Vertices[j],color=Col[jj],thickness=2)]:
+   end if:
+  end do:
+ end do:
+end do:
+
+#Dir:= Dir minus {[1,-1,0], [1,0,-1], [0,1,-1],[1,1,0],[1,0,1],[0,1,1]};
+
+
+plotsetup(gif,plotoutput="B.gif",plotoptions=`height=700,width=650`):
+#plotsetup(ps,plotoutput=`A.eps`,plotoptions=`color,portrait,width=600pt,height=600pt,noborder`):
+display3d(V,Edges,orientation=[32,56],scaling=constrained);
+
+F:= th -> display(V,Edges,orientation=[th,56],style=patchnogrid):
+NFr:=360:
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=900,width=800`): 
+#
+NFr:=180:
+plotsetup(gif,plotoutput="Amovie.gif",plotoptions=`height=300,width=300`): 
+animate(F,[th],th=0..360*(1-1/NFr),scaling=constrained,axes=none,frames=NFr);
+ 
+
+
+

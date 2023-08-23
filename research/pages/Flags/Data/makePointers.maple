@@ -1,0 +1,171 @@
+#makePointers.maple
+#
+# This makes the pointers for the projections and their preimages
+#
+#################################################################
+interface(quiet=true):
+#
+#   This file first reads all the data files, and it makes a table
+# called Images indexed by the computed enumerative problems 
+# whose entries are the projections of the given enumerative
+# problems.  If a given problem has been computed, it reads its data file
+# and records its number of solutions.  This includes the Grassmannian
+# problems. 
+#
+# Next it creates a table called Preimages indexed by the computed enumerative
+# problems whose entries are all the computed problems which project to the
+# given one. 
+#
+# The entries in both tables are lists with each element a 4-tuple:
+#
+# [ "Name", [FlagVariety], [EnumerativeProblem], # Sols ]:
+#
+#
+###########################################################################
+RemoveDot := proc(File_Name)
+ if searchtext(".",File_Name)<>0 then
+   return(StringTools[Split](File_Name,".")[1]):
+  else
+   return(File_Name):
+ fi:
+end proc:
+###########################################################################
+read("Directories"):
+read("ListOfFiles"):
+read("Grassmannian"):
+read("HTML_Procedures.maple"):
+
+
+FlagManifolds:=[seq(Directories[i][], i=4..8)]:
+ComputedProblems:=[]:
+GrassmannProblems:=[]:
+
+for F in Grassmannian do 
+  Preimages[RemoveDot(F)]:=[]:
+  GrassmannProblems:=[GrassmannProblems[],RemoveDot(F)]:
+  NSols[RemoveDot(F)]:=StringTools[Split](F,".")[2]:
+od:
+
+for Dir in FlagManifolds do 
+ for F in Data[Dir] do 
+  Preimages[RemoveDot(F)]:=[]: 
+  Images[RemoveDot(F)]:=[]:
+  ComputedProblems:=[ComputedProblems[],RemoveDot(F)]:
+  NSols[RemoveDot(F)]:=StringTools[Split](F,".")[2]:
+ od:
+od:
+
+for n from 4 to 8 do 
+ for directory in Directories[n] do 
+  for File_name in Data[directory] do 
+
+   NAME:=sprintf("%s/%s",convert(directory,string),File_name):
+   read(sprintf("%s.data",NAME)):
+   OldFV:=FlagVariety:
+   OldEP:=EnumerativeProblem:
+   OldNumber:=NumberOfSolutions:
+   projections:=Projections(FlagVariety, EnumerativeProblem):
+
+   for P in projections do 
+    NewName:=titleString("",P[1],P[2],"NoSols"):
+############################
+   NewName:=fixGrassmannianName(NewName):
+#if n=8 then lprint(NewName); end if:
+##############################
+    if nops(P[1])=2 and not(member(RemoveDot(NewName),GrassmannProblems)) then 
+     lprint(NewName,convert(directory,string),File_name);
+#  lprint(   GrassmannProblems); quit;
+ fi:
+
+    if member(NewName, ComputedProblems) then 
+
+      read(sprintf("%s/%s.%s.data",Directory(P[1]),NewName,NSols[NewName])):
+
+      Preimages[RemoveDot(NewName)]:=[Preimages[RemoveDot(NewName)][], 
+             [RemoveDot(File_name), OldFV, OldEP, convert(OldNumber,string)]]:
+      Images[RemoveDot(File_name)]:=[Images[RemoveDot(File_name)][],
+             [RemoveDot(NewName), P[1], P[2], convert(NumberOfSolutions,string)]]:
+
+     else
+      if member(NewName, GrassmannProblems) then 
+
+        Preimages[RemoveDot(NewName)]:=[Preimages[RemoveDot(NewName)][], 
+               [RemoveDot(File_name), OldFV, OldEP, convert(OldNumber,string)]]:
+        Images[RemoveDot(File_name)]:=[Images[RemoveDot(File_name)][],
+               [RemoveDot(NewName), P[1], P[2], NSols[RemoveDot(NewName)]]]:
+
+       else
+
+        Images[RemoveDot(File_name)]:=[Images[RemoveDot(File_name)][],
+               [RemoveDot(NewName), P[1], P[2], "0"]]:
+      fi:
+    fi:
+   od:
+  od:
+ od:
+od:
+#Preimages["Ye4"];
+
+file := fopen(Pointers,WRITE):
+fprintf(file, "# Pointers\n"):
+fprintf(file, "# \n"):
+fprintf(file, "# This file contains tables that are the pointers for \n"):
+fprintf(file, "#  Images:  projections of Enumerative Problems \n"):
+fprintf(file, "#  Preimages:  both ComputedProblems and GrassmannProblems \n"):
+fprintf(file, "#  ComputedProblems:  Names of computed problems \n"):
+fprintf(file, "#  GrassmannProblems: Names of Grassmannian Problems arising as projections \n"):
+fprintf(file, "# \n"):
+fprintf(file, "############################################################################# \n"):
+
+for Problem in [GrassmannProblems[],ComputedProblems[]] do 
+ fprintf(file, "Preimages[""%s""]:=[", Problem):
+ for j from 1 to nops(Preimages[Problem]) do 
+  L:=Preimages[Problem][j]:
+  fprintf(file, "\n   [""%s"", %a, \n       [", L[1], L[2]):
+  for i from 1 to nops(L[3]) do 
+   if (i-1) mod 3 = 0 and i<>1 then fprintf(file, "\n        "): fi:
+   if i<>nops(L[3]) then 
+     fprintf(file, "%a,", L[3][i]):
+    else
+     fprintf(file, "%a],\n", L[3][i]):
+   fi:
+  od:
+  if j<>nops(Preimages[Problem]) then 
+    fprintf(file, "      %s],",L[4]):
+   else
+    fprintf(file,"       %s]\n",L[4]):
+  end if:
+ od:
+ fprintf(file, "]:\n"):
+od:
+
+fprintf(file, "############################################################################# \n"):
+
+for Problem in ComputedProblems do 
+
+# if Problem="A1325e2A1425e2Y11" then lprint(Images[Problem]); end if:
+
+ fprintf(file, "Images[""%s""]:=[", Problem):
+ for j from 1 to nops(Images[Problem]) do 
+  L:=Images[Problem][j]:
+  fprintf(file, "\n   [""%s"", %a, \n       [", L[1], L[2]):
+  for i from 1 to nops(L[3]) do 
+   if (i-1) mod 3 = 0 and i<>1 then fprintf(file, "\n        "): fi:
+   if i<>nops(L[3]) then 
+     fprintf(file, "%a,", L[3][i]):
+    else
+     fprintf(file, "%a],\n", L[3][i]):
+   fi:
+  od:
+  if j<>nops(Images[Problem]) then 
+    fprintf(file, "      %s],",L[4]):
+   else
+    fprintf(file,"       %s]\n",L[4]):
+  end if:
+ od:
+ fprintf(file, "]:\n"):
+od:
+
+fclose(file):
+
+quit;

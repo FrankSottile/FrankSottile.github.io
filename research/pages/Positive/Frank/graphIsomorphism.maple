@@ -1,0 +1,295 @@
+#graphIsomorphism.maple
+#
+#     This Maple script determines the isomorphism classes of the dual equivalence
+# graphs. 
+# Connected graphs of words of length n = {2,3,4,5,6} are stored in the files
+# Graphs.n/g.k, where g.k contains all connected graphs with k vertices.
+#
+# The files Autmorphism_Types.n/at.k stores the different isomorphism types 
+#   of graphs, where the edges are colored by 2...n-1 and the vertices are colored by the 
+#   descent sets.   These are maple-readable files, each containing a list
+#   Isomorphism_Classes[n,k] of the graphs with that automorphism type.
+#   The graphs are quadruples [A,B,C,D], where
+#   A := List of vertices labeled by descents
+#   B := Set of edges, which are triples [type, endpoint_1, endpoint_2]
+#   C := List of vertices labeled by words in the Grassmannian Bruhat order
+#   D := Canonical decomposition of graph as a table of shells at a given
+#          radius from the lexicographically least vertex.
+#
+################################################################################
+interface(quiet=true):
+with(LinearAlgebra):
+n:=6:
+read("procedures.maple"):
+system(sprintf("mkdir Automorphism_Types.%d",n)):
+################################################################################
+#
+#   To a graph Gr, whose vertices are words, we first make a new graph
+# AuxGr, whose vertices are labeled by the descent sets of the corresponding words.
+#
+#   This has a crude statistic, the frequencies of the descent sets.  This is equivalent
+# to the quasi-symmetric function of the dual equivalence graph.  We use 
+# this first as a filter to rule out isomorphism, and then to generate
+# bijections between the vertices that preserve the descent sets and distance to the
+# lexicographically minimal vertex, which we use to test for isomorphism.
+#
+######################################################
+with(combinat,permute):
+#
+# sizes[n] are the different sizes (numbers of vertices) in the dual equivalence 
+#           graphs coming from chains of length n
+#
+#  Below an entry r of sizes[n], we write a list a,b,..c.  The number of entries is the 
+#    number of distinct quasi-symmetric functions for dual equivalence graphs of that 
+#    size, and the numbers in the list record the number of isomorphism classes with 
+#    the corresponding quasi-symmetric function.  (The quasi-symmetric funuctions were 
+#    all found to be symmetric using Check_symmetric.maple.)
+#    Thus 
+#              61     
+#         1,4,1,1,4,1 
+#    records that when n=6, the dual equivalnce graphs of size 61 have 6 different symmetric 
+#    functions, and that two admit four isomorphism types of dual equivalence graphs,
+#    while the other four admit a unique dual equivalence graph.
+#
+sizes[2]:=[ 1 ]:
+#          1,1 
+###############################
+sizes[3]:=[ 1  , 2]:
+#          1,1   1
+###############################
+sizes[4]:=[ 1  , 2 , 3  ,  5 ]:
+#          1,1   1  1,1   1,1
+######################################################
+sizes[5]:=[ 1  ,  4  ,  5  ,6,  9  ,  11 ,16, 20 ]:
+#          1,1   1,1   1,1  1  3,3   4,4   4  1,1
+######################################################
+sizes[6]:= { 1  ,   5    ,  9  , 10  ,  14   ,16 ,   19  ,  21 ,  26  ,35 , 
+#           1,1  1,1,1,1   1,1   1,1  2,2,4,4  1  9,2,9,2  5,5  13,13  8,8 
+#-----------------------------------------------------------------
+   37 ,   40   , 42 ,  45   ,  47 ,  54  ,   56   , 59 , 
+# 1,1   8,2,8,2  1,1 1,1,1,1  4,4  1,1,1   5,2,5,2  1,1
+#-----------------------------------------------------------------
+         61     ,  66  , 75 ,80, 91 ,96}:
+#   1,4,1,1,4,1    3,3   1,1  2  1,1  2
+#verbose:=true:
+#
+verbose:=false:
+
+##############################################################################
+#
+#  Initialize the Schur functions (copied from Check_symmetric.maple)
+#
+statsFile:=sprintf("statistics.%d",n):
+#
+#  Reads a pre-computed list of Schur functions
+#
+read( sprintf("symmetric/s.%d",n) ):
+#
+allDescents := combinat[powerset]([seq(ii,ii=1..n-1)]):
+Partitions := []:
+#
+# Initialize the list of partitions, as well as the hash table
+#  which stores the Schur function as a vector recording its
+#  quasi-symmetric function components.
+#
+for schurFunction in schurFunctions do
+ #
+ Partitions := [ Partitions[], schurFunction[1] ]:
+ schur[schurFunction[1]] := makeVector(schurFunction[2]):
+ #
+end do:
+#
+#  Ansatz is the generic sum of Schur functions with variable coefficients.
+#
+Ansatz:= Vector[row](2^(n-1), 0):
+variables:={}:
+Vlist:=[]:
+for lambda in Partitions do
+ Ansatz := VectorAdd(Ansatz, schur[lambda], 1, c[lambda]):
+ variables := variables union {c[lambda]}:
+ Vlist:=[Vlist[],c[lambda]]:
+end do:
+##############################################################################
+
+dir:=sprintf("Automorphism_Types.%d",n):
+for k in sizes[n] do 
+ #
+ #  Begin to record graphs of this size
+ #
+ file:=fopen(statsFile,APPEND):
+ fprintf(file,"## For graphs on %d vertices, \n",k):
+ fclose(file):
+ #
+ #  Write header of Automorphism_Types.n/at.k
+ #
+ AutFile:=sprintf("%s/at.%d",dir,k):
+ file:=fopen(AutFile,WRITE):
+ fprintf(file, "Isomorphism_Classes[%d,%d]:=[\n\n",n,k):
+ fclose(file):
+ #
+ #  Read set G of graphs on n letters with k vertices
+ #
+ read(sprintf("Graphs.%d/g.%d",n,k)):
+ #
+ # First, let us sort graphs by their resulting symmetric function
+ #
+ symFuncts:={}:
+ for Gr in G do 
+  #
+  # Each graph Gr is a pair:
+  #  Gr[1] is the word of a vertex and 
+  #  Gr[2] is the set of coloured edges, which are triples (i,a,b): 
+  #        There is an edge from vertex a to vertex b of color i.
+  #
+  # Aux(illiary)Gr(aph) is a graph with vertices labeled by the descent sequences
+  #    of the graphs Gr, with the same coloured edges.
+  #
+  AuxGr:=[[seq(Descents(Gr[1][ii]),ii=1..k)],Gr[2]]:
+  #
+  #  descentPointer[1] is a table whose value at descent is the set of indices of Gr with
+  #            that descent set
+  #  descentPointer[2] is a set of pairs [descents, frequency]  This encodes the symmetric
+  #           function of the graph.
+  #
+  descentPointer := makeDesSeq(Gr):
+  # 
+  if member(descentPointer[2],symFuncts) then 
+    GraphByFunction[descentPointer[2]]:=
+       [GraphByFunction[descentPointer[2]][],[Gr,AuxGr,descentPointer]]:
+   else
+    GraphByFunction[descentPointer[2]]:=[[Gr,AuxGr,descentPointer]]:
+    symFuncts := symFuncts union {descentPointer[2]}:
+  end if:
+ end do:
+ #
+ #  Now we check for isomorphism within each symmetric function
+ #
+ for SF in symFuncts do
+  #
+  #  Determine which Schur function this is (This chunk of code is borrowed from 
+  #   Check_symmetric.maple).  We assume that Check_symmetric was run so that the
+  #   quasi-symmetric function is Schur-positive.
+  #
+  V := makeVector(SF):
+  S:=  solve({seq(V[ii]=Ansatz[ii], ii=1..2^(n-1))});
+  SyFun:=subs(op(S),Vlist):
+  Schur:="":
+  for i from 1 to nops(SyFun) do
+   if SyFun[i]>1 then 
+     if Schur = "" then 
+       Schur := sprintf("%d s%a",SyFun[i],Partitions[i]):
+      else
+       Schur := sprintf("%s + %d s%a",Schur,SyFun[i],Partitions[i]):
+     end if:
+   end if:
+   if SyFun[i]=1 then 
+     if Schur = "" then 
+       Schur := sprintf("s%a",Partitions[i]):
+      else
+       Schur := sprintf("%s + s%a",Schur,Partitions[i]):
+     end if:
+   end if:
+
+  end do:
+  if verbose then printf("%s \n",Schur): end if:
+
+  #
+  if verbose then printf("symmetric function %a\n", SF); end if:
+  #
+  # Initialize the isomorphism classes with this symmetric function
+  #
+  IsoClass[SF]:={}:
+  #
+  for Triple in GraphByFunction[SF] do 
+   #
+   #  Triple is the putative new graph
+   #
+   AuxGr := Triple[2]:
+   descentPointer := Triple[3]:
+
+if verbose then printf(" Triple = %a \n descentPointer = %a\n",Triple, descentPointer): end if:
+
+   #
+   # Right now, we'll store Triple, later we may do some 
+   #    precomputation and store what is necessary. If the 
+   #    graph is new, we put it in IsoClass[SF], otherwise
+   #    we test it against graphs in IsoClass[SF].
+   #
+   if IsoClass[SF] = {} then 
+     vertex:=getMinimalVertex(descentPointer):
+     Ball:=makeBalls(AuxGr,descentPointer,vertex):
+     IsoClass[SF]:={[Triple[],eval(Ball)]}: 
+    else  
+     if verbose then printf("Size of isomorphism class = %d\n",nops(IsoClass[SF])): end if:
+     GraphIsNew := true: 
+     for Graph in IsoClass[SF] do
+      testAuxGr :=  Graph[2]:
+      testPointer := Graph[3]:
+      testBall := Graph[4]:
+      testVertexIndex:=op(testBall[0][1]):
+      vertexDescent:=testAuxGr[1][testVertexIndex]:
+
+if verbose then printf(" vertexDescent = %a \n",vertexDescent); end if:
+
+      for vertexIndex in  descentPointer[1][vertexDescent] do 
+       Ball := makeBalls(AuxGr,descentPointer,vertexIndex):
+       #
+       if verbose then 
+        printf("test Ball = %a \n new Ball = %a \n",eval(testBall),eval(Ball)):
+        printf("testAuxGr = %a \n newAuxGr = %a \n",testAuxGr[1],AuxGr[1]):
+        printf("test = %a \n new = %a \n",[indices(eval(testBall))],[indices(eval(Ball))]):
+       end if:
+       #
+       Isomorphic := isIsomorphic(testAuxGr,eval(testBall),AuxGr,eval(Ball)):
+       GraphIsNew := GraphIsNew and not(Isomorphic):
+      end do:      
+     end do:
+     #
+     if verbose then printf("GraphIsNew = %a\n\n",GraphIsNew): end if:
+     #
+     if GraphIsNew then
+      IsoClass[SF]:=IsoClass[SF] union {[Triple[],eval(Ball)]}: 
+     end if:
+   end if:
+   #
+  end do:
+  #
+  #  This ends the loop within a given symmetric function
+  #
+  if verbose then printf("\n\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\n\n"); end if:
+  file:=fopen(AutFile,APPEND):
+  fprintf(file,"#################################################################\n"):
+  fprintf(file,"### The symmetric function = %s  ",Schur):
+  if nops(IsoClass[SF])=1 then
+    fprintf(file," has %d graph isomorphism type.\n\n", nops(IsoClass[SF])):
+   else
+    fprintf(file," has %d graph isomorphism types.\n\n", nops(IsoClass[SF])):
+  end if:
+  for Gr in IsoClass[SF] do
+   fprintf(file,"  [ %a, \n     %a, \n     %a, \n     %a ], \n\n",
+    Gr[2][1], Gr[2][2], Gr[1][1],eval(Gr[4])):
+  end do:
+  fclose(file):
+#
+  file:=fopen(statsFile,APPEND):
+  fprintf(file," the symmetric function = %s  ",Schur):
+  if nops(IsoClass[SF])=1 then
+    fprintf(file," has %d graph isomorphism type.\n", nops(IsoClass[SF])):
+   else
+    fprintf(file," has %d graph isomorphism types.\n", nops(IsoClass[SF])):
+  end if:
+  fclose(file):
+ end do:
+ #
+ file:=fopen(AutFile,APPEND):
+ fprintf(file, " NULL]:\n"):
+ fclose(file):
+ #
+end do:
+#
+file=fopen(statsFile,APPEND):
+fprintf(file,"This computation took %4.2f seconds.\n",time()):
+fprintf(file,"########################################################\n"):
+time();
+quit:
+###############################################

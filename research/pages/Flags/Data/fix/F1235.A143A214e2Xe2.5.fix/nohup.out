@@ -1,0 +1,21 @@
+Maple initialization error, Cannot read data from license server
+ The license server process appears to be running, but is not
+responding.  If this persists, notify the System Administrator.
+(The lmgrd and vendor daemon processes should be terminated and restarted.)
+Feature:       Maple9
+License path:  /usr/msri/mathsw/maple9/license/license.dat
+FLEXlm error:  -16,87.  System Error: 34 "Numerical result out of range"
+For further information, refer to the FLEXlm End User Manual,
+available at "www.globetrotter.com".
+Maple initialization error, Cannot read data from license server
+ The license server process appears to be running, but is not
+responding.  If this persists, notify the System Administrator.
+(The lmgrd and vendor daemon processes should be terminated and restarted.)
+Feature:       Maple9
+License path:  /usr/msri/mathsw/maple9/license/license.dat
+FLEXlm error:  -16,87.  System Error: 34 "Numerical result out of range"
+For further information, refer to the FLEXlm End User Manual,
+available at "www.globetrotter.com".
+// ** Can not open temp.sing
+Error, unable to read `temp.out`
+Error, (in fprintf) number expected for floating point format

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry:  General Schubert calculus</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="3.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="3.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.2.html">4.iii.b Quantum Schubert calculus</A><BR>
+ <B> Up:</B> <A HREF="3.html">4.iii Further extensions of the Schubert
+ calculus:     Table of Contents</A><BR> 
+<HR>
+<!--End of Navigation Panel-->
+
+<H3>4.iii.a. General Schubert calculus</H3>
+A <I>flag</I> in <I>n</I>-space is a sequence of linear subspaces 
+<I>F</I><B>.</B>&nbsp;:&nbsp;<I>F</I><SUB>1</SUB>,&nbsp;<I>F</I><SUB>2</SUB>,&nbsp;...,&nbsp;<I>F<SUB>n</SUB></I>, 
+where <I>F<SUB>i</SUB></I> has dimension <I>i</I> and each subspace is
+contained in the next.
+Given <I>a</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB>, the Schubert condition
+of type <I>a</I> on a <I>k</I>-plane <I>K</I> imposed by the flag
+<I>F</I><B>.</B> is that 
+<A NAME="eq:GenSchCond"></A>
+<P>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+the intersection of <I>K</I> and 
+<I>F</I><SUB><I>n</I>+1-<I>a<SUB>j</SUB></I></SUB> 
+has dimension at least <I>k</I>+1-<I>j</I> for each 
+<I>j</I> = 1, 2, ..., <I>n</I> .
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT" VALIGN="MIDDLE">
+(4.12)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The Schubert subvariety <I>Y<SUB>a</SUB>&nbsp;F</I><B>.</B> of
+Gr(<I>k</I>,<I>n</I>) is the set of all
+<I>k</I>-planes <I>K</I> satisfying the Schubert condition&nbsp;(<A
+HREF="#eq:GenSchCond">4.12</A>). 
+
+<P>
+We relate this to the definitions of Section&nbsp;<A
+HREF="2.html#sec:SpSchCalc">4.ii</A>. 
+Let <I>e</I><SUB>1</SUB>, <I>e</I><SUB>2</SUB>, ..., <I>e<SUB>n</SUB></I> 
+be a basis for <B>R</B><SUP><I>n</I></SUP> and for its
+complexification <B>C</B><SUP><I>n</I></SUP>.
+Defining <I>F<SUB>i</SUB></I> to be the linear span of 
+<I>e</I><SUB>1</SUB>, <I>e</I><SUB>2</SUB>, ..., <I>e<SUB>i</SUB></I> gives
+the standard flag F</I><B>.</B>.
+Then the Schubert variety <I>X</I><SUB><I>a</I><SUP>v</SUP></SUB> is 
+<I>Y<SUB>a</SUB></I>&nbsp;<I>F</I><B>.</B>, where
+<I>a</I><SUP>v</SUP><SUB><I>j</I></SUB>&nbsp;=&nbsp;<I>n</I>+1-<I>a</I><SUB><I>k</I>+1-<I>j</I></SUB>
+for each <I>j</I>, and so 
+the codimension of <I>Y<SUB>a</SUB></I>&nbsp;<I>F</I><B>.</B>
+is |<I>a</I>|.
+A special Schubert condition is when 
+<I>a</I>&nbsp;=&nbsp;(1,...,<I>k</I>-1,<I>k</I>+<I>l</I>)&nbsp;
+so that <I>Y<SUB>a</SUB></I>&nbsp;<I>F</I><B>.</B>
+equals <I>X</I>(<I>F</I><SUB><I>n</I>-<I>k</I>+1-<I>l</I></SUB>&nbsp;).
+
+<P></P>
+
+<P>
+The general problem of the classical Schubert calculus of enumerative geometry
+asks, given 
+<I>a</I><SUP>1</SUP>,&nbsp;<I>a</I><SUP>2</SUP>,&nbsp;...,&nbsp;<I>a<SUP>s</SUP></I>
+in <I>C</I><SUB><I>n</I>,<I>k</I></SUB> with 
+|<I>a</I><SUP>1</SUP>|+|<I>a</I><SUP>2</SUP>|+...+|<I>a<SUP>s</SUP></I>|&nbsp;=&nbsp;<I>k</I>(<I>n</I>-<I>k</I>) and general flags
+<I>F</I><B>.</B><SUP>1</SUP>, <I>F</I><B>.</B><SUP>2</SUP>, ...,
+<I>F</I><B>.</B><SUP><I>s</I></SUP> in <B>C</B><SUP><I>n</I></SUP>, how many
+points are there in the intersection<A HREF="#Gi"><SUP>&#167;</SUP></A> of the
+Schubert varieties
+<A NAME="eq:GenGrassInt"></A>
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>Y</I><SUB><I>a</I><SUP>1</SUP></SUB>&nbsp;<I>F</I><B>.</B><SUP>1</SUP>, &nbsp;
+<I>Y</I><SUB><I>a</I><SUP>2</SUP></SUB>&nbsp;<I>F</I><B>.</B><SUP>2</SUP>, &nbsp;
+..., &nbsp;
+<I>Y<SUB>a<SUP>s</SUP></SUB></I>&nbsp;<I>F</I><B>.</B><SUP><I>s</I></SUP> ?
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.13)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+There are algorithms due to 
+Pieri&nbsp;[<A HREF="../bibliography.html#Pi1893">Pi</A>] and 
+Giambelli&nbsp;[<A HREF="../bibliography.html#Gi1902">Gi</A>] to
+compute these numbers.
+Other than the case when the indices <I>a<SUP>i</SUP></I> are indices of
+special Schubert varieties, it
+remains open whether the general Schubert calculus is fully real.
+(See&nbsp;[<A HREF="../bibliography.html#So00b">So7</A>] and&nbsp;[<A
+ HREF="../bibliography.html#So_shapiro-www">So4</A>] for some cases.)
+
+<BR>
+
+<HR>
+
+<A NAME="Gi"></A><SUP>&#167;</SUP>In this survey
+flags are general when the corresponding intersection is
+transverse..
+<HR>
+<!--Navigation Panel-->
+ <A HREF="3.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="3.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.2.html">4.iii.b Quantum Schubert calculus</A><BR>
+ <B> Up:</B> <A HREF="3.html">4.iii Further extensions of the Schubert
+ calculus:     Table of Contents</A><BR> 
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

@@ -1,0 +1,49 @@
+//Execute this with:
+//Singular --ticks-per-sec=100<42.sing
+//
+timer=1;
+//
+ring R= 0 , (a,b,c,d,e,f,g,h),dp;
+ideal I=
+-2621440*a+655360*c+2048*g-8388608*b-131072*f+1572864*d+4096*h-61440*e+h*e+384*
+h*a-32*h*c+10240*b*e-81920*b*c-640*d*e+81920*d*a-g*f-384*g*b+32*g*d-10240*a*f+
+640*c*f+16777216   ,
+-1176490*a+336140*c+1372*g-3294172*b-67228*f+705894*d+2401*h-36015*e+h*e+294*h*
+a-28*h*c+6860*b*e-48020*b*c-490*d*e+48020*d*a-g*f-294*g*b+28*g*d-6860*a*f+490*c
+*f+5764801   ,
+-466560*a+155520*c+864*g-1119744*b-31104*f+279936*d+1296*h-19440*e+h*e+216*h*a-\
+24*h*c+4320*b*e-25920*b*c-360*d*e+25920*d*a-g*f-216*g*b+24*g*d-4320*a*f+360*c*f
++1679616   ,
+-156250*a+62500*c+500*g-312500*b-12500*f+93750*d+625*h-9375*e+h*e+150*h*a-20*h*
+c+2500*b*e-12500*b*c-250*d*e+12500*d*a-g*f-150*g*b+20*g*d-2500*a*f+250*c*f+
+390625   ,
+-40960*a+20480*c+256*g-65536*b-4096*f+24576*d+256*h-3840*e+h*e+96*h*a-16*h*c+
+1280*b*e-5120*b*c-160*d*e+5120*d*a-g*f-96*g*b+16*g*d-1280*a*f+160*c*f+65536   ,
+-7290*a+4860*c+108*g-8748*b-972*f+4374*d+81*h-1215*e+h*e+54*h*a-12*h*c+540*b*e-\
+1620*b*c-90*d*e+1620*d*a-g*f-54*g*b+12*g*d-540*a*f+90*c*f+6561   ,
+-640*a+640*c+32*g-512*b-128*f+384*d+16*h-240*e+h*e+24*h*a-8*h*c+160*b*e-320*b*c
+-40*d*e+320*d*a-g*f-24*g*b+8*g*d-160*a*f+40*c*f+256   ,
+1-10*a+20*c+4*g-4*b-4*f+6*d+h-15*e+h*e+6*h*a-4*h*c+20*b*e-20*b*c-10*d*e+20*d*a-
+g*f-6*g*b+4*g*d-20*a*f+10*c*f   ,
+0;
+int t=timer;
+ideal G;
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+G= std(I);G= std(I);G= std(I);G= std(I);G= std(I);
+int s=timer-t;
+print("Time to compute 50 drl Groebner bases: "); 
+s;
+print("Time units, counts per second:");
+system("--ticks-per-sec");
+degree(G);
+ncols(G);
+print(G);
+quit;

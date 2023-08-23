@@ -1,0 +1,70 @@
+#Theorem39iii.maple
+#
+#    Frank Sottile
+#    October 31998
+#    Berkeley, California
+#
+# This MAPLE script establishes Theorem 3.9.iii of "Real Schubert Calculus:
+# Polynomial systems and a conjecture of Shapiro and Shapiro".  This is the
+# case of Shapiro's conjecture concerning the 6 3-planes in C^6 which
+# satisfy 2 Schubert conditions of type 135, and 3 hypersurface
+#  Schubert conditions (J_1).
+#
+#interface(quiet=true):
+with(linalg):
+with(Groebner):
+read ELEMENTARIZE:
+#
+#   We work in local coordinates X_135,135 for the set of 3-planes satisfying
+# two Schubert conditiopns of type 135.  The Polynomial Poly(s) determines
+# those planes that also meet the 3-plane osculating the rational normal curve
+# at the point s.
+#
+Poly := s -> det(matrix([
+		[1, s ,s^2, s^3 , s^4 ,  s^5 ],
+		[0, 1 ,2*s,3*s^2,4*s^3, 5*s^4],
+		[0, 0 , 1 , 3*s ,6*s^2,10*s^3],
+		[1,x12, 0 ,  0  ,  0  ,   0  ],
+		[0, 0 , 1 , x24 ,  0  ,   0  ],
+		[0, 0 , 0 ,  0  ,  1  ,  x36 ]]))/s^3:
+#
+# We compute the universal eliminant by computing a Gr\"obner basis.  This
+# computation proceeds over the function field R(s,t,u) and the 
+# Gr\"obner basis consists of 3 polynomials, with the first the
+# universal eliminant, a univariate polynomial in x36 of degree 6.
+#
+G:=gbasis([Poly(s),Poly(t),Poly(u)],plex(x12,x24,x36)):
+#
+UniversalEliminant:=G[1];
+#
+# We compute the Discriminant of the UniversalEliminant. 
+#
+Discriminant:=factor(sort(primpart(discrim(UniversalEliminant,x36)),[s]));
+#
+# Of the factors, only one is not itself a square; we show that factor
+# is a sum of squares.
+#
+simplify(op(4,Discriminant) - 
+   ( 7/2*(s-t)^2*(s-u)^2*(t-u)^2 + 1/2*s^2*(t-u)^4 
+   + 1/2*t^2*(s-u)^4 + 1/2*u^2*(s-t)^4 ));
+#
+# Interestingly, even the squared factor is a sum of squares:
+#
+simplify(op(1,op(5,Discriminant)) - 
+  (   16*(s-t)^2*(s-u)^2*(t-u)^2  
+   + 112*(s^4*(t-u)^2+t^4*(s-u)^2+u^4*(s-t)^2)
+   + 112*(s^2*t^2*(s-t)^2+ t^2*u^2*(t-u)^2+ s^2*u^2*(s-u)^2)
+   + 309*s^2*t^2*u^2 
+   +  16*(s^2*t^4 + s^4*t^2 + t^2*u^4+u^2*t^4 + s^4*u^2+u^4*s^2)));
+#
+#   It follows that the number of real roots to the system is independent of
+# the choice of real values for s, t, and u.  Thus we need only show that there
+# are 6 real roots for a single choice of the parameters.
+#
+fsolve(subs(s=1,t=2,u=3,UniversalEliminant)=0);
+quit;
+
+
+
+
+

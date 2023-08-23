@@ -1,0 +1,119 @@
+#makeIndex.maple
+#
+#   This creates the .html file pointing to the data from the
+# RSSS project.   Its purpose is for uniformity.
+#
+##############################################################
+interface(quiet=true):
+read(`HTML_Procedures.maple`):
+
+########  This is for proper navigation of the pictures.  Alter with care!
+up:="":
+##############################################################
+
+if type(Files,symbol) then
+ printf("\nTo run:  maple -q -c \"read(\\""files.list\\""):\" makeIndex.maple \n"):
+ printf("                             This links all the tables in files.list \n"):
+ quit;
+fi:
+
+ file := fopen(TopPage,WRITE):
+
+ fprintf(file, "<HTML> \n"):
+ fprintf(file, "<HEAD> \n"):
+ fprintf(file, "   <TITLE>Experimental Data</TITLE> \n"):
+ fprintf(file, "</HEAD> \n"):
+ fprintf(file, "<BODY BGCOLOR=#FFFFFF> \n"):
+ fprintf(file, " \n"):
+ fprintf(file, "<H1>Experimental Data</H1> \n"):
+ fprintf(file, " \n"):
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+ #####################################################################
+ fprintf(file, "<A HREF=\"../index.html\"><IMG SRC=\"images/up.png\"></A> \n"): 
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+ #####################################################################
+ fprintf(file, "<font size=+1>Go To: </font><B>"):
+ for flagMan in FlagManifolds do
+  fprintf(file, "\n       <A HREF=\"#%s\">%s</A> &nbsp;",FM[flagMan],FM[flagMan]):
+ od:
+ fprintf(file, "\n</B>\n"):
+ #####################################################################
+ TotalGHZ_Time:=0:
+ #####################################################################
+ for flagMan in FlagManifolds do
+  fprintf(file, "<!------------------------------------------------------------------------------>\n"):
+  directory:=convert(flagMan,string):
+  fprintf(file, "<A NAME=\"%s\"></A>\n",FM[flagMan]):
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+  fprintf(file, "<B><Font size=+1 color=blue>%s:</font></B>\n",FM[flagMan]):
+  fprintf(file, " &nbsp; &nbsp; &nbsp; <font size=+1>Go To: </font><B>"):
+ #####################################################################
+  for fm in FlagManifolds do
+   if fm<>flagMan then 
+    fprintf(file, "\n       <A HREF=\"#%s\">%s</A> &nbsp;",FM[fm],FM[fm]):
+   fi:
+  od:
+  fprintf(file, "\n</B>\n"):
+ #####################################################################
+  fprintf(file, " <TABLE><TR><TD width=20></TD><TD>\n  <TABLE border=1>\n"):
+  fprintf(file, "   <TR><TD>&nbsp;</TD>\n"):
+  fprintf(file, "       <TH>Problem</TH>\n"):
+  fprintf(file, "       <TH>#</TH>\n"):
+  fprintf(file, "       <TH>Necklaces</TH>\n"):
+  fprintf(file, "       <TH>Iterations</TH>\n"):
+  fprintf(file, "       <TH>Time</TH>\n"):
+  fprintf(file, "       <TH>Computer</TH>\n   </TR>\n"):
+ 
+  for NAME in Data[flagMan] do 
+   read(sprintf("%s/%s.data",directory,NAME)):
+   fixMachine():
+  ###############################
+   Time  :=(PreTime+GroebnerTime+RealTime):
+   TotalGHZ_Time:=TotalGHZ_Time + Time*SPEED[Machine]/1000:
+  ###############################
+   fprintf(file, "   <TR><TD> &nbsp; <A HREF=\"%s/%s.html\">",directory,NAME):
+   fprintf(file, "Data</A> &nbsp; </TD>\n"):
+   fprintf(file, "       <TD> %s </TD>\n",ProblemString(Small)):
+   fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",NumberOfSolutions):
+   fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",nops(Necklaces)):
+   iterations:= sum(Table[1][ll],ll=1..nops(Table[1])):
+   fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",iterations):
+   if Time <60 then 
+    fprintf(file, "       <TD align=center> &nbsp; %3.2f sec.&nbsp; </TD>\n",Time):
+   fi:
+   if Time >=60 and Time < 3600 then 
+    fprintf(file, "       <TD align=center> &nbsp; %3.2f min.&nbsp; </TD>\n",Time/60):
+   fi:
+   if Time >=3600 and Time < 3600*24 then 
+    fprintf(file, "       <TD align=center> &nbsp; %3.2f hr.&nbsp; </TD>\n",Time/3600):
+   fi:
+   if Time >=3600*24 then 
+    fprintf(file, "       <TD align=center> &nbsp; %3.2f da.&nbsp; </TD>\n",Time/3600/24):
+   fi:
+   fprintf(file, "       <TD align=center> &nbsp; %s &nbsp; </TD>\n    </TR>\n",Machine):
+  od:
+  fprintf(file, " </TABLE>\n </TD></TR></TABLE>\n"):
+ od:
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, "%s\n",TimeString(TotalGHZ_Time,"GHz")):
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, " This table automatically generated using "):
+ fprintf(file, "<A HREF=\"makeIndex.txt\">This Maple Script</A>\n"):
+ ##################################################################### 
+
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+ fprintf(file, " \n"):
+ fprintf(file, "<I><FONT COLOR=#BB00FF>Created: %s",ssystem("date",1)[2]):
+
+ fprintf(file, "</BODY> \n"):
+ fprintf(file, "</HTML> \n"):
+
+ fclose(file):
+
+quit;

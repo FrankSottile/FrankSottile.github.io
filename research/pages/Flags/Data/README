@@ -1,0 +1,14 @@
+Here, we have files that manage the .html files containing the data
+in this experimental project.
+
+
+CheckSums.maple     This prints out titles of data files whose tables do
+                      not all have the same row sums.   Might modify this to 
+                      be run in a shell script.
+
+CheckTitles.maple   This checks to see if the file has the correct title, and if
+CheckTitles.sh        not, it prints an error message.  Editing the file gives
+                      the opportunity to rename the file.  It assumes that all 
+                      files are in F1234.../ directories.
+
+ 

@@ -1,0 +1,74 @@
+#Theorem39ii.maple
+#
+#    Frank Sottile
+#    October 1998
+#    Berkeley, California
+#
+# This MAPLE script establishes Theorem 3.9.ii of "Real Schubert Calculus:
+# Polynomial systems and a conjecture of Shapiro and Shapiro".  This is the
+# case of Shapiro's conjecture concerning the 3 3-planes in C^6 which meet 4
+# 2-planes osculating the rational normal curve and one 3-plane. 
+#
+#   Our method is to show that the discriminant of the degree 3 eliminant is
+# a sum of squares.   What makes ths interesting is that the discriminant we
+# compute is NOT symmetric in the parameters.
+#
+#interface(quiet=true):
+with(linalg):
+with(Groebner):
+#########################################################
+#
+#  We set up the polynomial system.   The first 3 rows of the following
+# are the 3-plane in C^6 osculating the rational normal curve, and the 
+# last 3 rows are local coordinates for the set of 3-planes
+# satisfying conditions J_2 for s=0 and s=\infty.
+#
+Mat := s -> matrix([
+		[ 1 , s ,s^2, s^3 , s^4 ,  s^5 ],
+		[ 0 , 1 ,2*s,3*s^2,4*s^3, 5*s^4],
+		[ 0 , 0 , 1 , 3*s ,6*s^2,10*s^3],
+		[ 1 ,x12, 0 ,  0  ,  0  ,  0   ],
+		[ 0 , 1 ,x23, x24 , x25 ,  0   ],
+		[ 0 , 0 , 0 ,  0  ,  1  , x36  ]]):
+
+# The polynomial A is the condition J_1, to meet a 3-plane osculating at s
+#
+A:=simplify(-det(Mat(s))/s/s):
+#
+# The polynomials B, C, E are the condition J_2, to meet a 2-plane
+# osculating at t
+#
+B:=simplify(-det(submatrix(Mat(t),[1,2,4,5,6],[1,3,4,5,6]))/t^4):
+C:=simplify(det(submatrix(Mat(t),[1,2,4,5,6],[1,2,4,5,6]))/t/t):
+E:=simplify(det(submatrix(Mat(t),[1,2,4,5,6],[1,2,3,4,5]))/t):
+#
+# We now compute the universal eliminant for the set of 3-planes meeting a
+# 3-plane osculating at s, and two 2-planes osculating at t and at u.
+#
+G:=gbasis([A,B,C,E,subs(t=u,B),subs(t=u,C),subs(t=u,E)],
+        wdeg([4,4,4,4,1],[x12,x23,x24,x25,x36])):
+#
+#
+#   The computation proceeds over the function field R(s,t,u) and the 
+# Gr\"obner basis consists of 6 polynomials, with the first the
+# universal eliminant, a univariate polynomial in x36 of degree 3
+#
+UniversalEliminant:=G[1];
+#
+# We compute the Discriminant of the UniversalEliminant. 
+#
+Discriminant:=sort(primpart(discrim(UniversalEliminant,x36)),[s]);
+#
+# The Discriminant is a sum of squares:
+#
+simplify(Discriminant - 
+ ( 7/2*s^4*(t-u)^2 + s^2*(t-u)^4 + t^4*(s-u)^2 + u^4*(s-t)^2
+ + 7/2*t^2*(s-u)^4 + 7/2*u^2*(s-t)^4 + s^2*t^2*(s-t)^2 + s^2*u^2*(s-u)^2
+ + 7/2*t^2*u^2*(t-u)^2 + (t-u)^2*(s-u)^2*(s-t)^2));
+#
+#   It follows that the number of real roots to the system is independent of
+# the choice of real values for s, t, and u.  Thus we need only show that there
+# are 3 real roots for a single choice of the parameters.
+#
+fsolve(subs(s=1,t=2,u=3,UniversalEliminant)=0,x36);
+quit;

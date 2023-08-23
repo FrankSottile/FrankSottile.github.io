@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+   <TITLE>Proof in some cases</TITLE> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectIII.4.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIII.6.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#3"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>3.v. Proof in some cases</H2>
+
+We have proofs of some cases of 
+<A HREF="SectIII.2.html#Conjecture"><B>Conjecture 2</B></A>.
+Most notably (and not given here, but rather in the paper
+[<A HREF="Bib.html#sottile">So98</A>])
+is that Conjecture 2 holds when <I>p</I>=2 and one Schubert condition is
+1<I>,m+</I>1 (Theorem 3.8 of [<A HREF="Bib.html#sottile">So98</A>]).
+<P>
+
+&nbsp;&nbsp;
+We also have a number of specific cases proven, which we summarize in the
+following table.
+For this, we introduce the following notation:
+Given a Schubert condition <I>a</I> and a positive integer
+<I>j</I>, (<I>a</I>)<I><SUP>j</SUP></I>
+means that <I>a</I> is repeated <I>j</I> times.
+Also, set <I>J<SUB>i</SUB></I> to be the sequence<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<I>J<SUB>i</SUB></I>&nbsp;&nbsp;=&nbsp;&nbsp; 
+   1,&nbsp;2,&nbsp;...,&nbsp;<I>p</I>-1,&nbsp;<I>p+i</I>&nbsp;.
+<BR>
+The Schubert condition <I>J<SUB>i</SUB></I> is a Pieri-type condition,
+it is the condition that a general <I>p</I>-plane <I>H</I> meet a 
+fixed <I>m+</I>1<I>-i</I>-plane nontrivially.
+<P>
+<FONT SIZE=+1 COLOR="5c3317"><B>Cases Proven:</B></FONT>
+<BR><BR>
+
+<TABLE BORDER=1>
+<TR><TH>Schubert data
+   <TD>&nbsp;(<I>J</I><SUB>2</SUB>)<SUP>4</SUP>&nbsp;
+   <TD>&nbsp;(<I>J</I><SUB>2</SUB>)<SUP>4</SUP>, <I>J</I><SUB>1</SUB>&nbsp;
+   <TD>&nbsp;(1,3,5)<SUP>2</SUP>, (<I>J</I><SUB>1</SUB>)<SUP>3</SUP>&nbsp;
+   <TD>&nbsp;(1,3,5)<SUP>4</SUP>&nbsp;
+<TR><TH><I>m,p</I>
+   <TD>&nbsp;&nbsp;
+    <A HREF="computations/Theorems/Theorem39i.maple">4,2</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <A HREF="computations/Theorems/Theorem39ii.maple">3,3</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <A HREF="computations/Theorems/Theorem39iii.maple">3,3</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;
+    <A HREF="computations/Theorems/Theorem39iv.maple">4,3</A>
+<TR><TH><I>d</I>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;
+      <A HREF="computations/Theorems/Theorem39i.out">3</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <A HREF="computations/Theorems/Theorem39ii.out">3</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <A HREF="computations/Theorems/Theorem39iii.out">6</A>
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <A HREF="computations/Theorems/Theorem39iv.out">8</A>
+</TABLE>
+<BR>
+
+&nbsp;&nbsp;
+These are all proven in the same way as the proof of 
+<A HREF="SectII.2.html#conj"><B>Conjecture 1</B></A> when 
+<A HREF="SectII.6.html"><I>(m,p)=</I>(2,3)</A>.
+That is, we consider an equivalent system of polynomials (as described in 
+<A HREF="SectIII.3.html">Section 3.iii</A>) in the local coordinates
+<I>X<SUB>a,b</SUB></I>.
+From this, we compute a universal eliminant and then show that its
+discriminant is a sum of squares.
+The links in this table to the data <I>m,p</I> are to documented 
+<A HREF="http://www.maplesoft.com/">Maple V.5</A> scripts detailing these
+calculations, and the links to the number <I>d</I> are to outputs of these
+scripts. 
+<P>
+
+&nbsp;&nbsp;
+The case  (<I>J</I><SUB>2</SUB>)<SUP>4</SUP>, <I>J</I><SUB>1</SUB> is
+interesting in that the discriminant is not symmetric in the 3 parameters.
+The case (1,3,5)<SUP>2</SUP>, (<I>J</I><SUB>1</SUB>)<SUP>3</SUP>
+is the first we showed where the conditions were not just `Pieri-type'.
+
+<P>
+&nbsp;&nbsp;
+The last case of (1,3,5)<SUP>4</SUP> with <I>(m,p)</I>&nbsp;=&nbsp;(4,3)
+is special.
+<A HREF="http://www.maplesoft.com/">Maple</A> 
+was completely unable to handle this on its own.
+The <A HREF="http://www.maplesoft.com/">Maple</A> 
+script in the link generates a 
+<A HREF="http://www.mathematik.uni-kl.de/~zca/Singular">Singular</A>
+input file,
+given <A HREF="computations/Theorems/Theorem39iv.sing">here</A>.
+This computes a Gr&ouml;bner basis, but not an eliminant, as that was also
+too hard.
+This Gr&ouml;bner basis is stored as a 
+<A HREF="http://www.maplesoft.com/">Maple V.5</A> 
+<A HREF="computations/Theorems/Theorem39iveqs">file</A>, and we have a 
+<A HREF="http://www.maplesoft.com/">Maple V.5</A>
+<A HREF="computations/Theorems/Theorem39iv.final">script</A>
+that reads these equations, and (cleverly) computes the universal eliminant.
+This is the first case in which the universal eliminant
+factored---which suggests that the Galois group of this enumerative problem 
+is not the full symmetric group on 8 elements.
+<BR>
+<P>
+<HR>
+<A HREF="SectIII.4.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIII.6.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#3"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>

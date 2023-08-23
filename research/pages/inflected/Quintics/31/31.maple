@@ -1,0 +1,79 @@
+#31.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 17 December, 2005
+# Paris
+#
+# Here, we compute and draw maximally inflected quintics with a
+# singularity of type 31  (dually, 211)
+#
+#
+interface(quiet=true):
+with(plots):
+read(`../equations.maple`):
+with(linalg):
+with(Groebner):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+RatNorm:=vector([1,s,s^2,s^3,s^4,s^5  ]):
+
+############################################################################
+
+
+M:=linalg[matrix]([
+[a,1, 0 , 0   ,  0  ,  0   ],
+[b,0, c , 1   ,  0  ,  0   ],
+[d,0, e , 0   ,  1  ,  0   ],
+[1,s,s^2,  s^3,s^4  ,   s^5],
+[0,1,2*s,3*s^2,4*s^3, 5*s^4],
+[0,0, 1 ,3*s  ,6*s^2,10*s^3],
+[0,0, 0 , 1   ,4*s  ,10*s^2],
+[0,0, 0 , 0   , 1   , 5*s  ]]):    
+
+#linalg[kernel](linalg[matrix]([
+#[a,1, 0 , 0   ,  0  ,  0   ],
+#[b,0, c , 1   ,  0  ,  0   ],
+#[d,0, e , 0   ,  1  ,  0   ]
+#]));  {[0, 0,-1, c, e, 0], [-1, a, 0, b, d, 0], [0, 0, 0, 0, 0, 1]}
+
+
+###################################################
+#
+#  31, 21, and cusp
+#
+Po:=-1/2:
+Pb:=-200/100:
+G:=gbasis([Claw(M,1)[],Flex(M,Po),Flex(M,Pb)],plex(a,b,c,d,e)):
+E:=[solve(G[1]=0,e)][1]:
+Dd:=solve(subs(e=E,G[2])=0,d):
+C:=solve(subs(e=E,G[3])=0,c):
+B:=solve(subs(e=E,G[4])=0,b):
+A:=solve(subs(e=E,G[5])=0,a):
+y:=linalg[multiply](vector([-1, A, 0, B, Dd, 0]),RatNorm):
+z:=linalg[multiply](vector([ 0, 0,-1, C,  E, 0]),RatNorm):
+x:=linalg[multiply](vector([ 0, 0, 0, 0,  0, 1]),RatNorm):
+
+X:=x/y: Y:=z/y:
+#fsolve(denom(Y)=0);# quit;
+# -.8027919307, .5404575022
+A:=20:
+Y:=simplify(Y/(A*X-4)):X:=simplify(1/(A*X-4)):  #7X-4
+fsolve(denom(X)=0);# quit;
+# -.7742152949
+Y:=Y - subs(s=fsolve(denom(X)=0),Y/X)*X:
+X:=X-0.45*Y:
+
+
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+fsolve(denom(Xt)=0);
+#-1.348666261
+
+P:=pointplot([subs(s=Po,X),subs(s=Po,Y)],symbol=circle,color=maroon):
+Pf:=pointplot([subs(s=Pb,X),subs(s=Pb,Y)],symbol=circle,color=green):
+Q:=plot({[X,Y,s=-0.55..1]},numpoints=200,color=blue):
+R:=plot({[Xt,Yt,t=-1.1..1]},numpoints=200,color=red):
+
+display(Q,R, Pf,P);
+

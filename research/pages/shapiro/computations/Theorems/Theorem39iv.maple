@@ -1,0 +1,67 @@
+#Theorem38iv.maple
+#
+#   We show Shapiro's conjecture for the case 8 of 3-planes in
+# C^7 satisfying 4 Schubert conditions of type 135.
+#
+#  We first compute the equations, simplify them slightly, and write a 
+# Singular input file.   When run, this computes a Gr\"obner basis in 
+# the parameters s,t and the variables a--f, but treats the parameters as
+# polynomials.   The weighting ensures that we do a partial elimination.
+# The output of Singular is in Theorem38iveqs.   This is read by
+# Theorem39iv.final which treats the parameters as parameters, then winnows
+# the equations.   Surprisingly, it can then eliminate the variables.
+# The resulting Universal eliminant factors as 4 quadratic polynomials, each
+# of which has only real roots.
+#
+#interface(quiet=true):
+
+with(linalg):
+with(Groebner):
+
+BigMat := s -> matrix([
+		[ 1 , s ,s^2, s^3 , s^4 ,  s^5 ,   s^6],
+		[ 0 , 1 ,2*s,3*s^2,4*s^3, 5*s^4, 6*s^5],
+		[ 0 , 0 , 1 , 3*s ,6*s^2,10*s^3,15*s^4],
+		[ 0 , 0 , 0 ,  1  , 4*s ,10*s^2,20*s^3],
+		[ 0 , 0 , 0 ,  0  ,  1  , 5*s  ,15*s^2],
+		[ 1 , a , b ,  0  ,  0  ,  0   ,  0   ],
+		[ 0 , 0 , 1 ,  c  ,  d  ,  0   ,  0   ],
+		[ 0 , 0 , 0 ,  0  ,  1  ,  e   ,   f  ]]):
+#
+SmMat  := s -> submatrix(BigMat(s),[1,2,3,6,7,8],[1,2,3,4,5,6,7]):
+#
+# These are the equations defining the Schubert condition (135)
+#
+DD:=det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,5,6])):
+EE:=det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,5,7])):
+FF:=det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,4,6,7])):
+GG:=det(submatrix(SmMat(s),[1,2,3,4,5,6],[1,2,3,5,6,7])):
+
+AA:=det(submatrix(BigMat(s),[1,2,3,4,5,6,7],[1,2,3,4,5,6,7])):
+BB:=det(submatrix(BigMat(s),[1,2,3,4,5,6,8],[1,2,3,4,5,6,7])):
+CC:=det(submatrix(BigMat(s),[1,2,3,4,5,7,8],[1,2,3,4,5,6,7])):
+#
+# We simplify them slightly
+#
+K:=gbasis([DD,EE,FF,GG,AA,BB,CC],wdeg([1,2,1,2,1,2],[a,b,c,d,e,f])):
+#
+# and create the Singular input file
+#
+lprint(`//Execute this with:`);
+lprint(`//Singular --ticks-per-sec=100<Theorem39iv.sing>Theorem39iveqs`);
+lprint(`//`);
+lprint(`timer=1;`);
+lprint(`int T = timer;`);
+lprint(`short=0;`);
+lprint(`ring R= 0, (s,t,a,b,c,d,e,f), wp(10,10,1,1,2,2,3,3);`);
+lprint(`ideal I=`);
+for i from 1 to 6 do   lprint(K[i],`,`);  od:
+for i from 1 to 6 do   lprint(subs(s=t,K[i]),`,`);  od:
+lprint(`0;`);
+
+lprint(`ideal G=std(I);`);
+lprint(`timer-T;`);
+lprint(`G;`);
+lprint(`quit;`);
+
+quit;

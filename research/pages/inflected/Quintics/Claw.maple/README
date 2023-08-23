@@ -1,0 +1,43 @@
+Quintics/maple
+
+  This directory contains files used to draw the pictures of quintics 
+on the Maximally inflected Curves Web page
+
+
+
+21e3.maple  Plots the curves with 3 singularities of type 21
+                 - two identical curves, no crossings
+21e2.111.maple  The curve with 2 claws and one planar flex   One Crossing
+111e3.maple     The curve with 3 planar flexes               No Crossings
+____________________________________________________________________________
+
+21e2.2.1.maple      There are two different ways to choose the singularities
+                      Each gives 3 curves, 2 w/ crossing, one without
+
+21e2.11.1.maple     There are two different ways to choose the singularities
+                      Each gives 3 curves
+21e2.1e3.maple      This has two different choices, and each gives 6 curves.
+                    There are different numbers with a crossing.
+____________________
+21.111.2.1.maple    There are three diferent ways to make the choices, one has
+                    a crossing, and the others have none.
+21.111.11.1.maple   There are three different ways to make the choices.
+                    One has a crossing, and the others have none
+21.111.1e3.maple    There are two curves for every choice of singularity.
+                    One choice has no crossings, while the other has one 
+                    with a crossing and one without
+____________________
+111e2.11.1.maple    Two ways to choose singularities, each gives one curve and
+                      neither has a crossing 
+111e2.1e3.maple     Two ways to choose singularities, each gives one curve and
+                      neither has a crossing 
+____________________________________________________________________________
+
+21.11e3.maple       There are two curves, which are identical.  Each has a crossing
+21.11e2.2.maple     This one might make a nice movie
+                    These have either no or two crossings!
+                    Explore more
+21.2e2.11.maple     These have zero, one, or two crossings
+                    Explore more
+21.2e3.maple        There are two curves, which are identical.  Each has a crossing
+

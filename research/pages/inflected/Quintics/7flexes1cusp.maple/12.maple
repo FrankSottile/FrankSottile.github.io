@@ -1,0 +1,47 @@
+#1_cusp/examples/12.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 17 March 2002
+# Amtrak NYC ==> Springfield
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Infl:=[-3,-2,-1,0,1,2,3]:
+Zeroes:=[fsolve(z[12]=0,s)]:
+X:=x[12]/z[12]:
+Y:=y[12]/z[12]:
+X:=X-7*Y:
+Z:=X-80:
+Zeroes:=[fsolve(Z=0,s)]:
+X:=X/Z: Y:=Y/Z:
+slope:=(subs(s=Zeroes[1]-0.0001,Y)-subs(s=Zeroes[1]+0.0001,Y))/
+       (subs(s=Zeroes[1]-0.0001,X)-subs(s=Zeroes[1]+0.0001,X)):
+Y:=simplify(Y-slope*X):
+Xt:=subs(s=1/t,X):Yt:=subs(s=1/t,Y):
+
+Pt:=[]: 
+for j from 1 to 7 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+
+SP:=[]:
+for zz in SOL[12] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("12th quintic"):
+Q:=plot({
+    [X,Y,s=-1..3.3],[Xt,Yt,t=-1..0.13]
+    },axes=none,title=convert(S,symbol), color=blue,numpoints=200):
+
+plotsetup(gif,plotoutput=`1/12.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);

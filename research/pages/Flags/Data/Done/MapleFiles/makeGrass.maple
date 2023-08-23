@@ -1,0 +1,222 @@
+#makeSingular.maple
+#
+#  This file makes the Singular input file for the computation
+#
+#
+read(`../MapleFiles/procedures.maple`);
+read(`data`);
+#############################################################################
+##############################################################################
+GrassCoordinates := proc(w,v)
+#
+#   Returns the matrix of coordinates for the Schubert cell of w
+#
+ local n, k, Coordinates, b, a, i, j, nVar:
+ global FlagVariety, NumVars:
+ if nops(FlagVariety)<>2 then quit: end if:
+ n:=FlagVariety[2]:
+ k:=FlagVariety[1]:
+ Coordinates:=linalg[matrix](k,n,2):
+
+ for i from 1 to k do 
+  Coordinates[i,w[i]]:=1:
+  for j from 1 to n do 
+   if j<w[i] or j>n+1-v[k+1-i] then 
+    Coordinates[i,j]:=0:
+   end if:
+  end do:
+ od:
+ NumVars:=0:
+ for i from 1 to k do  
+  for j from 1 to n do 
+   if Coordinates[i,j]=2 then 
+      NumVars:=NumVars+1:
+      Coordinates[i,j]:= x||NumVars:
+   fi:
+  od:
+ od:
+ evalm(Coordinates)
+end proc:
+
+Coords:=GrassCoordinates(EnumerativeProblem[1],EnumerativeProblem[2]):
+
+#############################################################################
+#
+#  Make the list of ideals of each Schubert condition, corresponding to 
+#    the data of the enumerative problem
+#
+##############################################################################
+Ideals:=[]:
+for i from 3 to nops(EnumerativeProblem) do 
+ Ideals := [Ideals[], FlagCondition(EnumerativeProblem[i], Coords) ]:
+od:
+for i from 1 to NumVars do 
+ Ideals:=subs(x||i=x(i), Ideals):
+od:
+##############################################################################
+#
+#   Singular header
+#
+##############################################################################
+file := fopen(`temp.sing`,WRITE):
+fprintf(file, "LIB \"random.lib\"; \n"):
+fprintf(file,"int Time = timer; \n"):
+fprintf(file,"option(redSB); \n"):
+fprintf(file,"link BadIdeal=\":a BadIdeal\"; \n"):
+fprintf(file,"link out=\":w temp.out\"; \n"):
+fprintf(file,"fprintf(out, \"Eliminants:=[ \"); \n"):
+##############################################################################
+#
+#   Rings, ideals, eliminant polynomials and eliminant map
+#
+##############################################################################
+fprintf(file,"ring R = 0, (x(1..%d)), dp; \n", NumVars):
+fprintf(file,"ideal GB, I; \n"):
+S:=[seq(x(i), i=1..NumVars)]:
+for i from 1 to NumVars do
+ vars:= convert(S[1],string):  
+ for j from 2 to nops(S) do 
+  vars:=cat(vars,",",convert(S[j],string)): 
+ od:
+ fprintf(file,"ring S%d = 0, (%s), (dp(%d),dp(1)); \n",NumVars+1-i,vars,NumVars-1):
+ fprintf(file,"ideal I%d, J%d; \n",NumVars+1-i,NumVars+1-i):
+ fprintf(file,"poly el%d; \n",NumVars+1-i):
+ fprintf(file, "map G%d = S%d, randomLast(1); \n",NumVars+1-i,NumVars+1-i):
+ S:=[S[NumVars],S[1..(NumVars-1)][]]:
+od:
+###############################################################################
+#
+#  Ring to hold the eliminant
+#
+###############################################################################
+fprintf(file,"ring S = 0, a, dp; \n", NumVars, NumVars):
+fprintf(file,"poly Elim; \n"):
+zeroes:= "":
+for j from 1 to nops(S)-1 do 
+ zeroes:=cat(zeroes,"0,"): 
+od:
+for i from 1 to NumVars do
+ fprintf(file,"map F%d = S%d,%sa; \n", i, i,zeroes):
+od:
+###############################################################################
+#
+# Eliminate is a procedure to compute eliminants.  
+#     ideal I    : ideal of the ring R
+#     string str : a string encoding the actual instance computed (for diagnostics)
+#    
+#  Given I, it computes a reduced Groebner basis GB.  If GB has the wrong dimension
+#    or degree, it aborts the computation, writing the data "str" to the file 
+#    "BadIdeal".        Otherwise, it tries to eliminate all but one of the 
+#    variables in all possible ways, stopping at the first successful eliminant
+#    with the correct number of distinct roots.  Converting it into a polynomial 
+#    in Q[a], it writes it to the file "temp.out".  If it fails to compute such 
+#    an  eliminant, it writes the data "str" to the file "BadIdeal"and stops.   
+#    If an ideal I fails to have an eliminant for any of these variaous reasons, 
+#    it writes 0 for the eliminant in "temp.out".
+#
+#  The file "temp.out" is a maple input file with a list called Eliminants, where
+#    the eliminants are stored, one for each call of the procedure Eliminate.
+#    In general, these correspond to the necklaces, in the order given in the 
+#    file Data.
+#
+#  The file "BadIdeal" is for diagnostic purposes, it may be the case that some 
+#    of the instances we wish to compute have some symmetry, or even (!) excess
+#    intersection, and we'd like both to record those instances, as well as
+#    possibly study them.
+#
+###############################################################################
+fprintf(file,"proc Eliminate (ideal I, string str) \n"):
+fprintf(file,"{ \n"):
+fprintf(file," GB = std(I); \n"):
+fprintf(file," if(dim(GB)!=0) \n"):
+fprintf(file," { \n"):
+fprintf(file,"  fprintf(BadIdeal,\"#Data:=%%s: \# Not Zero-Dimensional\",str); \n"):
+fprintf(file,"  fprintf(out, \" 0, \"); \n"):
+fprintf(file,"  setring R; \n"):
+fprintf(file,"  return();\ n"):
+fprintf(file," } \n"):
+fprintf(file," if(vdim(GB)!=%d)  \n", NumberOfSolutions):
+fprintf(file," { \n"):
+fprintf(file,"  fprintf(BadIdeal,\"#Data:=%%s: \# Wrong Degree\",str);  \n"):
+fprintf(file,"  fprintf(out, \" 0, \"); \n"):
+fprintf(file,"  setring R; \n"):
+fprintf(file,"  return(); \n"):
+fprintf(file," } \n"):
+
+for i from 1 to NumVars do
+ fprintf(file," setring S%d; \n", i):
+ fprintf(file," I%d = fglm(R,GB); \n", i):
+ fprintf(file," el%d = I%d[1]; \n", i, i):
+ fprintf(file," J%d = el%d, diff(el%d,x(%d)); \n", i, i, i, i):
+ fprintf(file," J%d = std(J%d); \n", i, i):
+ fprintf(file," if ((deg(el%d)==%d) and (dim(J%d)==-1))\n", i, NumberOfSolutions,i):
+ fprintf(file," { \n"):
+ fprintf(file,"    setring S; \n"):
+ fprintf(file,"    Elim = F%d( el%d );  \n", i, i):
+ fprintf(file,"    short=0; \n"):
+ fprintf(file,"    fprintf(out, \" %%s,\", Elim); \n"): 
+ fprintf(file,"    setring R; \n"):
+ fprintf(file,"    return();\n"):
+ fprintf(file," }\n"):
+ fprintf(file,"else\n"):
+ fprintf(file," {\n"):
+ fprintf(file,"   el%d = std(G%d(I%d))[1]; \n",i,i,i):
+ fprintf(file,"   J%d = el%d, diff(el%d,x(%d)); \n", i, i, i, i):
+ fprintf(file,"   J%d = std(J%d); \n", i, i):
+ fprintf(file,"   if ((deg(el%d)==%d) and (dim(J%d)==-1))\n", i, NumberOfSolutions,i):
+ fprintf(file,"   { \n"):
+ fprintf(file,"     setring S; \n"):
+ fprintf(file,"     Elim = F%d( el%d );  \n", i, i):
+ fprintf(file,"     short=0; \n"):
+ fprintf(file,"     fprintf(out, \" %%s,\", Elim); \n"): 
+ fprintf(file,"     setring R; \n"):
+ fprintf(file,"     return();\n"):
+ fprintf(file,"   }\n"):
+ fprintf(file," }\n"):
+od:
+
+fprintf(file,"  fprintf(BadIdeal,\"#Data:=%%s: \# NoGoodEliminant\",str); \n"):
+fprintf(file,"  fprintf(out, \" 0, \"); \n"):
+fprintf(file,"  setring R; \n"):
+fprintf(file,"  return(); \n"):
+fprintf(file,"} \n"):
+fprintf(file,"setring R; \n"):
+###########################################################################
+#
+#   Singular header ends
+#
+###########################################################################
+
+_seed:=Instance+1:   #  Instance is 1 less than iteration
+##########################################################################
+Point:=combinat[randcomb](Points,nops(EnumerativeProblem)-1):
+for i from 1 to nops(Point) do 
+  Point[i]:=Point[i][2]/Point[i][1]:
+od:
+Point:=sort(Point):   #  These are numbers in R^1 where the conditions are evaluated
+##########################################################################
+#
+#  Make the list of ideals
+#
+##########################################################################
+
+for nu in Necklaces do 
+ fprintf(file,"Eliminate(ideal(0"):
+ for i from 1 to nops(Ideals) do 
+  p:=Point[nu[i+1]]-Point[nu[1]]:
+  for eq in subs(s=p,Ideals[i]) do 
+   fprintf(file,",%a",eq):
+  od:
+ od:
+ fprintf(file,"),\n      \"%a\"); \n", [Point, nu]):
+od:
+
+fprintf(file,"fprintf(out, \" 0]:\"); \n"):
+fprintf(file,"fprintf(out,  \"SingularTime:=%%s/100.:\",timer-Time); \n"):
+fprintf(file,"quit; \n"):
+fclose(file):
+
+PreTime:=PreTime+time():
+makeDataFile():
+
+quit:

@@ -1,0 +1,330 @@
+#makeIndex.maple
+#
+#   This creates the .html file at the top of the tree pointing to the
+# files with the tables
+#
+##############################################################
+interface(quiet=true):
+read(`HTML_Procedures.maple`): 
+##############################################################
+read(ListOfFiles):
+read(Directories):
+#############################################################################
+TotGHZ_Time:=0:
+NumberSolved:=0:
+#############################################################################
+########  This is for proper navigation of the pictures.  Alter with care!
+up:="":
+##############################################################
+#
+#  We first create the index files for the manifold of flags in 4-space
+#
+#############################################################
+file := fopen(sprintf("Fl4.html",dim),WRITE):
+fprintf(file, "<HTML> \n"):
+fprintf(file, "<HEAD> \n"):
+fprintf(file, "   <TITLE>Experimental Data for flags in 4-space</TITLE> \n"):
+fprintf(file, "</HEAD> \n"):
+fprintf(file, "<BODY BGCOLOR=#FFFFFF> \n"):
+fprintf(file, " \n"):
+fprintf(file, "<H1>Experimental Data for flags in 4-space</H1> \n"):
+fprintf(file, " \n"):
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+#####################################################################
+fprintf(file, "<A HREF=\"index.html#Fl4\"><IMG SRC=\"images/up.png\"></A> \n"): 
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+#####################################################################
+fprintf(file, "<font size=+1>Go To: </font><B>"):
+FlagNumberSolved:=0:
+for flagMan in Directories[4] do
+ LINK:=Flagtype(flagMan):
+  fprintf(file, "\n       <A HREF=\"#%s\">%s</A> &nbsp;",LINK,LINK):
+end do:
+fprintf(file, "\n</B>\n"):
+#####################################################################
+FlagGHZ_Time:=0:
+#####################################################################
+for flagMan in Directories[4] do
+ fprintf(file, "<!--------------------------------------------"):
+ fprintf(file, "---------------------------------->\n"):
+ directory:=convert(flagMan,string):
+ fprintf(file, "<A NAME=\"%s\"></A>\n",Flagtype(flagMan)):
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+ fprintf(file, "<B><Font size=+1 color=blue>%s:</font></B>\n",Flagtype(flagMan)):
+ fprintf(file, " &nbsp; &nbsp; &nbsp; <font size=+1>Go To: </font><B>"):
+ #####################################################################
+ for fm in Directories[4] do
+  if fm<>flagMan then 
+   LINK:=Flagtype(fm):
+   fprintf(file, "\n       <A HREF=\"#%s\">%s</A> &nbsp;",LINK,LINK):
+  end if:
+ od:
+ fprintf(file, "\n</B>\n"):
+ fprintf(file, "<A HREF=\"index.html#Fl4\"><SUB><IMG SRC=\"images/up.png\"></SUB></A> \n"): 
+ #####################################################################
+ fprintf(file, " <TABLE><TR><TD width=20></TD><TD>\n  <TABLE border=1>\n"):
+ fprintf(file, "   <TR><TD>&nbsp;</TD>\n"):
+ fprintf(file, "       <TH>Problem</TH>\n"):
+ fprintf(file, "       <TH>#</TH>\n"):
+ fprintf(file, "       <TH>Necklaces</TH>\n"):
+ fprintf(file, "       <TH>Iterations</TH>\n"):
+ fprintf(file, "       <TH>Time</TH>\n"):
+ fprintf(file, "       <TH>Computer</TH>\n   </TR>\n"):
+ for NAME in Data[flagMan] do 
+  if NAME<>NULL then 
+   read(sprintf("%s/%s.data",directory,NAME)):
+   fixMachine():
+   fprintf(file, "   <TR><TD> &nbsp; <A HREF=\"%s/%s.html\">",directory,NAME):
+   fprintf(file, "Data</A> &nbsp; </TD>\n"):
+   fprintf(file, "       <TD>"):
+   fprintf(file, " %s </TD>\n",ProblemString("Small",FlagVariety,EnumerativeProblem)):
+   fprintf(file, "       <TD align=center> &nbsp;"):
+   fprintf(file, " %d &nbsp;</TD>\n",NumberOfSolutions):
+   fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",nops(Necklaces)):
+   iterations:= sum(Table[1][ll],ll=1..nops(Table[1])):
+   fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",iterations):
+   ###############################
+   FlagNumberSolved:=FlagNumberSolved+iterations*nops(Necklaces):
+   Time  :=(PreTime+GroebnerTime+RealTime):
+   FlagGHZ_Time:=FlagGHZ_Time + Time*SPEED[Machine]/1000:
+   ###############################
+
+   if Time <60 then 
+    fprintf(file, "       <TD align=center> &nbsp;"):
+    fprintf(file, " %3.2f sec.&nbsp; </TD>\n",Time):
+   end if:
+   if Time >=60 and Time < 3600 then 
+    fprintf(file, "       <TD align=center> &nbsp"):
+    fprintf(file, "; %3.2f min.&nbsp; </TD>\n",Time/60):
+   end if:
+   if Time >=3600 and Time < 3600*24 then 
+    fprintf(file, "       <TD align=center> &nbsp"):
+    fprintf(file, "; %3.2f hr.&nbsp; </TD>\n",Time/3600):
+   fi:
+   if Time >=3600*24 then 
+    fprintf(file, "       <TD align=center> &nbsp;"):
+    fprintf(file, " %3.2f da.&nbsp; </TD>\n",Time/3600/24):
+   fi:
+   fprintf(file, "       <TD align=center> &nbsp;<A HREF=\"Computers.html\">"):
+   fprintf(file, " %s </A>&nbsp; </TD>\n    </TR>\n",Machine):
+  fi:
+ end do:
+ fprintf(file, " </TABLE>\n </TD></TR></TABLE>\n"):
+ 
+od:
+#####################################################################
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+fprintf(file, "%s\n",TimeString(FlagGHZ_Time,"GHz")):
+#####################################################################
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+fprintf(file, "%s Polynomial systems",parseNumber(FlagNumberSolved)):
+fprintf(file, " solved on flags in 4-space.\n"):
+#####################################################################
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+fprintf(file, " This table automatically generated using "):
+fprintf(file, "<A HREF=\"makeIndex.txt\">This Maple Script</A>\n"):
+##################################################################### 
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+fprintf(file, " \n"):
+fprintf(file, "<I><FONT COLOR=#BB00FF>Created: %s",ssystem("date",1)[2]):
+fprintf(file, "       </I></FONT> \n"):
+fprintf(file, "</BODY> \n"):
+fprintf(file, "</HTML> \n"):
+TotGHZ_Time:=TotGHZ_Time+FlagGHZ_Time:
+NumberSolved:=NumberSolved+FlagNumberSolved:
+fclose(file):
+
+##################################################################### 
+##################################################################### 
+##################################################################### 
+##################################################################### 
+##################################################################### 
+##################################################################### 
+
+for dim from 5 to 8 do 
+ for flagMan in Directories[dim] do 
+  FlagNumberSolved:=0:
+  FlagGHZ_Time:=0:
+  #####################################################################
+  file := fopen(sprintf("%s.html",flagMan),WRITE): 
+  fprintf(file, "<HTML> \n"):
+  fprintf(file, "<HEAD> \n"):
+  fprintf(file, "   <TITLE>Experimental Data for the Flag Manifold %s </TITLE> \n",Flagtype(flagMan)):
+  fprintf(file, "</HEAD> \n"):
+  fprintf(file, "<BODY BGCOLOR=#FFFFFF> \n"):
+  fprintf(file, " \n"):
+  fprintf(file, "<H1>Experimental Data for the Flag Manifold %s </H1> \n",Flagtype(flagMan)):
+  fprintf(file, " \n"):
+  #####################################################################
+  fprintf(file, "<!--------------------------------------------"):
+  fprintf(file, "---------------------------------->\n"):
+  directory:=convert(flagMan,string):
+  fprintf(file, "<A NAME=\"%s\"></A>\n",Flagtype(flagMan)):
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+  #####################################################################
+  fprintf(file, "<A HREF=\"index.html#Fl%d\"><IMG SRC=\"images/up.png\"></A> \n",dim): 
+  if nops(Directories[dim])<>1 then
+   #####################################################################
+   fprintf(file, "<font size=+1>Go To: </font><B>"):
+   for fMan in Directories[dim] do
+    if fMan<>flagMan then
+      LINK:=Flagtype(fMan):
+      fprintf(file, "\n       <A HREF=\"%s.html\">%s</A> &nbsp;",fMan,LINK):
+     else 
+      LINK:=Flagtype(fMan):
+      fprintf(file, "\n       <font color=green>%s</font> &nbsp;",LINK);
+    end if:
+   end do:
+   fprintf(file, "\n</B>\n"):
+  end if:
+  #####################################################################
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+  fprintf(file, " <TABLE><TR><TD width=20></TD><TD>\n  <TABLE border=1>\n"):
+  fprintf(file, "   <TR><TD>&nbsp;</TD>\n"):
+  fprintf(file, "       <TH>Problem</TH>\n"):
+  fprintf(file, "       <TH>#</TH>\n"):
+  fprintf(file, "       <TH>Necklaces</TH>\n"):
+  fprintf(file, "       <TH>Iterations</TH>\n"):
+  fprintf(file, "       <TH>Time</TH>\n"):
+  fprintf(file, "       <TH>Computer</TH>\n   </TR>\n"):
+  for NAME in Data[flagMan] do 
+   if NAME<>NULL then 
+    read(sprintf("%s/%s.data",directory,NAME)):
+    fixMachine():
+    fprintf(file, "   <TR><TD> &nbsp; <A HREF=\"%s/%s.html\">",directory,NAME):
+    fprintf(file, "Data</A> &nbsp; </TD>\n"):
+    fprintf(file, "       <TD>"):
+    fprintf(file, " %s </TD>\n",ProblemString("Small",FlagVariety,EnumerativeProblem)):
+    fprintf(file, "       <TD align=center> &nbsp;"):
+    fprintf(file, " %d &nbsp;</TD>\n",NumberOfSolutions):
+    fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",nops(Necklaces)):
+    iterations:= sum(Table[1][ll],ll=1..nops(Table[1])):
+    fprintf(file, "       <TD align=center> &nbsp; %d &nbsp;</TD>\n",iterations):
+    ###############################
+    FlagNumberSolved:=FlagNumberSolved+iterations*nops(Necklaces):
+    Time  :=(PreTime+GroebnerTime+RealTime):
+    FlagGHZ_Time:=FlagGHZ_Time + Time*SPEED[Machine]/1000:
+    ###############################
+
+    if Time <60 then 
+     fprintf(file, "       <TD align=center> &nbsp;"):
+     fprintf(file, " %3.2f sec.&nbsp; </TD>\n",Time):
+    end if:
+    if Time >=60 and Time < 3600 then 
+     fprintf(file, "       <TD align=center> &nbsp"):
+     fprintf(file, "; %3.2f min.&nbsp; </TD>\n",Time/60):
+    end if:
+    if Time >=3600 and Time < 3600*24 then 
+     fprintf(file, "       <TD align=center> &nbsp"):
+     fprintf(file, "; %3.2f hr.&nbsp; </TD>\n",Time/3600):
+    end if:
+    if Time >=3600*24 then 
+     fprintf(file, "       <TD align=center> &nbsp;"):
+     fprintf(file, " %3.2f da.&nbsp; </TD>\n",Time/3600/24):
+    end if:
+    fprintf(file, "       <TD align=center> &nbsp;<A HREF=\"Computers.html\">"):
+    fprintf(file, " %s </A>&nbsp; </TD>\n    </TR>\n",Machine):
+   end if:
+  end do:
+  fprintf(file, " </TABLE>\n </TD></TR></TABLE>\n"):
+
+ #####################################################################
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+  fprintf(file, "%s\n",TimeString(FlagGHZ_Time,"GHz")):
+
+ #####################################################################
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+  fprintf(file, "%s Polynomial systems",parseNumber(FlagNumberSolved)):
+  fprintf(file, " solved on the flag manifold %s.\n",Flagtype(flagMan)):
+
+ #####################################################################
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+  fprintf(file, " This table automatically generated using "):
+  fprintf(file, "<A HREF=\"makeIndex.txt\">This Maple Script</A>\n"):
+ ##################################################################### 
+
+  fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+  fprintf(file, " \n"):
+  fprintf(file, "<I><FONT COLOR=#BB00FF>Created: %s",ssystem("date",1)[2]):
+  fprintf(file, "       </I></FONT> \n"):
+
+  fprintf(file, "</BODY> \n"):
+  fprintf(file, "</HTML> \n"):
+
+  fclose(file):
+  TotGHZ_Time:=TotGHZ_Time+FlagGHZ_Time:
+  NumberSolved:=NumberSolved+FlagNumberSolved:
+ end do:
+end do:
+
+##############################################################
+file := fopen("index.html",WRITE):
+
+fprintf(file, "<HTML> \n"):
+fprintf(file, "<HEAD> \n"):
+fprintf(file, "   <TITLE>Experimental Data</TITLE> \n"):
+fprintf(file, "</HEAD> \n"):
+fprintf(file, "<BODY BGCOLOR=#FFFFFF> \n"):
+fprintf(file, " \n"):
+fprintf(file, "<H1>Experimental Data</H1> \n"):
+fprintf(file, " \n"):
+#####################################################################
+fprintf(file, "<A HREF=\"../index.html\"><IMG SRC=\"images/up.png\"></A> \n"): 
+fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+#####################################################################
+for dim from 4 to 8 do 
+ fprintf(file, "<!------------------------------------------------------------------------------>\n"):
+ fprintf(file, "<A NAME=\"Fl%d\"></A>",dim):
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+ if dim = 4 then
+   fprintf(file, "<font size=+1><B><A HREF=\"Fl%d.html\">Flags</A>",dim):
+   fprintf(file, " in %d-space</B></font><BR>\n",dim):
+  else
+   fprintf(file, "<font size=+1><B>Flags in %d-space</B></font><BR>\n",dim):
+ end if:
+ fprintf(file, " <TABLE border=1>\n"):
+ fprintf(file, "  <TR><TH>Variety</TH><TH align=center> # Problems</TH></TR>\n"):
+ for dir in Directories[dim] do 
+  if dim = 4 then 
+    fprintf(file, "  <TR><TD><A HREF=\"Fl%d.html#%s\">",dim,Flagtype(dir)):
+    fprintf(file, "<font color=blue> %s </font></TD>\n",Flagtype(dir)):
+    fprintf(file, "<TD align=center> %d </font></TD></TR>\n",nops(Data[dir])):
+   else
+    fprintf(file, "  <TR><TD><A HREF=\"%s.html\">",dir):
+    fprintf(file, "<font color=blue> %s </font></TD>\n",Flagtype(dir)):
+    fprintf(file, "<TD align=center> %d </font></TD></TR>\n",nops(Data[dir])):
+  end if:
+ od:
+ fprintf(file, "</TABLE>\n"):
+od: 
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, "%s\n",TimeString(TotGHZ_Time,"GHz")):
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, "%s Polynomial systems solved\n",parseNumber(NumberSolved)):
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, " This table automatically generated using "):
+ fprintf(file, "<A HREF=\"makeIndex.txt\">This Maple Script</A>\n"):
+ ##################################################################### 
+
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+ fprintf(file, " \n"):
+ fprintf(file, "<I><FONT COLOR=#BB00FF>Created: %s",ssystem("date",1)[2]):
+ fprintf(file, "       </I></FONT> \n"):
+
+ fprintf(file, "</BODY> \n"):
+ fprintf(file, "</HTML> \n"):
+
+ fclose(file):
+#############################################################################
+
+quit;

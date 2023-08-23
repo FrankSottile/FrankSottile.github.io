@@ -1,0 +1,179 @@
+#31.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 24 August 2001
+# Amherst, Mass
+#
+# Here, we compute and draw maximally inflected quintics with a
+# singularity of type 31  (dually, 211)
+#
+#   Possible additional ramification:
+#    
+#            nodes
+#  32          0   \                        Done in 32.maple
+#  31, 1       2s   \
+#  22, 1       1     \   
+#  3, 2        4      \
+#  3, 11       3       >   These are all unique
+#  21, 2       2      /
+#  21, 11      1     /
+#  11,11,1     2    /     Two necklaces       
+#  2,11,1      3   /      Two necklaces     
+#  2,2,1       4       Two curves, Two necklaces
+#  2,1,1,1     4       Three such curves; Two necklaces
+#  11,1,1,1    3       Two such curves; Two necklaces
+#  1,1,1,1,1   4       Five such curves
+#
+interface(quiet=true):
+with(plots):
+read(`equations.maple`):
+with(linalg):
+with(Groebner):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+RatNorm:=vector([1,s,s^2,s^3,s^4,s^5  ]):
+
+############################################################################
+
+
+M:=linalg[matrix]([
+[a,1, 0 , 0   ,  0  ,  0   ],
+[b,0, c , 1   ,  0  ,  0   ],
+[d,0, e , 0   ,  1  ,  0   ],
+[1,s,s^2,  s^3,s^4  ,   s^5],
+[0,1,2*s,3*s^2,4*s^3, 5*s^4],
+[0,0, 1 ,3*s  ,6*s^2,10*s^3],
+[0,0, 0 , 1   ,4*s  ,10*s^2],
+[0,0, 0 , 0   , 1   , 5*s  ]]):    
+
+#linalg[kernel](linalg[matrix]([
+#[a,1, 0 , 0   ,  0  ,  0   ],
+#[b,0, c , 1   ,  0  ,  0   ],
+#[d,0, e , 0   ,  1  ,  0   ]
+#]));  {[0, 0,-1, c, e, 0], [-1, a, 0, b, d, 0], [0, 0, 0, 0, 0, 1]}
+
+###################################################
+#  31, 1  One curve.  by genus formula, two nodes.
+#
+x:=s^5:
+y:=(s^3+s^2)/2:
+z:=1:
+G:=gbasis([
+simplify((x*subs(s=t,y)-y*subs(s=t,x))/(s-t)/s/s/t/t),
+simplify((x-subs(s=t,x))/(s-t)),
+simplify((y-subs(s=t,y))/(s-t))],plex(s,t)):
+double:=[fsolve(G[1]=0,t,complex)]:
+###########################################
+#   First picture, with the double points
+#
+Y:=y/(x+1):
+X:=x/(x+1):
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+DP:=pointplot({[Re(subs(s=double[1],X)),Re(subs(s=double[1],Y))],
+               [Re(subs(s=double[5],X)),Re(subs(s=double[5],Y))]},
+    symbol=cross,color=blue):
+#plotsetup(gif,plotoutput=`31e2.1.a.gif`,plotoptions=`height=180,width=180`):
+Q:=plot({[X,Y,s=-0.8..1],[Xt,Yt,t=-0.8..1]},
+          numpoints=200,color=blue,axes=none):
+display(Q,DP);
+##################################################
+#   Second one, with flex and double points
+#
+Y:=y/(x+1):
+X:=x/(x+1):
+Xx:=simplify(X-3/10):
+Z:=fsolve(Xx=0,s);
+X:=X/Xx:  Y:=Y/Xx:#  Y:=Y+X/4:
+t:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+Pf:=pointplot({[subs(s=-1,X),subs(s=-1,Y)]}, symbol=circle,color=red):
+DP:=pointplot({[Re(subs(s=double[1],X)),Re(subs(s=double[1],Y))],
+               [Re(subs(s=double[5],X)),Re(subs(s=double[5],Y))]},
+    symbol=cross,color=blue):
+plotsetup(gif,plotoutput=`31e2.1.b.gif`,plotoptions=`height=180,width=180`):
+Q:=plot({[X,Y,s=-1..Z-0.15],[Xt,Yt,t=-1..1/Z-0.2]},
+          numpoints=200,color=blue,axes=none):
+display(Q,Pf,DP);
+##################################################
+#   Third one, with the flex 
+#
+#Y:=y/(x+1):
+#X:=x/(x+1):
+#Xx:=simplify(X-1/2):
+#fsolve(Xx=0,s);
+#X:=X/Xx:  Y:=Y/Xx:  Y:=Y-X/2:
+#Xt:=simplify(subs(s=1/t,X)):
+#Yt:=simplify(subs(s=1/t,Y)):
+#Pf:=pointplot({[subs(s=-1,X),subs(s=-1,Y)]}, symbol=circle,color=red):
+#DP:=pointplot({[Re(subs(s=double[1],X)),Re(subs(s=double[1],Y))],
+#               [Re(subs(s=double[5],X)),Re(subs(s=double[5],Y))]},
+#    symbol=circle,color=blue):
+#plotsetup(gif,plotoutput=`211e2.c.gif`,plotoptions=`height=180,width=180`):
+#Q:=plot({[X,Y,s=-1..0.85],[Xt,Yt,t=-1..0.85]},
+#          numpoints=200,color=blue,axes=none):
+#display(Q,Pf);
+
+
+###################################################
+#
+#  31, 22, and flex
+#
+#G:=gbasis([Box(M,1)[],Flex(M,-1)],plex(a,b,c,d,e)):
+#E:=solve(G[1]=0,e):Dd:=solve(G[2]=0,d):C:=solve(G[3]=0,c):
+#B:=solve(G[4]=0,b):A:=solve(G[5]=0,a):
+
+#y:=linalg[multiply](vector([-1, A, 0, B, Dd, 0]),RatNorm):
+#z:=linalg[multiply](vector([ 0, 0,-1, C,  E, 0]),RatNorm):
+#x:=linalg[multiply](vector([ 0, 0, 0, 0,  0, 1]),RatNorm):
+#G:=gbasis([simplify((x*subs(s=t,y)-y*subs(s=t,x))/(s-t)),
+#           simplify((x*subs(s=t,z)-z*subs(s=t,x))/(s-t)/s/s/t/t),
+#           simplify((z*subs(s=t,y)-y*subs(s=t,z))/(s-t))
+#           ],plex(s,t)):
+#double:=[fsolve(G[1]=0,t,complex)][1];
+
+#ep:=0.01:
+#X:=x/y: Y:=z/y:
+#P:=pointplot({[subs(s=0,X),subs(s=0,Y)],[subs(s=1,X),subs(s=1,Y)]},symbol=circle,color=maroon):
+#Pf:=pointplot([subs(s=-1,X),subs(s=-1,Y)],symbol=circle,color=red):
+#Q:=plot({[X,Y,s=-5...5]},numpoints=100,color=blue):
+#display(Q,P,Pf);
+
+
+#  22, 1       1    \   
+#  3, 2        4     \
+#  3, 11       3      >   These are all unique
+#  21, 2       2     /
+#  21, 11      1    /
+#  11,11,1     2   /     Two necklaces       
+#  2,11,1      3  /      Two necklaces     
+#  2,2,1       4       Two curves, Two necklaces
+#  2,1,1,1     4       Three such curves; Two necklaces
+#  11,1,1,1    3       Two such curves; Two necklaces
+#  1,1,1,1,1   4       Five such curves
+
+###################################################
+#
+#  31, 22, and flex
+#
+#G:=gbasis([Box(M,1)[],Flex(M,-1)],plex(a,b,c,d,e)):
+#E:=solve(G[1]=0,e):Dd:=solve(G[2]=0,d):C:=solve(G[3]=0,c):
+#B:=solve(G[4]=0,b):A:=solve(G[5]=0,a):
+
+#y:=linalg[multiply](vector([-1, A, 0, B, Dd, 0]),RatNorm):
+#z:=linalg[multiply](vector([ 0, 0,-1, C,  E, 0]),RatNorm):
+#x:=linalg[multiply](vector([ 0, 0, 0, 0,  0, 1]),RatNorm):
+#G:=gbasis([simplify((x*subs(s=t,y)-y*subs(s=t,x))/(s-t)),
+#           simplify((x*subs(s=t,z)-z*subs(s=t,x))/(s-t)/s/s/t/t),
+#           simplify((z*subs(s=t,y)-y*subs(s=t,z))/(s-t))
+#           ],plex(s,t)):
+#double:=[fsolve(G[1]=0,t,complex)][1];
+
+#ep:=0.01:
+#X:=x/y: Y:=z/y:
+#P:=pointplot({[subs(s=0,X),subs(s=0,Y)],[subs(s=1,X),subs(s=1,Y)]},symbol=circle,color=maroon):
+#Pf:=pointplot([subs(s=-1,X),subs(s=-1,Y)],symbol=circle,color=red):
+#Q:=plot({[X,Y,s=-5...5]},numpoints=100,color=blue):
+#display(Q,P,Pf);
+

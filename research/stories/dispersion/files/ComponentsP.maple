@@ -1,0 +1,49 @@
+#  procedures for the computation of components
+
+# Initialize the edges
+#
+#  Here are all 9 edges, in a table.
+#   Each is a pair [[h,t],[p,q]] is the edge between [h,i,j] and [t,i+p,j+q],
+#     but also between [t,i,j] and [h,i-p,j-q]
+#
+Edges[1]:=[[c,c],[0,1]]:
+Edges[2]:=[[c,d],[0,1]]:
+Edges[3]:=[[c,d],[1,0]]:
+Edges[4]:=[[c,c],[1,0]]:
+Edges[5]:=[[c,d],[0,0]]:
+Edges[6]:=[[d,c],[0,1]]:
+Edges[7]:=[[d,d],[0,1]]:
+Edges[8]:=[[d,d],[1,0]]:
+Edges[9]:=[[d,c],[1,0]]:
+##################################################
+mkNeighbors := proc(S)
+ #
+ #  Creates the neighbors of each vertex in a table Neighb
+ #
+ global Edges, n, c, d:
+ local labl, i,j,ht,inc, e, Neig:
+ for labl in {c,d} do 
+  for i from 0 to n do 
+   for j from 0 to n do
+    Neig[[labl,i,j]]:={}:   # Initialize the set of neighbors
+    for e in S do           # Loop over all edges in subgraph
+     ht:=Edges[e][1]:       
+     inc:=Edges[e][2]:
+     if ht[1]=labl  then
+      if i+inc[1] <= n and j+inc[2] <= n then
+       Neig[[labl,i,j]]:=Neig[[labl,i,j]] union {[ht[2],i+inc[1],j+inc[2]]}:
+      end if:
+     end if:
+     if ht[2]=labl  then
+      if i-inc[1] >= 0 and j-inc[2] >= 0 then
+       Neig[[labl,i,j]]:=Neig[[labl,i,j]] union {[ht[1],i-inc[1],j-inc[2]]}: 
+      end if:
+     end if:
+    end do: 
+   end do:
+  end do:
+ end do:
+ return(Neig):
+end proc:
+##################################################
+

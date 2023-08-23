@@ -1,0 +1,18 @@
+#data.4.2.7.23
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^2*z^11 - h(z) = 0,
+#
+#  f, g, and h all have degree 4.
+#
+#######################################################
+k:=4:
+p:=2:
+l:=7:
+Iterations:=500:
+Instance:=2000:
+deg:=23:   #   Degree of the enumerative problem
+data:=[205546, 711670, 678900, 325470, 75899, 2403, 110, 2, 0, 0, 0, 0]:
+Time:=1683033.18:
+##############################################################

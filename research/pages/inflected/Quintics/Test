@@ -1,0 +1,7 @@
+Z:=[fsolve(y=0,s)]; ep:=0.01:
+X:=x/y: Y:=z/y:
+P:=pointplot({[subs(s=0,X),subs(s=0,Y)],[subs(s=1,X),subs(s=1,Y)]},symbol=circle,color=maroon):
+Pf:=pointplot([subs(s=-1,X),subs(s=-1,Y)],symbol=circle,color=red):
+Q:=plot({[X,Y,s=-5..Z[1]-ep],[X,Y,s=Z[1]+ep..Z[2]-ep],
+         [X,Y,s=Z[2]+ep..5]},numpoints=100,color=[blue,red,green]):
+display(Q,P,Pf);

@@ -1,0 +1,69 @@
+#1_planar/examples/.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 26 March 2002
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+Ends:=[-5,5]:
+Gaps:=[.1,.1,.1,.1]:
+
+i:=1:
+
+Infl:=[-3,-2,-1,0,1,2,3]:
+#Infl:=[-3,-2,-1,1,2,3]:
+Zeroes:=[fsolve(z[i]=0,s)];
+X:=x[i]/z[i]:
+Y:=y[i]/z[i]:
+
+Xt:=simplify(subs(s=1/t,X)):Yt:=simplify(subs(s=1/t,Y)):
+
+Complex[i];
+#A:=subs(s=Complex[i][1],X):
+#B:=subs(s=Complex[i][1],Y):
+#macro(MyColor=COLOR(RGB, 0.8, 0.1, 0.6)):
+#CL:=plot({[Re(A)+t*Im(A),Re(B)+t*Im(B),t=-1/5..1/5]},axes=none,color=MyColor):
+
+Pt:=[]: 
+for j from 1 to 7 do
+#for j from 1 to 6 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+PP:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=green):
+
+SP:=[]:
+for zz in SOL[i] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("th quintic"):
+if (nops(Zeroes)=0) then
+ Q:=plot({[X,Y,s=Ends[1]..Ends[2]]}, axes=none,title=convert(S,symbol),
+           color=blue,numpoints=150):
+fi:
+if nops(Zeroes)=1 then 
+ Q:=plot({
+    [X,Y,s=Ends[1]..Zeroes[1]-Gaps[1]],
+    [X,Y,s=Zeroes[1]+Gaps[2]..Ends[2]]
+     },axes=none,title=convert(S,symbol), color=blue,numpoints=100):
+fi:
+if nops(Zeroes)=2 then 
+ Q:=plot({
+    [X,Y,s=Ends[1]..Zeroes[1]-Gaps[1]],
+    [X,Y,s=Zeroes[1]+Gaps[2]..Zeroes[2]-Gaps[3]],
+    [X,Y,s=Zeroes[2]+Gaps[4]..Ends[2]]
+     },axes=none,title=convert(S,symbol), color=blue,numpoints=100):
+fi:
+
+#plotsetup(gif,plotoutput=`1/.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,PP,Sol,axes=normal);
+#display(Q,P,PP,Sol,CL,axes=normal);

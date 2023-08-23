@@ -1,0 +1,64 @@
+#0_cusp/1/17.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 23 February 2001
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Zeroes:=[fsolve(z[17]=0,s)]:
+X:=x[17]/z[17]:
+Y:=y[17]/z[17]:
+slope:=(subs(s=Zeroes[2]-0.0001,Y)-subs(s=Zeroes[2]+0.0001,Y))/
+       (subs(s=Zeroes[2]-0.0001,X)-subs(s=Zeroes[2]+0.0001,X)):
+Y:=simplify(Y-slope*X):
+Z:=X+10:
+X:=(X-Y/12)/Z:
+Y:=-Y/Z:
+Root:=fsolve(Z=0,s):
+slope:=(subs(s=Root-0.0001,Y)-subs(s=Root+0.0001,Y))/
+       (subs(s=Root-0.0001,X)-subs(s=Root+0.0001,X)):
+Y:=simplify(Y-slope*X):
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+
+Pt:=[[subs(t=0,Xt),subs(t=0,Yt)]]: 
+Pt18:=[[subs(t=0,-Xt),subs(t=0,Yt)]]: 
+for j from 1 to 8 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+ Pt18:=[Pt18[],[subs(s=Infl[j],-X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+P18:=pointplot({Pt18[]},symbol=circle,color=red):
+
+SP:=[]:SP18:=[]:
+for zz in SOL[17] do
+ SP:=[SP[],[Re(evalf(subs(s=zz,X))),Re(evalf(subs(s=zz,Y)))]]:
+ SP18:=[SP18[],[Re(evalf(subs(s=zz,-X))),Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+Sol18:=pointplot({SP18[]},symbol=cross,color=green):
+
+S:="17th quintic":
+Q:=plot({
+         [Xt,Yt,t=-1..1/Root-0.25],
+         [X,Y,s=-1..Root-0.2]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+#plotsetup(gif,plotoutput=`17.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);
+####################################################
+Q18:=plot({
+         [-Xt,Yt,t=-1..1/Root-0.25],
+         [-X,Y,s=-1..Root-0.2]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+plotsetup(gif,plotoutput=`18.gif`,plotoptions=`height=200,width=200`):
+display(Q18,P18,Sol18);
+

@@ -1,0 +1,18 @@
+#data.4.4.1.25
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^4*z^5 - h(z) = 0,
+#
+#  f, g, and h all have degree 4.
+#
+#######################################################
+k:=4:
+p:=4:
+l:=1:
+Iterations:=500:
+Instance:=2000:
+deg:=25:   #   Degree of the enumerative problem
+data:=[208710, 717796, 654277, 334657, 75820, 8405, 335, 0, 0, 0, 0, 0, 0]:
+Time:=900495.99:
+##############################################################

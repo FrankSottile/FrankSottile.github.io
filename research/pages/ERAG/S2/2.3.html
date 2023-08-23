@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Polyhedral Homotopy Algorithm</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.2.html"> <IMG ALT="previous" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">2.iii. Real Solutions to Sparse Polynomial
+               Systems</A> <BR>
+ <B> Up:</B> <A HREF="2.html">2.ii. Polyhedral Homotopy Algorithm: Table
+               of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.2.html">2.ii.b. Regular Triangulations</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+
+<H2>2.ii.c. Polyhedral homotopy algorithm</H2>
+
+Crucial to the polyhedral homotopy algorithm of Huber and 
+Sturmfels&nbsp;[<A HREF="../bibliography.html#HS95">HS</A>] are polynomial
+systems derived from the original system and the  regular subdivision
+<I>P<SUB>w</SUB></I> of  
+<I>P</I> by a lifting function <I>w</I>.
+Given a polynomial <I>f</I> with Newton polytope <I>P</I> and a face 
+<I>F</I> of the subdivision <I>P<SUB>w</SUB></I>, consider the sum of terms of
+<I>f</I> with exponent vector in the face <I>F</I>, restricting <I>f</I> 
+to the face <I>F</I>.
+Doing this for each polynomial <I>f<SUB>i</SUB></I> in our original system, we
+obtain the facial subsystem of&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>)
+given by <I>F</I>.
+
+<P>
+Suppose we have a lifting function 
+<I>w</I>&nbsp;:&nbsp;Lattice&nbsp;Points&nbsp;in&nbsp;<I>P</I>&nbsp;-->&nbsp;<B>Q</B> 
+and a polynomial <I>f</I> with Newton polytope <I>P</I>
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE><TR>
+<TD valign=center>  <I>f</I>(<I>x</I>) &nbsp; = &nbsp; 
+   </TD><TD><IMG SRC="Sigma.gif"> </TD><TD  valign=center> 
+      <I>c</I><SUB><B>a</B></SUB>&nbsp;<I>x</I><SUP><B>a</B></SUP> ,</TD>
+  </TR></TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the sum over all integral lattice points <B>a</B> in <I>P</I>. 
+We multiply the term with exponent <B>a</B> by 
+<I>t</I><SUP><i>w</I>(<B>a</B>)</SUP> to obtain
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE><TR>
+<TD valign=center> <I>f</I>(<I>x</I>;<I>t</I>) &nbsp; := &nbsp; 
+</TD><TD> <IMG SRC="Sigma.gif">  </TD><TD  valign=center> 
+ <I>c</I><SUB><B>a</B></SUB>&nbsp;<I>x</I><SUP><B>a</B></SUP> 
+ <I>t</I><SUP><I>w</I>(<B>a</B>)</SUP> ,
+</TD></TR></TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the sum over all integral lattice points <B>a</B> in <I>P</I>. 
+Modifying all polynomials in the original sparse system in this way gives 
+the <I>lifted system</I>, a family of sparse systems depending upon the
+parameter <I>t</I>. 
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:spHomotopy"></A>
+<I>f</I><SUB>1</SUB>(<I>x</I>;<I>t</I>) &nbsp; = &nbsp; 
+<I>f</I><SUB>2</SUB>(<I>x</I>;<I>t</I>) &nbsp; = &nbsp; 
+ ...  &nbsp; = &nbsp; <I>f<SUB>n</SUB></I>(<I>x</I>;<I>t</I>)
+  &nbsp; = &nbsp; 0 ,</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+
+<P>
+Solutions to this system are algebraic functions 
+<I>t</I> |--> <I>x</I>(<I>t</I>) in the
+parameter <I>t</I>.
+In a neighborhood of 0 in the complex plane, each branch is expressed as a
+Puiseaux series
+<P></P>
+<DIV ALIGN="CENTER">
+ <I>x</I>(<I>t</I>) &nbsp; = &nbsp; 
+ (<I>x</I><SUB>1</SUB>(<I>t</I>), <I>x</I><SUB>2</SUB>(<I>t</I>), ..., 
+  <I>x<SUB>n</SUB></I>(<I>t</I>)) &nbsp;&nbsp; with &nbsp; 
+   <I>x<SUB>i</SUB></I>(<I>t</I>) &nbsp;=&nbsp; 
+    <I>t<SUP>u<SUB>i</SUB></SUP> y<SUB>i</SUB></I> &nbsp;+&nbsp;
+     higher order terms in <I>t</I> , 
+<BR CLEAR="ALL"></DIV><P></P>
+where the <I>y<SUB>i</SUB></I> are non-zero constants and exponents 
+<I>u<SUB>i</SUB></I> are rational numbers.
+Substituting this expression into&nbsp;(<A
+ HREF="#eq:spHomotopy">2.4</A>), we obtain 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+ <TR><TD valign=center>0 &nbsp; = &nbsp; </TD>
+ <TD> <IMG SRC="Sigma.gif">  </TD><TD  valign=center> 
+   <I>c</I><SUB><B>a</B></SUB>&nbsp;<I>y</I><SUP><B>a</B></SUP> 
+   <I>t</I><SUP><I>u</I><B>a</B> + <I>w</I>(<B>a</B>)</SUP> 
+    &nbsp; + &nbsp; higher order terms in <I>t</I> .
+  </TD></TR> </TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+(The sum here is once again over all integral lattice points <B>a</B> in
+<I>P</I>.) 
+The exponent of <I>t</I> is the dot product of
+(<I>u</I>,1) with (<B>a</B>,<I>w</I>(<B>a</B>)).
+Thus the terms of lowest order in <I>t</I> correspond to points 
+(<B>a</B>,<I>w</I>(<B>a</B>)) in the lifted polytope where the exponent vector
+(<I>u</I>,1) achieves its minimum--a
+face in the lower hull of the lifted polytope. 
+Let <I>F</I> be the corresponding face of the regular subdivision 
+<I>P<SUB>w</SUB></I>.
+Let <B>b</B> be any vertex of this face <I>F</I>.
+Removing the common factor 
+ <I>t</I><SUP><I>u</I><B>b</B> + <I>w</I>(<B>b</B>)</SUP> from these lowest
+ order terms gives the restriction of <I>f</I> to the face <I>F</I>.
+Thus the coefficients <I>y<SUB>i</SUB></I> of the leading terms of the
+Puiseaux expansion are solutions to the facial subsystem of the original
+system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) given by the face <I>F</I>
+selected by the initial Puiseaux exponents.
+
+<P>
+Suppose the original system is general in the sense that each of its facial
+subsystems given by faces <I>F</I> of the regular subdivision has solutions
+only if Vol<I>F</I>>0, that is, only if <i>F</I> is a facet of the subdivision.
+Consider substituting the Puiseaux series into the polynomial
+system&nbsp;(<A HREF="#eq:spHomotopy">2.4</A>) and then taking the limit
+as <I>t</I> approaches 0.
+The resulting polynomial system for the leading coefficients <I>y</I> of the 
+Puiseaux series are solutions to the corresponding facial system.
+By previous assumption, this has no solutions unless <I>F</I> is a facet of
+the subdivision <I>P<SUB>w</SUB></I>.
+In that case, the inward pointing normal vector (<I>u</I>,1) to the
+corresponding facet of the lifted polytope gives the initial exponent <I>u</I>
+of the Puiseaux expansion.
+
+<P>
+The full Puiseaux series can be reconstructed from its initial terms
+(see&nbsp;[<A HREF="../bibliography.html#HS95">HS</A>] for details) giving the
+1-1 correspondence 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<TR><TD valign=center align=center width=250>
+  Solutions to facial subsystems of&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>)
+  given by facets of <I>P<SUB>w</SUB></I></TD>
+  <TD valign=center> &nbsp; <----> &nbsp; </TD>
+  <TD valign=center width=250>
+      Branches of the algebraic
+       function <I>t</I>&nbsp;|-->&nbsp;<I>x</I>(<I>t</I>) near <I>t</I>=0
+  </TD></TR>
+</TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This is the number of solutions to the lifted 
+system&nbsp;(<A HREF="#eq:spHomotopy">2.4</A>)  for general complex numbers
+<I>t</I>, so the number of solutions to the original sparse 
+system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>)  equals the 
+number of solutions to all the facial subsystems given by facets of
+<I>P<SUB>w</SUB></I>. 
+
+<P>
+Now suppose the regular subdivision <I>P<SUB>w</SUB></I> is a regular
+triangulation and each facial subsystem is general.
+Then the facets <I>F</I> of <I>P<SUB>w</SUB></I> are simplices with no
+interior vertices. 
+Since general sparse systems whose Newton polytope is such
+a simplex have exactly <I>n</I>!Vol(<I>F</I>) solutions, the number of
+solutions to facial subsystems given by facets of <I>P<SUB>w</SUB></I> 
+is exactly the sum of the normalized volumes of all facets of
+<I>P<SUB>w</SUB></I>, which is
+the normalized volume of <I>P</I>.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.2.html"> <IMG ALT="previous" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">2.iii. Real Solutions to Sparse Polynomial
+               Systems</A> <BR>
+ <B> Up:</B> <A HREF="2.html">2.ii. Polyhedral Homotopy Algorithm: Table
+               of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.2.html">2.ii.b. Regular Triangulations</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+</BODY>
+</HTML>

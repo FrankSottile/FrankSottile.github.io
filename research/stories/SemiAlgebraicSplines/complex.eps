@@ -1,0 +1,71 @@
+%!PS-Adobe-3.0 EPSF
+%%Title: complex.eps
+%%Pages:  1
+%%BoundingBox: 0 0 153 153 
+%%EndComments
+
+
+1.5 1.5 scale %10 130 translate
+
+10 dict begin
+1 setlinejoin
+1 setlinecap
+
+/rad 50 def
+/x rad 2 sqrt div def
+/R 1.5 def
+/arr { newpath -6 2.5 moveto 6 -2.5 rlineto -6 -2.5 rlineto stroke } def
+
+51 51 translate
+
+1 setlinewidth
+0 1 1 setrgbcolor
+newpath
+ 0 0 moveto 0 rad neg lineto
+ 0 0 rad 270 150 arcn 
+ 0 rad rad 210 270 arc fill
+0 1 0 setrgbcolor
+ rad 4 mul 5 div  rad -3 mul 5 div  rad  143 83 arcn 
+ 0 0 rad 23 150 arc 
+ 0 rad rad 210 270 arc fill
+1 1 0 setrgbcolor
+ rad 4 mul 5 div  rad -3 mul 5 div  rad  143 83 arcn 
+ 0 0 rad 23 -90 arcn
+ closepath fill 
+ 
+0.5 0 0 setrgbcolor
+0 rad rad 210 270 arc stroke
+rad 4 mul 5 div  rad -3 mul 5 div  rad  83 143 arc stroke
+newpath 0 0 moveto 0 rad neg lineto stroke
+
+1 1 1 setrgbcolor
+0 0 rad 0 360 arc stroke
+%1 0 0 setrgbcolor
+%0 0 rad -3 4 div mul 0 360 arc stroke
+[2 3] 0 setdash
+0 0 1 setrgbcolor
+0 0 rad 0 360 arc stroke
+
+
+[ ] 0 setdash
+0 setlinewidth
+0 0 0 setrgbcolor
+0 0 R 0 360 arc fill 
+0 rad neg R 0 360 arc fill
+/al 150 def
+al cos rad mul al sin rad mul  R 0 360 arc fill
+/be 23 def
+be cos rad mul be sin rad mul  R 0 360 arc fill
+
+1 setlinewidth
+0.5 0 0 setrgbcolor
+
+gsave 0 rad -3 4 div mul translate -90 rotate arr grestore
+gsave 0 rad translate 225 cos rad mul 225 sin rad mul translate 138 rotate arr grestore
+gsave 4 5 div rad mul -3 5 div rad mul translate 99 cos rad mul 99 sin rad mul translate 11 rotate arr grestore
+
+
+
+showpage
+grestore
+end

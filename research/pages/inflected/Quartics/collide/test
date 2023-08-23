@@ -1,0 +1,6 @@
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+ P := animate(sin(x+t),x=-Pi..Pi,t=-Pi..Pi,frames=8):
+ Q := animate(cos(x+t),x=-Pi..Pi,t=-Pi..Pi,frames=8):
+ display([P,Q]);        
+ 

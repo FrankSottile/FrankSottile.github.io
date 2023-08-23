@@ -1,0 +1,18 @@
+#data.3.2.6.18
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^2*z^9 - h(z) = 0,
+#
+#  f, g, and h all have degree 3.
+#
+#######################################################
+k:=3:
+p:=2:
+l:=6:
+Iterations:=500:
+Instance:=4000:
+deg:=18:   #   Degree of the enumerative problem
+data:=[15528, 816153, 1568638, 1185183, 397753, 16645, 100, 0, 0, 0]:
+Time:=1060203.24:
+##############################################################

@@ -1,0 +1,185 @@
+#SimpleProblems.maple
+#
+# Frank Sottile
+# Anton Leykin
+# 26 June 2007
+########################################################
+interface(quiet=true):
+k:=3:
+n:=11:
+########################################################
+#
+#   This script lits all simple Schubert problems on the
+# Grassmannian G(k,n) by the number of solutions.
+#
+# It first generates a list of paritions that fit in the
+#   (k-1) by (n-k-1) rectangle.  Pairs of these partitions
+#   define simple Schubert problems.
+#
+# Then it generates the ideal of the Grassmannian and
+#  computes all relevant Schubert classes.
+#
+# Lastly, it computes the intersection numbers of all
+#  simple Schubert problems and writes them to a file Gk.n.problems
+#
+#  The format is a list of lists.   The data for an individual simple
+# Schubert prolem has the form:
+#
+#    [77, [[2, 1, 0], [1, 1, 0], 7]]
+#     ^        ^          ^      ^
+#     |         \         |    The number of simple Schubert conditions
+# Intersection   \        |           used in this problem
+#   number      Pair of partitions
+#               defining the simple
+#               Schubert problem
+#
+#########################################################
+#
+#  Step 0: removes the old directory Gkn to get it ready to fill
+#
+#########################################################
+system(sprintf("rm -rf G%d%d",k,n)):
+system(sprintf("mkdir G%d%d",k,n)):
+#########################################################
+#
+#  Step 1: Make a list of partitions in the (k-1) by (n-k-1) rectangle.
+#
+#########################################################
+
+ S:=combinat[choose](n-2,k-1):
+ Partitions:=[]:
+ for p in S do
+  if p[k-1]>k-1 then
+   Partitions:=[[seq(p[k-i]-k+i,i=1..k-1),0],Partitions[]]:
+  end if:
+ end do:
+########################################################
+#
+#  Step 2: Generate the ideal of the cohomology ring of the Grassmannian
+#
+########################################################
+ h_0:=1:
+ c_0:=1:
+ for a from 1 to n do
+  H:=hx:
+  for b from 1 to min(a,k) do
+   H:=H+(-1)^b*c_||b*h_||(a-b):
+  od:
+  h_||a:=solve(H=0,hx):
+ od:
+  Ideal:=[seq(h_||i, i=n-k+1..n)]:
+# Ideal:=Groebner[gbasis](Ideal, tdeg(op(indets(Ideal)))):
+#
+ Ideal:=Groebner[Basis](Ideal, tdeg(op(indets(Ideal)))):
+########################################################
+#
+#  Step 3: Generate the Schubert classes
+#
+########################################################
+ for lam in Partitions do
+  M:=linalg[matrix](k,k,0):
+  for a from 1 to k do
+   for b from 1 to k do
+    if lam[a]+b-a<0
+     then M[a,b]:=0:
+     else M[a,b]:=h_||(lam[a]+b-a):
+    end if:
+   od:
+  od:
+  Sc[lam]:=linalg[det](M):
+ od:
+########################################################
+#
+#  Step 4: Compute degrees and write files
+#
+#  This records the different intersection numbers found in Num
+#  It loops through pairs of partitions lam,mu and computes
+#  the degree of
+#                                     (k*(n-k)-|lam|-|mu|)
+#      Schur(lam) * Schur(mu) * (h_1)^
+#
+#  This degree is called INT.   If INT>1, then we record the pair
+#           [INT, [lam, mu, k*(n-k)-|lam|-|mu|]]
+#  in the file Gkn/INT.data
+#
+########################################################
+
+ Nums:={}:
+ for a from 1 to nops(Partitions) do
+  lam:=Partitions[a]:
+  alam:=sum(lam[i],i=1..k):
+  for b from a to nops(Partitions) do
+   mu:=Partitions[b]:
+   amu:=sum(mu[i],i=1..k):
+   Class:=Sc[lam]*Sc[mu]*(h_1)^abs((k*(n-k)-alam-amu)):
+    #
+    #   The abs((k*(n-k)-alam-amu)) is a fudge, otherwise it is sometimes negative
+    #  and Frank did not want to write a control structure to rule this out.
+    #  such a product will have degree too high and will reduce to zero anyway.
+    #
+#   Class:=Groebner[normalf](Class,Ideal, tdeg(op(indets(Ideal))));
+   Class:=Groebner[NormalForm](Class,Ideal, tdeg(op(indets(Ideal)))):
+   INT:=coeff(Class,c_||k^(n-k)):
+   ###########################################################
+   if INT>1 then
+
+    if member(INT, Nums) then
+      read(sprintf("G%d%d/%d.data",k,n,INT)):
+     else
+      Nums:= Nums union {INT}:
+      Data:=[]:
+    end if:
+
+    Data:=[Data[],[INT,[lam,mu,(k*(n-k)-alam-amu)]]]:
+
+    file:=fopen(sprintf("G%d%d/%d.data",k,n,INT),WRITE):
+
+    fprintf(file,"Data:=[NULL\n"):
+    for A in Data do
+     fprintf(file,",%a\n",A):
+    end do:
+    fprintf(file,"]:\n"):
+    fclose(file):
+   end if:
+  end do:
+ end do:
+
+########################################################
+#
+# Step 5: Read the files in Gkn and sort the data according to
+#          intersection number
+#
+########################################################
+
+Nums:=convert(Nums,list):
+
+numProbs:=0:
+
+file:=fopen(sprintf("G%d.%d.problems",k,n),WRITE):
+fprintf(file,"Data:=[NULL\n"):
+for INT in Nums do
+ fprintf(file,"########################################################################\n"):
+ fprintf(file,"#\n#   Problems with %d solutions \n#\n",INT):
+ fprintf(file,"########################################################################\n"):
+ read(sprintf("G%d%d/%d.data",k,n,INT)):
+ for A in Data do
+  fprintf(file,",%a\n",A):
+ end do:
+ numProbs:=numProbs+nops(Data):
+end do:
+fprintf(file,"]:\n"):
+
+fprintf(file,"NumberofProblems:=%5d\n", numProbs):
+fprintf(file,"Time:=%10.2f\n", time()):
+fclose(file):
+#########################################################
+#
+#  Step 0: removes the old directory Gkn
+#
+#########################################################
+system(sprintf("rm -rf G%d%d",k,n)):
+#########################################################
+printf("Elapsed  Time :=%8.2f  seconds\n", time()):
+printf("NumberofProblems:=%5d\n", numProbs):
+quit:
+########################################################

@@ -1,0 +1,272 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Common Tangent Lines to Spheres in  R^n</TITLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="../S4/index.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="4.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="../S4/index.html">4. The Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: 
+                Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="4.html">3.iv. Real rational cubics through 
+                   8 points in <B>R</B><SUP>2</SUP></A><BR>
+<HR>
+<!--End of Navigation Panel-->
+<A NAME="sec:tangent"></A>
+<H2>3.v. Common tangent lines to Spheres in 
+          <B>R</B><SUP><I>n</I></SUP></H2> 
+
+Consider the following.
+
+<P>
+<P>
+<DIV><B>Question  3.9</B> &nbsp; 
+How many common tangent lines are there to 2<I>n</I> - 2  spheres in 
+  <B>R</B><SUP><I>n</I></SUP>?
+</DIV><P></P>
+
+<P>
+For example, when <I>n</I> = 3, how many common tangent lines are there to four
+spheres in <B>R</B><SUP>3</SUP>?
+Despite its simplicity, this question does not seem to have been asked
+classically, but rather arose in discrete and computational
+geometry<A HREF="#Qf"><SUP>&#167;</SUP></A>.
+The case <I>n</I> = 3 was solved by Macdonald, Pach, and Theobald&nbsp;[<A
+ HREF="../bibliography.html#MPT01">MPT</A>] and
+the general case more 
+recently<A HREF="#Genf"><SUP><IMG SRC=dagger.png></SUP></A>&nbsp;[<A
+ HREF="../bibliography.html#STh01">STh</A>]. 
+
+<P>
+<P>
+<DIV><A NAME="thm:12lines"><B>Theorem  3.10</B></A> &nbsp; 
+ 2<I>n</I> - 2 general spheres in B>R</B><SUP><I>n</I></SUP> 
+ (<I>n</I> at least 3)  have  3&nbsp;2<SUP><I>n</I>-1</SUP> complex common
+ tangent lines, and there are 2<I>n</I> - 2  such spheres with all
+ common tangent lines real.
+</DIV><P></P>
+
+<P>
+Figure&nbsp;<A HREF="#fig:12lines">9</A> displays a configuration of 4 spheres in
+<B>R</B><SUP>3</SUP> with 12 real common tangents.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:12lines"></A><A NAME="1984"></A>
+<TABLE>
+<TR><TD><IMG SRC="12lines.gif"></TD></TR>
+<TR><TD><STRONG>Figure 9:</STRONG>
+Four spheres with 12 common tangents</TD></TR>
+</TABLE>
+</DIV><P></P>
+The number 2<I>n</I> - 2 is the dimension of the space
+of lines in <B>R</B><SUP><I>n</I></SUP> and is necessary for there to be
+finitely many common tangents.
+
+<P>
+Represent a line in <B>R</B><SUP><I>n</I></SUP> by a point <I>p</I> on the
+line and its direction vector <I>v</I> in <B>P</B><SUP><I>n</I>-1</SUP>.
+Imposing the condition
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR>
+  <TD align=center><TABLE><TR>
+  <TD valign=center> <<I>p</I>,<I>v</I>> := </TD>
+ <TD valign=center><IMG SRC="Sigma.gif"></TD>
+ <TD valign=center><I>p<SUB>i</SUB></I> <I>v<SUB>i</SUB></I> 
+    &nbsp; = &nbsp; 0 ,</TD></TR></TABLE>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.1)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+makes this representation unique.
+Here, <<I>p</I>,<I>v</I>> is the usual Euclidean dot product.
+Write <I>v</I><SUP>2</SUP> for  <<I>v</I>,<I>v</I>>.
+A line represented by the pair (<I>p</I>,<I>v</I>) is tangent to the sphere
+with center <I>c</I> and radius <I>r</I> when
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <I>v</I><SUP>2</SUP><I>p</I><SUP>2</SUP> 
+ - 2<I>v</I><SUP>2</SUP><<I>p</I>,<I>c</I>>
+ + <I>v</I><SUP>2</SUP><I>c</I><SUP>2</SUP>
+ - <<I>v</I>,<I>c</I>><SUP>2</SUP>
+ - <I>v</I><SUP>2</SUP><I>r</I><SUP>2</SUP>
+ &nbsp; = &nbsp; 0 .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+Suppose we have 2<I>n</I> - 2 spheres with centers 
+<I>c</I><SUB>1</SUB>, <I>c</I><SUB>2</SUB>, ..., 
+<I>c</I><SUB>2<I>n</I>-2</SUB> and
+corresponding radii <I>r</I><SUB>1</SUB>, <I>r</I><SUB>2</SUB>, ..., 
+<I>r</I><SUB>2<I>n</I>-2</SUB>.
+Without any loss of generality, we may assume that the last sphere is centered
+at the origin and has radius <I>r</I>.
+Then its equation is
+<BR>
+
+<A NAME="eq:simple">
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD ALIGN="CENTER" NOWRAP></A>
+ <I>v</I><SUP>2</SUP><I>p</I><SUP>2</SUP> 
+ - <I>v</I><SUP>2</SUP><I>r</I><SUP>2</SUP>
+ &nbsp; = &nbsp; 0 .</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Subtracting this from the equations for the other
+spheres, we obtain the equations
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="eq:rest"></A>
+2<I>v</I><SUP>2</SUP><<I>p</I>, <I>c<SUB>i</SUB></I>>
+ &nbsp; = &nbsp; <I>v</I><SUP>2</SUP><I>c<SUB>i</SUB></I><SUP>2</SUP>
+  - <<I>v</I>, <I>c<SUB>i</SUB>><SUP>2</SUP>
+  - <I>v</I><SUP>2</SUP>(<I>r<SUB>i</SUB></I><SUP>2</SUP>-<I>r</I><SUP>2</SUP>)
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+for <I>i</I>=1, 2, ..., 2<I>n</I>-3.
+
+<P>
+These last equations are linear in <I>p</I>.
+If the centers <I>c</I><SUB>1</SUB>, <I>c</I><SUB>2</SUB>, ..., 
+<I>c<SUB>n</I></SUB> are linearly independent (which they are, by
+our assumption on generality), then we use the
+corresponding equations to solve for <I>v</I><SUP>2</SUP><I>p</I>
+as a homogeneous quadratic in <I>v</I>.
+Substituting this into the equations&nbsp;(<A HREF="#eq:dot">3.1</A>)
+and&nbsp;(<A HREF="#eq:simple">3.2</A>) 
+gives a cubic and a quartic in <I>v</I>, and substituting the expression for 
+<I>v</I><SUP>2</SUP><I>p</I>
+into&nbsp;(<A HREF="#eq:rest">3.3</A>) for 
+<I>i</I>=<I>n</I>+1, <I>n</I>+2, ..., 2<I>n</I>-3 gives 
+<I>n</I>-3 quadratics in <I>v</I>.
+By B&#233;zout's Theorem, if there are finitely many complex solutions to these
+equations, their number is bounded by
+ 3&nbsp;4&nbsp;2<SUP><I>n</I>-3</SUP> = 3&nbsp;2<SUP><I>n</I>-1</SUP>.
+
+<P>
+This upper bound is attained with all solutions real.
+Suppose that the spheres all have the same radius, <I>r</I>, and the first four
+have centers 
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<TR><TD><I>c</I><SUB>1</SUB> := ( &nbsp;1, &nbsp;1, &nbsp;1,</TD>
+      <TD>0, ..., 0)</TD></TR>
+<TR><TD><I>c</I><SUB>2</SUB> := ( &nbsp;1,-1,-1,</TD>
+      <TD>0, ..., 0)</TD></TR>
+<TR><TD><I>c</I><SUB>3</SUB> := (-1, &nbsp;1,-1,</TD>
+      <TD>0, ..., 0)</TD></TR>
+<TR><TD><I>c</I><SUB>4</SUB> := (-1,-1, &nbsp;1,</TD>
+      <TD>0, ..., 0)</TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR CLEAR="ALL"><P></P>
+and subsequent centers are at the points <I>ae<SUB>j</SUB></I>
+and -<I>ae<SUB>j</SUB></I>, for <I>j</I> = 4, 5, ..., <I>n</I>,
+where 
+<I>e</I><SUB>1</SUB>, <I>e</I><SUB>1</SUB>, ..., <I>e<SUB>n</SUB></I> is the
+standard basis for <B>R</B><SUP><I>n</I></SUP>.
+Let <I>g</I> :=
+<I>a</I><SUP>2</SUP>(<I>n</I>-1)/(<I>a</I><SUP>2</SUP>+<I>n</I>-3), which is
+positive. 
+
+<A NAME="thm:real-cmplx"></A> 
+<P>
+<DIV><B>Theorem  3.11</B> ([<A HREF="../bibliography.html#STh01">STh</A>,
+ Theorem 5])  &nbsp;  When 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<I>a r</I> (<I>r</I><SUP>2</SUP> - 3) (3 - <I>g</I>) (<I>a</I><SUP>2</SUP> -
+2) (<I>r</I><SUP>2</SUP> - <I>g</I>) ( (3 - <I>g</I>)<SUP>2</SUP> + 4<I>g</I>
+- 4<I>r</I><SUP>2</SUP>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+ does not vanish, there are exactly 3&nbsp;2<SUP><I>n</I>-1</SUP>
+ complex lines tangent to the spheres.
+ If we have
+<DL COMPACT>
+<DT>(a)</DT>
+<DD>(3 - <I>g</I>)<SUP>2</SUP>/4 + <I>g</I> &nbsp; > &nbsp; <I>r</I><SUP>2</SUP>
+       &nbsp; > &nbsp; <I>g</I>  &nbsp; &nbsp; and
+</DD>
+<DT>(b)</DT>
+<DD> (<I>n</I> - 1)/(<I>n</I> - 4) + 2  &nbsp; > &nbsp; 
+       <I>a</I><SUP>2</SUP>  &nbsp; > &nbsp;  2, 
+            
+</DD>
+</DL>
+then all the 3&nbsp;2<SUP><I>n</I>-1</SUP> lines are in fact real.
+</DIV><P></P>
+
+<P>
+Theorem&nbsp;<A HREF="#thm:12lines">3.10</A> is false when 
+<I>n</I>=2.  
+There are 4 lines tangent to 2 general circles in the plane, and all
+may be real.
+The argument given for Theorem&nbsp;<A HREF="#thm:12lines">3.10</A> fails
+because  the centers of the spheres do not affinely span 
+<B>R</B><SUP>2</SUP>.
+This case of <I>n</I>=2 does generalize, though.
+
+<P>
+<P>
+<DIV><B>Theorem  3.12</B> (Megyesi&nbsp;[<A
+ HREF="../bibliography.html#Me01">Me</A>])  &nbsp; 
+Four unit spheres in <B>R</B><SUP>3</SUP> whose centers are coplanar but
+otherwise general have 12  common complex tangents.
+    At most 8  of these 12  are real.
+</DIV><P></P>
+
+<P>
+<P>
+<DIV><B>Remark  3.13</B> &nbsp; 
+This problem of common tangents to 4 spheres with equal radii
+ and coplanar centers gives an example of an enumerative geometric
+ problem that is not fully real.
+ We do not feel this contradicts the observation that there are no enumerative
+ problems not known to be fully real, as the spheres are not sufficiently
+ general. 
+</DIV><P></P>
+<HR>
+
+<A NAME="Qf"></A><SUP>&#167;</SUP>The question of the maximal number of (real)
+common tangents 
+to 4 balls was first formulated by David Larman&nbsp;[<A
+ HREF="../bibliography.html#La90">Lar</A>] at DIMACS in 1990.
+<HR>
+
+<A NAME="Genf"></A><SUP><IMG SRC=dagger.png></SUP>This was solved during the DIMACS
+Workshop on Algorithmic and Quantitative Aspects of Real Algebraic Geometry in
+Mathematics and Computer Science.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="../S4/index.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="4.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="../S4/index.html">4. The Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: 
+                Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="4.html">3.iv. Real rational cubics through 
+                   8 points in <B>R</B><SUP>2</SUP></A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

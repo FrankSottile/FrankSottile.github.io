@@ -1,0 +1,255 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Theorem 4.4</TITLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.2.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">4.iii Further Extensions of the Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="2.html#subsections">4.ii The Special Schubert Calculus</A><BR>
+ <B> Previous:</B> <A HREF="2.2.html">4.ii.b. The Degrees of Grassmann Varieties</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+<A NAME="sec:SpSchCalc"></A>
+<H2>4.ii.c. Proof of Theorem&nbsp;<A HREF="2.html#thm:special">4.4</A></H2>
+
+
+<P>
+Consider the action of the non-zero real numbers <B>R</B><SUP>x</SUP>
+on <B>R</B><SUP><I>n</I></SUP>
+<A NAME="eq:action"></A>
+<BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+  <I>t</I>.<I>e<SUB>j</SUB></I> &nbsp; = &nbsp; 
+         <I>t <SUP>j</SUP></I> <I>e<SUB>j</SUB></I> ,
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.10)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <I>t</I> is in <B>R</B><SUP>x</SUP> (a non-zero real number) and 
+<I>e</I><SUB>1</SUB>, <I>e</I><SUB>2</SUB>, ..., <I>e<SUB>n</SUB></I>
+is a basis for <B>R</B><SUP><I>n</I></SUP> (corresponding to the rows of the
+<I>n</I> by <I>n</I> identity matrix).
+Let <I>L</I> be a (<I>n</I>-<I>k</I>)-plane.
+By&nbsp;(<A HREF="2.1.html#eq:laplace">4.6</A>), the equation for a <I>k</I>-plane
+<I>K</I> to meet <I>t</I>.<I>L</I> non-trivially is 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <TABLE><TR>
+ <TD valign=center> 0 &nbsp;  = &nbsp; </TD>
+ <TD valign=center> <IMG SRC="Sigma.gif"></TD>
+  <TD valign=center> <I>t</I><SUP><I>n</I>(<I>n</I>+1)/2-|<I>b</I>|</SUP>
+       <I>L<SUB>b</SUB></I> <I>p<SUB>b</SUB></I>(<I>K</I>) ,</TD></TR>
+ </TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+the sum over all <I>b</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB>.
+
+
+For <I>K</I> in <I>X<SUB>a</SUB></I> the sum is over those 
+<I>b</I> below <I>a</I> (including  <I>a</I>), 
+by&nbsp;(<A HREF="2.1.html#eq:sch-def">4.5</A>).
+Removing the common factor 
+<I>t</I><SUP><I>n</I>(<I>n</I>+1)/2-|<I>a</I>|</SUP> gives
+<A NAME="eq:red-eq"></A><BR>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+ <TABLE><TR>
+ <TD valign=center> 0 &nbsp;  = &nbsp; </TD>
+ <TD valign=center> <IMG SRC="Sigma.gif"></TD>
+  <TD valign=center> <I>t</I><SUP>|<I>a</I>|-|<I>b</I>|</SUP>
+       <I>L<SUB>b</SUB></I> <I>p<SUB>b</SUB></I>(<I>K</I>) ,</TD></TR>
+ </TABLE>
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.11)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+ 
+The case <I>l<SUB>i</SUB></I> equal to 1 of Theorem&nbsp;<A
+HREF="#thm:special">4.4</A> is implied by the case  
+<I>a</I> = (<I>n</I>-<I>k</I>+1,...,<I>n</I>-1,<I>n</I>) = <B>1</B>
+of the following theorem, as 
+<I>X</I><SUB><B>1</B></SUB> = Gr(<I>k</I>, <I>n</I>).
+
+<P><A NAME="thm:real-trans"></A>
+<P>
+<DIV><B>Theorem  4.6</B> 
+([<A HREF="../bibliography.html#So_trans">So9</A>, Theorem 4.2])  &nbsp; 
+ Let <I>L</I> be a real real (<I>n</I>-<I>k</I>)-plane, none of whose
+ Pl&#252;cker coordinates vanishes.
+ Then there exist real numbers 
+ <I>t</I><SUB>1</SUB>, <I>t</I><SUB>2</SUB>, ..., 
+ <I>t</I><SUB><I>k</I>(<I>n</I>-<I>k</I>)</SUB> in 
+ <B>R</B><SUP>x</SUP> such that for every 
+ <I>a</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB> the  intersection 
+ of the Schubert varieties
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <I>X<SUB>a</SUB></I>, &nbsp; 
+ <I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>), 
+ <I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ..., 
+ <I>X</I>(<I>t</I><SUB>|<I>a</I>|</SUB>.<I>L</I>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is transverse (so it contains <I>d</I>(<I>a</I>) points) with all points real.
+</DIV><P></P>
+
+<P>
+<BR>
+<B>Proof. </B>
+
+We induct on <I>m</I> to construct numbers
+ <I>t</I><SUB>1</SUB>, <I>t</I><SUB>2</SUB>, ..., 
+ <I>t</I><SUB><I>k</I>(<I>n</I>-<I>k</I>)</SUB> in 
+ <B>R</B><SUP>x</SUP> having the property that, for all 
+ <I>a</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB>
+ with |<I>a</I>| = <I>m</I>,  the  intersection 
+ of the Schubert varieties
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <I>X<SUB>a</SUB></I>, &nbsp; 
+ <I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>), 
+ <I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ..., 
+ <I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>)
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+is transverse (over <B>C</B>)  and each of its <I>d</I>(<I>a</I>)
+ points are real.
+
+<P>
+The case <I>m</I>=0 is trivial, as |<I>a</I>|=0 implies that 
+<I>a</I>=<B>0</B> and <I>X</I><SUB><B>0</B></SUB> is a single
+(real) point in Gr(<I>k</I>,&nbsp;<I>n</I>).
+Suppose we have constructed  <I>t</I><SUB>1</SUB>, <I>t</I><SUB>2</SUB>, ..., 
+ <I>t</I><SUB><I>m</I></SUB> in  <B>R</B><SUP>x</SUP>
+with the above properties.
+
+<P>
+Let <I>a</I> be in <I>C</I><SUB><I>n</I>, <I>k</I></SUB> with
+ |<I>a</I>|=<I>m</I>+1 and set 
+<I>Z</I><SUB>0</SUB> to be the intersection of the Schubert variety
+<I>X<SUB>a</SUB></I> with the hyperplane defined by 
+<I>p<SUB>a</SUB></I> = 0.
+By Theorem&nbsp;<A HREF="2.2.html#thm:Schubert-cover">4.5</A>, 
+<I>Z</I><SUB>0</SUB> is the union of the Schubert varieties
+ <I>X<SUB>b</SUB></I> for all <I>b</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB>
+ that are covered by <I>a</I>. 
+ Consider the intersection of <I>Z</I><SUB>0</SUB> with the 
+ Schubert varieties
+ <I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>), 
+ <I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ..., 
+ <I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>).
+By our assumption  that each Schubert variety <I>X<SUB>b</SUB></I> with
+ |<I>b</I>|=<I>m</I> meets the  intersection of the Schubert varieties
+ <I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+ <I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,  
+ <I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>) transversally, 
+<I>Z</I><SUB>0</SUB> will meet that intersection of Schubert varieties
+ transversally if no two Schubert varieties
+<I>X<SUB>b</SUB></I> and <I>X<SUB>c</SUB></I> with 
+ |<I>b</I>|=|<I>c</I>|=<I>m</I> have a point in common with that intersection.
+
+<P>
+Since the intersection of <I>X<SUB>b</SUB></I> and <I>X<SUB>c</SUB></I> is a
+union of Schubert varieties (of smaller dimension), this would imply that a
+Schubert variety <I>X<SUB>e</SUB></I> of dimension less than <I>m</I> meets
+the intersection of the Schubert varieties
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>).
+Consider a fixed <I>k</I>-plane <I>K</I> in <I>X<SUB>e</SUB></I>.
+By Equation&nbsp;(<A HREF="#eq:red-eq">4.11</A>), the condition for
+<I>t</I>.<I>L</I> to meet <I>K</I> non-trivially (that is ,for 
+<I>K</I> to lie in <I>X</I>(<I>t</I>.<I>L</I>)) is a polynomial in
+<I>t</I> of degree at most |<I>e</I>|, which is less than <I>m</I>.
+Thus no <I>k</I>-plane <I>K</I> in some Schubert variety <I>X<SUB>e</SUB></I>
+with dimension less than <I>m</I> lies in the intersection of the <I>m</I>
+Schubert varieties 
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>).
+We conclude that the intersection of <I>Z</I><SUB>0</SUB> with those Schubert
+varieties is transverse.
+
+<P>
+Since each component <I>X<SUB>b</SUB></I> of <I>Z</I><SUB>0</SUB> meets that
+intersection of Schubert varieties in <I>d</I>(<I>b</I>) real points, we
+conclude that <I>Z</I><SUB>0</SUB> meets that
+intersection transversally in the sum  over all <I>b</I>
+covered by <I>a</I> of <I>d</I>(<I>b</I>) real points.
+By&nbsp;(<A HREF="2.2.html#eq:Schubert-Degree">4.8</A>) this sum is just 
+ <I>d</I>(<I>a</I>).
+
+<P>
+For <I>t</I> in <B>R</B>, let <I>Z<SUB>t</SUB></I> be set of points in 
+<I>X<SUB>a</SUB></I> that satisfy the
+polynomial&nbsp;(<A HREF="#eq:red-eq">4.11</A>).
+For non-zero <I>t</I>, this is the intersection of
+<I>X<SUB>a</SUB></I> with the Schubert variety <I>X</I>(<I>t</I>.<I>L</I>),
+that is, those <I>k</I>-planes in <I>X<SUB>a</SUB></I> that meet
+<I>t</I>.<I>L</I> non-trivially.
+Since <I>L</I> has no vanishing Pl&#252;cker coordinates, the constant term of
+that polynomial is <I>p<SUB>a</SUB></I>(<I>K</I>), and so by Theorem&nbsp;<A
+HREF="2.2.html#thm:Schubert-cover">4.5</A>, 
+<I>Z</I><SUB>0</SUB> is the intersection of <I>X<SUB>a</SUB></I>  with the
+hyperplane <I>H<SUB>a</SUB></I>  defined by <I>p<SUB>a</SUB></I>(<I>K</I>)=0.
+
+<P>
+By our previous arguments, <I>Z</I><SUB>0</SUB> meets the Schubert varieties 
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>)
+transversally (over <B>C</I>) in <I>d</I>(<I>a</I>) real points.
+Thus there exists a small positive number number <I>E<SUB>a</SUB></I>
+such that for <I>t</I> between 0 and <I>E<SUB>a</SUB></I> (inclusive),
+<I>Z<SUB>t</SUB></I> meets the Schubert varieties 
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>)
+transversally (over <B>C</I>) in <I>d</I>(<I>a</I>) real points.
+Thus, for <I>t</I> in this range, <I>X<SUB>a</SUB></I> meets the 
+Schubert varieties 
+<I>X</I>(<I>t</I>.<I>L</I>), &nbsp;
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>)
+transversally (over <B>C</I>) in <I>d</I>(<I>a</I>) real points.
+
+<P>
+Let <I>t</I><SUB><I>m</I>+1</SUB> be the minimum of these numbers
+<I>E<SUB>a</I></SUB> over all <I>a</I> with weight |<I>a</I>| = <I>m</I>+1.
+Then for any <I>a</I> in <I>C</I><SUB><I>n</I>, <I>K</I></SUB> with 
+|<I>a</I>| = <I>m</I>+1, <I>X<SUB>a</SUB></I> meets the 
+Schubert varieties 
+<I>X</I>(<I>t</I><SUB>1</SUB>.<I>L</I>),
+<I>X</I>(<I>t</I><SUB>2</SUB>.<I>L</I>), ...,   
+<I>X</I>(<I>t</I><SUB><I>m</I></SUB>.<I>L</I>), &nbsp;
+<I>X</I>(<I>t</I><SUB><I>m</I>+1</SUB>.<I>L</I>)
+transversally (over <B>C</I>) in <I>d</I>(<I>a</I>) real points.
+Q.E.D.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.2.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">4.iii Further Extensions of the Schubert Calculus</A><BR>
+ <B> Up:</B> <A HREF="2.html#subsections">4.ii The Special Schubert Calculus</A><BR>
+ <B> Previous:</B> <A HREF="2.2.html">4.ii.b. The Degrees of Grassmann Varieties</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

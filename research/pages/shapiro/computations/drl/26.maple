@@ -1,0 +1,56 @@
+#######################################################################
+#26.maple                                                             #
+#                                                                     #
+#  This MAPLE code sets up a Singular file which computes a           #
+#  Degree reverse Lexicographic Groebner basis.                       #
+#                                                                     #
+#  It treats the enumerative problem of 12 Schubert                   #
+#  hypersurfaces in G(6,2), each defined by a 2-plane.                #
+#  There are 132 6-planes meeting 12 fixed 2-planes in C^8.           # 
+#                                                                     #
+#   Computing drl Gr\"obner basis  (SINGULAR)  509.8 seconds          #  
+#	                                                              #
+#######################################################################
+
+interface(quiet=true):
+
+
+Eq := s -> simplify(linalg[det](linalg[matrix]([
+              [1,s,s^2, s^3 , s^4 ,   s^5,   s^6,  s^7],
+              [0,1,2*s,3*s^2,4*s^3, 5*s^4, 6*s^5,7*s^6],
+              [1,0, 0 ,  0  ,  0  ,  0   ,  a   ,  b  ],
+              [0,1, 0 ,  0  ,  0  ,  0   ,  c   ,  d  ],
+              [0,0, 1 ,  0  ,  0  ,  0   ,  e   ,  f  ],
+              [0,0, 0 ,  1  ,  0  ,  0   ,  g   ,  h  ],
+              [0,0, 0 ,  0  ,  0  ,  1   ,  x   ,  y  ],
+              [0,0, 0 ,  0  ,  1  ,  0   ,  z   ,  w  ]]))):
+
+
+eqs:=[]:
+for i from 1 to 12 do eqs:=[eqs[],Eq(i)]: od:
+
+lprint(`//Execute this with:`);
+lprint(`//Singular --ticks-per-sec=100<26.sing`);
+lprint(`//`);
+lprint(`//ring R= 0, (a,b,c,d,e,f,g,h,x,y,z,w), dp;`);
+lprint(`//`);
+lprint(`timer=1;`);
+lprint(`//`);
+lprint(`ring R= 0, (a,b,c,d,e,f,g,h,x,y,z,w), dp;`);
+lprint(`ideal I=`);
+for i from 1 to 12 do  
+lprint(eqs[i],`,`);  od:
+lprint(`0;`);
+lprint(`int t=timer;`);
+lprint(`ideal G = std(I);`);
+lprint(`int s=timer-t;`);
+lprint(`print("Time to compute one drl Groebner bases: "); `);
+lprint(`s;`);
+lprint(`print("Time units, counts per second:");`);
+lprint(`system("--ticks-per-sec");`);
+lprint(`degree(G);`);
+lprint(`ncols(G);`);
+lprint(`print(G);`);
+lprint(`quit;`);
+quit;
+

@@ -1,0 +1,80 @@
+#S7-coeffs.maple
+interface(quiet=true):
+with(linalg):
+##############################################################
+#
+#    This file contains the following data for S_7, stored by
+#		k, and rank
+#
+#    Betti:	The Betti numbers for G_k F^n
+#    Kcomp:	The numbers of u\leq_k w
+#    Zetas:	The full-support, irreducible  zeta, up to conjugation 
+#		by longest element, inverse, and cyclic shift.
+#
+#    It computes the Hadamard product of these arrays, giving
+#
+#    AllCoefs:	Betti \cdot Kcomp, which is the total number of 
+#		L-R coefficients c^w_u,v(\lambda,k)  in S7
+#
+#    NewDistinctCoefs:
+#		Betti \cdot Zetas, which is the number of new
+#		distinct coefficients c^\zeta_\lambda  in S7
+#
+#	It computes the sum of the entries in these matrices,
+#	giving the entries in Table 1 of "Schubert Polynomials, the Bruhat
+#	order, and the geometry of flag manifolds".
+#
+#	Frank Sottile
+#	26 October 1997
+#
+###############################################################
+
+Betti:= matrix([
+[1,1,1,1,1,1,0,0,0,0,0,0],
+[1,2,2,3,3,3,2,2,1,1,0,0],
+[1,2,3,4,4,5,4,4,3,2,1,1],
+[1,2,3,4,4,5,4,4,3,2,1,1],
+[1,2,2,3,3,3,2,2,1,1,0,0],
+[1,1,1,1,1,1,0,0,0,0,0,0]]):
+
+Kcomp:=matrix([
+[8028,10208,9990,7080,3240,720,0,0,0,0,0,0],
+[12816,22074,27312,26476,20348,13264,7250,3300,1080,240,0,0],
+[15084,29208,39991,42840,37576,28232,18162,10196,4896,1980,648,144],
+[15084,29208,39991,42840,37576,28232,18162,10196,4896,1980,648,144],
+[12816,22074,27312,26476,20348,13264,7250,3300,1080,240,0,0],
+[8028,10208,9990,7080,3240,720,0,0,0,0,0,0]]):
+                    
+
+Zetas:= matrix([
+[0,0,0,0,0,1,0,0,0,0,0,0],
+[0,0,0,0,0,4,4,3,1,1,0,0],
+[0,0,0,0,0,15,18,15,8,4,1,1]]):
+
+AllCoefs:=matrix(6,12,0):
+NewDistinctCoefs:=matrix(3,12,0):
+
+TotCoefs:=0:
+TotZCoefs:=0:
+
+
+for k from 1 to 6 do
+ for rank from 1 to 12 do
+  AllCoefs[k,rank]:=Betti[k,rank]*Kcomp[k,rank]:
+  TotCoefs:=TotCoefs+Betti[k,rank]*Kcomp[k,rank]:
+ od:od:
+
+for k from 1 to 3 do
+ for rank from 1 to 12 do
+  NewDistinctCoefs[k,rank]:=Betti[k,rank]*Zetas[k,rank]:
+  TotZCoefs:=TotZCoefs+Betti[k,rank]*Zetas[k,rank]:
+ od:od:
+
+print(TotZCoefs);
+print(TotCoefs);
+
+#print(transpose(AllCoefs));
+#print(transpose(NewDistinctCoefs));
+
+quit
+

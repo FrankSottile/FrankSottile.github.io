@@ -1,0 +1,106 @@
+#A3.maple
+#
+# Frank Sottile
+# This draws the moment graph for type A_3
+#
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+Rot:=proc(v)
+ return([(2*v[1]-v[3])/sqrt(5), v[2], (v[1]+2*v[3])/sqrt(5)])
+end proc:
+
+MkSquare:=proc(u,v,w)
+#
+#
+ global s,t:
+ return([u[1]*(1-s-t)+t*v[1]+s*w[1],
+         u[2]*(1-s-t)+t*v[2]+s*w[2],
+         u[3]*(1-s-t)+t*v[3]+s*w[3]])
+end proc:
+
+
+#
+#  These integer points are the vertices of the permutahedron inscribed in the
+#  cube with vertices all reflections of [2,2,2] in the coordinate  planes 
+#
+Verts:=[[ 2, 1,0],[ 1, 2,0], [0, 2, 1], [0, 1, 2], [ 1,0, 2], [ 2,0, 1],
+           [-2, 1,0],[-1, 2,0], [0,-2, 1], [0,-1, 2], [-1,0, 2], [-2,0, 1],
+	   [ 2,-1,0],[ 1,-2,0], [0, 2,-1], [0, 1,-2], [ 1,0,-2], [ 2,0,-1],
+	   [-2,-1,0],[-1,-2,0], [0,-2,-1], [0,-1,-2], [-1,0,-2], [-2,0,-1]]:
+Vertices:=[[ 2, 1,0],[ 1, 2,0], [0, 2, 1], [0, 1, 2], [ 1,0, 2], [ 2,0, 1],
+           [-2, 1,0],[-1, 2,0], [0,-2, 1], [0,-1, 2], [-1,0, 2], [-2,0, 1],
+	   [ 2,-1,0],[ 1,-2,0], [0, 2,-1], [0, 1,-2], [ 1,0,-2], [ 2,0,-1],
+	   [-2,-1,0],[-1,-2,0], [0,-2,-1], [0,-1,-2], [-1,0,-2], [-2,0,-1]]:
+ED:=[[1,-1,0],[1,0,-1],[0,1,-1],[1,1,0],[1,0,1],[0,1,1]]:
+for i from 1 to 6 do for j from 1 to 3 do ED[i][j]:=ED[i][j]/sqrt(2): end do: end do:
+
+for i from 1 to 24 do
+  Vertices[i] := Rot(Vertices[i]):
+end do:
+for i from 1 to 6 do
+  ED[i] := Rot(ED[i]):
+end do:
+
+
+Col:=[blue,red,green,magenta,brown,coral]:
+#V:=pointplot3d(Vertices,symbol=point,color=black):
+#
+#
+V:=[]: for vert in Vertices do V:=[V[],sphere(vert,0.1,style=patchnogrid,grid=[9,11],color=black)]: end do:
+
+Prs:=[[1,2],[1,4],[1,6],[1,16],[1,18],[1,20],[2,3],[2,5],[2,15],[2,17],[2,19],[3,4],[3,6],[3,8],
+      [3,12],[3,22],[4,5],[4,7],[4,11],[4,21],[5,6],[5,10],[5,14],[5,24],[6,9],[6,13],[6,23],
+      [7,8],[7,12],[7,14],[7,16],[7,24],[8,11],[8,13],[8,15],[8,23],[9,10],[9,12],[9,14],[9,16],
+      [9,20],[10,11],[10,13],[10,15],[10,19],[11,12],[11,18],[11,20],[12,17],[12,19],[13,14],
+      [13,18],[13,22],[14,17],[14,21],[15,16],[15,18],[15,24],[16,17],[16,23],[17,18],[17,22],
+      [18,21],[19,20],[19,22],[19,24],[20,21],[20,23],[21,22],[21,24],[22,23],[23,24]]:
+Face:={[1,6],[6,13],[13,18],[18,1],  [2,3],[3,8],[8,15],[15,2],  [4,5],[5,10],[10,11],[11,4],
+       [22,23],[23,16],[16,17],[17,22],  [12,7],[7,24],[24,19],[19,12],  [14,9],[9,20],[20,21],[21,14]}:
+Edges:=[]:
+
+FF:=[plot3d(MkSquare(Vertices[1],Vertices[6],Vertices[18]),t=0..1,s=0..1,color=yellow,style=patchnogrid),
+     plot3d(MkSquare(Vertices[2],Vertices[3],Vertices[15]),t=0..1,s=0..1,color=yellow,style=patchnogrid),
+     plot3d(MkSquare(Vertices[4],Vertices[5],Vertices[11]),t=0..1,s=0..1,color=yellow,style=patchnogrid),
+     plot3d(MkSquare(Vertices[22],Vertices[23],Vertices[17]),t=0..1,s=0..1,color=yellow,style=patchnogrid),
+     plot3d(MkSquare(Vertices[12],Vertices[7],Vertices[19]),t=0..1,s=0..1,color=yellow,style=patchnogrid),
+     plot3d(MkSquare(Vertices[14],Vertices[9],Vertices[21]),t=0..1,s=0..1,color=yellow,style=patchnogrid)]:
+
+
+for i from 1 to 23 do
+ for j from i+1 to 24 do
+  vv:=[seq(Vertices[i][ii]-Vertices[j][ii], ii=1..3)]:
+  g := sqrt(vv[1]^2+vv[2]^2+vv[3]^2);
+  vv := [seq(vv[ii]/g, ii=1..3)]:
+  for jj from 1 to 6 do
+   if abs(sum(vv[ii]*ED[jj][ii],ii=1..3))= 1  then
+    if member([i,j],Face) or member([j,i],Face) then
+      Edges := [Edges[], line(Vertices[i],Vertices[j],color=Col[jj],thickness=3)]:
+#      lprint([i,j], Verts[i],Verts[j]);
+     else
+      Edges := [Edges[], line(Vertices[i],Vertices[j],color=Col[jj],thickness=1)]:
+    end if:
+   end if:
+  end do:
+ end do:
+end do:
+
+#
+plotsetup(gif,plotoutput="B.gif",plotoptions=`height=300,width=300`):
+#plotsetup(ps,plotoutput=`A.eps`,plotoptions=`color,portrait,width=600pt,height=600pt,noborder`):
+#
+display3d(V,Edges,FF,orientation=[32,56],scaling=constrained);
+
+F:= th -> display(V,Edges,FF,orientation=[th,56],style=patchnogrid):
+#
+NFr:=360:
+#
+plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=900,width=800`): 
+#NFr:=180:
+#plotsetup(gif,plotoutput="Amovie.gif",plotoptions=`height=300,width=300`): 
+animate(F,[th],th=0..360*(1-1/NFr),scaling=constrained,axes=none,frames=NFr);
+ 
+
+

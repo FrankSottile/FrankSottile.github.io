@@ -1,0 +1,76 @@
+#31.21.1e2.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 17 December, 2005
+# Paris
+#
+#
+
+interface(quiet=true):
+with(plots):
+read(`../equations.maple`):
+with(linalg):
+with(Groebner):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+RatNorm:=vector([1,s,s^2,s^3,s^4,s^5  ]):
+
+############################################################################
+
+
+M:=linalg[matrix]([
+[a,1, 0 , 0   ,  0  ,  0   ],
+[b,0, c , 1   ,  0  ,  0   ],
+[d,0, e , 0   ,  1  ,  0   ],
+[1,s,s^2,  s^3,s^4  ,   s^5],
+[0,1,2*s,3*s^2,4*s^3, 5*s^4],
+[0,0, 1 ,3*s  ,6*s^2,10*s^3],
+[0,0, 0 , 1   ,4*s  ,10*s^2],
+[0,0, 0 , 0   , 1   , 5*s  ]]):    
+
+#linalg[kernel](linalg[matrix]([
+#[a,1, 0 , 0   ,  0  ,  0   ],
+#[b,0, c , 1   ,  0  ,  0   ],
+#[d,0, e , 0   ,  1  ,  0   ]
+#]));  {[0, 0,-1, c, e, 0], [-1, a, 0, b, d, 0], [0, 0, 0, 0, 0, 1]}
+
+
+###################################################
+#
+#  31, 21, and cusp
+#
+Po:=-20/10:
+G:=gbasis([Claw(M,1)[],Flex(M,-1),Flex(M,Po)],plex(a,b,c,d,e)):
+E:=[solve(G[1]=0,e)][1]:
+Dd:=solve(subs(e=E,G[2])=0,d):
+C:=solve(subs(e=E,G[3])=0,c):
+B:=solve(subs(e=E,G[4])=0,b):
+A:=solve(subs(e=E,G[5])=0,a):
+y:=linalg[multiply](vector([-1, A, 0, B, Dd, 0]),RatNorm):
+z:=linalg[multiply](vector([ 0, 0,-1, C,  E, 0]),RatNorm):
+x:=linalg[multiply](vector([ 0, 0, 0, 0,  0, 1]),RatNorm):
+
+ep:=0.01:
+X:=x/(y+z): Y:=y/(y+z):
+#fsolve(denom(Y)=0); #quit;
+#
+Y:=-simplify(Y/(15*X-8)):X:=simplify(1/(15*X-8)): 
+fsolve(denom(X)=0);# quit;
+#-.8815353351
+Y:=Y - subs(s=fsolve(denom(X)=0),Y/X)*X:
+X:=X-0.4*Y:
+
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+fsolve(denom(Xt)=0);
+#
+
+P:=pointplot({[subs(s=0,X),subs(s=0,Y)],[subs(s=1,X),subs(s=1,Y)]},symbol=circle,color=maroon):
+Pf:=pointplot({[subs(s=-1,X),subs(s=-1,Y)],[subs(s=Po,X),subs(s=Po,Y)]},symbol=circle,color=red):
+Q:=plot({[Xt,Yt,t=-1.05....1]},numpoints=200,color=blue):
+R:=plot({[X,Y,s=-0.78..1]},numpoints=200,color=blue):
+
+plotsetup(ps,plotoutput=`clawflex.eps`,plotoptions=`color,noborder,portrait,width=1in,height=1in`):
+display(Q,R,Pf,axes=none);
+

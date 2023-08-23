@@ -1,0 +1,107 @@
+#no-zeroes.maple
+#
+# Frank Sottile
+# 23 October 2000
+#
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+IF:=[-3,-1,S,1,3]:
+RatNorm:=linalg[vector]([t^4,s*t^3,s^2*t^2,s^3*t,s^4]):
+
+E:=linalg[det](linalg[matrix]([
+ [1, s, s^2,  s^3,  s^4],
+ [0, 1,2*s ,3*s^2,4*s^3],
+ [0, 0, 1  ,3*s  ,6*s^2],
+ [1, a, b  ,  0  ,  0  ],
+ [0, 1, c  ,  d  ,  e  ]]))/s:
+
+# The ideal 
+#lprint(subs(s=-3,E),`,`);
+#lprint(subs(s=-1,E),`,`);
+#lprint(subs(s=1,E),`,`);
+#lprint(subs(s=3,E),`,`);
+#lprint(simplify(E),`;`);
+#
+# Lexicographic Groebner basis for the ideal
+#
+
+
+read(`data.maple`):
+for i from 1 to 5 do
+ Xx[i]:=linalg[multiply](linalg[vector]([Aeq[i]*Ceq[i]-Beq[i],-Ceq[i],1,0,0]),RatNorm):
+ Yy[i]:=linalg[multiply](linalg[vector]([Aeq[i]*Deq[i],-Deq[i],0,1,0]),RatNorm):
+ Zz[i]:=linalg[multiply](linalg[vector]([Aeq[i]*Eeq[i],-Eeq[i],0,0,1]),RatNorm):
+ if i = 5 then 
+  Xx[5]:=linalg[multiply](linalg[vector]([ACeq-Beq[5],-Ceq[5],1,0,0]),RatNorm):
+  Yy[5]:=linalg[multiply](linalg[vector]([ADeq,-Deq[5],0,1,0]),RatNorm):
+  Zz[5]:=linalg[multiply](linalg[vector]([AEeq,-Eeq[5],0,0,1]),RatNorm):
+ fi:
+od:
+
+
+Beq:=(160*s^2-1152)*b^5+(48*s^2+4800)*b^4+(-720*s^2-3936)*b^3+(-216*s^2-2160)*b^2+(810*s^2)*b+(243*s^2):
+Aeq:=(3456*s)*a+(400*s^2-2880)*b^4+(480*s^2+9408)*b^3+(-792*s^2-5520)*b^2+(-1080*s^2-3456)*b+(-243*s^2):
+Ceq:=3*c+(-s):
+Deq:=5184*d+(-400*s^2+2880)*b^4+(-480*s^2-9408)*b^3+(792*s^2+5520)*b^2+(1080*s^2-6912)*b+(243*s^2+17280):
+Eeq:=(81*s)*e+(160*s^2-1152)*b^4+(48*s^2+4800)*b^3+(-720*s^2-3936)*b^2+(-216*s^2-2160)*b+(810*s^2):
+
+#fsolve(coeff(Beq,b^5)=0,s);
+#implicitplot(Beq,s=-1/5..4,b=-10..30,grid=[60,60],axes=boxed);
+
+# For 0<S<2.6, the B solutions are ordered, and 
+# there is an obvious symmetry in the origin of s
+#
+
+for j from 1 to 10 do
+Ss:=j/4:
+
+Aa:=[]:Bb:=[fsolve(subs(s=Ss,Beq)=0,b)]:Cc:=[]:Dd:=[]:Ee:=[]:
+Const:=[4,10,8,-2.5,-3]:
+Coef:=[4,4,4,-1,-1]:
+for i from 1 to 5 do
+ Aa:=[Aa[],fsolve(subs(s=Ss,b=Bb[i],Aeq)=0,a)]:
+ Cc:=[Cc[],fsolve(subs(s=Ss,b=Bb[i],Ceq)=0,c)]:
+ Dd:=[Dd[],fsolve(subs(s=Ss,b=Bb[i],Deq)=0,d)]:
+ Ee:=[Ee[],fsolve(subs(s=Ss,b=Bb[i],Eeq)=0,e)]:
+
+#linalg[kernel](linalg[matrix]([
+# [1, a, b  ,  0  ,  0  ],
+# [0, 1, c  ,  d  ,  e  ]]));
+
+ X[i]:=linalg[multiply](linalg[vector]([Aa[i]*Cc[i]-Bb[i],-Cc[i],1,0,0]),RatNorm):
+ Y[i]:=linalg[multiply](linalg[vector]([Aa[i]*Dd[i],-Dd[i],0,1,0]),RatNorm):
+ Z[i]:=linalg[multiply](linalg[vector]([Aa[i]*Ee[i],-Ee[i],0,0,1]),RatNorm):
+ x[i]:=X[i]/(Z[i]+(Const[i]+Coef[i]*Ss)*X[i]):
+ y[i]:=Y[i]/(Z[i]+(Const[i]+Coef[i]*Ss)*X[i]):
+od:
+
+# This was to find values for the parameters
+#i:=1:  lprint(fsolve(subs(t=1,Z[i]+(4*Ss+1)*X[i])=0,s));
+#i:=2:  lprint(fsolve(subs(t=1,Z[i]+(8+4*Ss)*X[i])=0,s));
+#i:=3:  lprint(fsolve(subs(t=1,Z[i]+(8+4*Ss)*X[i])=0,s));
+#i:=4:  lprint(fsolve(subs(t=1,Z[i]+(-2-1*Ss)*X[i])=0,s));
+i:=5:  #lprint(Ss,fsolve(subs(t=1,Z[i]+(-2-Ss)*X[i])=0,s));
+# lprint(Ss,subs(t=1,S=Ss,Zz[i]),Z[i]);
+Curve[j]:=plot({[subs(t=1,x[i]),subs(t=1,y[i]), s=-1..1],
+         [subs(s=1,x[i]),subs(s=1,y[i]), t=-1..1]},
+      color=blue,numpoints=150,
+      axes=none,thickness=2,resolution=500):
+ xx[i]:=Xx[i]/(Zz[i]+(Const[i]+Coef[i]*Ss)*Xx[i]):
+ yy[i]:=Yy[i]/(Zz[i]+(Const[i]+Coef[i]*Ss)*Xx[i]):
+Alt[j]:=plot({[subs(S=Ss,t=1,xx[i]),subs(S=Ss,t=1,yy[i]), s=-1..1],
+         [subs(S=Ss,s=1,xx[i]),subs(S=Ss,s=1,yy[i]), t=-1..1]},
+      color=red,numpoints=150,
+      axes=none,thickness=2,resolution=500):
+od:
+display(Curve[1],Alt[1],title=`1`);
+display(Curve[2],Alt[2],title=`2`);
+display(Curve[3],Alt[3],title=`3`);
+display(Curve[4],Alt[4],title=`4`);
+display(Curve[5],Alt[5],title=`5`);
+display(Curve[6],Alt[6],title=`6`);
+display(Curve[7],Alt[7],title=`7`);
+display(Curve[8],Alt[8],title=`8`);
+display(Curve[9],Alt[9],title=`9`);
+

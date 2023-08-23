@@ -1,0 +1,164 @@
+# inftangcase2b.maple 
+#
+#  illustrates the second situation of two lines and two
+#  spheres with infinitely many common tangents/transversals.
+#  This pictures shows the the two lines and the set of transversal tangents.
+#
+#interface(quiet=true):
+with(plots):
+with(plottools):
+########################################################
+#
+#  Computes quadratic form of sphere
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+
+macro(pacr=COLOR(RGB, 1, .8, 0)):
+macro(pagr=COLOR(RGB, .5, 1, .5)):
+
+
+# First define one of the two line sets of a hyperboloid
+a11:=0.5;
+a12:=-1;
+a13:=-3;
+b11:=0.5;
+b12:=1;
+b13:=3;
+maxi := 10;
+Line1 := line([cos(i/maxi*2*Pi)*a11-sin(i/maxi*2*Pi)*a12,
+               sin(i/maxi*2*Pi)*a11+cos(i/maxi*2*Pi)*a12,
+               a13],
+              [cos(i/maxi*2*Pi)*b11-sin(i/maxi*2*Pi)*b12,
+               sin(i/maxi*2*Pi)*b11+cos(i/maxi*2*Pi)*b12,
+               b13]);
+# Note that in the definition of the line, compared with an original drawing,
+# the first and the third component were exchanged.
+
+
+
+# Sphere 1
+c11:= 0;
+c12:= 0;
+c13:= 2;
+
+# In order to compute the radius so that the sphere is tangent to the 
+# hyperboloid:
+# Substitute an arbitrary line of one of the line sets of the hyperboloid 
+# into the equation of sphere 1
+
+eq := expand((a11+t*(b11-a11)-c11)^2 
+    + (a12+t*(b12-a12)-c12)^2
+    + (a13+t*(b13-a13)-c13)^2 - r^2);
+
+# Compute the radius for which the discrimant becomes zero
+disc := coeff(eq,t,1)^2 - 4*coeff(eq,t,2)*coeff(eq,t,0);
+evalf(solve(disc=0,r)); # this yields the result \pm 0.806 
+
+epsfactor := 0.96; # to prevent optical interferences in the picture
+
+r1:=0.806;  # due to the previous computation
+Sphere1:=plot3d([r1*cos(ph)+c13,
+  r1*sin(ph)*cos(th)+c11, epsfactor*r1*sin(ph)*sin(th)+c12
+  ] ,ph=0..Pi,th=-Pi..Pi,color=tan,
+              grid=[20,30]):
+# Note that in the definition of the sphere, compared with an original drawing,
+# the first and the third component were exchanged.
+
+# Sphere 2
+c21:= 0;
+c22:= 0;
+c23:= -2.5;
+
+# Now compute the appropriate radius for sphere 2
+
+eq := expand((a11+t*(b11-a11)-c21)^2 
+    + (a12+t*(b12-a12)-c22)^2
+    + (a13+t*(b13-a13)-c23)^2 - r^2);
+
+# Compute the radius for which the discrimant becomes zero
+disc := coeff(eq,t,1)^2 - 4*coeff(eq,t,2)*coeff(eq,t,0);
+evalf(solve(disc=0,r)); # this yields the result \pm 0.935
+
+r2:=0.935; # due to the previous computation
+Sphere2:=plot3d([r2*cos(ph)+c23, 
+  r2*sin(ph)*cos(th)+c21, epsfactor* r2*sin(ph)*sin(th)+c22
+  ] ,ph=0..Pi,th=-Pi..Pi,color=tan,
+              grid=[20,30]):
+
+# Line set 1 of a hyperboloid
+a11:=0.5;
+a12:=1;
+a13:=-3;
+b11:=0.5;
+b12:=-1;
+b13:=3;
+# In fact, change the length of the lines
+a11 := a11 - 0.2*(b11-a11);
+a12 := a12 - 0.2*(b12-a12);
+a13 := a13 - 0.2*(b13-a13);
+b11 := b11 + 0.1*(b11-a11);
+b12 := b12 + 0.1*(b12-a12);
+b13 := b13 + 0.1*(b13-a13);
+
+maxi := 10;
+Line1 := line([a13,
+               cos(i/maxi*2*Pi)*a11-sin(i/maxi*2*Pi)*a12,
+               sin(i/maxi*2*Pi)*a11+cos(i/maxi*2*Pi)*a12
+               ],
+              [b13,
+               cos(i/maxi*2*Pi)*b11-sin(i/maxi*2*Pi)*b12,
+               sin(i/maxi*2*Pi)*b11+cos(i/maxi*2*Pi)*b12
+              ], color = red, thickness = 3);
+
+# Line set 2 of a hyperboloid
+aa11:=0.5;
+aa12:=-1;
+aa13:=-3;
+bb11:=0.5;
+bb12:=1;
+bb13:=3;
+# In fact, change the length of the lines
+aa11 := aa11 - 0.2*(bb11-aa11);
+aa12 := aa12 - 0.2*(bb12-aa12);
+aa13 := aa13 - 0.2*(bb13-aa13);
+bb11 := bb11 + 0.1*(bb11-aa11);
+bb12 := bb12 + 0.1*(bb12-aa12);
+bb13 := bb13 + 0.1*(bb13-aa13);
+maxi := 10;
+LLine1 := line([aa13,
+               cos(i/maxi*2*Pi)*aa11-sin(i/maxi*2*Pi)*aa12,
+               sin(i/maxi*2*Pi)*aa11+cos(i/maxi*2*Pi)*aa12
+               ],
+              [bb13,
+               cos(i/maxi*2*Pi)*bb11-sin(i/maxi*2*Pi)*bb12,
+               sin(i/maxi*2*Pi)*bb11+cos(i/maxi*2*Pi)*bb12
+               ], color = pagr);
+
+# plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+plotsetup(inline,plotoptions=`width=3in,height=2.5in`):
+
+AA:=display3d(
+  Sphere1,
+  Sphere2,
+  seq(Line1,i=-6..-6),
+  seq(Line1,i=7..7),
+  seq(LLine1,i=-10..10),
+#  view=[-4..4,-6..6,-4..4],
+scaling = CONSTRAINED,
+axes=none):
+
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+plotsetup(gif,plotoutput=`1l3s.1.gif`, plotoptions=`height=300,width=400`):
+display(AA,orientation=[-94,80],view=[-4.5..3.5,-1.1..1.1,-1.1..1.1]);
+
+
+
+
+
+

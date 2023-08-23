@@ -1,0 +1,49 @@
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions="width=3in,height=2.5in"):
+read("procedures.maple"):
+read("data"):
+
+###############################################################3
+##############################################################################
+maketriangle:=proc(T,edgecolor,facecolor,th,np)
+ local tri, s, t, L12,L23,L31:
+ tri:=Segment(T[1], Segment(T[2],T[3],s), t):
+ L12:=Segment(T[1],T[2],t):
+ L23:=Segment(T[2],T[3],t):
+ L31:=Segment(T[3],T[1],t):
+ return([spacecurve(L12,t=0..1,color=edgecolor,thickness=th,numpoints=np)
+        ,spacecurve(L23,t=0..1,color=edgecolor,thickness=th,numpoints=np)
+        ,spacecurve(L31,t=0..1,color=edgecolor,thickness=th,numpoints=np)
+        ,plot3d(tri, t=0..1, s=0..1, grid=[40,40], color=facecolor, style=PATCHNOGRID)
+        ]):
+end proc:
+#
+macro(fblue=COLOR(RGB, .8, .8, 1)):
+macro(eblue=COLOR(RGB, .5, .5, 1)):
+macro(dblue=COLOR(RGB, 0,0,.8)):
+macro(fred=COLOR(RGB, 1, .8, .8)):
+macro(ered=COLOR(RGB, 1, .5, .5)):
+macro(dred=COLOR(RGB, .8,0,0)):
+macro(fgreen=COLOR(RGB, .8, 1, .8)):
+macro(egreen=COLOR(RGB, .5, 1, .5)):
+macro(dgreen=COLOR(RGB, 0,.8,0)):
+macro(fmagenta=COLOR(RGB, 1, .8, 1)):
+macro(emagenta=COLOR(RGB, 1, .5, 1)):
+macro(dmagenta=COLOR(RGB, .8, 0, .8)):
+
+Angle:=0:
+TR:=Rotate(Triangles,Angle):
+T1:=maketriangle(TR[1],dblue,   eblue,2,40):
+T2:=maketriangle(TR[2],dred,    ered,2,40):
+T3:=maketriangle(TR[3],dgreen,  egreen,2,40):
+T4:=maketriangle(TR[4],dmagenta,emagenta,2,40):
+Lines:=makeLines(Angle,black, 0, 5):
+
+#plotsetup(gif,plotoutput="still.gif",plotoptions=`height=3500,width=3500`):
+#plotsetup(gif,plotoutput="still.gif",plotoptions=`height=1800,width=1800`):
+plotsetup(ps,plotoutput=`still.eps`,plotoptions=`color,portrait,noborder`):
+
+display(T1,T2,T3,T4,Lines[],scaling=CONSTRAINED,view=[-1800..1800,-1800..1800,-1800..1800],orientation=[0,80]);
+

@@ -1,0 +1,117 @@
+#62.maple
+#
+# Frank Sottile
+# 29 October 1998
+# Berkeley, CA
+#
+#   Testing instances of Shapiro's Totally Positive conjecture
+# for the case of 15 2-planes in C^8 meeting 6 5-planes non-trivially.
+#
+# Number  Seed                     Time      Size   
+#  200     1      Make systems    323.319   1304401  \
+#                 Eliminants    24450        715976   > Schur
+#                 Real roots     1317.               /
+#
+#  100   123      Make systems   1052       650575  \
+#                 Eliminants    46019       357062   > Schubert
+#                 Real roots     1706               /
+#
+
+interface(quiet=true):
+with(linalg):
+_seed:=123:
+die:=rand(1..3):
+
+ELM:=proc(X,Y,Z,W,S,T,U)
+matrix([
+[1,X,0,0,0,0,0,0],
+[0,1,Y,0,0,0,0,0],
+[0,0,1,Z,0,0,0,0],
+[0,0,0,1,W,0,0,0],
+[0,0,0,0,1,S,0,0],
+[0,0,0,0,0,1,T,0],
+[0,0,0,0,0,0,1,U],
+[0,0,0,0,0,0,0,1]])
+end:
+
+Pos:=proc(a1,b1,b2,c1,c2,c3,d1,d2,d3,d4,e1,e2,e3,e4,e5,f1,f2,f3,f4,f5,f6,g1,g2,g3,g4,g5,g6,g7)
+multiply(ELM(a1,0,0,0,0,0,0),ELM(b1,b2,0,0,0,0,0),ELM(c1,c2,c3,0,0,0,0),
+	ELM(d1,d2,d3,d4,0,0,0),ELM(e1,e2,e3,e4,e5,0,0),
+         ELM(f1,f2,f3,f4,f5,f6,0),ELM(g1,g2,g3,g4,g5,g6,g7))
+end:
+
+Coords:=matrix([
+	[1,a,b,c,d,0,0,0],
+	[0,0,0,1,e,f,g,h]]):
+
+COLS:=[[1,2,3,4,5,6,7],[1,2,3,4,5,6,8],[1,2,3,4,5,7,8],[1,2,3,4,6,7,8],
+[1,2,3,5,6,7,8],[1,2,4,5,6,7,8],[1,3,4,5,6,7,8],[2,3,4,5,6,7,8]]:
+
+M.0:=band([1],8):
+
+ST_Nreal:="lprint(`realroots = `,NREAL,`seed = `,":
+ST_end:=");":
+
+#############################################################################
+#
+#
+#lprint(`timer = 1;`);
+lprint(`option(redSB);`);
+lprint(`int t=timer;`);
+lprint(`ring R= 0, (a,b,c,d,e,f,g,h), (dp(7),dp(1));`);
+lprint(`ideal I;`);
+lprint(`ideal G;`);
+
+lprint(`print("interface(quiet=true):");`);
+lprint(`print("readlib(realroot):");`);
+
+
+for ntrials from 1 to 100 do
+
+SEED:=_seed:
+
+ 
+ for j from 1 to 4 do
+  Params:=[]:
+  for i from 1 to 28 do Params:=[Params[],die()]: od:
+  M.j:=multiply(Pos(Params[]),M.(j-1));
+ od:
+
+ lprint(`I=`);
+
+ for j from 1 to 4 do
+   M:=stackmatrix(submatrix(M.j,[1,2,3,4,5],[1,2,3,4,5,6,7,8]),Coords):
+  for Col in COLS do
+  lprint(det(submatrix(M,[1,2,3,4,5,6,7],Col)),`,`);:
+ od: od:
+ lprint(`0;`);
+
+ lprint(`G = std(I);`);
+ lprint(`print("POLY:=");`);
+ lprint(`short=0;`);
+ lprint(`G[1];`);
+ lprint(`print(":");`);
+ lprint(`print("NREAL:= nops(realroot(POLY, 1/100)): ");`);
+ lprint(`print(" if NREAL<15 then");`);
+ lprint(`print("`,convert(ST_Nreal,symbol));
+ lprint(convert(SEED,symbol));
+ lprint(convert(ST_end,symbol),` ");`);
+ lprint(`print("fi: ");`);
+ lprint(`print(" ");`);
+ lprint(`print(" ");`);
+ lprint(`print("#######################################################");`);
+ lprint(`print("#                                                     #");`);
+ lprint(`print("#          Next One                                   #");`);
+ lprint(`print("#                                                     #");`);
+ lprint(`print("#######################################################");`);
+ lprint(`print(" ");`);
+od:
+
+lprint(`print("time(); ");`);
+lprint(`print("quit; ");`);
+lprint(`timer-t;`);
+lprint(`quit;`);
+
+time();
+
+quit;

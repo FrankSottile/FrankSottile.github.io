@@ -1,0 +1,56 @@
+///////////////////////////////////////////////////////////////////////////
+// Set random number generator to avoid Singular leading to different results
+// in different runs 
+system("--random",1018779139);
+///////////////////////////////////////////////////////////////////////////
+//
+// twoHyp.sing
+//
+// Gabor Megyesi
+// Frank Sottile
+// Thorsten Theobald
+//
+// Current: 17 April 2002
+//
+///////////////////////////////////////////////////////////////////////////
+//
+//   This is the proof in the case of a symmetric (2,2)-curve.
+// 
+///////////////////////////////////////////////////////////////////////////
+
+int T = timer;
+LIB "primdec.lib"; 
+option(redSB); 
+
+ring R = (0,s), (a,b,c,d,e,f,g,h,k,l), dp;
+ideal FR;
+//
+//  Recall that the general, symmetric (2,2)-curve has equation
+//
+//                    2  2    2  2    2  2  2    2  2
+//                   x  y  - w  y  + s  w  z  - x  z
+//
+
+ideal I =  ek-gf, ak-dc, 2*(bl-dg), 2*(2bk-cg-df), 2*(bh-cf);
+//                w^2y^2   w^2z^2    x^2y^2    x^2z^2
+matrix M[2][4] =    -1   ,  s^2    ,    1    ,   -1    ,
+                  ah-c^2 , al-d^2 ,  eh-f^2 ,  el-g^2 ; 
+I = I + minor(M,2);
+I = std(I);  dim(I), mult(I);
+
+matrix Q[4][4] =  a , b , c , d , 
+                  b , e , f , g , 
+                  c , f , h , k , 
+                  d , g , k , l ;
+ideal E1 = std(minor(Q,2));
+I = std(quotient(I,E1));  dim(I), mult(I);
+
+ideal E2 = g, f, e, d, c, b, a;  // intersection line l1
+ideal E3 = l, k, h, g, f, d, c;  // intersection line l2
+I = sat(I,E2)[1];  dim(I), mult(I);
+ideal J = sat(I,E3)[1];  dim(J), mult(J);
+
+list F = facstd(J);
+F;
+timer-T;
+quit;

@@ -1,0 +1,48 @@
+#9-int.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# Madison, WI
+# 5 April 2000
+#
+#This plots two real cubics with an isolated singularity that
+#meet in 9 points
+
+
+#Conodal:= Y^2-X^2*(X-1):
+#This has paraeterization X=t^2+1, Y=t^3+t.
+
+with(plots):
+
+X:=t^2+1: Y:=t^3+t:  Z:=1:
+
+x:=X: y:=2*Y-9*X+28:
+
+subs(t=sqrt(-1),x),subs(t=sqrt(-1),y);
+#quit;
+
+C1:=plot([x,y/2,t=-1.4..4.5],numpoints=250,
+color=blue,thickness=2):
+#ll:=plot([t,t,t=-2..25],color=green):
+
+C2:=plot([y,x/2,t=-1.4..4.5],numpoints=250,
+color=red,thickness=2):
+
+
+D1:=plot({[0+.2*sin(t),14+.2*cos(t),t=-Pi..Pi],
+          [0+.15*sin(t),14+.15*cos(t),t=-Pi..Pi]},
+            numpoints=2,color=blue,thickness=4):
+D2:=plot({[28+.2*sin(t),0+.2*cos(t),t=-Pi..Pi],
+          [28+.15*sin(t),0+.15*cos(t),t=-Pi..Pi]},
+           numpoints=2,color=red,thickness=4):
+P:=pointplot({[0,14],[28,0]},color=green):
+
+plotsetup(ps,plotoutput=`9-int.eps`,plotoptions=`portrait,color,noborder,width=6in,height=3in`);
+plotsetup(x11,plotoptions=`width=3in,height=3in`);
+#plotsetup(gif,plotoutput=`9-int.small.gif`,plotoptions=`height=150,width=200`);
+display(C1,C2,P,axes=none,view=[-4..29,-2..14.5]);
+
+F:=simplify((y+9*x-28)^2/4-(x-1)*x^2);
+
+
+

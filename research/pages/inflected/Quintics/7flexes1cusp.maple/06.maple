@@ -1,0 +1,54 @@
+#1_cusp/examples/06.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 17 March 2002
+# New Brunswick
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+
+Infl:=[-3,-2,-1,0,1,2,3]:
+Zeroes:=[fsolve(z[6]=0,s)]:
+X:=x[6]/z[6]:
+Y:=y[6]/z[6]:
+Z:=X+200:
+Zeroes:=[fsolve(Z=0,s)];
+X:=X/Z:  Y:=Y/Z:
+slope:=(subs(s=Zeroes[1]-0.0001,Y)-subs(s=Zeroes[1]+0.0001,Y))/
+       (subs(s=Zeroes[1]-0.0001,X)-subs(s=Zeroes[1]+0.0001,X)):
+Y:=simplify(Y-slope*X):
+X:=X+10*Y:
+Xt:=subs(s=1/t,X):Yt:=subs(s=1/t,Y):
+
+Complex[6]:
+A:=subs(s=Complex[6][1],X):
+B:=subs(s=Complex[6][1],Y):
+macro(MyColor=COLOR(RGB, 0.8, 0.1, 0.6)):
+CL:=plot({[Re(A)+t*Im(A),Re(B)+t*Im(B),t=-9..3.5]},axes=none,color=MyColor):
+
+Pt:=[]: 
+for j from 1 to 7 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+
+SP:=[]:
+for zz in SOL[6] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("6th quintic"):
+ Q:=plot({
+    [X,Y,s=-9..1],[Xt,Yt,t=-0.06..1]
+     },axes=none,title=convert(S,symbol), color=blue,numpoints=100):
+
+#plotsetup(gif,plotoutput=`1/06.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol,CL);

@@ -1,0 +1,66 @@
+#lifted.maple
+#
+#  This is shows the lifted polytope in Figure 2 of the paper.
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+face:=polygonplot3d([[1,1,0],[2,1,0],[1,2,0]], color=yellow,style=patchnogrid):
+
+L1:=spacecurve([t,0,5/4-3*t/4],t=0..1,color=red,thickness=2):
+L2:=spacecurve([1+t,0,1/2-t/4],t=0..1,color=red,thickness=2):
+L3:=spacecurve([2+t,0,1/4+t/4],t=0..1,color=red,thickness=2):
+L4:=spacecurve([3+t,0,1/2+3*t/4],t=0..1,color=red,thickness=2):
+
+L5:=spacecurve([0,t,5/4-3*t/4],t=0..1,color=red,thickness=2):
+L6:=spacecurve([1,t,1/2-t/2],t=0..1,color=red,thickness=2):
+L7:=spacecurve([2,t,1/4-t/4],t=0..1,color=red,thickness=2):
+L8:=spacecurve([3,t,1/2],t=0..1,color=red,thickness=2):
+
+L9:=spacecurve([1-t,t,1/2],t=0..1,color=red,thickness=2):
+L10:=spacecurve([2-t,t,1/4-t/4],t=0..1,color=red,thickness=2):
+L11:=spacecurve([3-t,t,1/2-t/2],t=0..1,color=red,thickness=2):
+L12:=spacecurve([4-t,t,5/4-3/4*t],t=0..1,color=red,thickness=2):
+
+L13:=spacecurve([t,1,1/2-t/2],t=0..1,color=red,thickness=2):
+L14:=spacecurve([1+t,1,0],t=0..1,color=red,thickness=2):
+L15:=spacecurve([2+t,1,t/2],t=0..1,color=red,thickness=2):
+
+L16:=spacecurve([0,1+t,1/2-t/4],t=0..1,color=red,thickness=2):
+L17:=spacecurve([1,1+t,0],t=0..1,color=red,thickness=2):
+L18:=spacecurve([2,1+t,t/4],t=0..1,color=red,thickness=2):
+
+L19:=spacecurve([1-t,1+t,t/4],t=0..1,color=red,thickness=2):
+L20:=spacecurve([2-t,1+t,0],t=0..1,color=red,thickness=2):
+L21:=spacecurve([3-t,1+t,1/2-t/4],t=0..1,color=red,thickness=2):
+
+L22:=spacecurve([t,2,1/4-t/4],t=0..1,color=red,thickness=2):
+L23:=spacecurve([1+t,2,t/4],t=0..1,color=red,thickness=2):
+
+L24:=spacecurve([0,2+t,1/4+t/4],t=0..1,color=red,thickness=2):
+L25:=spacecurve([1,2+t,t/2],t=0..1,color=red,thickness=2):
+
+L26:=spacecurve([1-t,2+t,t/2],t=0..1,color=red,thickness=2):
+L27:=spacecurve([2-t,2+t,1/4+t/4],t=0..1,color=red,thickness=2):
+
+L28:=spacecurve([t,3,1/2],t=0..1,color=red,thickness=2):
+L29:=spacecurve([0,3+t,1/2+3*t/4],t=0..1,color=red,thickness=2):
+L30:=spacecurve([1-t,3+t,1/2+3*t/4],t=0..1,color=red,thickness=2):
+
+
+#plotsetup(ps,plotoutput=`Tetra1.eps`,
+#          plotoptions=`color,portrait,width=1.5in,height=3.5in,noborder`);
+display(face,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12, L13,L14,L15,L16,L17,
+   L18,L19,L20,L21,L22,L23,L24,L25,L26,L27,L28,L29,L30,orientation=[45,10]);
+display(face,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12, L13,L14,L15,L16,L17,
+   L18,L19,L20,L21,L22,L23,L24,L25,L26,L27,L28,L29,L30,orientation=[45,30]);
+display(face,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12, L13,L14,L15,L16,L17,
+   L18,L19,L20,L21,L22,L23,L24,L25,L26,L27,L28,L29,L30,orientation=[45,50]);
+display(face,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12, L13,L14,L15,L16,L17,
+   L18,L19,L20,L21,L22,L23,L24,L25,L26,L27,L28,L29,L30,orientation=[45,70]);
+display(face,L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12, L13,L14,L15,L16,L17,
+   L18,L19,L20,L21,L22,L23,L24,L25,L26,L27,L28,L29,L30,orientation=[45,90]);
+
+
+

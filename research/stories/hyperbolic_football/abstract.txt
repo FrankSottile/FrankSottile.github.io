@@ -1,0 +1,13 @@
+Hyperbolic Soccerballs
+
+Frank Sottile
+
+   We are all familiar with basic Euclidean geometry 
+of the plane, including the behaviour of parallel lines
+and angles in triangles.  In fact, we are so familiar
+with this, that we think it is a law of nature.
+
+   In this activity (it is not a lecture), we will 
+all build two-dimensional models of negatively curved
+(hyperbolic) space and then explore the basic geometry
+of parallel lines and triangles in the hyperbolic plane.

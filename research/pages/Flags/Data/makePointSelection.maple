@@ -1,0 +1,28 @@
+#makePointSelection.maple
+#
+#  This makes .gif files showing the selection of the points 
+#  graphically
+#
+interface(quiet=true):
+#with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(sprintf("%s.data",NAME)):
+
+points:=[]:
+
+AVG:=sum( abs(Points[i][2]/Points[i][1]) , i=1..nops(Points))/nops(Points):
+
+for P in Points do 
+ theta:=2*arctan(2.*P[2]/P[1]/AVG):
+ points:=[points[],[cos(theta-Pi/2), sin(theta-Pi/2)]]:
+od:
+
+MostPoints:=plots[pointplot](points,color=red, symbol=CIRCLE):
+Infinity:=plots[pointplot]({[cos(Pi-Pi/2), sin(Pi-Pi/2)]},color=blue, symbol=CIRCLE):
+
+plotsetup(gif,plotoutput=sprintf("%s.gif",NAME),plotoptions=`height=200,width=200`):
+
+plots[display](MostPoints, Infinity, axes=none);
+
+quit;

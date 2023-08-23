@@ -1,0 +1,165 @@
+Giving Mathematical Talks
+
+Curtis Bennett and Frank Sottile
+
+Over the course of the last several years, we have seen many talks of
+varying quality.  Below is an article written after reflecting on the talks
+we have heard. While most of the suggestions are obvious, we have seen many
+speakers who could benefit from these suggestions.
+
+When preparing a talk, you should first ascertain who you  will be speaking
+to. Then you should decide what is the objective of your  talk. A guiding
+principle is that while everyone in the audience has chosen to attend, it
+is your job to make it worth their  while to listen.
+
+There are three basics which go into the preparation of  a good talk:
+research, materials, and organization. Research is what most of us are
+familiar with. By this I mean knowing your topic well enough that you can
+answer questions honestly, whatever your audience. Specifically you should
+know some of the basic theory underlying the topic as well as some of the
+consequences of the results discussed. Ideally you should also know some of
+the history of the subject.  Depending on the setting, your talk need not
+be original material. If not, then know the history well enough to give
+proper credit and references.
+
+The materials for the talk are the handouts, the overhead slides, the
+chalkboard, or whatever else you need. You should have practice using the
+materials. Typically you give handouts when conducting a series of seminar
+talks on a topic. Handouts will help attendees  keep track of what you are
+doing and give them something to refer to later. If you make handouts, be
+sure that they are neat and clear.  Remember to make large headings for
+topics so that people can use your handouts easily.
+
+Exercise particular care when using overheads. Clear, concise slides  can
+hold your audience's attention, but messy, disorganized slides may  be the
+swiftest way to lose it. You should use 18 point (1/4") type  or larger if
+typeset and half an inch if handwritten (neatly!). Consider your slides
+carefully. When a slide goes on the screen, everyone will  start reading
+it. Thus, don't put it up until you want it read.  As well, keep the slides
+concise and to the point. You can fill in details  verbally.
+
+Board technique is as important in talks as it is when teaching a class.
+This means write neatly and think about what will be on the board  at all
+times. If you will want something later in the talk, write it where  you
+can save it without too much effort. Some of these touches can turn a  good
+talk into a great talk. Similarly, bad board technique can take a good talk
+and make it horrible. Steven Krantz's book How to Teach Mathematics has
+several pages on blackboard technique. Every suggestion he makes is as
+appropriate for a lecture or seminar as it is for a classroom.
+
+When organizing a talk, remember that not all of your audience will be
+paying attention at any given time. Try to make it easy for those who have
+drifted to rejoin you. You will also hold more of your audience for a
+longer time if you sufficiently motivate the subject early in the talk. Put
+important comments in the beginning, as well. Every good talk I have ever
+attended has been well-motivated from the start. Remember that  it is hard
+work to watch a talk. As the speaker, you must continually convince your
+audience that it is worth their while to pay attention.
+
+Try to give basic examples illustrating the main points of your talk. This
+can be very hard as basic examples sometimes don't exist. In that case, try
+and come up with examples that motivate the ideas even if they are not
+precisely examples of what you are speaking about. (In this case, DO warn
+your audience what you have done). Remember, your job is to help your
+audience understand the subject. They will be able to do so more easily if
+they have examples to ponder.
+
+Carefully consider which details to include. While details are frequently
+at the crux of the matter in mathematics, they may also serve to confuse.
+Those having little to do with the ideas of the subject are best left out.
+We have been told that many details are best  done "in private, between
+consenting adults." Always keep in mind the  goal of conveying the ideas
+behind the subject, and let that be your guide.
+
+Another organizational issue is one of time. Do not go over. Nobody enjoys
+having a talk go overtime, and nobody minds when a talk is a little bit
+short. Ideally, have something at the end that can be omitted if necessary
+or lengthened if necessary. This will help you end your talk before the
+allotted time.
+
+If people ask questions during your talk, give them honest, thoughtful
+answers. The audience usually asks questions to help them understand. If
+you don't know an answer, say so. If you have a conjecture, explain why you
+believe it. If, however, the issue brought up is subtle, then say so and
+mention what makes it subtle without going into too much detail.  Little
+else annoys people more than speakers who pretend to understand  more than
+they really do.
+
+There are several common formats for talks. Colloquium talks are given to
+general audiences and should not do too much. In a colloquium talk,  give
+some history of the field and motivate the problem. By all means state your
+main theorem and discuss the proof, but be sparing with the unimportant
+details. A colloquium audience is much more interested in understanding the
+field and the importance of the result than the details of the proof.
+
+A second common format for a talk (or series of talks) is a research
+seminar. At your home institution, your audience is the (other) faculty,
+and your purpose is to keep your colleagues abreast of your work. When
+visiting another institution, your intended audience is the three or four
+specialists in attendance. They invited you to see what you are doing and
+to learn something of value. Make it worth their while. Having said that,
+this is not a carte blanche to bamboozle the rest of the people in
+attendance.
+
+A third common forum for a talk is at a meeting of specialists in  your
+area. Such talks are typically 10 to 20 minutes. These talks are often seen
+as "advertisements" for your research. Again you should be clear about the
+motivation of the question, but for an audience of experts, you can
+motivate the problem while assuming the audience knows a lot about the
+field. By their very nature, 20-minute talks skip details. As before, you
+need to figure out what is important in your work and explain that.  The
+statements of the theorems are far more important than the proofs. The
+general idea behind the proof should be given if possible, but don't go
+through messy calculations if you can avoid it. Probably the best comment
+is that you should be willing to cut material.
+
+A last format is the job talk. This is like a colloquium, but much harder
+to give. In this case, you MUST know at least a week in advance who your
+audience is and what they expect out of your talk. What makes this type of
+talk much harder to give is that members of the audience will be looking
+for different qualities. At a research school, many will want to see your
+research and they will want to know what makes it good. Some will also be
+interested in seeing how well you organize a talk. Others will be
+interested in how well you answer questions, and some people will have
+other interests still. At a smaller school, you might be giving a talk to
+undergraduates. At some schools, you might even be teaching a class. It is
+extremely important to do a good job at this talk. Many members of the
+department will base their final decision on the talks given.
+
+In all cases, you should practice your talk before giving it. The amount of
+practice depends on the type of talk, and as a realist, I know that not
+every talk gets practiced. The best practice comes before a live audience
+(if you can find one). Grab some friends and ask them to watch you
+practice. Then listen to their comments. Practice helps you fine tune your
+timing, and it also helps you discover where the rough spots are. Lastly,
+practice gets you used to the materials of the talk. I think a job talk
+should be practiced a minimum of 3 times. That way, you avoid major gaffes,
+know what you are going to say, and can be ready for the unexpected. For
+other talks, one practice run is probably enough, although if you encounter
+difficulties the first time, it is probably worth it to practice again.
+
+This advice should make it sound like preparing a good talk is hard work.
+While it may be hard work to prepare a good talk, there are many benefits.
+The obvious benefits are communicating a subject you love to your peers,
+and gaining a reputation for being a thoughtful and considerate speaker.
+In addition,  preparing a talk is usually a boon to your research. By
+seeking a way to express my ideas in a clear and concise manner, you are
+forced to rethink the basics, and this often leads to new, simplifying
+ideas. For this reason, talks (particularly research seminars) are good to
+give when you are in the midst of some research, not after you have tied up
+all of the loose ends. (Although in a job talk, it is better if the loose
+ends are tied up.)
+
+Perhaps the best way to improve your speaking is by observing others  and
+thinking about their presentation. When you are paying rapt attention  to a
+speaker, consider why your attention has been captured. If you lose
+interest in a talk, think about what the speaker has done. If you drift
+back into a talk, what enabled you to do so? By emulating the good and
+discarding the poor, your speaking ability will surely improve.
+
+It is also worthwhile to read about giving talks. One good reference is
+Paul Halmos' article on the subject, "How to Talk Mathematics," in the AMS
+Notices 21 (1974), pp. 155--158 (and presumably reprinted in the recent
+book of his collected expository articles).
+
+

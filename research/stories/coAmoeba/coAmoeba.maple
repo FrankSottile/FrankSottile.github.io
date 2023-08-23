@@ -1,0 +1,144 @@
+#coAmoeba.maple
+#
+# Trying to draw the coameba of a line in P^3
+#
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11);
+
+#################################################################3
+AX:= proc(r,th)
+ global a,b,c:
+ local x,f,g:
+ x:=evalc(polar(r,th)):
+# return([th, argument(x-a+b), argument(x-a+c)])
+ return([th, argument(x-a+b), argument(a-x-c)-Pi])
+end proc:
+#################################################################3
+AXP:= proc(r,th)
+ global a,b,c:
+ local x,f,g:
+ x:=evalc(polar(r,th)):
+# return([th, argument(x-a+b), argument(x-a+c)])
+ return([th, argument(x-a+b), argument(a-x-c)+Pi])
+end proc:
+#################################################################3
+AY:= proc(r,th)
+ global a,b,c:
+ local y:
+ y:=evalc(polar(r,th)):
+# return([argument(y-b+a), th, argument(y-b+c)])
+ return([argument(y-b+a), th, argument(b-y-c)+Pi])
+end proc:
+#################################################################3
+AYN:= proc(r,th)
+ global a,b,c:
+ local y:
+ y:=evalc(polar(r,th)):
+# return([argument(y-b+a), th, argument(y-b+c)])
+ return([argument(y-b+a), th, argument(b-y-c)-Pi])
+end proc:
+#################################################################3
+AZ:= proc(r,th)
+ global a,b,c:
+ local z:
+ z:=evalc(polar(r,th)):
+ return([argument(z-c+a), argument(z-c+b), th])
+end proc:
+#################################################################3
+AI:= proc(r,th)
+ global a,b,c:
+ local w:
+ w:=evalc(polar(r,th)):
+ return([argument(w+a), argument(w+b), argument(w+c)])
+end proc:
+#################################################################3
+AIN:= proc(r,th)
+ global a,b,c:
+ local w:
+ w:=evalc(polar(r,th)):
+ return([argument(I*(w+a))-Pi/2, argument(I*(w+b))-Pi/2, argument(I*(w+c))-Pi/2])
+end proc:
+#################################################################3
+AIP:= proc(r,th)
+ global a,b,c:
+ local w:
+ w:=evalc(polar(r,th)):
+ return([argument(-I*(w+a))+Pi/2, argument(-I*(w+b))+Pi/2, argument(-I*(w+c))+Pi/2])
+end proc:
+#################################################################3
+#
+#  My line will be parametrized by 
+#
+#  (  t+a , t+b , t+c )
+#
+#  [Multiplying one of the coordinates by a complex number just
+#    rotates the coamoeba in that coordinate.]
+#
+#  This gives the three parametrizations
+#  (   x   , x-a+b , x-a+c )
+#  ( y-b+a ,   y   , y-b+c )
+#  ( z-c+a , z-c+b ,   z   )
+#
+#  The coamoeba will have four line
+#
+#  (t,t,t)
+#  (t,b-a,c-a)  <--- Here b-a means argument(b-a)
+#  (a-b,t,c-b)
+#  (a-c,b-c,t)
+#
+#################################################################3
+
+a:=2+2*I:
+b:=1-3*I:
+c:=-3+I:
+
+evalf(argument(c-a));
+evalf(argument(a-b));
+evalf(argument(b-c));
+
+Lines:=[
+ line([-4*Pi/3,-4*Pi/3,-4*Pi/3],[4*Pi/3,4*Pi/3,4*Pi/3], color=red, linestyle=solid,thickness=2),
+ line([-Pi,argument(b-a),argument(c-a)],[Pi,argument(b-a),argument(c-a)], 
+                   color=blue, linestyle=solid,thickness=2),
+ line([-Pi,argument(b-a),argument(c-a)+2*Pi],[Pi,argument(b-a),argument(c-a)+2*Pi], 
+                   color=blue, linestyle=solid,thickness=2),
+ line([argument(a-b),-Pi,argument(c-b)],[argument(a-b),Pi,argument(c-b)],
+                   color=green, linestyle=solid,thickness=2),
+ line([argument(a-b),-Pi,argument(c-b)-2*Pi],[argument(a-b),Pi,argument(c-b)-2*Pi],
+                   color=green, linestyle=solid,thickness=2),
+ line([argument(a-c),argument(b-c),-4*Pi/3],[argument(a-c),argument(b-c),4*Pi/3],
+                   color=red, linestyle=solid,thickness=2)]:
+
+#CA:= plot3d(AX(3^r,th),r=-3/2..1, th=-Pi..Pi,grid=[11,30]):
+#CA:= plot3d(AY(3^r,th),r=-3/2..1, th=-Pi..Pi,grid=[11,30]):
+#CA:= plot3d(AZ(3^r,th),r=-3/2..1, th=-Pi..Pi,grid=[11,30]):
+CA:= [plot3d(AX(3^r,th),r=-3/2..5/4, th=-Pi..Pi,grid=[11,30]),
+      plot3d(AXP(3^r,th),r=-3/2..5/4, th=-Pi..Pi,grid=[11,30]),
+      plot3d(AY(3^r,th),r=-3/2..4/3, th=-Pi..Pi,grid=[11,30]),
+      plot3d(AYN(3^r,th),r=-3/2..4/3,th=-Pi..Pi,grid=[11,31]),
+      plot3d(AZ(3^r,th),r=-3/2..5/4,  th=-4*Pi/3..4*Pi/3,grid=[11,40]),
+      plot3d(AI(3^r,th),r=4/3..4, th=-3*Pi/4..3*Pi/4,grid=[11,30]),
+      plot3d(AIN(3^r,th),r=4/3..4, th=-5*Pi/4..-3*Pi/4,grid=[11,16])],
+      plot3d(AIP(3^r,th),r=4/3..4, th=3*Pi/4..5*Pi/4,grid=[11,16]):
+
+#display(CA,Lines[],orientation=[0,0]);display(CA,Lines[],orientation=[0,90]);
+#display(CA,Lines[],orientation=[90,90]);display(CA,Lines[],orientation=[45,45]);
+
+#F:= ang -> display(CA,Lines[],orientation=[ang,50]):#,style=patchnogrid):
+F:= ang -> display(CA,Lines[],orientation=[ang,60]):#,style=patchnogrid):
+
+
+#
+#  For small one
+#
+NFr:=80:
+plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=260,width=320`): 
+#animate(F,[ang],ang=0..(1-1/NFr)*360,scaling=constrained,axes=none,frames=NFr);
+ 
+
+
+NFr:=180:
+plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=700,width=900`): 
+animate(F,[ang],ang=0..(1-1/NFr)*360,scaling=constrained,axes=none,frames=NFr);

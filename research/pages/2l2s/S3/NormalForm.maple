@@ -1,0 +1,82 @@
+#NormalFom.maple
+#
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+#
+
+lprint(`Here is the general (2,2)-curve`);
+G:= c00*w^2*y^2+c10*x*w*y^2+c20*x^2*y^2+
+    c01*w^2*z*y+c11*x*w*z*y+c21*x^2*z*y+
+    c02*w^2*z^2+c12*x*w*z^2+c22*x^2*z^2;
+
+# Supose that [w,x] = [1,1] and [1,-1] are ramification points, with 
+# the same double point [y,z]=[1,0].
+# Similarly, we suppose that [w,x]=[1,s] and [1,-s] are ramification points
+# with double points at [y,z]=[0,1].
+#
+
+Eqs:=[]:
+
+lprint(`We require that G is ramified over [w,x]=[1,1], [1,-1], [1,s], and [1,-s]`);
+lprint(`with corresponding double points [1,0], [1,0], [0,1], and [0,1]`);
+lprint(`  `);
+
+lprint(`We restrict G to [w,x]=[1,1]`);
+subs(w=1,x=1,G);
+lprint(`Requiring that [y,z]=[1,0] is a double point gives the equations`);
+lprint(`c00 + c10 + c20     and     c01 + c11 + c21 = 0`);
+
+Eqs:=[Eqs[],coeff(subs(w=1,x=1,G),y^2),coeff(coeff(subs(w=1,x=1,G),y),z)]:
+
+lprint(`We restrict G to [w,x]=[1,-1]`);
+subs(w=1,x=-1,G);
+lprint(`Requiring that [y,z]=[1,0] is a double point gives the equations`);
+lprint(`c01 - c11 + c21 = 0     and     c02 - c12 + c22 = 0`);
+
+Eqs:=[Eqs[],coeff(subs(w=1,x=-1,G),y^2),coeff(coeff(subs(w=1,x=-1,G),y),z)]:
+
+lprint(`These have the consequences  c11 = c10 = c01 + c21 = c00 + c20 = 0`);
+lprint(`We impose the first equations c11 = c10 = 0`);
+#c11:=0: c10:=0:
+#c21:=-c01:  c20:=-c00:
+
+lprint(`We restrict G to [w,x]=[1,s]`);
+subs(w=1,x=s,G);
+lprint(`Requiring that [y,z]=[0,1] is a double point gives the equations`);
+lprint(`     2                         2`);
+lprint(`c01 s  + c11 s  + c21  =  c02 s  + c12 s  + c22  =  0`);
+
+Eqs:=[Eqs[],coeff(subs(w=1,x=s,G),z^2),coeff(coeff(subs(w=1,x=s,G),y),z)]:
+
+lprint(`We restrict G to [w,x]=[1,-s]`);
+subs(w=1,x=-s,G);
+lprint(`Requiring that [X,Y]=[0,1] is a double point gives the equations`);
+lprint(`     2                         2`);
+lprint(`c00 s  - c10 s  + c20  =  c01 s  + c21  =  0`);
+
+
+Eqs:=[Eqs[],coeff(subs(w=1,x=-s,G),z^2),coeff(coeff(subs(w=1,x=-s,G),y),z)]:
+
+#lprint(Eqs);quit;
+
+Gb:=Groebner[gbasis](Eqs,tdeg(c00,c02,c10,c11,c12,c01,c20,c21,c22)):
+
+lprint(`These four conditions together give`);
+
+Gb;
+lprint(`Their consequences for the original polynomial G are`):
+
+#lprint(Gb);[c21, c01, c12, c11, c10, c02+c22*s^2, c00+c20]
+G:=subs(c21=0,c01=0,c12=0,c11=0,c10=0,c02=-s^2*c22,c00=-c20,G):
+
+collect(G,[y,z]);
+
+lprint(`We normalize, setting c20=1.  Since we are also free to multiply`);
+lprint(`the variable z by a constant factor, we may also set c22=1.`);
+lprint(`This gives`); #  subs(c20=1,c22=1,G);
+collect(subs(c20=1,c22=1,G),[y,z]);
+lprint(`Setting c22=-1, we get`);
+collect(subs(c20=1,c22=-1,G),[w,x]);
+#lprint(collect(subs(c20=1,c22=-1,G),[w,x]));

@@ -1,0 +1,484 @@
+<HTML>
+<HEAD>
+   <TITLE>Degree 11 component of odd part</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>Degree 11 component of odd part of canonical character of <B>Q</B><I>Sym</I></H1>
+
+<HR COLOR="#0000FF" size=2 noshade>
+<A HREF="Q-zeta.html#Oll">Return</A> to Main table.
+<HR COLOR="#0000FF" size=2 noshade>
+
+<FONT COLOR=green>A note on our notation:</FONT>  We use hexidecimal notation for
+sanity in the indices.  Thus <FONT COLOR=RED>a</FONT> indicates a component with
+value 10, <FONT COLOR=RED>b</FONT> indicates a component with
+value 11, and <FONT COLOR=RED>c</FONT> indicates a component with
+value 12. 
+
+<HR COLOR="#0000FF" size=2 noshade>
+
+<!------------------------------------------------------------>
+<TABLE>
+   <TR VALIGN=TOP><TD><I>O</I><SUB>11</SUB> &nbsp; =</TD>
+   <TD>&nbsp; &nbsp;  <I>H</I><SUB>b</SUB> - <I>H</I><SUB>a1</SUB>
+       - <I>H</I><SUB>83</SUB> - <I>H</I><SUB>65</SUB>
+       - <I>H</I><SUB>47</SUB> - <I>H</I><SUB>29</SUB>
+       +  1/2<I>H</I><SUB>911</SUB> +  <I>H</I><SUB>821</SUB>
+       +  1/2<I>H</I><SUB>731</SUB> +  1/2<I>H</I><SUB>713</SUB>
+       +  <I>H</I><SUB>641</SUB><BR> &nbsp; &nbsp;
+ +  <I>H</I><SUB>623</SUB>
+       +  1/2<I>H</I><SUB>551</SUB> +  1/2<I>H</I><SUB>533</SUB>
+       +  1/2<I>H</I><SUB>515</SUB> +  <I>H</I><SUB>461</SUB>
+       +  <I>H</I><SUB>443</SUB> +  <I>H</I><SUB>425</SUB>
+       +  1/2<I>H</I><SUB>371</SUB><BR> &nbsp; &nbsp;
+ +  1/2<I>H</I><SUB>353</SUB>
+       +  1/2<I>H</I><SUB>335</SUB> +  1/2<I>H</I><SUB>317</SUB>
+       +  <I>H</I><SUB>281</SUB> +  <I>H</I><SUB>263</SUB>
+       +  <I>H</I><SUB>245</SUB> +  <I>H</I><SUB>227</SUB>
+       +  1/2<I>H</I><SUB>191</SUB><BR> &nbsp; &nbsp;
+ +  1/2<I>H</I><SUB>173</SUB>
+       +  1/2<I>H</I><SUB>155</SUB> +  1/2<I>H</I><SUB>137</SUB>
+       +  1/2<I>H</I><SUB>119</SUB> -1/2<I>H</I><SUB>8111</SUB>
+       -1/2<I>H</I><SUB>7211</SUB> -1/2<I>H</I><SUB>7121</SUB>
+       -1/2<I>H</I><SUB>6311</SUB><BR> &nbsp; &nbsp;
+ - <I>H</I><SUB>6221</SUB>
+       -1/2<I>H</I><SUB>6131</SUB> -1/2<I>H</I><SUB>6113</SUB>
+       -1/2<I>H</I><SUB>5411</SUB> -1/2<I>H</I><SUB>5321</SUB>
+       -1/2<I>H</I><SUB>5231</SUB> -1/2<I>H</I><SUB>5213</SUB>
+       -1/2<I>H</I><SUB>5141</SUB> -1/2<I>H</I><SUB>5123</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>4511</SUB> - <I>H</I><SUB>4421</SUB>
+       -1/2<I>H</I><SUB>4331</SUB> -1/2<I>H</I><SUB>4313</SUB>
+       - <I>H</I><SUB>4241</SUB> - <I>H</I><SUB>4223</SUB>
+       -1/2<I>H</I><SUB>4151</SUB> -1/2<I>H</I><SUB>4133</SUB>
+       -1/2<I>H</I><SUB>4115</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>3611</SUB>
+       -1/2<I>H</I><SUB>3521</SUB> -1/2<I>H</I><SUB>3431</SUB>
+       -1/2<I>H</I><SUB>3413</SUB> -1/2<I>H</I><SUB>3341</SUB>
+       -1/2<I>H</I><SUB>3323</SUB> -1/2<I>H</I><SUB>3251</SUB>
+       -1/2<I>H</I><SUB>3233</SUB> -1/2<I>H</I><SUB>3215</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>3161</SUB> -1/2<I>H</I><SUB>3143</SUB>
+       -1/2<I>H</I><SUB>3125</SUB> -1/2<I>H</I><SUB>2711</SUB>
+       - <I>H</I><SUB>2621</SUB> -1/2<I>H</I><SUB>2531</SUB>
+       -1/2<I>H</I><SUB>2513</SUB> - <I>H</I><SUB>2441</SUB>
+       - <I>H</I><SUB>2423</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>2351</SUB>
+       -1/2<I>H</I><SUB>2333</SUB> -1/2<I>H</I><SUB>2315</SUB>
+       - <I>H</I><SUB>2261</SUB> - <I>H</I><SUB>2243</SUB>
+       - <I>H</I><SUB>2225</SUB> -1/2<I>H</I><SUB>2171</SUB>
+       -1/2<I>H</I><SUB>2153</SUB> -1/2<I>H</I><SUB>2135</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>2117</SUB> -1/2<I>H</I><SUB>1811</SUB>
+       -1/2<I>H</I><SUB>1721</SUB> -1/2<I>H</I><SUB>1631</SUB>
+       -1/2<I>H</I><SUB>1613</SUB> -1/2<I>H</I><SUB>1541</SUB>
+       -1/2<I>H</I><SUB>1523</SUB> -1/2<I>H</I><SUB>1451</SUB>
+       -1/2<I>H</I><SUB>1433</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>1415</SUB>
+       -1/2<I>H</I><SUB>1361</SUB> -1/2<I>H</I><SUB>1343</SUB>
+       -1/2<I>H</I><SUB>1325</SUB> -1/2<I>H</I><SUB>1271</SUB>
+       -1/2<I>H</I><SUB>1253</SUB> -1/2<I>H</I><SUB>1235</SUB>
+       -1/2<I>H</I><SUB>1217</SUB> -1/2<I>H</I><SUB>1181</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>1163</SUB> -1/2<I>H</I><SUB>1145</SUB>
+       -1/2<I>H</I><SUB>1127</SUB> +  3/8<I>H</I><SUB>71111</SUB>
+       +  1/2<I>H</I><SUB>62111</SUB> +  1/2<I>H</I><SUB>61211</SUB>
+       +  1/2<I>H</I><SUB>61121</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>53111</SUB>
+       +  1/2<I>H</I><SUB>52211</SUB> +  1/2<I>H</I><SUB>52121</SUB>
+       +  3/8<I>H</I><SUB>51311</SUB> +  1/2<I>H</I><SUB>51221</SUB>
+       +  3/8<I>H</I><SUB>51131</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>51113</SUB>
+       +  1/2<I>H</I><SUB>44111</SUB> +  1/2<I>H</I><SUB>43211</SUB>
+       +  1/2<I>H</I><SUB>43121</SUB> +  1/2<I>H</I><SUB>42311</SUB>
+       +  <I>H</I><SUB>42221</SUB> +  1/2<I>H</I><SUB>42131</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>42113</SUB> +  1/2<I>H</I><SUB>41411</SUB>
+       +  1/2<I>H</I><SUB>41321</SUB> +  1/2<I>H</I><SUB>41231</SUB>
+       +  1/2<I>H</I><SUB>41213</SUB> +  1/2<I>H</I><SUB>41141</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>41123</SUB> +  3/8<I>H</I><SUB>35111</SUB>
+       +  1/2<I>H</I><SUB>34211</SUB> +  1/2<I>H</I><SUB>34121</SUB>
+       +  3/8<I>H</I><SUB>33311</SUB> +  1/2<I>H</I><SUB>33221</SUB><BR> &nbsp; &nbsp;
+
+       +  3/8<I>H</I><SUB>33131</SUB> +  3/8<I>H</I><SUB>33113</SUB>
+       +  1/2<I>H</I><SUB>32411</SUB> +  1/2<I>H</I><SUB>32321</SUB>
+       +  1/2<I>H</I><SUB>32231</SUB> +  1/2<I>H</I><SUB>32213</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>32141</SUB> +  1/2<I>H</I><SUB>32123</SUB>
+       +  3/8<I>H</I><SUB>31511</SUB> +  1/2<I>H</I><SUB>31421</SUB>
+       +  3/8<I>H</I><SUB>31331</SUB> +  3/8<I>H</I><SUB>31313</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>31241</SUB> +  1/2<I>H</I><SUB>31223</SUB>
+       +  3/8<I>H</I><SUB>31151</SUB> +  3/8<I>H</I><SUB>31133</SUB>
+       +  3/8<I>H</I><SUB>31115</SUB> +  1/2<I>H</I><SUB>26111</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>25211</SUB> +  1/2<I>H</I><SUB>25121</SUB>
+       +  1/2<I>H</I><SUB>24311</SUB> +  <I>H</I><SUB>24221</SUB>
+       +  1/2<I>H</I><SUB>24131</SUB> +  1/2<I>H</I><SUB>24113</SUB>
+       +  1/2<I>H</I><SUB>23411</SUB><BR> &nbsp; &nbsp;
+ +  1/2<I>H</I><SUB>23321</SUB>
+       +  1/2<I>H</I><SUB>23231</SUB> +  1/2<I>H</I><SUB>23213</SUB>
+       +  1/2<I>H</I><SUB>23141</SUB> +  1/2<I>H</I><SUB>23123</SUB>
+       +  1/2<I>H</I><SUB>22511</SUB><BR> &nbsp; &nbsp;
+ +  <I>H</I><SUB>22421</SUB>
+       +  1/2<I>H</I><SUB>22331</SUB> +  1/2<I>H</I><SUB>22313</SUB>
+       +  <I>H</I><SUB>22241</SUB> +  <I>H</I><SUB>22223</SUB>
+       +  1/2<I>H</I><SUB>22151</SUB> +  1/2<I>H</I><SUB>22133</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>22115</SUB> +  1/2<I>H</I><SUB>21611</SUB>
+       +  1/2<I>H</I><SUB>21521</SUB> +  1/2<I>H</I><SUB>21431</SUB>
+       +  1/2<I>H</I><SUB>21413</SUB> +  1/2<I>H</I><SUB>21341</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>21323</SUB> +  1/2<I>H</I><SUB>21251</SUB>
+       +  1/2<I>H</I><SUB>21233</SUB> +  1/2<I>H</I><SUB>21215</SUB>
+       +  1/2<I>H</I><SUB>21161</SUB> +  1/2<I>H</I><SUB>21143</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>21125</SUB> +  3/8<I>H</I><SUB>17111</SUB>
+       +  1/2<I>H</I><SUB>16211</SUB> +  1/2<I>H</I><SUB>16121</SUB>
+       +  3/8<I>H</I><SUB>15311</SUB> +  1/2<I>H</I><SUB>15221</SUB><BR> &nbsp; &nbsp;
+
+       +  3/8<I>H</I><SUB>15131</SUB> +  3/8<I>H</I><SUB>15113</SUB>
+       +  1/2<I>H</I><SUB>14411</SUB> +  1/2<I>H</I><SUB>14321</SUB>
+       +  1/2<I>H</I><SUB>14231</SUB> +  1/2<I>H</I><SUB>14213</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>14141</SUB> +  1/2<I>H</I><SUB>14123</SUB>
+       +  3/8<I>H</I><SUB>13511</SUB> +  1/2<I>H</I><SUB>13421</SUB>
+       +  3/8<I>H</I><SUB>13331</SUB> +  3/8<I>H</I><SUB>13313</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>13241</SUB> +  1/2<I>H</I><SUB>13223</SUB>
+       +  3/8<I>H</I><SUB>13151</SUB> +  3/8<I>H</I><SUB>13133</SUB>
+       +  3/8<I>H</I><SUB>13115</SUB> +  1/2<I>H</I><SUB>12611</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>12521</SUB> +  1/2<I>H</I><SUB>12431</SUB>
+       +  1/2<I>H</I><SUB>12413</SUB> +  1/2<I>H</I><SUB>12341</SUB>
+       +  1/2<I>H</I><SUB>12323</SUB> +  1/2<I>H</I><SUB>12251</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>12233</SUB> +  1/2<I>H</I><SUB>12215</SUB>
+       +  1/2<I>H</I><SUB>12161</SUB> +  1/2<I>H</I><SUB>12143</SUB>
+       +  1/2<I>H</I><SUB>12125</SUB> +  3/8<I>H</I><SUB>11711</SUB><BR> &nbsp; &nbsp;
+
+       +  1/2<I>H</I><SUB>11621</SUB> +  3/8<I>H</I><SUB>11531</SUB>
+       +  3/8<I>H</I><SUB>11513</SUB> +  1/2<I>H</I><SUB>11441</SUB>
+       +  1/2<I>H</I><SUB>11423</SUB> +  3/8<I>H</I><SUB>11351</SUB><BR> &nbsp; &nbsp;
+
+       +  3/8<I>H</I><SUB>11333</SUB> +  3/8<I>H</I><SUB>11315</SUB>
+       +  1/2<I>H</I><SUB>11261</SUB> +  1/2<I>H</I><SUB>11243</SUB>
+       +  1/2<I>H</I><SUB>11225</SUB> +  3/8<I>H</I><SUB>11171</SUB><BR> &nbsp; &nbsp;
+
+       +  3/8<I>H</I><SUB>11153</SUB> +  3/8<I>H</I><SUB>11135</SUB>
+       +  3/8<I>H</I><SUB>11117</SUB> -3/8<I>H</I><SUB>611111</SUB>
+       -3/8<I>H</I><SUB>521111</SUB> -3/8<I>H</I><SUB>512111</SUB>
+       -3/8<I>H</I><SUB>511211</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>511121</SUB>
+       -3/8<I>H</I><SUB>431111</SUB> -1/2<I>H</I><SUB>422111</SUB>
+       -1/2<I>H</I><SUB>421211</SUB> -1/2<I>H</I><SUB>421121</SUB>
+       -3/8<I>H</I><SUB>413111</SUB> -1/2<I>H</I><SUB>412211</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>412121</SUB> -3/8<I>H</I><SUB>411311</SUB>
+       -1/2<I>H</I><SUB>411221</SUB> -3/8<I>H</I><SUB>411131</SUB>
+       -3/8<I>H</I><SUB>411113</SUB> -3/8<I>H</I><SUB>341111</SUB>
+       -3/8<I>H</I><SUB>332111</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>331211</SUB>
+       -3/8<I>H</I><SUB>331121</SUB> -3/8<I>H</I><SUB>323111</SUB>
+       -1/2<I>H</I><SUB>322211</SUB> -1/2<I>H</I><SUB>322121</SUB>
+       -3/8<I>H</I><SUB>321311</SUB> -1/2<I>H</I><SUB>321221</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>321131</SUB> -3/8<I>H</I><SUB>321113</SUB>
+       -3/8<I>H</I><SUB>314111</SUB> -3/8<I>H</I><SUB>313211</SUB>
+       -3/8<I>H</I><SUB>313121</SUB> -3/8<I>H</I><SUB>312311</SUB>
+       -1/2<I>H</I><SUB>312221</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>312131</SUB>
+       -3/8<I>H</I><SUB>312113</SUB> -3/8<I>H</I><SUB>311411</SUB>
+       -3/8<I>H</I><SUB>311321</SUB> -3/8<I>H</I><SUB>311231</SUB>
+       -3/8<I>H</I><SUB>311213</SUB> -3/8<I>H</I><SUB>311141</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>311123</SUB> -3/8<I>H</I><SUB>251111</SUB>
+       -1/2<I>H</I><SUB>242111</SUB> -1/2<I>H</I><SUB>241211</SUB>
+       -1/2<I>H</I><SUB>241121</SUB> -3/8<I>H</I><SUB>233111</SUB>
+       -1/2<I>H</I><SUB>232211</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>232121</SUB>
+       -3/8<I>H</I><SUB>231311</SUB> -1/2<I>H</I><SUB>231221</SUB>
+       -3/8<I>H</I><SUB>231131</SUB> -3/8<I>H</I><SUB>231113</SUB>
+       -1/2<I>H</I><SUB>224111</SUB> -1/2<I>H</I><SUB>223211</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>223121</SUB> -1/2<I>H</I><SUB>222311</SUB>
+       - <I>H</I><SUB>222221</SUB> -1/2<I>H</I><SUB>222131</SUB>
+       -1/2<I>H</I><SUB>222113</SUB> -1/2<I>H</I><SUB>221411</SUB>
+       -1/2<I>H</I><SUB>221321</SUB> -1/2<I>H</I><SUB>221231</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>221213</SUB> -1/2<I>H</I><SUB>221141</SUB>
+       -1/2<I>H</I><SUB>221123</SUB> -3/8<I>H</I><SUB>215111</SUB>
+       -1/2<I>H</I><SUB>214211</SUB> -1/2<I>H</I><SUB>214121</SUB>
+       -3/8<I>H</I><SUB>213311</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>213221</SUB>
+       -3/8<I>H</I><SUB>213131</SUB> -3/8<I>H</I><SUB>213113</SUB>
+       -1/2<I>H</I><SUB>212411</SUB> -1/2<I>H</I><SUB>212321</SUB>
+       -1/2<I>H</I><SUB>212231</SUB> -1/2<I>H</I><SUB>212213</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>212141</SUB> -1/2<I>H</I><SUB>212123</SUB>
+       -3/8<I>H</I><SUB>211511</SUB> -1/2<I>H</I><SUB>211421</SUB>
+       -3/8<I>H</I><SUB>211331</SUB> -3/8<I>H</I><SUB>211313</SUB>
+       -1/2<I>H</I><SUB>211241</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>211223</SUB>
+       -3/8<I>H</I><SUB>211151</SUB> -3/8<I>H</I><SUB>211133</SUB>
+       -3/8<I>H</I><SUB>211115</SUB> -3/8<I>H</I><SUB>161111</SUB>
+       -3/8<I>H</I><SUB>152111</SUB> -3/8<I>H</I><SUB>151211</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>151121</SUB> -3/8<I>H</I><SUB>143111</SUB>
+       -1/2<I>H</I><SUB>142211</SUB> -1/2<I>H</I><SUB>142121</SUB>
+       -3/8<I>H</I><SUB>141311</SUB> -1/2<I>H</I><SUB>141221</SUB>
+       -3/8<I>H</I><SUB>141131</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>141113</SUB>
+       -3/8<I>H</I><SUB>134111</SUB> -3/8<I>H</I><SUB>133211</SUB>
+       -3/8<I>H</I><SUB>133121</SUB> -3/8<I>H</I><SUB>132311</SUB>
+       -1/2<I>H</I><SUB>132221</SUB> -3/8<I>H</I><SUB>132131</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>132113</SUB> -3/8<I>H</I><SUB>131411</SUB>
+       -3/8<I>H</I><SUB>131321</SUB> -3/8<I>H</I><SUB>131231</SUB>
+       -3/8<I>H</I><SUB>131213</SUB> -3/8<I>H</I><SUB>131141</SUB>
+       -3/8<I>H</I><SUB>131123</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>125111</SUB>
+       -1/2<I>H</I><SUB>124211</SUB> -1/2<I>H</I><SUB>124121</SUB>
+       -3/8<I>H</I><SUB>123311</SUB> -1/2<I>H</I><SUB>123221</SUB>
+       -3/8<I>H</I><SUB>123131</SUB> -3/8<I>H</I><SUB>123113</SUB><BR> &nbsp; &nbsp;
+
+       -1/2<I>H</I><SUB>122411</SUB> -1/2<I>H</I><SUB>122321</SUB>
+       -1/2<I>H</I><SUB>122231</SUB> -1/2<I>H</I><SUB>122213</SUB>
+       -1/2<I>H</I><SUB>122141</SUB> -1/2<I>H</I><SUB>122123</SUB>
+       -3/8<I>H</I><SUB>121511</SUB><BR> &nbsp; &nbsp;
+ -1/2<I>H</I><SUB>121421</SUB>
+       -3/8<I>H</I><SUB>121331</SUB> -3/8<I>H</I><SUB>121313</SUB>
+       -1/2<I>H</I><SUB>121241</SUB> -1/2<I>H</I><SUB>121223</SUB>
+       -3/8<I>H</I><SUB>121151</SUB> -3/8<I>H</I><SUB>121133</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>121115</SUB> -3/8<I>H</I><SUB>116111</SUB>
+       -3/8<I>H</I><SUB>115211</SUB> -3/8<I>H</I><SUB>115121</SUB>
+       -3/8<I>H</I><SUB>114311</SUB> -1/2<I>H</I><SUB>114221</SUB>
+       -3/8<I>H</I><SUB>114131</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>114113</SUB>
+       -3/8<I>H</I><SUB>113411</SUB> -3/8<I>H</I><SUB>113321</SUB>
+       -3/8<I>H</I><SUB>113231</SUB> -3/8<I>H</I><SUB>113213</SUB>
+       -3/8<I>H</I><SUB>113141</SUB> -3/8<I>H</I><SUB>113123</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>112511</SUB> -1/2<I>H</I><SUB>112421</SUB>
+       -3/8<I>H</I><SUB>112331</SUB> -3/8<I>H</I><SUB>112313</SUB>
+       -1/2<I>H</I><SUB>112241</SUB> -1/2<I>H</I><SUB>112223</SUB>
+       -3/8<I>H</I><SUB>112151</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>112133</SUB>
+       -3/8<I>H</I><SUB>112115</SUB> -3/8<I>H</I><SUB>111611</SUB>
+       -3/8<I>H</I><SUB>111521</SUB> -3/8<I>H</I><SUB>111431</SUB>
+       -3/8<I>H</I><SUB>111413</SUB> -3/8<I>H</I><SUB>111341</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>111323</SUB> -3/8<I>H</I><SUB>111251</SUB>
+       -3/8<I>H</I><SUB>111233</SUB> -3/8<I>H</I><SUB>111215</SUB>
+       -3/8<I>H</I><SUB>111161</SUB> -3/8<I>H</I><SUB>111143</SUB>
+       -3/8<I>H</I><SUB>111125</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>5111111</SUB>
+       +  3/8<I>H</I><SUB>4211111</SUB> +  3/8<I>H</I><SUB>4121111</SUB>
+       +  3/8<I>H</I><SUB>4112111</SUB> +  3/8<I>H</I><SUB>4111211</SUB>
+       +  3/8<I>H</I><SUB>4111121</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>3311111</SUB>
+       +  3/8<I>H</I><SUB>3221111</SUB> +  3/8<I>H</I><SUB>3212111</SUB>
+       +  3/8<I>H</I><SUB>3211211</SUB> +  3/8<I>H</I><SUB>3211121</SUB>
+       +  5/16<I>H</I><SUB>3131111</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>3122111</SUB>
+       +  3/8<I>H</I><SUB>3121211</SUB> +  3/8<I>H</I><SUB>3121121</SUB>
+       +  5/16<I>H</I><SUB>3113111</SUB> +  3/8<I>H</I><SUB>3112211</SUB>
+       +  3/8<I>H</I><SUB>3112121</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>3111311</SUB>
+       +  3/8<I>H</I><SUB>3111221</SUB> +  5/16<I>H</I><SUB>3111131</SUB>
+       +  5/16<I>H</I><SUB>3111113</SUB> +  3/8<I>H</I><SUB>2411111</SUB>
+       +  3/8<I>H</I><SUB>2321111</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2312111</SUB>
+       +  3/8<I>H</I><SUB>2311211</SUB> +  3/8<I>H</I><SUB>2311121</SUB>
+       +  3/8<I>H</I><SUB>2231111</SUB> +  1/2<I>H</I><SUB>2222111</SUB>
+       +  1/2<I>H</I><SUB>2221211</SUB><BR> &nbsp; &nbsp;
+ +  1/2<I>H</I><SUB>2221121</SUB>
+       +  3/8<I>H</I><SUB>2213111</SUB> +  1/2<I>H</I><SUB>2212211</SUB>
+       +  1/2<I>H</I><SUB>2212121</SUB> +  3/8<I>H</I><SUB>2211311</SUB>
+       +  1/2<I>H</I><SUB>2211221</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2211131</SUB>
+       +  3/8<I>H</I><SUB>2211113</SUB> +  3/8<I>H</I><SUB>2141111</SUB>
+       +  3/8<I>H</I><SUB>2132111</SUB> +  3/8<I>H</I><SUB>2131211</SUB>
+       +  3/8<I>H</I><SUB>2131121</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2123111</SUB>
+       +  1/2<I>H</I><SUB>2122211</SUB> +  1/2<I>H</I><SUB>2122121</SUB>
+       +  3/8<I>H</I><SUB>2121311</SUB> +  1/2<I>H</I><SUB>2121221</SUB>
+       +  3/8<I>H</I><SUB>2121131</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2121113</SUB>
+       +  3/8<I>H</I><SUB>2114111</SUB> +  3/8<I>H</I><SUB>2113211</SUB>
+       +  3/8<I>H</I><SUB>2113121</SUB> +  3/8<I>H</I><SUB>2112311</SUB>
+       +  1/2<I>H</I><SUB>2112221</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2112131</SUB>
+       +  3/8<I>H</I><SUB>2112113</SUB> +  3/8<I>H</I><SUB>2111411</SUB>
+       +  3/8<I>H</I><SUB>2111321</SUB> +  3/8<I>H</I><SUB>2111231</SUB>
+       +  3/8<I>H</I><SUB>2111213</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>2111141</SUB>
+       +  3/8<I>H</I><SUB>2111123</SUB> +  5/16<I>H</I><SUB>1511111</SUB>
+       +  3/8<I>H</I><SUB>1421111</SUB> +  3/8<I>H</I><SUB>1412111</SUB>
+       +  3/8<I>H</I><SUB>1411211</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1411121</SUB>
+       +  5/16<I>H</I><SUB>1331111</SUB> +  3/8<I>H</I><SUB>1322111</SUB>
+       +  3/8<I>H</I><SUB>1321211</SUB> +  3/8<I>H</I><SUB>1321121</SUB>
+       +  5/16<I>H</I><SUB>1313111</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1312211</SUB>
+       +  3/8<I>H</I><SUB>1312121</SUB> +  5/16<I>H</I><SUB>1311311</SUB>
+       +  3/8<I>H</I><SUB>1311221</SUB> +  5/16<I>H</I><SUB>1311131</SUB>
+       +  5/16<I>H</I><SUB>1311113</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1241111</SUB>
+       +  3/8<I>H</I><SUB>1232111</SUB> +  3/8<I>H</I><SUB>1231211</SUB>
+       +  3/8<I>H</I><SUB>1231121</SUB> +  3/8<I>H</I><SUB>1223111</SUB>
+       +  1/2<I>H</I><SUB>1222211</SUB><BR> &nbsp; &nbsp;
+ +  1/2<I>H</I><SUB>1222121</SUB>
+       +  3/8<I>H</I><SUB>1221311</SUB> +  1/2<I>H</I><SUB>1221221</SUB>
+       +  3/8<I>H</I><SUB>1221131</SUB> +  3/8<I>H</I><SUB>1221113</SUB>
+       +  3/8<I>H</I><SUB>1214111</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1213211</SUB>
+       +  3/8<I>H</I><SUB>1213121</SUB> +  3/8<I>H</I><SUB>1212311</SUB>
+       +  1/2<I>H</I><SUB>1212221</SUB> +  3/8<I>H</I><SUB>1212131</SUB>
+       +  3/8<I>H</I><SUB>1212113</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1211411</SUB>
+       +  3/8<I>H</I><SUB>1211321</SUB> +  3/8<I>H</I><SUB>1211231</SUB>
+       +  3/8<I>H</I><SUB>1211213</SUB> +  3/8<I>H</I><SUB>1211141</SUB>
+       +  3/8<I>H</I><SUB>1211123</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>1151111</SUB>
+       +  3/8<I>H</I><SUB>1142111</SUB> +  3/8<I>H</I><SUB>1141211</SUB>
+       +  3/8<I>H</I><SUB>1141121</SUB> +  5/16<I>H</I><SUB>1133111</SUB>
+       +  3/8<I>H</I><SUB>1132211</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1132121</SUB>
+       +  5/16<I>H</I><SUB>1131311</SUB> +  3/8<I>H</I><SUB>1131221</SUB>
+       +  5/16<I>H</I><SUB>1131131</SUB> +  5/16<I>H</I><SUB>1131113</SUB>
+       +  3/8<I>H</I><SUB>1124111</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1123211</SUB>
+       +  3/8<I>H</I><SUB>1123121</SUB> +  3/8<I>H</I><SUB>1122311</SUB>
+       +  1/2<I>H</I><SUB>1122221</SUB> +  3/8<I>H</I><SUB>1122131</SUB>
+       +  3/8<I>H</I><SUB>1122113</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1121411</SUB>
+       +  3/8<I>H</I><SUB>1121321</SUB> +  3/8<I>H</I><SUB>1121231</SUB>
+       +  3/8<I>H</I><SUB>1121213</SUB> +  3/8<I>H</I><SUB>1121141</SUB>
+       +  3/8<I>H</I><SUB>1121123</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>1115111</SUB>
+       +  3/8<I>H</I><SUB>1114211</SUB> +  3/8<I>H</I><SUB>1114121</SUB>
+       +  5/16<I>H</I><SUB>1113311</SUB> +  3/8<I>H</I><SUB>1113221</SUB>
+       +  5/16<I>H</I><SUB>1113131</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>1113113</SUB>
+       +  3/8<I>H</I><SUB>1112411</SUB> +  3/8<I>H</I><SUB>1112321</SUB>
+       +  3/8<I>H</I><SUB>1112231</SUB> +  3/8<I>H</I><SUB>1112213</SUB>
+       +  3/8<I>H</I><SUB>1112141</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1112123</SUB>
+       +  5/16<I>H</I><SUB>1111511</SUB> +  3/8<I>H</I><SUB>1111421</SUB>
+       +  5/16<I>H</I><SUB>1111331</SUB> +  5/16<I>H</I><SUB>1111313</SUB>
+       +  3/8<I>H</I><SUB>1111241</SUB><BR> &nbsp; &nbsp;
+ +  3/8<I>H</I><SUB>1111223</SUB>
+       +  5/16<I>H</I><SUB>1111151</SUB> +  5/16<I>H</I><SUB>1111133</SUB>
+       +  5/16<I>H</I><SUB>1111115</SUB> -5/16<I>H</I><SUB>41111111</SUB>
+       -5/16<I>H</I><SUB>32111111</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>31211111</SUB>
+       -5/16<I>H</I><SUB>31121111</SUB> -5/16<I>H</I><SUB>31112111</SUB>
+       -5/16<I>H</I><SUB>31111211</SUB> -5/16<I>H</I><SUB>31111121</SUB>
+       -5/16<I>H</I><SUB>23111111</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>22211111</SUB>
+       -3/8<I>H</I><SUB>22121111</SUB> -3/8<I>H</I><SUB>22112111</SUB>
+       -3/8<I>H</I><SUB>22111211</SUB> -3/8<I>H</I><SUB>22111121</SUB>
+       -5/16<I>H</I><SUB>21311111</SUB> -3/8<I>H</I><SUB>21221111</SUB><BR> &nbsp; &nbsp;
+
+       -3/8<I>H</I><SUB>21212111</SUB> -3/8<I>H</I><SUB>21211211</SUB>
+       -3/8<I>H</I><SUB>21211121</SUB> -5/16<I>H</I><SUB>21131111</SUB>
+       -3/8<I>H</I><SUB>21122111</SUB> -3/8<I>H</I><SUB>21121211</SUB>
+       -3/8<I>H</I><SUB>21121121</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>21113111</SUB>
+       -3/8<I>H</I><SUB>21112211</SUB> -3/8<I>H</I><SUB>21112121</SUB>
+       -5/16<I>H</I><SUB>21111311</SUB> -3/8<I>H</I><SUB>21111221</SUB>
+       -5/16<I>H</I><SUB>21111131</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>21111113</SUB>
+       -5/16<I>H</I><SUB>14111111</SUB> -5/16<I>H</I><SUB>13211111</SUB>
+       -5/16<I>H</I><SUB>13121111</SUB> -5/16<I>H</I><SUB>13112111</SUB>
+       -5/16<I>H</I><SUB>13111211</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>13111121</SUB>
+       -5/16<I>H</I><SUB>12311111</SUB> -3/8<I>H</I><SUB>12221111</SUB>
+       -3/8<I>H</I><SUB>12212111</SUB> -3/8<I>H</I><SUB>12211211</SUB>
+       -3/8<I>H</I><SUB>12211121</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>12131111</SUB>
+       -3/8<I>H</I><SUB>12122111</SUB> -3/8<I>H</I><SUB>12121211</SUB>
+       -3/8<I>H</I><SUB>12121121</SUB> -5/16<I>H</I><SUB>12113111</SUB>
+       -3/8<I>H</I><SUB>12112211</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>12112121</SUB>
+       -5/16<I>H</I><SUB>12111311</SUB> -3/8<I>H</I><SUB>12111221</SUB>
+       -5/16<I>H</I><SUB>12111131</SUB> -5/16<I>H</I><SUB>12111113</SUB>
+       -5/16<I>H</I><SUB>11411111</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>11321111</SUB>
+       -5/16<I>H</I><SUB>11312111</SUB> -5/16<I>H</I><SUB>11311211</SUB>
+       -5/16<I>H</I><SUB>11311121</SUB> -5/16<I>H</I><SUB>11231111</SUB>
+       -3/8<I>H</I><SUB>11222111</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>11221211</SUB>
+       -3/8<I>H</I><SUB>11221121</SUB> -5/16<I>H</I><SUB>11213111</SUB>
+       -3/8<I>H</I><SUB>11212211</SUB> -3/8<I>H</I><SUB>11212121</SUB>
+       -5/16<I>H</I><SUB>11211311</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>11211221</SUB>
+       -5/16<I>H</I><SUB>11211131</SUB> -5/16<I>H</I><SUB>11211113</SUB>
+       -5/16<I>H</I><SUB>11141111</SUB> -5/16<I>H</I><SUB>11132111</SUB>
+       -5/16<I>H</I><SUB>11131211</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>11131121</SUB>
+       -5/16<I>H</I><SUB>11123111</SUB> -3/8<I>H</I><SUB>11122211</SUB>
+       -3/8<I>H</I><SUB>11122121</SUB> -5/16<I>H</I><SUB>11121311</SUB>
+       -3/8<I>H</I><SUB>11121221</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>11121131</SUB>
+       -5/16<I>H</I><SUB>11121113</SUB> -5/16<I>H</I><SUB>11114111</SUB>
+       -5/16<I>H</I><SUB>11113211</SUB> -5/16<I>H</I><SUB>11113121</SUB>
+       -5/16<I>H</I><SUB>11112311</SUB><BR> &nbsp; &nbsp;
+ -3/8<I>H</I><SUB>11112221</SUB>
+       -5/16<I>H</I><SUB>11112131</SUB> -5/16<I>H</I><SUB>11112113</SUB>
+       -5/16<I>H</I><SUB>11111411</SUB> -5/16<I>H</I><SUB>11111321</SUB>
+       -5/16<I>H</I><SUB>11111231</SUB><BR> &nbsp; &nbsp;
+ -5/16<I>H</I><SUB>11111213</SUB>
+       -5/16<I>H</I><SUB>11111141</SUB> -5/16<I>H</I><SUB>11111123</SUB>
+       +  35/128<I>H</I><SUB>311111111</SUB> +  5/16<I>H</I><SUB>221111111</SUB><BR> &nbsp; &nbsp;
+
+       +  5/16<I>H</I><SUB>212111111</SUB> +  5/16<I>H</I><SUB>211211111</SUB>
+       +  5/16<I>H</I><SUB>211121111</SUB> +  5/16<I>H</I><SUB>211112111</SUB>
+       +  5/16<I>H</I><SUB>211111211</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>211111121</SUB>
+       +  35/128<I>H</I><SUB>131111111</SUB> +  5/16<I>H</I><SUB>122111111</SUB>
+       +  5/16<I>H</I><SUB>121211111</SUB> +  5/16<I>H</I><SUB>121121111</SUB><BR> &nbsp; &nbsp;
+
+       +  5/16<I>H</I><SUB>121112111</SUB> +  5/16<I>H</I><SUB>121111211</SUB>
+       +  5/16<I>H</I><SUB>121111121</SUB> +  35/128<I>H</I><SUB>113111111</SUB>
+       +  5/16<I>H</I><SUB>112211111</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>112121111</SUB>
+       +  5/16<I>H</I><SUB>112112111</SUB> +  5/16<I>H</I><SUB>112111211</SUB>
+       +  5/16<I>H</I><SUB>112111121</SUB> +  35/128<I>H</I><SUB>111311111</SUB><BR> &nbsp; &nbsp;
+
+       +  5/16<I>H</I><SUB>111221111</SUB> +  5/16<I>H</I><SUB>111212111</SUB>
+       +  5/16<I>H</I><SUB>111211211</SUB> +  5/16<I>H</I><SUB>111211121</SUB>
+       +  35/128<I>H</I><SUB>111131111</SUB><BR> &nbsp; &nbsp;
+ +  5/16<I>H</I><SUB>111122111</SUB>
+       +  5/16<I>H</I><SUB>111121211</SUB> +  5/16<I>H</I><SUB>111121121</SUB>
+       +  35/128<I>H</I><SUB>111113111</SUB> +  5/16<I>H</I><SUB>111112211</SUB><BR> &nbsp; &nbsp;
+
+       +  5/16<I>H</I><SUB>111112121</SUB> +  35/128<I>H</I><SUB>111111311</SUB>
+       +  5/16<I>H</I><SUB>111111221</SUB> +  35/128<I>H</I><SUB>111111131</SUB>
+       +  35/128<I>H</I><SUB>111111113</SUB><BR> &nbsp; &nbsp;
+ -35/128<I>H</I><SUB>2111111111</SUB>
+       -35/128<I>H</I><SUB>1211111111</SUB> -35/128<I>H</I><SUB>1121111111</SUB>
+       -35/128<I>H</I><SUB>1112111111</SUB> -35/128<I>H</I><SUB>1111211111</SUB><BR> &nbsp; &nbsp;
+
+       -35/128<I>H</I><SUB>1111121111</SUB> -35/128<I>H</I><SUB>1111112111</SUB>
+       -35/128<I>H</I><SUB>1111111211</SUB> -35/128<I>H</I><SUB>1111111121</SUB>
+       +  63/256<I>H</I><SUB>11111111111</SUB>.<BR>
+       </TD></TR>
+   <TR VALIGN=TOP><TD><I>O</I><SUB>12</SUB> &nbsp; =</TD>
+   <TD>&nbsp; &nbsp; <A HREF="O12.html">Click here</A>.<BR>
+       </TD></TR>
+</TABLE>
+<HR COLOR="#0000FF" size=2 noshade>
+<A HREF="Q-zeta.html#O11">Return</A> to Main table.
+<HR COLOR="#0000FF" size=2 noshade>
+<!------------------------------------------------------------>
+
+
+<I><FONT COLOR="#BB00FF">Created 23 July 2003 by 
+<A HREF="http://www.math.tamu.edu/~sottile">Frank Sottile</A></FONT>
+</BODY>
+</HTML>

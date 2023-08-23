@@ -1,0 +1,33 @@
+####################################################################
+#
+#   The copyright to this file, and the images it draws are owned by 
+# Frank Sottile.  We allow the free use of this, but you must first
+# ask permission of either Frank Sottile or Adriana Ortiz, and 
+# acknowledge our creation of these images.
+#
+####################################################################
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=6in,height=6in`):
+   
+POLYS:=[102+91*y+19*y^2-108*y^3-17*y^4+98*y^5-63*x-30*x*y-30*x*y^2-4*x*y^3-68*x*y^4-30*x^2-5*x^2*y-99*x^2*y^2-19*x^2*y^3+63*x^3+81*x^3*y+34*x^3*y^2+108*x^4-21*x^4*y-20*x^5,
+-28+37*y-54*y^2-88*y^3-12*y^4+22*y^5-94*x-103*x*y+45*x*y^2+43*x*y^3-20*x*y^4-26*x^2+91*x^2*y+6*x^2*y^2-38*x^2*y^3-96*x^3+11*x^3*y-14*x^3*y^2+49*x^4+45*x^4*y+76*x^5
+]:
+
+N:=2:
+f:=POLYS[N]:
+
+L[1]:=[-4.5,18,-4.5,9]:
+L[2]:=[-6.5,4,-6.5,4]:
+
+
+H:=linalg[det](linalg[hessian](f,[x,y])):
+
+B:=implicitplot(H,x=L[N][1]..L[N][2],y=L[N][3]..L[N][4],grid=[300,300],axes=none,color=blue):
+#display(B,scaling=CONSTRAINED);
+#
+plotsetup(ps,plotoutput="7o2u.eps",plotoptions=`color,portrait,noborder,width=2in,height=2in`):
+#plotsetup(gif,plotoutput="7o2u.gif",plotoptions=`height=500,width=500`):
+display(B);
+
+time();

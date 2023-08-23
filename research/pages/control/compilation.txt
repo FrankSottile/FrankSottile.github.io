@@ -1,0 +1,207 @@
+compilation.txt		26 May 1997
+
+    In Spring 1997 at MSRI, I did a search to attempt to determine how
+common it is for a `transfer function to be not controllable by real data'
+ 
+For this, I generated 8 groups of 50 transfer functions, and 4 groups of 25.
+For each transfer function in the first set of 8, I tested 25 different
+polynomials with distinct real roots (for the sets of 25, I tested 50).
+
+Within each group, the transfer functions were generated randomly in
+Singular, where I specified the range of the (integral) coefficients for the
+polynomial entries, and a scheme to choose the roots of the polynomials.
+
+Below, these choices are detailed.   In each group, I summarize the results
+of the search for that group in an 8-tuple of integers, where the (i+1)st
+entry is the number of times I found 2*i real feedback laws.
+
+Here is the result of these 15,000 trials:
+
+Total Frequency         
+                   [23, 804, 3370, 5345, 3854, 1325, 272,  7]
+
+    Frequency, (%)
+                  [.15, 5.4, 22.5, 35.6, 25.7,  8.8, 1.8, .047]
+
+This search began in January 1997, and finished in May 1997.
+I estimate that it took about 700,000 seconds of CPU
+for the Gr\"obner basis calculations in Singular, and about
+60,000 seconds for the real root determination in Maple.
+
+All of this was on a  HP 9000 D250, 800 series computer.
+
+Frank Sottile,
+MSRI
+
+#########################################################################
+
+First set:
+
+50 systems represented via (2x6)-matrices of degree 4 polynomials whose x^4
+terms look  like:  
+
+                | 1 0 0 0 0 0 |                 
+                | 0 1 0 0 0 0 |     
+
+and whose other coefficients were integers chosen randomly  as follows:   
+
+        -8 <=     Cubic Terms   <=  8
+       -14 <=   Quadratic Terms <= 14
+       -35 <=    Linear Terms   <= 35
+       -70 <=   Constant Terms  <= 70
+
+The closed loop polynomials \phi were chosen by generating 25
+random 8-tuples X1,...,X8  in the following manner:
+
+ X1 = -7  and the successive differences X2-X1, X3-X2, ... 
+          were random numbers between 1 and 3.
+
+For each matrix of polynomials and 8 points, we computed the 
+ number of real feedback laws which place the poles at those 8 points.
+
+ 	[ 0, 51, 265, 470, 328, 115, 18, 3 ]   
+
+whose jth component is the number of times there were 2j-2 real roots. 
+
+###################################################################
+
+Second set:
+	50 similar systems, but where the poles were chosen with 
+ X1=0 and the same successive differences
+
+              [0, 41, 313, 438, 319, 112, 24, 3]
+ 
+###################################################################
+
+Third set:
+   50 transfer functions with 
+
+       -15 <=     Cubic Terms   <= 15
+       -25 <=   Quadratic Terms <= 25
+       -35 <=    Linear Terms   <= 35
+       -45 <=   Constant Terms  <= 45
+
+and poles chosen with X1 = -12  and successive differences between 1 and 5.
+
+          [0, 58, 240, 482, 339, 115, 16, 0] 
+
+###################################################################
+
+Fourth and Fifth sets:
+
+100 more transfer functions, which were not in `standard' form:
+There were 100 (2x6)-matrices of random degree 4 polynomials with:
+
+        -8 <=    Quartic Terms  <=  8
+       -10 <=     Cubic Terms   <= 10
+       -12 <=   Quadratic Terms <= 12
+       -14 <=    Linear Terms   <= 14
+       -16 <=   Constant Terms  <= 16
+
+and poles with X1 = -7 and successive differences between 1 and 3.
+
+              [15, 101, 348, 466, 253, 54, 13, 0]   
+               [4, 100, 352, 419, 306, 66,  3, 0]  
+
+###################################################################
+
+Sixth set:   
+   50 transfer functions, where:
+
+        -6 <=    Quartic Terms  <=  6
+        -6 <=     Cubic Terms   <=  6
+        -6 <=   Quadratic Terms <=  6
+        -6 <=    Linear Terms   <=  6
+        -6 <=   Constant Terms  <=  6
+
+ and poles with X1 = -7  and successive differences between 1 and 3.
+
+             [2, 63, 331, 483, 279, 77, 15, 0]  
+
+###################################################################
+
+Seventh set:
+      50 transfer functions consisting of (2x6)-matrices of degree 4 
+polynomials with x^4 terms:       and constant terms:
+          | 1 0 0 0 0 0 |            | 0 0 0 0 0 1 |    
+          | 0 1 0 0 0 0 |            | 0 0 0 0 1 0 |     
+and
+           -5 <=     Cubic Terms   <= 5
+           -4 <=   Quadratic Terms <= 4
+           -3 <=    Linear Terms   <= 3
+ 
+and poles with  X1 = -7 and successive differences between 1 and 3.
+
+                   [0, 102, 304, 388, 325, 129, 2, 0]
+
+###################################################################
+
+Eighth set:
+    50 transfer functions chose with the same statistics,
+and poles with X1 = -12  and  successive differences between 1 and 5.
+
+                 [2, 91, 351, 367, 307, 113, 19, 0]
+
+###################################################################
+
+Ninth set:
+   25 similar transfer functions, and for each 50 8-tuples of poles
+similarly chosen
+
+                [0, 44, 379, 500, 231, 79, 17, 0]
+
+###################################################################
+
+Tenth set:
+          25 similarly chosen transfer functions, but with poles
+with X1=-14 and successive differences between 1 and 7.
+  
+                  [0, 20, 146, 524, 361, 147, 51, 1]
+
+#########################################################################
+
+Eleventh set:
+            25 similar transfer functions and poles with 
+    X1=-1 and successive differences between 1 and 5.
+
+
+#########################################################################
+
+Twelfth and final set:
+           25 similar transfer functions with these statistics:
+
+        -8 <=     Cubic Terms   <= 8
+        -8 <=   Quadratic Terms <= 8
+        -8 <=    Linear Terms   <= 8
+ 
+This time, we tested the same set of poles (listed below) for each:
+
+               [0, 17, 177, 439, 350, 223, 44, 0]
+
+##################################################################
+
+-10,-9,-4,-3,-2,5,6,30,
+-10,-1,3,-4,-7,7,8,10,
+-7,0,3,4,5,7,8,9,
+-9,-4,4,5,7,-8,8,10,
+-9,-1,1,-3,3,-7,9,10,
+-6,0,-1,1,-4,4,9,10,
+-10,-2,4,-5,6,7,-8,10,
+-9,-1,2,-4,6,-8,9,10,
+-19,-17,-16,0,1,16,17,18,
+-12,-10,-8,-5,-2,2,10,13,
+-15,-11,-8,-2,8,12,15,19,
+-17,-5,0,2,3,10,11,20,
+-20,-16,-15,1,2,8,19,20,
+-30,-13,-12,-11,-3,2,3,20,
+-15,-14,-12,-10,-5,9,10,16,
+-17,-16,-15,-11,-8,-6,-5,8,
+-88,-87,-20,-6,23,24,56,75,
+-71,-70,-69,-15,2,5,15,33,
+-48,-43,-41,-39,23,38,40,41,
+1,2,3,4,5,6,7,8,
+-31,-30,-29,-28,-27,2,3,5,
+2,3,5,7,11,13,17,19,
+23,29,31,37,41,43,47,53,
+50,60,80,101,121,138,141,143,
+-12,-11,-10,-9,9,10,11,12

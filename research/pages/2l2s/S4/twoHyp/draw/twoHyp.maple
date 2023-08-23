@@ -1,0 +1,239 @@
+#twoHyp.maple
+#
+#   This plots the first quadric
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+############################################
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+
+Wedge := proc(Sph)
+local Pairs, i, j, wedge:
+ wedge := linalg[matrix](6, 6, 0):
+ Pairs := combinat[choose]([1,2,3,4],2):
+ for i from 1 to 6 do
+  for j from 1 to 6 do
+   wedge[i,j] := linalg[det](linalg[submatrix](Sph,Pairs[i],Pairs[j])):
+  od:
+ od:
+ evalm(wedge)
+end:
+
+Equation := proc(a,b,c,r)
+local  plucker:
+ plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+ linalg[innerprod](plucker,Wedge(Sphere(a,b,c,r)),plucker)
+end:
+
+Quadric := (a,b,c,d,e,f,g,h,x,y) ->
+  linalg[matrix]([
+   [ a , b , c , d ],
+   [ b , e , f , g ],
+   [ c , f , h , x ],
+   [ d , g , x , y ]]):
+
+##########################################
+#  We assume that A = b = 1.
+#  a is the function a(B) stored in aSOLS
+#
+TanPoint := proc(Q,B,a)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t*a,t]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch*a), touch]
+end:
+# [1,B,1,b]
+#  B is the function B(b) stored in aSOLS
+TanPointb := proc(Q,B,b)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t,t*b]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch), simplify(touch*b)]
+end:
+
+Coords:=linalg[vector]([1,X,Y,Z]):
+plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+
+s2:=2^(1/2):
+#
+# This hyperboloid is very interesting:  All 12 components are real;
+# the ideal factors over an extension of Z.
+#
+##################################################################
+
+F:=subs(p02=a*A,p03=b*A,p12=a*B,p13=b*B,p01=0,p23=0,
+    linalg[innerprod](plucker,Wedge(Quadric(-1,0,-1,0,1,0,0,1,0,-1)),plucker)):
+
+aSOLS:=[solve(subs(b=1,A=1,F)=0,a)]:
+bSOLS:=[solve(subs(a=1,A=1,F)=0,B)]: 
+
+macro(pacr=COLOR(RGB, 1, .8, 0)):
+macro(pagr=COLOR(RGB, .5, 1, .5)):
+
+#########################################################
+# Family of initial hyperbola
+#
+#Ideal1:= [x,h+y,g,f,d,c^2+e*y,b,a+e]:
+Family1:=Quadric(-1,0,c,0,1,0,0,c^2,0,-c^2):
+#F;c:=1:
+#subs(p02=a*A,p03=b*A,p12=a*B,p13=b*B,p01=0,p23=0,
+#    linalg[innerprod](plucker,Wedge(Family1),plucker));quit;
+
+linalg[innerprod](Coords,Family1,Coords)-
+expand(X^2+(c*Y+1)^2-(c*Z)^2-2):
+c:=1:
+s2:=s2:
+Hyp:=plot3d([c*(s2*cos(th)+t*sin(th)),
+              (-s2*sin(th)+t*cos(th)-1),t]
+             ,t=-7/2..7/2,th=-Pi..Pi,color=coral,grid=[20,30]):
+TC1:=TanPoint(Family1,B,aSOLS[1]):
+TC2:=TanPoint(Family1,B,aSOLS[2]):
+TC3:=TanPointb(Family1,bSOLS[1],b):
+TC4:=TanPointb(Family1,bSOLS[2],b):
+bS:=1/fsolve(TC3[3]=69/20):
+
+######################################################
+
+
+AA:=display3d(
+spacecurve([t,0,0],t=-18..18,color=red,thickness=5),
+Hyp,
+spacecurve([TC1[1],0.002+TC1[2],TC1[3]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+spacecurve([TC2[1],0.003+TC2[2],TC2[3]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+spacecurve([TC3[1]-0.003,TC3[2],TC3[3]],b=-bS..bS,color=blue,thickness=3,numpoints=100),
+spacecurve([0.003+TC4[1],TC4[2],TC4[3]],b=-bS..bS,color=blue,thickness=3,numpoints=100),
+#
+#  The tangent lines
+#
+spacecurve([1  ,0,t],t=-6..-0.4,color=pagr,numpoints=2),
+spacecurve([1  ,0,t],t=0.3..6,color=pagr,numpoints=2),
+spacecurve([0.986,t*subs(B=0.986,aSOLS[1]),t],t=-6..-0.5,color=pagr,numpoints=2),
+spacecurve([0.986,t*subs(B=0.986,aSOLS[1]),t],t=0.1..6,color=pagr,numpoints=2),
+spacecurve([0.986,t*subs(B=0.986,aSOLS[2]),t],t=-6..-.01,color=pagr,numpoints=2),
+spacecurve([0.986,t*subs(B=0.986,aSOLS[2]),t],t=0.5..6,color=pagr,numpoints=2),
+spacecurve([0.935,t*subs(B=0.935,aSOLS[1]),t],t=-6..-0.6,color=pagr,numpoints=2),
+spacecurve([0.935,t*subs(B=0.935,aSOLS[1]),t],t=-0.2..6,color=pagr,numpoints=2),
+spacecurve([0.935,t*subs(B=0.935,aSOLS[2]),t],t=-6..0.2,color=pagr,numpoints=2),
+spacecurve([0.935,t*subs(B=0.935,aSOLS[2]),t],t=0.5..6,color=pagr,numpoints=2),
+spacecurve([0.84,t*subs(B=0.84,aSOLS[1]),t],t=-0.4..6,color=pagr,numpoints=2),
+spacecurve([0.84,t*subs(B=0.84,aSOLS[1]),t],t=-6..-0.8,color=pagr,numpoints=2),
+spacecurve([0.84,t*subs(B=0.84,aSOLS[2]),t],t=-6..0.3,color=pagr,numpoints=2),
+spacecurve([0.84,t*subs(B=0.84,aSOLS[2]),t],t=0.9..6,color=pagr,numpoints=2),
+spacecurve([0.65,t*subs(B=0.65,aSOLS[1]),t],t=-6..-1.2,color=pagr,numpoints=2),
+spacecurve([0.65,t*subs(B=0.65,aSOLS[1]),t],t=-0.5..6,color=pagr,numpoints=2),
+spacecurve([0.65,t*subs(B=0.65,aSOLS[2]),t],t=-6..0.7,color=pagr,numpoints=2),
+spacecurve([0.65,t*subs(B=0.65,aSOLS[2]),t],t=1.3..6,color=pagr,numpoints=2),
+spacecurve([0.39,t*subs(B=0.39,aSOLS[1]),t],t=-6..-1.7,color=pagr,numpoints=2),
+spacecurve([0.39,t*subs(B=0.39,aSOLS[1]),t],t=-1..6,color=pagr,numpoints=2),
+spacecurve([0.39,t*subs(B=0.39,aSOLS[2]),t],t=-6..1.1,color=pagr,numpoints=2),
+spacecurve([0.39,t*subs(B=0.39,aSOLS[2]),t],t=1.5..6,color=pagr,numpoints=2),
+spacecurve([0.13,t*subs(B=0.13,aSOLS[1]),t],t=-6..-1.8,color=pagr,numpoints=2),
+spacecurve([0.13,t*subs(B=0.13,aSOLS[1]),t],t=-1.1..6,color=pagr,numpoints=2),
+spacecurve([0.13,t*subs(B=0.13,aSOLS[2]),t],t=-6..1.,color=pagr,numpoints=2),
+spacecurve([0.13,t*subs(B=0.13,aSOLS[2]),t],t=2..6,color=pagr,numpoints=2),
+#
+spacecurve([-0.13,t*subs(B=-0.13,aSOLS[1]),t],t=-6..-1.8,color=pagr,numpoints=2),
+spacecurve([-0.13,t*subs(B=-0.13,aSOLS[1]),t],t=-1.1..6,color=pagr,numpoints=2),
+spacecurve([-0.13,t*subs(B=-0.13,aSOLS[2]),t],t=-6..1.,color=pagr,numpoints=2),
+spacecurve([-0.13,t*subs(B=-0.13,aSOLS[2]),t],t=2..6,color=pagr,numpoints=2),
+spacecurve([-0.39,t*subs(B=-0.39,aSOLS[1]),t],t=-6..-1.7,color=pagr,numpoints=2),
+spacecurve([-0.39,t*subs(B=-0.39,aSOLS[1]),t],t=-0.9..6,color=pagr,numpoints=2),
+spacecurve([-0.39,t*subs(B=-0.39,aSOLS[2]),t],t=-6..1.,color=pagr,numpoints=2),
+spacecurve([-0.39,t*subs(B=-0.39,aSOLS[2]),t],t=1.6..6,color=pagr,numpoints=2),
+spacecurve([-0.65,t*subs(B=-0.65,aSOLS[1]),t],t=-6..-1.2,color=pagr,numpoints=2),
+spacecurve([-0.65,t*subs(B=-0.65,aSOLS[1]),t],t=-0.5..6,color=pagr,numpoints=2),
+spacecurve([-0.65,t*subs(B=-0.65,aSOLS[2]),t],t=-6..0.7,color=pagr,numpoints=2),
+spacecurve([-0.65,t*subs(B=-0.65,aSOLS[2]),t],t=1.3..6,color=pagr,numpoints=2),
+spacecurve([-0.84,t*subs(B=-0.84,aSOLS[1]),t],t=-0.4..6,color=pagr,numpoints=2),
+spacecurve([-0.84,t*subs(B=-0.84,aSOLS[1]),t],t=-6..-0.8,color=pagr,numpoints=2),
+spacecurve([-0.84,t*subs(B=-0.84,aSOLS[2]),t],t=-6..0.3,color=pagr,numpoints=2),
+spacecurve([-0.84,t*subs(B=-0.84,aSOLS[2]),t],t=0.9..6,color=pagr,numpoints=2),
+spacecurve([-0.935,t*subs(B=-0.935,aSOLS[1]),t],t=-6..-0.6,color=pagr,numpoints=2),
+spacecurve([-0.935,t*subs(B=-0.935,aSOLS[1]),t],t=-0.2..6,color=pagr,numpoints=2),
+spacecurve([-0.935,t*subs(B=-0.935,aSOLS[2]),t],t=-6..0.2,color=pagr,numpoints=2),
+spacecurve([-0.935,t*subs(B=-0.935,aSOLS[2]),t],t=0.5..6,color=pagr,numpoints=2),
+spacecurve([-0.986,t*subs(B=-0.986,aSOLS[1]),t],t=-6..-0.5,color=pagr,numpoints=2),
+spacecurve([-0.986,t*subs(B=-0.986,aSOLS[1]),t],t=0.1..6,color=pagr,numpoints=2),
+spacecurve([-0.986,t*subs(B=-0.986,aSOLS[2]),t],t=-6..-.01,color=pagr,numpoints=2),
+spacecurve([-0.986,t*subs(B=-0.986,aSOLS[2]),t],t=0.5..6,color=pagr,numpoints=2),
+spacecurve([-1 ,0,t],t=-6..-0.3,color=pagr,numpoints=2),
+spacecurve([-1 ,0,t],t=0.4..6,color=pagr,numpoints=2),
+#
+#  Second set of tangent lines
+#
+spacecurve([s2,t,0],t=-9..9,color=pagr,numpoints=2),
+spacecurve([1.4166,t*subs(B=1.4166,aSOLS[1]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([1.4166,t*subs(B=1.4166,aSOLS[2]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([1.427,t*subs(B=1.427,aSOLS[1]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([1.427,t*subs(B=1.427,aSOLS[2]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([1.455,t*subs(B=1.455,aSOLS[1]),t],t=-3..3,color=pagr,numpoints=2),
+spacecurve([1.455,t*subs(B=1.455,aSOLS[2]),t],t=-3..3,color=pagr,numpoints=2),
+spacecurve([1.505,t*subs(B=1.505,aSOLS[1]),t],t=-5..5,color=pagr,numpoints=2),
+spacecurve([1.505,t*subs(B=1.505,aSOLS[2]),t],t=-5..5,color=pagr,numpoints=2),
+spacecurve([1.63,t*subs(B=1.63,aSOLS[1]),t],t=-6..6,color=pagr,numpoints=2),
+spacecurve([1.63,t*subs(B=1.63,aSOLS[2]),t],t=-6..6,color=pagr,numpoints=2),
+spacecurve([1.89,t*subs(B=1.89,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([1.89,t*subs(B=1.89,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([2.28,t*subs(B=2.28,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([2.7,t*subs(B=2.7,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([2.7,t*subs(B=2.7,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.1,t*subs(B=3.1,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.1,t*subs(B=3.1,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.5,t*subs(B=3.5,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.5,t*subs(B=3.5,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.9,t*subs(B=3.9,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([3.9,t*subs(B=3.9,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([4.3,t*subs(B=4.3,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([4.3,t*subs(B=4.3,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([4.7,t*subs(B=4.7,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([4.7,t*subs(B=4.7,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+#
+spacecurve([-s2,t,0],t=-9..9,color=pagr,numpoints=2),
+spacecurve([-1.4166,t*subs(B=-1.4166,aSOLS[1]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([-1.4166,t*subs(B=-1.4166,aSOLS[2]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([-1.427,t*subs(B=-1.427,aSOLS[1]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([-1.427,t*subs(B=-1.427,aSOLS[2]),t],t=-2..2,color=pagr,numpoints=2),
+spacecurve([-1.455,t*subs(B=-1.455,aSOLS[1]),t],t=-3..3,color=pagr,numpoints=2),
+spacecurve([-1.455,t*subs(B=-1.455,aSOLS[2]),t],t=-3..3,color=pagr,numpoints=2),
+spacecurve([-1.505,t*subs(B=-1.505,aSOLS[1]),t],t=-5..5,color=pagr,numpoints=2),
+spacecurve([-1.505,t*subs(B=-1.505,aSOLS[2]),t],t=-5..5,color=pagr,numpoints=2),
+spacecurve([-1.63,t*subs(B=-1.63,aSOLS[1]),t],t=-6..6,color=pagr,numpoints=2),
+spacecurve([-1.63,t*subs(B=-1.63,aSOLS[2]),t],t=-6..6,color=pagr,numpoints=2),
+spacecurve([-1.89,t*subs(B=-1.89,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-1.89,t*subs(B=-1.89,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-2.28,t*subs(B=-2.28,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-2.7,t*subs(B=-2.7,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-2.7,t*subs(B=-2.7,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.1,t*subs(B=-3.1,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.1,t*subs(B=-3.1,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.5,t*subs(B=-3.5,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.5,t*subs(B=-3.5,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.9,t*subs(B=-3.9,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-3.9,t*subs(B=-3.9,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-4.3,t*subs(B=-4.3,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-4.3,t*subs(B=-4.3,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-4.7,t*subs(B=-4.7,aSOLS[1]),t],t=-7..7,color=pagr,numpoints=2),
+spacecurve([-4.7,t*subs(B=-4.7,aSOLS[2]),t],t=-7..7,color=pagr,numpoints=2),
+#
+#view=[-6..13,-6.01..6.01,-4.5..4.5],axes=none):
+view=[-7..7,-8.01..4,-4.5..4.5],axes=none):
+
+#plotsetup(ps,plotoutput=`twoHyp.eps`,
+#         plotoptions=`color,portrait,width=4in,height=3in,noborder`):
+plotsetup(gif,plotoutput=`twoHyp.gif`,plotoptions=`height=600,width=550`):
+
+#display(AA,orientation=[40,60]);
+#display(AA,orientation=[0,90]);
+
+display(AA,orientation=[50,60]);
+

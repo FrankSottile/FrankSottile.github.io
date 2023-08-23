@@ -1,0 +1,101 @@
+#testCondition.maple
+#
+#  This maple script tests the last technical condition for a graph to be 
+#   a dual equivalence graph (iv.c) in the paper.   It uses, heavily, the
+#   known structure of dual equvalence graphs from chains in the Grassmannian
+#   Bruhat order of length five.
+#
+#  The condition (iv.c) concerns the neighborhood of what is called in the paper a
+#   flat 4-chain, which is sequence c_1, c_2, ..., c_2r of distinct vertices in 
+#   a graph where each of the admits a 2- and a 4-edge, with the 4-edge on 
+#   c_{2j-1} connecting it to c_{2j}, where c_3, c_5, ..., c_{2r-1} do not
+#   admit a 3-edge, and c_{2j} is connected to c_{2j+1} by an alternating sequence 
+#   of 2- and 3- edges.    By the structure of the graphs for chains of length 4,
+#   this is either a single 2-edge or a sequence 2-3-2.  Furthermore, necessarily
+#   c_{2j} has a 3-edge.
+#
+#   ----> it is clear if c_1 or c_2r need to admit a 2-edge <----
+#
+#  This condition (iv.c) states that, given a flat 4-chain, c_1,c_2,...,c_{2r}, if
+#   for some j c_{2j-1} and c_{2j} have a 5-edge, then either c_1,...,c_{2j} have
+#   a five-edge, or else c_{2j-1},...,c_{2r} all have a five edge.  This condition
+#   is vacuous unless 1<j<r, in particular r must be at least 3, and fkat 4-chains have to 
+#   have at least six elements in order for this condition to matter.
+#
+###################################################################################################
+interface(quiet=true):
+n:=6:
+read("procedures.maple"):
+############################################################################
+#
+#     A Note on the Data Structure of a Graph
+#
+#  It reads the isomorphism types of the graphs in Autmorphism_Types.6/
+#   These are stored in maple-readable files at.k, where k is the number
+#   of vertices.  Each file defines a list Isomorphism_Classes[6,k] of
+#   representatives of isomorphism classes of graphs.  Each representative
+#   is a quadruple [A,B,C,D], where
+#    A := List of vertices labeled by descents
+#    B := Set of edges, which are triples [type, endpoint_1, endpoint_2]
+#    C := List of vertices labeled by words in the Grassmannian Bruhat order
+#    D := Canonical decomposition of graph as a table of shells at a given
+#          radius from the lexicographically least vertex.
+#
+#     The Following is precomputed, and necessary
+#
+sizes[6]:= { 1  ,   5    ,  9  , 10  ,  14   ,16 ,   19  ,  21 ,  26  ,35 , 
+#           1,1  1,1,1,1   1,1   1,1  2,2,4,4  1  9,2,9,2  5,5  13,13  8,8 
+#-----------------------------------------------------------------
+   37 ,   40   , 42 ,  45   ,  47 ,  54  ,   56   , 59 , 
+# 1,1   8,2,8,2  1,1 1,1,1,1  4,4  1,1,1   5,2,5,2  1,1
+#-----------------------------------------------------------------
+         61     ,  66  , 75 ,80, 91 ,96}:
+#   1,4,1,1,4,1    3,3   1,1  2  1,1  2
+#verbose:=true:
+#
+verbose:=false:
+############################################################################
+#
+#  We loop over all isomorphism classes of graphs
+#
+for k in sizes[6] do 
+#k:=21:
+ read(sprintf("Automorphism_Types.6/at.%d",k)):
+  for j from 1 to nops(Isomorphism_Classes[6,k]) do
+  Graph:=Isomorphism_Classes[6,k][j]:
+  #
+  #  We generate all long (length six or greater) flat 4-chains in the Graph
+  #
+  flatFourChains:=makeFlatFourChains(Graph);
+  #
+  #  For each, we test if a middle pair  c_{2*ii-1}, c_{2*ii} both admit a 5-edge.
+  #
+  for flatFourChain in flatFourChains do 
+   for ii from 2 to nops(flatFourChain)/2-1 do 
+    #
+    #   If a middle pair simultaneously admits a 5-edge, we check if either 
+    #    the preceeding elements of the chain (firstHalf) or the subsequent
+    #    elements of the chain (secondHalf) admit a 5-edge
+    #
+    if ({flatFourChain[2*ii-1],flatFourChain[2*ii]} subset endPoints[5]) then 
+       firstHalf := evalb( {flatFourChain[1..2*ii][]} subset endPoints[5]):
+       secondHalf:= evalb( {flatFourChain[2*ii-1..nops(flatFourChain)][]} subset endPoints[5]);
+       lprint(k,j, firstHalf or secondHalf );
+      
+#         if nops(flatFourChain)>6 then lprint(k, j, flatFourChain); end if:
+         if [k,j]=[21,4] then 
+          lprint(k, j, flatFourChain, {flatFourChain[]} intersect endPoints[5]); 
+          quit;
+         end if:
+  
+
+    end if;
+   end do:
+   
+  end do:
+ end do:
+end do:
+
+quit;
+
+

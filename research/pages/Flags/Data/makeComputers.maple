@@ -1,0 +1,147 @@
+#makeComputers.maple
+#
+#  This makes the .html file of the computers, with useage
+#
+##############################################################
+interface(quiet=true):
+##############################################################
+read(`HTML_Procedures.maple`):
+read(ListOfFiles):
+read(Directories):
+##############################################################
+
+##############################################################
+Computers:=["Ananke",  "Cataldi", "Calypso", "Chevalley",  
+            "Clavius", "Fermat", "Hodge", 
+            "Phoebe", "Pieri", "Praxis", 
+            "rcf1422-1", "rcf1422-2",
+            "rcf1422-3", "rcf1422-4", "rcf1422-5", "rcf1537-3",
+            "rcf1537-8", "rcf1537-9","rcf1537-10", "Witherlin",
+            "Noether", "Rota",  "Schubert", "Schur", 
+            "MSRI 730M", "MSRI 1.2G", "MSRI 1.4G", "MSRI 2.4G",
+            "TAMU"]:
+###################################################################
+Stats["Ananke"]    :=["Pentium 4",    "2.4 GHz","512 KB","  1 GB"]:    
+Stats["Cataldi"]   :=["Pentium III",  "993 MHz","256 KB","512 MB"]:    
+Stats["Calypso"]   :=["Pentium 4",      "2 GHz","512 KB"  ,"1 GB"]:
+Stats["Chevalley"] :=["Pentium M",    "1.3 GHz","128 KB","512 MB"]:     
+Stats["Clavius"]   :=["Pentium III",  "993 MHz","256 KB","500 MB"]:     
+Stats["Fermat"]    :=["XEON",         "2.2 GHz","512 KB",  "1 GB"]:   
+Stats["Hodge"]     :=["Pentium III",  "933 MHz","256 KB","628 MB"]:
+Stats["Noether"]   :=["Pentium III",  "745 MHz","256 KB","192 MB"]:     
+Stats["Phoebe"]    :=["Pentium 4",      "2 GHz","512 KB"  ,"1 GB"]:
+Stats["Pieri"]     :=["Pentium III",  "800 MHz","256 KB",  "1 GB"]:
+Stats["Praxis"]    :=["Pentium III",  "731 MHz","256 KB","800 MB"]:
+Stats["Rota"]      :=["Crusoe TM5800",  "1 GHz","512 KB","256 MB"]:
+Stats["Schubert"]  :=["Pentium III",  "650 MHz","256 KB","256 MB"]:     
+Stats["Schur"]     :=["Pentium 4",    "1.8 GHz","512 KB","512 MB"]:
+Stats["rcf1422-1"] :=["Pentium II",   "450 MHz","512 KB","384 MB"]:     
+Stats["rcf1422-2"] :=["Pentium II",   "450 MHz","512 KB","384 MB"]:     
+Stats["rcf1422-3"] :=["Pentium III",  "930 MHz","256 KB","256 MB"]:     
+Stats["rcf1422-4"] :=["Pentium III",  "930 MHz","256 KB","256 MB"]:     
+Stats["rcf1422-5"] :=["Pentium II",   "400 MHz","512 KB","128 MB"]:     
+Stats["rcf1537-3"] :=["Celeron",      "700 MHz","128 KB","256 MB"]:
+Stats["rcf1537-8"] :=["Pentium III",  "930 MHz","256 KB","256 MB"]:
+Stats["rcf1537-9"] :=["Pentium III",  "930 MHz","256 KB","256 MB"]:
+Stats["rcf1537-10"]:=["Pentium III",  "930 MHz","256 KB","256 MB"]:
+Stats["Witherlin"] :=["Pentium III",  "665 MHz","256 KB","256 MB"]:
+###################################################################
+Stats["MSRI 730M"] :=["Pentium III", "730 MHz","256 KB","512 MB"]:
+Stats["MSRI 1.2G"] :=["Athlon",      "1.2 GHz","256 KB","256 MB"]: #
+Stats["MSRI 1.4G"] :=["Athlon",      "1.4 GHz","256 KB","256 MB"]: #
+Stats["MSRI 2.4G"] :=["XEON",        "2.4 GHz","1GB",   "512 KB"]:
+Stats["TAMU"]      :=["Pentium 4",   "3 GHz","512 KB","  1 GB"]:    
+###################################################################
+for machine in Computers do 
+ Time[machine]:=0:
+od:
+
+for dim from 4 to 8 do 
+ for flagMan in Directories[dim] do
+  directory:=convert(flagMan,string):
+  for NAME in Data[flagMan] do 
+   if NAME<>NULL then 
+    read(sprintf("%s/%s.data",directory,NAME)):
+    fixMachine():
+    ###############################
+    Time[Machine] :=Time[Machine]+(PreTime+GroebnerTime+RealTime):
+   end if:
+  end do:
+ end do:
+end do:
+################################################################
+#
+# An adhoc fix to Phoebe and Fermat doing the same long calculation
+#
+ FermatTime:=630.75 + 2078112.64 + 4353.51:
+ Time["Phoebe"]:=Time["Phoebe"]-FermatTime:
+ Time["Fermat"]:=Time["Fermat"]+FermatTime:
+################################################################
+#
+# An adhoc fix to Harley (Spin) and Schur doing the same long calculation
+#
+ SchurTime:=323.20 + 816053.99 + 21309.01:
+ Time["MSRI 2.4G"]:=Time["MSRI 2.4G"]-SchurTime:
+ Time["Schur"]:=Time["Schur"]+SchurTime:
+
+################################################################
+file := fopen("Computers.html", WRITE):
+
+fprintf(file, "<html> \n"):
+fprintf(file, "<head> \n"): 
+fprintf(file, "   <title>Computers Used</title> \n"): 
+fprintf(file, "</head> \n"): 
+fprintf(file, "<body BGCOLOR=#FFFFFF> \n"): 
+fprintf(file, " \n"):
+fprintf(file, "<h1>Computers</h1>  \n"):
+fprintf(file, "<hr COLOR=#0000FF size=2 noshade>  \n"):
+fprintf(file, " \n"):
+fprintf(file, "<TABLE> \n"):
+fprintf(file, " <TR> \n"):
+fprintf(file, "  <TD align=center><font color=red size=+2> \n"):
+fprintf(file, "        <B>Intel Processors (Running Linux)</B></FONT> \n"):
+fprintf(file, "  </TD> \n"):
+fprintf(file, " </TR> \n"):
+fprintf(file, " <TR> \n"):
+fprintf(file, "  <TD align=center> \n"):
+fprintf(file, "   <TABLE border=1> \n"):
+fprintf(file, "    <TR> \n"):
+fprintf(file, "     <TH>Computer</TH> \n"):
+fprintf(file, "     <TH>Processor</TH> \n"):
+fprintf(file, "     <TH>Speed</TH> \n"):
+fprintf(file, "     <TH>Cache</TH> \n"):
+fprintf(file, "     <TH>Memory</TH> \n"):
+fprintf(file, "     <TH colspan=2 align=center>Useage</TH> \n"):
+fprintf(file, "    </TR> \n"):
+########################################################################
+for machine in Computers do 
+ L:=Stats[machine]:
+ fprintf(file, "<!-----------------------------------------"):
+ fprintf(file, "---------------------------------------->\n"):
+ fprintf(file, "    <TR> \n"):
+ fprintf(file, "     <TD>%s</TD>",convert(machine,string)):
+ fprintf(file, "<TD>%s</TD>",L[1]):
+ fprintf(file, "<TD>%s</TD>\n     ",L[2]):
+ fprintf(file, "<TD>%s</TD>",L[3]):
+ fprintf(file, "<TD>%s</TD>",L[4]):
+ Msec:=Time[machine]/10^6:
+ GHZDa:=Time[machine]*SPEED[machine]/1000/3600/24:
+ fprintf(file, "<TD align=right>%5.2f Msec</TD>\n",Msec):
+ fprintf(file, "<TD align=right>%5.2f GHz-da</TD>\n",GHZDa):
+ fprintf(file, "    </TR>\n"):
+end do:
+########################################################################
+fprintf(file, "<!-----------------------------------------"):
+fprintf(file, "---------------------------------------->\n"):
+fprintf(file, "   </TABLE> \n"):
+fprintf(file, "  </TD> \n"):
+fprintf(file, " </TR> \n"):
+fprintf(file, "</TABLE> \n"):
+fprintf(file, " \n"):
+fprintf(file, "<hr COLOR=#0000FF size=2 noshade>  \n"):
+fprintf(file, " \n"):
+fprintf(file, "</body>  \n"):
+fprintf(file, "</html> \n"):
+########################################################################
+fclose(file):
+quit;

@@ -1,0 +1,18 @@
+#data.4.2.11.27
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^2*z^15 - h(z) = 0,
+#
+#  f, g, and h all have degree 4.
+#
+#######################################################
+k:=4:
+p:=2:
+l:=11:
+Iterations:=500:
+Instance:=1000:
+deg:=27:   #   Degree of the enumerative problem
+data:=[118077, 360943, 331600, 151308, 37107, 921, 44, 0, 0, 0, 0, 0, 0, 0]:
+Time:=952272.48:
+##############################################################

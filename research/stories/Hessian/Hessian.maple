@@ -1,0 +1,95 @@
+#Hessian.maple
+#
+# Frank Sottile
+# 24 November 2004
+# Mexico City
+#
+####################################################################
+#
+#   The copyright to this file, and the images it draws are owned by 
+# Frank Sottile.  We allow the free use of this, but you must first
+# ask permission of either Frank Sottile or Adriana Ortiz, and 
+# acknowledge our creation of these images.
+#
+####################################################################
+##############################################################
+interface(quiet=true):
+##############################################################
+#
+#    This file starts with a random degree d plane curve, 
+# computes its Hessian, and then finds the number of real 
+# critical points in both the x- and y- directions.  If both 
+# are sufficiently large, then it stores the result in a 
+# file.   This particular file works for sextics.  It needs
+# some tweaks for polynomials of other degrees
+#
+###############################################################
+#
+# d is the degree of the polynomial
+#
+d:=6:                
+#
+#    The file seed records the seed to aid in recovery from computer
+# shutdowns
+#
+file:=fopen("seed",WRITE):
+fprintf(file,"%d\n",_seed):
+fclose(file):
+#
+# size of the coefficients in the randomly generated polynomials
+#
+die:=rand(-80..80): 
+#
+###################################################################
+makePoly := proc()
+#
+# This procedure generates a random polynomial of degree d
+#
+ global n,die:
+ local i, j, f:
+ f:=0:
+ for i from 0 to d do
+  for j from 0 to d-i do
+   f:=f+die()*x^i*y^j:
+  end do:
+ end do:
+ return(f)
+end proc:
+###################################################################
+#
+#   This is the main loop.  Note that the code is rather simple.
+# As claimed, it generates the random polynomial, f, computes 
+# its hessian, H, and then determines the Number of Critical
+# Points (NCP) first in the projection to the x-axis, and if
+# there are enough to be interesting, does this for the y-projection.
+# Polynomials whose hessians have more than 20 such critical points
+# in each direction are saved for further study.
+#
+for i from 1 to 10000 do 
+ f:=makePoly():
+
+ H:=linalg[det](linalg[hessian](f,[x,y])):
+ A:=resultant(H, diff(H,y), x):
+ NCP:=nops(realroot(A)):
+ if NCP>20 then
+  B:=resultant(H, diff(H,x), y):
+  NCP:=min(NCP,nops(realroot(B))):
+
+  if NCP>20 then
+   file:=fopen(sprintf("%d.data",NCP),APPEND):
+   fprintf(file,",%a\n",f):
+   fclose(file):
+  end if:
+ end if:
+end do:
+###################################################################
+#
+#  This records the cumulative time taken in the computation.
+#
+read("TIME"):
+file:=fopen(TIME,WRITE):
+fprintf(file,"Time:=%6.2f: ",Time+time()):
+fclose(file):
+
+quit;
+

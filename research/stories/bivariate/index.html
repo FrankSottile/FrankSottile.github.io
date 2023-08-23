@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Bivariate Semialgebraic Splines</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<!---------------------------------------->
+<table>
+  <tr valign=top>
+   <td>
+     <IMG SRC="C1.png" ALT="C1 Semialgebraic Splines">
+   </td>
+   <td width=40></td>
+    <td>
+      <h1><a href="../../pdf/bivariate.pdf">Bivariate Semialgebraic Splines</a></h1>
+      <font size="+2"> 
+      <A HREF="https://midipasq.github.io/">Michael DiPasquale</A> and 
+      <a href="../../../index.html">Frank Sottile</a>.</font>
+      <br><br>
+      <font size=+1>
+      <img src="../../images/pdf.gif"> <a href="../../pdf/bivariate.pdf">Bivariate Semialgebraic Splines</a>
+     <br> Macaulay 2 <a href="bivariateSplines.m2">Code for the examples in this paper</a>
+          &nbsp; &nbsp; Its <a href="bivariateSplines.out">output</a>.</font>
+    </td>
+  </tr>
+</table>
+    <hr>
+ Semialgebraic splines are bivariate splines over meshes whose edges are arcs of algebraic curves.
+ They were first considered by Wang, Chui, and Stiller.
+ We compute the dimension of the space of semialgebraic splines in two extreme cases.
+ If the polynomials defining the edges span a three-dimensional space of polynomials, then we show that the dimensions
+ can be reduced to that of rectilinear meshes.
+ If the mesh is sufficiently generic, we give a formula for the dimension of the spline space valid in large degree and
+ bound how large the degree must be for the formula to hold.
+ We also study the dimension of the spline space in examples which do not satisfy either extreme.
+ The results are derived using commutative and homological algebra.
+<hr>
+<font size=+q>We display a <i>C</i><sup>0</sup>-spline and a <i>C</i><sup>1</sup>-spline
+  defined on a rectangle  in <b>R</b><sup>2</sup> subdivided into eight regions by the two
+parabolas and the ine segment as shown.
+<table border=1>
+ <!--------------------------------------------------------------------------->
+ <tr>
+  <td align=center>
+    <img src="rectangle.png">
+  </td>
+  <td>
+    <a href="C0_movie.gif"><img src="C0_sm_movie.gif"></a>
+  </td>
+  <td>
+    <a href="C1_movie.gif"><img src="C1_sm_movie.gif"></a>
+  </td>
+ 
+ </tr>
+ <!--------------------------------------------------------------------------->
+ <tr>
+  <td  colspan=6>
+    The movies of <i>C</i><sup>0</sup> splines were created using the maple file
+    <a href="C0.maple"><tt>C0.maple</tt></a>.<br>
+   The movies of <i>C</i><sup>1</sup> splines were created using the maple file
+    <a href="C1.maple"><tt>C1.maple</tt></a>.
+  </td>  
+ <tr>
+</table><br>
+<!---------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<address></address>
+<i><!-- hhmts start -->Last modified: Mon Jan 13 14:45:15 CET 2020 <!-- hhmts end --></i>
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12943815-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+#data.6.3.6.36
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^3*z^12 - h(z) = 0,
+#
+#  f, g, and h all have degree 6.
+#
+#######################################################
+k:=6:
+p:=3:
+l:=6:
+Iterations:=500:
+Instance:=1000:
+deg:=36:   #   Degree of the enumerative problem
+data:=[9732, 92106, 455186, 349719, 84194, 8713, 350, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+Time:=759597.07:
+##############################################################

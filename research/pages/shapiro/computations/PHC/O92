@@ -1,0 +1,130 @@
+v*a+ 5*v*g+ 2*v*c+v*e+ 3*v*w-v*s+ 5*v*b+ 2*t*a+ 5*t*g+ 4*t*c+ 5*t*e+t*u+ 4
+*t*w+ 4*t*b+ 5*a*x+ 3*a*f+ 4*a*d+a*h+ 2*a*y+ 3*a*z+x*g+ 3*x*c+ 4*x*e-3*x*u
+-4*x*s+ 2*x*b-4*g*f-4*g*d+g*y+ 3*g*z+ 2*c*f+ 4*c*h+c*y+ 2*c*z-2*e*d+ 4*e*h+e
+*y+ 2*e*z-f*u-4*f*w-5*f*s+ 2*f*b-2*u*d-5*u*h+ 2*u*y+ 4*u*z-3*w*d-w*h+ 3*w*y
++ 5*w*z-4*d*s+ 5*d*b-5*h*s+ 4*h*b+ 4*y*s+ 2*y*b+ 4*z*s+ 5*z*b+v+ 4*t+a+ 4*x
+-4*g-5*c-2*e+ 4*f-5*u-2*w+ 3*d+ 2*h+ 2*y+ 5*z-4*s+ 1;
+ 3*v*a+ 5*v*g+ 2*v*c+ 2*v*e+ 2*v*w-5*v*s+ 5*v*b+ 4*t*a+ 2*t*g+t*c+ 5*t*e+
+ 5*t*u+ 2*t*w+ 3*t*b+ 3*a*x+ 3*a*f+ 3*a*d+ 4*a*h+ 3*a*y+ 3*a*z+x*g+ 4*x*c+ 5
+*x*e-2*x*u-2*x*s+ 3*x*b-g*f-4*g*d+ 2*g*y+ 5*g*z+c*f+ 4*c*h+ 5*c*y+ 4*c*z-e*
+d+e*h+ 3*e*y+ 4*e*z-2*f*u-5*f*w-5*f*s+f*b-2*u*d-5*u*h+ 4*u*y+ 5*u*z-4*w*d-w
+*h+w*y+ 4*w*z-d*s+ 5*d*b-2*h*s+ 3*h*b+ 2*y*s+ 5*y*b+z*s+z*b+ 4*v+t+ 2*a+ 5*
+x-3*g-5*c-e+ 3*f-5*u-3*w+ 3*d+ 5*h+y+ 3*z-3*s+ 5;
+v*a+v*g+v*c+ 3*v*e+ 2*v*w-5*v*s+ 5*v*b+ 3*t*a+t*g+ 4*t*c+t*e+ 5*t*u+ 3*t*w
++ 5*t*b+ 2*a*x+ 3*a*f+ 2*a*d+a*h+a*y+ 4*a*z+ 2*x*g+ 4*x*c+ 5*x*e-2*x*u-3*x*
+s+x*b-5*g*f-g*d+ 4*g*y+ 3*g*z+ 2*c*f+c*h+ 2*c*y+ 2*c*z-2*e*d+ 5*e*h+e*y+ 2*
+e*z-3*f*u-5*f*w-f*s+ 5*f*b-u*d-u*h+ 2*u*y+ 4*u*z-4*w*d-2*w*h+w*y+ 4*w*z-4*d
+*s+d*b-h*s+ 5*h*b+ 3*y*s+ 2*y*b+z*s+ 3*z*b+ 3*v+ 3*t+a+ 2*x-5*g-c-5*e+ 2*f
+-5*u-w+d+ 2*h+ 2*y+ 5*z-5*s+ 1;
+ 2*v*a+v*g+v*c+ 3*v*e+ 2*v*w-4*v*s+ 5*v*b+ 5*t*a+ 3*t*g+ 5*t*c+ 2*t*e+ 4*t
+*u+ 2*t*w+ 4*t*b+a*x+ 4*a*f+ 4*a*d+a*h+ 2*a*y+ 5*a*z+ 4*x*g+ 4*x*c+x*e-2*x*
+u-2*x*s+ 4*x*b-g*f-2*g*d+g*y+g*z+ 5*c*f+ 2*c*h+ 2*c*y+ 3*c*z-5*e*d+e*h+ 3*e
+*y+ 5*e*z-3*f*u-f*w-2*f*s+ 3*f*b-u*d-u*h+ 2*u*y+ 3*u*z-4*w*d-4*w*h+ 3*w*y+
+ 5*w*z-5*d*s+ 3*d*b-3*h*s+ 5*h*b+ 2*y*s+ 3*y*b+z*s+ 5*z*b+ 3*v+t+ 5*a+x-5*g
+-3*c-3*e+ 2*f-5*u-4*w+ 4*d+ 3*h+ 3*y+ 4*z-4*s+ 5;
+ 4*v*a+v*g+v*c+ 3*v*e+ 3*v*w-3*v*s+ 5*v*b+ 4*t*a+ 3*t*g+ 4*t*c+ 4*t*e+ 3*t
+*u+ 3*t*w+ 4*t*b+a*x+ 2*a*f+a*d+ 2*a*h+a*y+ 3*a*z+x*g+ 4*x*c+ 3*x*e-3*x*u-3
+*x*s+ 2*x*b-4*g*f-3*g*d+ 3*g*y+ 4*g*z+c*f+ 3*c*h+c*y+ 4*c*z-e*d+ 4*e*h+ 3*e
+*y+e*z-3*f*u-3*f*w-4*f*s+f*b-u*d-u*h+u*y+u*z-4*w*d-w*h+ 4*w*y+ 3*w*z-4*d*s+
+ 2*d*b-3*h*s+ 3*h*b+y*s+ 5*y*b+ 2*z*s+ 3*z*b+ 5*v+t+a+ 4*x-3*g-2*c-e+ 3*f-5*
+u-2*w+ 2*d+ 5*h+ 3*y+ 3*z-4*s+ 5;
+v*a+v*g+ 3*v*c+ 2*v*e+v*w-4*v*s+ 4*v*b+ 5*t*a+t*g+t*c+ 2*t*e+ 4*t*u+ 2*t*w
++ 2*t*b+ 4*a*x+a*f+ 4*a*d+ 2*a*h+ 5*a*y+ 5*a*z+ 2*x*g+x*c+x*e-x*u-2*x*s+ 5*
+x*b-2*g*f-4*g*d+ 4*g*y+ 5*g*z+ 3*c*f+ 4*c*h+ 3*c*y+ 5*c*z-3*e*d+ 2*e*h+ 3*e
+*y+ 3*e*z-2*f*u-f*w-2*f*s+ 5*f*b-3*u*d-u*h+ 2*u*y+ 4*u*z-w*d-2*w*h+ 3*w*y+w
+*z-d*s+d*b-h*s+ 5*h*b+ 3*y*s+ 4*y*b+ 5*z*s+ 5*z*b+ 4*v+ 3*t+ 3*a+ 4*x-5*g-c
+-5*e+ 3*f-4*u-5*w+d+ 2*h+ 2*y+ 2*z-2*s+ 1;
+v*a+ 5*v*g+ 2*v*c+ 4*v*e+ 5*v*w-5*v*s+ 4*v*b+ 4*t*a+ 5*t*g+ 4*t*c+ 3*t*e+
+ 5*t*u+ 2*t*w+ 3*t*b+ 3*a*x+ 4*a*f+ 5*a*d+ 5*a*h+a*y+ 3*a*z+ 4*x*g+x*c+ 5*x*
+e-5*x*u-2*x*s+ 4*x*b-2*g*f-5*g*d+g*y+ 3*g*z+ 3*c*f+ 5*c*h+c*y+ 4*c*z-3*e*d+
+ 2*e*h+ 4*e*y+ 4*e*z-4*f*u-5*f*w-3*f*s+ 4*f*b-2*u*d-5*u*h+ 3*u*y+u*z-w*d-4*w
+*h+w*y+ 2*w*z-4*d*s+ 2*d*b-5*h*s+ 5*h*b+ 4*y*s+ 2*y*b+z*s+ 4*z*b+v+t+ 3*a+
+ 4*x-5*g-2*c-4*e+f-4*u-4*w+d+ 4*h+ 4*y+ 2*z-3*s+ 2;
+ 5*v*a+ 5*v*g+ 3*v*c+ 2*v*e+ 2*v*w-2*v*s+v*b+t*a+t*g+ 4*t*c+t*e+ 2*t*u+ 2*
+t*w+ 2*t*b+ 4*a*x+ 4*a*f+ 5*a*d+a*h+ 4*a*y+ 5*a*z+ 5*x*g+ 4*x*c+ 3*x*e-2*x*
+u-2*x*s+ 3*x*b-5*g*f-5*g*d+ 4*g*y+ 5*g*z+ 4*c*f+ 5*c*h+ 5*c*y+ 2*c*z-4*e*d+
+ 5*e*h+ 2*e*y+e*z-2*f*u-3*f*w-f*s+ 4*f*b-3*u*d-5*u*h+ 4*u*y+u*z-4*w*d-5*w*h+
+w*y+ 5*w*z-4*d*s+ 5*d*b-h*s+ 4*h*b+ 4*y*s+ 3*y*b+ 2*z*s+ 5*z*b+ 4*v+ 5*t+a+
+x-4*g-5*c-4*e+ 2*f-u-3*w+ 2*d+ 2*h+ 5*y+ 4*z-2*s+ 4;
+ 2*v*a+v*g+ 5*v*c+v*e+ 4*v*w-3*v*s+ 4*v*b+ 4*t*a+ 2*t*g+ 4*t*c+t*e+ 3*t*u+
+t*w+t*b+a*x+ 3*a*f+ 3*a*d+a*h+ 3*a*y+ 2*a*z+ 3*x*g+ 4*x*c+ 5*x*e-4*x*u-x*s+
+ 5*x*b-5*g*f-3*g*d+ 3*g*y+ 2*g*z+ 5*c*f+ 3*c*h+ 3*c*y+ 2*c*z-5*e*d+ 5*e*h+ 4
+*e*y+ 4*e*z-f*u-5*f*w-f*s+ 2*f*b-5*u*d-u*h+ 5*u*y+ 4*u*z-4*w*d-3*w*h+ 4*w*y
++ 3*w*z-4*d*s+ 4*d*b-2*h*s+ 5*h*b+ 5*y*s+ 3*y*b+ 3*z*s+z*b+ 2*v+ 2*t+ 3*a+
+ 4*x-5*g-4*c-2*e+ 4*f-4*u-5*w+ 2*d+ 4*h+ 5*y+ 4*z-s+ 4;
+v*a+ 4*v*g+ 3*v*c+v*e+ 4*v*w-3*v*s+ 4*v*b+ 5*t*a+ 4*t*g+ 5*t*c+t*e+ 3*t*u+
+ 5*t*w+ 3*t*b+ 4*a*x+ 2*a*f+ 2*a*d+ 4*a*h+ 4*a*y+ 4*a*z+ 2*x*g+ 3*x*c+ 2*x*e
+-4*x*u-5*x*s+ 4*x*b-3*g*f-2*g*d+ 3*g*y+ 5*g*z+c*f+ 2*c*h+ 5*c*y+c*z-e*d+ 3*e
+*h+ 2*e*y+ 2*e*z-f*u-2*f*w-f*s+ 5*f*b-3*u*d-4*u*h+u*y+ 5*u*z-3*w*d-2*w*h+ 5
+*w*y+ 3*w*z-5*d*s+ 5*d*b-4*h*s+h*b+ 4*y*s+ 5*y*b+ 2*z*s+ 4*z*b+ 2*v+ 3*t+ 5
+*a+ 3*x-g-5*c-5*e+ 3*f-4*u-4*w+d+ 2*h+ 5*y+ 4*z-3*s+ 2;
+ 2*v*a+ 3*v*g+ 5*v*c+ 5*v*e+v*w-2*v*s+ 4*v*b+ 4*t*a+ 4*t*g+ 5*t*c+t*e+ 2*t
+*u+ 5*t*w+ 3*t*b+ 3*a*x+ 3*a*f+a*d+ 3*a*h+a*y+ 5*a*z+ 5*x*g+ 4*x*c+ 4*x*e-x
+*u-5*x*s+ 4*x*b-3*g*f-g*d+ 4*g*y+ 3*g*z+ 5*c*f+c*h+ 5*c*y+ 3*c*z-5*e*d+ 3*e
+*h+e*y+e*z-5*f*u-4*f*w-f*s+ 3*f*b-5*u*d-3*u*h+ 3*u*y+ 4*u*z-4*w*d-5*w*h+ 3*
+w*y+w*z-5*d*s+ 4*d*b-4*h*s+ 4*h*b+y*s+y*b+ 4*z*s+ 4*z*b+ 4*v+ 3*t+ 3*a+ 2*x
+-4*g-4*c-3*e+ 2*f-4*u-4*w+ 3*d+ 5*h+y+ 3*z-3*s+ 2;
+ 5*v*a+ 5*v*g+v*c+ 3*v*e+ 2*v*w-2*v*s+ 4*v*b+ 4*t*a+ 4*t*g+ 4*t*c+t*e+ 2*t
+*u+ 4*t*w+ 3*t*b+ 2*a*x+ 5*a*f+ 5*a*d+ 3*a*h+ 5*a*y+ 5*a*z+ 5*x*g+ 2*x*c+ 4
+*x*e-2*x*u-4*x*s+ 4*x*b-2*g*f-2*g*d+ 2*g*y+ 5*g*z+ 5*c*f+ 2*c*h+ 3*c*y+c*z
+-5*e*d+ 2*e*h+ 2*e*y+ 2*e*z-3*f*u-4*f*w-f*s+ 2*f*b-u*d-5*u*h+ 2*u*y+u*z-2*w*
+d-5*w*h+w*y+ 2*w*z-4*d*s+ 4*d*b-4*h*s+h*b+ 3*y*s+ 3*y*b+ 4*z*s+ 2*z*b+v+t+a
++ 4*x-g-4*c-2*e+f-4*u-4*w+ 5*d+ 4*h+ 3*y+ 4*z-3*s+ 4;
+ 2*v*a+ 3*v*g+v*c+ 3*v*e+ 4*v*w-4*v*s+ 3*v*b+ 4*t*a+ 3*t*g+ 5*t*c+ 3*t*e+
+ 4*t*u+ 3*t*w+t*b+a*x+a*f+ 4*a*d+ 2*a*h+ 3*a*y+ 2*a*z+ 5*x*g+ 5*x*c+ 4*x*e-4
+*x*u-3*x*s+x*b-4*g*f-2*g*d+ 4*g*y+ 4*g*z+ 2*c*f+ 2*c*h+ 2*c*y+c*z-2*e*d+ 4*
+e*h+e*y+ 4*e*z-3*f*u-4*f*w-3*f*s+ 5*f*b-u*d-3*u*h+ 4*u*y+u*z-5*w*d-5*w*h+ 4
+*w*y+w*z-5*d*s+ 4*d*b-3*h*s+ 4*h*b+ 5*y*s+ 3*y*b+ 5*z*s+ 5*z*b+ 3*v+ 3*t+ 4
+*a+ 5*x-4*g-4*c-5*e+ 4*f-3*u-w+ 2*d+h+ 2*y+ 2*z-s+ 3;
+ 2*v*a+v*g+ 5*v*c+ 3*v*e+ 2*v*w-2*v*s+v*b+ 5*t*a+ 3*t*g+t*c+ 4*t*e+ 2*t*u+
+t*w+ 3*t*b+ 5*a*x+ 4*a*f+ 3*a*d+ 2*a*h+ 4*a*y+ 3*a*z+ 3*x*g+ 5*x*c+ 4*x*e-2
+*x*u-x*s+ 3*x*b-5*g*f-4*g*d+g*y+ 4*g*z+ 3*c*f+ 4*c*h+ 2*c*y+c*z-3*e*d+ 5*e*
+h+ 4*e*y+ 4*e*z-3*f*u-4*f*w-4*f*s+ 5*f*b-5*u*d-u*h+ 5*u*y+ 3*u*z-5*w*d-3*w*
+h+ 2*w*y+ 5*w*z-d*s+ 3*d*b-3*h*s+ 2*h*b+ 5*y*s+ 4*y*b+ 3*z*s+z*b+ 2*v+ 2*t+
+ 4*a+ 5*x-2*g-3*c-5*e+ 2*f-u-3*w+ 3*d+ 5*h+ 3*y+ 4*z-3*s+ 2;
+v*a+ 2*v*g+ 5*v*c+ 5*v*e+ 3*v*w-5*v*s+ 4*v*b+t*a+ 5*t*g+ 4*t*c+ 5*t*e+ 5*t
+*u+t*w+ 4*t*b+ 3*a*x+ 4*a*f+ 5*a*d+ 2*a*h+ 3*a*y+ 4*a*z+ 3*x*g+ 4*x*c+ 3*x*
+e-3*x*u-x*s+ 4*x*b-3*g*f-2*g*d+ 4*g*y+ 4*g*z+c*f+ 2*c*h+c*y+ 2*c*z-e*d+ 3*e
+*h+ 5*e*y+ 5*e*z-5*f*u-3*f*w-5*f*s+f*b-5*u*d-2*u*h+ 2*u*y+ 2*u*z-4*w*d-3*w*
+h+ 4*w*y+ 5*w*z-4*d*s+d*b-5*h*s+h*b+ 2*y*s+ 5*y*b+ 4*z*s+z*b+ 4*v+ 4*t+ 5*a
++ 2*x-g-c-e+ 4*f-4*u-4*w+ 2*d+h+ 5*y+ 2*z-4*s+ 3;
+ 2*v*a+ 3*v*g+ 3*v*c+ 3*v*e+ 2*v*w-3*v*s+ 4*v*b+ 4*t*a+t*g+ 4*t*c+ 2*t*e+
+ 3*t*u+t*w+ 2*t*b+ 2*a*x+ 2*a*f+ 3*a*d+ 3*a*h+ 5*a*y+a*z+x*g+ 3*x*c+ 2*x*e-2
+*x*u-x*s+x*b-2*g*f-2*g*d+ 5*g*y+ 3*g*z+c*f+ 2*c*h+ 2*c*y+ 5*c*z-e*d+ 2*e*h+
+ 3*e*y+ 2*e*z-3*f*u-2*f*w-2*f*s+ 2*f*b-3*u*d-3*u*h+ 4*u*y+ 4*u*z-3*w*d-w*h+w
+*y+ 5*w*z-4*d*s+ 5*d*b-h*s+ 2*h*b+ 4*y*s+ 2*y*b+ 2*z*s+ 5*z*b+ 2*v+ 3*t+ 3*
+a+ 4*x-2*g-5*c-2*e+ 2*f-4*u-w+ 3*d+ 2*h+ 5*y+ 5*z-2*s+ 1;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                415.980000000 =  0h 6m55s980ms
+User time in seconds was                       415.610000000 =  0h 6m55s610ms
+System CPU time in seconds was                   0.370000000 =  0h 0m 0s370ms
+Non-I/O page faults was                       4251
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+THE TRIANGULATION :
+
+Dimension without lifting : 16
+Number of simplices : 12863
+
+The volume : 12863
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                 49.000000000 =  0h 0m49s  0ms
+User time in seconds was                        48.670000000 =  0h 0m48s670ms
+System CPU time in seconds was                   0.330000000 =  0h 0m 0s330ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+-rw-r--r--   1 sottile  500       9643646 Oct 21 08:02 O92

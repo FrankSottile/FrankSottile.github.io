@@ -1,0 +1,60 @@
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions="width=3in,height=2.5in"):
+read("procedures.maple"):
+#read("40lines.4"):  #  This has a nice, fat triangle
+read("file"):Digits:=50:    #  This is the 4 thin triangles with 62 common transversals
+#######################################################################
+macro(fblue=COLOR(RGB, .8, .8, 1)):
+macro(eblue=COLOR(RGB, .5, .5, 1)):
+macro(dblue=COLOR(RGB, 0,0,.8)):
+macro(fred=COLOR(RGB, 1, .8, .8)):
+macro(ered=COLOR(RGB, 1, .5, .5)):
+macro(dred=COLOR(RGB, .8,0,0)):
+macro(fgreen=COLOR(RGB, .8, 1, .8)):
+macro(egreen=COLOR(RGB, .5, 1, .5)):
+macro(dgreen=COLOR(RGB, 0,.8,0)):
+macro(fmagenta=COLOR(RGB, 1, .8, 1)):
+macro(emagenta=COLOR(RGB, 1, .5, 1)):
+macro(dmagenta=COLOR(RGB, .8, 0, .8)):
+
+Angle:=0:
+TR:=Rotate(Triangles,Angle):
+T1:=maketriangle(TR[1],dblue,   eblue,2,20):
+T2:=maketriangle(TR[2],dred,    ered,2,20):
+T3:=maketriangle(TR[3],dgreen,  egreen,2,20):
+T4:=maketriangle(TR[4],dmagenta,emagenta,2,20):
+Lines:=makeLines(Angle,black, 0,3):
+
+display(T1,T2,T3,T4,Lines[], axes=boxed, #scaling=CONSTRAINED,
+#        view=[-1400..1400,-1400..1400,-1000..1000],orientation=[230,60]);
+#        view=[-29..29,-29..29,-22..22],orientation=[230,60]);
+        view=[-21..21,-21..21,-22..22],orientation=[0,0]);
+
+
+DSeq:=[]:
+#for Angle from 0 to 358 by 2 do
+#for Angle from 0 to 356 by 4 do
+#for Angle from 0 to 350 by 10 do
+#
+for Angle from 0 to 330 by 30 do
+ TR:=Rotate(Triangles,Angle):
+ T1:=maketriangle(TR[1],dblue,   eblue,2,20):
+ T2:=maketriangle(TR[2],dred,    ered,2,20):
+ T3:=maketriangle(TR[3],dgreen,  egreen,2,20):
+ T4:=maketriangle(TR[4],dmagenta,emagenta,2,20):
+ Lines:=makeLines(Angle,black, 0, 3):
+
+ DSeq:=[op(DSeq),[T1,T2,T3,T4,Lines[]]]:
+# DSeq:=[op(DSeq),[T1,T2,T3,T4]]:
+end do:
+
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=600,width=600`):
+#plotsetup(gif,plotoutput="A.gif",plotoptions=`height=200,width=200`):
+#display(seq(display(op(DSeq[k]),scaling=CONSTRAINED),
+#   k=1..nops(DSeq)),scaling=CONSTRAINED,insequence=true,
+#   view=[-14000..14000,-14000..14000,-10000..10000],orientation=[230,60]);
+#   view=[-1400..1400,-1400..1400,-1000..1000],orientation=[230,60]);
+#        view=[-29..29,-29..29,-22..22],orientation=[230,60]);
+time();

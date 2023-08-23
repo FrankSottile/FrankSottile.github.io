@@ -1,0 +1,47 @@
+#
+#  The Schubert Calculus tells us that given 3 general 3-planes A,B,C and 
+#  3 general 2-planes X,Y,Z in 5-dimensional space, there are 4 partial flags 
+#  H_2 < H_3 such that H_2 meets A,B, and X, and H_3 intersects C in a 2-dimensional 
+#  subspace and also meets Y and X.
+#
+#  In counter.disc,we compute the Discriminant of the system, and find it
+# has an incriminating factor:  (-A X - B Y - A X - B Y + 2 X Y + 2 A B)
+#
+# Here we show that a particular choice of distinct points where the
+# 2-planes and 3-planes osculate the rational normal curve gives a
+# non-transverse intersection.
+#
+# Thus this conteresample to Shapiro's conjecture also is a counterexample
+# to Frank's nondegeneracy conjecture
+#
+#
+with(linalg):
+with(Groebner):
+readlib(realroot):
+
+Mat := s -> matrix([
+	           [1 , s ,s^2, s^3 , s^4 ],    # The flag osculating the rational
+ 	           [0 , 1 ,2*s,3*s^2,4*s^3],    # normal curve at the point s.
+	           [0 , 0 , 1 , 3*s ,6*s^2],    #
+#   
+		   [0 , 1 , b ,  0  ,  0  ],    #  Local coordinates for the partial
+	           [a , 1 , c ,  0  ,  0  ],    #  flag H_2 < H_3  
+	           [0 , 0 , 0 ,  1  ,  d  ]]):  #  (Last 2 rows are H_2)
+
+# W.i are the equations imposed by W on the flag H_2 < H_3.
+# For C.i and X.i, the other 2 maximal minors are redundant.
+
+
+A:=det(submatrix(Mat(3),[1,2,3,5,6],[1,2,3,4,5])):
+B:=det(submatrix(Mat(6),[1,2,3,5,6],[1,2,3,4,5])):
+
+
+Y:=det(submatrix(Mat(9),[1,2,4,5,6],[1,2,3,4,5])):
+Z:=det(submatrix(Mat(5),[1,2,4,5,6],[1,2,3,4,5])):
+
+G:=gbasis([A,B,Y,Z],plex(a,b,c,d));
+
+
+lprint('Non-reduced---Note the factor of d^2 in the ideal!');
+quit;
+

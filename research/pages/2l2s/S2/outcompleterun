@@ -1,0 +1,448 @@
+                     SINGULAR                             /  Development
+ A Computer Algebra System for Polynomial Computations   /   version 2-0-0
+                                                       0<
+     by: G.-M. Greuel, G. Pfister, H. Schoenemann        \   February 2001
+FB Mathematik der Universitaet, D-67653 Kaiserslautern    \
+// ** executing /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/.singularrc
+// Set random number generator to avoid Singular leading to different results
+// in different runs 
+system("--random",1018779139);
+
+// Appendix.sing
+//
+// Gabor Megyesi
+// Frank Sottile
+// Thorsten Th eobald
+//
+// Started: 11 November 2001
+// Current: 25 May 2002 
+//
+///////////////////////////////////////////////////////////////////////////
+//
+//  This file is the Singular code in the appendix
+// 
+///////////////////////////////////////////////////////////////////////////
+
+int T = timer;
+LIB "primdec.lib"; 
+option(redSB); 
+
+ring R = 0, (s,t,a,b,c,d,e,f,g,h,k,l), (dp(2), dp(10));
+//ring R = 0, (s,t,a,b,c,d,e,f,g,h,k,l), dp;
+ideal I = el-g^2, ek-gf, ak-dc, ah-c^2;
+matrix M[2][5] =    s   ,    1-s   ,       -2     ,     1-t  ,   t   , 
+                  al-d^2, 2*(bl-dg), 2*(2bk-cg-df), 2*(bh-cf), eh-f^2; 
+I = I + minor(M,2);
+I = std(I);  dim(I), mult(I);
+
+matrix Q[4][4] =  a , b , c , d , 
+                  b , e , f , g , 
+                  c , f , h , k , 
+                  d , g , k , l ;
+ideal E1 = std(minor(Q,2));
+I = std(quotient(I,E1));  dim(I), mult(I);
+
+ideal E2 = g, f, e, d, c, b, a;  // intersection line l1
+ideal E3 = l, k, h, g, f, d, c;  // intersection line l2
+I = sat(I,E2)[1];  dim(I), mult(I);
+ideal J = sat(I,E3)[1];  dim(J), mult(J);
+
+eliminate(J, abcdefghkl);
+
+ideal L = s, t, t-1, s-1, s-t; 
+list F = facstd(J, L);
+size(F);
+
+// Verify the factorization
+int i;
+ideal FF = 1;
+for (i = 1; i <= 7; i++) { FF = intersect(FF,F[i]); }
+ideal V1, V2;
+//V1 = std(sat(FF, s*t*(s-1)*(t-1)*(s-t))[1]);
+//V2 = std(sat(J, s*t*(s-1)*(t-1)*(s-t))[1]);
+V1 = std(sat(sat(sat(sat(sat(FF,t)[1],s)[1],t-1)[1],s-1)[1],s-t)[1]);
+V2 = std(sat(sat(sat(sat(sat(J ,t)[1],s)[1],t-1)[1],s-1)[1],s-t)[1]);
+
+print("The following part is not shown in the appendix.");
+
+size(V1), size(V2);
+if (size(V1) == size(V2)) {
+  int check = 1;
+  for (i = 1; i <= size(V1); i++) {
+    if (V1[i] != V2[i]) { check = 0; }
+  }
+  if (check == 1) { print("Factorization successfully verified."); }
+}
+
+timer-T;
+
+print("Now continue with the annotated code of the appendix.");
+
+ring S = (0,s,t), (a,b,c,d,e,f,g,h,k,l), lp; short = 0;
+
+print("The following part is not shown in the appendix.");
+
+// Singular might produce factors which are the unit ideal in S, 
+// which we then remove.
+i = 1;
+ideal FS; 
+setring R; ideal FR;
+while (i <= size(F)) {
+  FR = F[i];
+  setring S;
+  FS = std(imap(R, FR));
+  dim(FS), mult(FS);
+  if (dim(FS) == -1) {
+    setring R;
+    delete(F,i);
+  }
+  else {
+    setring R;
+    i++;
+  }
+}
+size(F);
+F;
+setring S;
+
+timer-T;
+
+
+print("Now continue with the annotated code of the appendix.");
+
+ideal JS = std(imap(R,J));   dim(JS), mult(JS);
+
+setring R; FR = F[1]; setring S; 
+FS = std(imap(R,FR));  dim(FS), mult(FS);
+FS[5], FS[6], FS[7], FS[8], FS[9], FS[10], FS[11];
+
+for (i = 2; i <= 7; i++) {
+  setring R;  FR = F[i];  setring S; 
+  FS = std(imap(R,FR));  dim(FS), mult(FS);
+  FS[1];
+  print("--------------------------------");
+}
+
+print("The following part is not shown in the appendix.");
+
+// Print the second ideal
+setring R; FR = F[3]; setring S; 
+FS = std(imap(R,FR)); FS;
+
+// Print all ideals
+for (i = 2; i <= 7; i++) {
+  setring R;  FR = F[i];  setring S; 
+  FS = std(imap(R,FR));  dim(FS), mult(FS);
+  FS;
+  print("--------------------------------");
+}
+
+timer-T;
+quit;
+
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/primdec.lib (1.98.2.1,2001/03/29)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/matrix.lib (1.26,2001/01/18)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/ring.lib (1.17,2001/01/16)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/inout.lib (1.21,2001/01/16)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/random.lib (1.16,2001/01/16)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/poly.lib (1.33,2001/01/16)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/elim.lib (1.14,2001/01/16)
+// ** loaded /cygdrive/c/Programme/Singular-2.0.0/usr/local/Singular/2-0-0/LIB/general.lib (1.38,2001/01/16)
+6 8
+5 20
+5 10
+4 120
+_[1]=0
+7
+The following part is not shown in the appendix.
+162 162
+Factorization successfully verified.
+353
+Now continue with the annotated code of the appendix.
+The following part is not shown in the appendix.
+1 4
+2 4
+2 4
+2 4
+2 4
+2 4
+2 4
+7
+[1]:
+   _[1]=g
+   _[2]=f
+   _[3]=e
+   _[4]=d
+   _[5]=c
+   _[6]=b
+   _[7]=a
+   _[8]=shk+tkl-hk-2hl-kl
+   _[9]=2t2k3-sh3-2th2k-4thk2-4tk3-th2l+2thkl+h3+2h2k+4hk2+2k3-3h2l-2hkl
+   _[10]=2stk3-2sk3+sh2l-2tk3+2thkl+thl2-2tkl2+2k3-h2l-2hkl+3hl2+2kl2
+   _[11]=s2h2+4stk2+2sthl+t2l2-2sh2-4sk2+2shl-4tk2+2thl-2tl2+h2+4k2-6hl+l2
+   _[12]=2s2k3-4sk3-4sk2l-shl2-2skl2-2tkl2-tl3+2k3+4k2l+hl2+4kl2+l3
+[2]:
+   _[1]=c+d+f+g
+   _[2]=a+2b+e
+   _[3]=gk-fl
+   _[4]=dh+dk+fk+fl
+   _[5]=g2-el
+   _[6]=fg-ek
+   _[7]=df+f2+dg+2bh+eh+2bk+3ek+el
+   _[8]=d2-f2-2bh-eh-4bk-4ek-el
+   _[9]=ek2-f2l
+   _[10]=2bgh+egh+dek+efk+del+2bfl+3efl+egl
+   _[11]=f2h+2bh2+eh2+4bhk+4ehk+2bk2+f2l+ehl
+   _[12]=tdl+tgl+gh+fl
+   _[13]=2tbl+2tel+eh-el
+   _[14]=tk2-thl-h2-2hk-k2
+   _[15]=tdk+tfl+fh+fk
+   _[16]=tdg+tel+eh+ek
+   _[17]=tf2+2tbh+teh+4tbk+4tek-f2-eh-2ek
+   _[18]=tde-2tbg-teg+ef+eg
+   _[19]=tghl-tfkl+gh2+2fhl+fkl
+   _[20]=sh-tl-h+l
+   _[21]=sk2-tl2-k2-hl-2kl
+   _[22]=sfk-tgl-gh-fk-2fl
+   _[23]=sdk+sfl-dk-dl
+   _[24]=sdg+2sbk+2sek+sel-2bk-ek-2bl-el
+   _[25]=sf2-tel-f2-eh-2ek
+   _[26]=sde+2sbf+2sef+seg-2bf-ef-2bg-eg
+   _[27]=2stb+2ste-se-2tb-te
+[3]:
+   _[1]=d+f+g
+   _[2]=c
+   _[3]=2b+e
+   _[4]=a
+   _[5]=gk-fl
+   _[6]=g2-el
+   _[7]=fg-ek
+   _[8]=ek2-f2l
+   _[9]=tk2-k2+hl
+   _[10]=tfk+gh-fk
+   _[11]=tf2-f2+eh
+   _[12]=sh+2tk+tl-h-2k-l
+   _[13]=sk2-k2-2kl-l2
+   _[14]=sfk-fk-2fl-gl
+   _[15]=sf2-f2-2ek-el
+[4]:
+   _[1]=c
+   _[2]=a
+   _[3]=gk-fl
+   _[4]=dh+gh+dk-fk
+   _[5]=g2-el
+   _[6]=fg-ek
+   _[7]=df+f2-2bh-eh-2bk
+   _[8]=d2-f2+2dg+2bh+eh-2bl
+   _[9]=ek2-f2l
+   _[10]=2bgh+egh-dek-efk+2bfl
+   _[11]=f2h-2bh2-eh2+2f2k-4bhk-2ehk-2bk2
+   _[12]=2tbl+tel-eh-2ek-el
+   _[13]=tk2-h2-2hk-k2
+   _[14]=tdk+tfl-fh-gh-fk-fl
+   _[15]=tf2-2tbh-teh-f2+eh
+   _[16]=tfkl-gh2-2fhl-fkl
+   _[17]=2tbdg+tdeg-deg-2beh-2bek
+   _[18]=2tbde+tde2-4tb2g-2tbeg-de2+2bef+2beg
+   _[19]=sh+2sk+tl-h-2k-l
+   _[20]=sfl+tdl+tgl-gh-2fl-gl
+   _[21]=sk2-k2+hl
+   _[22]=sfk+gh-fk
+   _[23]=sek+tdg+tel-eh-2ek-el
+   _[24]=sdk-tdl-tgl+gh-dk-dl+2fl+gl
+   _[25]=2sbk-tdg-tel+dg+eh-2bk+2ek-2bl+el
+   _[26]=sf2-f2+eh
+   _[27]=sef+tde-2tbg
+   _[28]=2sbf-tde+2tbg+de-2bf-2bg
+   _[29]=2stb+ste-se-2tb
+[5]:
+   _[1]=g
+   _[2]=e
+   _[3]=c+d+f
+   _[4]=a+2b
+   _[5]=dh+dk+fk
+   _[6]=df+f2+2bh+2bk
+   _[7]=d2-f2-2bh-4bk
+   _[8]=f2h+2bh2+4bhk+2bk2
+   _[9]=tk2-h2-2hk-k2
+   _[10]=tdk+fh+fk
+   _[11]=tf2+2tbh+4tbk-f2
+   _[12]=sh+2sk+tl-h-2k-l
+   _[13]=sk2-k2+hl
+   _[14]=sfk-tdl-fk-fl
+   _[15]=sdk-dk-dl-fl
+   _[16]=sf2-2tbl-f2
+[6]:
+   _[1]=g
+   _[2]=e
+   _[3]=dk-fk-cl-fl
+   _[4]=dh-ck
+   _[5]=2cf+df+f2-2bh-2bk
+   _[6]=d2+df-2bk-al-2bl
+   _[7]=cd-ak
+   _[8]=c2-ah
+   _[9]=fhk-ck2+chl+fhl
+   _[10]=4bhk-4ak2-dfl-f2l+4ahl+6bhl+2bkl
+   _[11]=2f2k-2bk2+f2l+2bhl
+   _[12]=2bck-2afk+2bcl-afl
+   _[13]=df2+f3+4bch-4afh-2bfh+2afk-2bfk-4bcl+2afl
+   _[14]=f3h+4bch2-4afh2-2bfh2+2ack2-afk2-2achl-4bchl+afhl+2bfhl
+   _[15]=tal+2tbl+df+f2-2bk-2bl
+   _[16]=tk2-k2+hl
+   _[17]=tfk+tcl+tfl-fk-fl
+   _[18]=tck-tcl-tfl-fh+fl
+   _[19]=2tak+4tbk-df-f2-2bh-2bk
+   _[20]=tdf-2tbk+f2
+   _[21]=tad+2tbd-2bc-2bd+af
+   _[22]=tf3+4tbch-4tafh-2tbfh-f3+4bch-4afh+2afk-4bcl+2afl
+   _[23]=sh+2tk+tl-h-2k-l
+   _[24]=sk2-k2-2kl-l2
+   _[25]=sfk-tdl-fk-fl
+   _[26]=sck+tdl-ck-2cl-dl
+   _[27]=sf2-2tbl-f2
+   _[28]=sdf-2sbk-df+2bk+2bl
+   _[29]=2sbc-saf+2tbd-2bc-2bd+af
+   _[30]=stc+stf+t2d-sf-tc-td
+   _[31]=sta+2stb-2sb-ta
+[7]:
+   _[1]=g
+   _[2]=e
+   _[3]=c
+   _[4]=a
+   _[5]=dh+dk-fk-fl
+   _[6]=df+f2-2bh-2bk
+   _[7]=d2-f2+2bh-2bl
+   _[8]=f2h-2bh2+2f2k-4bhk-2bk2+f2l
+   _[9]=tk2-thl-h2-2hk-k2
+   _[10]=tdk-tfl-fh-fk
+   _[11]=tf2-2tbh-f2
+   _[12]=sh-tl-h+l
+   _[13]=sk2-tl2-k2-hl-2kl
+   _[14]=sfk-tdl-fk-fl
+   _[15]=sdk-sfl-dk-dl
+   _[16]=sf2-2tbl-f2
+353
+Now continue with the annotated code of the appendix.
+2 24
+1 4
+g f e d c b a
+2 4
+(-s^2+2*s-1)*k^2+(2*s-2)*k*l+(s*t-1)*l^2
+--------------------------------
+2 4
+(s-1)*k^2-2*k*l-l^2
+--------------------------------
+2 4
+(s^2-2*s+1)*k^2+(-2*s+2)*k*l+(-t+1)*l^2
+--------------------------------
+2 4
+(s^2-2*s+1)*k^2+(-2*s+2)*k*l+(-t+1)*l^2
+--------------------------------
+2 4
+(s-1)*k^2-2*k*l-l^2
+--------------------------------
+2 4
+(-s^2+2*s-1)*k^2+(2*s-2)*k*l+(s*t-1)*l^2
+--------------------------------
+The following part is not shown in the appendix.
+FS[1]=(s-1)*k^2-2*k*l-l^2
+FS[2]=(s-1)*h+(2*t-2)*k+(t-1)*l
+FS[3]=f*l-g*k
+FS[4]=(s-1)*f*k-2*g*k-g*l
+FS[5]=(s-1)*f^2-2*f*g-g^2
+FS[6]=e*l-g^2
+FS[7]=e*k-f*g
+FS[8]=d+f+g
+FS[9]=c
+FS[10]=2*b+e
+FS[11]=a
+2 4
+FS[1]=(-s^2+2*s-1)*k^2+(2*s-2)*k*l+(s*t-1)*l^2
+FS[2]=(s-1)*h+(-t+1)*l
+FS[3]=f*l-g*k
+FS[4]=(s^2-2*s+1)*f*k+(-2*s+2)*g*k+(-s*t+1)*g*l
+FS[5]=(-s^2+2*s-1)*f^2+(2*s-2)*f*g+(s*t-1)*g^2
+FS[6]=e*l-g^2
+FS[7]=e*k-f*g
+FS[8]=(s*t-t)*d*l+(s-1)*g*k+(s*t-1)*g*l
+FS[9]=(s^2*t-2*s*t+t)*d*k+(s^2*t-s*t+s-1)*g*k+(s*t-1)*g*l
+FS[10]=(s*t-t)*d*g+(s-1)*f*g+(s*t-1)*g^2
+FS[11]=(-s^2*t+2*s*t-t)*d*f+(-s^2*t+s*t-s+1)*f*g+(-s*t+1)*g^2
+FS[12]=(s*t-t)*d*e+(s-1)*e*f+(s*t-1)*e*g
+FS[13]=(s^2*t-2*s*t+t)*d^2+(-2*s^2+2*s)*f*g+(-s^2*t+s)*g^2
+FS[14]=c+d+f+g
+FS[15]=(2*s*t-2*t)*b+(2*s*t-s-t)*e
+FS[16]=(s*t-t)*a+(-s*t+s)*e
+--------------------------------
+2 4
+FS[1]=(s-1)*k^2-2*k*l-l^2
+FS[2]=(s-1)*h+(2*t-2)*k+(t-1)*l
+FS[3]=f*l-g*k
+FS[4]=(s-1)*f*k-2*g*k-g*l
+FS[5]=(s-1)*f^2-2*f*g-g^2
+FS[6]=e*l-g^2
+FS[7]=e*k-f*g
+FS[8]=d+f+g
+FS[9]=c
+FS[10]=2*b+e
+FS[11]=a
+--------------------------------
+2 4
+FS[1]=(s^2-2*s+1)*k^2+(-2*s+2)*k*l+(-t+1)*l^2
+FS[2]=(s-1)*h+(2*s-2)*k+(t-1)*l
+FS[3]=f*l-g*k
+FS[4]=(s^2-2*s+1)*f*k+(-2*s+2)*g*k+(-t+1)*g*l
+FS[5]=(s^2-2*s+1)*f^2+(-2*s+2)*f*g+(-t+1)*g^2
+FS[6]=e*l-g^2
+FS[7]=e*k-f*g
+FS[8]=(s*t-t)*d*l+(s^2-s)*g*k+(s*t-s)*g*l
+FS[9]=(s^2*t-2*s*t+t)*d*k+(s^2*t+s^2-s*t-s)*g*k+(s*t-s)*g*l
+FS[10]=(s*t-t)*d*g+(s^2-s)*f*g+(s*t-s)*g^2
+FS[11]=(-s^2*t+2*s*t-t)*d*f+(-s^2*t-s^2+s*t+s)*f*g+(-s*t+s)*g^2
+FS[12]=(s*t-t)*d*e+(s^2-s)*e*f+(s*t-s)*e*g
+FS[13]=(s^2*t-2*s*t+t)*d^2+(-2*s^3+2*s^2)*f*g+(-s^2*t+s^2)*g^2
+FS[14]=c
+FS[15]=(2*s*t-2*t)*b+(s*t-s)*e
+FS[16]=a
+--------------------------------
+2 4
+FS[1]=(s^2-2*s+1)*k^2+(-2*s+2)*k*l+(-t+1)*l^2
+FS[2]=(s-1)*h+(2*s-2)*k+(t-1)*l
+FS[3]=g
+FS[4]=e
+FS[5]=(-t)*d*l+(s-1)*f*k-f*l
+FS[6]=(-s*t+t)*d*k+(s-1)*f*k+(t-1)*f*l
+FS[7]=(t)*d^2-f^2
+FS[8]=c+d+f
+FS[9]=(-2*t)*b*l+(s-1)*f^2
+FS[10]=(2*t)*b*k+(-t)*d*f-f^2
+FS[11]=a+2*b
+--------------------------------
+2 4
+FS[1]=(s-1)*k^2-2*k*l-l^2
+FS[2]=(s-1)*h+(2*t-2)*k+(t-1)*l
+FS[3]=g
+FS[4]=e
+FS[5]=(-t)*d*l+(s-1)*f*k-f*l
+FS[6]=(t)*d*k-f*k-f*l
+FS[7]=(-t^2)*d^2+(s)*f^2
+FS[8]=(s*t-t)*c+(t^2-t)*d+(s*t-s)*f
+FS[9]=(-2*t)*b*l+(s-1)*f^2
+FS[10]=(2*t)*b*k+(-t)*d*f-f^2
+FS[11]=(s*t-t)*a+(2*s*t-2*s)*b
+--------------------------------
+2 4
+FS[1]=(-s^2+2*s-1)*k^2+(2*s-2)*k*l+(s*t-1)*l^2
+FS[2]=(s-1)*h+(-t+1)*l
+FS[3]=g
+FS[4]=e
+FS[5]=(-t)*d*l+(s-1)*f*k-f*l
+FS[6]=(-s*t+t)*d*k+(s-1)*f*k+(s*t-1)*f*l
+FS[7]=(-t)*d^2+(s)*f^2
+FS[8]=c
+FS[9]=(-2*t)*b*l+(s-1)*f^2
+FS[10]=(-2*t)*b*k+(t)*d*f+f^2
+FS[11]=a
+--------------------------------
+430
+Auf Wiedersehen.

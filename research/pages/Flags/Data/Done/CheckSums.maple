@@ -1,0 +1,17 @@
+#CheckSums.maple
+#
+# This examines each of the data files, printing the names of those which 
+# do not have every row of the tables agree.
+#
+interface(quiet=true):
+
+read(cat(NAME,".data")):
+N:=nops(Table[1]):
+Numbers:={seq(sum(Table[i][j],j=1..N),i=1..nops(Table))}:
+
+#for i from 1 to nops(Table) do sum(Table[i][j],j=1..N); od;
+
+if nops(Numbers)>1 then
+ printf("Bad Ideals in %s on %s in file   %s\n",Label,Machine,NAME);
+fi:
+quit:

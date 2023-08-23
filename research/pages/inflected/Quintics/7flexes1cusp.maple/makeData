@@ -1,0 +1,125 @@
+#makeData
+#
+# Frank Sottile
+# 27 February 2002
+# Amherst
+#
+# This file takes the lexicographic Groebner basis in Eqs of the maximally
+# inflected quintics with the given flexes and creates the parameterizations.
+#
+###########################################################################
+Digits:=300:
+read(Eqs):
+
+#
+#    Solves the equations from the lexicographic Groebner basis in Eqs
+#
+
+if nops(Eqs)=7 then
+ G:=[fsolve(Eqs[1]=0,g)]:
+ F:=[]:
+ for gg in G do
+  F:=[F[],fsolve(subs(g=gg,Eqs[2])=0,f)]:
+ od:
+ E:=[]:
+ for gg in G do
+  E:=[E[],fsolve(subs(g=gg,Eqs[3])=0,e)]:
+ od:
+ DD:=[]:
+ for  gg in G do
+  DD:=[DD[],fsolve(subs(g=gg,Eqs[4])=0,d)]:
+ od:
+ C:=[]:
+ for  gg in G do
+  C:=[C[],fsolve(subs(g=gg,Eqs[5])=0,c)]:
+ od:
+ B:=[]:
+ for gg in G do
+  B:=[B[],fsolve(subs(g=gg,Eqs[6])=0,b)]:
+ od:
+ A:=[]:
+ for gg in G do
+  A:=[A[],fsolve(subs(g=gg,Eqs[7])=0,a)]:
+ od:
+fi:
+
+if nops(Eqs)=8 then 
+ Eq1:=factor(Eqs[1]):
+ EA:=op(1,Eq1):
+ EB:=op(2,Eq1):
+ if degree(EB=1) then  
+  EC:=EB:
+  EB:=EA:
+  EA:=EC:
+ fi:
+ gg:=solve(EA=0,g):
+ G:=[gg,gg,gg,fsolve(EB=0,g)]:
+ F:=[fsolve(subs(g=gg,Eqs[3]))]:
+ for i from 4 to 21 do
+  F:=[F[],fsolve(subs(g=G[i],Eqs[2])=0,f)]:
+ od:
+ E:=[]:
+ for i from 1 to 21 do
+  E:=[E[],fsolve(subs(g=G[i],f=F[i],Eqs[4])=0,e)]: 
+ od:
+ DD:=[]:
+ for i from 1 to 21 do 
+  DD:=[DD[],fsolve(subs(g=G[i],Eqs[5])=0,d)]:
+ od:
+ C:=[]:
+ for i from 1 to 21 do
+  C:=[C[],fsolve(subs(g=G[i],f=F[i],Eqs[6])=0,c)]:
+ od:
+ B:=[]:
+ for i from 1 to 21 do
+  B:=[B[],fsolve(subs(g=G[i],f=F[i],Eqs[7])=0,b)]:
+ od:
+ A:=[]:
+ for i from 1 to 21 do
+  A:=[A[],fsolve(subs(g=G[i],f=F[i],Eqs[8])=0,a)]:
+ od:
+fi:
+
+###########################################################################
+#
+#  The original local parameterization of the Schubet cell & kernel
+#
+#linalg[kernel](matrix([[1,0,a,b,0,c],
+#                       [0,1,d,e,0,f],
+#                       [0,0,0,0,1,g]]));
+#{[-a, -d, 1, 0, 0, 0], [-c, -f, 0, 0, -g, 1], [-b, -e, 0, 1, 0, 0]}
+#########################################################################
+
+RatNorm:=linalg[vector]([1,s,s^2,s^3,s^4,s^5  ]):
+
+x:=[]:y:=[]:z:=[]:
+for i from 1 to 21 do
+ x:=[x[],linalg[multiply](linalg[vector]([-C[i], -F[i],0,0,-G[i],1]),RatNorm)]:
+ y:=[y[],linalg[multiply](linalg[vector]([-B[i], -E[i],0,1,  0  ,0]),RatNorm)]:
+ z:=[z[],linalg[multiply](linalg[vector]([-A[i],-DD[i],1,0,  0  ,0]),RatNorm)]:
+od:
+
+Digits:=10:
+file := fopen(`data`,WRITE):
+
+fprintf(file,`x :=[\n`):
+for j from 1 to 20 do 
+ fprintf(file,cat(`     `,convert(evalf(x[j]),string),`,\n`)):
+od:
+fprintf(file,cat(`     `,convert(evalf(x[21]),string),`]:\n`)):
+
+fprintf(file,`y :=[\n`):
+for j from 1 to 20 do 
+ fprintf(file,cat(`     `,convert(evalf(y[j]),string),`,`)):
+ if j mod 2 = 0 then fprintf(file,`\n`): fi:
+od:
+fprintf(file,cat(`     `,convert(evalf(y[21]),string),`]:\n`)):
+
+fprintf(file,`z :=[\n`):
+for j from 1 to 20 do 
+ fprintf(file,cat(`     `,convert(evalf(z[j]),string),`,`)):
+ if j mod 2 = 0 then fprintf(file,`\n`): fi:
+od:
+fprintf(file,cat(`     `,convert(evalf(z[21]),string),`]:\n`)):
+
+quit;

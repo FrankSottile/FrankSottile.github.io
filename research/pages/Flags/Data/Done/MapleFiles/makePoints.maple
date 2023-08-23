@@ -1,0 +1,46 @@
+read(`procedures.maple`);
+N:=50:
+r:=211:
+
+A:=QuasiUniformPointsAss(N, r):
+
+lprint(A);quit;
+nops(convert(A,set));
+
+L:=[]:
+for Pr in A do 
+ L:=[L[],1.*Pr[2]/Pr[1]]:
+od:
+
+L;
+
+quit;
+
+#lprint(QuasiUniformPoints(N, r));
+#
+#  Diagnostics concerning the different point selection schema
+#
+#
+A:=QuasiUniformPointsAss(N, r):
+B:=QuasiUniformPoints(N, r):
+
+printf("Comparison of QuasiUniformPoints(N, r) with\n         "):
+printf("  QuasiUniformPointsAss(N, r) for N:=%d  and  r:=%d\n\n",N, r):
+printf("Difference between Assymmetric and Symmetric is %d out of %d\n",
+        nops(convert(A,set) minus convert(B,set)), N):
+
+i:=0:
+for P in A do 
+  if member([P[1],-P[2]], A) and P[2]<>0 then i:=i+1: fi:
+od:
+
+printf("Number of symmetric pairs in QuasiUniformPointsAss(N, r): %d\n",i/2):
+
+i:=0:
+for P in B do 
+  if member([P[1],-P[2]], B)  and P[2]<>0  then i:=i+1: fi:
+od:
+
+printf("Number of symmetric pairs in QuasiUniformPoints(N, r): %d\n",i):
+
+quit;

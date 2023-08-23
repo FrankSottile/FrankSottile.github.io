@@ -1,0 +1,56 @@
+Page 10 there is the requirement that p\leq m for formula (1.10).
+  In fact, that should be m\leq p, and  the later p>m should be m>p.
+
+Page 18, line -11 f_i(c) should be f_{i+1}(c)
+
+Page 32, in the middle of the page, there is an assertion in the text:
+
+   \beta = d - \sum_{a\in\calA} \gamma_a
+
+   This should be 
+ 
+   \beta = d - \nu | \calA | - \mu  - \sum_{a\in\calA} \gamma_a
+
+ (as \beta = \sum_{a\in\calA} alpha_a  - \sum_{a\in\calA} \gamma_a).
+
+  This error does not affect the conclusion that \beta is a nonnegative integer.
+
+Page 39, Line 5 of Algorithm 4.4  "matric C to convert is to"
+     should be "matrix C to convert it to".
+
+Page 43, line 14, 
+  `the inequality $\langle \omega,\lambda\rangle\leq\langle \omega,\beta\rangle$'
+   Needs the \beta to be changed to an \alpha
+
+Page 69, line -7.  In the displayed formula of the logarithmic equations, the
+   + 1 \log|1-x-y| in the second line needs to be chaanged to 
+   - 1 \log|1-x-y|, in order to match the matrix \calB a few lines above.
+
+   Better, woudl be to multiply the second row of \calB by -1 would make this agree more 
+    with (6.16) on page 68, and then there are other changes to be made to the equation.
+
+   The changing +1 to -1 is what is necessary for mathematical purposes.
+
+Page 70, last line of proof in the middle of the page, the 18 should be 20, as 14+6=20.
+
+Page 71, in equation (6.19), drop the subscripts _i
+
+   In Equation (6.21), drop the ^+ in the exponent \tilde{\beta}^+_{i,k}, and 
+     put a \tilde over the other exponent, and a ^-  \tilde{\beta}_{j+1,k}^-
+
+Page 72, Lemma 6.11   The set S here should be D
+
+Page 73.  The (J_1,\dotsc,J_l)  in every formula in the last half of the page
+    need to be replaced by (g_1,\dotsc,g_l).  This is really, really bad.
+
+Page 100.  Line -6 of the proof.  $a+b$ should be $a-b$.
+
+Page 112, Figure 9.5.   The cubics in this picture are not sufficiently general; in
+   the pencil they generate is a reducible cubic, divisible by (x-y) [In hindsight,
+   this is obvious due to the symmetry of the two cubics].  Perturbing either one
+   will result in a general pencil in which every curve is irreducible.  I thank
+   Dmitry Pekelis for pointing this error out to me.
+
+   The solitary points and curves in that figure are also mislabled.  
+
+Page 122 (10.2) Need to change \P(\C_{mp}t) to \P(\C_{mp}[t])

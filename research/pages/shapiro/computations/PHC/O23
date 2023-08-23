@@ -1,0 +1,44 @@
+ 3*d*b*a+ 2*d*c*a+ 5*d*b+ 3*d*c+ 6*b*a+ 4*d+ 6*b+ 3;
+ 4*d*b*a+ 4*d*c*a+ 3*d*b+ 2*d*c+b*a+ 4*d+ 3*b+ 4;
+ 3*d*b*a+ 6*d*c*a+ 4*d*b+ 2*d*c+b*a+d+ 2*b+ 1;
+d*b*a+ 4*d*c*a+d*b+ 6*d*c+ 3*b*a+ 3*d+ 6*b+ 4;
+
+DYNAMIC LIFTING
+
+TIMING INFORMATION for computing the vertex points
+The elapsed time in seconds was                  0.010000000 =  0h 0m 0s 10ms
+User time in seconds was                         0.010000000 =  0h 0m 0s 10ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                          0
+I/O page faults was                              1
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                  0.000000000 =  0h 0m 0s  0ms
+User time in seconds was                         0.000000000 =  0h 0m 0s  0ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                          0
+I/O page faults was                              8
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+Number of simplices : 5
+
+The volume : 5
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                  0.000000000 =  0h 0m 0s  0ms
+User time in seconds was                         0.000000000 =  0h 0m 0s  0ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0

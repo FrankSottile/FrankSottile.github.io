@@ -1,0 +1,54 @@
+#0_cusp/1/14.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 22 February 2001
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+#
+Zeroes:=[fsolve(z[14]=0,s)]:
+X:=x[14]/z[14]:
+Y:=y[14]/z[14]:
+slope:=(subs(s=Zeroes[1]-0.0001,Y)-subs(s=Zeroes[1]+0.0001,Y))/
+       (subs(s=Zeroes[1]-0.0001,X)-subs(s=Zeroes[1]+0.0001,X)):
+Y:=simplify(Y-slope*X):
+Z:=simplify(Y-16):
+
+X:=(X-12*Y)/Z:
+Y:=Y/Z:
+#X:=X-12*Y:
+Z:=X+40:
+Root:=fsolve(Z=0,s):
+X:=X/Z:
+Y:=Y/Z:
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+
+Pt:=[]: 
+for j from 1 to 8 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+
+SP:=[]:
+for zz in SOL[14] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("14th quintic"):
+Q:=plot({
+         [Xt,Yt,t=1/Root+0.05..1],
+         [X,Y,s=Root+0.6..1]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=100):
+
+display(Q,P,Sol);
+#display(Q,P,Sol,CL,axes=normal);
+

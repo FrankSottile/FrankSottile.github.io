@@ -1,0 +1,33 @@
+#hyperbola.maple
+#
+# Frank Sottile
+# 13 April 2000
+# Madison, WIS
+#
+# This script will display a 3D plot of a hyperbola of 1 sheet.
+#
+#
+with(plots):
+
+plotsetup(x11):
+#plotsetup(ps,plotoutput=`3lines.eps`,plotoptions=`portrait,width=3in,height=2.5in`);
+a:=0.2858:
+#b:=0.215:
+b:=a:
+
+display3d(plot3d([s,t, s^2-t^2], s = -1..1, t = -1..1,orientation=[120,60],
+       color=grey,grid=[15,15]),
+spacecurve([t, 1,t^2-1],t=-1..1,color=black,thickness=3,numpoints=100),
+spacecurve([t,-1,t^2-1],t=-1..1,color=black,thickness=3,numpoints=100),
+spacecurve([1, t,1-t^2],t=-1..1,color=black,thickness=3,numpoints=100),
+spacecurve([-1, t,1-t^2],t=-1..1,color=black,thickness=3,numpoints=100),
+spacecurve([t, t, 0.0005],t=-1..1,color=blue,thickness=3,numpoints=3),
+spacecurve([t, t, -0.0005],t=-1..1,color=blue,thickness=3,numpoints=3),
+spacecurve([t+a, t-a, 4*a*t+0.001],t=(-1+a)..(1-a),
+            color=blue,thickness=3,numpoints=3),
+spacecurve([t+a, t-a, 4*a*t-0.001],t=(-1+a)..(1-a),
+            color=blue,thickness=3,numpoints=3),
+spacecurve([t-b, t+b, -4*b*t+0.001],t=(-1+b)..(1-b),
+            color=blue,thickness=3,numpoints=3),
+spacecurve([t-b, t+b, -4*b*t-0.001],t=(-1+b)..(1-b),
+           color=blue,thickness=3,numpoints=3));

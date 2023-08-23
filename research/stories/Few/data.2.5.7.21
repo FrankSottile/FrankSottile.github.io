@@ -1,0 +1,18 @@
+#data.2.5.7.21
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^5*z^9 - h(z) = 0,
+#
+#  f, g, and h all have degree 2.
+#
+#######################################################
+k:=2:
+p:=5:
+l:=7:
+Iterations:=500:
+Instance:=2000:
+deg:=21:   #   Degree of the enumerative problem
+data:=[157290, 1024620, 816874, 1216, 0, 0, 0, 0, 0, 0, 0]:
+Time:=450719.70:
+##############################################################

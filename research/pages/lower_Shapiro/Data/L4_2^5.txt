@@ -1,0 +1,52 @@
+This is to explain what Frank is doing
+0c: have done 230.  Will do 270 more
+1c: have done 1500.  will do 500 more in two computations of 250 each
+2c: have done 200.  Will do 300 more
+
+All of these will use size = 50.
+-rw-r--r-- 1 sottile fac 34 2011-02-01 23:04 output/L4_2^5.0c/10011.output
+-rw-r--r-- 1 sottile fac 35 2011-02-22 12:48 output/L4_2^5.0c/6707.output
+-rw-r--r-- 1 sottile fac 33 2011-02-01 22:20 output/L4_2^5.1c/10058.output
+-rw-r--r-- 1 sottile fac 41 2010-11-30 18:58 output/L4_2^5.1c/10357.output
+-rw-r--r-- 1 sottile fac 42 2010-12-04 07:35 output/L4_2^5.1c/10364.output
+-rw-r--r-- 1 sottile fac 41 2010-12-01 07:16 output/L4_2^5.1c/32186.output
+-rw-r--r-- 1 sottile fac 40 2011-02-25 13:14 output/L4_2^5.1c/6851.output
+-rw-r--r-- 1 sottile fac 40 2011-02-25 15:06 output/L4_2^5.1c/6854.output
+-rw-r--r-- 1 sottile fac 36 2011-03-04 20:20 output/L4_2^5.2c/6748.output
+::::::::::::::
+output/L4_2^5.0c/10011.output
+::::::::::::::
+30 0 0 0 0 0 0 0 0 0 0 0 0 
+123462::::::::::::::
+output/L4_2^5.0c/6707.output
+::::::::::::::
+270 0 0 0 0 0 0 0 0 0 0 0 0 
+850875::::::::::::::
+output/L4_2^5.1c/10058.output
+::::::::::::::
+7 3 9 0 1 0 0 0 0 0 0 0 0 
+121775::::::::::::::
+output/L4_2^5.1c/10357.output
+::::::::::::::
+56 85 145 21 40 23 0 0 0 0 0 0 0 
+2485580::::::::::::::
+output/L4_2^5.1c/10364.output
+::::::::::::::
+98 147 271 34 97 43 0 0 0 0 0 0 0 
+2695846::::::::::::::
+output/L4_2^5.1c/32186.output
+::::::::::::::
+76 90 165 30 53 26 0 0 0 0 0 0 0 
+2882275::::::::::::::
+output/L4_2^5.1c/6851.output
+::::::::::::::
+41 57 86 11 36 19 0 0 0 0 0 0 0 
+1013106::::::::::::::
+output/L4_2^5.1c/6854.output
+::::::::::::::
+44 62 77 17 27 23 0 0 0 0 0 0 0 
+1016284::::::::::::::
+output/L4_2^5.2c/6748.output
+::::::::::::::
+300 0 0 0 0 0 0 0 0 0 0 0 0 
+1506190

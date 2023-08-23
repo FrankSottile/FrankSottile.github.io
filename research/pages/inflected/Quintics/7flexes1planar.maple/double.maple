@@ -1,0 +1,75 @@
+#double.maple
+#
+# Frank Sottile
+# 27 February 2002
+# Amherst, MA
+#
+#####################################################################
+#
+#  Makes the Singular input file for computing the polynomials
+#  vanishing on the double points of the 21 maximally inflected curves with
+#  given flexes and cusp at infinity
+#
+#  Run with 
+#      - maple -q double.maple
+######################################################################
+interface(quiet=true):
+with(Groebner):
+read(data);
+
+###########################################################################
+Integerize := proc(Poly)
+#
+#  Converts a polynomial with decimal coefficients into an integer polynomial.
+#   This is for the Singular input
+#
+ local NewPoly, i, T, A, B:
+ NewPoly:=0:
+ for i from 1 to nops(Poly) do
+  T:=op(i,Poly):
+  NewPoly:=NewPoly+trunc(leadcoeff(T,plex(s))*10^11)*leadterm(T,plex(s)):
+ od:
+ primpart(NewPoly)
+end:
+
+for i from 1 to 21 do 
+ x[i]:=Integerize(x[i]):
+ y[i]:=Integerize(y[i]):
+ z[i]:=Integerize(z[i]):
+od:
+
+################################################################
+
+file := fopen(`B.sing`,WRITE):
+
+fprintf(file,`ring S=0, (t,s), lp;\n`):
+fprintf(file,`ideal G; \n`):
+fprintf(file,`ideal I; \n`):
+fprintf(file,`print("doubleEqs:=[ "); \n`):
+
+for i from 1 to 21 do 
+ fprintf(file,`I = \n`):
+ fprintf(file,cat(convert(
+        simplify((x[i]*subs(s=t,y[i])-y[i]*subs(s=t,x[i]))/(s-t)),string),`,\n`)):
+ fprintf(file,cat(convert(
+        simplify((x[i]*subs(s=t,z[i])-z[i]*subs(s=t,x[i]))/(s-t)),string),`,\n`)):
+ fprintf(file,cat(convert(
+        simplify((z[i]*subs(s=t,y[i])-y[i]*subs(s=t,z[i]))/(s-t)),string),`;\n`)):
+
+ fprintf(file,`G=std(I); \n`):
+ fprintf(file,`short=0; \n`):
+ fprintf(file,`G[1]; \n`);
+ if i <> 21 then
+   fprintf(file,`print(","); \n`):
+  else
+   fprintf(file,`print("]:"); \n`):
+ fi:
+od:
+fprintf(file,`quit;\n`):
+quit;
+
+
+
+
+
+

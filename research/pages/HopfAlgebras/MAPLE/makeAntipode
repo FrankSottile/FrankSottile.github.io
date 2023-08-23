@@ -1,0 +1,45 @@
+#MakeAntipode
+#
+# 29 January 2001
+# Marcelo Aguiar
+# Frank Sottile
+#
+#    This code creates a data file of the antipodes
+#    It is needed for the computation of the cocycle
+#
+interface(quiet=true):
+read(`MalvenutoProcedures`):
+
+#####################################################
+#
+S[[]] :=[[1,[]]]:
+S[[1]]:=[[-1,[1]]]:
+S[[1,2]]:=[[-1, [1, 2]]]:
+S[[2,1]]:=[[1, [1, 2]], [1, [2, 1]]]:
+
+
+for n from 3 to 7 do 
+ for w in combinat[permute](n) do
+  CoProdW:=Coproduct(w):
+  N:=nops(CoProdW):
+  S[w]:=[]:
+#   CoProd(w) has the form [ [1, [], w], ..., [1, w, []] ]
+  for j from 1 to N-1 do
+ #  Loops over the non-final terms [ Coeff, x, v] of the coproduct
+   Term:=CoProdW[j]:
+   x := Term[2]:
+   v := Term[3]:
+   for L in S[x] do
+ #  Loops over terms [ Coeff, u] in the antipode of the permutation x
+    u:=L[2]: 
+    for pair in FtoM(Prod(u,v)) do
+  #  Loops over the terms in the product M_u*M_v and makes the coefficients
+     pair[1]:=-Term[1]*L[1]*pair[1]:
+     S[w]:=[S[w][],pair]:
+    od:
+   od:
+  od:
+ od:
+od:
+lprint(eval(S));
+time();

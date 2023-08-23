@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Regular Triangulations</TITLE>
+</HEAD>
+
+<BODY >
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="2.3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.1.html"> <IMG ALT="previous" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.3.html">2.ii.c. Polyhedral Homotopy Algorithm</A><BR>
+ <B> Up:</B> <A HREF="2.html">2.ii  Polyhedral Homotopy Algorithm: Table
+ of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.1.html">2.ii.a. A Simplex System</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+<H2>2.ii.b. Regular Triangulations</H2>
+
+<P>
+The combinatorial structure underlying the homotopy algorithm of
+Huber and Sturmfels is that of a regular triangulation, which
+is a special case of a regular subdivision. 
+A regular subdivision <I>P<SUB>w</SUB></I> of a lattice polytope 
+<I>P</I> is given by a lifting function 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <I>w</I> &nbsp; : &nbsp; Lattice Points in <I>P</I>
+  &nbsp; ----> &nbsp; <B>Q</B> , 
+  &nbsp; &nbsp; &nbsp; (the rational numbers)
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+as follows.
+Set
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ <I>Q</I> := Convex hull { (<I>a</I>,<I>w</I>(<I>a</I>)
+    | <I>a</I> is an integral point in <I>P</I>} 
+   &nbsp; &nbsp; &nbsp; 
+  (a subset of <B>R</B><SUP><I>n</I>+1</SUP>).
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+This lifted polytope <I>Q</I> has distinguished lower facets, those facets
+whose inward pointing normal vector has positive last coordinate.
+Forgetting the last coordinate projects these lower facets into 
+<B>R</B><SUP><I>n</I></SUP> (and hence <I>P</I>).
+Their totality gives the <I>regular subdivision</I> 
+<I>P<SUB>w</SUB></I> of <I>P</I>.
+When all the integral lattice points in <I>P</I> lift to vertices of 
+lower facets of <I>Q</I>, and these lower facets are all simplices, then 
+<I>P<SUB>w</SUB></I> is a <I>regular triangulation</I> of <I>P</I>.
+
+<P>
+In Figure&nbsp;<A HREF="#fig:regTri">2</A> the triangulation on the left is
+regular and the triangulation on the right is not regular.
+Consider a hypothetical lifting function <I>w</I> for the triangulation on the
+right. 
+We assume that <I>w</I> takes the value 0 at the three interior vertices.
+The clockwise neighbour of any vertex of the big triangle must be lifted
+higher than that vertex. 
+(Consider the figure they form with the parallel edge of the
+interior triangle.)
+Since the edge of the big triangle is lifted to a concave broken path,
+this implies that each vertex is lower than its clockwise neighbour,
+which is impossible, except in some M.C. Escher woodcuts.
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="fig:regTri"></A>
+<TABLE>
+<TR><TD align=center><IMG SRC="../figures/triangulations.png"
+</TD></TR>
+<TR><TD ALIGN=CENTER><STRONG>Figure 2:</STRONG>
+Regular and non-regular triangulations</TD></TR></TABLE>
+</DIV><P></P>
+
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="2.3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.1.html"> <IMG ALT="previous" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.3.html">2.ii.c. Polyhedral Homotopy Algorithm</A><BR>
+ <B> Up:</B> <A HREF="2.html">2.ii  Polyhedral Homotopy Algorithm: Table
+ of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.1.html">2.ii.a. A Simplex System</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+</BODY>
+</HTML>

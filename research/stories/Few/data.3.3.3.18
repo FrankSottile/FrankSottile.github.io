@@ -1,0 +1,18 @@
+#data.3.3.3.18
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^3*z^6 - h(z) = 0,
+#
+#  f, g, and h all have degree 3.
+#
+#######################################################
+k:=3:
+p:=3:
+l:=3:
+Iterations:=500:
+Instance:=5000:
+deg:=18:   #   Degree of the enumerative problem
+data:=[526, 802558, 1736938, 2390970, 69003, 5, 0, 0, 0, 0]:
+Time:=901375.10:
+##############################################################

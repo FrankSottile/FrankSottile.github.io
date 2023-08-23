@@ -1,0 +1,58 @@
+#plane4.www.maple
+#
+
+
+clll:=traceHyperboloid(l1,l2,l3, Eqs[4]):
+cllk:=traceHyperboloid(l1,l2,k3, Eqs[4]):
+clkl:=traceHyperboloid(l1,k2,l3, Eqs[4]):
+clkk:=traceHyperboloid(l1,k2,k3, Eqs[4]):
+ckll:=traceHyperboloid(k1,l2,l3, Eqs[4]):
+cklk:=traceHyperboloid(k1,l2,k3, Eqs[4]):
+ckkl:=traceHyperboloid(k1,k2,l3, Eqs[4]):
+ckkk:=traceHyperboloid(k1,k2,k3, Eqs[4]):
+
+P:=ParameterizePlane(l4, p4, u, v):
+Clll:=CurveInPlane(P,clll):
+Cllk:=CurveInPlane(P,cllk):
+Clkl:=CurveInPlane(P,clkl):
+Clkk:=CurveInPlane(P,clkk):
+Ckll:=CurveInPlane(P,ckll):
+Cklk:=CurveInPlane(P,cklk):
+Ckkl:=CurveInPlane(P,ckkl):
+Ckkk:=CurveInPlane(P,ckkk):
+
+K:=ParameterizeLine(LineInPlane(P,k4),t):
+L:=ParameterizeLine(LineInPlane(P,l4),t):
+M:=ParameterizeLine(LineInPlane(P,m4),t):
+
+l:=plot([L[],t=-0.9..2.5],color=magenta,thickness=2,numpoints=2):
+k:=plot([K[],t=-0.9..2.5],color=red,thickness=2,numpoints=2):
+m:=plot([M[],t=-1.2..0.6],color=blue,thickness=2,numpoints=2):
+
+macro(gr=COLOR(RGB, 0, 0.8, 0)):
+lll:=plot([Clll[],t=-1.22..1.065],color=brown,thickness=2,numpoints=200):
+kkk:=plot([Ckkk[],t=-1.22..1.073],color=gr,thickness=2,numpoints=200):
+
+Cplot:=[lll,kkk]:
+
+#plotsetup(ps,plotoutput=`P4.2.eps`,plotoptions=`color,portrait,width=5cm,height=5cm,noborder`):
+display([Cplot[],k,l,m],view=[-1..1.6,-0.4..0.2],axes=BOXED,axesfont=[TIMES,ROMAN,5]);
+###############################################################################
+
+Cllln:=shear(M,Clll):
+Ckkkn:=shear(M,Ckkk):
+Kn:=shear(M,K):
+Ln:=shear(M,L):
+Mn:=shear(M,M):
+
+kkk:=plot([Ckkkn[],t=-1.25..0.1],color=gr,thickness=2,numpoints=100):
+lll:=plot([Cllln[],t=-1.25..0.1],color=brown,thickness=2,numpoints=100):
+
+k:=plot([Kn[],t=-0.8..-0.2],color=red,thickness=2,numpoints=2):
+l:=plot([Ln[],t=-0.02..0.01],color=magenta,thickness=2,numpoints=2):
+m:=plot([Mn[],t=-1.3..0.1],color=blue,thickness=2,numpoints=2):
+Cplot:=[lll,kkk]:
+#plotsetup(gif,plotoutput="A.gif",plotoptions=`height=400,width=400`):
+#plotsetup(ps,plotoutput=`P4.3.eps`,plotoptions=`color,portrait,width=5cm,height=5cm,noborder`):
+display([Cplot[],k,l,m],view=[-0.02..0.005,-0.4..0.05],axes=BOXED,axesfont=[TIMES,ROMAN,5]);
+###############################################################################

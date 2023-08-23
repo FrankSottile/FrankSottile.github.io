@@ -1,0 +1,22 @@
+read("procedures.maple"):
+n:=3:k:=2:
+verbose:=true:
+Triple := [[[[1, 3, 3, 4, 2, 3], [2, 3, 1, 2, 2, 4]], {[2, 1, 2]}], [[[2], [1]], {[2, 1, 2]}], [table([([2])=[1],([1])=[2]]), {[[1], 1], [[2], 1]}]]:
+   testAuxGr := Triple[2];
+   descentPointer := Triple[3];
+vertex:=getMinimalVertex(descentPointer);
+testBall:=makeBalls(eval(Triple[2]),descentPointer,vertex);
+
+printf("-------------------------\n");
+
+Ball:=makeBalls(testAuxGr,descentPointer,vertex);
+
+
+ Triple := [[[[1, 4, 2, 3, 4, 5], [1, 4, 4, 5, 2, 3]], {[2, 1, 2]}], [[[1], [2]], {[2, 1, 2]}], [table([([2])=[2],([1])=[1]]), {[[1], 1], [[2], 1]}]] :
+   AuxGr := Triple[2];
+   descentPointer := Triple[3];
+vertex:=getMinimalVertex(descentPointer);
+Ball:=makeBalls(AuxGr,descentPointer,vertex);
+
+
+isIsomorphic(testAuxGr,eval(testBall),AuxGr,eval(Ball));

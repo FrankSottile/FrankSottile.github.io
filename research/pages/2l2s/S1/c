@@ -1,0 +1,225 @@
+#c.maple
+#
+# 
+#
+#
+interface(quiet=true):
+with(plots):
+############################################
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+
+Wedge := proc(Sph)
+local Pairs, i, j, wedge:
+ wedge := linalg[matrix](6, 6, 0):
+ Pairs := combinat[choose]([1,2,3,4],2):
+ for i from 1 to 6 do
+  for j from 1 to 6 do
+   wedge[i,j] := linalg[det](linalg[submatrix](Sph,Pairs[i],Pairs[j])):
+  od:
+ od:
+ evalm(wedge)
+end:
+
+Equation := proc(a,b,c,r)
+local  plucker:
+ plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+ linalg[innerprod](plucker,Wedge(Sphere(a,b,c,r)),plucker)
+end:
+
+Quadric := (a,b,c,d,e,f,g,h,x,y) ->
+  linalg[matrix]([
+   [ a , b , c , d ],
+   [ b , e , f , g ],
+   [ c , f , h , x ],
+   [ d , g , x , y ]]):
+
+Coords:=linalg[vector]([1,X,Y,Z]):
+
+#interface(quiet=false):
+##################################################################
+#                Quadric(a,b,c,d,e,f,g,  h  ,x,  y  ) 
+Family1 := evalm(Quadric(3,0,c,0,1,0,0,c^2/4,0,c^2/4)):
+Ideal1  := [x,h-y,g,f,d,c^2-4*e*y,b,a-3*e]:
+Eq1:=linalg[innerprod](Coords,Family1,Coords):
+Eq1:=expand(-1+X^2+c^2/4*(Y+4/c)^2 +c^2/4*Z^2):
+##############################################################
+#               Quadric(a,b,c,d, e,f,g,  h   ,x,   y  ) 
+Family2 := eval(Quadric(1,0,0,d,-1,0,0,d^2/4,0,d^2/4)):
+Ideal2  := [x,h-y,g,f,d^2+4*e*y,c,b,a+e]:
+expand(-3-X^2+d^2/4*Y^2+d^2/4*(Z+4/d)^2):
+###############################################################
+#               Quadric(a,b,c,d,e,f,g,  h  ,x,   y    ) 
+Family3 := eval(Quadric(3,0,0,0,1,f,0,f^2/4,0,-3*f^2/4)):
+Ideal3  := [x,3*h+y,g,4*e*y+3*f^2,d,c,b,a-3*e]:
+EQ3:=linalg[innerprod](Coords,Family3,Coords):
+Eq3:=expand(3 + (X+f*Y)^2 - 3*f^2/4*Y^2 - 3*f^2/4*Z^2):
+#quit;
+################################################################
+#               Quadric(a,b,c,d, e,f,g, h  ,x,     y    ) 
+Family4 := eval(Quadric(1,0,0,0,-1,0,g,g^2/4,0,-3*g^2/4)):
+Ideal4  := [x,3*h+y,f,4*e*y-3*g^2,d,c,b,a+e]:
+linalg[innerprod](Coords,Family4,Coords):
+expand(1-(X-g*Z)^2 + g^2*Y^2/4 + g^2*Z^2/4 ):
+#############################################################
+#quit;
+x:=0: y:=2: z:=0: r:=1:
+F:=subs(p02=a*A,p03=b*A,p12=a*B,p13=b*B,p01=0,p23=0,Equation(0,2,0,1)):
+plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+BSOLS:=[solve(subs(b=1,A=1,F)=0,a)]:
+ASOLS:=[solve(subs(b=1,B=1,F)=0,a)]:
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+##########################################
+#  We assume that A = b = 1.
+#  a is the function a(B) stored in BSOLS
+#
+TanPoint := proc(Q,B,a)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t*a,t]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch*a), touch]
+end:
+##########################################
+#  We assume that B = b = 1.
+#  a is the function a(A) stored in ASOLS
+#
+ATanPoint := proc(Q,A,a)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,1/A,t*a/A,t/A]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [1/A, simplify(touch*a)/A, touch/A]
+end:
+
+TC11top := TanPoint(Sphere(0,-2,0,1),B,BSOLS[1]):
+TC11bot := TanPoint(Sphere(0,-2,0,1),B,BSOLS[2]):
+c := -2/3:
+TC21top:=TanPoint(Family1,B,BSOLS[1]):
+TC21bot:=TanPoint(Family1,B,BSOLS[2]):
+
+TC2t:=[B, 1/d*(-(-1+B^2)*(3+B^2))^(1/2), -1/d+1/d*B^2]:
+TC2b:=[B, -1/d*(-(-1+B^2)*(3+B^2))^(1/2), -1/d+1/d*B^2]:
+
+TP31 := [B, -(3+B^2)/f/B, 1/B*(3-2*B^2-B^4)^(1/2)/f]:
+TP32 := [B-.01, -(3+B^2)/f/B, -1/B*(3-2*B^2-B^4)^(1/2)/f]:
+
+#     lprint(TanPoint(Family4,B,BSOLS[1]));
+TP41 := [B, 1/B/g*(-(-1+B^2)*(3+B^2))^(1/2), -1/g/B+1/g*B]:
+#     lprint(TanPoint(Family4,B,BSOLS[2]));
+TP42 := [B, -1/B/g*(-(-1+B^2)*(3+B^2))^(1/2), -1/g/B+1/g*B]:
+
+
+Bl:=5: #  How far out the lines are drawn in one direction
+sl:=5: #  How far out the lines are drawn in the other direction
+Al := -3:  # This is the coordinaete 2/c in Family1
+Be := 3/2:  s5:=sqrt(5): d:=2/Be: # The coordinate 2/d in Family2
+Ga := 4/5:  s3:=sqrt(3): f:=2/Ga: # The coordinate 2/f in Family3
+g := .2:
+#
+
+  macro(pagr=COLOR(RGB, .5, 1, .5)):
+plotsetup(gif,plotoutput=`c.gif`,plotoptions=`height=900,width=900`):
+#plotsetup(gif,plotoutput=`c-sm.gif`,plotoptions=`height=300,width=300`):
+#plotsetup(gif,plotoutput=`../S4/oneSphere/III.gif`,plotoptions=`height=600,width=600`):
+
+display3d(
+spacecurve([t,0,0],t=-4..4,color=red,thickness=3),
+#   The Original Sphere
+plot3d([.9*sin(ph)*cos(th),-2-sin(ph)*sin(th),-cos(ph)],ph=0..Pi,th=-Pi..Pi,
+        grid=[15,15],color=tan),
+############################################################
+#   Elipsoids from the first family
+#
+#  The elipsoid at 2/c= Al
+#plot3d([.9*sin(ph)*cos(th),-2*Al+Al*sin(ph)*sin(th),Al*cos(ph)],ph=0..Pi,th=-Pi..Pi,
+#        grid=[30,30],color=gold),
+#spacecurve([TC11top[]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+#spacecurve([TC11bot[]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+#spacecurve([TC21top[]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+#spacecurve([TC21bot[]],B=-1..1,color=BLUE,thickness=3,numpoints=100),
+################################################################
+#   Hyperboloids from the second family
+#
+#  The hyperboloid at 2/d = Be
+#plot3d([1+2*t,Be*(cos(th)*(2+t)+sin(th)*3^(1/2)*t),
+#        -2*Be+Be*(-sin(th)*(2+t)+cos(th)*3^(1/2)*t)]
+#        ,t=-2..2,th=-Pi..Pi,grid=[40,40],color=gold),
+#spacecurve([TC2t[]],B=-1..1,color=BLUE,thickness=3),
+#spacecurve([TC2b[]],B=-1..1,color=BLUE,thickness=3),
+#
+################################################################
+#   Hyperboloids from the third family
+#
+#  The hyperboloid at 2/f = Ga
+plot3d([1+2*t-(cos(th)*2*(2+t)/sqrt(3)+sin(th)*2*t),
+        (cos(th)*2*(2+t)/f/sqrt(3)+sin(th)*2*t/f),
+        (-sin(th)*2*(2+t)/f/sqrt(3)+cos(th)*2*t/f)]
+        ,t=-4..10,th=-Pi..Pi,grid=[25,40],color=magenta),
+spacecurve([TP31[]],B=-1..-0.01,color=BLUE,thickness=3),
+spacecurve([TP31[]],B=0.01..1,color=BLUE,thickness=3),
+spacecurve([TP32[]],B=-1..-0.01,color=BLUE,thickness=3),
+#spacecurve([TP32[]],B=0.01..1,color=red,thickness=3),
+################################################################
+#   Hyperboloids from the fourth family
+#
+#  The hyperboloid at 
+#plot3d([g*R*sin(th)+sqrt(1+g^2/4*R^2), R*cos(th), R*sin(th)]
+#        ,R=0..8,th=-Pi..Pi,grid=[30,30],color=coral),#style=PATCHNOGRID),
+#plot3d([g*R*sin(th)-sqrt(1+g^2/4*R^2), R*cos(th), R*sin(th)]
+#        ,R=0..8,th=-Pi..Pi,grid=[30,30],color=coral),#style=PATCHNOGRID),
+#
+#spacecurve([TP41[]],B=-1..-0.01,color=MAROON,thickness=3),
+#spacecurve([TP41[]],B=0.01..1,color=MAROON,thickness=3),
+#spacecurve([TP42[]],B=-1..-0.01,color=MAROON,thickness=3),
+#spacecurve([TP42[]],B=0.01..1,color=MAROON,thickness=3),
+spacecurve([.997,subs(B=.997,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([.96,subs(B=.97,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([.92,subs(B=.92,t*BSOLS[1]),t],t=0.4..sl,color=pagr,numpoints=2),
+spacecurve([.86,subs(B=.86,t*BSOLS[1]),t],t=0.6..sl,color=pagr,numpoints=2),
+spacecurve([.78,subs(B=.78,t*BSOLS[1]),t],t=0.8..sl,color=pagr,numpoints=2),
+spacecurve([.18,subs(B=.18,t*BSOLS[1]),t],t=0.5..3*sl,color=pagr,numpoints=2),
+spacecurve([.06,subs(B=.06,t*BSOLS[1]),t],t=0.5..3*sl,color=pagr,numpoints=2),
+spacecurve([0,subs(B=0,t*BSOLS[1]),t],t=0.6..16*sl,color=pagr,numpoints=2),
+spacecurve([-.06,subs(B=-.06,t*BSOLS[1]),t],t=0..10*sl,color=pagr,numpoints=2),
+spacecurve([-.18,subs(B=-.18,t*BSOLS[1]),t],t=0..10*sl,color=pagr,numpoints=2),
+spacecurve([-.30,subs(B=-.30,t*BSOLS[1]),t],t=0..10*sl,color=pagr,numpoints=2),
+spacecurve([-.42,subs(B=-.42,t*BSOLS[1]),t],t=0..3*sl,color=pagr,numpoints=2),
+spacecurve([-.54,subs(B=-.54,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.66,subs(B=-.66,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.78,subs(B=-.78,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.86,subs(B=-.86,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.92,subs(B=-.92,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.97,subs(B=-.97,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([-.997,subs(B=-.997,t*BSOLS[1]),t],t=0..sl,color=pagr,numpoints=2),
+spacecurve([.997,subs(B=.997,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.97,subs(B=.97,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.92,subs(B=.92,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.86,subs(B=.86,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.78,subs(B=.78,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.66,subs(B=.68,t*BSOLS[2]),.99*t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.54,subs(B=.54,t*BSOLS[2]),.99*t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.42,subs(B=.42,t*BSOLS[2]),.98*t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([.30,subs(B=.30,t*BSOLS[2]),.99*t],t=-3*sl..0,color=pagr,numpoints=2),
+spacecurve([.18,subs(B=.18,t*BSOLS[2]),t],t=-10*sl..0,color=pagr,numpoints=2),
+spacecurve([.06,subs(B=.06,t*BSOLS[2]),t],t=-10*sl..0,color=pagr,numpoints=2),
+spacecurve([0,subs(B=0,t*BSOLS[2]),t],t=-16*sl..0,color=pagr,numpoints=2),
+spacecurve([-.06,subs(B=-.06,t*BSOLS[2]),t],t=-10*sl..0,color=pagr,numpoints=2),
+spacecurve([-.18,subs(B=-.18,t*BSOLS[2]),t],t=-10*sl..0,color=pagr,numpoints=2),
+spacecurve([-.30,subs(B=-.30,t*BSOLS[2]),t],t=-3*sl..0,color=pagr,numpoints=2),
+spacecurve([-.42,subs(B=-.42,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.54,subs(B=-.54,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.66,subs(B=-.66,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.78,subs(B=-.78,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.86,subs(B=-.86,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.92,subs(B=-.92,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.97,subs(B=-.97,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+spacecurve([-.997,subs(B=-.997,t*BSOLS[2]),t],t=-sl..0,color=pagr,numpoints=2),
+      view=[-4..4,-3..8,-3..5],orientation=[200,20]);

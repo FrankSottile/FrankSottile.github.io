@@ -1,0 +1,38 @@
+
+#
+#
+#
+interface(quiet=true):
+die:=rand(1..6):
+
+
+C24:= linalg[matrix]([
+              [1,a,0,0,0,0],
+              [0,1,b,c,0,0],
+              [0,0,1,d,e,0],
+              [0,0,0,0,1,f]]):
+
+C34:= linalg[matrix]([
+              [1,a,b,0,0,0,0],
+              [0,1,c,d,e,0,0],
+              [0,0,1,f,g,h,0],
+              [0,0,0,0,1,y,z]]):
+
+m:=3:
+if m=2 then CM:=C24:  fi:
+if m=3 then CM:=C34:  fi:
+
+COLS:=combinat[choose](m+4,4):
+
+lprint(4*m-2);
+
+for i from 1 to 4*m-2 do
+  Poly:=0:
+  for Col in COLS do
+    Poly:= Poly+ die()*linalg[det](linalg[submatrix](CM,[1,2,3,4],convert(Col,list))):
+  od:
+lprint(expand(Poly),`;`);
+od:
+
+
+quit;

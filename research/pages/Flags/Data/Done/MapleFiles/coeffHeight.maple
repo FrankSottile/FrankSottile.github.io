@@ -1,0 +1,13 @@
+#coeffHeight.maple
+#
+#   This script does the statistics on the table of values in coeffHeight 
+#
+###########################################################################
+with(stats):
+read(`data`):
+read(`../MapleFiles/procedures.maple`):
+read(`coeffHeight`):
+#
+CoefficientHeight:=evalf(describe[mean](COEFFS)):
+makeDataFile():
+quit;

@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+   <TITLE>The pole placement problem and geometry</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectII.2.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.4.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>2.iii. The pole placement problem and geometry</H2>
+
+<A HREF="SectI.3.html">Recall</A> that the pole placement problem may be
+expressed as follows<BR><BR>
+
+<B>Pole Placement Problem:</B><BR>
+
+Given a linear system represented by matrices <I>A,B,C</I>, and a desired
+behaviour  <I>f(s)</I>, which feedback laws <I>F</I> satisfy 
+<I>f(s)&#160;=&#160;</I>det<I>(sI<SUB>n</SUB> - A - BFC)</I>?
+
+
+<HR>
+
+Rewrite the characteristic equation 
+<I>f(s)&#160;=&#160;</I>det<I>(sI<SUB>n</SUB> - A - BFC)</I>:
+<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<I>f(s)</I>&#160;=&#160;
+   det<I>(I<SUB>n</SUB> - BFC</I>(<I>sI<SUB>n</SUB> - A</I>)<SUP>-1</SUP>)
+   </I>det<I>(sI<SUB>n</SUB>-A)</I>
+</TABLE>
+
+and apply the matrix identity 
+det<I>(I - PQ)</I> = 
+det<I>(I - QP)</I>,
+where <I>P,Q</I> are rectangular matrices.
+<BR>
+
+
+<TABLE ALIGN=center>
+<TR><TD>
+<I>f(s)</I>&#160;=&#160;
+   det<I>(I<SUB>m</SUB> - FC</I>(<I>sI<SUB>n</SUB> - A</I>)<SUP>-1</SUP>B )</I>
+   </I>det<I>(sI<SUB>n</SUB>-A)</I>
+</TABLE>
+
+The transfer function 
+<I>C</I>(<I>sI<SUB>n</SUB> - A</I>)<SUP>-1</SUP><I>B</I>
+is a <I>p</I> by <I>m</I>-matrix of rational functions determining the
+response of the measured quantities <I>y</I> in terms of the inputs
+<I>u</I>, when there is no feedback.
+It is useful to factor this, finding matrices <I>N(s)</I> and <I>D(s)</I> of
+polynomials with 
+<I>N(s)D(s)</I><SUP>-1</SUP>=
+<I>C</I>(<I>sI<SUB>n</SUB> - A</I>)<SUP>-1</SUP><I>B</I>
+where det<I>D(s)</I> = det(<I>sI<SUB>n</SUB> - A</I>).
+This is called the coprime factorization of the transfer function.
+Then we may rewrite the characteristic equation:<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<I>f(s)</I>&#160;=&#160;
+   det<I>(I<SUB>m</SUB> - FN(s)D(s)<SUP>-1</SUP>)</I>
+   </I>det<I> D(s)</I>
+</TABLE>
+
+But now both matrices are <I>m</I> by <I>m</I>-matrices, so we get:
+<BR>
+
+<TABLE ALIGN=center>
+<TR><TD>
+<I>f(s)</I>&#160;=&#160;
+   det<I>(D(s) - FN(s))</I>
+</TABLE>
+
+
+Finally, we may write this as a 
+(<I>m</I>+<I>p</I>) by (<I>m</I>+<I>p</I>)-determinant (up to sign):
+<BR>
+
+<TABLE  ALIGN=center><TR><TD>
+<IMG SRC="figures/FNsDs.gif"  height=90 width=230></TR>
+</TABLE>
+
+
+&#160;&#160;
+Thus if <I>s<SUB>1</SUB>, s<SUB>2</SUB>, ..., s<SUB>n</SUB></I> are the roots
+of the polynomial <I>f</I>, and we let <I>K<SUB>i</SUB></I> be the row space
+of the matrix 
+[<I>N</I>(<I>s<SUB>i</SUB></I>) <I>D</I>(<I>s<SUB>i</SUB></I>)],
+then the row space of the matrix [<I>I</I> <I>F</I>] meets each
+<I>K<SUB>i</SUB></I> nontrivially.<BR>
+
+
+&#160;&#160;
+From this, and a nondegeneracy result, Brockett and Byrnes 
+[<a href="http:Bib.html">BB</a>] deduce that if the numbers
+<I>s<SUB>1</SUB>, s<SUB>2</SUB>, ..., s<SUB>mp</SUB></I> are general there are
+<I>d<SUB>m,p</SUB></I> complex <I>p</I>-planes
+<I>H</I>  which meet each <I>K(s<SUB>i</SUB>)</I> nontrivially, counted with
+multiplicity.
+By a Theorem of Eisenbud and Harris [<a href="http:Bib.html#EH">EH</a>], 
+there are no multiplicities when the 
+<I>s<SUB>1</SUB>, s<SUB>2</SUB>, ..., s<SUB>mp</SUB></I> are general.
+
+
+<HR>
+<A HREF="SectII.2.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.4.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>
+

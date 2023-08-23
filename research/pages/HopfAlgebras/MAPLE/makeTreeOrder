@@ -1,0 +1,51 @@
+#makeTreeOrder
+#
+# Frank Sottile
+# 31 March 2002
+# Toronto, Ontario
+#
+#############################################################
+#
+#  This file will compute the weak order on the sets trees
+#  Its method will be to compare them in the weak order on 
+#  permutations, using inversion sets.
+#
+#############################################################
+interface(quiet=true):
+read(LodayProcedures):
+read(MalvenutoProcedures):
+read(Trees):
+#read(TreesOrder):
+
+###############################################################
+Covers:=proc(v)
+local covers,u:
+ covers:= bigger[v]:
+ for u in bigger[v] do
+  covers:=covers minus bigger[u]:
+ od:
+ covers
+end:
+################################################
+#
+#  Computes the weak order in trees
+#
+for n from 1 to 6 do 
+#              Inversions[w]:= inversion set of w
+for w in Trees[n] do
+ Inversions[w]:=Inv(w):
+od:
+
+for w in Trees[n] do
+ bigger[w]:={}:
+ for v in Trees[n] do
+  if Ell(w) < Ell(v) then 
+   if Inversions[w] minus Inversions[v] = {} then
+    bigger[w]:=bigger[w] union {v}:
+   fi:
+  fi:
+ od:
+od:
+lprint(`#############################################################################`);
+od:
+lprint(`bigger:=`,eval(bigger),`:`);
