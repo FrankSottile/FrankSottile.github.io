@@ -1,1 +1,0 @@
-convert original.jpg -crop 640x620+0+0 cropped.jpg

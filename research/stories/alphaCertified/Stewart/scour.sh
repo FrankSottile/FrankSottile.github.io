@@ -1,1 +1,0 @@
-rm -f approxSolns constantValues distinctSolns isApproxSoln isDistinctSoln isRealSoln nonrealDistinctSolns realDistinctSolns redundantSolns refinedPoints summary unknownPoints Dietmaier.out

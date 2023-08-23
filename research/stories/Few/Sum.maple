@@ -1,7 +1,0 @@
-read(summary):
-N_Solved:=N_Solved+sum(data[i],i=1..nops(data)):
-T_Time:=T_Time+Time:
-file:=fopen("summary",WRITE):
-fprintf(file, "N_Solved:=%d:\n",N_Solved):
-fprintf(file, "T_Time:=%12.2f:\n",T_Time):
-fclose(file):

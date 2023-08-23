@@ -1,5 +1,0 @@
-for i from 1 to nops(Table) do
- if sum(Table[i][j],j=1..8)<500 then
-  lprint(Table[i],Necklaces[i]);
- end if:
-end do:

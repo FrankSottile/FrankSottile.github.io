@@ -1,5 +1,0 @@
-read("HTML_Procedures.maple"):
-  read("F127/Ue4Ve7.14.data"):
-  projections:=Projections(FlagVariety, EnumerativeProblem);
-
-
