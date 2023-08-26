@@ -1,0 +1,42 @@
+Math 130
+Frank Sottile
+
+General write-ups:
+All Write-ups out of 40		       A:  36
+   Grading on a straight scale	       B:  31
+				       C:  26
+				       D:  21
+
+ Poison:
+
+Only 2 papers disappointed me, and
+     4  more were not up to the level of the course.
+     3  were truly exceptional.
+The bulk were quite good.  Standards will rise as the term progresses
+
+##########################################################################
+
+Here is a nice summation of the strategy for the 10 counter game, written
+the paragraph after a nice discussion of what they discovered when playing
+the game.
+
+"Upon further examination, an even deeper pattern can be found.
+Each of the `ideal numbers' listed above (1, 4, 7, 10) are exactly 3 digits
+apart. Therefore, as long as I can leave my opponent with an `ideal number' by
+making sure that three counters are removed every round, I will win."
+
+
+Another nice thing someone did was to summarize everything in a
+"My Solution to Poison: A Cheat Sheet for All Novices"
+
+Also nice:
+
+"To Summarize, the winning strategy for playing poison with any number of
+counters is:
+  Case 1 -- 3x+1: Go second and ensure that 3 counters are removed each round
+  Case 2 -- 3x+2: Go first, and remove 1 counter, then play like Game 1
+  Case 3 -- 3x:   Go first, and remove 2 counters, then play like Game 1 "
+
+#############################################################################
+
+Best Title:  "The Antidote"
