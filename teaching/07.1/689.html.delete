@@ -1,0 +1,226 @@
+<HTML><HEAD><TITLE>Math 689, Section 4: Itroduction to Applicable 
+               Algebraic Geometry</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+<!-------------------------------------------------------------->
+ <H1>Winter 2007<BR>
+  Math 689, Section 4: Introduction to Applicable Algebraic Geometry
+ </H1>
+<HR>
+<!-------------------------------------------------------------->
+ <EM><FONT COLOR=AA00FF>Instructors:</FONT></EM>
+   <A HREF="http://www.math.tamu.edu/~lgp">Luis David Garcia-Puente</A>
+    and 
+  <A HREF="../../index.html">Frank Sottile</A>.
+  <P>
+ This graduate course is being co-taught by Luis Garcia and Frank Sottile.
+ Frank will lecture the first six weeks (until 23 February) and 
+ Luis will lecture the remainder of the term, with some guest lectures
+ by Sottile and others later in the term.  This page is Sottile's Home page for
+ the course.<BR>
+ <A HREF="AG_course.pdf">Course Announcement</A>.
+<!-------------------------------------------------------------->
+<HR>
+<!-------------------------------------------------------------->
+<font size=+1 color=red>Homework is due 28 February.</font>
+Get it <A HREF="HW1.pdf">here</A>.
+<!-------------------------------------------------------------->
+<HR>
+<!-------------------------------------------------------------->
+
+ <TABLE>
+  <TR>
+    <EM><FONT COLOR=AA00FF>Frank Sottile</FONT></EM>
+   <TD colspan=4>
+   </TD>
+  </TR>
+  <!----------------->
+  <TR>
+   <TD width=20 rowspan=2>&nbsp;</TD>
+   <TD colspan=2 align=left>
+     <IMG SRC="../../images/dot.gif"> Office: Milner 303
+    <BR>
+     <IMG SRC="../../images/dot.gif"> Telephone: 845-4169 
+    <BR>
+     <IMG SRC="../../images/dot.gif"> Email: 
+        <TT>sottile"at"math.tamu.edu</TT> 
+    <BR>
+     <IMG SRC="../../images/dot.gif"> WWW:
+      <TT>www.math.tamu.edu/~sottile</TT>   
+    <BR>
+     <IMG SRC="../../images/dot.gif">    
+       Weekly <A HREF="week.png">schedule</A><BR>
+  
+       <FONT COLOR=AA00FF><EM>Frank has no scheduled office hours.
+        Schedule an appointment with him or drop by his office when
+        his door is open.</EM></FONT> 
+   </TD>
+  </TR>
+  <!----------------->
+  <TR>
+   <TD width=20>&nbsp;</TD>
+   <TD> 
+     <IMG SRC="../../images/dot.gif">Some <A HREF="AAG.pdf">notes </A> from the course. <BR>
+        &nbsp; &nbsp; Frank does welcome suggestions and comments on these
+        notes.
+     <BR>
+     <IMG SRC="../../images/dot.gif"> Some Older notes of <A HREF="Old.pdf">Frank's</A>.
+   </TD>
+  </TR>
+  <!----------------->
+  <TR>
+   <TD colspan=4><FONT COLOR=AA00FF><B>Lectures</B>:</FONT>
+      MWF 9:10 -- 10:00 AM  in Blocker 155.
+  </TD>
+ </TR>
+ <TR>
+   <TD colspan=4><FONT COLOR=AA00FF><EM>Recommended Texts:</EM></FONT>
+      Some of the matrial in the course is found in (parts of) the following
+        four books.
+    <ul>
+     <!------------------------------>
+     <li> Cox, Little, and O'Shea, <I>Ideals Varieties and Algorithms</I>,<BR>
+     <font color=red>  Special Note about this book:</font>  Springer is putting
+        out a new edition in <b>February</b>.   However, they have a special 
+       <i>emergency</i> printing of the previoyus edition (which is just fine).
+       If you cannot get immediate delivery from Amazon, call Springer, mention
+       this fact (the emergency printing).  If necessary, say that
+       "Ann Kostant told Professor Sottile about theis special emergency
+       printing of this book".   I can help if necessary.   
+     </li>
+     <!------------------------------>
+     <li> Cox, Little, and O'Shea, <I>Using Algebriac Geometry</I>,
+       <font color=red>This has a special paper back edition!</font>.
+     </li>
+     <!------------------------------>
+     <li> Sturmfels, <I>Gr&ouml;bner Bases and Convex Polytopes</I>,
+     </li>
+     <!------------------------------>
+     <li> Sturmfels, <I>Solving Polynomial Equations</A=I>,
+     </li>
+
+   </TD>
+ </TR>
+ <!----------------->
+ <TR>
+  <TD colspan=4>               
+    <I><FONT COLOR=AA00FF>Course webpage: </FONT> </I>
+     <A HREF="http://www.math.tamu.edu/~sottile/teaching/07.1/689.html">
+     <TT>www.math.tamu.edu/~sottile/teaching/07.1/689.html</TT></A>
+  </TD>
+ </TR>
+</TABLE>
+
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+ <FONT SIZE=+1 COLOR=FF0000>Course Description</FONT> <BR>
+Algebraic Geometry, the geometric study of polynomial equations, has a long
+history as a core discipline within pure mathematics.
+In recent years it has been finding many new applications outside of mathematics.
+For example, the IMA (Institute of Mathematics and its Applications) is
+devoting the current academic year to a program on applications of algebraic
+geometry, and Texas A&amp;M will be hosting a summer school during July and August
+on <A HREF="http://www.ima.umn.edu/2006-2007/PISG7.23-8.10.07/"><i>Applicable 
+Algebraic Geometry</i></A>, with 
+30-50 students attending from across the United States.
+Several TAMU faculty work in this growing area.
+<p>
+The purpose of this Spring 2007 course will be to give students an
+introduction to the applicable side of algebraic geometry.
+We will see the basic concepts of commutative algebra and algebraic
+geometry that will be assumed prerequisites for the summer school.
+This course may also be used as preparation for the more comprehensive algebraic
+geometry course that may be offered next year.
+Along the way, we will show how some tools from commutative algebra and algebraic
+geometry can be used to solve systems of polynomial equations, you will see many
+fundamental classes of varieties that arise in
+algebraic geometry, and you will be exposed to some of these new applications of
+algebraic geometry.
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+ <FONT SIZE=+1 COLOR=FF0000>Prerequisites</FONT> <BR>
+Linear algebra and abstract algebra. 
+Graduate students from Engineering and Computer Science are welcome to register;
+We can fill in any gaps in your knowledge.
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+ <FONT SIZE=+1 COLOR=FF0000>Topics</FONT> <BR>
+<!------------------------------------------------------------------------>
+<TABLE>
+ <TR>
+ <TD>
+  <dl>
+  <dd> <b>Polynomials, ideals, varieties</b>
+   <ol> 
+    <li>Algebra-geometry dictionary</li>
+    <li> Varieties</li>
+    <li>Gr&ouml;bner bases</li>
+   </ol>
+  </dd>
+
+  <dd> <b>Systems of polynomial equations</b>
+   <ol> 
+    <li> Elimination and resultants</li>
+    <li> Gr&ouml;bner basis conversion</li>
+    <li> Finding real roots</li>
+    <li> Bounds on number of solutions</li>
+   </ol>
+  </dd>
+  </dl>
+ </TD>
+ <TD>
+  <dl>
+  <dd> <b>Ideals and Varieties</b> 
+   <ol> 
+    <li> Monomial ideals</li>
+    <li> Toric Ideals</li>
+    <li> Toric varieties and polytopes</li>
+    <li> Determinantal Ideals</li>
+   </ol>
+  </dd>
+
+  <dd> <b>Applications</b> 
+   <ol> 
+    <li> Optimization</li>
+    <li> Integer programming</li>
+    <li> Statistical inference</li>
+    <li> Geometric Modelling</li>
+   </ol>
+  </dd>
+ </dl>
+ </TD>
+</TABLE>
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+
+<TABLE>
+ <TR>
+  <TD>
+    <FONT SIZE=+1 COLOR=FF0000>Grading</FONT> <BR>
+      There will be two or three problem sets collected and graded during the
+      term, and all students will make a presentation in the last few weeks on
+      some additional topic.
+      We will discuss this later in the course.<BR>
+     <!-------------------------------------------------->
+
+     <!------------   <FONT SIZE=+1 COLOR=FF0000>Note</FONT>
+    Class begins Tuesday, 7 September.<BR>
+
+    We not have class on Tuesday 24 November, as Frank will likely be in
+    Mexico City at that time.<BR>
+-------------------------->
+  </TD>
+ </TR>
+</TABLE>
+<!--------------------------------------------------------------------->
+
+<HR>
+<I><font color="AA00AA">Modified since 2 January 2007</font></I>
+</BODY>
+</HTML>
+
+

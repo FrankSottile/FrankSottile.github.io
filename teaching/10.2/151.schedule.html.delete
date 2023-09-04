@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<!-- ==================== DEFINE DOCUMENT VARS HERE ==================== -->
+
+
+<head>
+<title>MATH 151 Schedule, Department of Mathematics, Texas A&amp;M University</title>
+
+
+</head>
+
+<body>
+
+
+
+<!-- ==================== BEGIN YOUR CONTENT HERE ==================== -->
+
+<h1 class="pageTitle">MATH 151 - Weekly Schedule</h1>
+
+
+<ul>
+<li><b>Week 1</b> 
+<ul>
+<li>Appendix D, Section 1.1<br/>
+
+Introduction, trigonometry review, two-dimensional vectors </li>
+</ul>
+</li>
+<li><b>Week 2</b> 
+<ul>
+<li>Sections 1.2&ndash;1.3, 2.2<br/>
+Dot product, parameterized curves, (qualitative) definition of limit <br/>
+Examples from Section 2.1 on tangent and velocity can be incorporated into Section 2.2 to motivate limits. The concepts of tangents and velocity will be revisited in later sections.</li>
+</ul>
+</li>
+<li><b>Week 3</b> 
+
+<ul>
+<li>Sections 2.3, 2.5&ndash;2.6<br/>
+Calculation of limits, limits at infinity, continuity.  Note that the epsilon-delta definition (Section 2.4) is skipped	</li>
+</ul>
+</li>
+<li><b>Week 4</b> 
+<ul>
+<li>Sections 2.7, 3.1&ndash;3.2<br/>
+Velocity, differentiation<br/>
+<b>Note:</b> Physics has requested that we cover antidifferentiation formulas along with differentiation formulas</li>
+
+</ul>
+</li>
+<li><b>Week 5</b> 
+<ul>
+<li>Sections 3.3&ndash;3.4<br/> 
+Rates of Change. Derivatives of the trigonometric functions, and <b>Exam I</b> (Thursday, covering 
+thru Section 3.2)</li>
+</ul>
+</li>
+<li><b>Week 6</b> 
+
+<ul>
+<li>Sections 3.5&ndash;3.7<br/>
+Chain rule, implicit differentiation, derivatives of vector-valued functions</li>
+</ul>	 
+</li>
+<li><b>Week 7</b> 
+<ul>
+<li>Sections 3.8&ndash;3.10<br/>
+Higher derivatives, tangents of parameterized 	curves. Related rates <em><span style="font-style: normal"></span></em></li>
+</ul>
+
+</li>
+<li><b>Week 8</b> 
+<ul>
+<li>Sections 3.11, 4.1&ndash;4.2<br/>
+Differentials and approximation, exponential and inverse functions.  Pay particular attention in Section 3.11 to standard approximations, such as sin(x) ~ x and sqrt(1+x) ~ 1+x/2 (Section 3.12 on Newton's 
+Method 	will be done in lab).</li>
+</ul> 
+</li>
+<li><b>Week 9</b> 
+<ul>
+<li>Sections 4.3&ndash;4.4 <br/> 
+
+Logarithmic functions, derivatives of logarithms, and <b>Exam II</b> (Thursday, covering Sections 3.3&ndash;4.2)</li>
+</ul>	
+</li>
+<li><b>Week 10</b> 
+<ul>
+<li>Sections 4.5&ndash;4.6, 4.8<br/>
+Exponential growth and decay, inverse trigonometric functions, L'Hospital's Rule</li>
+</ul>
+
+</li>
+<li><b>Week 11</b> 
+<ul>
+<li>Sections 5.1&ndash;5.3<br/>
+Graphical interpretation of the derivative, first and second derivative tests (Section 5.4 on curve sketching with technology will be done in lab)</li>
+</ul>
+</li>
+<li><b>Week 12</b> 
+<ul>
+<li>Sections 5.5, 5.7, 6.1<br/> 
+Applied max/min, antiderivatives, Riemann sums</li> 
+
+</li>
+</ul>
+<li><b>Week 13</b> 
+<ul>
+<li>Sections 6.2&ndash;6.3<br/>
+Area and the definite integral. Thanksgiving falls this week.</li>
+</ul>
+</li>
+<li><b>Week 14</b> 
+<ul>
+<li>Section 6.4<br/> 
+
+The Fundamental Theorem of Calculus and <b>Exam	III</b> (Tuesday, covering Sections 4.3&ndash;6.3) </li>
+</ul>
+</li>
+<li><b>Week 15</b> 
+<ul>
+<li>Review for FINAL. Last day of class is Tuesday. Note that the last week of class has redefined day(s). See <a href="http://www.math.tamu.edu/teaching/memos/open.html#dates">
+Important Dates </a> for details. </li>
+
+</ul>
+</li>
+
+</ul>
+
+<!-- ===================== END YOUR CONTENT HERE ===================== -->
+
+</body>
+</html>

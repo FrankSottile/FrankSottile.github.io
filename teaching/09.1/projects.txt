@@ -1,0 +1,21 @@
+Presentations:
+
+Thursday  313  1--3:30   Milner 313
+Piyush Shroff:  Primitively generated Hopf Algebras
+Jared Teslow:   More Quasisymmetric Generating functions
+Jason Pfister:  Some determinantal identities
+Nick Hein:  Littlewood-Richardson Miscellany
+
+Friday 8 May  9:30--12:00  Milner 216
+ Jeanette Shakalli Tang:  The Beginnings of the Theory of Hopf Algebras
+ Svetlana Poznanovik:     jeu de taquin
+ Abraham Martin del Campo Sanchez:  Schur functions and Grassmanians
+ Weronika Buczynska:  Saturation Conjecture
+
+Monday 11 May 9:30--12:00   Milner 216
+ Yang Qi:  Symmetric functions in Representation theory
+ Ke Ye:    Symmetric functions in Representation theory
+ Rotislav Kravchenko  Description of the hall polynomials g^l_m,n(o).
+ Jun Wen  Hopf Algebra Structures in Topology
+
+=============================================================================

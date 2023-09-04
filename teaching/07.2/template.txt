@@ -1,0 +1,35 @@
+#   Dear Jarrod,
+#     Please record the homeworks in the [] below, as 
+#  comma-separated lists.   A missed homework gets `0'.
+#  Email me the text file every week after you enter 
+#  the student's scores so that I may keep track of
+#  their progress (or lack thereof).  There are HW in 
+#  your box.
+#
+#     Thanks,
+#   --- Frank 
+#
+#
+#              Homeworks for Sottile's Math 221 class Autumn 2007
+#
+#  Due date       9-5   9-13  9-20  10-4  10-11 10-18 11-1  11-8  11-15
+#   HW #           1     2     3      4     5     6     7     8     9
+HW[Atkinson]   :=[]:
+HW[Attah]      :=[]:
+HW[Bliss]      :=[]:
+HW[Cavanaugh]  :=[]:
+HW[Dailey]     :=[]:
+HW[De_La_O]    :=[]:
+HW[Disler]     :=[]:
+HW[Du_Bose]    :=[]:
+HW[Fortenberry]:=[]:
+HW[Gannaway]   :=[]:
+HW[Gray]       :=[]:
+HW[Homeyer]    :=[]:
+HW[Hwang]      :=[]:
+HW[Macarthur]  :=[]:
+HW[Maciejeski] :=[]:
+HW[Mattiza]    :=[]:
+HW[Mueller]    :=[]:
+################################################################################
+

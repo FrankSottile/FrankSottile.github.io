@@ -1,0 +1,13 @@
+2007-8 TAMU Undergraduate catalog description 
+for mate 221
+
+ 221. Several Variable Calculus. (4-0). Credit 4. I, II
+
+Vector algebra and solid analytic geometry; calculus of 
+functions of several variables;  Lagrange multipliers; 
+multiple integration, theory, methods and application; 
+line and surface integrals, Green's and Stokes' theorems; 
+Jacobians. 
+
+Prerequisite: MATH 172 or approval of instructor. 
+Credit will not be given for more than one of MATH 221, 251 and 253. 

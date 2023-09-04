@@ -1,0 +1,253 @@
+<HTML><HEAD><TITLE>Math 221, Section 503</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+<H1>Autumn 2007<BR>
+Math 221: Multivariate Calculus  &nbsp; &nbsp; 
+Section  503
+</H1>
+
+<!--------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------->
+<TABLE><TR><TD>
+ <!--------------------------------------------------------->
+   <TABLE>
+  <TR>
+   <TD colspan=2 align=left><b><FONT COLOR=AA00FF>Instructor:</FONT></b>
+        <A HREF="../../index.html">Frank Sottile</A>
+     &nbsp; &nbsp; &nbsp; <B>Weekly <A HREF="week.png">schedule</A></B>
+   </TD>
+  </TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> Office: Milner 303 </TD></TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> Telephone: 845.4169 </TD></TR>
+  <TR><TD width=5></TD>
+      <TD><IMG SRC="../../images/dot.gif"> email: <TT>sottile@math.tamu.edu</TT><BR>
+          &nbsp; &nbsp; &nbsp;  <font color=red>Text-only</font> email with
+           221 in the subject line, please.  </TD></TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> WWW:
+      <A HREF="http://www.math.tamu.edu"><TT>/~sottile</TT></A></TD></TR>
+  <TR><TD width=5></TD>
+   <TD>
+     <!--------------------------------------------------------->
+    <TABLE>
+      <TR>
+<!--    <TD>&nbsp;<FONT COLOR=red>End-of-term <EM>Office Hours</EM> :</FONT></TD>-->
+      <TD>&nbsp;<FONT COLOR=AA00FF><EM>Office Hours</EM> :</FONT></TD>
+<!--<TR><TD></TD>-->
+     <TD><IMG SRC="../../images/dot.gif"> Monday</TD>    <TD>11:30--12:20</TD></TR>
+     <TR><TD></TD><TD><IMG SRC="../../images/dot.gif"> Tuesday</TD>   <TD>13:00--14:00</TD></TR>
+<!--     <TR><TD></TD><TD><IMG SRC="images/dot.gif"> Wednesday</TD> <TD></TD></TR>-->
+<!--     <TR><TD></TD><TD><IMG SRC="images/dot.gif"> Thursday</TD>  <TD></TD> </TR>-->
+<!--     <TR><TD></TD><TD><IMG SRC="images/dot.gif"> Friday</TD>    <TD></TD></TR>-->
+
+     <TR><TD></TD> <TD colspan=2><IMG SRC="../../images/dot.gif"> By appointment</TD></TR>
+     </TABLE> 
+     <!--------------------------------------------------------->
+   </TD>
+   <!--------------------------------------------------------->
+  </TR>
+ </TABLE>
+
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Textbook</B>:</FONT></TD>
+          <TD>Calculus, early vectors, by J. Stewart.<BR>
+      </TR>
+ </TABLE>
+ 
+ <TABLE>
+   <TR valign=top><TD><FONT COLOR=AA00FF><B>Lectures</B>:</FONT></TD>
+          <TD>  &nbsp;  Tu, Th:  14:20 -- 15:35 and <BR>
+            &nbsp;   W  15:00 -- 15:50 in CE 137.</TD>
+   </TR>
+<!--   <TR valign=top><TD><FONT COLOR=AA00FF><B>Course Assistant</B>:</FONT> </TD> 
+         <TD><A Href="/~jhitchco/">Mitch Hitchcock</A> </TD> -->
+   </TR>
+
+ </TABLE>
+ <!------------------------------------------------------------------------>
+ </TD><TD width=20></TD>
+   <TD align=center>
+  <!--- <A HREF="151H.HW2.pdf">Homework for 7 Sept. 2006</A> <BR>--->
+       <IMG SRC="../06.2/stewart.jpg"></TD>
+</TR></TABLE>
+
+<!------------------------------------------------------------------------>
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Course&nbsp;Content</B>:</FONT></TD>
+      <TD><B> From the catalog</b>:
+        Vector algebra and solid analytic geometry; calculus of functions of several
+       variables;  Lagrange multipliers; multiple integration, theory, methods and
+       application; line and surface integrals, Green's and Stokes' theorems;
+        Jacobians.<BR>
+        <font color=blue>Prerequisites</font>.  Math 152 or Math 172 or consent of instructor.
+      </TD>
+    </TR>
+     <!------------------------------------------------------------------------>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Special Note</B>:</FONT></TD>
+    <TD> &nbsp; &nbsp; Your goal in this course, as in every course that you ever
+      take, should be complete mastery of the material.  Anything less is
+      aspiring to mediocrity and doing yourself a disservice.  
+      I expect you to read the section in the text that we will be covering
+      <font color=red><i>before</i></font> we meet.
+      Come to class ready to ask questions about what you do not yet know.
+      After class, <font color=red><i>re-read</i></font> the text and your notes,
+      and do some exercises to complete your mastery of the material.
+      Finally, ask questions in class, lots of them.
+      </TD>
+    </TR>
+ </TABLE>
+<!------------------------------------------------------------------------>
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Calculator:</FONT></b></TD>
+      <TD>
+        There will <font color=red>likely</font> be no use of calculators on exams.
+        I am still formulating my policy on this.
+<!--http://www.scilab.org/-->
+      </TD>
+    </TR>
+ </TABLE>
+<!------------------------------------------------------------------------>
+ 
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Course webpage: </FONT></b></TD>
+      <TD>
+    <A HREF="/~sottile/teaching/07.2/221.html">
+     <TT>/~sottile/teaching/07.2/221.html</TT></A>
+     <BR><A Href="http://calclab.math.tamu.edu/docs/math221/">Departmental page
+      for Math 221</A>
+    </TD>
+   </TR> 
+ </TABLE>
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+Interactive <A HREF="http://www.math.umn.edu/~rogness/quadrics/">Gallery</A>
+of quadrics.<BR>
+
+Some other
+ <A HREF="../..//pages/2l2s/S4/index.html#topRow">pictures of quadrics</A>.
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+<TABLE>
+ <TR>
+  <TD valign=top><FONT SIZE=+1 COLOR=FF0000>  Grading</FONT> <BR>
+   You will be expected to attend all class meetings; I do keep track of such
+   matters, but allow a few absences before penalties begin.
+   There will be <font color=red>three</font> in-term exams,  
+   each worth 25% toward your final grade.
+   The remaining 25% will be homework and attendance.
+   I do not plan to have a final exam.
+  </TD>
+ </TR>
+
+</TABLE>
+
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------------->
+
+<FONT SIZE=+1 COLOR=FF0000>  Exam Schedule </FONT>
+
+<TABLE>
+ <TR>
+  <TD> First exam:</TD> 
+  <TD> <font color=red></font>Thursday, 27 September.<BR>
+       </TD>
+ </TR>
+ <TR>
+  <TD> Second exam: &nbsp; </TD> 
+  <TD> <font color=red></font>Thursday, 25 October.</TD>
+ </TR>
+ <TR>
+  <TD> Third exam:</TD> 
+  <TD> Thursday, 29 November.</TD>
+ </TR>
+<!-- <TR> <TD> Final Exam:</TD>  <TD> <font color=red></font></TD><TD></TD> </TR>-->
+</TABLE>
+<!------------------------------------------------------------------------------->
+<font color=red> <b>Emergencies</b></font>:  
+    If you have a valid reason (medical or family emergency) for missing an
+    exam, then I will give you an alternative exam, preferably  
+    <font color=blue><i>before</I></font> the scheduled exam. 
+    Missing an exam without a valid reason will result in a score of zero for that
+    exam.
+
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------->
+
+<FONT SIZE=+2 COLOR=FF0000>  Homework:</FONT><BR>
+    Homework will be collected at least once a week and assigned daily, 
+    in class.<BR>
+   &nbsp; &nbsp; 
+   Late homeworks are not accepted.
+  It may not be possible to mark all problems assigned.
+  A few of the problems will be corrected and graded each week.
+  Nevertheless,  and for your own benefit, you will be required to hand in <B>all</B>
+  the assigned problems. 
+  Your score will be based partially upon completing all assigned problems and partially
+  upon the marks obtained in the problems which are marked.
+  <FONT COLOR=FF0000> The two lowest homework scores will be dropped before
+  computing your grade.</FONT> 
+ 
+  <BR>
+ <FONT COLOR=magenta>  First Assignment </FONT>:  Read this web
+   page, and send me a <font color=brown>text-only</font> email that you have
+   read and understood the course descriptions and policies.
+   Please also answer the following questions:<BR>
+   &nbsp; &nbsp; (1) Why are you taking this course?<BR>
+   &nbsp; &nbsp; (2) What do you hope to get out of this course?<BR>
+   &nbsp; &nbsp; (3) Is there anything else that you want to tell me (that
+        is relevant to the course)?<BR>
+ <FONT COLOR=red>  Second Assignment </FONT> (Due Wednesday 5 September at the start of
+   class):  The 36 problems from Sections 11.1, 11.2, and 11.3 listed 
+   <A HREF="221.sug_HW.html">here</A>.
+ </ul>    
+<!------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------------------------->
+<font color=red> <b>COPYRIGHT POLICY</b></font>:  
+    All printed materials disseminated in class or on the web are protected by
+    Copyright laws.  While personal use is permitted, sale of any of these
+    materials is strictly prohibited. 
+<!------------------------------------------------------------------------------->
+<HR>
+<b><font size=+1 color=maroon>University wide policies and statements:</font></b><BR>
+<!------------------------------------------------------------------------------->
+
+<B>Americans with Disabilities Act (ADA) Policy Statement</B><BR>
+
+The following ADA Policy Statement (part of the Policy on Individual Disabling
+Conditions) was submitted to the University Curriculum Committee by the Department of
+Student Life. The policy statement was forwarded to the Faculty Senate for information. 
+<BR>
+<blockquote>
+<em>
+The Americans with Disabilities Act (ADA) is a federal
+anti-discrimination statute that provides comprehensive civil rights
+protection for persons with disabilities. Among other things, this
+legislation requires that all students with disabilities be guaranteed a
+learning environment that provides for reasonable accommodation of their
+disabilities. If you believe you have a disability requiring an
+accommodation, please contact the Department of Student Life, Services
+for Students with Disabilities, in Room 126 of the Koldus Building or
+call 845-1637.
+</em>
+</blockquote>
+
+<b>Academic Integrity Statement</b> 
+"<font color=maroon>An Aggie does not lie, cheat, or steal or tolerate those who
+do</font>." 
+For more, see the <A HREF="http://www.tamu.edu/aggiehonor">Honor Council Rules and
+Procedures</A>. 
+
+<!------------------------------------------------------------------------>
+<HR>
+ <I>Modified Since: 3 September 2007 by Frank Sottile</I>.
+</BODY>
+</HTML>
+

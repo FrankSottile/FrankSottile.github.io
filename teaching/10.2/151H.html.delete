@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Math 151H, Sections 201-2</title>
+<link rel="shortcut icon" href="images/sottile.ico"> 
+<link href="../../images/frank.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+<H1>Autumn 2010<BR>
+Math 151H: Honors Calculus<BR>
+Sections  201-2
+</H1>
+<!--<A Href="http://abstrusegoose.com/88">Flatland in Comics</A>-->
+<!--------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------->
+<font size=+2>
+<b>Old tests from my 151H classes:
+   2006 <a href="../06.2/151H_test1.pdf">test 1</a> &nbsp;
+        <a href="../06.2/151H_test2.pdf">test 2</a> &nbsp;
+        <a href="../06.2/151H_test3.pdf">test 3</a> &nbsp;
+        <a href="../06.2/151H_final.pdf">final exam</a> &nbsp;
+   2008 <a href="../08.2/151H_test1.pdf">test 1</a> &nbsp;
+        <a href="../08.2/151H_test2.pdf">test 2</a> &nbsp;
+        <a href="../08.2/151H_test3.pdf">test 3</a> &nbsp;
+        <a href="../08.2/151H_final.pdf">final exam</a> &nbsp;</b>
+
+<br><font color=red>Office hours:  Monday 13 December and Tuesday 14 December 9--11 AM</font>
+<!----- <b><font color=red><a href="HW1.pdf">First Homework</a></font></b>
+  &nbsp;  &nbsp; 
+ <b><a href="HW2.pdf"><font color=red>Second Homework</font></a></b>
+ &nbsp; &nbsp; &nbsp; &nbsp; 
+</font>
+<font size=+2><a href="TrigonometricAddition.pdf">Angle addition formula</a>
+&nbsp; 
+-------->
+<BR><a href="151H.txt.html">Announcements, including homeworks</a>
+&nbsp; &nbsp; <a href="implicit_plot.html">implicit plots</a>.</font>
+<HR>
+<!--------------------------------------------------------->
+<table>
+ <tr>
+  <td>
+<!--------------------------------------------------------->
+   <TABLE>
+    <TR>
+     <TD colspan=2 align=left><b><FONT COLOR=AA00FF>Instructor:</FONT></b>
+        <A HREF="../../index.html">Frank Sottile</A>
+      &nbsp; &nbsp; &nbsp; <B>Weekly <A HREF="week.png">schedule</A></B>
+     </TD>
+    </TR>
+    <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> Office: Milner 303 </TD></TR>
+    <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> Telephone: 845.4169 </TD></TR>
+    <TR><TD width=5></TD>
+     <TD><IMG SRC="../../images/dot.gif"> email: <TT>sottile@math.tamu.edu</TT><BR>
+          &nbsp; &nbsp; &nbsp;  Text-only email with course + section number in Subject line, please.  </TD></TR>
+    <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> WWW:
+     <A HREF="/~sottile"><TT>http://www.math.tamu.edu/~sottile</TT></A></TD></TR>
+    <TR><TD width=5></TD>
+    <TD>
+     <!--------------------------------------------------------->
+     <TABLE>
+      <TR>
+      <TD>&nbsp;<FONT COLOR=AA00FF><EM>Office Hours</EM> :</FONT></TD>
+<!--     <TD><FONT COLOR=AA0000>To Be Announced</FONT></TD></TR><TR><TD></TD>-->
+<!---->     <TD><IMG SRC="../../images/dot.gif"> Monday</TD>    <TD>9:30--10:30</TD></TR>  
+<!---->     <TR><TD></TD><TD><IMG SRC="../../images/dot.gif"> Tuesday</TD>   <TD>10:00--11:00</TD></TR>  
+<!--     <TR><TD></TD><TD><IMG SRC="images/dot.gif"> Wednesday</TD> <TD></TD></TR>  -->
+<!---->    <TR><TD></TD><TD><IMG SRC="../../images/dot.gif"> Thursday</TD><TD> 10:30--11:30  </TD> </TR>  
+<!--     <TR><TD></TD><TD><IMG SRC="images/dot.gif"> Friday</TD>    <TD></TD></TR>  -->
+<!---->     <TD></TD><TD colspan=2><IMG SRC="../../images/dot.gif"> And by appointment</TD></TR> 
+      </TABLE> 
+     <!--------------------------------------------------------->
+    </TD>
+    <!--------------------------------------------------------->
+   </TR>
+  </TABLE>
+
+   <!--------------------------------------------------------->
+   <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Textbook</B>:</FONT></TD>
+          <TD>Calculus, early vectors, by J. Stewart.<BR>
+           <font color=red>MATLAB: An Introduction with
+        Applications, 3rd Edition, by Gilat.</TD>
+      </TR>
+  </TABLE>
+  <!--------------------------------------------------------->
+
+  <!--------------------------------------------------------->
+  <TABLE>
+   <TR><TD><FONT COLOR=AA00FF><B>Lectures</B>:</FONT></TD>
+          <TD>  &nbsp;  Tu, Th:  12:45 -- 14:00 Held 113.</TD>
+   </TR>
+
+  <TR valign=top><TD><FONT COLOR=AA00FF><B>Graduate Assistant</B>:</FONT> </TD> 
+      <TD> &nbsp; <A Href="/~rohun/">Rohun Kshirsagar</A></TD>
+   </TR>
+   <TR valign=top><TD><FONT COLOR=AA00FF><B>Labs</B>:</FONT> </TD> 
+          <TD>&nbsp;  201  M 13:50-14:40 BLOC 122 <BR>
+              &nbsp;  202  M 11:30-12:20 BLOC 122 <br> &nbsp;
+       <a href="/courses/math151/matlabsched.html">MATLAB 
+         Schedule</a><br>
+          &nbsp;    <a href="/courses/calclabhelp.html">CalcLab Help</A>.
+         Blocker 128, overflow to Blocker 126:<br>
+         &nbsp;  &nbsp;   Monday--Thursday 7-10 PM<br>
+         &nbsp;  &nbsp;    Sundays 1-10PM
+
+	  </TD>
+   </TR>
+   <TR valign=top><TD><FONT COLOR=AA00FF><B>Recitations</B>:</FONT> </TD> 
+          <TD>&nbsp; 201   W 13:50-14:40 Bloc 122 <BR>
+              &nbsp; 202   W 11:30-12:20 Held 119 </TD>
+   </TR> 
+
+<!--    <TR valign=top>
+    <TD><FONT COLOR=AA00FF><B>Honors Mentor:</b></font> 
+    </TD>
+     <TD>Brandon Williamson</td>
+   </TR>
+   <TR valign=top><TD><FONT COLOR=AA00FF><B>Help Sessions</B>:</FONT> </TD> 
+          <TD>&nbsp; Tu  6:00--8:30 pm &nbsp;  ENPH 201<BR>
+              &nbsp; Su  6:00--8:30 pm &nbsp;  Blocker 112<BR>
+        <font color=red>The Tuesday session may sometimes be moved to Wednesday in Blocker
+        124.</font></TD>
+   </TR>-->
+
+</TD>
+   </TR>
+
+ </TABLE>
+ <!------------------------------------------------------------------------>
+ </TD><TD width=20></TD>
+   <TD align=center>
+       <IMG SRC="../06.2/stewart.jpg"></TD>
+</TR></TABLE>
+
+<!------------------------------------------------------------------------>
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Learning Objectives</B>:</FONT></TD>
+      <TD>This course is to provide students with quantitative and problem-solving skills
+      of 2-dimensional vectors and differential calculus, as well as an introduction to
+      rigorous thought.  Besides learning the methods of the calculus, this course will 
+      introduce students to the Calculus as a mathematical subject, with an emphasis on 
+      basic definitions and theorems, and the deduction of formulas from these
+      foundations.
+      At the conclusion of the course, students should be able to:
+     <dd> <img src="../images/dot.gif"> Understand and apply the definition of limit.
+     <dd> <img src="../images/dot.gif"> Understand basic definitions and Theorems in the
+                                        Calculus, as well as their proofs.
+     <dd> <img src="../images/dot.gif"> Know and use techniques of differentiation.
+     <dd> <img src="../images/dot.gif"> Apply techniques of differentiation to a variety
+          of applications, including engineering applications.
+     <dd> <img src="../images/dot.gif"> Understand and apply vector operations in
+          2-dimensions, including dot product. 
+     <dd> <img src="../images/dot.gif"> Understand the relationship between derivatives
+          and integrals via the Fundamental Theorem of Calculus.
+     <dd> <img src="../images/dot.gif"> Use computer algebra systems, such as MATLAB, to
+          solve non-routine problems. 
+      </TD>
+    </TR>
+</TABLE>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>More on course content</B>:</FONT></TD>
+      <TD>This is serious course for serious students.  It will cover the
+        same topics as the ordinary Math 151 (see their 
+        <A HREF="151.schedule.html">schedule</A>),
+        but at a distinctly higher level  
+        without review, and with an emphasis on rigor.
+        These topics are vectors, functions, limits, derivatives, inverse functions, Mean Value
+        Theorem, applications of derivatives, integrals, and the Fundamental Theorem
+          of Calculus.  
+        Because of this, the primary source material for the course are my lectures; the
+        book is supplementary, but well-worth reading, especially for its examples.
+       <p> &nbsp; There will also weekly MATLAB work.
+         <A HREF="http://www.gnu.org/software/octave/octave.html">Octave</A> is
+          supposed to be an open-source MATLAB clone.
+      </TD>
+    </TR>
+     <!------------------------------------------------------------------------>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Special Note</B>:</FONT></TD>
+      <TD>  You are the best of the best.   I hope to make this course
+      intellectually interesting and challenging.  There is no 
+      predetermined grade distribution; your GPA will not be penalized for
+      taking this course.  Good performance will be rewarded with good grades. 
+     (Extra credit to the first student who explains properly to me what is
+      wrong with the common use of the word `curve' with respect to grades.)
+     <BR>
+      &nbsp; &nbsp; Your goal in this course, as in every course that you ever
+      take, should be a complete mastery of the material.  Anything less is
+      aspiring to mediocrity and doing yourself a disservice.  
+      There are several things that I will expect from you.  
+      You should read the relevant sections of the 
+      text <font color=red><i>before</i></font> we meet (if possible).
+      Come to class ready to ask questions about what you do not yet know.
+      After class, <font color=red><i>re-read</i></font> the text and your notes,
+      and do some exercises to complete your mastery of the material.
+      A guide, and only a guide, to exercises for this purpose may be found
+       <A HREF="151.sug_HW.html">here</A>.
+      Finally, ask questions in class, lots of them.
+      </TD>
+    </TR>
+ </TABLE>
+<!------------------------------------------------------------------------>
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Calculator:</FONT></b></TD>
+      <TD>
+        There will be no use of calculators on exams. 
+        <BR>
+        We'll save the machines for more serious work in the lab portion of the course.
+      </TD>
+    </TR>
+ </TABLE>
+<!------------------------------------------------------------------------>
+ 
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Course webpage: </FONT></b></TD>
+      <TD>
+    <A HREF="/~sottile/teaching/10.2/151H.html">
+     <TT>/~sottile/teaching/10.2/151H.html</TT></A>
+     <BR><A Href="/courses/courseInfo.php?semester=2010C&course=151">Departmental page
+      for Math 151</A>
+    </TD>
+   </TR> 
+ </TABLE>
+<!------------------------------------------------------------------------>
+<!--------<HR>
+  Graph paper 
+  <A Href="../Graph_Paper/graph-.125.pdf">(8 lines per inch)</A>.
+   -------->
+<!------------------------------------------------------------------------>
+  <HR>
+     Some Pictures:<BR>
+   <A HREF="../03S/sin1x-movie.html"><IMG SRC="../images/sin1x.gif"></A>
+   <A HREF="../03S/xsin1x.html"><IMG SRC="../images/xsin1x-sm.gif"></A>
+   <A HREF="../03S/xsin1x.html"><IMG SRC="../images/xe2sin1x-sm.gif"></A>
+<BR>
+   <A HREF="implicit.html"><IMG SRC="../images/Descartes-sm.gif"></A>  
+   <A HREF="implicit.html"><IMG SRC="../images/Tscirnhausen-sm.gif"></A>  
+   <A HREF="implicit.html"><IMG SRC="../images/Eff-sm.gif"></A>
+   <A HREF="implicit.html"><IMG SRC="../images/Harnack-sm.gif"></A>
+   <A HREF="implicit.html"><IMG SRC="../images/Eudoxus-sm.gif"></A>
+   <A HREF="implicit.html"><IMG SRC="../images/Snake-sm.gif"></A>
+   <A HREF="implicit.html"><IMG SRC="../images/Wagon-sm.gif"></A>
+   <A HREF="implicit.html"><IMG SRC="../images/Hilbert-sm.gif"></A>  
+<BR>
+  <A HREF="http://www-groups.dcs.st-and.ac.uk/~history/Curves/Curves.html">More Curves</A>.
+<!--
+  <A HREF="../03S/exp.html"><IMG SRC="../images/exp-sm.gif"></A>
+-->
+<!------------------------------------------------------------------------>
+<HR>
+<TABLE>
+ <TR>
+  <TD valign=top><FONT SIZE=+1 COLOR=FF0000>  Grading</FONT> <BR>
+    You will be expected to attend all class meetings; I do keep track of such
+    matters, but allow a few absences before penalties begin.
+   There will be <font color=red>two</font> in-term exams 
+    (each worth 20% toward your final grade), a limits tests (5%), 
+    and  the final exam will be worth 30%.
+    The remaining 25% will be Homework, attendance and class participation, the MATLAB
+    Labs, the Greek alphabet quiz, and class discussion about Flatland.
+  </TD>
+ </TR>
+
+</TABLE>
+
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------------->
+
+<FONT SIZE=+1 COLOR=FF0000>  Exam Schedule </FONT>
+
+<TABLE>
+ <TR>
+  <TD> <font color=red>Limits quiz Thursday 30 September</font>&nbsp; &nbsp;</TD> 
+  <TD><font color=red>Greek alphabet quiz first week in October.</font><BR>
+       </TD>
+ </TR>
+ <TR>
+  <TD> First exam:</TD> 
+  <TD> Tuesday, 19 October.<font color=red></font><BR>
+       </TD>
+ </TR>
+ <TR>
+  <TD> Second exam: &nbsp; </TD> 
+  <TD> Thursday, 18 November.<font color=red></font></TD>
+ </TR>
+ <TR>
+  <TD> Final Exam:</TD>
+  <TD> Wednesday 15 December, 8:00 - 10:00 AM.<font color=red></font></TD><TD></TD>
+ </TR>
+</TABLE>
+
+<!------------------------------------------------------------------------------->
+ <HR>
+   <A Href="../GreekAlphabet.html">Greek Alphabet</A>.
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------->
+
+<FONT SIZE=+2 COLOR=FF0000>  Homework:</FONT><BR>
+    Yes, and on a regular basis. &nbsp;
+   <A HREF="151.dept.hw.html">suggested homework for ordinary 151</A>. <BR>
+
+
+   <font color=red>Some particulars of the homework have yet to be determined.</font><br>
+ <p> 
+    Homework will be collected at least once a week and assigned daily, 
+    in class.
+  <P>
+   Late homeworks are not accepted.
+  While it may not be possible to mark all problems assigned,
+  you should  hand in <B>all</B> the assigned problems as 
+  a random selection of the problems will be corrected, graded,
+  and recorded for your homework score.
+  <FONT COLOR=FF0000> The two lowest homework scores will be dropped before
+  computing your grade.</FONT> 
+ 
+<!-----  <br>
+   &nbsp; &nbsp; 
+   Homework is due on Thursdays.
+-->
+
+  <BR>
+ <FONT COLOR=magenta>  Initial Assignment </FONT>:  Read this web
+   page, and send me a <font color=brown>text-only</font> email that you have
+   read and understood the course descriptions and policies.<BR>
+   <font color=red>Also, put the class and section number in the subject line.</font><BR>
+   Please also answer the following questions:<BR>
+   (1) Why are you taking this course?<BR>
+   (2) What do you hope to get out of this course?<BR>
+   (3) Is there anything else that you want to tell me about yourself (that
+        may be relevant to the course)?<BR>
+  <!------------------------------------------
+
+<li> <a href="http://wks7.itlab.tamu.edu/belmonte/Demo01/Demo01.html">MATLAB medley</a>
+--------------------->
+</ul>    
+<!------------------------------------------------------------------------------->
+<!--
+
+ <HR>
+ <font size=+1 color=red>What is wrong with the following:</font>
+  Write <i>t</i><sup>2</sup> as 
+   <i>t</i>+<i>t</i>+.....+<i>t</i>  (<i>t</i> times in total).
+   If we differentiate this expression, we get
+   1+1+.....+1  (<i>t</i> times in total), which is just <i>t</i>.
+<BR>
+
+<font size=+1 color=red>Also:</font>
+I am still waiting for a correct solution to the question about the ruler
+function.  
+
+
+ <HR>
+ <font size=+1 color=red>Challenge problem:</font>
+  Here is some arithmetic: 
+  (a)&nbsp;14<sup>2</sup>=232.  
+  (b)&nbsp;3<sup>5</sup>=463.  
+  (c)&nbsp;1111-234=544.   
+  (d)&nbsp;42 * 24 = 1401.  
+  (e)&nbsp;123+321 = 444.  
+  (f)&nbsp;3*52=216.<BR>
+ 
+  Exactly one of these calculations is wrong.
+  Which one is it, and why?
+  The student with the first correct answer gets a prize.
+--> 
+
+<!------------------------------------------------------------------------------->
+ <HR>
+<!------------------------------------------------------------------------------->
+<font color=red> <b>Absences</b></font>:  
+    While I do take attendance, your first few absences will not count.
+     If you have a valid reason (medical or family emergency) for missing an
+    exam, then I will instead give more weight to the final exam, or, on rare 
+    occasions, give you an alternative exam 
+    <font color=blue><i>before</I></font> the scheduled exam. 
+    Missing an exam without a valid reason results in a score of zero for that
+    exam.
+<!------------------------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------------------------->
+<font color=red> <b>COPYRIGHT POLICY</b></font>:  
+    All printed materials disseminated in class or on the web are protected by
+    Copyright laws.  While personal use is permitted, sale of any of these
+    materials is strictly prohibited. 
+<!------------------------------------------------------------------------------->
+<HR>
+<b><font size=+1 color=maroon>University wide policies and statements:</font></b>
+<HR>
+
+<B>Americans with Disabilities Act (ADA) Policy Statement</B><BR>
+<P>
+The following ADA Policy Statement (part of the Policy on Individual Disabling
+Conditions) was submitted to the University Curriculum Committee by the Department of
+Student Life. The policy statement was forwarded to the Faculty Senate for information. 
+<p>
+<blockquote>
+<em>
+The Americans with Disabilities Act (ADA) is a federal
+anti-discrimination statute that provides comprehensive civil rights
+protection for persons with disabilities. Among other things, this
+legislation requires that all students with disabilities be guaranteed a
+learning environment that provides for reasonable accommodation of their
+disabilities. If you believe you have a disability requiring an
+accommodation, please contact the Department of Student Life, Services
+for Students with Disabilities, in Room 126 of the Koldus Building or
+call 845-1637.
+</em>
+</blockquote>
+</p>
+
+<b>Academic Integrity Statement</b> 
+"<font color=maroon>An Aggie does not lie, cheat, or steal or tolerate those who
+do</font>." 
+For more, see the <A HREF="http://www.tamu.edu/aggiehonor">Honor Council Rules and
+Procedures</A>. 
+
+<!------------------------------------------------------------------------>
+<address></address>
+<!-- hhmts start --> Last modified: Fri Dec 10 09:34:41 CET 2010 <!-- hhmts end -->
+<!---------------------------------------------------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12943815-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!---------------------------------------------------------------------------->
+</body> </html>
+
+
