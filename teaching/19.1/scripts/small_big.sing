@@ -1,0 +1,21 @@
+//
+//   small_big.sing
+//
+option(redSB);
+ring R=0, (x,y,z), dp;
+ideal I;
+
+I =  xy^3+xz^3+x-1,  yz^3+yx^3+y-1,  zx^3+zy^3+z-1;
+I=std(I);
+
+short=0;
+I;
+dim(I);
+mult(I);
+
+ring S=0, (x,y,z), lp;
+ideal J = fglm(R,I);
+J=std(J);
+short=0;
+J;
+quit;

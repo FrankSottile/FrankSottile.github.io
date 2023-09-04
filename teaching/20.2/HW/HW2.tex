@@ -1,0 +1,248 @@
+%Homework2.tex
+%Second Homework -- Math 300 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\defn}[1]{{\color{blue}\sl #1}}
+\newcommand{\deco}[1]{{\color{blue} #1}}
+
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300 Sections 902, 905}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Second Homework: \hfill Due 7 September 2020
+\normalsize\vspace{10pt}
+
+
+Note:  \deco{$\RR$} is the real numbers, \deco{$\QQ$} is the rational numbers, \deco{$\ZZ$} is the integers, and
+\deco{$\NN$} is the natural numbers (which begin with 0).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Rewrite the following statements in the form ``if $P$, then $Q$''.
+  \begin{enumerate}
+
+    \item ``One, if by land''.
+    \item ``Candor implies equality''.
+    \item ``Pepperoni only if pizza''.
+    \item ``Inattentive when bored''.
+    \item ``Slapstick is sufficient for comedy''.
+    \item ``Quiet is necessary for sleep''.
+
+  \end{enumerate}
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\item Rewrite ``If the function $f$ is differentiable, then it is continuous'' in each of the six forms of the previous problem.
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Express the following statements in the form ``If P then Q''.
+  For example, ``A Hexagon has six sides'' becomes ``If $H$ is a hexagon, then $H$ has six sides''.
+  \begin{enumerate}
+   
+   \item An integer is odd or even.
+   \item All positive real numbers have a square root.
+   \item All angles of of an equilateral triangle are equal.
+   \item 1 is the smallest positive integer.
+   \item When the product of two integers is even, then both integers are even.
+     
+  \end{enumerate}
+  
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Fill out the truth table for the expressions
+  $P\wedge Q$, $\lnot P$, $\lnot Q$, $\lnot(P\wedge Q)$, $\lnot P\wedge\lnot Q$, $\lnot P\vee\lnot Q$, and 
+   $(\lnot P\wedge\lnot Q)\vee Q$:
+
+  \begin{tabular}{|c|c||c|c|c|c|c|c|c|}\hline
+    $P$&$Q$&$P\wedge Q$&$\lnot P$& $\lnot Q$& $\lnot(P\wedge Q)$& $\lnot P\wedge\lnot Q$& $\lnot P\vee\lnot Q$
+      &  $(\lnot P\wedge\lnot Q)\vee Q$\\ \hline\hline
+     T &T&&&&&&&\\
+     T &F&&&&&&&\\
+     F &T&&&&&&&\\
+     F &F&&&&&&&
+    \end{tabular}\medskip
+  
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Which of the following expressions are tautologies?  Which are contradictions?
+  \begin{enumerate}
+    
+   \item $(P \to Q)\vee(Q\to P)$
+   \item $(P\wedge Q)\vee(\lnot P\wedge \lnot Q)$
+   \item $P\to (Q\to P)$
+   \item $(P\wedge Q)\wedge(Q\to\lnot P)$
+    
+  \end{enumerate}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Rewrite ``Friendship is necessary and sufficient for happiness'' in nine additional, equivalent ways.
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that each of the following statements is true.
+  \begin{itemize}
+  \item Ibukun is in middle school.
+  \item Ibukun got 90 on her German test or  Adeola got 90 on her German test.
+  \item If Adeola got 90 on her German test, then Ibukun is not in middle school.
+  \end{itemize}
+  If possible, determine the truth values of each of the following statements.  Explain your reasoning.
+  \begin{enumerate}
+   \item  Ibukun  got 90 on her German test.
+   \item  Adeola  got 90 on her German test.
+   \item  Either Adeola or Ibukun did not get 90 on the German test.
+  \end{enumerate}
+ 
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  For statements $P$, $Q$, and $R$:
+  \begin{enumerate}
+    
+  \item Show that $[(P\to Q)\wedge P]\to Q$ is a tautology.
+      {\bf Note:} In logic, this is an important rule of logic called \defn{modus ponens}.
+  \item Show that $[(P\to Q)\wedge (Q\to R)]\to (P\to R)$ is a tautology.
+      {\bf Note:} In logic, this is an important rule of logic called \defn{syllogism}.
+
+    \item Give example of a valid syllogism involving Socrates.
+          Give example of a false syllogism involving Socrates.
+
+  \end{enumerate}
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Fill out a truth table (with $8=2^3$ rows) for the two  expressions $(P\vee Q)\wedge(P\vee R)$
+       and  $P\vee(Q\wedge R)$.   What do you observe?
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Above is from the worksheet from Day 3
+%  Next comes the worksheet from Day 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write the converse and contrapositive of the following conditional statements:
+  \begin{enumerate}
+    \item If it rains, then the grass is wet.
+    \item $\alpha^2=25$ if $\alpha=5$.
+    \item The integer $a$ is odd only if $3a$ is odd.
+    \item ``Inattentive when bored''.
+    \item ``Quiet is necessary for sleep''.
+    \item ``Pepperoni is necessary for Pizza''.
+  \end{enumerate}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%
+\item Give the contrapositive and converse of each of the implications in Problem 1.
+     Write them in the form ``If $P$, then $Q$''.
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write a useful negation of each of the following statements.
+  Do not leave a negation as the prefix of a statement.
+  For example, the negation of ``I will water my garden and pick basil'' is
+  ``I will not water my garden or I will not pick basil''.
+  \begin{enumerate}
+  \item   You will walk or take the bus.
+  \item   Knowledge is necessary for truth.
+  \item   That was Country and Western.
+  \item   That was Country or Western.
+  \item   If you wash the dishes or put away the laundry, you can have some chocolate.
+  \item   Hard work is necessary for success.
+  \end{enumerate}
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $a$, $b$, and $c$ be integers.
+  Consider the following conditional statement:
+  \[\mbox{If $a$ divides $bc$, then $a$ divides $b$ or $a$ divides $c$.}\]
+  Which of the following statements have the same meaning as this conditional statement, and which are negations of this
+  conditional statement:
+  \begin{enumerate}
+   \item If $a$ divides $b$ or $a$ divides $c$, then $a$ divides $bc$.
+   \item If $a$ does not divide $b$ or $a$ does not divide $c$, then $a$ does not divide $bc$.
+   \item $a$ divides $bc$, $a$ does not divide $b$, and $a$ does not divide $c$.
+   \item If $a$ does not divide $b$ and $a$ does not divide $c$, then $a$ does not divide $bc$.
+   \item $a$ does not divide $bc$ or $a$  divides $b$ or $a$  divides $c$.
+   \item If $a$ divides $bc$ and $a$ does not divide $c$, then $a$ divides $b$.
+   \item If $a$ divides $bc$ or $a$ does not divide $b$, then $a$ divides $c$.
+  \end{enumerate}
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Use the roster method to specify the elements in each of the following sets and then write a sentence in English
+  describing the set.
+  \begin{enumerate}
+
+   \item $\{ x\in{\RR} \mid x^2-2x-4=0\}$.
+   \item $\{n\in \ZZ\mid n^2<27\}$.
+   \item $\{n\in \NN\mid n^2<27\}$.
+   \item $\{ x\in{\QQ} \mid x^2-2x-4=0\}$.
+    
+  \end{enumerate}
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Use set builder notation to specify the following sets.
+   \begin{enumerate}
+
+   \item The set of all natural numbers with square at least 15.
+   \item The set of all odd integers.
+   \item The set of all real numbers at most 10 whose square exceeds $3$.
+   \item The set of positive rational numbers.
+    
+  \end{enumerate}
+ 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
+  
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

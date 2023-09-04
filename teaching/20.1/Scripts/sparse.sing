@@ -1,0 +1,49 @@
+//sparse.sing
+//
+// Frank Sottile
+// 26 February 2019
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//   This script is a framework for investigating the number of solutions 
+//     to sparse systems.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+option(redSB);
+//system("random",1009);  // start random generator with seed 1009  -- This is for the ability to replicate results.
+
+int numMonoms = 6;
+intmat A[2][numMonoms] = 0,1,2,  0,1, 1,
+                         0,0,0,  1,1, 2;
+
+ring R = 0, (x,y), lp;
+
+poly f;
+int i,j,ii, numIter;
+ideal I;
+
+//
+//  Number of iterations
+//
+numIter = 10;
+
+for (ii=1; ii<=numIter; ii=ii+1) {
+
+ I=0;
+ for (j=1;  j<=2; j=j+1) {
+  f=0;
+  for (i=1; i<=numMonoms; i=i+1) {
+   f = f +  random(-100,100)*x^A[1,i]*y^A[2,i];
+  }
+ short=0;
+  I = I + ideal(f);
+ }
+
+ short=0;
+
+ print("/////////////////////////////////////////////////");
+ I;
+ I=std(I);
+// I;  // this prints out the Groebner basis, which you may want to look at
+ dim(I), mult(I);
+}
+quit;

@@ -1,0 +1,7 @@
+These three polynomials are for problem number 4 of the fourth homework
+
+1574*y^2-625*y*x-1234*y+334*x^4-4317*x^3+19471*x^2 -34708*x+19764+45*x^2*y-244*y^3,
+45*x^2*y-305*y*x-2034*y-244*y^3-95*x^2+655*x+264+1414*y^2,
+-33*x^2*y+197*y*x+2274*y+38*x^4-497*x^3+2361*x^2-4754*x +1956+244*y^3-1414*y^2 
+
+

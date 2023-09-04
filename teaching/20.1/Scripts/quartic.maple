@@ -1,0 +1,37 @@
+#quartic.maple
+#
+#
+################################################################
+
+with(plots):
+plotsetup(x11):
+#
+F:=16*x^4+32*x^2*y^2+16*y^4+64*x^3-192*x*y^2+72*x^2+72*y^2-27;
+G:=324*x^4+648*x^2*y^2+324*y^4+972*x^3-2916*x*y^2+765*x^2+765*y^2-125;
+H:=x^8+4*x^6*y^2+6*x^4*y^4+4*x^2*y^6+y^8-6*x^7+6*x^5*y^2+30*x^3*y^4+18*x*y^6+8*x^6-57*x^4*y^2+78*x^2*y^4-y^6:
+
+plotsetup(gif,plotoutput=`A.gif`,plotoptions=`height=400,width=400`);
+R:=1:
+r:=0.5:
+
+X:=cos(th)-2*(cos(th)*cos(th) - sin(th)*sin(th))/3:
+X:=cos(th)-2*(cos(2*th))/3:
+Y:=sin(th)+2*sin(2*th)/3:
+
+#plot([X,Y,th=0..2*Pi], color=red,axes=none,thickness=2 );
+Digits:=20:
+implicitplot(F, x=-1.8..0.8,y=-1.5..1.5, grid=[150,150]);
+
+Digits:=20:
+plotsetup(gif,plotoutput=`B.gif`,plotoptions=`height=600,width=600`); 
+#plot([cos(th) - cos(2*th)/2, sin(th)+sin(2*th)/2,th=0..2*Pi], color=red,axes=none,thickness=2 );
+implicitplot(G, x=-1.9..1,y=-1.6..1.6, grid=[200,200]);
+
+plotsetup(gif,plotoutput=`C.gif`,plotoptions=`height=800,width=800`);
+plot([cos(th)*(1+ cos(3*th)), sin(th)*(1+ cos(3*th)),th=0..2*Pi], color=maroon,axes=none,thickness=2 );
+Digits:=50:
+implicitplot(H, x=-5.5..4,y=-3.6..3.6, grid=[250,250]);
+
+
+P:=[cos(th)*(1+ cos(3*th)), sin(th)*(1+ cos(3*th))]:
+#for i from 1 to 90 by 2 do lprint(evalf(subs(th=i/2/Pi,P))); end do;
