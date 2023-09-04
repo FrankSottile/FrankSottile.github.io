@@ -1,0 +1,12 @@
+Real Solutions to Polynomial Equations
+--Frank Sottile, Texas A&M University
+
+  Advances in theory and software have turned an
+intractible problem---finding all (complex-number) 
+solutions to moderately-sized systems of non-linear 
+equations---into routine computation.  Related 
+advances include a priori information on the 
+meaningful real solutions and promising new algorithms 
+that only compute the real solutions.  This poster
+will summarize this work, which is important for
+the applications of mathematics.

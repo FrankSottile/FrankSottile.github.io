@@ -1,0 +1,21 @@
+Orbitopes
+
+Frank Sottile
+
+  An orbitope is the convex hull of an orbit of a compact
+group G acting linearly on a vector space.   Orbitopes are 
+the simplest convex bodies which possess many symmetries.
+Some, particularly those in low-dimensional representations 
+of G have very beautiful structure.  Our interest is in 
+whether or not these appealing convex bodies are spectahedra, 
+that is, if they are described by a system of linear matrix 
+inequalities, preferably with coefficients in the field of 
+definition of the orbitope.
+
+    In this talk, I will introduce orbitopes and discuss
+spectahedra and the new field of convex algebraic geometry 
+in which these questions lie.  I will illustrate this
+with orbitopes for SO(2) and for the special orthogonal 
+group acting on trace-free symmetric matrices. 
+
+This is joint work with Raman Sanyal and Bernd Sturmfels.

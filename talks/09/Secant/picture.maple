@@ -1,0 +1,142 @@
+#picture.maple
+#
+#
+####################################################
+interface(quiet=true):
+
+SPH:=proc(T)
+#
+#  draws spheres
+#
+global Gamma:
+local r:
+# r:=0.3:
+ r:=0.15:
+ return([subs(t=T,Gamma[1])+r*cos(th), subs(t=T,Gamma[2])+r*sin(th)*cos(ph), 
+         subs(t=T,Gamma[3])+r*sin(th)*sin(ph)])
+end proc:
+
+ansatz:=[f0+f1*t+f2*t^2+f3*t^3, 
+         g0+g1*t+g2*t^2+g3*t^3, 
+         h0+h1*t+h2*t^2+h3*t^3]:
+
+l:=3:
+u:=4:
+mm:=1:
+####################################################
+#
+#  t = \pm 1 lies on line [ s, 1, s ]
+#
+A1:=subs(t=-mm,ansatz):
+A2:=subs(t=mm,ansatz):
+#
+# t = 3, 4 lies on line [ s, s, 1]
+#
+B1:=subs(t=l,ansatz):
+B2:=subs(t=u,ansatz):
+#
+# t = -3, -4 lies on line [ s, -s, -1]
+#
+C1:=subs(t=-l,ansatz):
+C2:=subs(t=-u,ansatz):
+#
+####################################################
+
+Sols:=solve({A1[2]=1, A2[2]=1, A1[1]=A1[3], A2[1]=A2[3],
+       B1[1]= B1[2],B2[1]=B2[2],B1[3]=-1,B2[3]=-1,
+       C1[1]=-C1[2],C2[1]=-C2[2],C1[3]=1,C2[3]=1}):
+
+Gamma:=subs(op(Sols), ansatz):
+####################################################
+H:=[-t, t*cos(th)-sin(th), t*sin(th)+cos(th)]:
+####################################################
+with(plots):
+plotsetup(x11):
+
+#L:=10:   # Full hyperboloid
+L:=5:
+
+Curve:=spacecurve(Gamma, t=-u-1.2..u+1.2, color=blue,thickness=2):
+Hyp:=plot3d(H, th=-Pi..Pi,t=-L..L, color=yellow, grid=[33,21]):
+Edges:=[
+ spacecurve(subs(t=L,H),th=-Pi..Pi, color=orange, thickness=2),
+ spacecurve(subs(t=-L,H),th=-Pi..Pi, color=orange, thickness=2)]:
+
+M:=L+8:
+Lines:=[
+ spacecurve([-t, t, 1], t=-M..M, color=red, thickness=2),
+ spacecurve([-t, 1,-t], t=-M..M, color=magenta, thickness=2),
+ spacecurve([-t,-t,-1], t=-M..M, color=green, thickness=2),
+NULL]:
+
+Sph:=[
+ plot3d(SPH(-mm), th=-Pi..Pi, ph=0..Pi, color=magenta,style=patchnogrid,grid=[15,7]),
+ plot3d( SPH(mm), th=-Pi..Pi, ph=0..Pi, color=magenta,style=patchnogrid,grid=[15,7]),
+ plot3d( SPH(l), th=-Pi..Pi, ph=0..Pi, color=green,style=patchnogrid,grid=[15,7]),
+ plot3d( SPH(u), th=-Pi..Pi, ph=0..Pi, color=green,style=patchnogrid,grid=[15,7]),
+ plot3d( SPH(-l), th=-Pi..Pi, ph=0..Pi, color=red,style=patchnogrid,grid=[15,7]),
+ plot3d( SPH(-u), th=-Pi..Pi, ph=0..Pi, color=red,style=patchnogrid,grid=[15,7])
+]:
+
+# Fourth secant line
+#
+#  t = 1.5, 2.5 
+#
+D1:=subs(t=-3/2,Gamma):
+D2:=subs(t=-5/2,Gamma):
+Fourth:=[
+ plot3d(SPH(-3/2), th=-Pi..Pi, ph=0..Pi, color=black,style=patchnogrid,grid=[15,7]),
+ plot3d(SPH(-5/2), th=-Pi..Pi, ph=0..Pi, color=black,style=patchnogrid,grid=[15,7]),
+ spacecurve([seq(t*D1[ii]+(1-t)*D2[ii],ii=1..3)], t=-M..M, color=black, thickness=2)
+]:
+
+
+A:=[ 
+#Fourth,
+Curve, 
+Sph[],
+Lines[], 
+Hyp, 
+Edges[], 
+NULL]:
+
+#plotsetup(gif,plotoutput="cross.gif",plotoptions=`height=800,width=900`):
+#display3d( A[], scaling=constrained,orientation=[10,60],view=[-12..12,-12..12,-12..12]);
+#display3d( A[], scaling=constrained,orientation=[15,20],view=[-12..12,-12..12,-12..12]);
+#plotsetup(gif,plotoutput="loop.gif",plotoptions=`height=1400,width=1600`):
+#display3d( A[], scaling=constrained,orientation=[135,40],view=[-12..12,-12..12,-12..12]);
+
+#plotsetup(gif,plotoutput="secant-close.gif",plotoptions=`height=1600,width=2000`):  # for closeup
+#plotsetup(gif,plotoutput="secant.gif",plotoptions=`height=900,width=1100`):  # for title
+#display3d( A[], scaling=constrained,orientation=[-18,70],view=[-12..12,-12..12,-10..10]);
+
+#
+#   For .eps picture
+#
+#plotsetup(ps,plotoutput=`A.eps`,plotoptions=`color,portrait,width=12in,height=13in,noborder`):
+#display3d( A[], scaling=constrained,orientation=[-18,70],view=[-10..10,-10..10,-8..8]);
+
+F := th-> display3d(A[], scaling=constrained,
+#                       orientation=[14+th*180/Pi, 25+cos(th)*cos(th)*35]):
+#
+#   This `wiggles' and zooms in close
+#
+#      orientation=[14+th*180/Pi, 25+cos(th)*cos(th)*35],view=[-2..2,-2.25..2.25,-2.25..2.25]):
+#
+#   No wiggle
+#
+         orientation=[14+th*180/Pi, 70],view=[-12..12,-12..12,-12..12]):
+
+#
+plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=900,width=1000`):  # for hyperboloid  
+#
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=600,width=800`):   # for curve and lines
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=600,width=800`):
+NFr:=120:
+NFr:=90:    # for hyperboloid
+NFr:=75:    # for small hyperboloid
+
+
+#
+animate(F,[th],th=0..2*(1-1/NFr)*Pi,scaling=constrained,axes=none,frames=NFr);
+

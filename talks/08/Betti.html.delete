@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Betti number bounds for fewnomial hypersurfaces via stratified Morse theory</title>
+</head>
+<body bgcolor="#ffffff">
+
+<hr>
+<table style="width: 100%; text-align: left;" cellpadding="2" cellspacing="2">
+ <tbody>
+  <tr>
+   <td>
+    <h1>Betti number bounds for fewnomial hypersurfaces via stratified Morse theory</h1>
+    <hr>
+  <TD rowspan=3 valign=bottom>
+  <img src="../../abstracts/images/Betti.gif">
+  </TD>
+   </td>
+  </tr>
+  <!---------------------------------------------------------->
+  <tr>
+   <td> 
+    <font size="+2"> <a href="http://www.math.tamu.edu/%7Esottile/index.html">Frank
+     Sottile</a></font>
+    <hr>
+   </td>
+</tr>
+    <tr>
+      <td style="vertical-align: top;"><b>Abstract</b><br>
+      <br>
+  &nbsp; &nbsp;
+  We use stratified Morse theory for a manifold with
+  corners to give a new bound for the sum of the Betti numbers of a hypersurface
+  in <b>R</b><sup><i>n</i></sup><sub>></sub> defined by a polynomial with 
+  <i>n</i>+<i>l</i>+1 terms.
+   <BR><BR>
+
+ &nbsp; &nbsp; The figure at right illustrates a Morse function on the Cannoli shell.
+   </TD>
+   </tr>
+  </tbody>
+</table>
+<!----------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------->
+   <!--------------------------------------------------------------->             
+   <!-----------       Version of 15 January 2008    --------------->
+   <!--------------------------------------------------------------->             
+   <TABLE><TR valign=center>
+     <TD><A HREF="../../ps/Betti.ps.gz"><IMG SRC="../../images/ps.gif"></A></TD>
+     <TD><A HREF="../../pdf/Betti.pdf"><IMG SRC="../../images/pdf.gif"></A></TD>
+     <TD><A HREF="../../abstracts/Betti.html"><IMG SRC="../../images/abs.gif"></A></TD> 
+     <TD><FONT COLOR="FF00FF">
+      <I>Betti number bounds for fewnomial hypersurfaces via stratified Morse
+      theory</I></FONT>,   with 
+       <A HREF="http://www.lama.univ-savoie.fr/~bihan/">Fr&eacute;d&eacute;ric Bihan</A>,  
+        7 pages.  <tt>arXiv:0801.2554</tt>.
+     </TD>
+    </TR>
+   </TABLE>
+<!--------------------------------------------------------------------->
+
+
+<!----------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------->
+</body>
+</html>

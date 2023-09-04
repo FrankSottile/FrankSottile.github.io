@@ -1,0 +1,25 @@
+Bounds for real solutions to structured polynomial systems
+Frank Sottile
+Texas A&M University
+
+   Understanding the real solutions to systems of polynomial
+equations  is a difficult  question with  many applications.
+In  particular, a  non-trivial lower  bound is  an existence
+proof  for  solutions  and  non-trivial  upper  bounds  give
+complexity bounds.
+
+   The  best-known upper bound  is due  to Khovanskii and is
+unrealistically large.  
+
+   Lower bounds are a  very recent phenomenon, having arisen
+with real Gromov-Witten invariants and (separately) with the
+Wronski map in  Schubert calculus.  The results, though, are
+striking:  "Most" rational  curves of degree d interpolating
+3d-1 real points  in  the plane are real, and every rational
+function with only real critical points is real.
+
+  In  this talk, I  will describe  this background  and then
+discuss  recent work giving  upper and  lower bounds  on the
+numbers of real solutions to some sparse polynomial systems.
+This is joint work  with Soprunova  (lower bounds)  and with
+Bihan and Bates (upper bounds).

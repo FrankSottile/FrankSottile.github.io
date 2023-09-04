@@ -1,0 +1,14 @@
+Bounds for real solutions to sparse polynomial systems
+
+   Understanding the real solutions to systems of polynomial
+equations  is a difficult  question with  many applications.
+In this talk,  I will discuss recent work  with Soprunova in
+which we prove the existence of lower bounds for many sparse
+polynomial systems,  and give  a method for  computing these
+lower bounds in some  instances.  I will also discuss recent
+work with  Bertrand and Bihan giving  realistic upper bounds
+for  the  number of  real  solutions  to polynomial  systems
+supported on circuits.
+
+
+

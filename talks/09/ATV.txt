@@ -1,0 +1,29 @@
+Arithmetic Toric Varieties
+
+   Toric varieties are fundamental objects of 
+combinatorial algebraic geometry.   The reason for 
+this is that they are canonically associated to 
+a fan in a lattice and may be viewed either as
+varieties or as objects in geometric combinatorics.
+They area also characterized as normal varieties 
+that have an action of a diagonal (split) torus 
+with a dense orbit.
+
+   An arithmetic toric variety is a normal variety 
+over a field k equipped with the action of a (non 
+necessarily split) torus having a dense orbit.
+Extending scalars to the algebraic closure, they
+become a usual toric variety.  Their classification
+involves is via nonabelian (Galois cohomology)
+which mixes the combinatorics with the symmetry
+of a discrete group action.
+
+  In this talk, which represents joint work with 
+Javier Elizondo, Paulo Lima-Filho, and Zach Teitler, 
+I will introduce you to the topics of toric varieties 
+and Galois cohomology, stating our classification 
+theorem, present some examples, and discuss future
+work in this area.  It is the foundation for our
+work with Clarence Wilkerson on equivariant 
+cohomology for real toric varieties, which is the
+subject of a future talk.

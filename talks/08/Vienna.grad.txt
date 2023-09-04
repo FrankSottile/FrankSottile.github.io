@@ -1,0 +1,15 @@
+Equations and Geometry:  an Introduction to the Colloquium
+
+Frank Sottile
+Texas A&M University
+
+   This talk --- which will be background for the
+colloquium I give just following it --- will discuss
+three topics related to solving equations:
+
+(1) Be'zout's Theorem for the number of common solutions to 
+     a system of polynomial equations.
+(2) The Descartes' bound for the number of real solutions
+     to a system of equations.
+(3) The Schubert calculus for the Grassmannian of 2-planes
+     in C^4.

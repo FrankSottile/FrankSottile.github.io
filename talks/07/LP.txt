@@ -1,0 +1,25 @@
+Linear precision for multi-sided toric patches
+
+Frank Sottile
+Texas A&M University
+
+   In 2002, Krasauskas generalized the standard Bezier
+and tensor product patches of geometric modeling to
+multi-sided toric patches.   While these offer the 
+promise of greater design flexibility, it is not clear
+whether they possess the desirable properties of
+the standard patches.   One such property is linear
+precision, which is the ability to replicate a linear 
+function.
+
+   In this talk, I will discuss ongoing work with Luis
+Garcia on linear precision.   Our geometric analysis
+separates the shape of a patch (given by a polytope
+and a system of weights) from its parametrization.
+We first show that for any system of weights, there 
+is a unique parametrization by algebraic functions that
+has linear precision.  The existence of a rational
+parametrization with linear precision becomes a geometric
+statement concerning the intersection of a toric variety
+with a particular linear subspace (which depends on the
+system of weights). 

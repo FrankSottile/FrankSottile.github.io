@@ -1,0 +1,31 @@
+The Horn recursion in the Schubert calculus
+
+ Frank Sottile
+ Texas A&M University
+
+   A consequence of Knutson and Tao's proof of the saturation
+conjecture is a conjecture of Horn, which implies that the
+non-vanishing of Littlewood-Richardson numbers is recursive:
+A Littlewood-Richardson number is non-zero if and only if
+its partition indices satisfy the Horn inequalities imposed
+by all `smaller' non-zero Littlewood-Richardson numbers.
+A way to express this Horn Recursion is that non-vanishing
+in the Schubert calculus of a Grassmannian is controlled by
+non-vanishing in the Schubert calculus of all smaller Grassmannians.
+
+   In joint work with Kevin Purbhoo, we have extended this
+Horn recursion to the cominuscule Schubert calculus.
+Our results are interesting even for the Grassmannian,
+as the inequalities we obtain are different than the Horn
+inequalities.  We also obtain two completely different
+sets of inequalities for the analogs of Littlewood-Richardson
+numbers for Schur P- and Q- functions.
+
+   In this talk, I will first discuss the classican Horn recursion,
+which was about the eigenvalues of sums of Hermitian matrices,
+and then relate this to the combinatorics of Littlewood-
+Richardson numbers from representation theory and Schubert
+calculus, explaining the Horn inequalities.  Next, I
+wil explain the combinatorial consequences of this work with
+Purbhoo, in particular giving the inequalities we obtain.
+

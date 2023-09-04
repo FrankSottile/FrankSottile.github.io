@@ -1,0 +1,24 @@
+Linear precision for toric patches
+
+Frank Sottile
+Texas A&M University
+
+   In 2002, Krasauskas generalized the standard Bezier
+and tensor product patches of geometric modeling to
+multi-sided toric patches.   While these offer the 
+promise of greater design flexibility, it is not clear
+whether they possess the desirable properties of
+the standard patches.   One such property is linear
+precision, which is the ability to replicate a linear 
+function.
+
+   I will discuss work with Luis Garcia on linear precision.   
+We show that every patch has a reparametrization having
+linear precision.  The reparametrization is not rational
+unless the patch has a very singular geometry.  For toric 
+patches, the existence of such rational reparametrizations
+has an appealing mathematical reformulation in terms of 
+Cremona transformations.  I will also report on work with
+Ranestad and Graf von Bothmer on classifying toric 
+surfaces patches with linear precision.
+

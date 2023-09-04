@@ -1,0 +1,23 @@
+
+Toric polar Cremona transformations
+
+  Frank Sottile
+
+   Garcia and Sottile showed that problem of
+classifying toric patches that posses linear
+precision is equivalent to a classifying
+homogeneous polynomials whose toric derivatives
+(which generate its toric polar linear system)
+define a Cremona transformation (a birational
+isomorphism).
+
+  In this talk, I will explain the motivation
+from geometric modelling and then outline the
+classification of forms F in three variables
+whose toric derivatives define a Cremona
+transformation, which solves an open question
+in geometric modeling.   This is joint work with
+Kristian Ranestad and Hans-Christian Graf
+von Bothmer.
+
+

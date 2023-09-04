@@ -1,0 +1,12 @@
+#Catalan.maple
+#
+# Frank Sottile
+# 7 November 2005
+# Paris, France
+#
+###############################################################
+f := n -> (2*n-2)!/n!/(n-1)!;
+
+for i from 3 to 10 do
+ print(i, f(i));
+end do;

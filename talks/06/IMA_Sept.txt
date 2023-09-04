@@ -1,0 +1,26 @@
+
+IMA Workshop W9.18-22.06
+Algorithms in Algebraic Geometry
+September 18-22, 2006
+
+Speaker name: Frank Sottile
+
+Title: New Fewnomial Upper Bounds from Gale Dual Polynomial Systems
+
+Abstract:
+
+ In 1980, Askold Khovanskii established his fewnomial bound for the number of
+ real solutions to a system of polynomials, thereby showing that the complexity
+ of real solutions to a polynomial system depends upon the number of monomials
+ and not the degree.  This fundamental finiteness result in real algebraic
+ geometry was proven by induction on the number of monomials and the bound is
+ unrealistically large.
+
+ I will report on joint work with Frederic Bihan on a new fewnomial bound which
+ is substantially lower than Khovanskii's bound.  This bound is obtained by
+ first reducing a given system to a Gale system, which comes from the Gale dual
+ to the exponent vectors in the original system, and then bounding the number of
+ solutions to a Gale system.  Like Khovanskii's bound, this bound is the product
+ of an exponential function and a polynomial in the dimension, with the
+ exponents in both terms depending upon the number of monomials.  In our bound,
+ the exponents are smaller than in Khovanskii's.

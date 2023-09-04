@@ -1,0 +1,15 @@
+Tropical Interpolation
+
+Frank Sottile
+Texas A&M University
+
+  Many people in algebraic geometry geoemtry know that there are
+12 different ways to pass a rational cubic through 8 points in the
+plane.  It is not as well-known that if the 8 points are real,
+then at least 8 of the 12 solutions to this interpolation problem
+are real.  This is part of an unfolding story that ties together
+many recent developments in real algebraic geometry, including
+Enumerative Real Algebraic Geometry, Tropical Geometry, and
+Applications.  In my talk (which does not assume you knew the
+problem of the first sentence) I will present this intriguing story.
+(For more, see http://www.math.tamu.edu/~sottile/stories/MSRI04/index.html.)

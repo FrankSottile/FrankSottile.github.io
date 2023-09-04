@@ -1,0 +1,28 @@
+New Hopf Structures on Planar Binary Trees
+
+   Two of  the most interesting  combinatorial Hopf algebras  are the
+Hopf algebras of permutations and  of planar binary trees.  These fit
+into  an  interesting commutative  diagram  involving the  symmetric,
+noncommutative  symmetric, and  quasisymmetric functions.   They also
+each have two different bases related by Moebius inversion on a poset
+which reveal a rich interaction between their algebraic structure and
+the combinatorics of permutations and of trees.  These posets are the
+edge graphs of the permutahedra and the associahedra, and the algebra
+structure is also linked to the structure of these polytopes.
+
+   Both the permutahedra and associahedra arise naturally in homotopy
+theory, and the point of departure for this talk is another family of
+polytopes, the  multiplihedra, which  also arose in  homotopy theory.
+Natural cellular maps from permutahedra to associahedra (which induce
+maps of Hopf algebras) factor through the multiplihedra.  Restricting
+this map  to their vertices  factorizes the map from  permutations to
+trees.  The  intermediate objects  are certain bi-leveled  trees.  We
+show  how to  put algebraic  structures on  bi-leveled trees  so that
+their  linear  span M  becomes  a module  over  the  Hopf algebra  of
+permutations  and a  Hopf module  algebra  over the  Hopf algebra  of
+trees.   A  second basis  of  M, related  to  the  first via  Moebius
+inversion on  the multiplihedra helps to  elucidate these structures.
+Bi-leveled trees also admit a second structure as a Hopf algebra, and
+we  identify  other combinatorial  objects  between permutations  and
+trees which  similarly are related  to polytopes and admit  some Hopf
+structures.  This is joint work with Aaron Lauve and Stefan Forcey.

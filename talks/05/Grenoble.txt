@@ -1,0 +1,43 @@
+The Horn recursion in the Schubert calculus
+
+ Frank Sottile
+ Texas A&M University
+
+   Work of  Klyachko and  of Knutson and  Tao in  the 1990's
+established  the  Horn conjecture,  which  is a  recursively
+defined set  of inequalities among  eigenvalues of hermitian
+matrices A,  B, and  A+B.  This used  representation theory,
+Schubert calculus, and combinatorics.  A consequence is that
+other problems in mathematics have a similar Horn recursion,
+for example when is a Littlewood-Richardson number non-zero?
+Its geometric  counterpart is to determine  when a triple of
+Schubert  varieties  in   a  Grassmannian  must  meet.   The
+partition indices of such  a triple of Schubert varieties is
+called a feasible triple.
+
+  The answer is that a triple is feasible if and only if the
+three partitions  satisfy Horn inequalities  parametrized by
+all feasible  triples for smaller  Grassmannians.  In brief,
+the Schubert  calculus on  a Grassmannian is  controlled (to
+some  degree)  by  the  Schubert  calculus  on  all  smaller
+Grassmannians.
+
+   My  first   talk  will  begin  by   discussing  the  Horn
+inequalities for eigenvalues of hermitian matrices A, B, and
+A+B, and what  they mean for geometry.  Then  I will discuss
+Belkale's  geometric  proof  of  the Horn  recursion.   This
+suggests that other related feasibility problems in Schubert
+calculus may have a similar recursive description.
+
+   My  second talk  will describe  a generalization  of this
+obtained  in   collaboration  with  Kevin   Purbhoo  of  the
+University  of  British  Columbia.   We  give  a  completely
+different Horn recursion in the Schubert calculus, involving
+cominuscule flag varieties.  This  yields a different set of
+valid inequalities for feasibility in Grassmannians, as well
+as two  different (but equivalent) sets  of inequalities for
+feasibility in the  Lagrangian Grassmannian.  In addition to
+giving  these  inequalities,   we  will  also  describe  the
+geometry behind our proof.
+
+  

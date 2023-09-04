@@ -1,0 +1,27 @@
+The Horn recursion in the cominuscule Schubert calculus
+
+ Frank Sottile
+ Texas A&M University
+
+   A consequence of Knutson and Tao's proof of the saturation 
+conjecture is a conjecture of Horn, which implies that the 
+non-vanishing of Littlewood-Richardson numbers is recursive:  
+A Littlewood-Richardson number is non-zero if and only if 
+its partition indices satisfy the Horn inequalities imposed
+by all `smaller' non-zero Littlewood-Richardson numbers.  
+A way to express this Horn Recursion is that non-vanishing 
+in the Schubert calculus of a Grassmannian is controlled by 
+non-vanishing in the Schubert calculus of all smaller Grassmannians.
+
+   This talk will discuss joint work with Kevin Purbhoo 
+extending this Horn recursion to the Schubert calculus for 
+all cominuscule flag varieties, which are analogs of 
+Grassmannians for other reductive groups.  In particular, 
+we give two very different sets of necessary and sufficient 
+inequalities for the non-vanishing of the analogs of 
+Littlewood-Richardson numbers for Schur P- and Q- functions.  
+Interestingly, the inequalities we obtain for the ordinary 
+Littlewood-Richardson numbers are different than the Horn 
+inequalities.
+
+

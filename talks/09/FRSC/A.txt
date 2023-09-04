@@ -1,0 +1,16 @@
+total 48
+-rw-r--r-- 1 sottile users  1083 2008-10-14 18:20 0.html
+-rw-r--r-- 1 sottile users  1628 2008-07-16 16:22 1.html
+-rw-r--r-- 1 sottile users   655 2008-07-16 11:35 2.html
+-rw-r--r-- 1 sottile users   554 2008-07-16 11:35 3.html
+-rw-r--r-- 1 sottile users   668 2008-07-16 11:35 4.html
+-rw-r--r-- 1 sottile users  1393 2008-07-16 11:35 5.html
+-rw-r--r-- 1 sottile users  1158 2008-07-16 11:35 6.html
+-rw-r--r-- 1 sottile users  1225 2008-07-17 05:34 7.html
+-rw-r--r-- 1 sottile users     0 2009-01-02 21:02 A.txt
+-rw-r--r-- 1 sottile users  1146 2008-10-14 18:18 ECM.html
+-rw-r--r-- 1 sottile users 10524 2008-07-16 16:17 ECM_logo.gif
+lrwxrwxrwx 1 sottile users    22 2008-10-19 19:47 IHP -> ../../05/IHP.8/images//
+lrwxrwxrwx 1 sottile users    20 2008-10-19 19:47 images -> ../../07/CRM/images//
+drwxr-xr-x 2 sottile users   464 2008-10-19 19:47 Slides/
+lrwxrwxrwx 1 sottile users    22 2008-10-19 19:47 TARAG -> ../../04/TARAG/images//

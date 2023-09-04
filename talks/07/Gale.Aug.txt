@@ -1,0 +1,20 @@
+Gale dual systems and bounds in real algebraic geometry
+
+Seminar on Applicable Algebraic geometry
+
+2 August 2007
+IMA PI Summer Graduate School on
+    Applicable Algebraic Geometry.
+
+    	Abstract:   Gale duality for polynomial systems is an elementary reformulation of
+a system of polynomial equations as a system of equations involving rational
+master functions in the complement of a hyperplane arrangement. Some properties of
+the original system are easier to understand in the Gale dual system.
+
+        In the first part of this talk, I will describe this Gale duality, look at some
+examples of this construction, and give some elementary consequences. In the
+second half, I will explain how to bound the number of real solutions to the Gale
+dual system, and thereby obtain the current best bounds for the number of real
+solutions to a system of polynomial equations. I will also explain how this gives
+rise to a new numerical method for finding all real solutions to a system of
+polynomial equations.

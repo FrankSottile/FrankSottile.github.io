@@ -1,0 +1,16 @@
+Polytopes and Polynomial Systems
+Frank Sottile
+13 February 2006
+
+   The exponent of a monomial involving n variables is an integer
+vector in Z^n.   The set of exponents in a polynomial in n variables
+is its support, and their convex hull is its Newton polytope.
+Many questions and answers concerning zeroes of multivariate 
+polynomials are best expressed in terms of the discrete structures
+of support and Newton polytope.  The same is true for algorithms
+and constructions involving multivariate polynomials.
+
+  In this talk for a general audience from discrete mathematics,
+I will explain some of this relation between polynomials
+and polytopes, and give examples of how these structures are 
+used to answer questions involving zeroes of multivariate polynomials.

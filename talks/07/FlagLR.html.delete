@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+   <TITLE>A Littlewood-Richardson rule for Grassmannian Schubert problems</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+
+<H1>A Littlewood-Richardson rule for Grassmannian Schubert problems</H1>
+
+<font size=+2>
+   <A HREF="../../index.html">Frank Sottile</A>
+</font><BR>
+
+&nbsp; &nbsp; 
+The motivating and as yet unsolved question in the modern Schubert 
+calculus is to give a combinatorial formula for the product of 
+Schubert classes in the cohomology ring of a flag manifold.
+In this talk, I will describe a solution to this problem for a
+special, but important class of products.
+These are products of Schubert classes pulled back from Grassmannian projections,
+and our formula is for the coefficient of the class of a point in such a product.
+This rule is joint work with    
+<A HREF="http://www.math.uwaterloo.ca/~kpurbhoo/">Kevin Purbhoo</A>.
+Our rule shows that this intersection number is the number of 
+certain combinatorial objects we call <font color=red>filtered tableaux</font>,
+which are sequences of skew Littlewood-Richardson tableaux 
+that together fill a shifted shape.
+
+<!----------------------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------------------->
+
+&nbsp; &nbsp; 
+Rather than try to describe this rule, we recommend that you read our 
+ paper&nbsp;<A HREF="#PS">[PS]</A>.,
+which is on the ArXiv at 
+<A HREF="http://trefoil.math.ucdavis.edu/0708.1582">math.CO/0708.1582</A>. 
+
+<!----------------------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------------------->
+
+<TABLE>
+ <TR>
+
+  <TD> <IMG SRC="../../stories/FlagLR/FlagLR.sm.png">
+  </TD>
+
+  <TD width=30>  </TD>
+
+  <TD>
+    The picture at the left shows the four filtered tableaux corresponding to the
+    degree of the product 
+    <center>
+      <i>p</i><sup>*</sup><i>S</I><sub>1,<img src="../../stories/FlagLR/3.1.png"></sub>
+      &nbsp;&nbsp;
+      <i>p</i><sup>*</sup><i>S</I><sub>2,<img src="../../stories/FlagLR/3.2.png"></sub>
+      &nbsp;&nbsp;
+      <i>p</i><sup>*</sup><i>S</I><sub>3,<sub><sub><img src="../../stories/FlagLR/21.3.png"></sub></sub></sub>
+      &nbsp;&nbsp;
+      <i>p</i><sup>*</sup><i>S</I><sub>4,
+         <sub><sub><sub><sub><img src="../../stories/FlagLR/111.4.png"></sub></sub></sub></sub></sub>
+       &nbsp;&nbsp;
+       <i>p</i><sup>*</sup><i>S</I><sub>5,
+         <sub><sub><sub><sub><img src="../../stories/FlagLR/111.5.png"></sub></sub></sub></sub></sub>
+        &nbsp;&nbsp; =  &nbsp;&nbsp; 4&nbsp;[pt]
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    </center>
+    of Schubert classes in the manifold of complete flags in 6-space.
+    Each factor is a Schubert class pulled back from a (in this case, different) 
+    Grassmannian, with the first from the Grassmannian of 1-planes, the second from the
+    Grassmannian of 2-planes, and etc.
+  </TD>
+
+ </TR>
+</TABLE>
+    &nbsp;&nbsp; The pieces in the filtered tableaux are Littlewood-Richardson 
+ skew tableaux corresponding to the partitions that appear in the product.
+ Other than the <font color=green>green</font> parition, 
+ <sub><img src="../../stories/FlagLR/21.3.png"></sub>, there will always be a unique Littlewood-Richardson
+ skew tableaux (or none) of any given shape.
+ In the one case where there is more than a single Littlewood-Richardson tableau,
+ we have written the two possibilities.
+ 
+<!----------------------------------------------------------------------------------->
+<HR>
+<!----------------------------------------------------------------------->
+ <A NAME="PS">[PS]</A>
+   K.&nbsp;Purbhoo and F.&nbsp;Sottile, <A HREF="../../pdf/Grassmannian.pdf"><EM>A
+	Littlewood-Richardson rule for Grassmannian  permutations</EM></A>,  
+   <tt>ArXiv.org/0708.1582</tt>.
+<!----------------------------------------------------------------------->
+<HR>
+<!----------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------->
+<I>Work of Sottile supported by the National Science Foundation 
+    under CAREER Grant DMS-0538734.</I><BR>
+<i>This work was supported in part by the Institute for Mathematics and its Applications
+   with funds provided by the National Science Foundation, and by the 
+  Centre de recherches math&eacute;matiques</I>.
+<!---------------------------------------------------------------------->
+<HR>
+<FONT COLOR="AA00AA"><I>Modified since: 6 November 2007 by Frank Sottile</I></font>
+
+</BODY>
+</HTML>

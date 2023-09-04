@@ -1,0 +1,16 @@
+Bounds for real solutions to polynomial systems
+
+  Frank Sottile
+
+    Understanding, finding, or even deciding the existence of real solutions to 
+a system of equations is a very difficult problem with many applications. While 
+it is hopeless to expect much in general, we know a surprising amount about these 
+questions for systems which possess additional structure.
+
+    We will focus on equations from toric varieties and homogeneous spaces, particularly
+Grassmannians. Not only is much known in these cases, but they encompass some of the
+most common applications. The results we discuss may be grouped into two themes: 
+  (1) Upper bounds on the number of real solutions
+  (2) Lower bounds on the number of real solutions
+Upper bounds as in (1) bound the complexity of the set of real solutions.
+Lower bounds as in (2) give an existence proof for real solutions. 

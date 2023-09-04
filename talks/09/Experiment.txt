@@ -1,0 +1,17 @@
+Experimentation at the frontier of reality in Schubert calculus
+
+   The story of the deeply surprising proof and consequences 
+of the recent theorem of Mukhin, Tarasov, and Varchenko (n\'ee 
+the Shapiro Conjecture) will be the subject of an address in 
+this year's AMS Current Events Bulletin.  The interest in that 
+conjecture was due in no small part to massive computational 
+evidence that was amassed in its study, as the conjecture was 
+originally considered too strong to possibly be true.
+
+   This talk will be concerned with the gathering of evidence
+for some extensions of the Shapiro conjecture.  In particular,
+I will explain how our research team at Texas A&M University
+is organizing and controlling a computational experiment involving 
+hundreds of computers and hundreds of Gigahertz-years of 
+computation in the pursuit of evidence for one generalization 
+which we call the secant conjecture.

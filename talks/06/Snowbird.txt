@@ -1,0 +1,30 @@
+Line Problems in Non-linear Computational Geometry
+
+Frank Sottile
+Texas A\&M University
+
+
+  Geometric transversals, or lines which meet some or all of a
+collection of objects, have long been studied in computational 
+geometry.  That investigation considers geometric transversals 
+from many points of view, including convexity, configuration,
+combinatorics, and complexity.   My talk will concern the use 
+of algebraic (both computational algebraic and real algebraic 
+geometry) methods which have been recently applied to the 
+solution of a particular problem of geometric transversals.
+
+  This is an algebraic core problem for questions concerning 
+transversals (or degenerate lines of sight) to polytopes and 
+spheres.  The problem was to determine the number of common 
+transversals to k lines that are also tangent to 4-k spheres
+(or quadrics) when the lines and quadrics are general, and 
+determine the possible degenerate configurations of the lines 
+and quadrics.  While this investigation is very interesting 
+both for algebraic geometry and for computational geometry, 
+my focus will be to explain some ideas and techniques which 
+may be applicable to a wider range of problems from computational 
+geometry.
+
+
+
+

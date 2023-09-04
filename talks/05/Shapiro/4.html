@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+   <TITLE>Shapiro Conjecture 4:  Some Linear Algebra</TITLE> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<!---------------------------------------------------------------->
+<HR>
+<TABLE>
+ <TR>
+  <TD width=790>
+   <FONT SIZE=+3 color=purple><B>Some Linear Algebra</B></FONT>
+  </TD>
+  <TD width=100 valign=center>
+   <A HREF="5.html"><IMG SRC="images/next.gif"></A>
+   <A href="toc.html"><img src="images/toc.gif"></A>
+  </TD>
+  <TD valign=top align=left><B>
+       <font color=GREEN size=+2>4</green></B></TD>
+ </TR>
+</TABLE>
+<!---------------------------------------------------------------->
+<HR>
+
+<font size=+2>
+ This Wronskian is equal to the determinant of 
+ square <i>d</i>+1 by <i>d</i>+1 matrix.
+
+<p>
+If 
+ <i>f</i><sub>1</sub>(<i>t</i>), 
+ <i>f</i><sub>2</sub>(<i>t</i>), ..., 
+ <i>f<sub>k</sub></i>(<i>t</i>)
+ are generic, then row operations convert them to
+</font><br>
+<!----------------------------------------------------------->
+<table>
+ <TR>
+  <TD>  &nbsp; &nbsp; &nbsp;  </TD>
+  <TD><font size=+2><i>f</i><sub>1</sub>(<i>t</i>)</TD>
+  <TD><font size=+2> &nbsp; = &nbsp; </font></TD>
+  <TD><font size=+2>&nbsp;<i>t<sup>d</sup></i>&nbsp;</font></TD><TD></TD><TD></TD><TD></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>11</SUB><i>t</i><sup><i>d</i>-<i>k</i></sup></font></TD>
+  <TD align=center><img src="images/cdots.png"></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>1,<i>d<i>-<i>k</i></SUB><i>t</i>&nbsp;</font></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>1,<i>d<i>+1-<i>k</i></SUB> &nbsp; </font></TD>
+ </TR>
+ <TR>
+  <TD> </TD>
+  <TD><font size=+2><i>f</i><sub>2</sub>(<i>t</i>)</TD>
+  <TD><font size=+2> &nbsp; = &nbsp; </font></TD>
+  <TD></TD><TD><font size=+2>&nbsp;<i>t</i><sup><i>d</i>-1</sup>&nbsp;</font></TD><TD></TD><TD></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>21</SUB><i>t</i><sup><i>d</i>-<i>k</i></sup></font></TD>
+  <TD align=center><img src="images/cdots.png"></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>2,<i>d<i>-<i>k</i></SUB><i>t</i>&nbsp;</font></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub>2,<i>d<i>+1-<i>k</i></SUB> &nbsp; </font></TD>
+ </TR>
+
+
+ <TR>
+   <TD></TD>
+   <TD align=center><img src="images/vdots.png"></TD>
+   <TD align=center><img src="images/vdots.png"></TD>
+   <TD></TD><TD></TD><TD align=center><img src="images/ddots.png"></TD><TD></TD>
+   <TD align=center><img src="images/vdots.png"></TD><TD></TD>
+   <TD align=center><img src="images/vdots.png"></TD>
+   <TD align=center><img src="images/vdots.png"></TD>
+ </TR>
+ <TR>
+  <TD> </TD>
+  <TD><font size=+2><i>f<sub>k</sub></i>(<i>t</i>)</TD>
+  <TD><font size=+2> &nbsp; = &nbsp; </font></TD>
+  <TD></TD><TD></TD><TD></TD>
+   <TD><font size=+2><i>t</i><sup><i>d</i>+1-<i>k</i></sup> &nbsp; &nbsp; </font></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub><i>k</i>1</SUB><i>t</i><sup><i>d</i>-<i>k</i></sup> &nbsp; </font></TD>
+  <TD align=center><img src="images/cdots.png"></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub><i>k</i>,<i>d<i>-<i>k</i></SUB><i>t</i>&nbsp;</font></TD>
+  <TD><font size=+2> &nbsp; -<i>a</i><sub><i>k</i>,<i>d<i>+1-<i>k</i></SUB> &nbsp; </font></TD>
+ </TR>
+</table>
+<!----------------------------------------------------------->
+<font size=+2>
+<p>
+ &nbsp; &nbsp; 
+ Set <i>g</i>(<i>t</i>) := 
+  (1, <i>t</i>, <i>t</i><sup> 2</sup>, ..., <i>t<sup> d</sup></i> )
+  and let <I>G</I>(<i>t</i>) be the <i>k</i> by <i>d</i>+1 matrix
+  with rows <i>g</i>(<i>t</i>), <i>g</i>'(<i>t</i>), ..., 
+  <i>g</i><sup>(<i>k</i>-1)</sup>(<i>t</i>).
+<BR>
+
+ Then the Wronskian of the polynomials 
+ <i>f</i><sub>1</sub>(<i>t</i>),
+ <i>f</i><sub>2</sub>(<i>t</i>), ..., 
+ <i>f<sub>k</sub></i>(<i>t</i>)
+ is the determinant of 
+</font>
+<!----------------------------------------------------------------------->
+<center>
+ <TABLE>
+  <TR>
+   <TD><img src="images/ParenL.png"></TD>
+   <TD>
+    <TABLE>
+     <TR>
+      <TD align=center><font size=+2><I>G</I>(<i>t</i>)</font></TD>
+     </TR>
+     <TR>
+      <TD align=center><font size=+2><I>A</i><SUP>t</SUP> &nbsp; <I>I</I> </font></TD>
+     </TR>
+    </TABLE>
+   </TD>
+   <TD><img src="images/ParenR.png"></TD>
+  </TR>
+ </table>
+</center>
+<!----------------------------------------------------------------------->
+<font size=+2>
+where <i>I</I> &nbsp; is the identity matrix of size
+ <i>d</i>+1-<i>k</i>, and  <BR>
+<i>A</i> = (<i>a<sub>i,j</sub></i>&nbsp;) is the <i>k</i> by
+<i>d</i>+1-<i>k</i> matrix of the coefficients of the 
+polynomials <i>f<sub>i</sub></i>&nbsp;(<i>t</i>).
+
+
+<p>
+The lower portion of the matrix (<i>A</i><sup>t</sup> : <I>I</I> ) 
+are linear forms defining the linear span of the polynomials
+ <i>f</i><sub>1</sub>(<i>t</i>),
+ <i>f</i><sub>2</sub>(<i>t</i>), ..., 
+ <i>f<sub>k</sub></i>(<i>t</i>).
+
+
+</font>
+<HR>
+<!---------------------------------------------------------------->
+</BODY>
+</HTML>

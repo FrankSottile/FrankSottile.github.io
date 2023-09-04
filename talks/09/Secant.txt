@@ -1,0 +1,20 @@
+The Secant conjecture in the real Schubert calculus
+
+   The story of the deeply surprising proof and consequences 
+of the recent theorem of Mukhin, Tarasov, and Varchenko (n\'ee 
+the Shapiro Conjecture) will be the subject of an address in 
+this year's AMS Current Events Bulletin.  The interest in that 
+conjecture was due in no small part to massive computational 
+evidence that was amassed in its study, as the conjecture was 
+originally considered too strong to possibly be true.
+
+   The Shapiro conjecture as it was originally stated is false 
+for flag manifolds, but experimentation and theory have led to
+what should be considered as the `correct' form for flag manifolds.
+A proof of this generalization for certain two-step flag mainfolds
+by Eremenko, Gabrielov, Shapiro, and Vainshtein led to
+another generalization, which we call the Secant conjecture.
+In this talk, I will explain some of this history, state
+the Secant Conjecture, and describe some of the massive 
+computational evidence (involving hundreds of Gigahertz-years of 
+computation) in its favor.

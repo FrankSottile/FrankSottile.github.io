@@ -1,0 +1,25 @@
+Bounds for real solutions to equations from geometry
+
+Frank Sottile
+
+   Understanding the real solutions to systems of polynomial
+equations  is a difficult  question with  many applications.
+In  particular, a  non-trivial lower  bound is  an existence
+proof  for  solutions  and  non-trivial  upper  bounds  give
+complexity bounds.
+
+   While  it  is hopeless  to  expect  anything in  general,
+recent work  gives many  examples of equations  with special
+combinatorial or  geometric structure possessing non-trivial
+bounds.
+
+   In this  talk, I will survey some  of these developments,
+including the striking  results using tropical geometry that
+"most" rational  curves of degree d  interpolating 3d-1 real
+points  in the  plane are  real  and the  resolution of  the
+Shapiro conjecture  which implies, for  instance, that every
+rational function with only real critical points is real.  I
+will  also  discuss intriguing  lower  bounds and  realistic
+upper  bounds   recently  obtained  for   sparse  polynomial
+systems.
+

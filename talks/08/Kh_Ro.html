@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+   <TITLE>Khovanskii-Rolle continuation for real solutions</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<!---------------------------------------------------------------->
+<TABLE border=1>
+ <TR>
+  <TD colspan=3>   <FONT SIZE=+3 color=purple>
+    <B>Khovanskii-Rolle continuation for real solutions</B></FONT>
+   </TD>
+ </tr>
+ <TR>
+ <TD align=left><img src="../../research/stories/Rolle/small.gif"></TD>
+  <td align=center>
+    <FONT SIZE=+2>Frank Sottile</font><BR>
+    <font size=+1> Texas A&amp;M University</font>
+  </td>
+   <td align=right>
+    <img src="../../images/tamuseal.gif">
+   </TD>
+  </tr>
+</table>
+<!---------------------------------------------------------->
+<HR>
+
+<font size=+1>
+<p>  &nbsp; &nbsp; 
+  Current continuation methods for finding all solutions to systems of polynomial
+  equations first compute all complex solutions, and then sieve them to find the real 
+  solutions.
+  This method is not optimal in that number of paths to be followed may not reflect the
+  actual number of real solutions.
+  This problem is particularly acute for fewnomial systems, a class of systems whose
+  number of real solutions is typically much smaller than their number of complex
+  solutions. 
+
+<p>  &nbsp; &nbsp; 
+  Recent work has established a new bound for the number of real solutions to a system of
+  fewnomials, by transforming the system of polynomials into an equivalent system of 
+  master functions on a hyperplane complement, called the gale dual system. 
+  Sturmfels observed that the method used to establish those bounds, 
+  the Khovanskii-Rolle Theorem, could be the basis of a continuation algorithm to
+  compute all real solutions, which has the additional feature that the path
+  continuation only follows real solutions.
+
+<p>  &nbsp; &nbsp; 
+  In this talk, I will sketch the main ideas in this new algorithm.
+  This will also include a sketch of the proof of these new fewnomial
+  bounds, and some of the continuation issues which arisen in an implementation 
+  of the algorithm.
+  We remark that the complexity of this algorithm depends on the ambient (real dimension)
+  and the fewnomial bound, and not on the number of complex solutions.
+  The implementation of the algorithm is joint work with Daniel J.&nbsp;Bates, while the
+  fewnomial bounds and reduction to Gale systems is work with Fr&eacute;d&eacute;ric Bihan
+  and Bates.
+  
+   
+<!---------------------------------------------------------->
+<hr>
+<font color=lavendar><i>Last modified: 26 February 2008 by Frank Sottile</i></font>
+</html>

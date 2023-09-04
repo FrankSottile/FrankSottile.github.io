@@ -1,0 +1,20 @@
+Optimal fewnomial bounds from Gale dual polynomial systems
+Frank Sottile
+Texas A&M University
+
+ In 1980, Askold Khovanskii established his fewnomial bound 
+ for the number of real solutions to a system of polynomials, 
+ showing that the complexity of the set of real solutions to 
+ a system of polynomials depends upon the number of monomials 
+ and not on the degree.  This fundamental finiteness result 
+ in real algebraic geometry is believed to be unrealistically large.
+
+ I will report on joint work with Frederic Bihan on a new 
+ fewnomial bound which is substantially lower than Khovanskii's
+ bound and asymptotically optimal.  This bound is obtained by
+ first reducing a given system to a Gale system, and then 
+ bounding the number of solutions to a Gale system.  Like 
+ Khovanskii's bound, this bound is the product of an exponential 
+ function and a polynomial in the dimension, with the exponents 
+ in both terms depending upon the number of monomials.  In our 
+ bound, the exponents are smaller than in Khovanskii's. 

@@ -1,0 +1,21 @@
+Khovanskii-Rolle continuation for real solutions
+Frank Sottile
+Texas A&M University 	
+
+   Continuation methods are numerical algorithms which
+find all solutions to a system of polynomials by numerically
+tracing curves.  Well-known are homptopy methods, where
+the curves arise from degenerations of the system, connecting
+solutions to the original system to those for simpler systems.
+
+   With Dan Bates, we propose a different method which is based on
+Khovanskii's generalization of Rolle's theorem and the
+notion of Gale duality for polynomial systems.  Unlike
+homotopy continuation, this algorithm only finds real-number
+solutions and its complexity depends only on the number
+of real solutions, and not on the algebraic degree of the 
+equations.
+
+   In this talk, I will sketch the main ideas in this new 
+algorithm and show how it works in an implementation that
+we have made which is restricted to Gale-dual systems in the plane.

@@ -1,0 +1,18 @@
+ Equivariant Chow ring of the quot scheme 
+
+  The quot scheme parameterizes quotient sheaves of the rank n free
+sheaf over P^1 of given rank k and degree d.   This smooth variety is 
+a compactification of the space of rational curves of degree d in 
+the Grassmannain of rank k quotients of C^n.   The ranks of its
+homology groups were determined by Stromme, who used the action of
+a natural torus on the quot scheme.   In joint work with Linda Chen
+and Tom Braden, we give a presentation for the equivariant Chow ring
+of the quot scheme.  While we use the formalism of Goresky, Kottwicz, 
+and Macpherson, this formalism does not strictly apply, as the 
+1-dimensional torus orbits on the quot scheme are not isolated.
+
+   In this talk, I will describe some of the geometry of the quot
+scheme and this torus action, and then explain how to extend the 
+formalism of Goresky-Kottwicz-MacPherson to obtain a 
+presentation of the equivariant Chow ring of the quot scheme.
+ 

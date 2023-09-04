@@ -1,0 +1,53 @@
+#Wronski.maple
+#
+# Frank Sottile
+# Lake Orion, MI
+# 29 October 2005
+####################################################
+#
+#   This code is to help Frank figure out what is the 
+# easy relation between the Wronski map and the geometric
+# formulation of the Shapiro conjecture
+#
+#######################################################
+interface(quiet=true):
+with(linalg):
+
+k:=3:
+d:=4:
+gr:=vector([seq(t^(d-i),i=0..d)]);
+g:=vector([seq(t^i,i=0..d)]);
+
+L:= matrix([seq([seq(l||i||j, i=1..k)],j=1..(d+1-k))]);
+LR:=matrix([seq([seq(l||(k+1-i)||(d+1-k-j), i=1..k)],j=0..(d-k))]);
+
+F:=augment(linalg[band]([1],k), -1*transpose(L));
+Polys:=multiply(F,gr);
+M:=[[seq(Polys[i],i=1..k)]]:
+for ii from 1 to k-1 do  M:=[M[],diff(M[ii],t)]: end do:
+W:=collect(det(matrix(M)),t);
+
+G:=[[seq(gr[i],i=1..d+1)]]:
+
+for ii from 1 to k-1 do  G:=[G[],diff(G[ii],t)]: end do:
+G:=matrix(G):
+K:=augment( L, linalg[band]([1],d+1-k)):
+stackmatrix(G,K);
+Wr:=collect(det(stackmatrix(G,K)),t);
+simplify(W - Wr);
+
+
+
+
+
+
+quit;
+G:=[[seq(g[i],i=1..d+1)]]:
+
+for ii from 1 to k-1 do  G:=[G[],diff(G[ii],t)]: end do:
+G:=matrix(G):
+K:=augment(linalg[band]([1],d+1-k), LR):
+stackmatrix(G,K);
+Wr:=collect(det(stackmatrix(G,K)),t);
+simplify(W+(-1)^(k*(d+1-k))*Wr);
+

@@ -1,0 +1,23 @@
+Linear precision for parametric patches
+
+Frank Sottile
+Texas A&M University
+
+   Linear precision is the ability of a patch to
+replicate affine functions.  While classical patches
+possess linear precision, it is not clear which 
+exotic patches (e.g. toric patches) have this property.
+In fact, every patch has a unique reparametrization
+having linear precision---but the resulting blending
+functions are not necessarily rational functions.
+
+   In this talk, I will give background and discuss
+work towards a classification of toric patches for 
+which this reparametrization is given by rational 
+functions.   I will also explain how linear precision 
+is related to maximum likelihood estimation in 
+in algebraic statistics, and how to use iterative
+proportional fitting from statistics to compute patches.
+This is joint work with Luis Garcia, Kristian Ranestad, 
+and Hans-Christian Graf von Bothmer.
+

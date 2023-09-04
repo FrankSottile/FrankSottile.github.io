@@ -1,0 +1,12 @@
+Gale duality for complete intersections
+
+Frank Sottile
+
+Gale duality for polynomial systems is an elementary 
+reformulation of a system of polynomial equations as 
+a system of equations involving rational master functions 
+in the complement of a hyperplane arrangement. Some 
+properties of the original system are easier to understand 
+in the Gale dual system. I will describe this Gale duality
+and present an example of this construction. 
+This is joint work with Frederic Bihan.
