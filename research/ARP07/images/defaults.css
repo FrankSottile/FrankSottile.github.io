@@ -1,0 +1,147 @@
+#absolute { position: absolute; left: 0px; top: 0px; z-index: 1; }
+
+body { 
+ font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 12pt;
+      font-style: normal; 
+      font-weight: normal;  
+      line-height: normal; 
+      color: #505050 }
+
+h1 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 20pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+
+h1.name { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 20pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #FFFFFF }
+
+h2 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 18pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+
+h3  { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 16pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+h4 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 14pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+h5 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 10pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+h5.prof_title { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 10pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: 0.5; 
+      color: #000099 }
+
+
+h6 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 8pt;
+      font-style: normal; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+p {  
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 14pt;
+      font-style: normal; 
+      font-weight: normal;  
+      line-height: normal; 
+      color: #000099 }
+
+font.prof_title {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular; 
+      font-size: 14pt;
+      font-weight: bold;
+      color: #000099 }
+
+font.prof_title2 {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular; 
+      font-size: 12pt;
+      font-weight: bold;
+      color: #000099 }
+
+font.prof_title3 {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular; 
+      font-size: 10pt;
+      font-weight: bold;
+      color: #000099 }
+
+font.updated {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular; 
+      font-size: 6pt;
+      font-weight: normal;
+      color: #000099 }
+
+font.updated2 {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular; 
+      font-size: 6pt;
+      font-weight: normal;
+      color: #FFCC33 }
+
+font.list {
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 8pt;
+      font-style: normal; 
+      font-weight: normal;  
+      line-height: normal; 
+      color: #000099 }
+
+sl2 { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 15pt;
+      font-style: italic; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #000099 }
+
+footnote { 
+      font-family: Ariel, Helvetica, Geneva, Swiss, SunSans-Regular;
+      font-size: 12pt;
+      font-style: italic; 
+      font-weight: bold;  
+      line-height: normal; 
+      color: #AA00FF }
+
+
+li.spaced { 
+      height: 2.0em;
+      list-style-type: number }
+
+a:link {color:blue; text-decoration:none; font-weight: normal; font-size: 12pt }
+a:visited {color:#3030CC; text-decoration:none; font-weight: normal; font-size: 12pt }
+a:hover {color:#5050FF; text-decoration:none; background: #CCCCCC}
