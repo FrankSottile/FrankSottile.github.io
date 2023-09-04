@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>CoAmoebae in 3-space</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<h1>CoAmoebae in 3-space</h1>
+<font size="+2"> 
+ Mounir Nisse and 
+ <a href="http://www.math.tamu.edu/~sottile/index.html">Frank
+Sottile</a>
+</font><br>
+<font size="+1">
+A <i>coamoeba</i> is the image of a subvariety of the torus
+(<b>C</b>&#42;)<sup><i>n</i></sup> under the argument map to
+(<b>S</b><sup>1</sup>)<sup><i>n</i></sup>.
+CoAmoebae exhibit structure that is both polyhdral and curvilinear.
+Below, we show the coamoebae of a line and a plane in (<b>C</b>&#42;)<sup>3</sup>.
+The links are to further pictures and discussion.
+</font>
+<hr>
+<table>
+ <tr>
+  <td>
+   <center>
+    <img src="sym_coAmoeba-lg.gif"><BR>
+      <font size=+1>CoAmoeba of the line <i>t</i> -->
+     (<i>t</i>-1, <i>t</i>-&zeta;, <i>t</i>-&zeta;<sup>2</sup>),<br>  where
+     &zeta; is a primitive third root of 1.</font><br>
+     <a href="lines.html"><font size=+1>More coAmoebae of lines in
+     (<b>C</b>&#42;)<sup>3</sup>.</font></a> 
+   </center>
+  </td>
+  <td>
+   <center>
+    <img src="plane.gif"><BR>
+      <font size=+1>CoAmoeba of the plane <i>x</i>+<i>y</i>+<i>z</i>+1 =0 in
+      (<b>C</b>&#42;)<sup>3</sup>.</font><br>
+     <a href="plane.html"><font size=+1>The coAmoeba of the plane and its phase-limit
+    set.</font></a> 
+   </center>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+<i><!-- hhmts start --> Last modified: Sat Dec  4 09:44:04 CST 2010 <!-- hhmts end --></i>
+<!---------------------------------------------------------------------------->
+</body>
+</html>
