@@ -1,0 +1,47 @@
+#cubics.maple
+#
+#This plots real cubics
+#
+
+cuspidal:= Y^2-X^3:
+#This has paraeterization X=t^2, Y=t^3.
+
+Renodal:= Y^2-X^2*(X+1):
+#This has paraeterization X=t^2-1, Y=t^3-t.
+
+Conodal:= Y^2-X^2*(X-1):
+#This has paraeterization X=t^2+1, Y=t^3+t.
+
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=3in`);
+
+
+#plotsetup(ps,plotoutput=`cuspidal.eps`,plotoptions=`color,portrait,width=3in,height=3in`);
+Cuspidal:=plot([t^2,t^3,t=-2.5..2.5],-.5..3,-4..4, color=blue,axes=none):
+plotsetup(gif,plotoutput=`Cuspidal.gif`,plotoptions=`height=250,width=250`);
+display(Cuspidal);
+
+Renodes:=plot([t^2-2,t^3-2*t,t=-5..5],-2..3,-4..4,numpoints=200, color=blue,axes=none):
+#plotsetup(ps,plotoutput=`renodes.eps`,plotoptions=`color,portrait,width=3in,height=3in`);
+plotsetup(gif,plotoutput=`Renode.gif`,plotoptions=`height=250,width=250`);
+display(Renodes);
+
+
+
+
+
+Conodes:=plot([t^2+1,t^3+t,t=-2.5..2.5],-0.5..3,-4.3..4.3,numpoints=150, color=blue,axes=none,thickness=2):
+Dot:=plot({[.05*sin(t)*(1-t/200),.12*cos(t)*(1-t/200),t=0..20]},numpoints=120,color=red):
+Tans:=plot({[t,2.5*t,t=-0.37..-0.31],[t,2.5*t,t=-0.26..-0.20],[t,2.5*t,t=-0.15..-0.09],[t,2.5*t,t=-0.04..0.04],[t,2.5*t,t=0.37..0.31],[t,2.5*t,t=0.26..0.20],[t,2.5*t,t=0.15..0.09],[t,-2.5*t,t=-0.37..-0.31],[t,-2.5*t,t=-0.26..-0.20],[t,-2.5*t,t=-0.15..-0.09],[t,-2.5*t,t=-0.04..0.04],[t,-2.5*t,t=0.37..0.31],[t,-2.5*t,t=0.26..0.20],[t,-2.5*t,t=0.15..0.09]},numpoints=2,color=magenta,thickness=2):
+Inf:=plot({[4/3+.03*sin(t), 4/27^(1/2)+.08*cos(t),t=0..7],
+           [4/3+.03*sin(t),-4/27^(1/2)+.08*cos(t),t=0..7]},color=red):
+#plotsetup(ps,plotoutput=`conodes.eps`,plotoptions=`color,portrait,width=3in,height=3in`);
+plotsetup(gif,plotoutput=`Conode.gif`,plotoptions=`height=250,width=250`);
+display(Conodes,Inf,Dot,Tans);
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+Maximally Inflected (Real) Rational Curves
+
+Frank Sottile
+University of Massachusetts-Amherst
+
+  A map from P^1 to P^n of degree d necessarily has (n+1)(d-n+1) 
+points where it is ramified, counted with multiplicities.   We 
+call these inflection points, as in the image curve, a point of 
+simple ramification is an inflection point.   A maximally inflected
+curve is a real curve, all of whose inflection points are also real.
+The existence of such curves is guaranteed by a result in the real
+Schubert calculus, and these curves are closely related to an 
+important conjecture in that field.   
+
+   Maximally inflected plane curves satisfy some topological restrictions
+given by the Klein and Pluecker formulas.  They also satisfy some more 
+subtle restrictions whose existence was discovered experimentally.
+
+   This talk will introduce these objects, then discuss symbolic and numerical
+techniques to generate examples of maximally inflected curves, and lastly
+describe the known topological restrictions, including those whose existence
+is only suspected via experiments.
+

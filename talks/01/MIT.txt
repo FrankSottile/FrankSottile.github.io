@@ -1,0 +1,15 @@
+
+The Hopf algebra of permutations of Malvenuto and Reutenauer
+
+Gessel's enumerator of posets partitions may be seen as a
+morphism  from a Hopf algebra of labeled posets to the
+Hopf algebra of quasisymmetric functions. This map factors 
+through a third Hopf algebra consisting of permutations, 
+which was introduced by Malvenuto and Reutenauer.  This 
+talk will describe the structure of this Malvenuto-Reutenauer 
+Hopf algebra in detailed combinatorial terms. This description is 
+obtained through careful analysis of the weak Bruhat order on the 
+symmetric groups and their subsets of shuffles.
+
+This is joint work with Marcelo Aguiar.
+

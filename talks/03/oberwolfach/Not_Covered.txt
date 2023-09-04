@@ -1,0 +1,13 @@
+-> The Cox coordinate ring of a toric variety
+   * Delzant Construction
+   * Multigrading
+
+-> Real Toric varieties
+   * Moment map
+   * Fibration over a polytope
+   * Betti numbers   
+
+-> Applications of the Pluecker ideal
+
+   * Real Degree of Wronski map
+   * Shapiros' conjecture

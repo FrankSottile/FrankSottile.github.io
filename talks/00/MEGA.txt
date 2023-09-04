@@ -1,0 +1,24 @@
+Some real and unreal enumerative geometry
+ 
+Frank Sottile
+
+
+   The geometric counterpart of looking for real solutions to a system of
+polynomial equations is real enumerative geometry, which addresses the
+following question of Fulton: "How many solutions to a problem of
+enumerative geometry can be real, when that problem is one of counting
+geometric figures of some kind having specified position with respect to
+some general fixed figures".  Quite surprisingly, in every known case it is
+possible to have all solutions be real.  Such an enumerative problem is
+called fully real.  Recent progress in this area has been stimulated by a
+remarkable conjecture of Shapiro and Shapiro, which is false in its original
+generality.
+
+
+   This talk will discuss some totally real enumerative problems, the
+conjecture of Shapiro and Shapiro, and recent progress in this area.  The
+main goal will be to describe refinements and extensions of the conjecture
+of Shapiro and Shapiro, which are supported both by extensive experimental
+evidence, and some theorems.  In particular, we will describe a family of
+`fully unreal' enumerative problems for which it is possible to have *no*
+real solutions.

@@ -1,0 +1,19 @@
+What is a Hopf Algebra? 
+And what do Hopf Algebras have to do with Combinatorics?
+
+Frank Sottile
+
+TWIGS seminar, University of Massachusetts at Amherst
+
+Abstract: 
+
+   A Hopf algebra is an algebra  whose linear dual is also an algebra,
+with   some   compatibility  between   these   two  structures.   This
+uninformative definition leads  to an object that pops  up quite often
+in mathematics.  One such area  is in combinatorics, where  G.-C. Rota
+pointed  out  how combinatorial  objects  naturally  posses some  Hopf
+structure.  In fact,  under  this combinatorial  Hopf structure,  many
+things that we  would like to count transform  naturally, yielding new
+tools  in combinatorics.  This talk  will introduce  you to  some Hopf
+algebras,  and explain  how they  arise in  combinatorics.  (And maybe
+explain the more pressing question: what *is* combinatorics?)

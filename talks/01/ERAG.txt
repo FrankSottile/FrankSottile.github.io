@@ -1,0 +1,14 @@
+Enumerative Real Algebraic Geometry
+ Frank Sottile
+
+
+   Enumerative Geometry is concerned with the number of solutions
+to a structured system of polynomial equations, when the structure
+comes from geometry.  Enumerative real algebraic geometry is concerned 
+with real solutions to such systems, particularly a priori information on
+their number.  Recent results in this area have, often as not, uncovered
+new and unexpected phenomena, and it is far from clear what to expect
+in general.  Nevertheless, some themes are emerging.   My intention in 
+this talk is to describe the current state of knowledge, to indicate 
+these themes, and to suggest lines of future research.
+

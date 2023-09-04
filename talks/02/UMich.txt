@@ -1,0 +1,28 @@
+Combinatorial Hopf Algebras
+
+Frank Sottile,
+University of Massachusetts at Amherst
+
+Many generating functions of enumerative combinatorics are either
+symmetric or quasi-symmetric.  Also, there are important eulerian
+objects, whose combinatorial invariants satisfy certain linear equations.
+The notion of a Combinatorial Hopf algebra attempts to explain this 
+ubiquity of quasi-symmetric generating functions, while also giving 
+this notion of eulerian an algebraic framework from which it
+can be generalized.   
+
+   A Combinatorial Hopf algebras is a graded connected Hopf algebra 
+H over a field F equipped with a multiplicative linear functional 
+zeta : H --> F.  The terminal object in the category 
+of combinatorial Hopf algebras is the algebra of quasi-symmetric 
+functions, which explains their ubiquity as generating functions 
+in combinatorics.  The M\"obius function of a combinatorial Hopf 
+algebra gives rise to natural Dehn-Sommerville relations on the 
+Hopf algebra, and a combinatorial Hopf algebra satisfying these 
+relations is eulerian.  The relation of this theory to combinatorics 
+is through Hopf algebras of combinatorial objects.
+
+   In this talk, we will define combinatorial Hopf algebras, and
+show how the algebra of quasi-symmetric functions is a terminal
+object in their category.  We then define eulerian combinatorial 
+Hopf algebras and illustrate this theory with examples.

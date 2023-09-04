@@ -1,0 +1,15 @@
+
+10 March 2003
+TWIGS Seminar, U Mass Amherst
+Frank Sottile, UMass Amherst
+What Is a Real Algebraic Curve? 
+
+Abstract:
+
+ A real algebraic plane curve is the set of real solutions to a
+polynomial equation f(x,y)=0. Their topology and classification was one of
+Hilbert's problems in 1900, and their study continues to be an active area of
+mathematical research. For example, plane curves will play a major role in
+Winter/Spring 2004 program at the Mathematical Sciences Research Institute on
+Topological aspects of real algebraic varieties. This talk will introduce you to
+them and to the beginnings of their study. 

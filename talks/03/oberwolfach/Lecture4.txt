@@ -1,0 +1,21 @@
+Lecture 4.  Reality and the Viro Construction
+
+-> Solving equations again
+   * Restrict to the case of a polytope, and show that the 
+      Hilbert polynomial is the Erhart (spelling) polynomial.
+      Conclude that the projective degree is n! volume of polytope
+   * Kouchnirenko's Theorem
+   * Sturmfels Reality Theorem
+   * Viro's construction
+
+Lecture 4 Grassmann Varieties
+
+-> The problem of four lines
+
+-> Ramification of linear series and the Wronski map
+
+-> The Grassmann variety
+   * Manifold via local coodinates
+   * Manifold via Homogenous space
+   * The Pluecker embedding
+

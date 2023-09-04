@@ -1,0 +1,91 @@
+#
+# This file produces a very symmetric maximally inflected quartic curve
+# with 2 cusps and 2 inflection points, which are alternating.
+# Whie there are 2 such curves, for a given choice of the parameters, they
+# are isomorphic due to the symmetry of the positions of 
+# ramification, and so we only plot one.
+#
+#   Here  i  is an ordinary inflection point and  k  is a cusp
+#
+#     values      points of inflection           Number with n nodes
+#      i  k          i              k              0       1
+#     ---------------------------------------------------------------
+# 2a)  2  2        -S  S          0 infty          0       2
+#
+#
+interface(quiet=true):
+with(plots):
+with(linalg):
+with(Groebner):
+
+RatNorm:=vector([t^4,t^3*s,t^2*s^2,t*s^3,s^4  ]):
+
+############################################################################
+
+S:=2^(1/4)/2;
+
+# 2a) Cusps at 0 and infinity
+
+M:=det(matrix([
+[1,s,s^2,  s^3,s^4  ],
+[0,1,2*s,3*s^2,4*s^3],
+[0,0, 1 ,3*s  ,6*s^2],
+[1,a, 0 , 0   ,  0  ],
+[0,0, 0 , 1   , b   ]])):
+
+G:=gbasis([subs(s=-S,M),subs(s=S,M)],plex(a,b)):
+
+B:=[solve(G[1]=0,b)]:
+A:=[solve(subs(b=B[1],G[2])=0,a),solve(subs(b=B[2],G[2])=0,a)]:
+
+for i from 1 to 2 do
+ z2a[i]:=multiply(vector([-A[i],1,0,0,0]),RatNorm):
+ y2a[i]:=multiply(vector([0,0,1,0,0]),RatNorm):
+ x2a[i]:=multiply(vector([0,0,0,-B[i],1]),RatNorm):
+od:
+
+X:=subs(t=1,x2a[1]):
+Y:=subs(t=1,y2a[1]):
+Z:=subs(t=1,z2a[1]):
+lprint(`X2a:=`,X);
+lprint(`Y2a:=`,Y);
+lprint(`Z2a:=`,Z);
+
+
+X:=x2a[1];
+Y:=y2a[1];
+z2a[1];
+Z:=simplify(x2a[1]+2*S^2*y2a[1]+S*z2a[1]):
+
+X:=X - Z*(subs(s=S,t=1,X/Z)+subs(s=-S,t=1,X/Z))/2:
+X:=X + Y*(subs(s=0,t=1,X/Z)+subs(s=1,t=0,X/Z))/
+           (subs(s=S,t=1,Y/Z)+subs(s=S,t=1,Y/Z)) - 
+         Z*(subs(s=0,t=1,X/Z)+subs(s=1,t=0,X/Z))/2:
+
+
+lprint(X,`\\`);
+lprint(Y,`\\`);
+lprint(Z,`\\`);
+Eq2a:= 16*x^4 -16*x^2*y^2 + 8*y^4+ 8*2^(1/2)*x^2*y  -8*2^(1/2)*y^3
+                 - 8*x^2 + 6*y^2-2*2^(1/2)*y+ 1:
+lprint(Eq2a,`\\`);
+
+
+
+x:=X/Z:
+y:=Y/Z:
+
+plotsetup(x11,plotoptions=`width=2.5in,height=2.5in`):
+
+ Q:=plot({[subs(t=1,X/Z),subs(t=1,Y/Z),s=-1..1],
+         [subs(s=1,X/Z),subs(s=1,Y/Z),t=-1..1]},axes=none,color=blue):
+ P:=pointplot({[subs(s=-S,t=1,X/Z),subs(s=-S,t=1,Y/Z)],
+                    [subs(s=S,t=1,X/Z),subs(s=S,t=1,Y/Z)]},
+                    symbol=circle,color=red):  
+
+#plotsetup(ps,plotoutput=`2_Cusps_a.eps`,
+#         plotoptions=`color,portrait,width=2.4in,height=2.4in,noborder`):
+plotsetup(gif,plotoutput=`kiki.1.gif`,plotoptions=`height=200,width=200`);
+display(Q,P);
+
+

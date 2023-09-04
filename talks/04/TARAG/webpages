@@ -1,0 +1,33 @@
+Examples in Lexture 3:
+
+
+Xe4Ye4 = 12 on F(2,3;5)   50 K in 9.05 days on Schur
+   Doing extra 50,000 examples on Schur and on Schubert
+
+Xe5Ye3 = 10 on  F(2,3;5)  25K in 2.47 GHz-days on Pieri 
+    Has a discernable lower bound
+    Do 75K extra on Pieri ? 
+
+
+Here is a nice `random' example with a discrnable lower bound.
+
+file:///home/frank/papers/manuscripts/flags/Data/F246/A1325e3A1435WY.18.html
+   2.5 K in 1.41 GHz-days on Chevalley 
+
+----> do at least 7.5K more on 1537-9
+
+
+This one has an upper bound that is less than the total number of real solutions,
+and a necklace with exactly 3 of the seven solutions real.  On rcf1522-2,
+it did 10,000 in 59 minutes.  compute 240K on another machine
+
+file:///home/frank/papers/manuscripts/flags/Data/F12345/A1325e2A2143e3.7.html
+
+---> More on rcf1422-2, but kill the long job first
+
+Gaps:
+file:///home/frank/papers/manuscripts/flags/Data/F1356/A21436e2A31526Xe2.8.html
+               250K  2.96 GHz-days on Clavius
+               Has Upper and Lower bounds for 2 different necklaces
+
+   Do another 250K on Noether

@@ -1,0 +1,19 @@
+Some real and unreal conjectures in enumerative geometry
+
+Frank Sottile
+
+University of Massachusetts - Amherst
+
+
+   Recent progress on the question of when a problem in 
+enumerative geometry may have all of its solutions be real
+has been stimulated by some remarkable conjectures of Shapiro
+and Shapiro, which are false in their original generality.
+However, they fail in a very interesting way.
+
+  This talk will describe some further conjectures in this 
+area, including refinements of the conjectures of Shapiro
+and Shapiro, and the very compelling evidence (both 
+computational and theorems) in support of these new conjectures.
+
+

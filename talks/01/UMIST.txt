@@ -1,0 +1,14 @@
+Enumerative Real Algebraic Geometry
+ Frank Sottile
+
+
+   Enumerative Geometry is concerned with counting the number of geometric
+figures satisfying some conditions imposed by some other, fixed figures.
+For example, how many lines are tangent to 4 spheres?  Enumerative real
+algebraic geometry is concerned with the real-number solutions to such 
+problems, for example, how many of the solution figures can be real?   
+Recent results in this area have, often as not, uncovered new and 
+unexpected phenomena, and it is far from clear what to expect
+in general.  Nevertheless, some themes are emerging.   My intention in 
+this talk is to describe the current state of knowledge and indicate 
+these themes.

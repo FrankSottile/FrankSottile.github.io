@@ -1,0 +1,18 @@
+Flatness 
+
+-> Discussion of a good notion of family of algebraic varieties
+   * Definition of flat family of projective varieties via Hhilbert polynomials
+   * Flat module, general flat family 
+   * Outline of relation
+  
+-> Flat families parametrized by smooth curves
+
+-> Flat families given by toric deformations
+
+-> Connection to Groebner bases
+
+-> Regular triangulations and initial ideals
+   * Unimodular triangulations and square-free initial ideals
+
+-> Review the BGT Theorem, and some open questions.
+

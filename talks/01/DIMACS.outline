@@ -1,0 +1,41 @@
+Enumerative Real Algebraic Geometry
+ Frank Sottile
+ 13 March 2001
+   DIMACS Workshop on Algorithmic and Quantitative Aspects 
+   of Real Algebraic Geometry in Mathematics and Computer Science
+
+
+* A priori information on number of real solutions to 
+  structured polynomial systems.
+
+- Describe the current state of knowledge
+
+* Sparse polynomial systems
+  -> Define what a sparse system is.
+  -> Sturmfels's Theorem giving lower bounds on the 
+        maximum number of solutions.
+      Lee-Wang:  This is not sharp
+    Questions:  - Give better bounds
+                - Understand when Sturmfels's bound is the BKK bound
+  -> Upper bounds:  - Khovanskii's fewnomial bound
+                    - Haas, then Rojas's theorem
+    Question:  What is true here?
+
+* Enumerative Geometry
+  -> Define
+  -> Examples 
+      - Stewart platform (Build one!) Dietmayer.
+      - Kharlamov's 12 cubics
+      - Theobald
+  -> Schubert Calculus
+      - Theorem: Sottile all can be real
+      - Lower bounds by Eremenko-Gabrielov
+  -> Shapiro Conjecture
+      - Theorem Eremenko-Gabrielov
+
+  -> Variants
+      Flag variety
+      - Theorem: Sottile
+      - Examples & computations
+
+* Summarize: Themes

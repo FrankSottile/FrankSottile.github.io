@@ -1,0 +1,26 @@
+Certificates of Algebraic Positivity
+Frank Sottile
+Texas A&M University
+
+  Positivity is a distinguishing property of the field of real numbers.  Writing
+a  polynomial as  a sum  of squares  gives a  certificate that  it  is positive.
+Hilbert showed that a positive homogeneous quartic polynomial in three variables
+(ternary quartic) is  a sum of three squares of  quadratic polynomials.  He also
+showed that  there are  positive polynomials of  every higher degree  or greater
+number of  variables with no such  sum of squares representations.   This led to
+his  17th problem---to  determine  whether a  positive  polynomial is  a sum  of
+squares of rational functions.  This was answered in the affirmative by Artin in
+1926.
+
+  Recently, positive  polynomials have  have undergone a revival.  In the 1990's
+Lasserre realized  that recent theoretical results from  real algebraic geometry
+and semi-definite programming could be combined to give effective algorithms for
+solving a  class of relaxations  of hard optimization problems.   The relaxation
+replaces positivity by sum of squares representation.
+
+  I will  briefly survey  the history of  positive polynomials and  these modern
+applications, and  then discuss a  recent strengthening of Hilbert's  Theorem on
+ternary quartics:  a positive ternary quartic is  a sum of squares  in exactly 8
+inequivalent ways.
+
+

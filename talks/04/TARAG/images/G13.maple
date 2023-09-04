@@ -1,0 +1,138 @@
+#lines.maple
+#
+# Frank Sottile
+# Blacksburg, VA
+# 14 September 2003
+# 
+###########################################################################
+#
+# This file draws the hyperboloid through three lines tangent to the rational
+# normal curve, and  animates this picture.  It is part of the visual proof of
+# the Shapiro conjecture in 3-space.
+#
+###########################################################################
+interface(quiet=true):
+read(`procedures.maple`):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+#
+#   Draws a line given by L := [ Point, UnitDirection ]
+#
+drawLine := proc(L,a,b,COLOR,WIDTH)
+ return(spacecurve([L[1][1]+t*L[2][1],
+                    L[1][2]+t*L[2][2],
+                    L[1][3]+t*L[2][3]], t=a..b, 
+                    color=COLOR, thickness=WIDTH,numpoints=2))
+end proc:
+###########################################################################
+#
+#  Not only rotates, but also expands
+#
+ROT := proc(L,th)
+  local TH, FACTOR:
+  FACTOR:=0.75:
+  TH:=th*Pi/180:
+  return([cos(TH)*L[1]+sin(TH)*L[2]*FACTOR, 
+         -sin(TH)*L[1]+cos(TH)*L[2]*FACTOR, 
+#          cos(TH)*L[3]+sin(TH)*FACTOR*L[2]])
+           L[3]])
+end proc:
+
+###########################################################################
+#
+#  Here is a general rational normal curve
+#
+
+Curve:=simplify([a*t^3+b*t^2+c*t+d, 
+                 e*t^3+f*t^2+g*t+h,
+                 i*t^3+j*t^2+k*t+l]):
+tCurve:=diff(Curve,t):
+#
+#  One of the families of lines on the hyperboloid of one sheet 
+#                   X^2 - Y^2 + Z^2 = 1 
+#  is:
+#L := th ->  [  r*cos(th) - sin(th), r, r*sin(th) + cos(th) ]:
+#
+#  The three lines in this family we want are when th (theta) is 
+#  0, \pi, and \pi/2.   Parametrically, these are
+#
+#  [ r, r,  1 ]    t:=1
+#  [-r, r, -1 ]    t:=-1
+#  [-1, r,  r ]    t:=0
+A:=subs(t= 1, Curve): tA:=subs(t= 1, tCurve):  
+B:=subs(t=-1, Curve): tB:=subs(t=-1, tCurve):
+C:=subs(t= 0, Curve): tC:=subs(t= 0, tCurve):
+
+EA:={A[1]= A[2], A[3]= 1, tA[3]=0, tA[1]= tA[2]}:
+EB:={B[1]=-B[2], B[3]=-1, tB[3]=0, tB[1]=-tB[2]}:
+EC:={C[2]= C[3], C[1]=-1, tC[1]=0, tC[2]= tC[3]}:
+
+ABC:=solve(EA union (EB union EC),{a,b,c,d,e,f,g,h,i,j,k,l}):
+Curve:=subs(op(ABC),Curve):
+tCurve:=diff(Curve,t):
+
+R := [  r*cos(th) - sin(th), r, r*sin(th) + cos(th) ]: 
+
+###############################################################################
+
+L1:=[subs(t= 1, Curve), [ 1, 1, 0 ] ]:
+L2:=[subs(t=-1, Curve), [-1, 1, 0 ] ]:
+L3:=[subs(t= 0, Curve), [ 0, 1, 1 ] ]:
+
+#  [ r, r,  1 ]    t:=1
+#  [-r, r, -1 ]    t:=-1
+#  [-1, r,  r ]    t:=0
+
+##########################################################################
+DSeq:=[]:
+Angle:=0:
+H:=display3d(plot3d(ROT(R,Angle), th=-Pi..Pi, r=-10..10,color=yellow
+              ,grid=[33,30]   )):
+E1:=display3d(spacecurve(subs(r= 10.05,ROT(R,Angle)),th=-Pi..Pi,color=orange,thickness=4,numpoints=33)):
+E2:=display3d(spacecurve(subs(r=-10.05,ROT(R,Angle)),th=-Pi..Pi,color=orange,thickness=4,numpoints=33)):
+l1 :=drawLine([ROT(L1[1],Angle),ROT(L1[2],Angle)],-15,5,red,2):
+l2 :=drawLine([ROT(L2[1],Angle),ROT(L2[2],Angle)],-5,15,green,2):
+l3 :=drawLine([ROT(L3[1],Angle),ROT(L3[2],Angle)],-10,10,magenta,2):
+s1:=sphere(subs(t=-1,ROT(Curve,Angle)),0.2,color=green,style=PATCHNOGRID,grid=[10,10]):
+s2:=sphere(subs(t=1,ROT(Curve,Angle)),0.2,color=red,style=PATCHNOGRID,grid=[10,10]):
+s3:=sphere(subs(t=0,ROT(Curve,Angle)),0.2,color=magenta,style=PATCHNOGRID,grid=[10,10]):
+C:=display3d(spacecurve(ROT(Curve,Angle),t=-1.5..1.5,color=blue, thickness=2)):
+
+
+#plotsetup(gif,plotoutput="still.gif",plotoptions=`height=700,width=700`):
+
+#plotsetup(gif,plotoutput="still.gif",plotoptions=`height=2500,width=2500`):
+
+#display([C,s1,s2,s3,l1,l2,l3,H,E1,E2],scaling=CONSTRAINED,orientation=[70,80]);
+#display([C,s1,s2,s3],scaling=CONSTRAINED,orientation=[70,80]);
+#display([C],scaling=CONSTRAINED,orientation=[70,80]);
+#        view=[-12..12,-12..12,-5..5]); 
+
+#for Angle from 0 to 330 by 30 do 
+for Angle from 0 to 357 by 3 do 
+#for Angle from 0 to 355 by 5 do 
+ H:=display3d(plot3d(ROT(R,Angle), th=-Pi..Pi, r=-10..10,color=yellow
+               ,grid=[33,30]   )):
+ E1:=display3d(spacecurve(subs(r= 10.05,ROT(R,Angle)),th=-Pi..Pi,color=orange,thickness=4,numpoints=33)):
+ E2:=display3d(spacecurve(subs(r=-10.05,ROT(R,Angle)),th=-Pi..Pi,color=orange,thickness=4,numpoints=33)):
+ C:=display3d(spacecurve(ROT(Curve,Angle),t=-1.5..1.5,color=blue, thickness=2)):
+ s1:=sphere(subs(t=-1,ROT(Curve,Angle)),0.2,color=green,style=PATCHNOGRID,grid=[10,10]):
+ s2:=sphere(subs(t=1,ROT(Curve,Angle)),0.2,color=red,style=PATCHNOGRID,grid=[10,10]):
+ s3:=sphere(subs(t=0,ROT(Curve,Angle)),0.2,color=magenta,style=PATCHNOGRID,grid=[10,10]):
+ l1 :=drawLine([ROT(L1[1],Angle),ROT(L1[2],Angle)],-15,5,red,2):
+ l2 :=drawLine([ROT(L2[1],Angle),ROT(L2[2],Angle)],-5,15,green,2):
+ l3 :=drawLine([ROT(L3[1],Angle),ROT(L3[2],Angle)],-10,10,magenta,2):
+ DSeq:=[op(DSeq),[l1, l2, l3, C, H, E1, E2,s1,s2,s3]]:
+# DSeq:=[op(DSeq),[l1, l2, l3, C, s1, s2, s3]]:
+# DSeq:=[op(DSeq),[C, s1, s2, s3]]:
+# DSeq:=[op(DSeq),[C]]:
+od:
+
+plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=450,width=450`):
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=650,width=650`):
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=850,width=850`):
+ 
+display(seq(display(op(DSeq[k]),scaling=CONSTRAINED,orientation=[70,80]),
+       k=1..nops(DSeq)),scaling=CONSTRAINED,insequence=true);

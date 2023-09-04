@@ -1,0 +1,10 @@
+Lecture 5.  The Pluecker Ideal
+
+-> The Pluecker ideal
+   * Example G(2,4)
+   * Standard monomials and the Bruhat order
+   * Straightening syzygies
+   * Sagbi property
+
+-> Applications
+   * Degree of Grassmannian

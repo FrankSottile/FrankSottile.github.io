@@ -1,0 +1,9 @@
+Lecture 3
+
+-> Applications of flatness
+   * Gröbner degenerations 
+   * Initial ideals of toric ideals
+   * Polyhedral subdivisions and initial ideals
+   * Kouchnirenko's Theorem
+
+

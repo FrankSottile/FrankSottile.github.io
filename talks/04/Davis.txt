@@ -1,0 +1,17 @@
+Lower bounds for real polynomial systems from sign-imbalanced posets.
+ Frank Sottile
+ Clay Mathematical Institute, MSRI, and Texas A&M University
+ 
+We present families of sparse polynomial systems having a lower bound on their
+number of real solutions. Each family is unmixed with Newton polytope the order
+polytope of a finite poset P that is ranked (mod 2) and whose maximal chains
+have equal length (mod 2). The lower bound is the sign-imbalance of the
+poset---this is the difference between the number of even and of odd linear
+extensions of the poset P. The sign-imbalance is interpreted as the topological
+degree of a certain folding map of an associated simplicial complex.
+ 
+Our tools are combinatorics of toric varieties, toric degenerations, and some
+topology. Using sagbi degenerations, we recover results of Eremenko and Gabrielov
+on the degree of the Wronski map.
+This is joint work with Evgenia Soprunova
+

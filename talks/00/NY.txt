@@ -1,0 +1,18 @@
+
+Your abstract has been successfully processed for the
+New York, New York meeting.
+
+Title: Elementary Transversality in the Schubert Calculus.
+
+Author: Frank  Sottile 
+
+
+Abstract: 
+We give an elementary and characteristic-free proof that general
+codimensio n-1 Schubert varieties meet generically transversally in a
+Grassmannian and in some r elated varieties. This implies that the
+corresponding intersection numbers computed i n the Chow (and quantum
+Chow) rings of these varieties are enumerative in all charact
+eristics.
+
+

@@ -1,0 +1,31 @@
+
+Eulerian actions on posets and the combinatorics of peaks
+Frank Sottile  
+University of Wisconsin
+
+
+   The algebraic combinatorics of a polytope is encoded by its flag 
+f-vector, which satisfies the generalized Dehn-Sommerville relations 
+of Bayer and Billera.  The flag f-vector is seen to arise from a 
+combinatorial action of a free associative algebra on the face poset 
+of the polytope, and the common kernel of these actions is the 
+generalized Dehn-Sommerville relations.  Billera and Liu elegantly 
+reformulated these subtle relations, showing that this ideal is generated 
+by the obvious Euler relations, and the resulting quotient has Hilbert 
+function the Fibonacci sequence.
+
+    While studying `the combinatorics of peaks', Stembridge introduced the
+Peak subalgebra of the algebra of quasi-symmetric functions, as a target
+for a generating function for peak enumeration.   The Hilbert function 
+of this peak algebra is also the Fibonacci sequence.
+
+   This talk, which describes joint work with Bergeron, Mykytiuk, and 
+van Willigenberg, will connect these two stories via our theory of 
+combinatorial actions on graded posets and the resulting quasi-symmetric
+function.  In particular, we show the peak algebra and the algebra of
+Billera and Liu are dual Hopf algebras.  This leads to the notion of an 
+Eulerian combinatorial action - one satisfying the generalized Dehn-
+Sommerville relations.   Such Eulerian actions abound in the isotropic
+Schubert calculus, polytope theory, and in the `combinatorics of peaks',
+and this theory should allow us to apply techniques developed for study
+flag f-vectors to th

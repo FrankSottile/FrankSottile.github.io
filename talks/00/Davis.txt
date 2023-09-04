@@ -1,0 +1,20 @@
+Polytopes and the Isotropic Schubert Calculus
+
+Bay Area Combnatorics Day
+UC Davis
+
+Abstract:
+
+   Combinatorial invariants of ranked posets count rank-selected
+chains in the poset, which generalize (flag) $f$-vectors of posets
+Likewise, known multiplication formulas in the Schubert calculus may
+be expressed combinatorially as a sum over chains in the Bruhat
+order satisfying certain conditions.  Both cases also possess some
+Hopf-algebra structures.
+
+   We describe a theory of Pieri Operators on posets which unifies
+these two examples, explaining their common Hopf-algebraic structure.
+This unified theory also shows a direct link between the Isotropic
+Schubert calculus and the invariants of polytopes---through certain
+Eulerian Pieri operators.
+

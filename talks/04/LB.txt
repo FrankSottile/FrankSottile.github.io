@@ -1,0 +1,16 @@
+ Lower bounds for real polynomial systems from sign-imbalanced posets.
+
+  A new phenomenon in real algebraic geometry is the existence
+of geometric problems with a provable lower bound on their number   
+of real solutions.   If widespread, this would be enormously
+important for applications.
+
+  In this talk, I will discuss work with Evgenia Soprunova 
+on a framework in which to understand these lower bounds.
+In particular, we give polynomial systems associated to posets, 
+and show that the sign-imbalance of the poset gives a lower 
+bound on the number of real solutions to the associated system.
+This uses combinatorics of toric varieties, toric degenerations, 
+and some topology. Using sagbi degenerations, we recover results 
+of Eremenko and Gabrielov on lower bounds in the Schubert
+calculus. 

@@ -1,0 +1,28 @@
+
+Title: Common transversals and tangents in P^3
+
+CRANTS Seminar,
+SUNY Albany
+20 March 2002.
+
+Frank Sottile
+
+University of Massachusetts, Amherst
+
+Abstract:
+  The following geometric problem has its origins in
+  computational vision: Determine the (degenerate)
+  configurations of two lines l_1 and l_2 and two spheres
+  in R^3 for which there are infinitely m_any lines
+  simultaneously transversal to l_1 and l2 and tangent
+  to both spheres. We generalize this, replacing the
+  spheres by quadric surfaces in P^3. In this setting,
+  the question has an amazing answer. Fixing the two
+  lines to be skew and one quadric, the set of degenerate
+  second quadrics is a curve of degree 24 in the P^9 of
+  quadrics which is in fact the union of 12 plane conics!
+  Moreover, there are examples where all 12 degenerate
+  families are real. We describe the symbolic computation
+  behind this result and give some vivid pictures.
+
+  This is joint work with Gabor Megyesi and Thorsten Theobald

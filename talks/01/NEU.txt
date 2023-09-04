@@ -1,0 +1,14 @@
+
+Elementary Transversality in the Schubert Calculus
+
+ 9 April 2001  
+ Geometry-Algebra-Singularities-Combinatorics Seminar
+ Northeastern University
+
+
+We give an elementary and characteristic-free proof that 
+general codimension-1 Schubert varieties meet generically 
+transversally in a Grassmannian and in some related varieties. 
+This implies that the corresponding intersection numbers 
+computed in the Chow (and quantum Chow) rings of these 
+varieties are enumerative in all characteristics. 

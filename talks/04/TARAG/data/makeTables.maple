@@ -1,0 +1,186 @@
+#makeTables.maple
+#
+#   This file creates the .html tables of the data from the RSSS project. 
+#
+##############################################################
+interface(quiet=true):
+read(`HTML_Procedures.maple`):
+###############################################################
+TS:=proc(Time,Machine)
+#
+#  Gives the time of computation in relative (GHz) units
+# 
+ local speed, String, GHZTime:
+ global SPEED:
+
+ speed:=SPEED[Machine]:
+ if not type(speed,numeric) then 
+  printf(" Do not have CPU speed for %s\n",Machine):
+  quit:
+ fi:
+ GHZTime:=Time*speed/1000.:
+ String:=sprintf(" Computation:"):
+ if GHZTime <3600 and GHZTime >= 60 then 
+   String:=sprintf("%s %3.2f GHz-minutes",String,GHZTime/60):
+ fi:
+ if GHZTime <3600*24  and GHZTime >= 3600 then 
+  String:=sprintf("%s %3.2f GHz-hours",String,GHZTime/3600):
+ fi:
+ if  GHZTime >=3600*24 then
+   String:=sprintf("%s %s GHz-days",String,parseNumber(evalf(GHZTime/3600/24))):
+ fi:
+ return(String):
+end proc:
+##############################################################
+NAMES:=["A1325e2A2143e3.7", "Xe5Ye3.10", "A1325e3A1435WY.18",
+        "A21436e2A31526Xe2.8", "Xe4Ye4.12", "A1452e4.6", "Ye3Ze2.2"]:
+#NAMES:=["Ye3Ze2.2"]:
+
+
+up:="":
+
+for NAME in NAMES do 
+
+ Read_File:=sprintf("%s.data",NAME):
+ Write_File:=sprintf("%s.html",NAME):
+
+ read(Read_File):
+ fixMachine():
+ TYPE:=flagType(FlagVariety):
+ SortedConditions:=SortConditions(FlagVariety,EnumerativeProblem):
+#########################################################################
+#
+#  SortedConditions[0]:  [n, k_1, k_2, ..., k_s], where
+#                         the variety is Fl(k_1, ..., k_s; n)
+#  SortedConditions[k]:  Grassmannian conditions with descent k, listed
+#                          in order of length
+#  SortedConditions[n]:  Non-Grassmannian conditions,  in order of length
+#
+#########################################################################
+ necklaceSymbols:=makeNecklaceSymbols():
+#########################################################################
+#
+#  This is a table of coloured symbols representing the conditions 
+#  for making the necklaces more visible
+#
+#########################################################################
+
+ file := fopen(Write_File,WRITE): 
+
+ fprintf(file, "<HTML> \n"):
+ fprintf(file, "<HEAD> \n"):
+ fprintf(file, "   <TITLE>Enumerative problem with %d ",NumberOfSolutions):
+ fprintf(file, "solutions on Fl(%s)</TITLE> \n",TYPE):
+ fprintf(file, "</HEAD> \n"):
+ fprintf(file, "<BODY BGCOLOR=#FFFFFF> \n"):
+ fprintf(file, " \n"):
+ fprintf(file, "<H1>Enumerative problem %s",ProblemString("Big",FlagVariety,EnumerativeProblem)):
+ fprintf(file, " = %d ",NumberOfSolutions):
+ fprintf(file, " on Fl(%s)</H1> \n",TYPE):
+ fprintf(file, " \n"):
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"): 
+#####################################################################
+####################################################################
+ fprintf(file, "<TABLE>\n"):
+ fprintf(file, " <TR valign=top>\n  <TD valign=top>\n"):
+####################################################################
+#
+#  Table of Experimental data
+#
+####################################################################
+fprintf(file, "   <TABLE border=1>\n"):
+
+fprintf(file, "    <TR><TD> </TD><TD colspan=%d",trunc(NumberOfSolutions/2)+1):
+fprintf(file, " align=center><font size=+2>Number of Real Solutions</font></TD>\n </TR>\n"):
+fprintf(file, "  <TR><TD><font size=+2> &nbsp; Necklaces &nbsp; </font></TD>\n   "):
+for i from (NumberOfSolutions mod 2) to NumberOfSolutions by 2 do 
+ fprintf(file, "<TH align=center><font size=+2> &nbsp; %d  &nbsp; </font></TH> ",i):
+ if i mod 5 = 0 then fprintf(file, "\n    "): fi:
+od:
+fprintf(file, "  </TR>\n"):
+
+Sort:=inOrder(Necklaces, Table):
+for i from 1 to nops(Sort) do 
+ Necklace:=Necklaces[Sort[i]]:
+ NecklaceString:=necklaceSymbols[EnumerativeProblem[1]]: 
+ for k from 1 to nops(Necklace) do 
+  for j from 1 to nops(Necklace) do 
+   if k=Necklace[j] then  
+      NecklaceString :=
+      sprintf("%s%s",NecklaceString,necklaceSymbols[EnumerativeProblem[j+1]]):
+   fi:
+  od:
+ od:
+ fprintf(file, "  <TR><TH><font size=+2> &nbsp; %s &nbsp;</font> </TH>\n      ",NecklaceString):
+ j:=1:
+ for Number in Table[Sort[i]] do 
+  if Number<>0 then 
+    fprintf(file, "<TD align=right><font size=+1> &nbsp; %d &nbsp;</font> </TD>", Number):
+   else
+    fprintf(file, "<TD align=right> &nbsp; <font color=red size=+1>"):
+    fprintf(file, " <b>0</b></font> &nbsp; </TD>", Number):
+  end if:
+  if j mod 4 = 0 then fprintf(file, "\n      "): fi:
+  j:=j+1:
+ od:
+ fprintf(file, "  </TR>\n"):
+od:
+fprintf(file, " </TABLE>\n"):
+
+fprintf(file, " </TD><TD width=50></TD><TD>\n"):
+###################################################################################
+read(Read_File):
+fixMachine():
+HtmlConditions:=htmlConditions("Small",FlagVariety,EnumerativeProblem):
+
+fprintf(file, " <TABLE>\n"):
+fprintf(file, "  <TR valign=top><TD>\n"):
+ fprintf(file, "\n<!-------------------------------------------------->\n\n"):
+ fprintf(file, "   <TABLE></TD><TD width=50></TD>\n"):
+ fprintf(file, "     <TD><A HREF=\".html\"><IMG SRC=\"next.gif\"></A> \n"): 
+ fprintf(file, "     </TD></TR>\n"):
+ fprintf(file, "   </TABLE>\n"):
+ fprintf(file, "\n<!-------------------------------------------------->\n\n"):
+
+fprintf(file, "  <TABLE border=1>\n"):
+fprintf(file, "   <TR><TH colspan=4 align=center><font size=+1>Key</font></TH></TR>\n"):
+fprintf(file, "   <TR><TH align=center><font size=+1>Condition</font></TH>"):
+fprintf(file, "   <TH align=center><font size=+1>Name</font></TH>"):
+fprintf(file, "   <TH align=center><font size=+1>Codim</font></TH></TR>\n"):
+ n:=FlagVariety[nops(FlagVariety)]:
+ for k in SortedConditions[0] do
+  if k=n then 
+    color:=Color[black]:
+   else
+    color:=Color[COLOURS[n-3][k]]:
+  fi:
+  for w in SortedConditions[k] do
+   fprintf(file, "   <TR>\n "):
+   fprintf(file, "    <TD align=center>&nbsp;<font size=+2 color=%s>",color):
+   fprintf(file, "%s</font>&nbsp;</TD>\n", HtmlConditions[w]):
+   fprintf(file, "    <TD align=center><font size=+2>&nbsp;%s&nbsp;</font></TD>\n",necklaceSymbols[w]):
+   fprintf(file, "   <TD align=center>&nbsp;<font size=+2 color=%s>",color):
+  fprintf(file, "%d</font>&nbsp;</TD>\n  </TR>\n",Length(w)):
+  od:
+ od:
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, "<font size=+1>%s\n",TS(PreTime+GroebnerTime+RealTime,Machine)):
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ NumberSolved:= sum(Table[1][ll],ll=1..nops(Table[1]))*nops(Necklaces):
+ fprintf(file, "%s Systems solved\n",parseNumber(NumberSolved)):
+
+ #####################################################################
+ fprintf(file, "<HR COLOR=#0000FF size=2 noshade> \n"):
+
+ fprintf(file, "</BODY> \n"):
+ fprintf(file, "</HTML> \n"):
+
+ fclose(file):
+end do:
+quit;

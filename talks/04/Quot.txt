@@ -1,0 +1,10 @@
+ Equivariant cohomology of the quot scheme 
+
+    We study the quot scheme which compactifies the space of rational
+curves on a Grassmannian.  Our main result is a presentation of 
+its equivariant cohomology using an extension of the formalism of 
+Goresky-Kottwicz-Macpherson.
+
+ This is joint work in progress with Tom Braden and Linda Chen.
+ 
+

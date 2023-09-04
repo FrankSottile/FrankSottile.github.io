@@ -1,0 +1,92 @@
+#12 lines.maple
+#
+# Draws a movie of the 12 lines tangent to 4 spheres
+interface(quiet=true):
+with(plots):
+with(plottools):
+###########################################################################
+#
+#  Rotates L through th degrees
+#
+ROT := proc(L,th)
+  local TH:
+  TH:=th*Pi/180:
+  return([cos(TH)*L[1]+sin(TH)*L[2],
+         -sin(TH)*L[1]+cos(TH)*L[2],
+          L[3]])
+end proc:
+##############################################################################
+CYC:=proc(L)
+ return([L[2],L[3],L[1]])
+end proc:
+##############################################################################
+
+r:=1.49:
+X:=(r^2 - 2)^(1/2):
+Y:= (17*r^2-18-4*r^4)^(1/2):
+rr:=r*.98:
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+#  Centres of the four spheres
+P1:=[ 1, 1, 1]:
+P2:=[ 1,-1,-1]:
+P3:=[-1, 1,-1]:
+P4:=[-1,-1, 1]:
+s1:=[ 1+rr*sin(ps)*sin(ph), 1+rr*cos(ps)*sin(ph), 1+rr*cos(ph)]:
+s2:=[ 1+rr*sin(ps)*sin(ph),-1+rr*cos(ps)*sin(ph),-1+rr*cos(ph)]:
+s3:=[-1+rr*sin(ps)*sin(ph), 1+rr*cos(ps)*sin(ph),-1+rr*cos(ph)]:
+s4:=[-1+rr*sin(ps)*sin(ph),-1+rr*cos(ps)*sin(ph), 1+rr*cos(ph)]:
+
+A:=3:
+B:=4:
+
+# endpoints of the lines
+e11:=[ X,B*( Y-X)/2/X^2,B]: e12:=[ X,-B*( Y-X)/2/X^2,-B]:
+e21:=[ X,A*(-Y-X)/2/X^2,A]: e22:=[ X,-A*(-Y-X)/2/X^2,-A]:
+e31:=[-X,A*( Y+X)/2/X^2,A]: e32:=[-X,-A*( Y+X)/2/X^2,-A]:
+e41:=[-X,B*(-Y+X)/2/X^2,B]: e42:=[-X,-B*(-Y+X)/2/X^2,-B]:
+
+f11:=CYC(e11): g11:=CYC(f11): f12:=CYC(e12): g12:=CYC(f12):
+f21:=CYC(e21): g21:=CYC(f21): f22:=CYC(e22): g22:=CYC(f22):
+f31:=CYC(e31): g31:=CYC(f31): f32:=CYC(e32): g32:=CYC(f32):
+f41:=CYC(e41): g41:=CYC(f41): f42:=CYC(e42): g42:=CYC(f42):
+
+DSeq:=[]:
+for th from 0 to 357 by 3 do
+#for th from 0 to 60 by 4 do
+
+ #   The Four Spheres
+ S1:=plot3d(ROT(s1,th),ph=0..Pi,ps=-Pi..Pi,color=pink):#,style=PATCHNOGRID):
+ S2:=plot3d(ROT(s2,th),ph=0..Pi,ps=-Pi..Pi,color=yellow):#,style=PATCHNOGRID):
+ S3:=plot3d(ROT(s3,th),ph=0..Pi,ps=-Pi..Pi,color=cyan):#,style=PATCHNOGRID):
+ S4:=plot3d(ROT(s4,th),ph=0..Pi,ps=-Pi..Pi,color=magenta):#,style=PATCHNOGRID):
+
+# S1:=sphere(ROT(P1,th),rr,color=pink,style=PATCHNOGRID):
+# S2:=sphere(ROT(P2,th),rr,color=yellow,style=PATCHNOGRID):
+# S3:=sphere(ROT(P3,th),rr,color=cyan,style=PATCHNOGRID):
+# S4:=sphere(ROT(P4,th),rr,color=magenta,style=PATCHNOGRID):
+
+ T1:=line(ROT(e11,th), ROT(e12,th),color=green,thickness=3):
+ T2:=line(ROT(e21,th), ROT(e22,th),color=green,thickness=3):
+ T3:=line(ROT(e31,th), ROT(e32,th),color=green,thickness=3):
+ T4:=line(ROT(e41,th), ROT(e42,th),color=green,thickness=3):
+
+ T5:=line(ROT(f11,th), ROT(f12,th),color=red,thickness=3):
+ T6:=line(ROT(f21,th), ROT(f22,th),color=red,thickness=3):
+ T7:=line(ROT(f31,th), ROT(f32,th),color=red,thickness=3):
+ T8:=line(ROT(f41,th), ROT(f42,th),color=red,thickness=3):
+
+ T9 :=line(ROT(g11,th), ROT(g12,th),color=blue,thickness=3):
+ T10:=line(ROT(g21,th), ROT(g22,th),color=blue,thickness=3):
+ T11:=line(ROT(g31,th), ROT(g32,th),color=blue,thickness=3):
+ T12:=line(ROT(g41,th), ROT(g42,th),color=blue,thickness=3):
+
+ DSeq:=[op(DSeq),[S1,S2,S3,S4,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12]]:
+end do:
+
+plotsetup(gif,plotoutput=`A.gif`,plotoptions=`height=750,width=750,color,portrait,noborder`);
+display(seq(display(op(DSeq[k]),scaling=CONSTRAINED),k=1..nops(DSeq)),
+   scaling=CONSTRAINED,insequence=true,view=[-5.3..5.3,-5.3..5.3,-5.3..5.3],
+   orientation=[45,55]);#,light=[15,80,1,1,1],lightmodel='light1');
+

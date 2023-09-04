@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Topological Lower Bounds on the Number of Real Solutions</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>Topological Lower Bounds on the Number of Real Solutions</H1>
+
+<TABLE>
+<TD>
+<B>Frank Sottile</B><BR>
+<I> University of Massachusetts-Amherst</I><BR>
+
+Invited Talk,    
+<A HREF="http://www.math.tamu.edu/conferences/cbms/">Solving Systems of Polynomial Equations</A>, 
+</TABLE>
+
+<P>
+
+It is a difficult problem  to say anything meaningful about the number
+of real  solutions to  a system of  equations. Recently,  Eremenko and
+Gabrielov introduced a notion, that of the real degree of a projection
+map, that  can give a  non-trivial lower bound  on the number  of real
+solutions to some systems of polynomial equations.
+
+<P>
+
+In this  talk, I  will describe this  idea of Eremenko  and Gabrielov,
+give some  applications, and discuss  its limitations. In  addition, I
+will show how this degree may be computed for some projections of some
+toric varieties.
+<BR>
+
+
+</BODY>
+</HTML>
+
+

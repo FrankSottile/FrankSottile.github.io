@@ -1,0 +1,26 @@
+Grothendieck Polynomial Formulas
+
+by Frank Sottile
+
+Berkeley Combinatorics Seminar
+26 January 2004
+
+  Grothendieck polynomials were introduced by Lascoux and
+Schutzenberger as polynomial representatives of classes of Schubert
+structure sheaves in the Grothendieck ring of a flag variety.  They
+are of considerable interest combinatorially as they are a natural
+generalization of Schubert polynomials.  In this talk, I will discuss
+some formulas involving Grothendieck polynomials.  These include (1) a
+Pieri-type formula for the multiplication of an arbitrary Grothendieck
+polynomial by one representing the structure sheaf of a special
+Schubert variety, and (2) a formula for expressing a Grothendieck
+polynomial as a sum of Grothendieck polynomials evaluated at subsets
+of the variables, where the coefficients are Schubert structure
+constants.
+
+  This second formula involves permutation patterns and leads to a new
+construction of Grothendieck polynomials in terms of chains in the
+Bruhat order (easily seen to be equivalent to the standard formula
+in terms of rc-graphs.)  It may be used to show that every Buch-Fulton
+quiver coefficient is, in a natural way, equal to a Schubert structure
+constant.

@@ -1,0 +1,57 @@
+Frank Schreyer's Lectures at Oberwolfach
+Lecture 1:  Groebner Basics
+
+-> Ideal Membership Problem
+   * Easy in 1-variable
+   * Easy to get messed up trying in 2 (or more) variables
+   * Notion of monom order
+
+-> Monomial orders
+   * Lexicographic, real weights, degree reverse lexicographic
+   * A monom order is artinian  (uses Dixon's Lemma)
+   * Leading term of a polynomial
+
+-> Division with remainder of a polynomialk by a list.
+   * Its dependancy on the order of the f_i
+
+-> Definition of a Groebner basis in terms of the LT(ideal)
+   * Proposition.  Division algorithm works for Groebner bases,
+      "A Groebner basis provides a solution to ideal membeship problem"
+   * Gordan's proof of the Hilbert Basis Theorem
+
+-> Detection of Groebner bases
+   * Definition of S-pairs (motivated for detection of new monomials in Lt(I)).
+   * Buchberger's Criterion
+     -- proof uses free module Groebner bases, and begins to give information 
+        about syzygies
+
+-> Definition of (first) syzygy module
+    A finitely generated k[x1,..,xn] module has a finite free resolution
+    
+-> Application: Hilbert function is a polynomial (eventually)
+
+Exercise:  Let P^d x P^e ---> P^{de+d+e} be the Segre embedding
+           (xi) x (yj) |---> (zij = xi*yj)
+           Exercise:  Show the 2x2 minors of the matrix (zij) are a GB.
+
+        For Small d and e, compute the Hilbert resolution (by hand)
+
+____________________________________________________________________
+Lecture 2:
+
+W^r_d(C) = set of line bundles of degree d on C with at least r+1 sections
+           (Subset of Jacobian)
+Brill-Noether Theory implies that its dimension is at least
+           g-(r+1)(g-d+r) = rho(g, r, d)
+     For a general curve this is an equality and W^r_d - W^{r+1}_d is smooth.
+
+Idea is to use W^r_d to dominate M_g for rho as big as possible
+
+g<= 10, a plane curve model works.  Can find a family linear series over a
+          family of plane curves, giving a unirational parametrization of M_g
+
+--> This fails for g=11.  We try space curves. (Degree 12, genus 11)
+    There could be a curve of this degree with 6 generators of its ideal
+    in degree 5.  Finding one such curve (with the right ranks of maps between
+    higher cohomology of C and its ideal sheaf) will imply the general one has
+    these data, and then that this rational family dominates M_11.

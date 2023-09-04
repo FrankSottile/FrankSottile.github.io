@@ -1,0 +1,22 @@
+Convexity for lines in R^d
+Frank Sottile
+
+  Convex subsets in R^d play an important role in Discrete and
+Computational Geometry.  A cornerstone of the theory of convexity is
+Helly's Theorem from 1923 which states that if there is a point in
+common to every d+1 (or fewer) members of a finite collection of
+convex sets in R^d, then the whole family has a point in common. The
+usefulness of such a basic numerical result led to a search for
+similar results for other objects besides points, for example line
+transversals to convex sets in R^d.  While that is impossible in
+general, in 1940 Santalo proved a Helly-type result for line
+transversals to boxes in R^d.
+
+
+   This talk will describe these foundational results in Convex
+Geometry and discuss how an analysis of Santalo's arguments leads
+to a new and very pleasing convexity structure on ascending lines in
+R^d, one that is related to some interesting geometry of the
+Grassmannian of lines.  For example, the two pictures above are
+the convex hull of two lines in R^3 (on the left) and the convex
+hull of three lines (on the right).

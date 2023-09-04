@@ -1,0 +1,98 @@
+//P2P2.sing
+//
+// 15 January 2003
+// Frank Sottile
+// Jenya Soprounova
+// Amherst, MA
+//
+/////////////////////////////////////////////////////////////
+//
+//   We investigate real solutions to certain systems of 4
+//   multilinear equations on P^2 x P^2.
+//
+/////////////////////////////////////////////////////////////
+option(redSB);
+int T = timer;
+ring S = 0, (d,c,b,a), lp;  
+ideal I, J;
+poly D, E, F;
+matrix Co[3][3];
+
+//list w = 1,1,1,1,1;
+//list w = 298023223876953125,4294967296,19683,16,1; 
+//list w =  81,4, 1,4,81;
+list w = 1,1,1,1,1;
+intvec freq = 0,0,0,0,0,0,0;
+int i;
+list SturmSeq;
+int vm=0;
+int vp=0;
+
+for (int jj=1; jj<=2500; jj=jj+1)
+{
+
+ I = 0;
+ for (i=1; i<=4; i=i+1)
+ {
+  Co = random(30,3,3);
+  J = a*c*Co[1,1]*w[1]+a*d*Co[1,2]*w[2]+a*Co[2,2]*w[3]+
+      b*c*Co[1,2]*w[2]+b*d*Co[2,2]*w[3]+b*Co[2,3]*w[4]+
+        c*Co[2,2]*w[3]+  d*Co[2,3]*w[4]+  Co[3,3]*w[5];
+  I = I + J;
+ }
+ J = std(I);
+ F=J[1];
+ if (deg(F)==6)
+ {
+
+  ////////////////////////////////////////////////////////////////////////
+  //
+  //   Computes the Sturm Sequence of a polynomial F in the variable a
+  //
+  ////////////////////////////////////////////////////////////////////////
+  SturmSeq = F, diff(F,a);
+  for (i=3; i<=deg(SturmSeq[1])+1; i=i+1)
+  {
+   D = SturmSeq[i-1];
+   E = SturmSeq[i-2];
+   SturmSeq = insert(SturmSeq,reduce(-1*E,std(D)),i-1); 
+  }
+  ////////////////////////////////////////////////////////////////////
+  vm=0;
+  vp=0;
+  for (i=2; i<=deg(SturmSeq[1])+1; i=i+1)
+  {
+   if (subst(lead(SturmSeq[i]),a,-1)*subst(lead(SturmSeq[i-1]),a,-1)<0)
+   {
+    vm = vm + 1;
+   }
+   if ( leadcoef(SturmSeq[i])*leadcoef(SturmSeq[i-1]) < 0)
+   {
+    vp=vp+1;
+   }
+  }
+  freq[vm-vp+1]= freq[vm-vp+1]+1;
+  if (vm==vp) 
+  {
+   short=0;
+   print("###################################");
+  }
+ }
+}
+
+printf("    ");
+printf(" Frequency vector : %s   ",freq);
+printf("    ");
+printf(" CPU Time:          %s seconds  ",timer-T);
+printf("    ");
+
+quit;
+link l=":a P2P2.txt";
+fprintf(l, ",[%s]",freq);
+close(l);
+
+l=":a P2P2.time";
+fprintf(l, ",%s/10",timer-T);
+close(l);
+quit; 
+            

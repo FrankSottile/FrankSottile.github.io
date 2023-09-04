@@ -1,0 +1,18 @@
+Enumerative Real Algebraic Geometry
+
+   Frank Sottile
+
+   Consider the following hard problem:  Give meaningful information 
+about the number r of real solutions to a system of multivariate 
+polynomial equations.  Quite often much more is known than merely that 
+r is between 0 and the number d of complex solutions.  This stronger
+information is typically available when the system has some geometric 
+structure.  Enumerative real algebraic geometry treats this hard problem
+for systems coming from geometry.
+
+   In this talk, I will survey some of what is known.  In particular,
+I will discuss recent better understanding of the bounds of 0 and d.  
+A picture is emerging: for systems from geometry, the upper bound
+of d can always be obtained, and in many cases there are non-trivial 
+lower bounds on the number of real solutions, with certain gaps that 
+have been discovered experimentally.

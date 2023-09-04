@@ -1,0 +1,18 @@
+
+The Malvenuto---Reutenauer Hopf algebra of permutations
+
+Frank Sottile
+
+The Solomon descent Algebra of the symmetric group is
+a sub Hopf algebra of an algebra of permutation introduced
+by Malvenuto and Reutenauer.  This algebra may be seen as 
+a non-commutative version of the algebra of quasi-symmetric 
+functions, and has applications to enumerative combinatorics.
+
+This talk will describe the structure of this Malvenuto-Reutenauer
+Hopf algebra in detailed combinatorial terms. This description is
+obtained through careful analysis of the weak Bruhat order on the
+symmetric groups and their subsets of shuffles.
+
+This is joint work with Marcelo Aguiar.
+

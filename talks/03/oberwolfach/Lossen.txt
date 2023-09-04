@@ -1,0 +1,47 @@
+Summary of Ch. Lossen's Lectures
+
+Lecture I
+ Application of Groebner bases/syzygy computations.
+
+-> Submodule membership problem
+   * Groebner bases for submodules
+   * Division with remainder
+   * Compute a representation of a submodule element in terms of the original
+       generators.  (Need to store syzygies.)
+   * This solves the lifting problem.  Given three free modules F, G, H with
+     maps f : G--->F<----H : g with in(f) contained in im(g), then there exists
+     a lift h:G--->H such that the diagram commutes.
+   * Radical membership problem.  Decide if g is in radical of <f1,...,fn>
+        Rabinowich trick: this is equivalnet to 1 \in < I, 1-tg>
+
+-> Projective closure
+   * Compute a GB for I in a global degree order, then the homogenization of the
+      GB generates the homogenization of I.
+
+-> Elimination
+   * Can use elimination to compute the intersection of two ideals
+   * Used to compute quotients
+   * And saturation 
+
+-> Geometric meaning 
+   * Saturation:  Variety of I : J^\infty is the closure of V(I)-V(J).
+       [Caution: if variety is only closed points in the given field, 
+                 this will not work.]
+   * Elimination: Projection
+   * Implicitization
+
+Lecture II:   Constructive module Theory
+
+-> Modules are represented via their presentations
+   * How to represent a morphism of modules
+   * Computation of Kernels and CoK
+-> Modules are represented via their presentations
+   * How to represent a morphism of modules
+   * Computation of Kernels and CoKernels.
+
+(Much more, FS could not stay awake..)
+
+-> Computation of linear series on a curve.
+
+
+

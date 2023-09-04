@@ -1,0 +1,58 @@
+
+printf("///////////////////////////////////////////////");
+printf("Inhomogeneous Triangle (s,t) |--> (1, st, s^2t, st^2)");
+ring R = 101, (s, t, a, b, c, d), dp;
+ideal I =  a-1, b-s*t, c-s^2*t, d-s*t^2;
+I = eliminate(I, st);
+I;
+ring S = 101, (a, b, c, d), dp;
+ideal J = std(imap(R,I));
+short=0;
+J;
+
+
+printf("///////////////////////////////////////////////");
+printf("Inhomogeneous Triangle (s,t) |--> (s, s^2t, s^3t, s^2t^2)");
+ring R = 101, (s, t, a, b, c, d), dp;
+ideal I =  a-s, b-s^2*t, c-s^3*t, d-s^2*t^2;
+I = eliminate(I, st);
+ring S = 101, (a, b, c, d), dp;
+ideal J = std(imap(R,I));
+short=0;
+J;
+
+
+quit;
+printf("///////////////////////////////////////////////");
+printf("Homogeneous Triangle (r,s,t) |--> (r, rst, rs^2t, rst^2)");
+ring R = 101, (r, s, t, a, b, c, d), dp;
+ideal I =  a-r, b-r*s*t, c-r*s^2*t, d-r*s*t^2;
+I = eliminate(I, rst);
+ring S = 101, (a, b, c, d), dp;
+ideal J = std(imap(R,I));
+short=0;
+J;
+
+quit;
+
+printf("///////////////////////////////////////////////");
+printf("Twisted cubic t |----> (t, t^2, t^3)");
+ring R = 101, (t, x, y, z), dp;
+ideal I =  x - t,  y - t^2,  z - t^3;
+I = eliminate(I, t);
+ring S = 101, (x, y, z), dp;
+ideal J = std(imap(R,I));
+short=0;
+J;
+
+printf("///////////////////////////////////////////////");
+printf("Hexagon (s,t) |--> (1, s, t, st, s^2t, st^2, s^2t^2)");
+ring R = 101, (s, t, a, b, c, d, e, f, g), dp;
+ideal I =  a-1, b-s, c-s^2*t, d-s^2*t^2, e-s*t^2, f-t, g-s*t;
+I = eliminate(I, st);
+ring S = 101, (a, b, c,d, e, f, g), dp;
+ideal J = std(imap(R,I));
+short=0;
+J;
+
+quit;

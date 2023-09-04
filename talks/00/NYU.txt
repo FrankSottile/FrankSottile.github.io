@@ -1,0 +1,22 @@
+Quantum Reality:  Rational curves in real Grassmannians
+
+Frank Sottile
+University of Massachusetts at Amherst
+
+   Inspired by theoretical physics and to a lesser extent by
+linear systems theory, mathematicians have recently developed
+sophisticated techniques (quantum cohomology) to treat enumerative 
+geometric questions about curves in many spaces.  In the 
+important case of rational curves in a Grassmannian, elementary 
+geometric arguments which generalize classical techniques of 
+Schubert and Pieri from the 19th century suffice to treat these 
+problems.  Rather surprisingly, these same elementary arguments 
+show that these geometric problems may have all solutions be real.
+
+  This talk will describe how to obtain real number solutions to
+this geometric concerning rational curves on a Grassmannian.  We 
+begin with a concrete description of a rational curve on the 
+Grassmannian and some motivation for this problem from systems 
+theory, and then present an elementary derivation of the number 
+of solutions which also shows how all solutions can be real.
+

@@ -1,0 +1,94 @@
+#2_cusps_b.maple
+#
+# We draw the two different maximally inlected quartics with 2 cusps and 2
+# inflection points, where the cusps (and inflection points) are consecutive.
+#
+#   Here  i  is an ordinary inflection point and  k  is a cusp
+#
+#     values      points of inflection           Number with n nodes
+#      i  k          i              k              0       1
+#     ---------------------------------------------------------------
+# 2b)  2  2        -S  S         -1   1           1       1
+#
+#    S = 10^(1/2) is the sweet choice!!!!!!!!!
+#
+#
+interface(quiet=true):
+with(plots):
+with(linalg):
+with(Groebner):
+
+RatNorm:=vector([t^4,t^3*s,t^2*s^2,t*s^3,s^4  ]):
+
+M:=matrix([
+[1,s,s^2,  s^3,s^4  ],
+[0,1,2*s,3*s^2,4*s^3],
+[0,0, 1 ,3*s  ,6*s^2],
+[1,0,a,c , e  ],
+[0,1,b,d, f]]):
+
+Min:=gbasis([det(submatrix(M,[1,2,4,5],[2,3,4,5])),
+det(submatrix(M,[1,2,4,5],[1,3,4,5])),
+det(submatrix(M,[1,2,4,5],[1,2,4,5])),
+det(submatrix(M,[1,2,4,5],[1,2,3,5])),
+det(submatrix(M,[1,2,4,5],[1,2,3,4]))],plex(a,b,c,d,e,f)):
+
+Eqs:=[subs(s=S,det(M)),subs(s=-S,det(M)),
+subs(s=-1,Min[1]),subs(s=-1,Min[2]),subs(s=-1,Min[3]),
+subs(s=1,Min[1]),subs(s=1,Min[2]),subs(s=1,Min[3])]:
+
+G:=gbasis(Eqs,plex(a,b,c,d,f,e)):
+
+E:=solve(G[1]=0,e):
+F:=[0,0]:C:=[0,0]:B:=[0,0]:
+DD:=[solve(subs(e=E[1],G[3])=0,d),solve(subs(e=E[2],G[3])=0,d)]:
+A:=[solve(subs(e=E[1],G[6])=0,a),solve(subs(e=E[2],G[6])=0,a)]:
+
+S:=10^(1/2):
+
+for i from 1 to 2 do
+ z2b[i]:=multiply(vector([-A[i],0,1,0,0]),RatNorm):
+ y2b[i]:=multiply(vector([0,-DD[i],0,1,0]),RatNorm):
+ x2b[i]:=multiply(vector([-E[i],0,0,0,1]),RatNorm):
+od:
+
+
+X2b[1]:=x2b[1]/(x2b[1]-3*z2b[1]):
+Y2b[1]:=3*y2b[1]/(x2b[1]-3*z2b[1]):
+X2b[2]:=2*z2b[2]/(x2b[2]):
+Y2b[2]:=y2b[2]/(x2b[2]):
+
+#solve(subs(s=s^(1/2),t=1,x2b[1]-a*z2b[1])=0,s);
+#fsolve(subs(s=s^(1/2),t=1,x2b[2])=0,s);
+
+
+lprint(`X2b[1]:=`,x2b[1],`:`);
+lprint(`Y2b[1]:=`,3*y2b[1],`:`);
+lprint(`Z2b[1]:=`,x2b[1]-3*z2b[1],`:`);
+Eq2b[1]:= -16*x^4+31*x^2*y^2-16*y^4-20*x^3+16*x*y^2+12*x^2-20*y^2+19*x+5:
+lprint(Eq2b[1]);
+
+lprint(`X2b[2]:=`,z2b[2],`:`);
+lprint(`Y2b[2]:=`,y2b[2],`:`);
+lprint(`Z2b[2]:=`,x2b[2],`:`);
+Eq2b[2]:=-18*x^4+8*x^2*y^2-y^4-3*x^3+2*x*y^2+4*x^2-2*y^2+x:
+lprint(Eq2b[2]);
+
+for i from 1 to 2 do
+ P[i]:=pointplot({[subs(s=S,t=1,X2b[i]),subs(s=S,t=1,Y2b[i])],
+                    [subs(s=-S,t=1,X2b[i]),subs(s=-S,t=1,Y2b[i])]},
+                   symbol=circle,color=red):  
+ Q[i]:=plot({[subs(t=1,X2b[i]),subs(t=1,Y2b[i]),s=-1..1],
+         [subs(s=1,X2b[i]),subs(s=1,Y2b[i]),t=-1..1]},axes=none,color=blue):
+od:
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+#plotsetup(ps,plotoutput=`2_Cusps_b1.eps`,
+#         plotoptions=`color,portrait,width=2.4in,height=2.4in,noborder`):
+plotsetup(gif,plotoutput=`kkii.1.gif`,plotoptions=`height=200,width=200`);
+display(Q[1],P[1]); 
+#plotsetup(ps,plotoutput=`2_Cusps_b2.eps`,
+#         plotoptions=`color,portrait,width=2.4in,height=2.4in,noborder`):
+plotsetup(gif,plotoutput=`kkii.0.gif`,plotoptions=`height=200,width=200`);
+display(Q[2],P[2]); 
+
