@@ -1,0 +1,205 @@
+<HTML><HEAD><TITLE>Math 131</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+<H1>Spring 2001<BR>
+Math 131:  Calculus I<BR>
+Sections 9 and 12<BR>
+<FONT COLOR="FF0000">
+Office hours for finals week:<BR>
+
+<DD>
+Wednesday, 16 May:   12:00 - 1:00 PM
+<DD>
+Friday, 18 May: 2:00 -- 4:00 PM
+<DD>
+Monday, 21 May: 2:00 -- 4:00 PM
+</FONT>
+</H1>
+<HR>
+
+ <DT>
+ <TABLE><TD> <EM><FONT COLOR=AA00FF>Instructor:</FONT></EM>
+	<A HREF="../../index.html">Frank Sottile</A>
+   <DD><IMG SRC="../../images/dot.gif"> Office: LGRT 1244
+   <DD><IMG SRC="../../images/dot.gif"> Telephone: 545 - 6010
+   <DD><IMG SRC="../../images/dot.gif"> email: <TT><A
+	HREF="mailto:sottile@math.umass.edu">sottile@math.umass.edu</A></TT> 
+   <DD><IMG SRC="../../images/dot.gif"> WWW:
+	<TT>http://www.math.umass.edu/~sottile</TT>  
+ <DD><IMG SRC="../../images/dot.gif"> 
+          <FONT COLOR=AA00FF><EM>Frank's Office Hours:</EM></FONT>
+        Tu, Th 10:30 AM --- 12:00 
+    <DD> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; and by appointment.
+ <TD ROWSPAN=2>
+<IMG SRC="../../images/3.gif"></TD></TR>
+             
+<TR><TD> <EM><FONT COLOR=AA00FF>Discussion Leader:</FONT></EM>
+	Raja Nageswaran
+   <DD><IMG SRC="../../images/dot.gif"> Office: LGRT 1335K
+   <DD><IMG SRC="../../images/dot.gif"> Telephone: 545 - 1255
+   <DD><IMG SRC="../../images/dot.gif"> email: <TT><A
+	HREF="mailto:nageswaran@math.umass.edu">nageswaran@math.umass.edu</A></TT> 
+ <DD> <IMG SRC="../../images/dot.gif"> 
+          <FONT COLOR=AA00FF><EM>Raja's Office Hours:</EM></FONT>
+        Tu 4:00 --- 5:30 PM 
+    <DD> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+         &nbsp; &nbsp; &nbsp; &nbsp; and &nbsp; &nbsp; 
+        Fri 11:15 --- 12:45.
+</TABLE>
+
+              
+ <DT> <TABLE>
+       <TR><TD><FONT COLOR=AA00FF><EM>Section 12</EM></FONT> </TD>
+       <TD><FONT COLOR=FF0000>Lectures:</FONT></TD><TD>
+       Tu, Th 1:00 - 2:15 PM, LGRT 123.</TD></TR>
+       <TR><TD></TD><TD><FONT COLOR=FF0000>Recitation:</FONT></TD><TD>
+       Mondays, 12:20 -- 1:10 LGRT 103.</TD></TR>
+      </TABLE>
+
+ <DT> <TABLE>
+       <TR><TD><FONT COLOR=AA00FF><EM>Section 9</EM></FONT> </TD>
+       <TD><FONT COLOR=FF0000>Lectures:</FONT></TD><TD>
+       Tu, Th 2:30 - 3:45 PM, LGRT 113.</TD></TR>
+       <TR><TD></TD><TD><FONT COLOR=FF0000>Recitation:</FONT></TD><TD>
+       Mondays, 4:00 -- 4:50 LGRT 119.</TD></TR>
+      </TABLE>
+
+ <DT> &nbsp;<FONT COLOR=AA00FF><EM>Text:</EM></FONT>
+      J. Stewart, Calculus, <I>Early Transcendentals</I>, Fourth Edition, 
+      Brooks/Cole, 1999. 
+
+ <DT> &nbsp;<I><FONT COLOR=AA00FF>Calculator: </FONT> </I>
+        TI-86 will be used, (the TI-85 will probably suffice). 
+
+  <DT> <TABLE>
+      <TR><TD><I><FONT COLOR=AA00FF>Course webpages: </FONT> </I></TD> <TD>
+        <FONT COLOR=AA0000>(Frank)</FONT>  </TD><TD>
+  <TT>http://www.math.umass.edu/~sottile/courses/131.html</TT></TD></TR>
+      <TR><TD> </TD>  <TD>
+        <FONT COLOR=AA0000>(Coordinator)</FONT>   </TD><TD>
+    <A HREF="http://squash.math.umass.edu/calculus/">
+     <TT>http://squash.math.umass.edu/calculus/</TT></A></TD></TR>
+   </TABLE>
+<HR>
+  <TABLE>
+  <TR><TD ALIGN=center> Some Pictures: </TD>
+   <TD colspan=2><A HREF="sin1x-movie.html"><IMG SRC="images/sin1x.gif"></A></TD>
+   <TD colspan=2><A HREF="xsin1x.html"><IMG SRC="images/xe2sin1x-sm.gif"></A></TD>
+   <TD colspan=2><A HREF="xsin1x.html"><IMG SRC="images/xsin1x-sm.gif"></A></TD>
+  </TR>
+   <TR><TD ALIGN=center> </TD>
+   <TD><A HREF="exp.html"><IMG SRC="images/exp-sm.gif"></A></TD>
+
+<!-- Here begins the parade of implicit function -->
+
+   <TD><A HREF="implicit.html"><IMG SRC="images/Descartes-sm.gif"></A></TD>  
+   <TD><A HREF="implicit.html"><IMG SRC="images/Tscirnhausen-sm.gif"></A></TD>  
+   <TD><A HREF="implicit.html"><IMG SRC="images/Eff-sm.gif"></A></TD>  
+   <TD><A HREF="implicit.html"><IMG SRC="images/Harnack-sm.gif"></A></TD>
+   <TD><A HREF="implicit.html"><IMG SRC="images/Eudoxus-sm.gif"></A></TD>  
+  </TR>
+  <TR><TD ALIGN=center> </TD>
+   <TD><A HREF="implicit.html"><IMG SRC="images/Snake-sm.gif"></A></TD>  
+   <TD><A HREF="implicit.html"><IMG SRC="images/Wagon-sm.gif"></A></TD>  
+   <TD><A HREF="implicit.html"><IMG SRC="images/Hilbert-sm.gif"></A></TD>  
+  </TR>
+  </TABLE>
+<HR>
+<FONT SIZE=+1 COLOR=FF0000>  Exam Schedule &nbsp; &nbsp;</FONT>
+   This course has common exams in the following dates:
+
+<TABLE>
+  <TR><TD><B>Exam 1</B></TD>
+          <TD> Tuesday, March 13, 2001, 6:00-8:00 PM &nbsp;  &nbsp; </TD>
+           <TD>Room Assignment:  &nbsp;  Marcus 131</TD></TR>
+  <TR><TD><B>Derivatives Test &nbsp; &nbsp; &nbsp; </B></TD>
+          <TD>  Wednesday, April 11, 2001, 6:15--7:15 PM &nbsp;  &nbsp; </TD>
+           <TD><FONT color="FF0000">Room Assignment:  &nbsp;  Marcus 131</FONT></TD></TR>
+  <TR><TD><B>Exam 2</B></TD>
+          <TD>  Thursday, April 26, 2001, 6:00-8:00 PM</TD></TR>
+ <TR><TD><B>Final Exam</B></TD>
+          <TD>  Tuesday, 22 May 1:30 PM </TD>
+           <TD><FONT color="FF0000">Room Assignment:  &nbsp; TOTM GYM  </FONT></TD></TR>
+</TABLE>
+
+<HR>
+<FONT SIZE=+1 COLOR=FF0000>  Grading</FONT><BR>
+  Each exam contributes 20% towards your final grade.
+  An additional 20% will come from homework and attendance.<BR>
+<HR>
+
+<FONT SIZE=+1 COLOR=FF0000>  Homework</FONT><BR>
+  Homework and attendance counts 20% towards your final grade.<BR>
+
+  <FONT COLOR=FF0000> The lowest homework score will be dropped before computing your grade.</FONT>.
+  <BR>
+
+  Homework will be collected on the following dates, during the Monday Discussion:
+  <BR>
+  <FONT COLOR=0000FF> February 12, 26, March 5,April 2,9, 
+       16,May 7, and <FONT COLOR=FF0000>14</FONT></FONT>.
+  <BR>
+  The assignments are as follows:<BR>
+
+  <TABLE BORDER=1>
+   <TR><TD ROWSPAN=3><FONT COLOR=0000FF>February 12</FONT></TD></TR>
+    <TR><TD><FONT COLOR=FF0000>2.1 &nbsp;</FONT> 2, 4, 5, 9.</TD>
+     <TD><FONT COLOR=FF0000>2.2 &nbsp;</FONT> 7, 8, 11, 18, 25. &nbsp;</TD></TR>
+   <TR><TD><FONT COLOR=FF0000>2.3 &nbsp;</FONT> 5, 9, 15, 19, 22, 28.</TD>
+     <TD><FONT COLOR=FF0000>2.5 &nbsp;</FONT> 16, 21, 22, 35, 39. &nbsp; </TD>
+   <TR><TD ROWSPAN=3><FONT COLOR=0000FF>February 26 &nbsp;</FONT></TD></TR>
+    <TR><TD><FONT COLOR=FF0000>2.6 &nbsp;</FONT> 3, 10, 13, 32.</TD>
+     <TD><FONT COLOR=FF0000>2.8 &nbsp;</FONT> 13, 14, 15, 16, 17, 18. &nbsp; </TD></TR> 
+    <TR><TD><FONT COLOR=FF0000>2.9 &nbsp;</FONT> 19, 20, 21, 22, 23, 24, 25, 26, 27. &nbsp; </TD>
+    <TD><FONT COLOR=FF0000>1.5 &nbsp;</FONT> 4, 7, 17, 19. &nbsp; </TD></TR>
+   <TR><TD><FONT COLOR=0000FF>March 5</FONT></TD>
+    <TD><FONT COLOR=FF0000>3.1 &nbsp;</FONT> 3, 6, 8, 9, 16, 17, 21, 27, 32, 37, 38, 43. &nbsp;</TD>
+     <TD><FONT COLOR=FF0000>3.2 &nbsp;</FONT> 3, 8, 12, 15, 19, 26, 32, 35. &nbsp;</TD></TR>
+   <TR><TD><FONT COLOR=0000FF>March 26</FONT></TD><TD><FONT COLOR=RED>NO HOMEWORK DUE</ TD>
+   <TR><TD ROWSPAN=2><FONT COLOR=0000FF>April 2</FONT></TD>
+        <TD><FONT COLOR=FF0000>3.1 &nbsp;</FONT> 7, 15, 20, 39. &nbsp;</TD>
+        <TD><FONT COLOR=FF0000>3.2 &nbsp;</FONT> 6, 13, 21, 25. &nbsp;</TD></TR>
+        <TD><FONT COLOR=FF0000>3.3 &nbsp;</FONT> 2, 5, 9, 13, 18. &nbsp;</TD></TR>
+   <TR><TD ROWSPAN=2><FONT COLOR=0000FF>April 9</FONT></TD>
+        <TD><FONT COLOR=FF0000>3.4 &nbsp;</FONT> 2, 7, 8, 11, 14, 16, 21, 24, 26, 31, 35. &nbsp;</TD>
+        <TD><FONT COLOR=FF0000>3.5 &nbsp;</FONT> 1, 4, 6, 9, 12, 18, 21, 24, 29, 
+                                                           37, 39, 45, 55. &nbsp;</TD></TR>
+        <TD><FONT COLOR=FF0000>3.6 &nbsp;</FONT> 3, 6, 9, 17, 20, 29, 32. &nbsp;</TD></TR>
+   <TR><TD ROWSPAN=2><FONT COLOR=0000FF>April 16</FONT></TD>
+         <TD><FONT COLOR=FF0000>3.6 &nbsp;</FONT> 41, 45, 46, 50. &nbsp;</TD>
+        <TD><FONT COLOR=FF0000>3.7 &nbsp;</FONT> 4, 8, 13, 20, 23, 29, 36. &nbsp;</TD></TR>
+    <TR><TD><FONT COLOR=FF0000>1.6 &nbsp;</FONT> 23, 28, 36, 40, 51. &nbsp;</TD>
+        <TD><FONT COLOR=FF0000>3.8 &nbsp;</FONT> 1, 2, 8, 15, 16, 20, 21, 24. &nbsp;</TD></TR>
+  <TR><TD ROWSPAN=2><FONT COLOR=0000FF>May 7</FONT></TD>
+        <TD><FONT COLOR=FF0000>3.8 &nbsp;</FONT> 25, 28, 37, 38, 44, 45&nbsp;</TD>
+        <TD><FONT COLOR=FF0000>3.10 &nbsp;</FONT> 3, 6, 8, 11, 12, 15, 21, 29, 30, 31 &nbsp;</TD></TR>
+    <TR><TD><FONT COLOR=FF0000>3.11 &nbsp;</FONT> 16, 17, 22, 25, 31, 32, 34, 36, 37. &nbsp;</TD>
+        <TD><FONT COLOR=FF0000>4.1 &nbsp;</FONT> 31, 32, 37, 51, 54, 60, 61. &nbsp;</TD></TR>
+   <TR><TD ROWSPAN=2><FONT COLOR=0000FF>May 14</FONT></TD>
+        <TD><FONT COLOR=FF0000>4.3 &nbsp;</FONT> 11, 13, 14, 17, 23, 24, 26, 
+                                                   35, 39, 43, 52, 60, 62, 73. &nbsp; </TD>
+        <TD><FONT COLOR=FF0000>4.4 &nbsp;</FONT> 6, 8, 13, 14, 21, 25, 32, 33, 50, 56, 58. &nbsp;</TD></TR>
+    <TR><TD><FONT COLOR=FF0000>4.7 &nbsp;</FONT> 2, 7, 8, 12, 18, 22, 30, 32, 34, 35, 40, 47. &nbsp;</TD></TR>
+</TR>
+  </TABLE>
+
+
+<HR>
+<A HREF="#top">TOP</A><BR>
+<I>Last modified: 8 May 2001 by Frank Sottile</I>
+</BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
