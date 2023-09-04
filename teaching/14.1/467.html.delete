@@ -1,0 +1,357 @@
+<HTML><HEAD><TITLE>Math 467: Modern Geometry</TITLE>
+<link rel="shortcut icon" href="../../images/sottile.ico"> 
+<link href="../../images/frank.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</HEAD>
+<A NAME="top"></A>
+<table>
+  <tr><td>
+<H1>Winter 2014<BR>
+Math 467: Modern Geometry
+</H1>
+  </td>
+  <td>
+&nbsp; &nbsp; <img height=100 src="escher.jpg">
+  </td>
+ </tr>
+</table>
+
+<!--------------------------------------------------------->
+ <HR>
+<a href="467_HW.html"><font color=red size=+1>Homeworks</font></A>.
+ <font color=maroon>Due Thursdays</font>&nbsp;
+<b>Special Note:</b> You can/should (must?) work with some of your classmates on these
+problems.
+That is, discuss the problems amongst yourselves.
+However, your write-ups should be completely separate, for you should put your conclusions
+in your own words.
+To facilitate this, you are asked to list on your homeworks those with whom you worked out
+the questions.
+<font color=red>Getting answers from a source such as a book or the web is, of course, not permitted.</font>
+<!--------------------------------------------------------->
+<HR/>
+<!--------------------------------------------------------->
+<a Href="https://www.youtube.com/watch?v=iwo7JReFTeg">M&ouml;bius Bridge</a> &nbsp; &nbsp; 
+<a href="https://www.youtube.com/watch?v=4mdEsouIXGM">Vi Hart's Wind and Mr. Ug</a>
+<!--------------------------------------------------------->
+<HR/>
+<!--------------------------------------------------------->
+
+
+
+<a href="http://piazza.com/tamu/spring2014/math467900">Sign up</a> for Piazza.
+&nbsp; &nbsp;
+   <a href="https://piazza.com/tamu/spring2014/math467900/home">Piazza Class page</a>.
+<!------------------------------------------------------->
+<HR/>
+<font size=+1>Information</font>
+   on <a href="467_papers.html"><font color=red size=+1>papers</font></A>.<br>
+ Flatland paper: Due 20 February.
+Topic and sources: 28 January. &nbsp; &nbsp; 
+    First Draft: 6 February. &nbsp; &nbsp; 
+    Peer review: 13 February. &nbsp; &nbsp;  Final version: 20 February.<br>
+ Second paper: Due 29 April.
+ Topic and sources: 8 April. &nbsp; &nbsp; 
+       First Draft: 17 April &nbsp; &nbsp; 
+    Peer review: 24 April. &nbsp; &nbsp;  Final version: 29 April.
+<!--------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------->
+Link to <a href="http://aleph0.clarku.edu/~djoyce/java/elements/toc.html">Euclid's elements</a>.
+<!--------------------------------------------------------->
+<hr>
+<!--------------------------------------------------------->
+<TABLE><TR><TD>
+ <!--------------------------------------------------------->
+   <TABLE>
+  <TR>
+   <TD colspan=2 align=left><b><FONT COLOR=AA00FF>Instructor:</FONT></b>
+        <A HREF="../../index.html">Frank Sottile</A>
+     &nbsp; &nbsp; &nbsp; <B>Weekly <A HREF="week.png">schedule</A></B>
+   </TD>
+  </TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> <font color=red> No 
+         Telephone (Budget Cuts)</TD></TR>
+  <TR><TD width=5></TD>
+      <TD><IMG SRC="../../images/dot.gif"> email: <TT>sottile@math.tamu.edu</TT><BR>
+          &nbsp; &nbsp; &nbsp;  <font color=red>Text-only</font> email with
+           467 in the subject line.  <BR>
+          &nbsp; &nbsp; &nbsp; Many questions about the class can be efficiently dealt with
+          using Piazza (see below)
+      </TD>
+  </TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> WWW:
+    <A HREF="/~sottile"><TT>http://www.math.tamu.edu/~sottile</TT></A></TD></TR>
+  <TR><TD width=5></TD><TD><IMG SRC="../../images/dot.gif"> Office: Blocker 601K </TD></TR>
+  <TR><TD width=5></TD>
+   <TD>
+    <!---------------------------------------------------------------------------->
+    <TABLE>
+     <TR> 
+      <TD>
+       &nbsp;<FONT COLOR=AA00FF><EM>Office Hours</EM> : </FONT>
+      </TD>
+      <TD>
+       <IMG SRC="../../images/dot.gif"> Mondays: 
+      </TD>  
+      <TD>
+       9:30&ndash;10:30
+      </TD>
+     </TR>
+     <TR>
+      <TD></TD> <TD>  
+       <IMG SRC="../../images/dot.gif"> Tuesdays: 
+      </TD>  
+      <TD>
+       14:10&ndash;15:10
+      </TD>
+     </TR>
+      <TD></TD> 
+      <TD colspan=2>
+       <IMG SRC="../../images/dot.gif"> By appointment
+      </TD>
+     </TR> 
+    </TABLE>
+   <!--------------------------------------------------------->
+  </TD>
+   <!--------------------------------------------------------->
+  </TR>
+ </TABLE>
+
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Textbook</B>:</FONT></TD>
+          <TD>Euclidean and Non-Euclidean Geometry <br>(4th edition), by Greenberg.
+   </TR>
+ </TABLE>
+ <TABLE>
+   <TR valign=top><TD><FONT COLOR=AA00FF><B>Lectures</B>:</FONT></TD>
+          <TD>  &nbsp; &nbsp;  T&Theta; 12:45&ndash;14:00 Blocker 164.</TD>
+   </TR>
+   <TR><TD><FONT COLOR=AA00FF><B>Grader</B>:</FONT></TD>
+          <TD> &nbsp; <A Href="/~kaitlyn/">Kaitlyn Phillipson</A>
+                   </TD> 
+   </TR>
+  <TR valign=top> <td><FONT COLOR=AA00FF><B>Course Forum</B>:</FONT></TD>
+           <TD>We will be using Piazza as a forum for class discussion. 
+	  For technical prolems with that site email
+	    <a href="mailto:team@piazza.com"><tt>team@piazza.com</tt></a><br>
+	   Find our class page at:
+	   <a href="https://piazza.com/tamu/spring2014/math467900/home">https://piazza.com/tamu/spring2014/math467900/home</a>.</TD>
+   </TR>  
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Course&nbsp;Content</B>:</FONT></TD>
+      <TD><B> From the catalog</b>:
+        Rigorous development of Euclidean <br>
+        Geometry; Classic non-Euclidean models; Matrix<br>
+        representations of transformations in <b>R</b><sup>3</sup>; Isometries; <br>
+        Transformation and symmetric groups; Similarity and <br>
+        Affine transformations.  
+        <font color=blue>Prerequisites</font>.  Math 304 or 323.<br><br>
+	<font color=red>Our course</font>: We will cover the rigorous development of <br>
+        Euclidean and non-Euclidean geometry, as well as their<br>
+        history and the scientific controversy and resulting <br>
+        revolution caused by the discovery of non-Euclidean geometry.  <br>
+        Later topics will be covered as time permits.
+      </TD>
+    </TR>
+     <!------------------------------------------------------------------------>
+ 
+    
+ </TABLE>
+ <!------------------------------------------------------------------------>
+ </TD><TD width=0></TD>
+   <TD align=center>
+       <IMG SRC="Greenberg.jpg"></TD>
+</TR></TABLE>
+
+<!------------------------------------------------------------------------>
+ <TABLE>
+  <TR valign=top><TD><FONT COLOR=AA00FF><B>Special&nbsp;Note</B>:</FONT></TD>
+   <TD> &nbsp; &nbsp;
+    This is a <font color=blue face=strong>W (Writing Intensive)</font> course, and we will
+     meet the writing requirement in several ways.
+     Foremost, you will write two papers, one due before the midterm, and
+     one due near the end of the term.
+     At a secondary level, we will be writing proofs, and some attention will be paid to
+     the writing aspect of proofs, including the elegance and clarity of proofs.<br>
+
+     &nbsp; &nbsp; 
+     Our book also features extensive historical notes.
+     This is appropriate, for the subject of Euclidean geometry is over 2000 years old,
+     and the scientific controversies and their resolution revolving around the parallel
+     postulate revolutionized mathematics and continue to exert a profound influence on
+     the philosophy and practice of mathematics.<br>
+
+     &nbsp; &nbsp; 
+     I will expect you to thoroughly read the text book, both before a topic is covered
+     in lecture and afterwards, for the material can be subtle, and benefits from
+     reflection.<br>
+
+     &nbsp; &nbsp; 
+     Ideally, our class will be lively; unlike many other classes, but like life, for us
+     the goal is the journey and not the destination.
+     I expect to foster a classroom atmosphere in which the free exchange of ideas is
+     encouraged.   In particular the students are encouraged to ask questions, and 
+     I will often call on students in turn.<br>
+
+     &nbsp; &nbsp; 
+     We will have regular activity/discussion sessions to explore 
+      </TD>
+    </TR>
+ </TABLE>
+<!------------------------------------------------------------------------>
+ 
+ <TABLE>
+    <TR valign=top><TD><FONT COLOR=AA00FF><B>Course webpage: </FONT></b></TD>
+      <TD>
+    <A HREF="/~sottile/teaching/12.1/467.html">
+     <TT>/~sottile/teaching/12.1/467.html</TT></A>
+    </TD>
+   </TR> 
+ </TABLE>
+<!------------------------------------------------------------------------>
+<HR>
+<!------------------------------------------------------------------------>
+<TABLE>
+ <TR>
+  <TD valign=top><FONT SIZE=+1 COLOR=FF0000>  Grading</FONT> <BR>
+   The course will have two mid-term exams, as well as two substantial papers,
+   regular homework assignments, and  participation in the class.
+    The mid term exams will each be worth 20% of your final grade, the papers 20% each,
+    and the homeworks and class participation (including 
+   Piazza participation), will be 20%.
+    <font color=red>Failing the writing component will result in not getting the `W' credit for this
+    course</font>. 
+  </TD>
+ </TR>
+
+</TABLE>
+
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------------->
+<FONT SIZE=+1 COLOR=FF0000> Schedule </FONT>
+
+<TABLE>
+ <TR valign=top>
+  <TD> Flatland paper:</TD> 
+  <TD>
+    <font color=red>Flatland discussion:  28 January.</font>  &nbsp; &nbsp;
+     Flatland paper topic: 30 January.
+     &nbsp; &nbsp;  
+    First Draft: 6 February.<BR>
+    <font color=red></font>Peer review: 13 February.
+      &nbsp; &nbsp;  Final version: 20 February.<BR>
+  </TD>
+ </TR>
+ <TR>
+  <TD> Mid-Term: &nbsp; </TD> 
+  <TD> 25 February.</font></TD>
+ </TR>
+ <TR valign=top>
+  <TD> Second paper:</TD> 
+  <TD>
+    Topic and sources:  3 April. &nbsp; &nbsp;  First Draft: 15 April.<BR>
+    Peer review: 22 April. &nbsp; &nbsp;  Final version 29 April (no class).<BR>
+  </TD>
+ </TR>
+ <TR>
+  <TD> Second Mid-Term: &nbsp; </TD> 
+  <TD> 24 April.  6&mdash;9 PM BLocker 164.</font></TD>
+ </TR>
+
+ <TR> <TD><font color=red>No Final Exam:</font></TD>
+       <TD><font color=red>The final is scheduled for 7 May, 8:00&ndash;10:00 AM,
+            which is too close to graduation for grading.</font></TD> </TR>
+</TABLE>
+<!------------------------------------------------------------------------------->
+<font color="00AA88"> <b>Emergencies</b></font>:  
+    If you have a valid reason (medical or family emergency) for missing an
+    exam, then I will give you an alternative exam, preferably  
+    <font color=blue><i>before</I></font> the scheduled exam. 
+    Missing an exam without a valid reason will result in a score of zero for that
+    exam.
+
+<!--------------------------------------------------------------->
+<HR>
+<!--------------------------------------------------------------->
+
+<FONT SIZE=+2 COLOR=FF0000>  Homework:</FONT><BR>
+    Homework will be assigned regularly.
+    While much of it will be exercises from the book that involve
+    proving propositions, some will be essay questions.
+    Details such as due dates, etc. are being worked out.
+   <p>
+   &nbsp; &nbsp; 
+   Late homeworks are not accepted.
+   <FONT COLOR=FF0000> The two lowest homework scores will be dropped before
+   computing your grade.</FONT> <br>
+
+<FONT COLOR=magenta>  First Assignment </FONT>:  Read this web
+   page, and send me a <font color=brown>text-only</font> email that you have
+   read and understood the course descriptions and policies.
+   Please also answer the following questions:<BR>
+   &nbsp; &nbsp; (1) Why are you taking this course?<BR>
+   &nbsp; &nbsp; (2) What is your major?<BR>
+   &nbsp; &nbsp; (3) What do you hope to get out of this course?<BR>
+   &nbsp; &nbsp; (4) Is there anything else that you want to tell me (that
+        is relevant to the course)?<BR>
+ </ul>    
+<!------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------------------------->
+<font color=red> <b>COPYRIGHT POLICY</b></font>:  
+    All printed materials disseminated in class or on the web are protected by
+    Copyright laws.  While personal use is permitted, sale of any of these
+    materials is strictly prohibited, and, as that constitutes stealing is a violation of the
+    Aggie honor code. 
+<!------------------------------------------------------------------------------->
+<HR>
+<b><font size=+1 color=maroon>University wide policies and statements:</font></b><BR>
+<!------------------------------------------------------------------------------->
+
+<B>Americans with Disabilities Act (ADA) Policy Statement</B><BR>
+
+The following ADA Policy Statement (part of the Policy on Individual Disabling
+Conditions) was submitted to the University Curriculum Committee by the Department of
+Student Life. The policy statement was forwarded to the Faculty Senate for information. 
+<BR>
+<blockquote>
+<em>
+The Americans with Disabilities Act (ADA) is a federal
+anti-discrimination statute that provides comprehensive civil rights
+protection for persons with disabilities. Among other things, this
+legislation requires that all students with disabilities be guaranteed a
+learning environment that provides for reasonable accommodation of their
+disabilities. If you believe you have a disability requiring an
+accommodation, please contact the Department of Student Life, Services
+for Students with Disabilities, in Room 126 of the Koldus Building or
+call 845-1637.
+</em>
+</blockquote>
+
+<b>Academic Integrity Statement</b> 
+"<font color=maroon>An Aggie does not lie, cheat, or steal or tolerate those who
+do</font>." 
+For more, see the <A HREF="http://www.tamu.edu/aggiehonor">Honor Council Rules and
+Procedures</A>. 
+
+<!------------------------------------------------------------------------>
+<HR>
+<I><!-- hhmts start -->Last modified: Wed Apr 30 08:10:43 CDT 2014 <!-- hhmts end --></I>
+<!---------------------------------------------------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12943815-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!---------------------------------------------------------------------------->
+</BODY>
+</HTML>
+

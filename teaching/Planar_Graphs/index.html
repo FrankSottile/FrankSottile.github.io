@@ -1,0 +1,78 @@
+<HTML><HEAD><TITLE>Planar graphs</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+
+<H1>The graph <I>K<SUB>3,3</SUB></I> is not planar<BR>
+Frank Sottile<BR>
+4 April 2001</H1>
+
+Consider the problem of drawing the graph <I>K<SUB>3,3</SUB></I> in the plane
+with no edges crossing.
+(Below are two pictures of the graph <I>K<SUB>3,3</SUB></I>, note that in both
+there are several edges that cross.)
+<BR>
+<TABLE ALIGN=CENTER>
+  <TR><TD><IMG SRC="K33.gif"></TD><TD> &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+      <TD><IMG SRC="K33-hex.gif"></TD></TR>
+</TABLE>
+
+
+<P>
+We try to systematically draw <I>K<SUB>3,3</SUB></I> in the plane.
+First, we can take 4 of the vertices, two <FONT COLOR="FF0000">red</FONT>
+and two <FONT COLOR="0000FF">blue</FONT>.
+These resulting subgraph is a <I>K<SUB>2,2</SUB></I>, but this is also just a
+4-cycle. 
+There is only one way to draw it in the plane:
+<BR>
+ <TABLE ALIGN=CENTER>
+  <TR><TD>  <IMG SRC="K22.gif"></TD></TR>
+</TABLE>
+
+<P>
+We now add another <FONT COLOR="0000FF">blue</FONT> vertex.
+There are two ways to do this, either putting it inside or putting it outside, 
+but these give the same figure:  
+If we add the new <FONT COLOR="0000FF">blue</FONT>
+vertex outside, then there are aparently two ways to connect it
+to the <FONT COLOR="FF0000">red</FONT> vertices:
+<BR>
+ <TABLE ALIGN=CENTER>
+  <TR><TD>  <IMG SRC="K32.gif"></TD><TD>  &nbsp; &nbsp; </TD>
+      <TD>  <IMG SRC="K32-OI.gif"></TD><TD> &nbsp; &nbsp; </TD>
+      <TD>  <IMG SRC="K32-OII.gif"></TD></TR>
+  <TR><TD ALIGN=CENTER>  Inside</TD><TD colspan=5 ALIGN=CENTER>Outside</TD></TR>
+</TABLE>
+<BR>
+In the first way (the middle picture), the new vertex takes on the role of the
+lower right vertex in the leftmost picture, and in the rightmost picture,
+the new vertex takes on the role of the upper left vertex in the leftmost
+picture. 
+<P>
+
+
+<I>Now</I> consider placing the last <FONT COLOR="FF0000">red</FONT> vertex.
+The embedded <I>K<SUB>3,2</SUB></I> we have drawn divides the plane into 3
+regions, each with 4 edges.
+If we place the  <FONT COLOR="FF0000">red</FONT> vertex in a given region, then
+it can connect only with the <FONT COLOR="0000FF">blue</FONT> vertices that
+border that region, 
+but there are only <B>two</B> such <FONT COLOR="0000FF">blue</FONT> vertices.
+We conclude there is no way to embedd 
+ <I>K<SUB>3,3</SUB></I> in the plane.
+<BR><BR><BR>
+
+<I>Last Modified:  4 April 2001 by Frank Sottile</I>
+ 
+</BODY>
+</HTML>
+
+<!-- <P>
+   <IMG SRC="6-2chord.gif">
+   <IMG SRC="6-chordI.gif">
+   <IMG SRC="6-chordO.gif">
+   <IMG SRC="C6.gif">
+   <IMG SRC="K33-activ.gif">
+   <IMG SRC="vertexBlue.gif">
+   <IMG SRC="vertexRed.gif">
+-->
