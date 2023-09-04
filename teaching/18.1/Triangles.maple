@@ -1,0 +1,20 @@
+interface(quiet=true):
+with(plots):
+with(Statistics):
+
+read("Triangles_18.1.data"):
+#read("Triangles_17.1.data"):
+
+Points:= pointplot(Data, symbol=Circle, color=red):
+TrueLine := plot(180-60/7*x,x=-0.5..10.5, color=blue):
+
+X:=Vector([seq(Data[i][1],i=1..nops(Data))],datatype=float):
+Y:=Vector([seq(Data[i][2],i=1..nops(Data))],datatype=float):
+L:=LinearFit([1,t],X,Y,t):
+ 	
+TheirLine := plot(L, t=-0.5..10.5, color=maroon):
+
+
+plotsetup(gif,plotoutput="Triangles_18.1.gif",plotoptions="height=300,width=500"):
+
+display(Points,TrueLine,TheirLine);
