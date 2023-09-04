@@ -1,0 +1,52 @@
+Thursday, 9 November 2000
+
+Day 19: Math 697R
+
+Applicable Algebraic Geometry
+___________________________________________________________
+No Class 21 & 30 November
+
+Definition.  Isomorphism, birational isomorphism
+          (Peculiar feature of algebraic geometry)
+          Isomorphic, Birationall Isomorphic.
+            Classification of varieties.
+
+Recall:  * maps P^1 --> P^1 & PGL_1
+
+Theorem:  An Automorphism of P^1 fised 1, 2, or all points.
+
+Example:  Elliptic Curve in P^2  (Characteristic not 2, 3)
+          y |--> -y has 4 fixed points.
+
+Theorem.   P^1 is not birationallly isomorphic to Elliptic Curve.
+
+   Practical consequence.   Quadrics in Space.
+
+Definition.  Projective & Affine varietites.
+
+Theorem.  Quasi-projective varieties are covered by affine sets.
+  (Like manifolds)
+
+Products.  Segre embedding,    P^1 x P^1
+
+Theorem. The image of a projective variety under a regular map 
+         is closed.
+
+Note not true for affine varieties.
+
+Observe that a map of varieties factors as a closed embedding
+    (the graph) followed by a projection
+
+Definition.  Graph of a regular map.
+
+Lemma.  The graph of a regular map is closed.
+
+Theorem. If X is projective, then the projection X x Y --> Y
+         takes closed varieties to closed varieties.
+
+____________________________________________________________
+Schubert Calculus
+
+   Definition of Grassmannian.
+   Parameterization by matrices, effect of changing matrices.
+   Pl\"ucker coordinates.

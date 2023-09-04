@@ -1,0 +1,54 @@
+Math 697R
+
+Applicable Algebraic Geometry
+
+Day 9: Thurdsay, 12 Ocotber
+
+* Wednesday 25 October ~5--6:30   Make up session
+* Sunday, 15 October 5:30 PM  89 N Prospect Street
+* Please feel free to email me, mentioning any notions I 
+   used that were not immediately clear to you---particularly
+   notions that I treated as background that I assumed.
+* The notes on polynomial matrices are one rewrite away from distribution
+
+-----------------------------------------------------------------------
+
+ - Theorem:  Any affine variety is a finite union of irreducible 
+           affine varieties
+ - Fact: Irreducible Complex varieties are connected in the usual topology
+   ! not true for Real varieties
+____________________________________________________________________
+Regular and Rational Functions
+
+ - Def: Regular function
+        Can add & multiply; they form a K-algebra
+        map K[A^n] -->> K[X] has kernel I(X)
+ -  Sometimes when K is not closed & X=V(I) with I radical, let
+        K[X] = K[A^n]/I
+ -  Coordinate ring is a finitely generated algebra w/o nilpotents
+           (reduced)
+ - Theorem:  That property characterizes coordinate rings of 
+             affine algebraic varieties, when K is alg. closed
+ --> Different generators give different affine varieties !
+ -  Subvarieties of X and ideal of K[X].
+ - Hilbert Theiorems for  X, K[X].
+ - Algebraic - Geometric Dictionary for X, K[X]
+_______________________________________________________________
+
+ - Def: Map given by list of regular functions.
+        Pullback & its kernel/image
+ - Ring map gives map of varieties
+ - Example: Matrix Multiplication
+ - Definition: Isomorphism
+ - Example:  t |--> (t, t^2)  is isomorphism
+             t |--> (t^2, t^3) is bijection, not isomorphism
+
+ - Algebraic - Geometric Dictionary as a category equvalence
+ - Principal affine sets
+ - K^x & GLn
+
+
+
+
+
+

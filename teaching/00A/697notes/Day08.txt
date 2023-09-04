@@ -1,0 +1,51 @@
+Tuesday, 10 October 2000
+Day 8
+Math 697R - Applicable Algebraic Goemetry
+
+
+ * 15 October 5:30 PM
+
+ Discuss make up sessions/ lectures
+   -  Week of October 24-27
+   -  Week of November 15
+   -  One week in December?
+
+____________________________________________________________
+Generic properties of varieties
+
+ - Theorem relating Zariski topology to usual (Euclidean) topology
+    * Z-closed/open ==> E-closed/open
+    * Non-empty & E-open ==> Z dense
+    * Z closed, not all space ==> nowhere E dense
+    * R^n is Z_closed in C^n   
+
+ - Example of A^1
+ - Definition of generic subset
+ - Generic matrix is invertible
+ - Generic polynomial has n distinct roots
+ - Discriminant
+
+______________________________________________________________________
+Unique Factorization for Varieties
+
+ - Recall unique factorization for polynomials
+ - Hilbert Basis Theorem
+ - Def.  reducible/ireducible
+ - Def.  prime ideal
+ - Hypersurface V(f) is irreducible if and only if f is irreducble
+ - An affine variety is irreducible if and only if its ideal is prime
+ 
+ - Theorem:  Affine varieties are finite unions of irreducibles
+
+ - Irredundant decomposition  (Compare to polynomials)
+ -  Fact: irreducible complex varieties are connected
+
+_________________________________________________________________________
+Regular and Rational functions
+
+ - Def.  Regular function
+ -       Coordinate ring
+
+ - Theorem.  For an algebraically closed field,
+      Coordinate rings are precisely the finitely generated
+      algebras without nilpotents.

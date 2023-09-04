@@ -1,0 +1,236 @@
+Math 697R
+Lecture Day 2   
+Tuesday, 19 September 2000
+
+*  Handouts:   Drafts or Revised?
+*  Office Hours
+*  Problem/DIscussion Sessions
+*  Social Event
+
+
+ -  Discrete time linear systems
+   
+   - Controllability
+
+   - Observing the output
+     Observability
+
+   - Duality of systems
+
+   * Problem of zero control
+
+    Feedback
+    1) Constant Linear
+    2) Dynamic
+
+   Constant Feedback & Deadbeat control
+  
+    - Nilpotent formulation
+
+    - Characteristic polynomial formulation
+
+    - Discuss the example
+
+    - The pole placement problem
+
+      ? Further reduction of equations possible
+
+      ? Finding real solutions
+
+  Future:
+    
+   * 2) Dynamic feedback
+   * Geometric reformulation of problem
+   * Algebra of polynomial matrices
+     - coprime factorization
+
+   In October, we begin Algebraic Geometry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    |\^/|     Maple V Release 5 
+._|\|   |/|_. Copyright (c) 1981-1997 by Waterloo Maple Inc. All rights
+ \  MAPLE  /  reserved. Maple and Maple V are registered trademarks of
+ <____ ____>  Waterloo Maple Inc.
+      |       Type ? for help.
+#deadbeat.maple
+#
+# Frank Sottile
+# 19 September
+# Amherst, Mass
+#
+# This is intended to illustrate today's lecture of Math 697R
+#
+> with(linalg):
+Warning, new definition for norm
+Warning, new definition for trace
+> interface(screenwidth=70):    # For thinner printing
+> kernelopts(gcfreq=8000000):   # Garbage collection interval increased
+bytes used=324600, alloc=327620, time=0.02
+#
+#  A m=2, p=2, n=4 linear system.
+#
+> A:= array( [[0,0,1,0],
+>             [0,0,1,0],
+>             [0,1,0,0],
+>             [1,0,1,2]] ):
+> 
+> B:= array( [[1,0],
+>             [0,1],
+>             [0,0],
+>             [0,0]] ):
+> 
+> C:= array( [[1,0,0,0],
+>             [0,1,0,2]] ):
+> 
+#  Test for controllability
+#
+> rowdim( concat( B, A&*B, A^2&*B, A^3&*B));
+                                  4
+
+#  Test for observability
+#
+> coldim( stackmatrix( C, C&*A, C&*A^2, C&*A^3));
+                                  4
+
+> 
+# Coordinates for the putative feedback law
+>  
+> K:= array( [[x, y],
+>             [z, w]] ):
+#   The matrix R := A + BKC
+#
+> R:=evalm(A+B&*K&*C);
+                           [x    y    1    2 y]
+                           [                  ]
+                           [z    w    1    2 w]
+                      R := [                  ]
+                           [0    1    0     0 ]
+                           [                  ]
+                           [1    0    1     2 ]
+
+> 
+# The 16 equations R^4=0 are the equations for deadbeat control,
+# We compute their degrees
+#
+> N:=evalm(R^4):  DEG:=matrix(4,4,0):
+> for i from 1 to 4 do
+>   for j from 1 to 4 do
+>    DEG[i,j]:=degree(N[i,j],[x,y,z,w]);
+> od;od;
+> evalm(DEG);
+                          [4    4    3    4]
+                          [                ]
+                          [4    4    3    4]
+                          [                ]
+                          [3    3    2    3]
+                          [                ]
+                          [3    3    2    3]
+
+> 
+# We set up the system of equations
+#
+> Eqs:={}:  for i from 1 to 4 do for j from 1 to 4 do
+>          Eqs:=Eqs union {N[i,j]=0}:  od:od:
+#
+#  and solve them
+#
+> t:=time():
+> Sol1:=solve( Eqs );
+     Sol1 := {z = -9 %1 - 7, w = -1 - %1, y = 3 %1, x = -1 + %1}
+
+                                     2
+                   %1 := RootOf(26 _Z  + 15 _Z - 4)
+
+> allvalues(Sol1);
+      37           1/2       67           1/2       229           1/2
+{w = --- - 1/52 641   , x = --- + 1/52 641   , z = ---- - 9/52 641   ,
+      52                     52                     52
+
+         45           1/2         37           1/2
+    y = --- + 3/52 641   }, {w = --- + 1/52 641   ,
+         52                       52
+
+         67           1/2       229           1/2
+    x = --- - 1/52 641   , z = ---- + 9/52 641   ,
+         52                     52
+
+         45           1/2
+    y = --- - 3/52 641   }
+         52
+
+> t1:=time()-t:
+#
+#
+#  We now compute the characteristic polynomial
+#
+> t:=time():
+> phi:=charpoly(R,s);
+        4      3      3        2    2                    3        2
+phi := s  - 2 s  - w s  + 2 w s  - s  + 2 s - 2 w s - x s  + 2 x s
+
+            2                                      2
+     + x w s  - 2 x w s + x s - 2 x + 2 w x - z y s  + 2 z y s - z s
+
+                          2
+     + 2 z - 2 y z - 2 y s  - 2 w + 2 y
+
+> Coeffs:=[subs(s=0,phi)]:  
+> for i from 1 to 3 do Coeffs:=[Coeffs[],coeff(phi,s^i)]: od:
+> Deg:=[]:  for i from 1 to 4 do  Deg:=[Deg[],degree(Coeffs[i])]: od:
+#
+#  Fewer equations, and of lower degrees!
+#
+> lprint(Deg);
+[2, 2, 2, 1]
+> Eqs:={}:  for i from 1 to 4 do Eqs:=Eqs union {Coeffs[i]=0}: od:
+> 
+> Sol2:=solve( Eqs );
+     Sol2 := {z = -9 %1 - 7, w = -1 - %1, y = 3 %1, x = -1 + %1}
+
+                                     2
+                   %1 := RootOf(26 _Z  + 15 _Z - 4)
+
+> allvalues(Sol2);
+      37           1/2       67           1/2       229           1/2
+{w = --- - 1/52 641   , x = --- + 1/52 641   , z = ---- - 9/52 641   ,
+      52                     52                     52
+
+         45           1/2         37           1/2
+    y = --- + 3/52 641   }, {w = --- + 1/52 641   ,
+         52                       52
+
+         67           1/2       229           1/2
+    x = --- - 1/52 641   , z = ---- + 9/52 641   ,
+         52                     52
+
+         45           1/2
+    y = --- - 3/52 641   }
+         52
+
+#
+> lprint(`Time for naieve solution is `,t1,` seconds`);
+Time for naieve solution is    3.200    seconds
+> lprint(`Time for sophisticated solution is `,time()-t,` seconds`);
+Time for sophisticated solution is    .89e-1    seconds
+> quit
+bytes used=31639896, alloc=19853772, time=3.36
+
