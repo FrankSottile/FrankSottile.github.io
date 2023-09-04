@@ -1,0 +1,249 @@
+%HW3.tex
+%Third Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Third Homework: \hfill 20 September 2021\\
+Use English when possible.  Answers should not just be symbols.
+\normalsize\vspace{10pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Determine whether each of the following sentences is a statement, a predicate (open
+  statement), or neither.\vspace{-8pt}
+ \begin{enumerate}
+  \item The Boston Celtics have won 16 NBA championships.\vspace{-2pt}
+  \item The plane is leaving in four minutes.\vspace{-2pt}
+  \item Get a note from your doctor.\vspace{-2pt}
+  \item Is this the best that you can do?\vspace{-2pt}
+  \item Excessive exposure to the sun may cause melanoma.\vspace{-2pt}
+  \item $5\cdot 2=9$.\vspace{-2pt}
+  \item Someone in the room is a murderer.\vspace{-2pt}
+  \item $x^2+1\neq 0$.\vspace{-2pt}
+  \item For every real number $x$, $x^2+1\neq 0$.\vspace{-2pt}
+  \item The equation for a circle of radius 1 centered at the origin is $x^2+y^2=1$.\vspace{-2pt}
+  \item If $m$ and $n$ are even integers, then $mn$ is odd.\vspace{-2pt}
+ \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For each of the following statements, determine if it has any universal or existential quantifiers.  If it has
+  universal quantifiers, rewrite it in the form ``for all\ldots''.
+  If it has existential quantifiers, rewrite it in the form ``there exists \ldots such that \ldots''.
+  Introduce variables where appropriate.\vspace{-8pt}
+ \begin{enumerate}
+  \item The area of a rectangle is its length times its width.\vspace{-2pt}
+  \item A triangle may be equilateral.\vspace{-2pt}
+  \item $8-8=0$.\vspace{-2pt}
+  \item The sum of an even integer and an odd integer is even.\vspace{-2pt}
+  \item For every even integer, there is an odd integer such that the sum of the two is odd.\vspace{-2pt}
+  \item A function that is continuous on the closed interval $[a,b]$ is integrable on $[a,b]$.\vspace{-2pt}
+  \item A function is continuous on $[a,b]$ whenever it is differentiable on $[a,b]$.\vspace{-2pt}
+  \item A real-valued function that is continuous at $0$ is not necessarily differentiable at $0$.\vspace{-2pt}
+  \item All positive real numbers have a square root.\vspace{-2pt}
+  \item The smallest positive integer is $1$.\vspace{-2pt}
+ \end{enumerate} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write a useful negation of each statement in Exercise 2.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage %This is useful to force a pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Negate each of the following statements (which are important definitions in mathematics).
+  Assume that the symbols $f$, $K$, $a$, and $l$ are defined.
+  \begin{enumerate}
+
+    \item  For every $x\in K$, if $x\neq 0$, then there is a $y\in K$ such that $xy=1$.
+    \item  For every real number $\epsilon >0$, there is a $\delta>0$ such that if $x\in\RR$ with $x\neq a$ and $|x-a|<\delta$, then
+      $|f(x)-l|<\epsilon$. 
+    \item   For every real number $\epsilon >0$, there is a $\delta>0$ such that if $x,y\in\RR$ with $|x-y|<\delta$, then
+      $|f(x)-f(y)|<\epsilon$. 
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For statements $P$ and $Q$ show that
+  $\bigl(P \land  (P\Rightarrow Q)\bigr) \Rightarrow Q$ is a tautology.
+  Then state $\bigl(P \land  (P\Rightarrow Q)\bigr) \Rightarrow Q$ in words.
+  (This is an important argument form, called \demph{modus ponens}.)
+  % Use the copy of a problem from last week at the bottom of this file to format  a table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For statements $P, Q$ and $R$ show that
+  $\bigl((P\Rightarrow Q) \land (Q\Rightarrow R)\bigr) \Rightarrow (P\Rightarrow R)$ is a tautology.
+  (This is another important argument form, called \demph{syllogism}.)
+
+  Give an example of a valid syllogism involving Socrates, and give an example of an invalid syllogism involving Socrates.
+  % Use the copy of a problem from last week at the bottom of this file to format a table
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For statements $P, Q$ and $R$ show that
+  $(P\lor Q) \Rightarrow R$ and $(P\Rightarrow R) \land (Q\Rightarrow R)$ are logically equivalent.
+  Can you show this without a truth table? 
+  % Use the copy of a problem from last week at the bottom of this file to format a table, if you need one
+  % If you do not use a truth table, be careful to make a coomplete and convincing argument, using other logical equivalences that we know
+  % from class.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   Define an open sentence $R(x)$ over some domain $S$ (not mathematical, but in words), and then state $\forall x\in S,\, R(X)$
+  and $\exists x\in S,\, R(x)$ in words.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item State the negation of the following quantified statements:
+ \begin{enumerate}
+  \item  For every rational number $r$, the number $1/r$ is rational,
+  \item  There exists a rational number $r$ such that $r^2=2$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+  Determine the truth value of each of the following statements.
+  (List which are true)
+   \begin{enumerate}
+   \item[(a)] \makebox[180pt][l]{$\exists x\in\RR$, $x^2-x=0$.}
+         (b)  $\forall n\in\NN$, $n+1\geq 2$.
+   \item[(c)] \makebox[180pt][l]{$\forall x\in\RR$, $\sqrt{x^2}=x$.}
+         (d)  $\exists x\in\QQ$, $3x^2-27=0$.
+   \item[(e)] \makebox[180pt][l]{$\exists x\in\RR$,  $\exists y\in\RR$, $x+y+3=8$.}
+         (f)  $\forall x,y\in\RR$,  $x+y+3=8$.
+   \item[(g)] \makebox[180pt][l]{$\exists x,y\in\RR$, $x^2+y^2=9$.}  (h) $\forall x\in\RR$, $\forall y\in\RR$, $x^2+y^2=9$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage %This is useful to force a pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $a$, $b$, and $c$ be integers.
+  Consider the following conditional statement:
+  \[\mbox{If $a$ divides $bc$, then $a$ divides $b$ or $a$ divides $c$.}\]
+  Which of the following statements have the same meaning as this conditional statement, and which are negations of this
+  conditional statement:
+  \begin{enumerate}
+   \item If $a$ divides $b$ or $a$ divides $c$, then $a$ divides $bc$.
+   \item If $a$ does not divide $b$ or $a$ does not divide $c$, then $a$ does not divide $bc$.
+   \item $a$ divides $bc$, $a$ does not divide $b$, and $a$ does not divide $c$.
+   \item If $a$ does not divide $b$ and $a$ does not divide $c$, then $a$ does not divide $bc$.
+   \item $a$ does not divide $bc$ or $a$  divides $b$ or $a$  divides $c$.
+   \item If $a$ divides $bc$ and $a$ does not divide $c$, then $a$ divides $b$.
+   \item If $a$ divides $bc$ or $a$ does not divide $b$, then $a$ divides $c$.
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   Give a definition of each of the following and then state a characterization of each.
+ \begin{enumerate}
+   \item  Two lines in the plane are perpendicular.
+   \item  A rational number.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Give a valid definition of an odd integer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item Prove that if $a,b,c$ are odd integers such that $a+b+c=0$, then $abc<0$.
+   (You may use any well-known properties of integers here.)\bigskip
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Prove that if $a$ and $c$ are odd integers, then $ab+bc$ is an even integer for every integer $b$.\bigskip\newline 
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+   Sketch it first (perhaps in a table form), and then write it in paragraph form.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   %
+   %  You may either format your table (preferred), or take a picture of it,  perhas calling it TableProb14.jpg and
+   %   placing it in the folder with this file.
+   %    (Any name will do, but it is better to not put spaces in the filenames, as some compilers complain. Many use
+   %    underscore in place of a space.  Note that this is case-sensitive)
+   %
+   %  Use the following line and adjust the height, if needed:
+   %
+   %  \includegraphics[height=3cm]{TableProb14}
+   %
+   %  Note: any extension (except .eps for postscript) will be OK (that is .jpg or .jpeg and maybe even .JPG), the compiler
+   %  will find the unique file that begins  'TableProb14' 
+   %  The command height can be changed if the image is the wrong size
+   %                           (you might try to alter the image file (rotate it), if it is not horizontal
+
+
+\end{enumerate}\vfill 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\noindent\copyright Frank Sottile.  September 2022.
+
+\end{document}
+
+
+ %  Tabular is an environment in LaTeX that formats tables.
+  %  The {|c|c||c|c|c|c|c|c|c|} specifies that there are 9 columns, each with entries centered (c) and | delimiters between them,
+  %    *and* one at the beginning and ay the end, and an extra one after the first two columns  
+  %  \hline is 'horizontal line'
+  %  The cells are typeset in ordinary text, and are delimited (separated) by the ampersands, &
+   %
+  \begin{tabular}{l|l}\hline   
+    %
+    %   Edit these for your own table.  Also make sure to adjust the number of columns.
+    %
+    {\bf Given} & {\bf Goal}\\\hline
+    Work forward in this column & Work backwards in this column\\
+   \end{tabular}\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  

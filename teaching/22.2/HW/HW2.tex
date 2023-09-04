@@ -1,0 +1,214 @@
+%Homework2.tex
+%Second Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Second Homework: \hfill 6 September 2022\\
+Use English when possible.  Answers should not just be symbols.
+\normalsize\vspace{10pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  For a real number $r$, define $A_r\coloneqq\{r^2\}$,  $B_r$ to be the closed interval $[r{-}1, r{+}2]$, and $C_r$ to be the interval
+  $(r,\infty)$.
+  For $S=\{1,2,4\}$ determine each of the following 
+
+  $\bigcup_{s\in S} A_s $ \ and \ $\bigcap_{s\in S} A_s $\ and\ 
+  $\bigcup_{s\in S} B_s $ \ and \ $\bigcap_{s\in S} B_s $\ and\ 
+  $\bigcup_{s\in S} C_s $ \ and \ $\bigcap_{s\in S} C_s $\,.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item    Determine each of the  following:
+
+  ${\displaystyle \bigcup_{n=1}^\infty \left(-\frac{1}{n},\frac{1}{n}\right)}$ \ and \ 
+  ${\displaystyle \bigcap_{n=1}^\infty \left(-\frac{1}{n},\frac{1}{n}\right)}$ \ \ and \ \ 
+  ${\displaystyle \bigcup_{n=1}^\infty \left(\frac{n{-}1}{n},\frac{n{+}1}{n}\right)}$ \ and \;\ 
+  ${\displaystyle \bigcap_{n=1}^\infty \left(\frac{n{-}1}{n},\frac{n{+}1}{n}\right)}$
+     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Which of the following sets are partitions of $A=\{a,b,c,d,e,f,g\}$?
+       For each collection of subsets that is not a partition of $A$, explain your answer.
+  \begin{enumerate} 
+
+  \item[(a)] \makebox[200pt][l]{$S_1=\left\{ \{a,c,e,g\},\{b,f\},\{d,d\} \right\}$}
+        (b)                     $S_2=\left\{ \{a,b,c,d\},\{e,f\} \right\}$
+  \item[(c)] \makebox[200pt][l]{$S_3=\left\{A \right\}$}
+        (d)                     $S_4=\left\{ \{a\}, \emptyset, \{b,c,d\},\{e,f,g\} \right\}$
+  \item[(e)]  $S_5=\left\{ \{a,c,d\},\{b,g\},\{e\},\{b,f\} \right\}$
+    
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Give an example of a partition of $\NN$ into three subsets.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   For $A=\{1,2\}$ and $B=\{\emptyset\}$ determine $\calP(A\times B)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  (a) For a set $A$ with $|A|=2$, what is the largest possible value of $|A\cap\calP(A)|$?
+
+  (b) What is the largest possible value of  $|A\cap\calP(A)|$ if $|A|=3$?
+
+  (c) This should suggest another question to you.
+      What is the answer to that question?  \newline (Do also give that question).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Consider the sets $A$, $B$, $C$, and $D$ below.
+       Which of the following statements are true?      
+       Give an explanation for each false statement.
+
+       $A = \{1,4,7,10,13,16,\dotsc\}$ \qquad $B=\{n\in\ZZ\sep n\mbox{ is prime and }n\neq 2\}$
+
+       $C= \{ n\in\ZZ \sep n\mbox{ is odd}\}$ \qquad  $D=\{1,2,3,5,8,13,21,34,55,\dotsc\}$
+
+       (a) $25\in A$ \qquad
+       (b) $33\in D$ \qquad
+       (c) $22\not\in A\cup D$ \qquad
+       (d) $B\subseteq C$ \newline
+       (e) $\emptyset \in C\cap D$ \qquad
+       (f) $53\not\in B$ \qquad
+       (g) $144\in D$ .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Give a negation of each of the following statements.
+   \begin{enumerate}
+     \item At least two of my library books are overdue.
+     \item One of my two friends misplaced his homework assignment.
+     \item No one expected that to happen.
+     \item It is not often that my instructor teaches that course.
+     \item It is surprising that two students received the same exam score.
+   \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Which of the following sentences are statements?
+  \begin{enumerate}
+   \item $3^2+4^2=5^2$.
+   \item $a^2+b^2=c^2$.
+   \item There exist integers $a$, $b$, and $c$ such that  $ a^2+b^2=c^2$.
+   \item If $x^2= 4$, then $x=2$.
+   \item For each real number $x$,  if $x^2= 4$, then $x=2$.
+   \item For each real number $t$ , $\sin^2 t + \cos^2 t =1$.
+   \item If $n$ is a prime number, then $n^2$ has three positive factors.
+   \item $\sin x < \sin(\pi/4)$.
+   \item Every parallelogram is a rectangle.
+  \end{enumerate}
+ Of those that are statements, which are true?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $P(n)$ be the open sentence ``$n$ and $n+2$ are primes'' where $n$ ranges over the natural numbers $\NN$.
+       Find six positive integers $n$ for which $P(n)$ is true.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Fill out the truth table for the expressions
+  $P\land Q$, $\lsim P$, $\lsim Q$, $\lsim(P\land Q)$, $\lsim P\land\lsim Q$, $\lsim P\lor\lsim Q$, and 
+   $(\lsim P\land\lsim Q)\lor Q$ :
+
+  %  Tabular is an environment in LaTeX that formats tables.
+  %  The {|c|c||c|c|c|c|c|c|c|} specifies that there are 9 columns, each with entries cenered (c) and | delimiters between them,
+  %    *and* one at the beginning and end, and an extra one after the first two columns  
+  %  \hline is 'horizontal line'
+  %  The cells are typeset in ordinary text, and are delimited (separated) by the ampersands, &
+  %  You wil need to make a similar table (that is not as wide) for problem 15.
+  %
+  \begin{tabular}{|c|c||c|c|c|c|c|c|c|}\hline
+    $P$&$Q$&$P\land Q$&$\lsim P$& $\lsim Q$& $\lsim(P\land Q)$& $\lsim P\land\lsim Q$& $\lsim P\lor\lsim Q$
+      &  $(\lsim P\land\lsim Q)\lor Q$\\ \hline\hline
+     T &T&&&&&&&\\\hline
+     T &F&&&&&&&\\\hline
+     F &T&&&&&&&\\\hline
+     F &F&&&&&&&\\\hline
+    \end{tabular}\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item  Identify the hypothesis and the conclusion for each of the following conditional statements.
+  \begin{enumerate}
+   \item If $a$ is an irrational number and $b$ is an irrational number, then $a\cdot b$ is an irrational number.
+   \item If $p \neq 2$ and $p$ is an even number, then $p$ is not prime.
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Rewrite the following statements in the form ``if $P$, then $Q$''.
+  \begin{enumerate}
+
+    \item ``One, if by land''.
+    \item ``Candor implies equality''.
+    \item ``Pepperoni only if pizza''.
+    \item ``Inattentive when bored''.
+    \item ``Slapstick is sufficient for comedy''.
+    \item ``Quiet is necessary for sleep''.
+
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Rewrite ``If the function $f$ is differentiable, then it is continuous'' in each of the six forms of the previous problem.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For statements $P$ and $Q$, construct the truth table for $(P\Rightarrow Q) \Rightarrow \lsim P$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+\end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
