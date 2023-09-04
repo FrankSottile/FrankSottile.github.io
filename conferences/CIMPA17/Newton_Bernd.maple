@@ -1,0 +1,59 @@
+interface(quiet=true):
+#
+# Newton_Bernd.maple
+#
+#
+with(plots):
+Digits:=15:
+
+Newt_Step := proc(x0,f)
+#
+#  Computes a single Newton step for the function f applied to x_0
+#
+ local x,df:
+ df := diff(f(x),x):
+ return (x0 - f(x0)/subs(x=x0,df))
+end proc:
+######################################################
+NewtIter := proc(x0)
+#
+#  Computes 35 Newton steps for the function f applied to x_0
+#
+ local i,xi:
+ global f:
+ xi:=x0:
+ for i from 1 to 35 do
+  xi := evalf(Newt_Step(xi,f)):
+#  lprint(xi);
+ end do:
+ return(xi)
+end proc:
+######################################################
+Arg := proc(x)
+ return(argument(x))
+end proc:
+######################################################
+PlotF := proc(x,y)
+ H(argument(NewtIter(evalf( x + I*y+0.001+0.001*I))+0.01+0.0001*I))
+end proc:
+######################################################
+H := x -> piecewise(x<0,0.15, x<1.5,0,  x<2, 0.5,  x>=2,0.7):
+f := x -> x^3+2*x^2+3*x+4:
+
+plotsetup(gif,plotoutput="B.gif",plotoptions=`height=1200,width=1200`):
+plotsetup(gif,plotoutput="C.gif",plotoptions=`height=1800,width=1800`):
+#
+plot3d(0, -2 .. 2, -2 .. 2, grid=[3600, 3600], 
+#plot3d(0, -2 .. 2, -2 .. 2, grid=[1000, 1000], 
+ orientation=[-90,0], 
+    style=patchnogrid, scaling=constrained, color=PlotF);
+time();
+
+#lprint(1, NewtIter(1), PlotF(1,0));
+lprint(-1.5, NewtIter(-1.5), PlotF(-1.5,0));
+#lprint(-1.5+I, NewtIter(-1.5+I), PlotF(-1.5,1));
+lprint(-1.5+2*I, NewtIter(-1.5+2*I), PlotF(-1.5,2));
+#lprint(-1.5-I, NewtIter(-1.5-I), PlotF(-1.5,-1));
+lprint(-1.5-2*I, NewtIter(-1.5-2*I), PlotF(-1.5,-2));
+
+quit;

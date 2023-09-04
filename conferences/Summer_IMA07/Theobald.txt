@@ -1,0 +1,18 @@
+
+1. Introduction and real algebraic geometry
+   1. Real roots of univariate polynomials
+   2. Eigenvalue techniques
+   3. Real roots in the multivariate case
+
+2. Optimization and real algebraic geometry
+   1. Global optimization of polynomials and sums of squares
+   2. Semidefinite programming
+   3. Algebraic certificates and Positivstellens\"atze
+   4. Constrained optimization
+
+3. Tropical geometry
+   1. Introduction to tropical geometry
+   2. Algebraic techniques
+   3. Amoebas, tropical geometry and deformations
+
+

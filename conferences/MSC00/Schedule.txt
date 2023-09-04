@@ -1,0 +1,88 @@
+
+Saturday, 23 September 2000
+
+
+  Time          Speaker & Title                               
+
+Morning
+ 9:00- 9:20  *Sergey Fomin, University of Michigan
+              Michael Z Shapiro, KTH, Stockholm    
+             "Stratified spaces formed by totally positive varieties"
+
+ 9:30- 9:50  *Andrei Zelevinsky, Northeastern University
+              Connected components of real double Bruhat cells.
+
+10:00-10:20  *Sara C Billey, MIT
+             "Connections between singular loci and cohomology 
+              of Schubert Varieties"  
+
+10:30-10:50  *Victor Reiner, University of Minnesota
+              Vesslin Gasharov, Cornell University             
+             "Smooth Schubert varieties in partial flag manifolds"
+
+11:00-11:20  *Stephanie van Willigenburg, Cornell University
+              Nantel Bergeron, York University
+              Stefan Mykytiuk, York University
+              Frank Sottile, University of Massachusetts
+             "Isotropic Schubert calculus and polytopes"
+
+Afternoon
+
+ 3:00- 3:20 *Allen I Knutson, University of California, Berkeley    
+            "Descent-cycling in Schubert calculus"
+
+ 3:30- 3:50 *Mikhail Kogan, MIT
+            "A Littlewood-Richardson rule for multiplying Schur 
+             polynomials by certain Schubert polynomials"
+
+ 4:00- 4:20  Break
+
+ 4:30- 4:50 *Shawn A Robinson, University of North Carolina
+            "Pieri's Formula for the $T$-Equivariant Cohomology
+             of the Flag Variety"
+
+ 5:00- 5:20 *Anders S Buch, MIT  
+            "A Littlewood-Richardson rule for the $K$-theory of Grassmannians"
+
+Sunday, 24 September
+
+Morning
+ 9:00- 9:20 *James B. Carrell, University of British Columbia
+             Michel Brion, Universit\'e Grenoble
+            "Equivariant cohomology and regular ${\mathfrak B}$-actions"
+
+ 9:30- 9:50 *Rebecca F Goldin, University of Maryland
+            "On Schubert Calculus in Symplectic Geometry"
+
+10:00-10:20  Break
+
+10:30-10:50 *William Graham, University of Georgia   
+            "Positivity in equivariant Schubert calculus"
+
+11:00-11:20 *Ezra N. Miller, MIT
+             Allen I Knutson, University of California, Berkeley  
+            "Gr\"obner geometry of formulae for (double) Schubert polynomials"
+
+Afternoon
+
+ 2:00- 2:20 *Linda Chen, Columbia University
+            "Quantum Cohomology of Flag Manifolds"
+
+ 2:30- 2:50 *Andrew Kresch, University of Pennsylvania 
+             Harry Tamvakis, University of Pennsylvania 
+            "Standard conjectures for the arithmetic Grassmannian $G(2,n)$"
+
+ 3:00- 3:20  Break
+
+ 3:30- 3:50 *Michael Kleber, MIT                                 
+            "Embeddings of Schur functions into types $B/C/D$"
+
+ 4:00- 4:20 *Chris Woodward, Rutgers University                                 
+             Allen I Knutson, University of California, Berkeley  
+             Terry Tao, University of California, Los Angelos
+            "Honeycombs and Facets of the Littlewood Richardson cone"
+
+ 4:30- 4:50 *William Fulton                                 
+            "Eigenvalues of majorized Hermitian matrices 
+             and Schubert calculus"
+

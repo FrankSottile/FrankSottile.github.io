@@ -1,0 +1,43 @@
+Here are some Hotels in the Amherst Area.
+
+
+Emily's is extremely convenient, as is the Lord Jeffery Inn
+
+___________________________________________________________________________________
+                 |                    |             |                 |           |     
+  Hotel/B&B      |  Address           | City        | Phone           |  Miles**  |
+_________________|____________________|_____________|_________________|___________|
+Lord Jeffery Inn | 30 Boltwood Ave    | Amherst, MA | (413) 253-2576  |   0.1     | 
+                 |                    |             |                 |           | 
+University Motor | 345 N Pleasant St  | Amherst, MA | (413) 256-8111  |   0.3     | 
+   Lodge         |                    |             |                 |           | 
+                 |                    |             |                 |           | 
+Amherst Motel    | 408 Northampton Rd | Amherst, MA | (413) 256-8122  |   0.7     | 
+                 |                    |             |                 |           |
+Emily's Amherst  | N Prospect St      | Amherst, MA | (413)  549-0733 |   0.9     | 
+   B & B         |                    |             |                 |           | 
+                 |                    |             |                 |           |
+Campus Center    | 1 Campus Center    | Amherst, MA | (413) 549-6000  |   1.0     | 
+  Hotel          |                    |             |                 |           |
+                 |                    |             |                 |           |
+Allen House      | 599 Main St        | Amherst, MA | (413) 253-5000  |   1.0     |    
+  Victorian Inn  |                    |             |                 |           |
+                 |                    |             |                 |           |
+Holiday Inn      | 400 Russell St     | Hadley, MA  | (413) 582-0002  |   1.6     | 
+                 |                    |             |                 |           |
+Howard Johnson   | 401 Russell St     | Hadley, MA  | (413) 586-0114  |   1.6     |  
+                 |                    |             |                 |           |
+Country Belle    | 329 Russell St     | Hadley, MA  | (413) 586-0715  |   2.2     | 
+  Motel          |                    |             |                 |           | 
+                 |                    |             |                 |           |
+Parsonage Bed &  | 1170 N Pleasant    | Amherst, MA | (413) 549-1466  |   2.3     | 
+  Breakfast      |                    |             |                 |           |
+                 |                    |             |                 |           |
+Black Walnut Inn | 1184 N Pleasant    | Amherst, MA | (413) 549-5649  |   2.3     |     
+                 |                    |             |                 |           |
+Econo Lodge      | 237 Russell St     | Hadley, MA  | (413) 584-9816  |   3.3     |   
+                 |                    |             |                 |           |
+Norwottuck Inn   | 208 Russell St     | Hadley, MA  | (413) 587-9866  |   3.5     | 
+_________________|____________________|_____________|_________________|___________|
+                                                       
+** Distance in Miles to Amherst Center

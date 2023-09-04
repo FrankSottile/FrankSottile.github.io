@@ -1,0 +1,221 @@
+<HTML>
+<HEAD>
+   <TITLE>CIMPA School: Computer Algebra and its Applications</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="TOP"></A>
+<TABLE>
+ <TR valign=center>
+ <TD colspan=2>
+   <font color=red size=+3>
+     The School Has been Cancelled by the CIMPA due to Security Concerns!
+   </font>
+  </td>
+ </tr>
+   
+ <TR valign=center>
+  <TD valign=center><IMG height=100 SRC="images/logo-cimpa.gif"></TD>
+
+   <TD valign=center><H1><A HREF="http://www.cimpa-icpam.org">CIMPA</a>
+     <a href=" http://www.cimpa-icpam.org/spip.php?article488">Research School on
+   Computer Algebra and its Applications</a></H1> 
+      <H2>Usmanu Danfodiyo University, Sokoto, Nigeria, 10&ndash;22 June 2013.</H2>
+  </TD>
+  <TD></TD>
+ </TR>
+</TABLE>
+
+
+<!----------------------------------------------------------------------------->
+<font size=+2><B>Organizers:</B></font><BR>
+
+<font size=+1>
+<dl>
+ <dd> <a href="http://www.mat.ucm.es/imi/People/Alonso_Garcia_MariaEmilia.htm">Maria Emilia
+ Alonso</a>,  (Complutense University of Madrid, Spain), Co-chair of the Research
+ School. 
+
+ <dd> Prof. M.O. Ibrahim,
+     (<a href="http://www.udusok.edu.ng/">Usmanu Danfodiyo University</a>, Sokoto, Nigeria),
+     Chair of local organizing committee. 
+
+ <DD> <A HREF="http://www.math.tamu.edu/~sottile">Frank Sottile</A>, 
+     Texas A&amp;M University, Co-chair of the Research
+ School. 
+
+ <DD> <A HREF="http://perso.univ-rennes1.fr/marie-francoise.roy/">Marie-Fran&ccedil;oise Roy</A>, 
+     IRMAR, Universit&eacute; de Rennes 1, CIMPA representative. 
+
+</dl>
+</font>
+
+<HR>
+<H2>Local Organization Committee 
+    (all at <a href="http://www.udusok.edu.ng/">Usmanu Danfodiyo
+    University</a>) </H2>
+<font size=+1>
+<dl> 
+ <dd> Prof. M.O. Ibrahim, 
+    &nbsp;<a href="mailto:moibraheem@yahoo.com"><img height=13pt src="images/mailto.jpg"></a>&nbsp; 
+    Chair.
+ <dd> Dr. Aminu A. Ibrahim, 
+    &nbsp;<a href="mailto:aminualhaji@yahoo.co.uk"><img height=13pt src="images/mailto.jpg"></a>.
+ <dd> Dr. Ime J. Uwanta, 
+    &nbsp;<a href="mailto:imeuwanta@yahoo.com"><img height=13pt src="images/mailto.jpg"></a>.
+ <dd> Dr. Uba Ahmad, 
+    &nbsp;<a href="mailto:ubahamad@yahoo.co.uk"><img height=13pt src="images/mailto.jpg"></a>.
+ <dd>Dr. Isa Garba, 
+    &nbsp;<a href="mailto: isaabor@yahoo.com"><img height=13pt src="images/mailto.jpg"></a>.
+
+</dl>
+</font>
+
+<!--------------------------------------------------->
+<HR>
+<H2>Registration and More:</H2>
+   Please see the CIMPA page for this <a href="http://www.cimpa-icpam.org/spip.php?article488">school</a>.
+   It contains information about the programme, as well as how to register.
+   We note that there is a deadline of <font color=red>7 April 2013</font> to register for
+   this school.
+
+
+<HR>
+<H2>Scientific Overview:</H2>
+
+<P> &nbsp;   Computer algebra is both an active area of current research and a very accessible
+  topic that provides an avenue for research in many related areas, such as algebraic geometry,
+  real algebraic geometry, and computational algebraic geometry, all of which are foundational
+  for the burgeoning areas of applications of algebraic geometry.   These areas are represented
+  in conference MEGA (M&eacute;thodes Effectives en G&eacute;ometri&eacute; Alg&eacute;brique),
+  the recent semester on 
+  Algebraic Geometry with a View Towards Applications at the Institut Mittag-Leffler, and in
+  the new SIAM (Society for Industrial and Applied Mathematics) activity group in Algebraic
+  Geometry.   The lecturers for this school are all active in these areas and collectively have
+  deep experience both as researchers and educators through the supervision of students;
+  Ph.D. and postdoctoral, as well as the organization of and lecturing in short courses. 
+
+
+
+<HR>
+<H2>Scientific Program:</H2>
+
+<P> &nbsp; This CIMPA Research School will last two weeks, and will have seven short courses of
+  five lectures each, as described below.  
+  These will range from foundational to provide background through more
+  advances topics.   We plan to have lectures in the morning and just after lunch
+  (approximately four hours each day) with afternoon exercise sessions, including computer labs to
+  gain experience using open-source software.  In particular, we will demonstrate and the open
+  source software <a href="http://www.geogebra.org/cms/">GeoGebra</a>, which maybe used for
+  visualizing elementary geometry and algebra. 
+  That will be run by Professors  Adamou, Morou, and Roy.  Each day of the research school will
+  conclude with a more advanced research talk given by the lecturers and by some 
+  distinguished Nigerian Mathematicians whom we will invite.  
+This model of lectures, exercise sessions, and research talks has been used successfully at
+  past summer schools.  
+
+This school is aimed at faculty and advanced graduate students from Nigeria and
+neighboring countries.  We are planning to have approximately 50 participants with 30 from
+  Nigeria and 20 from other countries from Africa, particularly from Nigeria's neighbours, both
+  anglophone and francophone. 
+
+
+<HR>
+<H2>Lectures:</H2>
+
+<b>Prof.  Gabriel dos Reis</b>,  Texas A&amp;M University, Texas USA.
+<font color="009900">Computer Algebra</font>.  
+
+
+Computer Algebra is a delicate and wonderful marriage of theory and
+practice: theory informed by computations, practical problems; and
+practice grounded in well understood theory, leading to sound and
+provably correct implementation.   These lectures will introduce
+students to modern computer algebra systems, focusing on practical
+matters and usage.
+
+
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Prof. Otto Adamou</b>, Universit&eacute; de Niamey, Niger. 
+ <font color="009900">Computer algebra techniques for epidemiological models</font>.
+
+ The study of equilibria in epidemiologic models leads to systems of differential equations
+ with parameters. In order to make sense, the solutions should be real and positive. 
+Techniques from semi algebraic geometry are useful to study some of these models.
+
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Prof. Maria Emilia Alonso</b>,  Universidad Complutense de Madrid, Spain.
+ <font color="009900">Gr&ouml;bner bases and applications to cryptanalysis</font>.
+
+We introduce  the  theory of Gr&ouml;bner bases and discuss some of the later and
+more efficient algorithms to compute it. We give applications of Gr&ouml;bner basis algorithms  for
+the computation of invariants in Algebraic Geometry and Commutative Algebra.  
+Finally we present Gr&ouml;bner basis as a tool for Cryptanalysis, going into examples as HFE
+ (hidden field equations) that seems to be somehow vulnerable to this attack. 
+
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Prof. Amidou Morou</b> Universit&eacute; de Niamey, Niger. 
+ <font color="009900">Constructive algebra and relations with control theory</font>
+
+This lecture will discuss applications of some deep results in pure algebra.  
+The Quillen-Suslin Theorem states that a projective module over a polynomial ring is
+ necessarily free.  
+A projective module is stably free, and the algorithmic form of the  Quillen-Suslin Theorem is
+ equivalent to the problem of unimodular completion:  given a vector whose components generate
+ the unit ideal, find a matrix of determinant ome in which that vector is one of its columns. 
+These lectures will introduce this problem and its algorithmic solution for Laurent rings, and
+ explain some of its many applications to circuits, system control, signal processing, and
+ other areas. 
+
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Prof. Moussa Seydou</b>   Universit&eacute; de Maradi, Niger.
+ <font color="009900">Quantitative aspects of semi-algebraic sets</font>
+
+In the lectures we recall some results about semialgebraic sets.  
+We give some bounds on the topology and geometry of semialgebraic sets.  
+These bounds are in general exponential in the number of variables used to define the set.  
+We will present the quadratic case which is very interesting to study.  
+For example the bounds for semialgebraic set defined by quadratic polynomials have a specific
+ behavior in  contrast with the general exponential bounds:  they are polynomial in the number
+ of variables. 
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Prof. Frank Sottile</b>, Texas A&amp;M University, USA.
+ <font color="009900">Equations and Geometry</font>
+
+Algebraic geometry studies the geometry that is described by polynomial equations. 
+Because of this, computer algebra, and more generally algorithms provide tools for geometry. 
+These lectures will introduce the basic dictionary between algebra and  geometry, the
+ correspondence between ideals and varieties.  
+The lectures will also introduce many basic examples which will help to understand this
+ correspondence.   
+The last lecture will introduce toric varieties. 
+Toric varieties are class of algebraic sets which can be well-understood in terms of
+ combinatorics, and which appear in many places in algebraic geometry and its applications.  
+<br>
+<!---------------------------------------------------------------------->
+
+<b>Professor Stephen Watt</b>, University of Western Ontario, Canada.
+ <font color="009900">Software aspects of computer algebra </font>
+
+ The topics of these lectures will include  the representation of data in computer algebra
+ (including arbitrary precision integers, univariate and multivariate polynomials and
+ matrices), dynamic memory management, the architecture of interpreters and compilers for
+ computer algebra, type systems for computer algebra, formats for the exchange of mathematical
+ expressions between programs, mathematical web services and handwriting interfaces for
+ mathematics. 
+
+<HR>
+
+Pictures and some description of <a href="UDUS/UDUS.html">UDU Sokoto</a>,
+and of possible <a href="Hotel.html">hotels</a> for the school.
+
+</HTML>

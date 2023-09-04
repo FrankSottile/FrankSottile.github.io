@@ -1,0 +1,26 @@
+
+Saturday 3 December
+  8:00 Diane Maclagan,     Tree compactifications of the moduli space of genus zero curves.
+  8:30 Barbara Bolognese,  On the connectivity of dual graphs of projective curves.
+  9:00 Nicola Tarasca,     Du Val curves and the pointed Brill-Noether theorem.
+  9:30 Angela Gibney,      Combinatorial aspects of conformal blocks on the moduli space of curves.
+
+ 15:00 Sandra di Rocco,    Resurgence, Waldschmidt constants and Negative Curves.
+ 15:30 Greg Smith,         Better Locally-Free Resolutions.
+ 16:00 Lars Kastner,       Ext and Tor on two-dimensional cyclic quotient singularities.
+ 16:30 Laura Escobar,      The multidegree of the multi-image variety.
+ 17:00 Leonid Monin,       Newton Polyhedra Theory for Generically Inconsistent Systems of Equations.
+ 17:30 Askold Khovanskii,  Resultant of Laurent Polynomials whose Newton Polyhedra are Developed.
+
+Sunday 4 December
+  8:00 Nathan Ilten,       Dual curves, Newton polygons, and tropicalization.
+  8:30 Yoav Len,           A tropical Clifford's theorem.
+  9:00 Martin Ulirsch,     Tropical and non-Archimedean geometry of toric stacks
+  9:30 Sam Payne,          Top weight cohomology of moduli spaces of curves.
+
+ 15:30 Kristin Shaw,       Non-existence of torically maximal hypersurfaces.
+ 16:00 Robert Williams,    Minkowski sums of algebraic varieties.
+ 16:30 Hiraku Abe,         A Weyl character formula for Hessenberg varieties.
+ 17:00 H. Praise Adeyemo,  Equivariant Cohomology Theories and The Pattern Map.
+ 17:30 Alex Woo,           Interval Pattern Avoidance. 
+

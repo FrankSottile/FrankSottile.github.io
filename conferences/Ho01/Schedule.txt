@@ -1,0 +1,45 @@
+
+Special Session on 
+Computational Algebraic Geometry and its Applications
+2001 Spring AMS Eastern Section Meeting
+Hoboken, NJ, 28-29 April 2001.
+
+Saturday Morning 
+ 9:00 -  9:20 Robin Pemantle, "Asymptotics from multivariate rational 
+                    generating functions"
+ 9:30 -  9:50 Andrew McLennan, "The asymptotic growth rate of the mean 
+                    number of equlibria of a two player game"
+10:00 - 10:20 Irina Kogan, "Applications of Cartan's moving frame 
+                    method to Classical Invariant Theory"
+10:30 - 10:50 Mireille Boutin, "Invariant approximation of differential
+                    invariants: an algorithmic approach"
+
+Invited Address
+11:00 - 11:50 Frank Sottile, "A Gromov-Witten invariant in the real world"
+
+Saturday Afternoon
+ 2:30 - 2:50  Joseph M. Rojas, "Descartes' rule for trinomials in the plane 
+                       and beyond"
+ 3:00 - 3:20  Chris Monico, "Primary Decomposition of Zero-Dimensional Ideals"
+ 3:30 - 3:50  Manfred Minimair, "Sparse resultants of composed polynomials"
+ 4:00 - 4:20  Jan Verschelde, "Using Monodromy to decompose Solution Sets of
+                        Polynomial Systems into Irreducible Components" 
+ 4:30 - 4:50  Steven  Fortune, "Polynomial root finding using iterated eigenvalue computation"
+
+Sunday Morning
+ 8:30 -  8:50  Joachim Rosenthal, "Maximum distance separable convolutional 
+                       codes, constructions and decoding"
+ 9:00 -  9:20  Laura Matusevich, "Hypergeometric systems and embedded primes"
+ 9:30 -  9:50  James Madden, "Classifying weakly ${\cal A}$-graded algebras"
+10:00 - 10:20  Diane Maclagan, "Supernormal vector configurations"
+10:30 - 10:50  Mike Shub, "Mean versus random exponents for unitarily invariant 
+                       probability measures on $GL(n,C)$"
+
+Sunday Afternoon
+ 2:30 - 3:50  Ian Dinwoodie, "Applications of the Groebner basis in statistics"
+ 3:00 - 3:20  Gregory Smith, "Computing cohomology"
+ 3:30 - 3:50  Jeff Phan, "Solutions to a polynomial system arising in biophysics"
+ 4:00 - 4:20  John Little, "Solving the Selesnick-Burrus filter design
+                       equations "
+ 4:30 - 4:50  Ivan Selesnick, "The use of Groebner bases in the design of 
+                       wavelets"

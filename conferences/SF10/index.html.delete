@@ -1,0 +1,315 @@
+<HTML>
+<HEAD>
+   <TITLE>Applications of Algebraic Geometry</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="TOP"></A>
+<TABLE>
+ <TR>
+  <TD><IMG SRC="Bez_tri.gif"><BR>
+      Toric degeneration of cubic B&eacute;zier triangle</TD>
+  <TD><H1>AMS-SIAM Special Session</H1>
+      <H2><FONT COLOR=BLUE>Applications of Algebraic Geometry</FONT><BR>
+          <A HREF="http://www.ams.org/amsmtgs/2124_intro.html">2010 Joint
+	  Mathematical Meetings</A><BR>
+          San Francisco, CA<br>
+          16 January 2010.</H2>
+
+<!--
+  <H3><FONT COLOR=RED>Deadline for Abstract Submission: September 22, 2009</FONT></H3>
+  <FONT COLOR="AA00FF"><A HREF="http://www.ams.org/cgi-bin/abstracts/abstract.pl">
+   Submit</A> your abstract</FONT><BR>
+-->
+
+<a href="description.txt">Description<a> of special session.
+ 
+<!--   <A HREF="Abs.html"><FONT size=+1>Abstracts</font></A> &nbsp; &nbsp; -->
+   <A HREF="Schedule.txt">Schedule</A>.
+
+  </TD>
+ </TR>
+</TABLE>
+
+
+<!---------------------------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------------------------------>
+<font size=+1 color=brown><b>Speakers</b></font>
+
+<TABLE>
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://www.stanford.edu/~henrya/">Henry Adams</A>, Stanford. 
+   <font color="AA00FF">Topological data analysis and the nudged 
+              elastic band method.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://www.math.colostate.edu/~bates/">Daniel Bates</A>, Colorado
+   State University.  <font color="AA00FF">Recovering exact results from numerical 
+              computation in algebraic geometry.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+ <!-----------
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>----------->
+  <TD>
+   <A HREF="http://math.stanford.edu/~gunnar/">Gunnar Carlsson</A>, Stanford. 
+    <font color="AA00FF">Algebraic aspects of persistence.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+ <!-----------
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>----------->
+  <TD>
+   <A HREF="http://math.berkeley.edu/~vhower/">Valerie Hower</A>, Berkeley.
+    <font color="AA00FF">A persistence tree-based method for  calling peaks in
+                      ChIP-seq protein  binding analysis.
+</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://pages.pomona.edu/~vds04747/public/index.html">Vin de
+   Silva</A>, Pomona College.
+    <font color="AA00FF">From Isomap to Persistence: nonlinear 
+              dimensionality reduction with circular
+              coordinates.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://galton.uchicago.edu/~drton/">Mathias Drton</A>, University of Chicago.
+    <font color="AA00FF">On a parametrization of positive semidefinite matrices with zeros.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://www.nd.edu/~jhauenst/">Jon Hauenstein</A>, Fields Institute
+   and Texas A&amp;M University.
+    <font color="AA00FF"> Computing Hilbert functions using dual bases.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://www4.ncsu.edu/~kaltofen/">Erich Kaltofen</A>, NCSU.
+  <font color="AA00FF"> <i>ArtinProver:</i> a truly hybrid symbolic/numeric global 
+             optimization algorithm.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>----------->
+  <TD>
+   <A HREF="https://www.vbi.vt.edu/faculty/personal_pages/reinhard_laubenbacher">Reinhard 
+     Laubenbacher</A>, Virginia  Bioinformatics Institute.
+    <font color="AA00FF">Nested canalyzing polynomial dynamical systems.
+</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>----------->
+  <TD>
+   <A HREF="http://www.mit.edu/~parrilo/">Pablo Parrilo</A>, MIT.
+    <font color="AA00FF">The convex algebraic geometry of rank 
+              minimization.
+</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://math.berkeley.edu/~annejls/">Anne Shiu</A>, Berkeley.
+    <font color="AA00FF">Computing siphons in biochemical reaction systems.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>----------->
+  <TD>
+   <A HREF="http://www.nd.edu/~sommese/">Andrew Sommese</A>, University of Notre Dame.
+     <font color="AA00FF">Zebra Fish, Tumor Growth, and Algebraic  
+              Geometry</font>.
+</TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+ <TR>  <td width=30></td>
+<!----
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+----------->
+  <TD>
+   <A HREF="http://math.berkeley.edu/~bernd/">Bernd Sturmfels</A>, University
+   of California at Berkeley. <font color="AA00FF">Orbitopes</font>.
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <!---------------------------------------------------------------------------->
+ <TR> <td width=30></td>
+<!--  <TD>
+   <A HREF="Abs.html#sullivant"><img src="../images/abs.gif"></A>
+  </TD>-->
+  <TD>
+   <A HREF="http://www4.ncsu.edu/~smsulli2/">Seth Sullivant</A>, NCSU.
+    <font color="AA00FF">Algebraic geometry of Gaussian graphical models.</font>
+  </TD>
+ </TR>
+ <!---------------------------------------------------------------------------->
+
+ <TR>  <td width=30></td>
+<!--  <TD>
+  <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>-->
+  <TD>
+   <A HREF="http://www.math.tamu.edu/~zteitler">Zach Teiter</A>, TAMU.
+   <font color="AA00FF"> Experimentation at the Frontiers of  
+              Reality in Schubert Calculus.</font>
+  </TD>
+ </TR>
+<!---------------------------------------------------------------------------->
+
+
+</TABLE>
+
+<HR>
+
+Organizers:  
+<A HREF="../index.html">Frank Sottile</A> &amp; 
+<A HREF="http://www.shsu.edu/~ldg005/">Luis David Garcia-Puente</A>
+
+</HTML>
+
+
+ <!---------------------------------------------------------------------------->
+<!----
+ <TR>  <td width=30></td>
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+  <TD>
+   <A HREF="http://www.math."></A>, .
+  </TD>
+ </TR>
+----------->
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+<!----
+ <TR>  <td width=30></td>
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+  <TD>
+   <A HREF="http://www.math."></A>, .
+  </TD>
+ </TR>
+----------->
+ <!---------------------------------------------------------------------------->
+
+
+ <!---------------------------------------------------------------------------->
+<!----
+ <TR>  <td width=30></td>
+  <TD>
+   <A HREF="Abs.html#"><img src="../images/abs.gif"></A>
+  </TD>
+  <TD>
+   <A HREF="http://www.math."></A>, .
+  </TD>
+ </TR>
+----------->
+ <!---------------------------------------------------------------------------->
+

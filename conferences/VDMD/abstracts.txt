@@ -1,0 +1,124 @@
+
+  ------------------------------------------------------------------------
+  150 Years of Coloring Graphs on Surfaces: A Drama in Several Acts
+
+   Michael O. Albertson, Smith    College         
+
+ Determining the chromatic number of a graph is 
+notoriously difficult.  Assuming that the graph is
+embedded on a surface doesn't help much.  Supplying best
+possible bounds, The Map Color Theorem and the Four Color
+Theorem were Graph Theory's first complete success.  We begin
+with a highlights tour of these classic results.  Next we look at
+the recently finished story of coloring embedded graphs that look
+planar.  We include a proof sketch of the best possible result that
+locally
+planar graphs can be 5-colored.  We conclude
+with a few open questions and speculate on future developments.
+  
+  ------------------------------------------------------------------------
+Techniques for Proving Lower Bounds on Graph Separation Width
+
+ Arny Rosenberg, U Mass
+
+ An M-separator of an N-node graph G is a set of edges whose removal
+partitions G into subgraphs having M and N-M nodes, respectively.
+While many provably or experientially good techniques are known for
+finding small M-separators for broad classes of graphs, rather few
+broadly applicable techniques are known for establishing lower bounds
+on the sizes of such separators.  In this talk we describe and
+contrast two broadly applicable techniques for establishing lower
+bounds on the M-separation-width of an N-node graph, which is the size
+of the graph's smallest M-separator.
+
+The material for this talk is extracted from my new book, coauthored
+with Lenny Heath, entitled "Graph Separators, with Applications"
+(Kluwer Academic/Plenum Publishing).
+
+
+ ------------------------------------------------------------------------
+Folding Carpenter's Rules, Robot Arms, Proteins: a Combinatorial
+Approach
+
+Ileana Streinu, Smith College
+
+
+Robot arms can be modeled as simple polygonal chains with rigid bars and
+rotating joints. Planning non-colliding motions between two configurations
+of a robot arm is a notoriously hard problem, for which the currently
+known best algorithms run in exponential time. An efficient solution in
+dimension 3 could have an impact in understanding apparently unrelated
+questions, such as how proteins fold.
+
+In this talk I will present a suprisingly simple combinatorial solution to
+the 2-dimensional version. The Carpenter's Rule Problem, "Can every planar
+polygonal chain be convexified with non-colliding planar motions?" was
+open since the '70. It was answered in the affirmative in the early 2000,
+and my contribution - the subject of this talk - was to give an efficient
+algorithmic solution. I will present it with a lot of graphical props:
+animations, games, even some 3d-graphics. Along the way, we'll use tools
+ranging from a 19th century theorem of J. Clerk Maxwell to graph
+embeddings, oriented matroids, combinatorial rigidity theory and
+visibility computations in Computational Geometry.
+  ------------------------------------------------------------------------
+Sperner's theorem and its generalizations
+
+Matthias Beck, Suny Binghamton
+
+Abstract: We study the set $P(S)$ consisting of all subsets of a finite
+set $S$, partially ordered by subset inclusion. A chain is a linearly
+ordered subset of $P(S)$. In 1928, Sperner found a bound (in terms of the
+size of $S$) for the size of an antichain, that is, a subset of $P(S)$ in
+which there are no nontrivial chains.
+
+His result was generalized in three different directions: by Erd\H{o}s to
+subsets of $P(S)$ in which chains contain at most $r$ elements; by
+Meshalkin to certain classes of compositions of $S$; by Griggs, Stahl, and
+Trotter through replacing the antichains by certain sets of pairs of
+disjoint elements of $P(S)$. We unify Erd\H{o}s's, Meshalkin's, and
+Griggs-Stahl-Trotter's inequalities with a common generalization. We
+similarly unify their accompanying LYM inequalities. Our bounds do not in
+general appear to be the best possible.
+
+One of our proofs extends to analogous statements--with a twist--about
+flats in a projective geometry.
+
+This is joint work with Xueqin Wang and Thomas Zaslavsky.
+
+  ------------------------------------------------------------------------
+  3:00  -  3:30   Rosa Orellana, Dartmouth College
+  ------------------------------------------------------------------------
+Combinatorics of resonances
+
+Dmitry Kozlov,  KTH  
+
+I shall outline some connections between the topology
+of spaces of polynomials with roots of fixed multiplicities and
+combinatorics.
+
+More specifically, I will advertise the use of a certain new
+combinatorial object. This object is a category, which
+I call resonance category. It reflects the combinatorial
+structures arising in the canonical stratifications of
+the symmetric smash products. I will then use the current
+knowledge of the combinatorial structure of this category
+to perform explicit computations for various spaces of
+real hyperbolic polynomials with restrictions on 
+the multiplicities of roots.
+
+   ------------------------------------------------------------------------
+A Root System Description of Pattern Avoidance 
+       with Applications to $G/B$ 
+
+Sara Billey, MIT
+
+Pattern avoidance has been used to classify several notions
+for permutations and signed permutations.  In this talk, we propose a
+new generalization of  pattern avoidance which can be applied to
+all root systems and their Weyl groups.  The main theorem shows that
+for any semisimple Lie group $G$ and maximal Borel subgroup $B$,
+smooth Schubert varieties in $G/B$ can be characterized by this new
+method with a very short list of patterns.
+
+This is joint work with A. Postnikov.
+  ------------------------------------------------------------------------

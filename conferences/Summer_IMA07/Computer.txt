@@ -1,0 +1,11 @@
+s computer project is "low-tech" and would be accessible for every student here.
+
+Basically, write a small program to check whether or not a given polynomial f(x_1, ...,
+x_n) in k[x_1, ..., x _n] is symmetric; and if it is, compute the unique expression of f
+as a polynomial in the elementary symmetri c polynomials s_j = sum(x_i_1*...*x_i_j : i_1
+< ... < i_j), j = 1, ..., n.  The algorithm is given in Proposi tion 4 of section 7.1 of
+Cox, Little, and O'Shea.  This project wouldn't take that much time (probably) and i s
+concrete enough that no one (probably) would be able to focus more on learning Singular,
+Maple, whatever, a nd not worrying too much about the math.  Interested students could
+then be pointed to the nice chapter on in variant theory in Cox, Little, and O'Shea.
+

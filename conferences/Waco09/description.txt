@@ -1,0 +1,33 @@
+
+Special session on  Applicable Algebraic Geometry
+at the Fall 2009 AMS Central Section Meeting  October 16--18
+at Baylor University in Waco Texas.
+
+Organizers:
+ Luis David Garcia-Puente
+   Sam Houston State University
+   lgarcia@shsu.edu
+ Frank Sottile
+   Texas A&M University
+   sottile@math.tamu.edu
+
+Description of session:
+
+Algebraic geometry, the geometric study of polynomial equations, is a 
+well-established field in pure mathematics that has recently begun
+to find many, often unexpected applications in the rest of science and
+technology, including engineering, computer science, statistics, biology, 
+and chemistry.   This trend of algebraic geometry with a view towards 
+applications, is succinctly  as Applicable Algebraic Geometry.   This
+is the part of algebraic geometry that was seen at the 2006-7 topical 
+year at the IMA on applications of algebraic geometry, and at a summer 
+school the organizers ran in 2007.
+
+   Texas has a concentration of researchers, including many students 
+and postdocs, who work on applications of algebraic geometry, or more 
+generally applicable algebraic geometry.  Because of the local interest 
+in this topic, we propose to organize a special session on Applicable 
+Algebraic Geometry at the Fall 2009 AMS Central Section Meeting 
+at Baylor University in Waco, TX.
+
+

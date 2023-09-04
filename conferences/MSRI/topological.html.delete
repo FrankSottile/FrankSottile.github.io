@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+   <TITLE>Topological Aspects of Real Algebraic Geometry</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>Topological Aspects of Real Algebraic Geometry</H1>
+
+<P>
+   January 2, 2004 to May 14, 2004
+at the Mathematical Sciences Research Institute,
+Berkeley, California
+
+<P>
+Organized by: 
+<A HREF="http://www.mth.msu.edu/People/Faculty/akbulut_s.html">Selman Akbulut</A>, 
+<A HREF="http://www.math.utah.edu/~gmikhalk">Grisha Mikhalkin</A>, 
+<A HREF="http://www.mathcs.emory.edu/People/Faculty/vicki/">Victoria Powers</A>, 
+<A HREF="http://www.matematik.su.se/~shapiro/">Boris Shapiro</A>, 
+<A HREF="http://www.math.tamu.edu/~sottile">Frank Sottile</A> (chair), and
+<A HREF="http://www.math.uu.se/~oleg/">Oleg Viro</A>.
+
+<P>&nbsp; &nbsp;
+Real algebraic geometry -- the geometry of varieties
+defined by systems of real polynomial equations -- is a
+classical subject presently encompassing many distinct
+lines of inquiry.
+This program will cover modern developments in
+real algebraic geometry and its applications emphasizing topological
+aspects of this subject and its relations to other fields of
+mathematics.
+These relations arise as real algebraic varieties appear naturally in
+various mathematical contexts and, in particular, in applied mathematics,
+and there continue to be important interactions withe these subjects.
+(One  <A HREF="real_cubics.html">interaction</A> with solving equations.)
+
+<P>&nbsp; &nbsp; 
+Besides the traditional directions of topological classification of
+real algebraic varieties, we mean to focus on enumerative problems and 
+relations to convex geometry via the theory of amoebas and tropical
+geometry.
+This will include  many recent and notable advances in real
+algebraic geometry, as well as some of its most important
+open problems.
+Of particular emphasis will be the following topics.
+
+<OL>
+  <LI> Real algebraic curves.  (The pictures below are of two
+              constructions of real plane curves exploiting convexity.)
+       (An introduction to real algebraic curves  
+        in <A HREF="real_curves.pdf">.pdf</A>.
+ 
+  <LI> Real flexible (<I>J</I>-holomorphic) curves.
+  <LI> Classification of higher-dimensional real algebriac varietites.
+  <LI> Amoebas.  &nbsp;(<A HREF="viro.html">What is an Amoeba?</A>)
+  <LI> Tropical algebraic geometry.
+  <LI> Real Solutions to systems of equations. &nbsp;(A 
+ <A HREF="http://www.math.tamu.edu/~sottile/pages/ERAG/index.html">survey</A>
+ on geometric aspects of this subject.)
+
+  <LI> Algorithms for real algebra via semi-definite programming.
+  <LI> Real algebriac geometry in applications.
+</OL>
+
+<IMG SRC="images/it-kh.gif"> 
+
+<P>
+The semester will include three week-long workshops:
+
+<UL>
+  <LI>
+      <B>Introductory Workshop</B>.  &nbsp;
+      
+     This will introduce the main themes of the semester to the 
+     mathematical public.  
+     There will be three main series of lectures: "Topology
+     and <I>M</I>-varieties", "Tropical algebraic geometry 
+     and amoebas",  and "Enumerative problems and real
+     solutions to equations", in additions to other survey talks
+     by notable speakers. 
+ 
+  <LI>
+     <B>Workshop on the Topology and Geometry of Real Algebraic Varieties</B>.  &nbsp;
+
+     This will concentrate on the most topological aspects of the
+     subject, topics 1 -- 5 in the list above.
+
+     
+
+  <LI>
+    <B>Algorithmic, Combinatorial, and Applicable Real
+     Algebraic Geometry</B>.  &nbsp;
+
+    This will concentrate on more constructive and algorithmic aspects of the
+    subject, and feature applications to other fields,
+    topics 6 -- 8 in the list above.
+</UL>
+
+</BODY>
+</HTML>
+ 
