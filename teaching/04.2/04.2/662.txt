@@ -1,0 +1,32 @@
+Graduate course on Symmetric Functions
+Math 697 W  Symmetric functions
+
+
+Instructor: Frank Sottile
+
+Text:
+  Bruce Sagan, "The Symmetric Group: Representations, 
+  Combinatorial Algorithms, and Symmetric Function", 
+  Springer Verlag (Graduate Texts in Mathematics, 2003)
+ 
+Prerequisites:
+  The prerequisites for the course are either the undergraduate or the
+graduate sequence in Algebra and some mathematical maturity should suffice.
+
+Description:
+  Symmetric functions are a central object in enumerative
+combinatorics and have applications in representation 
+theory (they are the characters of irreducible representations
+of the general linear and symmetric groups).
+
+  This course will begin with the elementary algebraic
+and combinatorial theory of symmetric functions, including 
+Schur functions and the Littlewood-Richardson rule.  The 
+middle of the course would discuss their role in the representation
+theory of the symmetric group and of the general linear group.
+The final part of the course would discuss applications of 
+symmetric functions and their cousins, quasi-symmetric functions,
+to enumerative combinatorics.
+
+We will use (but not strictly follow) the text book by Bruce Sagan.
+

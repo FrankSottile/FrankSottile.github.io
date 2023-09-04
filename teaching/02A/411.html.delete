@@ -1,0 +1,210 @@
+<HTML><HEAD><TITLE>Math 411</TITLE></HEAD>
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+<A NAME="top"></A>
+
+<TABLE>
+ <TR><TD ROWSPAN=3><IMG HEIGHT=120 SRC="permutahedron.png"></TD>
+  <TD><FONT size=+3><B>Autumn 2002<B></font></TD></TR>
+  <TR><TD><FONT size=+3><B>Math 411, Section 1</B></font></TD></TR>
+  <TR><TD><FONT size=+3><B>Introduction to Abstract Algebra</B></font></TD></TR>
+</TABLE>
+<HR>
+
+<TABLE>
+<TR><TD>
+ <TABLE><TD> <FONT COLOR=AA00FF><EM>Instructor</EM>:</FONT>
+	<A HREF="../../index.html">Frank Sottile</A>
+   <DD><IMG SRC="../images/dot.gif"> Office: LGRT 1230
+   <DD><IMG SRC="../images/dot.gif"> Telephone: 545 - 6010
+   <DD><IMG SRC="../images/dot.gif"> email: <TT><A
+	HREF="mailto:sottile@math.umass.edu">sottile@math.umass.edu</A></TT> 
+   <DD><IMG SRC="../images/dot.gif"> WWW:
+	<A HREF="../../index.html"><TT>http://www.math.umass.edu/~sottile</TT></A>  
+   </TD></TR>
+ </TABLE>
+
+ <TABLE><TR><TD>
+        &nbsp;<FONT COLOR=AA00FF><EM>Office Hours</EM> :</FONT></TD>
+                     <TD><IMG SRC="../images/dot.gif"> Monday</TD>
+                     <TD>14:00-15:00</TD></TR>
+        <TR><TD></TD><TD><IMG SRC="../images/dot.gif"> Tuesday</TD>
+                     <TD>11:00-12:00</TD></TR>
+        <TR><TD></TD><TD><IMG SRC="../images/dot.gif"> Thursday</TD>
+                     <TD>14:45-15:30</TD></TR>
+        <TR><TD></TD><TD><IMG SRC="../images/dot.gif"> Friday</TD>
+                     <TD>13:00-14:00</TD></TR
+         <TR><TD></TD>
+            <TD colspan=2><IMG SRC="../images/dot.gif"> And by appointment</TD></TR>
+      </TABLE>
+              
+ &nbsp; <FONT COLOR=AA00FF><I>Lectures</I>:</FONT>
+       Tu, Th 9:30 - 10:45, LGRC A201.</TD>
+  <TD><IMG height=260 SRC="gallian.jpg"></TD></TR>
+
+<TR><TD colspan=2>
+<TABLE>
+         <TR><TD><FONT COLOR=AA00FF><EM>Text</EM>:</FONT></TD>
+             <TD> Joseph A. Gallian, <I>Contemporary Abstract Algebra</I>, Fifth Edition, 
+                 Houghton Mifflin, 2002.  </TD></TR>
+         <TR><TD></TD><TD>Some true-false <A HREF="http://www.d.umn.edu/~jgallian/TF/">questions</A> for practice.</TD></TR>
+        </TABLE>
+     </TD></TR>
+
+<TR><TD colspan=2>
+  &nbsp; <FONT COLOR=AA00FF><I>Course Webpage</I>:</FONT>
+  <TT>http://www.math.umass.edu/~sottile/courses/A02/411.html</TT></TD></TR>
+</TABLE>
+<HR>
+<FONT SIZE=+1 COLOR=BLUE>  Homework</FONT><BR>
+
+ <DD>Assigned each class, due the following class, and handed back
+     the next class.  
+     Each will have 1-3 problems from the book.
+     Expect 20 homework assignments in all.
+
+<HR>
+<FONT SIZE=+1 COLOR=BLUE>  Exam Schedule</FONT>
+<TABLE>
+  <TR><TD width=10 rowspan=4></TD>
+      <TD><IMG SRC="../images/dot.gif"> <B>Exam 1</B></TD>
+         <TD> Wednesday, 16 October.  &nbsp; 6:15--7:15 PM.</TD></TR>
+  <TR><TD><IMG SRC="../images/dot.gif"> <B>Exam 2</B> &nbsp; </TD>
+          <TD> Wednesday, 20 November. &nbsp;   6:15--7:15 PM.</TD></TR>
+  <TR><TD valign = top><IMG SRC="../images/dot.gif"> <B>Final exam</B> &nbsp;</TD>
+        <TD>TBA (during finals week)</TD></TR>
+</TABLE>
+
+<HR>
+
+<FONT SIZE=+1 COLOR=BLUE>  Help Sessions</FONT><BR>
+   <DD>There will be 1 or 2 informal evening help sessions during the term, as needed.
+
+
+<HR>
+
+<FONT SIZE=+1 COLOR=BLUE>  Grading</FONT><BR>
+   <DD>Each exam contributes 20% toward your final grade.
+   <DD>The final exam contributes 30% toward your final grade.
+   <DD>Homework counts 30%.<BR>
+
+<HR>
+
+<FONT SIZE=+1 COLOR=BLUE>  This Course</FONT><BR>
+  <P> &nbsp; &nbsp; 
+  Abstract Algebra has its origins in the number theory of antiquity, 
+  and arose as a subject in the late 18th Century as a tool to help 
+  to understand the zeroes of polynomials.
+  From these origins, it has grown mightily and now it
+  pervades much of modern pure mathematics.
+  Curiously, this formerly purest of pure disciplines has become rather
+  practical.
+  Simply put, abstract algebra underlies the security and integrity of all
+  modern digital communication.
+
+
+  <P> &nbsp; &nbsp; 
+  Our course is not about the uses of abstract algebra in digital
+  communication.
+  Its goal is to introduce you to the mathematical methods of
+  inquiry (definition, conjecture, and proof), and train
+  you in the rigour of thought that is unique to mathematics.
+  The vehicle for this will be our study of the elementary properties of
+  <FONT COLOR=GREEN>groups</FONT>, a mathematical structure that
+  encapsulates the idea of symmetry.
+
+  <P> &nbsp; &nbsp; 
+  A key role in this course will be played by your homework, which will serve
+  as a dialog between us.
+  Homework is assigned daily and collected at the beginning of the next class
+  period. 
+  Late homework is not accepted.
+  Homework will be graded promptly (by the grader or by 
+  <FONT COLOR="FF0000">Frank</FONT>)
+  and returned the following class period.
+  Your homework write ups are expected to represent your 
+  <FONT COLOR=green>own</FONT> work and should
+  be carefully and neatly written.
+  An important part of your education is learning from your peers.
+  I encourage you to discuss problems with others in the class, but the
+  problem write ups <FONT COLOR=green>must</FONT> be your own 
+  (<I>n</I> identical solutions will each
+  receive 1/<I>n</I> of the credit).
+
+  <P> &nbsp; &nbsp; 
+  The key component of careful thought is recognizing and 
+  <font color=green>communicating</font>
+  correct arguments, while avoiding false statements.
+  Accordingly, full credit will be given for well-written, correct solutions
+  that are unblemished by false assertions.
+
+  <P> &nbsp; &nbsp; 
+  Abstract Algebra, like other advanced mathematics courses requires students
+  to be engaged in classroom discourse.
+  To encourage class participation, good questions will be rewarded with
+  specially prepared coupons (on post-it notes), which may be redeemed for
+  extra credit.
+  The individual value of the coupons will be determined later.
+  Expect between 1/3 and 1/2 of a homework assignment.
+  Active participation can raise your grade.
+
+  <P> &nbsp; &nbsp; 
+  I have four office hours scheduled each week.
+  The times can be changed (except that Wednesday is off limits).
+  Appointments may be made, as well.
+  The most reliable way to contact me is via email - I read and respond to
+  it whenever I am in my office.
+
+  <P> &nbsp; &nbsp; 
+  Right now, I do not have any professional commitments planned that will 
+  require me to miss class, except for the Tuesday before Thanksgiving.
+
+<HR>
+<B><FONT SIZE=+1>The <FONT COLOR=BLUE>First challenge</FONT> has been solved.</FONT></B>
+   <BR>
+
+<B><FONT SIZE=+1 COLOR=BLUE>Second Challenge:</FONT></B>
+   <FONT SIZE=+1 COLOR=RED>Describe all of the subgroups of the rational numbers, 
+              <B>Q</B>, under addition</FONT><BR>
+   (First correct answer is worth one homework.)
+
+
+
+<!--   First Challenge
+<B><FONT SIZE=+1 COLOR=BLUE>Challenge:</FONT>
+   <FONT SIZE=+1 COLOR=RED>What are these?</FONT></B>
+   (<FONT COLOR=RED>First correct answer is worth one homework</FONT>.)
+
+<TABLE>
+ <TR>
+ <TD width=40></TD><TD>
+  <TABLE BORDER=2>
+   <TR><TD> </TD>
+     <TH><FONT COLOR=MAGENTA>&nbsp;a&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;b&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;c&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;d&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;e&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;f&nbsp;</TH></TR>
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;a&nbsp;</TH><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;d&nbsp;</TD></TR>
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;b&nbsp;</TH><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;e&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;c&nbsp;</TH><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;a&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;d&nbsp;</TH><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;c&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;e&nbsp;</TH><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;f&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;f&nbsp;</TH><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;b&nbsp;</TD></TR> 
+  </TABLE>
+</TD><TD width=50></TD><TD>
+  <TABLE BORDER=2>
+   <TR><TD> </TD><TH><FONT COLOR=MAGENTA>&nbsp;a&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;b&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;c&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;d&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;e&nbsp;</TH><TH><FONT COLOR=MAGENTA>&nbsp;f&nbsp;</TH></TR>
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;a&nbsp;</TH><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;b&nbsp;</TD></TR>
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;b&nbsp;</TH><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;e&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;c&nbsp;</TH><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;f&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;d&nbsp;</TH><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;a&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;e&nbsp;</TH><TD>&nbsp;d&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;c&nbsp;</TD></TR> 
+   <TR><TH><FONT COLOR=MAGENTA>&nbsp;f&nbsp;</TH><TD>&nbsp;b&nbsp;</TD><TD>&nbsp;e&nbsp;</TD><TD>&nbsp;f&nbsp;</TD><TD>&nbsp;a&nbsp;</TD><TD>&nbsp;c&nbsp;</TD><TD>&nbsp;d&nbsp;</TD></TR> 
+  </TABLE>
+ </TD>
+ </TR>
+</TABLE>
+
+-->
+<HR>
+
+<A HREF="#top">TOP</A><BR>
+<I>Last modified: 1 October 2002 by Frank Sottile</I>
+</BODY>
+</HTML>
