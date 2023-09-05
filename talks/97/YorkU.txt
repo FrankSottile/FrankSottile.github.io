@@ -1,0 +1,20 @@
+Hopf Algebras of Labeled Posets
+
+Frank Sottile
+University of Toronto
+
+A labeled poset is a partially ordered set where each cover is labeled
+with an integer.  This structure arises naturally in the theory of
+shellability of posets, as well as the weak order on the symmetric
+group and in the study of Schubert polynomials.
+
+In this talk, we will introduce a generating function for
+maximal chains whose sequence of edge labels have fixed descents.
+The association of this generating function to such a poset
+gives a Hopf algebra map from a Hopf algebra of such posets
+to the algebra of quasi-symmetric functions.  We relate this
+construction to the theory of symmetric functions.
+
+No prior knowledge is assumed; definitions, constructions, and 
+proofs (which are elementary) will be given.
+

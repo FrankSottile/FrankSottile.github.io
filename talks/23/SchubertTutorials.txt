@@ -1,0 +1,12 @@
+Introductorial Talks
+
+I "The Geometry of Grassmannians"
+
+We define the Grassmannian, Stiefel coordinates, the Pluecker embedding, 
+and its Schubert cells/varieties.  We then sketch the basics of Schubert 
+calculus: Schubert classes in cohomology and Schubert's basis and duality 
+theorems, define Littlewood-Richardson coefficients and prove the Pieri Rule.
+
+IV: Advanced topics and preview of the mini-courses.
+
+  TBD

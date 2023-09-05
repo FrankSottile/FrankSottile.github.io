@@ -1,0 +1,25 @@
+The special Schubert calculus is real
+
+Frank Sottile
+MSRI & The University of Wisconsin-Madison
+
+Algebraic geometry Seminar
+University of Utah 
+9 December 1998
+
+In the last century, Schubert defined enumerative geometry to be concerned
+with `counting geometric figures of some kind having specified position
+with respect to some general fixed figures'.   More recently, Fulton asked
+how many solutions to such a problem can be real; in particular can the
+fixed figures be chosen so that all solutions are real.  
+
+   
+   For the problem of the 3264 conics tangent to 5 general plane conics,
+Ronga, Tognoli, and Vust found the (surprising) answer that all may be real.
+In fact, for every case known, all solutions may be real.  The purpose of
+this talk is to present two new families of enumerative problems with this
+property.  The first are those arising from special Schubert conditions on
+p-planes in C^{m+p}, and the second concerns parameterized rational curves
+in a Grassmannian satisfying certain simple (codimension 1) conditions.
+
+

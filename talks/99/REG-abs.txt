@@ -1,0 +1,24 @@
+
+Real Enumerative Geometry and Solving Systems of Equations
+
+A short course of four lectures
+
+Frank Sottile
+University of Wisconsin-Madison and IRMA
+
+
+Finding the isolated real solutions to a system of real polynomial equations
+is a challenging, yet important problem with real world
+applications. Effective techniques exist for this problem, and their
+improvement and implementation are currently areas of active research.  Also
+of interest are upper bounds on the number of real solutions.  In many
+geometric situations, the sharp bound is the number of complex solutions.
+This series of four lectures will discuss this problem from a geometric
+perspective, and include a number of open questions.
+
+Schedule of Talks:
+
+ 26 mai  1999:    Real Systems Solving
+  2 juin 1999:    Sparse Systems of Equations
+  9 juin 1999:    Real enumerative geometry
+ 16 juin 1999:    Real Schubert Calculus

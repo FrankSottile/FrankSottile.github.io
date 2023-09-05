@@ -1,0 +1,25 @@
+ Control of Linear Systems and 
+ the Real Schubert Calculus
+
+ Mathematics Colloquium
+ University of California, Santa Cruz
+
+ Frank Sottile
+ University of Wisconsin &
+ University of Massachusetts
+ 23 September 1999
+
+
+In 1981, Brockett and Byrnes showed how the static feedback laws which
+control a given linear system are determined through the Schubert calculus
+of enumerative geometry. This talk will describe that connection and propose
+numerical homotopy methods to solve the resulting systems of polynomial
+equations.
+
+The related questions of finding real feedback laws and of trying to do
+Schubert's calculus over the real numbers are intertwined with a precise
+conjecture of Shapiro and Shapiro. We discuss a new result which shows it is
+possible to do Schubert's calculus over the real numbers and proves a
+version of this conjecture. In a similar vein, problems of enumerating
+rational curves in the Grassmannian (also known as quantum enumerative
+geometry) may also be solved over the real numbers.

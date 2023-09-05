@@ -1,0 +1,25 @@
+Some Pieri-type formulas for flag manifolds
+	Algebraic Geometry Seminar
+	University of Chicago
+	18 February 1998
+
+	Frank Sottile
+	University of Toronto
+
+
+The Chow rings of flag varieties G/B have integral bases of Schubert
+classes, S_w for w in the Weyl group of G.  Thus there exist (nonnegative)
+integral constants c^w_{u v} defined by the identity
+
+S_u S_v = \sum_w c^w_{u v} S_w
+
+These generalize the Littlewood-Richardson coefficients and are expected to
+have rich combinatorial properties.  Much is known about these rings,
+including presentations, formulas for the Schubert classes, and how to
+multiply a Schubert class by a generator.  It however remains an open
+problem to say anything meaningful about these c^w_{u v}.
+
+In this talk, we will discuss some of what is known about these c^w_{u v}.
+We concentrate on Pieri-type formulas, that is, when S_v is a special
+Schubert class.  Our goal is to describe how geometry has helped shed light
+on these (apparently) purely combinatorial questions.

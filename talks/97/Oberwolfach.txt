@@ -1,0 +1,21 @@
+Pieri-type formulas for the classical groups
+
+Frank Sottile
+MFI Oberwolfach, 4 April 1997. 
+
+
+A Pieri-type formula in the Chow (or cohomology) ring of a flag variety is a
+formula expressing the product of a Schubert class by a special Schubert
+class in terms of the Schubert basis.  Recently, Pragacz and Ratajski have
+given such formulas in the Chow rings of all Grassmannians.  We seek
+Pieri-type formulas for the flag varieties expressed in terms of chains in
+the Bruhat order.
+
+This talk will discuss joint work with Nantel Bergeron towards extending and
+unifying known Pieri-type formulas.  We begin with some geometric motivation
+behind this `chain-theoretic' expectation, which applies to any variety with
+a cell decomposition.  Then express the Pieri-type formula for the classical
+flag variety in this form.  The talk will conclude by presenting a new
+Pieri-type formula for Lagrangian special Schubert classes in the Chow ring
+of a symplectic flag manifold.
+

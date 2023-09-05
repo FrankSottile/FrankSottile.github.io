@@ -1,0 +1,23 @@
+
+
+          Frank Sottile  (University of Toronto and MSRI)
+
+          "Is the Schubert Calculus Effective?"
+
+	     Wednesday, 25 September (Colloquium)
+
+The Schubert calculus, a basic tool in enumerative geometry, gives
+algorithms for solving problems of enumerating linear subspaces of
+projective space, such as: How many lines in projective 4-space meet 6
+given planes?  (Answer: 5) Its core component is the intersection
+form, also known as the Littlewood-Richardson rule, for the
+cohomology (or Chow) ring of a Grassmann manifold in terms of its
+basis of Schubert classes.
+
+An effective version of the Schubert calculus would explicitly find
+the 5 lines meeting 6 given planes in P^4. It may also explicitly
+describe how to deform an intersection of two Schubert varieties into
+a sum of distinct Schubert varieties, that is, a geometric
+manifestation of the Littlewood-Richardson rule. This introductory
+talk describes some results along these lines, including an effective
+version of Pieri's formula.

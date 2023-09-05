@@ -1,0 +1,23 @@
+
+
+          Frank Sottile  (University of Toronto and MSRI)
+
+           "Enumerative geometry for real varieties"
+
+     Algebraic Geometry Seminar    Thursday, 26 September 1996.
+
+
+Of the geometric figures in a given family satisfying real conditions,
+some figures are real, while the rest occur in complex conjugate
+pairs, and the distribution of the two types depends subtly upon the
+configuration of the conditions.  In this talk, we describe an
+approach to the question of when such an enumerative problem may have
+all of its solutions be real.  Our particular focus is how one may use
+the knowledge that one problem can have all of its solutions be real
+to deduce that other, related problems may, as well.
+
+The primary technique is to study deformations which transform
+intersections of subvarieties into simpler cycles.  We also discuss
+how these techniques may lead to algorithms to find explicit solutions
+to such enumerative problems, such as the five lines meeting 6 given
+planes in P^4.

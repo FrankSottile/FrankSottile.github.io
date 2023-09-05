@@ -1,0 +1,28 @@
+Identities of Littlewood-Richardson coefficients for Schubert
+           polynomials and orders on Weyl groups
+
+  Frank Sottile
+  MSRI workshop on symmetric functions and representation theory
+  15 April 1997
+
+For Schubert polynomials, the analogues of Littlewood-Richardson
+coefficients are expected to be related to the enumeration of chains in
+the Bruhat order on  S_n. We give a number of new identities
+among these coefficients, primarily among those which arise in the
+multiplication of a Schubert polynomial by a Schur symmetric polynomial.
+For many of these identities, there is a companion result about the
+Bruhat order which we expect would imply the identity, were it known how
+to express these coefficients in terms of the Bruhat order.  This
+analysis leads to a new graded partial order on the symmetric group,
+results on the enumeration of chains in the Bruhat order, an upper bound
+on these coefficients, and a determination of many of them.
+
+Considering the analogous problem for the multiplication of type C
+Schubert polynomials by Schur Q symmetric polynomials, we obtain similar
+results, this time for chains in the Bruhat order on the group of signed
+permutations.  We also give a Pieri-type formula in this setting,
+expressed in terms of chains.
+
+
+This represents joint work with Nantel Bergeron, and the results of the
+first paragraph are contained in a recent preprint:   MSRI # 1996 - 083.

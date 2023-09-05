@@ -1,0 +1,9 @@
+Three hard polynomial systems from enumerative geometry
+
+I will  briefly discuss three problems  from enumerative geometry
+and their  formulation as  systems of polynomials.   One involves
+Galois groups  of Fano  problems, the  other a  possible relation
+between Welschinger  signs and the  degree of the Wronski  map in
+the real  Schubert calculus,  and the  third is  an interpolation
+problem.  These  systems appear challenging (or  not possible) to
+solve, which has impeded some recent investigations.

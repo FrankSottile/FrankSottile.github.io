@@ -1,0 +1,18 @@
+Mathematics Colloquium
+University of Notre Dame
+
+Real Schubert calculus
+Frank Sottile 
+University of Wisconsin
+22 January 1999
+
+Schubert's calculus was a collection of algorithms for enumerating the 
+linear subspaces of a vector space having given positions with respect 
+to other, fixed subspaces.   Its justification was important for the
+development of modern algebraic geometry, and it has connection with 
+other areas of mathematics including combinatorics and representation theory.
+
+In this talk, I will discuss recent work which shows it is possible to 
+have all solutions be real not only for these classical enumerative 
+problems, but also to problems of counting rational curves on Grassmannians.
+

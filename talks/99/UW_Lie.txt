@@ -1,0 +1,14 @@
+Pieri-type formulas in the Schubert Calculus
+22 September 1999
+
+Frank Sottile
+
+  An outstanding problem in algebraic combinatorics is to find
+the analog of the Littlewood-Richardson rule for Schubert polynomials.
+In this talk, which represents joint work with Nantel Bergeron, 
+I will discuss some of what is known about this problem.  The particular
+focus will be on combinatorial Pieri-type formulas, which serve to illustrate
+some features one might expect in an eventual Littlewood-Richardson formula.
+
+
+

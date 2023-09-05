@@ -1,0 +1,14 @@
+Welschinger signs and the Wronski map
+
+A general  real rational  plane curve  C of  degree d  has 3(d-2)
+flexes  and (d-1)(d-2)/2  complex  double  points.  Those  double
+points lying  in RP^2 are  either nodes or solitary  points.  The
+Welschinger  sign of  C  is  (-1)^s, where  s  is  the number  of
+solitary  points.    When  all   flexes  of   C  are   real,  its
+parameterization comes from a point on the Grassmannian under the
+Wronskii map, and every parameterized  curve with those flexes is
+real (this  is the Mukhin-Tarasov-Varchenko Theorem).   Thus to C
+we may associate  the local degree of the Wronskii  map, which is
+also 1 or -1.  My talk will discuss work with Brazelton towards a
+possible conjecture  that that  these two  signs associated  to C
+agree, and the challenges to gathering evidence for this.

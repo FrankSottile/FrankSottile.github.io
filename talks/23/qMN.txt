@@ -1,0 +1,12 @@
+A Murnaghan-Nakayama formula in quantum Schubert calculus
+
+   The  Murnaghan-Nakayama formula  expresses  the  product of  a
+Schur function  with a  Newton power  sum in  the basis  of Schur
+functions.  An  important generalization  of Schur  functions are
+Schubert polynomials (both classical  and quantum).  For these, a
+Murnaghan-Nakayama  formula  is   geometrically  meaningful.   In
+previous work with Morrison,  we established a Murnaghan-Nakayama
+formula  for  Schubert  polynomials  and  conjectured  a  quantum
+version.  In this  talk, I will discuss some  background and then
+some recent work proving this  quantum conjecture.  This is joint
+work with Benedetti, Bergeron, Colmenarejo, and Saliola.
