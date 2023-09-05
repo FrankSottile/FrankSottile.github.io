@@ -1,0 +1,8 @@
+Dissecting Donuts
+
+  Our goal today will be to understand, at the level of a
+mathematical proof, why the surface of a sphere is not
+the same as the surface of a donut/bagel/coffee cup.
+This is an introduction to the mathematical area called
+topology.
+ 

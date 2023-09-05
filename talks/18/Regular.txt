@@ -1,0 +1,13 @@
+Regular solids in all dimensions
+
+   While we are all familiar with regular polygons (equilateral triangles, 
+squares, ...), and many of us know about the Platonic, or regular solids 
+(tetrahedron, cube, octahedron,....), few are familiar with their analogs 
+in dimensions four and higher. Of course, this is because we are not 
+equipped to perceive four-dimensional space directly.
+
+    Nevertheless, the description of the regular solids in all dimensions 
+has been known for a long time. The purpose of my talk will be to introduce 
+you to these objects, with an emphasis on how to think about them. This 
+presentation will be spiced up with some models of four-dimensional regular 
+solids, some of which you can build yourself. 

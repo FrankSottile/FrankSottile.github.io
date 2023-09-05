@@ -1,0 +1,13 @@
+Higher convexity for complements of tropical objects
+
+Gromov generalized the notion of convexity for open subsets   
+of R^n with hypesurface boundary, defining k-convexity, or
+higher convexity and Henriques applied the same notion to 
+complements of amoebas.  He conjectured that the complement 
+of an amoeba of a variety of codimension k+1 is k-convex.  
+I will discuss work with Mounir Nisse in which we study the 
+higher convexity of complements of coamoebas and of tropical 
+varieties, proving Henriques' conjecture for coamoebas and 
+establishing a form of Henriques' conjecture for tropical 
+varieties in some cases.   
+

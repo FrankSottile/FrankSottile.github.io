@@ -1,0 +1,12 @@
+A-Discriminant Coamoebas in Dimension Three
+
+  The coamoeba of a subvariety V of the torus is the set of arguments 
+of points of V.  The closure of a coamoeba is the union of coamoebae 
+of its initial schemes, which are indexed by the cones in its tropical 
+variety.    We describe the closure of the coamoeba of a reduced  
+A-discriminant in dimension three.  Surprisingly, only the initial
+schemes coming from elements of the Gale dual of A contribute, which
+leads to an inductive construction of an A-discriminat as an overlapping
+union of polyhedra.  This is joint work with Mounir Nisse.
+
+

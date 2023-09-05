@@ -1,0 +1,13 @@
+The Five Color Theorem
+
+Doodling on a map of England in 1852, Francis Guthrie noticed that only
+four colors were needed to color the counties.  He conjectured that any
+map could be colored with only four colors.   Several mathematicians
+tried and failed to prove this; notably in 1879 Kempe published a proof
+and only in 1890 was the flaw found by Heawood.  This four color conjecture
+evaded a proof until 1972, when Appel and Haken gave a proof that required
+a computer.  While there is as yet no Human readable proof, Kempe's
+argument suffices to prove that five color suffice, and this gives a flavor
+of known proofs of the four color theorem.  I will sketch this history
+and prove the five color theorem, and then discuss the coloring theorem
+for other surfaces (torus, projective plane, Klein bottle...)

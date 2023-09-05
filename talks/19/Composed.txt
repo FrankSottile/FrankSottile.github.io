@@ -1,0 +1,17 @@
+Compositions of Schubert Problems
+
+A composition of Schubert problems is a construction
+that takes two Schubert problems on possibly different
+Grassmannians and gives a Schubert problem on a larger
+Grassmannian whose number of solutions is the product of
+the numbers of solutions of the original problems.  This 
+generalizes a construction that was discovered while 
+classifying Schubert problems with imprimitive Galois 
+groups.
+
+I will explain this construction and the product formula,
+which has both an algebraic and a bijective proof. I will
+also discuss how this construction is related to Galois 
+groups of Schubert problems.  This is joint work with 
+Li Ying and Robert Williams.
+

@@ -1,0 +1,9 @@
+Certification for polynomial system via square subsystems
+
+An important problem in numerical algebraic geometry is to certify
+the solutions to a system of polynomial equations that is
+overdetermined.  In this talk I will discuss approaches that
+start with certified solutions to a square system and use
+additional global information, including intersection theory and
+liaison.  This is joint work with Timothy Duff and Nickolas Hein
+ 

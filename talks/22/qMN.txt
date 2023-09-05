@@ -1,0 +1,13 @@
+A Murnaghan-Nakayama formula in quantum Schubert calculus
+
+   The  Murnaghan-Nakayama formula  expresses  the  product of  a
+Schur function  with a  Newton power  sum in  the basis  of Schur
+functions.   In geometry,  a Murnaghan-Nakayama  formula computes
+the  intersection of  Schubert cycles  with tautological  classes
+coming from the Chern character.  In previous work with Morrison,
+we establshed a Murnaghan-Nakayama formula in the cohomology of a
+flag variety and conjectured a version for the quantum cohomology
+ring of  the flag  variety.  In  this talk,  I will  discuss some
+background, and  then some  recent work proving  this conjecture.
+This  is joint  work with  Benedetti, Bergeron,  Colmenarejo, and
+Saliola.

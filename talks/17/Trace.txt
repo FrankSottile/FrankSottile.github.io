@@ -1,0 +1,18 @@
+The trace test in numerical algebraic geometry
+
+Numerical algebraic geometry uses tools from numerical analysis
+to study algebraic varieties on a computer.  In numerical algebraic 
+geometry, a variety X is represented by a witness set, which is 
+a linear section of X in a projective or affine space.
+A fundamental step is numerical irreducible decomposition that
+decomposes a witness set into subsets corresponding to the 
+irreducible components of X using monodromy and the trace test.
+
+In this talk I will introduce numerical algebraic geometry and 
+witness sets, and describe numerical irreducible decomposition, 
+including a new and elementary proof of the trace test.  I will 
+then explain versions of witness sets, the trace test, and numerical 
+irreducible decomposition for multihomogeneous varieties X
+that take advantage of this structure.
+
+This is joint work with Anton Leykin and Jose Rodriguez.

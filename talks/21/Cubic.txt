@@ -1,0 +1,11 @@
+Cardano and the cubic
+
+Frank Sottile
+
+  You all know the quadratic formula for the solutions to a quadratic
+equation.  What you may not know is that there is a formula for the
+solutions to a cubic equation (and also for a quartic equation), due 
+to the Italian mathematicans Tartaglia, Cardano, and Ferraro.  I will 
+talk about these formulas, as well as the amazing human story of
+professional jealousy and intrigue.   We will also learn how and why 
+mathematicians became comfortable with `imaginary' numbers.

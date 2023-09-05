@@ -1,0 +1,15 @@
+Solving Sparse Decomposable Systems
+
+Esterov classified the monodromy/Galois groups of sparse systems of 
+polynomials---they are either full symmetric or imprimitive, and
+when imprimitive there is a recursive structure, reducing them
+to systems that are full symmetric.  We first show how the total space of 
+solutions to systems with imprimitive monodromy is a sequence of 
+decomposable projections in the sense of Amendola et al., corresponding
+to Esterov's recursive structure.   We show how to exploit this structure 
+to reduce solving an imprimitive system of sparse polynomails to solving 
+a sequence of much smaller systems of polynomials with symmetric monodromy.
+
+I will explain these structures and this work, which is joint with
+Brysiewicz, Rodriguez, and Yahl, and present computational results
+of an implementation of this algorithm in Macaulay 2.

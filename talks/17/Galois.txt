@@ -1,0 +1,20 @@
+ Galois groups in Enumerative Geometry and Applications
+ 
+    In 1870 Jordan explained how Galois theory can be applied
+ to problems from enumerative geometry, with the group encoding
+ intrinsic structure of the problem.  Earlier Hermite showed
+ the equivalence of Galois groups with geometric monodromy
+ groups, and in 1979 Harris initiated the modern study of
+ Galois groups of enumerative problems.  He posited that 
+ a Galois group should be `as large as possible' in that it
+ will be the largest group preserving internal symmetry in 
+ the geometric problem.
+
+   I will describe this background and discuss some work
+ in a long-term project to compute, study, and use Galois
+ groups of geometric problems, including those that arise    
+ in applications of algebraic geometry.  A main focus is  
+ to understand Galois groups in the Schubert calculus, a 
+ well-understood class of geometric problems that has long
+ served as a laboratory for testing new ideas in enumerative 
+ geometry.

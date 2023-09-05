@@ -1,0 +1,20 @@
+Galois groups in enumerative geometry
+
+Camille Jordan observed that Galois groups arise in 
+enumerative geometry, and we now also understand them
+as monodromy groups.  Recent advances in theory and 
+technology have enabled the study of these Galois groups
+in the context of the Schubert calculus for Grassmannians.
+A picture is emerging from this study of an apparent 
+dichotomy; all known Schubert Galois groups are either the 
+full symmetric group or are imprimitive, and hints of a 
+classification are emerging.  Recently, Esterov considered 
+this question for systems of sparse polynomials and proved 
+this dichotomy in that setting.   While this classification 
+identifies polynomial systems with imprimitive Galois groups, 
+it does not identify the groups.  
+
+I will sketch the background, including some of the results
+in the Schubert calculus before explaining Esterov's 
+classification and ongoing work identifying some of the 
+imprimitive Galois groups for polynomial systems.

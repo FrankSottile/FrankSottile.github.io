@@ -1,0 +1,17 @@
+Toric compactifications and discrete periodic operators
+
+Toroidal compactifications of Bloch varieties and Fermi surfaces for operators on
+discrete periodic graphs were used explicitly in the 1990's and implicitly
+recently.  In this work, the graphs all had a similar (but common and important)
+structure.  The theoretical foundations for toroidal compactifications---toric
+varieties has advanced considerably since the 1990's, including their
+structures as real algebraic varieties.
+
+  I will explain how to associate a pair of projective toric varieties to any
+discrete periodic graph G such that the Bloch variety and Fermi surfaces of any
+operator on G are naturally hypersurfaces in these toric varieties.  Not only does
+this provide a uniform construction of compactifications, but these toric
+varieties naturally admit a non-standard algebraic anti-holomorphic involution.
+When the operator is self-adjoint, the Bloch variety and Fermi surfaces become
+real algebraic hypersurfaces in their ambient non-standard real toric variety.
+

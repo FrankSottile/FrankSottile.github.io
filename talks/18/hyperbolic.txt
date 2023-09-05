@@ -1,0 +1,15 @@
+Hyperbolic Soccer Ball
+
+ Frank Sottile      sottile@math.tamu.edu
+
+
+  We are all familiar with the basic Euclidean geometry 
+of the plane, including the behaviour of parallel lines 
+and angles in triangles. This familiarity may lead us to 
+that it is a law of nature that parallel lines are always 
+the same distance apart and the sum of the angles of a 
+triangle is 180 degrees. The purpose of this activity 
+is to disabuse us of this misconception.
+  
+  We will do that by building and studying a beautiful 
+and thought-provoking model of the hyperbolic plane.

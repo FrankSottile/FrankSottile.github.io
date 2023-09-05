@@ -1,0 +1,5 @@
+Some Basic Questions About Amoebae
+
+Thorsten has long had an interest in amoebae of subvarieties of the
+algebraic torus.  To pique his interest further, I offer some open
+problems concerning the structure or computing/describing amoebas.

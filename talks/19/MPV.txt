@@ -1,0 +1,12 @@
+A numerical toolkit for multiprojective varieties
+
+A multiprojective variety is a subvariety of a product 
+of projective spaces. They may be studied as projective 
+varieties under the Segre embedding or locally as affine 
+varieties in an affine patch. Both approaches have 
+disadvantages, increasing complexity or ignoring structure. 
+I will discuss methods from numerical algebraic geometry 
+to study multiprojective varieties that take advantage 
+of their structure and do not increase the complexity 
+of the numerical representation. This is joint work with 
+Hauenstein, Leykin, and Rodriguez.

@@ -1,0 +1,16 @@
+General witness sets
+
+Frank Sottile
+
+Numerical algebraic geometry has a close relationship to
+intersection theory from algebraic geometry.  We deepen this
+relationship, explaining how rational or algebraic equivalence
+gives a homotopy.  We present a general notion of witness set
+for subvarieties of a smooth complete complex algebraic variety
+using ideas from intersection theory.  Under appropriate
+assumptions, general witness sets enable numerical algorithms
+such as sampling and membership.  These assumptions hold for
+products of flag manifolds.  We introduce Schubert witness sets,
+which provide general witness sets for Grassmannians and flag
+manifolds.
+

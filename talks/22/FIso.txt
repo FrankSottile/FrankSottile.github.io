@@ -1,0 +1,17 @@
+Finite Fermi Isospectrality
+
+Given a discrete operator L on a Z^d-periodic graph with a periodic potential,
+Floquet theory refines the spectrum of L in terms of the unitary characters of
+Z^d.  This gives the Floquet Variety whose level sets at a fixed energy are Fermi
+varieties.  A natural question is how much do the resulting Floquet and Fermi
+varieties determine the potential and parameters of the graph?  Potentials with
+the same Floquet (Fermi) varieties are Floquet (Fermi) isospectral.  For the
+Schroediniger operator on the grid graph on Z^d acted on by the free abelian
+subgroup q_1Z + ... + q_d Z (q_i are pairwise coprime), Kappeler showed that
+there are only finitely many potentials Floquet isospectral to a given
+potential.  Liu introduced the term Fermi isospectrality and considered it for
+separable potentials when d=2. 
+
+This talk will discuss this history and present continuing work with Faust and
+Liu studying Fermi isospectrality for the grid graph when d=2.
+ 

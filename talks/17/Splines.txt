@@ -1,0 +1,14 @@
+Semialgebraic splines
+
+Semialgebraic splines are functions that are piecewise polynomial 
+with respect to a cell decomposition of their domain into sets 
+defined by polynomial inequalities. We study bivariate semialgebraic 
+splines, computing the the dimension of the space of splines with 
+large degree in two extreme cases when the cell decomposition has 
+a single internal vertex. First, when the forms defining the edges 
+span a two-dimensional space of forms of degree n---then the curves 
+they define meet in n^2 points in the complex projective plane. 
+In the other extreme, the curves have distinct slopes at the vertex 
+and do not simultaneously vanish at any other point.
+
+This is joint work with Michael DiPasquale and Lanyin Sun 

@@ -1,0 +1,16 @@
+Galois Groups for Systems of Equations
+
+Camille Jordan observed that Galois groups arise in 
+enumerative geometry, and we now also understand them
+as monodromy groups. A study of this question in the
+Schubert calculus has determined many such Galois groups,
+all known Schubert Galois groups are either the full
+symmetric group or are imprimitive.  Recently, Esterov considered 
+this question for systems of sparse polynomials and proved 
+this dichotomy in that setting.   While this classification 
+identifies polynomial systems with imprimitive Galois groups, 
+it does not identify the groups.  
+
+I will sketch the background, before explaining Esterov's 
+classification and ongoing work identifying some of the 
+imprimitive Galois groups for polynomial systems.

@@ -1,0 +1,24 @@
+Irrational Toric Varieties
+
+Classical toric varieties come in two flavours:  Normal toric 
+varieties are given by rational fans in R^n.  A (not necessarily 
+normal) affine toric variety is given by finite subset A of Z^n.
+When A is homogeneous, it is projective.   Applications of 
+mathematics have long studied the positive real part of a 
+toric variety as the main object, where the points A may
+be arbitrary points in R^n.  For example, in 1963 Birch 
+showed that such an irrational toric variety is homeomorphic 
+to the convex hull of the set A. 
+
+Recent work showing that all Hausdorff limits of translates of
+irrational toric varieties are toric degenerations suggested 
+the need for a theory of irrational toric varieties associated 
+to arbitrary fans in R^n.  These are R^n_>-equivariant cell 
+complexes dual to the fan.  Among the pleasing parallels
+with the classical theory is that the space of Hausdorff limits 
+of the irrational projective toric variety of a finite set A 
+in R^n is homeomorphic to the secondary polytope of A.
+
+This talk will sketch this story of irrational toric varieties.
+It represents work with Garcia-Puente, Zhu, Postinghel, 
+Villamizar, and Pir.

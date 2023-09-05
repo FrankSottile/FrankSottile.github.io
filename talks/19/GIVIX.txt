@@ -1,0 +1,16 @@
+Schubert Galois Groups
+
+Problems from enumerative geometry have Galois groups.  Like those from
+field extensions, these Galois groups reflect the internal structure of
+the original problem.  The Schubert calculus is a class of problems in
+enumerative geometry that is very well understood, and may be used as a
+laboratory to study new phenomena in enumerative geometry.
+
+I will discuss this background, and sketch a picture that is emerging
+from a sustained study of Schubert problems from the perspective of
+Galois theory.  This includes a conjecture concerning the possible
+Schubert Galois groups, a partial solution of the inverse Galois problem,
+as well as glimpses of the outline of a possible classification of
+Schubert problems for their Galois groups.
+
+

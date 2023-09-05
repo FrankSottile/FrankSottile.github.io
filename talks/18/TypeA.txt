@@ -1,0 +1,9 @@
+A geometric proof of an equivariant Pieri rule for flag manifolds
+
+The Pieri formulas describes the multiplication of 
+Schubert classes in the equivariant cohomology of 
+any manifold of partial flags.  I will describe how 
+to use geometric and combinatorial arguments that 
+provide a short proof of an equivariant Pieri rule 
+in the classical flag manifold. This is joint work 
+with Changzheng Li, Vijay Ravikumar, and Mingzhi Yang.

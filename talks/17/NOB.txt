@@ -1,0 +1,13 @@
+Newton-Okounkov Bodies and Khovanskii Bases for Applications
+
+Newton-Okounkov bodies were introduced by Kaveh-Khovanskii 
+and Lazarsfeld-Musta\c{t}\u{a} to extend the theory of Newton 
+polytopes to functions more general than Laurent polynomials. 
+This theory has at least two implications for applications. 
+First is that Newton-Okounkov bodies provide an approach to 
+counting the number of solutions to systems of equations that 
+arise in applications. Another is that when the Newton-Okounkov 
+body is an integer polytope (there is a Khovanskii basis), there 
+is a degeneration to a toric variety which in principal should 
+give a numerical homotopy algorithm for computing the solutions. 
+This talk will sketch both applications. 

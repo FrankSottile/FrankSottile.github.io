@@ -1,0 +1,5 @@
+Classical toric varieties come in two flavours:  Normal toric  varieties are given by rational fans in ${\mathbb R}^n$.  A (not necessarily normal) affine toric variety is given by finite subset $A$ of ${\mathbb Z}^n$.  When $A$ is homogeneous, it is projective.   Applications of mathematics have long studied the positive real part of a 
+toric variety as the main object, where the points $A$ may be arbitrary points in ${\mathbb R}^n$.  For example, in 1963 Birch showed that such an irrational toric variety is homeomorphic to the convex hull of the set $A$. 
+
+Recent work in applications suggested the need for a richer theory, one that  starts with an arbitrary fan in ${\mathbb R}^n$. This has been developed in collaboration with Ata Pir.   The resulting irrational toric variety is an ${\mathbb R}_>^n$-equivariant cell complex that is dual to the fan.  Among many pleasing parallels with the classical theory is that for normal fans to polytopes, the irrational toric variety is homeomorphic to the polytope.
+

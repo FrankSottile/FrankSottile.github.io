@@ -1,0 +1,11 @@
+Archimedean Solids
+
+Most of us know the five Platonic (or regular) solids; next 
+to the sphere, they are the most regular and beautiful objects 
+in our three-dimensional world.  Less well-known are the 
+Archimedean or semi-regular solids.   In this math circle 
+activity, we will recall the Platonic solids, and then 
+explore the Archimedean solids, and some relations between
+them.  We will be building them and then studying our
+constructions.  If time, I will explain their relation to
+fair dice.

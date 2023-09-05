@@ -1,0 +1,6 @@
+Non Linear Algebra at the ICERM
+
+I will sketch some challenges and exercises
+related to the current program, and share my
+thoughts on how best to take advantage of 
+the thematic semester.

@@ -1,0 +1,23 @@
+Numerical irreducible decomposition for multiprojective varieties.
+
+Frank Sottile
+
+A common structure of algebraic equations and varieties from the
+applications of mathematics is multihomogeneity, so that the
+resulting varieties are subvarieties of products of projective
+spaces, called multiprojective varieties.  Hauenstein and
+Rodriguez introduced a version of witness sets (witness collections)
+for these and an algorithm for their numerical irreducible
+decomposition.  This was refined to an optimal algorithm when there
+are two factors in work with Leykin and Rodriguez.  is finding a 
+version of the trace test that does not suffer from combinatorial 
+explosion.
+
+In this talk, I will describe this background and subsequent work
+of we four that uses dimension reductions and merging based on
+Bertini's Theorem.  This gives a minimal version of multiprojective
+witness collections, matroidal witness sets, as well as an optimal
+algorithm for numerical irreducible decomposition of such varieties
+whose trace test avoids combinatorial explosion.  This is joint work
+with Hauenstein, Leykin, and Rodriguez.
+

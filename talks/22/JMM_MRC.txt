@@ -1,0 +1,8 @@
+Algebraic Varieties at Infinity
+
+  Algebraic geometry has long been interested in the behavior at infinity
+of solutions to polynomial equations or varieties.  It is known that asymptotically,
+the structure of a variety is governed by its tropical variety, and object from
+geometric combinatorics.  This in turn leads to natural compactifications, complete
+with coordinate charts in which to study these points at infinity.  My talk will
+give a sketch of this technology suitable for a general audience.

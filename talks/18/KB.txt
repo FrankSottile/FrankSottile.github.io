@@ -1,0 +1,16 @@
+A homotopy algorithm from Khovanskii bases 
+
+Khovanskii bases are an algorithmic tool arising from the
+theory of Newton-Okounkov bodies, which associates a
+convex body to a linear space L of functions on a variety.
+Not every space L of functions has a Khovanskii basis, but
+when it does, the Khovanskii basis allows common symbolic
+algorithms on the section ring of L.  Also in this case,
+the Newton-Okounkov body is a rational polytope, and a flat 
+degeneration to a toric variety, which gives a numerical 
+homotopy that can compute all solutions to systems of 
+equations coming from L.   My talk, which is joint work with 
+Elise Walker and Michael Burr, will explain these terms,
+and sketch the homotopy algorithm.
+
+

@@ -1,0 +1,17 @@
+Euclidean Distance Degree via Mixed Volume
+
+The Euclidean distance degree (EDD) of a variety X in R^n measures
+the algebraic complexity of computing the point of X closest to a
+general point u in R^n.  It is the number of critical points of the
+complexified distance function from u to X.  Known formulas involve
+polar classes of the conormal variety to X or Chern classes of X.
+
+In this talk, I will discuss formulas of a different character, when
+X is a hypersurface whose defining equation is general given its
+Newton polytope.  In this case, the EDD is shown to be the mixed
+volume of the critical point equations.  This uses Bernstein's Other
+Theorem, which is of independent interest.  We give an interesting
+closed formula for the EDD when the Newton polytope is a rectangular
+parallelepiped.  This is joint work with Paul Breiding and James
+Woodcock.
+ 

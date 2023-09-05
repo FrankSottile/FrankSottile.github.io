@@ -1,0 +1,10 @@
+The Bergman fan and the coamoeba of a linear space
+
+The coamoeba of an algebraic subvariety of a complex torus is the
+set of arguments of its points.  While this is an object from complex
+analysis, it has surprisingly combinatorial structures coming from its
+boundary, called the phase limit set.  We illustrate this in the
+comaoeba and phase limit sets of a linear subspace, showing that its
+dimension and boundary components may be described largely using the
+Bergman fan of the corresponding matroid.   All terms will be described,
+and some pictures will be shown.  This is joint work with Mounir Nisse.

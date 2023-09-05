@@ -1,0 +1,7 @@
+Balls and Boxes:  Common shapes in uncommon dimensions
+
+  Today, we will explore how common shapes---balls, cubes,    
+triangles, and others---behave strangely in high-dimensional
+space.   This is also an exploration of regular solids in
+dimensions greater than four.
+ 

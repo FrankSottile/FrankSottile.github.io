@@ -1,0 +1,12 @@
+Archimedes's Theorems about pi
+
+   The Ancient Greeks knew of at least four constants related to
+circles and spheres, such as the ratio of the circumference to the
+diameter of a circle, or the ratio of the volume of a sphere to a
+cube inscribing it.  What they did not know, but may have
+suspected, is that these constants are all essentially the same
+(maybe after multiplying by some rational number like 1/6).  The
+essential equality of these four constants was discovered and
+proven by Archimedes, perhaps the greatest mathematician of
+antiquity.  On this pi day in 2019, I will explain this and more,
+and give you an idea of his amazing proofs.

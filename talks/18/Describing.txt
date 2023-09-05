@@ -1,0 +1,16 @@
+Describing Amoebas
+
+  Amoebas and coamoebas are curvilinear cousins of tropical varieties,
+which consist of the lengths and the arguments, respectively, of an 
+algebraic subvariety of the torus.  Purbhoo's Nullstellensatz shows
+that the amoeba of a variety is the intersection of amoebas of 
+hypersurfaces coming from its ideal.  Subsequent work has involved
+approximating amoebas and showing that zero-dimensional amoebas are
+the finite intersection of hypersurface amoebae.  
+
+  Starting from the observation that amoebas and coamoebas are 
+semi-algebraic sets, I propose the problem of finding a description
+of these tropical cousins as semi-algebraic sets.  This appears hard, 
+even for curves in low-dimensional tori.  I will also discuss progress 
+with Nisse towards classifying those amoebas that are the finite 
+intersection of hypersurface amoebas.

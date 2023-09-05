@@ -1,0 +1,14 @@
+Bruce gegen Hilbert '88
+
+In Hilbert's celebrated 1888 paper, he gave a an enigmatically
+nonconstructive proof that a positive ternary quartic was the sum
+of three squares.  Bruce Reznick's influential oeuvre on positivity
+and sums of squares took a different, decidedly constructive, 
+approach to positivity.
+
+I will relate a story of my interaction with Bruce and Hilbert's
+theorem that began with a mind-blowing computation of Powers and
+Reznick.  This led to a most enjoyable series of lunches during
+a conference at Rennes in 2001, and to an entirely new proof and 
+explicit form of Hilbert's Theorem, that a smooth positive ternary
+quartic has essentially eight representations as a sum of squares.

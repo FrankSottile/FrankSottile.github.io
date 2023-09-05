@@ -1,0 +1,14 @@
+The phase limit set of linear spaces and discriminants
+
+Frank Sottile
+
+As an amoeba is the set of lengths  of points in a variety, its coamoeba is
+the set of angles (arguments) of its points.  The set of limiting arguments
+forms its  phase limit  set.  This combinatorial  backbone of  the coamoeba
+reflects  the structure  of  the  tropical variety.   We  give a  recursive
+description of the phase limit  set of a linear space/hyperplane complement
+in terms of the flats of the  hyperplane arrangement.  We use this to study
+the phase limit set  of a reduced discriminant, showing that  it is a union
+of prisms  over discriminants  of lower dimension.   We conjecture  that in
+dimension at least 3  the discriminant is a subset of  its phase limit set,
+which implies that that coamoeba discriminant has a polyhedral structure.

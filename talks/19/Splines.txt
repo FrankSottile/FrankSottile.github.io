@@ -1,0 +1,16 @@
+Bivariate Semialgebraic Splines
+
+We consider bivariate splines over partitions defined by 
+arcs of irreducible algebraic curves.  We compute the 
+dimension of the space of semialgebraic splines in two 
+extreme cases.  If the forms defining the edges span a 
+three-dimensional space of forms of degree $n$, then we 
+show that the dimensions can be reduced to the linear case.  
+If the partition is sufficiently generic, we give a 
+formula for the dimension of the spline space in large 
+degree and bound how large the degree must be for the 
+formula to be correct.  We also study the dimension of 
+the spline space in some examples where the curves do 
+not satisfy either extreme.  The results are derived 
+using commutative and homological algebra.  This is joint
+work with Michael DiPasquale

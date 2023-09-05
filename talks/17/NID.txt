@@ -1,0 +1,13 @@
+Numerical Irreducible Decomposition for Multiprojective Varieties
+
+Subvarieties of a product of projective spaces (multiprojective
+varieties) have natural representations in numerical algebraic
+geometry through multiprojective witness sets, which have significantly
+lower complexity than a classical witness set for these varieties.  
+Algorithms based on multiprojective witness sets take advantage of 
+the inherent structure of multiprojective varieties.
+
+This talk will describe numerical irreducible decomposition in 
+this setting, paying attention to how it exploits the structure
+of multiprojective varieties.  It represents joint work with 
+Leykin and Rodriguez.

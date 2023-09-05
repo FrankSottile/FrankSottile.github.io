@@ -1,0 +1,21 @@
+Toric Geometry for Spectral Theory
+
+The spectrum of a Schrodinger operator records the energy levels of
+particles in a quantum system.  For a periodic medium, and after the
+Fourier (Floquet) transform, the spectrum becomes an analytic
+hypersurface in T^n x R (T := unit circle), which reveals more of its
+structure.  Discretizing, we obtain an operator on a (weighted)
+Z^n-periodic graph whose spectrum is an algebraic hypersurface in T^n
+x R.  A number of physically important properties become questions in
+algebraic geometry, including the non degeneracy of spectral edges,
+embedded eigenvalues, and the density of states.
+
+These questions were spectacularly addressed in the 1990's in a series
+of papers by Baettig, Gieseker, Knoerer, and Trubowicz.  But this was
+for a particuar operator on a particular periodic graph, using a
+compactification in a torioidal embedding.  The ensuing 30 years have
+seen a deepening of the theory of toric varieties along with a
+development of spectral theory (and more open questions).  This talk
+sketches some of this, in particular that these questions remain open
+for operators on more general discrete periodic graphs.  It may serve
+as an informal introduction to this emerging application area.

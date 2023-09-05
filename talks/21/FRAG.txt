@@ -1,0 +1,17 @@
+Real algebraic geometry in spectral theory
+
+A class of problems involving the spectrum of operators on a
+discrete periodic graph were recenty realized as algebraic-geometric
+in nature, opening up the possibility of using ideas and methods
+from algebraic geometry to address these problems.
+
+In my talk, I will describe one of these problems, and how ideas
+from algebraic geometry were used to study it.  I am offering this 
+talk at this conference because these questions are naturally
+posed as problems in real algebraic geometry and are instances
+of nonstandard real structures on toric varieties---a topic that
+I first learned of from Slava Kharlamov.
+
+This is joint work with Peter Kuchment, Ngoc Do, and Matthew Faust.
+
+

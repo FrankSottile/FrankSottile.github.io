@@ -1,0 +1,14 @@
+Irrational toric varieties and the secondary polytope
+
+The secondary fan of a point configuration A in R^n encodes
+all regular subdivisions of A.  These subdivisions also record 
+all limiting objects obtained by weight degenerations of the
+irrational toric variety X_A parameterized by A.
+
+The secondary fan is the normal fan of the secondary polytope.
+We explain a functorial construction of R^n-equivariant cell 
+complexes from fans that, when applied to the secondary fan,
+realizes the secondary polytope as the moduli space of translations
+and degenerations of X_A.  This extends the work of Kapranov,
+Sturmfels and Zelevinsky (who established this for complex toric
+varieties when A is integral) to all real configurations A.

@@ -1,0 +1,18 @@
+A Murnaghan-Nakayama formula in quantum Schubert calculus
+
+   The Murnaghan-Nakayama  rule expresses  the product  of a
+Schur function with a Newton power sum in the basis of Schur
+functions.   As  the  power  sums generate  the  algebra  of
+symmetric  functions,  the  Murnaghan-Nakayama  rule  is  as
+fundamental as  the Pieri rule.  Interesting,  the resulting
+formulas from the  Murnaghan-Nakayama rule are significantly
+more  compact  than  those   from  the  Pieri  formula.   In
+practice,  it follows  from the  rule for  multiplying schur
+functions for hook-shaped partitions.
+
+In this talk,  I will discuss some background,  and then our
+work  establishing  a  Murnaghan-Nakayama rule  for  quantum
+Schubert polynomials,  which has been challenging.   This is
+joint work with Morrison,   Benedetti, Bergeron, Colmenarejo,
+and Saliola.
+
