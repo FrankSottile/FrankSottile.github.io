@@ -1,0 +1,24 @@
+An inequality of Kostka numbers and Galois groups of Schubert problems of lines
+
+Tensor decompositions of rational sl_2-modules and Schubert calculus on the
+Grassmannians of lines are both governed by fillings of Young tableaux with 
+two rows, which are certain Kostka numbers.  While these Kostka numbers
+satisfy a simple recursion, there is no closed formula for them in general.
+
+This details of this recursion have geometric consequences, for if the terms 
+are always unequal (or if both equal 1), then a lemma of Vakil and a geometric
+explanation of the recursion (due to Schubert) imply that all Schubert 
+problems involving lines have Galois group that is at least alternating.  
+Extensive computation suggested that this is the case.
+
+The inequality is easy, in most cases.  To treat the remaining cases,
+we discovered a formula for these Kostka numbers as trigonometric
+integrals, which should be of independent interest.   This integral 
+formula reduces the inequaity of Kostka numbers to the positivity of 
+certain trigonometric integrals, which are established by estimation.  This shows 
+that Galois groups of Schubert problems of lines are at least alternating.
+
+My talk will describe this story with a emphasis on its combinatorial
+aspects.  This is joint work with Christopher Brooks and Abraham
+Martin del Campo, who were, respectively, an undergraduate and a
+graduate student at the time of this research.

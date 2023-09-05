@@ -1,0 +1,19 @@
+Bounds for the number of real solutions to systems of equations.
+
+  Frank Sottile
+
+   Computing, counting, or even deciding on the existence
+of real solutions to a system of polynomial equations
+is a very challenging problem that is important in many
+applications of mathematics.   There is an emerging
+landscape of structure in the possible numbers of
+real solutions to systems of polynomial equations.
+These include fewnomial upper bounds, gaps or congruences,
+and lower bounds.  My talk will survey what is known
+about these bounds, focussing on lower bounds---which
+are existence proofs of solutions---and open problems,
+including some concrete challenges.
+
+   I apologize that this talk does not represent new
+work, but rather surveys the area.  I am practicing a
+talk for later in the week.

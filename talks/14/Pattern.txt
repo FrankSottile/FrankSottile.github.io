@@ -1,0 +1,15 @@
+Cohmological Consequences of the Pattern Map
+
+
+Billey and Braden defined maps on flag manifolds of any Lie 
+type that are the geometric counterpart of permutation patterns. 
+A section of their pattern map is an embedding of the flag 
+manifold of a Levi subgroup into the full flag manifold.
+We give two expressions for the induced map on cohomology.
+One is in terms of generators and the other is in terms of 
+the Schubert basis.  We show that the coefficients in the 
+second expression are naturally Schubert structure constants 
+and therefore positive.  Similar results hold for K-theory, 
+generalizing known formulas in type A for cohomology and
+K-theory.   This is joint work with Praise Adeyemo of the
+University of Ibadan in Nigeria.

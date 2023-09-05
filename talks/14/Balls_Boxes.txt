@@ -1,0 +1,5 @@
+Boxes and Balls:  Common shapes in uncommon dimensions
+
+  Today, we will explore how common shapes---balls, cubes,    
+and others---behave strangely in high-dimensional space.
+ 

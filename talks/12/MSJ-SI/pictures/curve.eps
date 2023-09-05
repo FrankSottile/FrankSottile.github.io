@@ -1,0 +1,119 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title: Maple plot
+%%Creator: Maple 
+%%Pages:  1
+%%BoundingBox: -24 297 340 439 
+%%DocumentNeededResources: font Helvetica
+%%EndComments
+20 dict begin
+gsave
+/drawborder false def
+/m {moveto} def
+/l {lineto} def
+/C {setrgbcolor} def
+/Y /setcmykcolor where { %%ifelse Use built-in operator
+       /setcmykcolor get
+   }{ %%ifelse Emulate setcmykcolor with setrgbcolor
+       { %%def
+           1 sub 3 { %%repeat
+               3 index add neg dup 0 lt { pop 0 } if 3 1 roll
+           } repeat setrgbcolor
+       } bind
+   } ifelse def
+/G {setgray} def
+/S {stroke} def
+/NP {newpath} def
+%%%%This draws a filled polygon and avoids bugs/features
+%%%%   of some postscript interpreters
+%%%%GHOSTSCRIPT: has a bug in reversepath - removing
+%%%%the call to reversepath is a sufficient work around
+/P {gsave fill grestore reversepath stroke} def
+%%%%This function is needed for drawing text.  It takes two arguments: a
+%%%%string and a rotation. It outputs width and height.
+/stringbbox {
+    gsave NP 0 0 m    % Set origin for easy calculations.
+    dup rotate exch   % Set orientation, and put string on top.
+    false charpath flattenpath
+    0 exch sub rotate % Undo rotation.
+    pathbbox 4 2 roll pop pop  % Get dimens. of our string.
+    1.1 mul cvi exch 1.1 mul cvi exch % Pad some.
+    grestore} def
+/thin 3 def
+/medium 12 def
+/thick 16 def
+/boundarythick 20 def % thichess of bounding box
+%%IncludeResource: font Helvetica
+-126.000000 -72.000000 translate
+/defaultTitleFont {/Helvetica findfont 118 scalefont setfont} def
+/defaultFont {/Helvetica findfont 83 scalefont setfont} def
+0.1728 0.1728 scale
+1 setlinejoin
+1 setlinecap
+0.0 setgray
+/inch {72 mul} def
+/fheight 0.35 inch neg def
+    0     0     0     1 Y
+medium setlinewidth
+[] 0 setdash defaultFont
+    1     1     0     0 Y
+medium setlinewidth
+NP 670 2937 m 591 2959 l S
+NP 869 2886 m 670 2937 l S
+NP 1056 2841 m 869 2886 l S
+NP 1232 2802 m 1056 2841 l S
+NP 1396 2769 m 1232 2802 l S
+NP 1549 2741 m 1396 2769 l S
+NP 1692 2718 m 1549 2741 l S
+NP 1823 2699 m 1692 2718 l S
+NP 1945 2685 m 1823 2699 l S
+NP 2056 2675 m 1945 2685 l S
+NP 2158 2668 m 2056 2675 l S
+NP 2250 2664 m 2158 2668 l S
+NP 2333 2663 m 2250 2664 l S
+NP 2406 2664 m 2333 2663 l S
+NP 2471 2668 m 2406 2664 l S
+NP 2527 2674 m 2471 2668 l S
+NP 2575 2681 m 2527 2674 l S
+NP 2615 2689 m 2575 2681 l S
+NP 2647 2698 m 2615 2689 l S
+NP 2671 2707 m 2647 2698 l S
+NP 2688 2716 m 2671 2707 l S
+NP 2697 2725 m 2688 2716 l S
+NP 2700 2734 m 2697 2725 l S
+NP 2696 2742 m 2700 2734 l S
+NP 2686 2748 m 2696 2742 l S
+NP 2670 2753 m 2686 2748 l S
+
+%
+%   Masking
+%
+0 0 0 0 Y 
+35 setlinewidth
+NP 2286 2667 m 2347 2692 l S
+NP 2222 2637 m 2286 2667 l S
+1 1 0 0 Y
+medium setlinewidth
+NP 2648 2756 m 2670 2753 l S
+NP 2620 2756 m 2648 2756 l S
+NP 2586 2754 m 2620 2756 l S
+NP 2548 2749 m 2586 2754 l S
+NP 2504 2741 m 2548 2749 l S
+NP 2456 2729 m 2504 2741 l S
+NP 2404 2713 m 2456 2729 l S
+NP 2347 2692 m 2404 2713 l S
+NP 2286 2667 m 2347 2692 l S
+NP 2222 2637 m 2286 2667 l S
+NP 2154 2601 m 2222 2637 l S
+NP 2083 2560 m 2154 2601 l S
+NP 2009 2513 m 2083 2560 l S
+NP 1932 2459 m 2009 2513 l S
+NP 1853 2398 m 1932 2459 l S
+NP 1771 2331 m 1853 2398 l S
+NP 1688 2256 m 1771 2331 l S
+NP 1603 2173 m 1688 2256 l S
+NP 1570 2139 m 1603 2173 l S
+
+showpage
+grestore
+end
+%%EOF

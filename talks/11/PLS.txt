@@ -1,0 +1,13 @@
+The phase limit set of a variety
+
+-Frank Sottie
+
+ A complex coamoeba is the image of a subvariety of 
+a complex torus under the argument map to the real 
+torus.   Coamoebae exhibit structure that is both 
+polyhdral and curvilinear.  We describe the structure 
+of the boundary of the coamoeba of a variety, which 
+we relate to its logarithmic limit set.   Detailed 
+examples of lines in three-dimensional space illustrate 
+and motivate these results.  This is joint work with 
+Mounir Nisse.

@@ -1,0 +1,20 @@
+Discriminant Coamoebas in Dimension 2 via Homology
+
+Coamoebas of reduced A-discriminants arise when studying the 
+convergence of Mellin-Barnes integrals for the solutions to 
+the associated A-hypergeometric system.  Nilsson and Passare
+described these coamoebas, in dimension 2, as topological 
+chains in the 2-torus T^2 with piecewise-linear boundary.  
+This boundary, with opposite orientation, is the boundary 
+of a natural centrally symmetric zonotope in T^2, and they 
+showed that the union of these two chains is a cycle equal 
+to vol(A)\cdot[T^2], i.e., it covers T^2 vol(A)-many times.  
+Their proof could not be generalized to higher dimensions, 
+and it gave no intuition about the multiplicity.
+
+  In this talk, which is joint work with Passare, we give 
+a new, simpler, and elementary proof of these facts which 
+identifies the multiplicity from the pushforward of a 
+homology cycle in a torus T^A to T^2.  The ingredients 
+of this proof generalize to all dimensions, giving hope
+for a complete understanding of A-discriminant coamoebas.

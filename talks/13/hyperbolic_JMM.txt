@@ -1,0 +1,35 @@
+Hyperbolic Soccer Ball
+
+ From The Texas A&M Math Circle
+      (for middle school students)
+
+ Frank Sottile      sottile@math.tamu.edu
+ Texas A&M University
+
+
+Organization Description:
+
+  The TAMU Math Circle meets weekly at Texas A&M University 
+each Saturday for students in grades 5-8.  It is organized by
+Sottile and Phil Yasskin of the Mathematics Department and 
+Alex Sprintson of the Electrical and Computer Engineering 
+Department at Texas A&M, and supported by parent volunteers, 
+graduate students, and postdocs.  Each meeting begins 
+with a half hour of unstructured mathematical activity 
+(games, puzzles, or mathematical toys) after which
+the students split into two groups for a 90 minute 
+structured activity (including a snack break).  For more,
+see its web page: mathcircle.tamu.edu 
+
+
+Activity Description:
+
+   I will present the activity "Hyperbolic Soccer Ball".
+This is suitable for all ages, having been tested on 
+middle school students, on undergraduates, and on college 
+teachers in Nigeria.  It illustrates key geometric features 
+of the hyperbolic plane, and the participants create a 
+beautiful and thought-provoking mathematical model.
+
+This has a web page with pictures and materials
+www.math.tamu.edu/~sottile/research/stories/hyperbolic_football/

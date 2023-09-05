@@ -1,0 +1,22 @@
+Shape of Space
+
+Frank Sottile
+
+In mathematics and science, we often need to think about 
+high (3 or more) dimensional objects, called spaces, which 
+are hard or impossible to visualize. Besides the question 
+of what such objects are or could be, is the problem of 
+how can we make sense of such spaces.
+
+The goal of this discussion is to give you an idea of how 
+mathematicians manage to make sense of higher-dimensional 
+spaces, and relate this to the recent proof of the Poincare 
+conjecture that won the Millenium Prize of the Clay Institute. 
+We will do this by exploring the simplest spaces, and through 
+our explorations, we will begin to see how we may tell 
+different spaces apart.
+
+Besides bringing your enquiring minds, at least 50% of 
+the attendees need to bring a belt for those articles will 
+play a key role in our discussion.
+

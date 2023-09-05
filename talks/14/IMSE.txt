@@ -1,0 +1,24 @@
+Toric degenerations of Bezier Patches
+
+   Ideally, the applications of mathematics are a
+two-way-street:  not only does mathematics help to
+understand problems arising in engineering, but 
+that work can enrich the mathematical enterprise.
+I will present a small, but textbook example of 
+such interactions.  
+
+   A question of de Boor about the meaning of certain 
+control structures in geometric modeling was answered 
+by Garcia-Puente, Zhu, and me by appealing to toric 
+degenerations, using work of Kapranov, Sturmfels, and 
+Zelevinsky on the toric variety of secondary polytopes.   
+These algebraic geometry methods do not extend to 
+irrational toric varieties (a natural real analytic 
+generalization of toric varieties).  The work I will 
+describe with Postinghel and Villamizar extends this
+a natural real analytic generalization of toric 
+varieties, giving a dictionary between a space of 
+degenerations of an irrational toric variety and the
+corresponding secondary fan of the corresponding 
+point configuration.  Strengthening this dictionary
+should lead to a richer theory of irrational toric varieties.

@@ -1,0 +1,16 @@
+Degenerations of Irrational Toric Varieties
+
+A toric variety X_A is a subvariety of projective space P^n parameterized by a set A of
+n+1 monomials in Z^d.   Kapranov, Sturmfels, and Zelevinsky showed that the set of all
+degenerations of X_A induced by the torus in P^n is parameterized by the toric variety of
+the secondary polytope of A, and in fact Hausdorff limits of torus translates are all toric
+degenerations. 
+
+A set of n+1 real numbers A\subset R^d gives a map from the positive orthant (R_>)^d to the
+n-simplex whose closure is an irrational toric variety.   These likewise have torus
+translates by *R_>)^n and the set of irrational toric degenerations is naturally identified
+with the secondary polytope of A.  While these facts are immediate from the definitions, the
+main result of this talk, that all Hausdorff limits are toric degenerations, is not.
+The proof of this fact gives a new and completely elementary proof of the result of Kapranov,
+Sturmfels, and Zelevinsky.  This is joint work with Elisa Postinghel and Nelly Villamizar of
+Oslo. 

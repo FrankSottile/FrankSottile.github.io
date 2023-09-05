@@ -1,0 +1,16 @@
+Towards a multivariate Descartes' Rule
+
+  The gold standard in understanding the real solutions to 
+systems of equations is  Descartes' rule of signs (c. 1637),
+which bounds the number of positive zeroes of a univariate 
+polynomial by the number of changes in the signs of its 
+coefficients.  Ignoring signs, a univariate polynomial with 
+d+2 terms has at most d+1 positive zeroes.
+
+  For multivariate polynomials, the situation is not settled.
+In 1980 Khovanskii gave a version of this second estimate, which
+was refined a decade ago, but is considered to be far from 
+sharp.  Recently, there have been several results giving 
+bounds related to signs of coefficients that may suggest 
+aspects of an eventual multivariate Descartes' rule.  My talk
+will discuss the history and these recent results. 

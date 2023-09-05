@@ -1,0 +1,15 @@
+"Lower bounds for real solutions to systems of polynomials"
+
+Around 2000, as part of their work on the Shapiro conjecture,
+Eremenko and Gabrielov computed the topological degree of the
+real Wronski map.  This was often positive, which established
+a lower bound for the number of real solutions to certain
+problems in the Schubert calculus.   Since then, there have
+been many results establishing structure in the numbers
+of real solutions, particularly lower bounds, for polynomial
+systems with structure.
+
+   My talk will discuss some of this work establishing lower
+bounds that this work of Eremenko and Gabrielov engendered.
+
+

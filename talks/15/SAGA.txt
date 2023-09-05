@@ -1,0 +1,17 @@
+Some algebraic geometry in applications
+
+Frank Sottile
+
+Algebraic geometry is the study of sets which arise as 
+the common zeroes to a collection of polynomials.  It 
+is a deep and powerful subject, combining geometric     
+intuition with algebraic precision.   It is also increasingly
+a useful tool in applications of mathematics, for 
+whenever polynomials arise, the methods of algebraic
+geometry may be brought to bear on the problem at hand.
+
+I will illustrate this growing trend through a series 
+of interrelated examples of algebraic geometry
+arising in applications.
+
+

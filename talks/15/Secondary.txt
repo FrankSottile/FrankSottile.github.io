@@ -1,0 +1,18 @@
+Some more geometry in the secondary fan
+
+  A polyhedral subdivision of finitely many points A in R^d 
+is a decomposition of its convex hull into non-overlapping 
+polytopes with vertices in A.  It is regular if the polytopes 
+are projections of facets of a polyhedron in R^{d+1}.  Gelfand,
+Kapranov, and Zelevinsky introduced the secondary fan of A, 
+which encodes all regular subdivisions of A. 
+
+  I will talk on work with Postinghel and Villamizar that
+explains another geometric interpretation of the secondary fan.
+The points A give a curvilinear copy of the convex hull of
+A in the probability simplex whose vertices correspond to A
+which we call the real toric variety of A.  We consider 
+possible Hausdorff limits of translations of this real toric
+variety.  We show that the possible limits correspond to the 
+cones of the secondary fan.  Our main tool is a study of 
+sequences in the ambient space of the secondary fan.

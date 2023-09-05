@@ -1,0 +1,21 @@
+The future of computation in algebraic geometry
+
+   The ability to represent and manipulate objects in algebraic
+geometry on a computer has had a great effect on the subject.
+It has facilitated research by enabling the study of more intricate
+examples.  It has altered the course of research by opening up 
+new areas of study.  One such new area is in applications of 
+algebraic geometry in which computed examples play a major role.
+This computation has typically been symbolic.  However, current 
+and likely future trends in computer technology, specifically
+increased parallelism, will lead to a diminished role for symbolic
+computation, which is not parallelizable, and an increased role
+for parallelizable numerical computation.
+
+   My talk will discuss computation in algebraic geometry,
+both symbolic and numeric.  After an overview which includes the
+role of parallelism in symbolic and numeric computation for 
+algebraic geometry, I will discuss some of the basics of 
+numerical computation in algebraic geometry.  The talk will 
+conclude with some recent work that is making the numerical 
+future for computation in algebraic geometry possible.

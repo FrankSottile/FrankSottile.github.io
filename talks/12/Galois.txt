@@ -1,0 +1,27 @@
+Galois groups of Schubert problems
+
+   Building on work of Jordan from 1870, in 1979 Harris 
+showed that a geometric monodromy group associated to 
+a problem in enumerative geometry is equal to the Galois 
+group of an associated field extension.   Vakil gave a
+geometric-combinatorial criterion that implies a Galois
+group contains the alternating group.  These Galois groups 
+are difficult to determine, yet they contain subtle 
+geometric information.
+
+  Exploiting Harris's equivalence, Leykin and I used numerical 
+homotopy continuation to compute Galois groups of problems 
+involving mostly divisor Schubert classes, finding all to 
+be the full symmetric group.  (This included one problem 
+with 17589 solutions.) With Brooks and Martin del Campo,
+we used Vakil's criterion to show that all Schubert problems
+involving lines have at least alternating Galois group.
+
+  My talk will describe this background and sketch a current 
+project to systematically determine Galois groups of all 
+Schubert problems of moderate size on all small classical 
+flag manifolds, investigating at least several million problems.  
+This will use supercomputers employing several overlapping methods, 
+including combinatorial criteria, symbolic computation, 
+and numerical homotopy continuation, and require the development 
+of new algorithms and software.

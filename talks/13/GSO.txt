@@ -1,0 +1,18 @@
+Numerical analysis is the future of computation in algebraic geometry
+
+   The ability to represent and manipulate objects in algebraic
+geometry on a computer has had a great effect on the subject.
+The current dominant paradigm is symbolic computation using
+exact arithmetic.  Current and likely future trends in computer 
+technology will lead to a diminished role for symbolic
+computation, which is not parallelizable, and an increased role
+for parallelizable numerical computation.
+
+   My talk will discuss computation in algebraic geometry,
+both symbolic and numeric.  After an overview which includes the
+role of parallelism in symbolic and numeric computation for 
+algebraic geometry, I will discuss some of the basics of 
+numerical computation in algebraic geometry, and explain 
+how working towards this numerical future fits into the
+research of those with whom I work.
+

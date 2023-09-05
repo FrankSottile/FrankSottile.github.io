@@ -1,0 +1,15 @@
+What is Schubert Calculus ?
+Frank Sottile
+
+
+The Schubert calculus is concerned with all geometric 
+problems that involve determining the linear subspaces 
+of a vector space that have given positions with respect
+to other fixed, but general, linear subspaces.   While on 
+its face this seems to be a topic in linear algebra, such 
+problems are highly non-linear and combinatorial in nature.
+
+Today I will give you an idea of some geometric and 
+combinatorial aspects of Schubert calculus while developing 
+enough techniques to answer some simple, but non-trivial 
+problems from the Schubert calculus.  

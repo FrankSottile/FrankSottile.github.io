@@ -1,0 +1,18 @@
+Murnaghan-Nakayama Rules in Schubert Calculus
+
+   The Murnaghan-Nakayama  rule expresses  the product  of a
+Schur function with a Newton power sum in the basis of Schur
+functions.   As  the  power  sums generate  the  algebra  of
+symmetric  functions,  the  Murnaghan-Nakayama  rule  is  as
+fundamental as  the Pieri rule.  Interesting,  the resulting
+formulas from the  Murnaghan-Nakayama rule are significantly
+more  compact  than  those  from  the  Pieri  formula.   In
+geometry,   a   Murnaghan-Nakayama  formula   computes   the
+intersection  of Schubert  cycles with  tautological classes
+coming from the Chern character.
+
+In this talk, I will  discuss some background, and then some
+recent    work    with    Andrew    Morrison    establishing
+Murnaghan-Nakayama  rules for  Schubert polynomials  and for
+the quantum  cohomology of the Grassmannian.   The results I
+discuss are contained in the preprint arXiv:1507.06569.

@@ -1,0 +1,14 @@
+An Experimental Road to Mathematical Truth
+
+While the use of computers is fundamental to 
+much mathematical work in applications, in 
+pure mathematics computers are often confined 
+to small scale verification of conjectures 
+or routine computations embedded in a proof.
+
+  I will give a brief discussion of computer 
+use on a completely different scale that led 
+to the formulation and testing of conjectures 
+in geometry whose partial resolution has 
+attracted much attention.
+

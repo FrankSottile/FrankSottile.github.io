@@ -1,0 +1,15 @@
+The Algebra-Geometry Dictionary
+
+   Algebraic geometry is the study of geometric sets,
+called varieties, defined by algebraic (polynomial) 
+equations.  The equations induce algebraic structure on 
+varieties.  This core mathematical subject derives its 
+power and applicability from the interplay of the algebraic 
+structure with the geometry of varieties.   This interplay 
+leads to a precise dictionary between algebraic and 
+geometric concepts.
+
+  In these lectures, I will introduce some of the basic
+definitions in algebraic geometry with the intention  
+of explaining the dictionary between algebra and 
+geometry that underlies the subject.

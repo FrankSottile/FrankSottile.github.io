@@ -1,0 +1,8 @@
+The ubiquity of determinantal equations
+
+I will discuss how and why, from the point of view of geometry,
+equations involving determinants, or more generally minors
+of matrices, are nearly universal, and then sketch some 
+work that is intended to improve our ability to manipulate
+such equations.
+

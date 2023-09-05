@@ -1,0 +1,17 @@
+The control of linear systems and the Schubert calculus
+
+Frank Sottile
+Graduate Student Seminar
+
+Algebraic geometry enjoys many applications outside
+of mathematics.  One old(er) application is in the theory
+of linear systems, where a fundamental object is naturally
+a rational curve in a Grassmannian, and a fundamental
+problem, that of pole-assignability, has a natural 
+formulation in terms of the Schubert calculus.  This
+link has been very productive for systems theory.
+
+  My talk will explain why the geometry of Grassmannians
+is relevant to systems theory, and it will mention some 
+open problems in algebraic geometry that have recently 
+arisen from this interaction.

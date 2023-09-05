@@ -1,0 +1,22 @@
+The Optimal Littlewood-Richardson Homotopy
+
+  Numerical homotopy methods for solving systems of 
+polynomial equations may follow far more paths than
+solutions, if the equations possess extra structure.
+Devising methods to handle such structure has long
+been a focus in the area, with the most well-known
+being the polyhedral homotopies for sparse systems 
+of polynomials.  This method is optimal for square
+systems which achieve the BKK polyhedral bound.
+
+   Algebraic geometry is a source of systems that 
+have rich structure, and which may be overdetermined.
+A particular well-studied class of such systems comes
+from the Schubert calculus on the Grassmannian.
+With Vakil and Verschelde, we proposed the optimal 
+Littlewood-Richardson homotopy for Schubert calculus
+which is based on Vakil's geometric Littlewood-Richardson
+rule.  This is being implemented in Macaulay 2.
+My talk will sketch this background, explain the
+main features of this algorithm, and demonstrate
+our current implementation.

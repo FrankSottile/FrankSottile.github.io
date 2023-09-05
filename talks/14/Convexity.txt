@@ -1,0 +1,20 @@
+Higher convexity of coamoeba complements
+
+Frank Sottile
+
+Amoebas and coamoebas are the images of varieties of 
+the complex algebraic torus under coordinatewise 
+logarithm and argument maps, respectively.  As shadows
+of the original variety, they retain some of its structure.
+When the variety is a hypersurface, the connected 
+components of the complements of both the amoeba and 
+coamoeba are convex.  Henriques introduced a homological
+generalization of convexity and proved that complements 
+of amoebas satisfy a weak form of this higher convexity.
+
+   In this talk, I will explain these notions and 
+describe some of the structure of coamoebas, 
+namely their phase limit sets and shells, and then 
+sketch how to use this structure to show that complements
+of coamoebas have this higher convexity of Henriques.
+This is joint work with Mounir Nisse.

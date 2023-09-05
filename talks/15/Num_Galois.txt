@@ -1,0 +1,18 @@
+Galois Groups via Numerical Algebraic Geometry
+
+Galois groups, which are a mainstay of number theory and arithmetic 
+geometry, may be studied using methods from numerical algebraic 
+geometry, when the base field is a transcendental extension of the
+complex numbers.  This is because the well-known observation (which 
+goes back to Hermite) that in this case Galois=monodromy, and computing
+monodromy is a basic operation in numerical algebraic geometry.
+
+While simply computing monodromy enables the exploration of a
+Galois group, it can only determine the group when it is the
+full symmetric group, for there is no stopping criterion.  In work
+with Hauenstein and Rodriguez we offer two methods to determine 
+a Galois group.  For the first, we compute the branch locus, which
+leads to permutations that generate the Galois group.  The second
+uses numerical irreducible decomposition of fiber products to 
+determine the action of the Galois group, from which it may be 
+determined.

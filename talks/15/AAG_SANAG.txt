@@ -1,0 +1,15 @@
+  Generalized witness sets
+
+    The fundamental data structure in numerical algebraic
+ geometry is that of a witness set, which is considered
+ to be an instantiation of Weil's notion of a generic
+ point.  Reinterpreting a witness set in terms of duality
+ of the intersection pairing in intersection theory leads
+ to a generalization of the notion that makes sense on
+ many spaces and leads to a general notion of a witness set.
+
+   This notion is most productive for homogenous spaces, such
+ as projective spaces, Grassmannians, and their products.
+ After exlaining the general theory, I will sketch what                                                            
+ this means for the Grassmannian.
+

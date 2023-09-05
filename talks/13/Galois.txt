@@ -1,0 +1,23 @@
+Galois groups of Schubert problems
+
+   Work of Jordan from 1870 showed how Galois theory
+can be applied to enumerative geometry.  Hermite earlier
+showed that the equivalence of Galois groups with geometric 
+monodromy groups, and in 1979 Harris used this to study 
+Galois groups of many enumerative problems.   Vakil gave 
+a geometric-combinatorial criterion that implies a Galois 
+group contains the alternating group.  With Brooks and 
+Martin del Campo, we used Vakil's criterion to show that 
+all Schubert problems involving lines have at least 
+alternating Galois group.  White and I have given a new 
+proof of this based on 2-transitivity.
+
+  My talk will describe this background and sketch a 
+current project to systematically determine Galois groups 
+of all Schubert problems of moderate size on all small 
+classical flag manifolds, investigating at least several 
+million problems.  This will use supercomputers employing 
+several overlapping methods, including combinatorial 
+criteria, symbolic computation, and numerical homotopy 
+continuation, and require the development of new 
+algorithms and software.

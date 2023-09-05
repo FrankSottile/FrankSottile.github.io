@@ -1,0 +1,11 @@
+Special Relativity
+
+Frank Sottile
+
+    Einstein's theory of special relativity, like much of
+theoretical physics, may be understood to follow from simple
+principles through deductive reasoning.  In today's circle,
+we will discuss this theory, using mathematics to deduce 
+its main geometric consequences, following one of Einstein's
+treatments of the theory.
+

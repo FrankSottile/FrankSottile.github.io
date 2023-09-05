@@ -1,0 +1,20 @@
+Galois groups of Schubert problems
+
+  The Galois group of a field extension encodes all of
+its symmetries and it is the basic invariant of the
+field extension.   Enumerative geometric problems, which
+are fundamental in algebraic geometry, also have Galois
+groups which encode the symmetries and the intrinsic 
+structure of the geometric problem.
+
+   These are, however, difficult to determine and hard
+to study.   For a wide class of well-structured geometric 
+problems (the Schubert Calculus) there are many approaches
+and even some results.   My talk will introduce these
+geometric Galois groups and discuss some of the approaches
+to studying them and some of the results that we have 
+obtained.   This is ongoing work with collaborators at 
+other institutions and students at TAMU, including 
+Abraham Martin del Campo and Chris Brooks.
+
+

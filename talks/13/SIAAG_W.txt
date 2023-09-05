@@ -1,0 +1,12 @@
+Wachspress Varieties
+
+   Eugene Wachspress introduced rational barycentric coordinates for convex
+polygons in R^2, which Warren generalized to all convex polytopes in R^r.
+These Wachspress barycentric coordinates are the unique rational barycentric
+coordinates of minimal degree.  The Wachspress coordinates of a polytope P
+in R^d define a map of projective d-space to a projective space spanned by 
+the vertices of P whose image is a Wachspress variety.
+
+    In this talk, I will describe the Wachspress variety and its defining 
+ideal, which is the ideal of algebraic relations among the Wachspress coordinates.
+This is joint work with Corey Irving, Hal Schenck, and Greg Smith.

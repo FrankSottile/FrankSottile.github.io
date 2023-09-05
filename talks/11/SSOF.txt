@@ -1,0 +1,25 @@
+Symmetric output feedback control and isotropic Schubert calculus 
+
+-Frank Sottile
+
+  One area of application of algebraic geometry has been 
+in the theory of the control of linear systems.  In a very precise
+way, a system of linear differential equations corresponds to a
+rational curve on a Grassmannian.  Many fundamental questions
+about the output feedback control of such systems have been 
+answered by appealing to the geometry of Grassmann manifolds.
+This includes work of Hermann, Martin, Brockett, and Byrnes.
+
+   Helmke, Rosenthal, and Wang initiated the extension of this 
+to linear systems whose transfer functions (and state space 
+realizations) are symmetric matrices, showing that for static 
+feedback it is the geometry of the Lagrangian Grassmannian 
+which is relevant.
+
+  In my talk, I will explain this relation between geometry and
+systems theory, and give an extension of the work of Helmke, et al.
+to linear systems with skew-symmetric transfer functions.
+For static feedback, it is the geometry of spinor varieties which
+is relevant.   I will close with some challenges to algebraic
+geometry---to identify spaces of curves in the Grassmannian
+corresponding to some natural symmetry classes of transfer functions.

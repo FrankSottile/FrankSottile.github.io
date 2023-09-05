@@ -1,0 +1,8 @@
+ Dense Fewnomials
+
+    In this talk I will describe a recent extension
+of fewnomial bounds to systems of polynomials whose
+support is initermediate between fewnomials and
+generic polynomials.
+   This is joint work with Korben Rusek
+and Jeanette Shakalli.

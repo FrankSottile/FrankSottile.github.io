@@ -1,0 +1,16 @@
+Combinatorial positivity in the Schubert calculus via dual equivalence
+graphs
+
+   Algebraic geometry poses many positivity challenges to
+enumerative combinatorics.  Two notable such challenges are
+Macdonald's positivity conjecture, and structure constants in
+the Schubert Calculus.  This talk will explain how Assaf's
+solution to the first, through her new method for showing
+symmetry and Schur-positivity of quasi-symmetric generating
+functions, may be applied to resolve a (by now old) problem
+of the positivity of some of the structure constants in the
+Schubert calculus of the flag manifold.
+
+  This is joint with with Nantel Bergeron and Sami Assaf.
+
+

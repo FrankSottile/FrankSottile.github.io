@@ -1,0 +1,22 @@
+Galois groups of Schubert problems       
+
+   In 1870 Jordan explained how Galois theory can be applied 
+to problems from enumerative geometry, with the group encoding 
+intrinsic structure of the problem.  Earlier Hermite showed 
+the equivalence of Galois groups with geometric monodromy 
+groups, and in 1979 Harris initiated the modern study of 
+Galois groups of enumerative problems.  While difficult
+to determine in general, several methods have been 
+developed recently to partially determine Galois groups 
+in the Schubert calculus.       
+
+  I will describe this background and discuss a project
+that seeks to determine Galois groups of all Schubert 
+problems of moderate size, investigating millions of 
+problems.   This project combines theoretical results
+with supercomputers employing several overlapping methods, 
+including combinatorics, symbolic computation, and numerical 
+homotopy continuation.  It is driving the development 
+of new algorithms and software, and a partial classification
+is emerging from this study.
+

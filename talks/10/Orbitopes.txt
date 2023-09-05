@@ -1,0 +1,14 @@
+Orbitopes
+
+  An orbitope is the convex hull of an orbit of a compact 
+group acting linearly on a vector space.  Instances of these
+highly symmetric conex bodies have appeared in many areas 
+of mathematics and its applications, including protein 
+reconstruction, symplectic geometry, and calibrations in 
+differential geometry.
+  In this talk, I will discuss Orbitopes from the perpectives 
+of classical convexity, algebraic geometry, and optimization
+with an emphasis on motivating questions and concrete examples.
+This is joint work with Raman Sanyal and Bernd Sturmfels.
+
+

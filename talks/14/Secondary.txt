@@ -1,0 +1,22 @@
+Some more geometry in the secondary fan
+
+  A polyhedral subdivision of finitely many points A in R^d 
+is a decomposition of its convex hull into non-overlapping 
+polytopes with vertices in A.  It is regular if the polytopes 
+are projections of facets of a polyhedron in R^{d+1}.  Gelfand,
+Kapranov, and Zelevinsky introduced the secondary fan of A, 
+which encodes all regular subdivisions of A.  When A is integral,
+Kapranov, Sturmfels, and Zelevinsky showed how this fan encodes
+all possible limiting positions of a projective toric variety 
+associated to A, under translation by the ambient torus.
+
+  I will talk on work with Postinghel and Villamizar that
+generalizes this to the situation where the points of A
+are not necessarily integral.  Here, the toric variety is 
+replaced by a curvilinear copy of the convex hull in the
+simplex.   In this case, one does not have the tools from 
+algebraic geometry (Hilbert schemes), and we instead develop
+tools based on the geometry of sequences of points in the
+secondary fan.  This work was motivated by questions in 
+geometric modeling and algebraic statistics which I plan
+to mention.

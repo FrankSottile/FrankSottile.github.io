@@ -1,0 +1,17 @@
+Newton polytopes via witness sets
+
+   The fundamental combinatorial invariant of a polynomial f is
+its Newton polytope---the convex hull of the exponent vectors 
+of its monomials.   Oftentimes, f is given implicitly and we do 
+not have access to its expansion in terms of monomials.  We 
+present numerical algorithms to determine the Newton polytope 
+of such a polynomial, in two cases.   The first algorithm assumes 
+that we may only compute values of f, and the second that we have 
+a representation of the hypersurface H defined by f as a witness set.
+
+  This talk will give background from numerical algebraic 
+geometry and present these algorithms.  We illustrate the 
+second algorithm, computing the face of the Lueroth invariant 
+corresponding to even quartics.  This is joint work with Jon
+Hauenstein.
+

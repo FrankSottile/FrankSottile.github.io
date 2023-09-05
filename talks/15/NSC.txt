@@ -1,0 +1,18 @@
+Numerical Schubert Calculus
+
+The Schubert calculus is a well-understood and fundamental class
+of geometric problems that are formulated as intersections of
+Schubert varieties on a Grassmannian.  The importance of these problems
+lies in their use as a testing ground for new ideas and that they
+are universal for certain classes of problems expressed as degeneracy
+loci of maps between bundles.   While highly-structured, they are
+far from being complete intersections and standard numerical methods
+do not perform well when solving Schubert problems.
+
+Numerical Schubert calculus consists of algorithms tailored to the
+geometry of these Schubert problems, including specialized homotopy
+algorithms, reformulation as square systems of equations, and
+notions of witness sets and regeneration.   This talk will survey
+the developments just sketched that comprise this numerical Schubert
+calculus.
+

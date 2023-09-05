@@ -1,0 +1,17 @@
+interface(quiet=true):
+thx:=45:
+thy:=150:
+thz:=210:
+lx:=80:
+ly:=140:
+
+finalx := lx*cos(thx*Pi/180) +ly*cos(thy*Pi/180) +lz*cos(thz*Pi/180):
+finaly := lx*sin(thx*Pi/180) +ly*sin(thy*Pi/180) +lz*sin(thz*Pi/180):
+
+printf("lz must be %5.1f \n",fsolve(finaly=0,lz)):
+lz:=fsolve(finaly=0,lz):
+printf("x max is   %5.1f \n",lx*cos(thx*Pi/180)+2-(lx*cos(thx*Pi/180) +ly*cos(thy*Pi/180) +lz*cos(thz*Pi/180))):
+printf("x shift is   %5.1f \n",lx*cos(thx*Pi/180) +ly*cos(thy*Pi/180) +lz*cos(thz*Pi/180)-1):
+printf("y max is   %5.1f \n",lx*sin(thx*Pi/180) +ly*sin(thy*Pi/180)+2):
+
+

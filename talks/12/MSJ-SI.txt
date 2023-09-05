@@ -1,0 +1,51 @@
+Experimentation in the Schubert Calculus
+
+   The Schubert calculus provides a rich and 
+well-structured class of problems in enumerative
+algebraic geometry, which can be used as a 
+laboratory for exploring ill-understood phenomena.
+This lecture series will discuss two such phenomena,
+reality of solutions to geometric problems and 
+intrinsic structure as detected by Galois groups.
+They will describe what we know and what we suspect,
+and the large-scale computer experimentation that
+has driven these questions and results.
+
+Lecture 1: The Shapiro Conjecture and its proof.
+  This lecture will cover the genesis, evidence
+for, and resolution of the remarkable conjecture
+of Boris and Michael Shapiro that all solutions to 
+a Schubert problem on a Grassmannian are real when 
+the flags giving the problem are tangent to a rational 
+normal curve.
+
+Lecture 2: Beyond the Shapiro Conjecture.
+  While the Shapiro Conjecture may be formulated 
+for any flag manifold, it typically fails in this 
+generality.   In some cases these failures are quite 
+interesting and the conjecture may be repaired.  
+Also in some cases, if the tangent flags are replaced 
+by disjoint secant flags, reality seems to hold.  
+This lecture will survey the emerging landscape beyond 
+the Shapiro Conjecture.
+
+Lecture 3: Lower bounds and computing Schubert problems.
+  Another phenomenon that was discovered en route to 
+the proofs of the Shapiro Conjecture are lower bounds
+on the number of real solutions to Schubert problems.
+While experimentation reveals this to be wide-spread, 
+this phenomenon is not understood well enough to formulate
+a conjecture.  In addition to explaining these lower bounds,
+this lecture will discuss how the massive (several teraHertz
+years of computing) experiments studying these phenomena
+are conducted.
+
+Lecture 4: Intrinsic structure in the Schubert calculus.
+   The symmetries of a geometric problem are encapsulated 
+in its Galois group.  While Schubert problems are quite
+structured, it is unknown which problems possess intrinsic
+structure in that their Galois groups are not the full
+symmetric group.  This lecture will discuss some preliminary
+results and the different methods that are being deployed
+to study Galois groups of the millions of computable Schubert
+problems.

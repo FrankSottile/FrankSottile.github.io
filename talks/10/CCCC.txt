@@ -1,0 +1,23 @@
+Constructing Cofree Compositional Coalgebras
+Frank Sottile
+
+   Based on ideas from higher category theory, Stefan
+Forcey defined nine families of polytopes, together with
+cellular maps that fit into a commutative grid.  Their 
+faces are indexed by certain types of trees.  Building
+on a previous study of a Hopf object built from the
+vertices of the multiplihedron (the middle family of 
+polytopes in the gris), Forcey, Lauve and I show how 
+to put Hopf structures on all these objects in a 
+uniform manner, through a general functorial construction 
+that we call a composition of two coalgebras.
+
+   This construction preserves cofreeness, and we give
+conditions under which the resulting object is a one-sided
+Hopf algebra.   The objects and maps corresponding to our
+polytopes come from composing the sequence of Hopf algebra
+maps with itself:
+
+ Permutations -> Binary plane trees -> divided powers
+
+  

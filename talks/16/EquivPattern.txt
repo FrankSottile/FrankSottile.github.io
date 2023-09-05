@@ -1,0 +1,12 @@
+Equivariant Cohomology and the Pattern Map
+
+Billey and Braden defined a geometric pattern map on flag 
+manifolds which extends the generalized pattern map of 
+Billey and Postnikov on Weyl groups.   The interaction of 
+this torus equivariant map with the Bruhat order and its 
+action on line bundles lead to formulas for its pullback 
+on the equivariant cohomology ring and on equivariant 
+K-theory.   These formulas are in terms of the Borel 
+presentation, the basis of Schubert classes, and 
+localization at torus fixed points. This is joint work 
+with Praise Adeyemo of the University of Ibadan in Nigeria.

@@ -1,0 +1,19 @@
+The Khovanskii-Rolle Algorithm
+
+   Over 30 years ago, Askold Khovanskii used a multivariate generalization
+of Rolle's Theorem to give a bound on the number of positive solutions to 
+a system of polynomial equations that depends only on the number of terms 
+appearing in the equations, and not on their degree.   Reflecting this 
+dependence, this class of bounds are called fewnomial bounds.   Khovanskii's
+proof was revisited by Bihan and Sottile, who gave a refined bound that is 
+asymptotically sharp, in a certain sense.   Subsequently, it was observed
+that Khovanskii's use of Rolle's Theorem can form the basis of a continuation 
+algorithm for numerically computing the real solutions to a system of 
+fewnomials.   This Khovanskii-Rolle algorithm finds the real solutions 
+by following real arcs, and avoids computing complex solutions to the 
+fewnomial system.  Consequently its complexity depends upon the fewnomial
+bound and not on the number of complex solutions.
+
+   This talk will explain this Khovanskii-Rolle algorithm and describe
+some technical challenges that are encountered in its implementation.
+This represents joint work with Dan Bates and Matt Niemerg.

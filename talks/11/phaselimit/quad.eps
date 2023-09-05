@@ -1,0 +1,50 @@
+%!PS-Adobe-3.0 EPSF 
+%%Title: absline.eps
+%%Creator: Frank Sottile 
+%%Pages:  1 
+%%BoundingBox: 0  0 400 164 
+%%EndComments
+
+20 dict begin
+5 5 translate
+1 setlinejoin 
+1 setlinecap
+/thx 45 def
+/thy 150 def
+/thz 210 def
+/lx 80 def
+/ly 140 def
+/lz 253.1 def
+/rad 20 def
+/lgh 60 def 
+285 1 translate
+
+2 setlinewidth
+  
+1 0 0 setrgbcolor
+newpath  0 0 moveto 0 lgh add  0 lineto stroke
+newpath  lx thx cos mul  lx thx sin mul moveto
+  lx thx cos mul lgh add   lx thx sin mul lineto stroke
+newpath  lx thx cos mul ly thy cos mul add  lx thx sin mul ly thy sin mul add moveto
+     lx thx cos mul ly thy cos mul add lgh add lx thx sin mul ly thy sin mul add 
+    lineto stroke
+    
+3 setlinewidth
+0 0 0 setrgbcolor
+newpath  0 0  rad 0 thx arc stroke
+newpath  lx thx cos mul  lx thx sin mul   rad 0 thy arc stroke
+newpath  lx thx cos mul ly thy cos mul add  lx thx sin mul ly thy sin mul add
+           rad 0 thz arc stroke
+
+
+
+% axes
+0 0 1 setrgbcolor
+newpath   0   0 moveto  lx thx cos mul  lx thx sin mul lineto 
+  lx thx cos mul ly thy cos mul add  lx thx sin mul ly thy sin mul add lineto 
+  lx thx cos mul ly thy cos mul add  lz thz cos mul add 
+  lx thx sin mul ly thy sin mul add  lz thz sin mul add  lineto  closepath
+stroke
+showpage 
+grestore 
+end 

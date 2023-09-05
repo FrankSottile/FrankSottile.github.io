@@ -1,0 +1,13 @@
+Numerical computation of Newton polytopes
+
+by Frank Sottile
+
+The Newton polytope of a polynomial f is a combinatorial approximation to f that 
+also encodes much information about the hypersurface H defined by f.  In this talk, 
+I will address the problem of how to recover the Newton polytope (or even f) when
+H is represented numerically via a witness set, which is a data structure capturing
+the notion of a generic point of H.   This talk will describe witness sets and how
+such a representation may arise without knowledge of f, explain an algorithm for 
+solving this problem, and how it was used to find a face of the Lueroth invariant.
+
+This is joint work with Jon Hauenstein
