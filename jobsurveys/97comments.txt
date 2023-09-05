@@ -1,0 +1,446 @@
+Comments from the 1996/7 YMN job survey
+
+In the YMN job survey, I asked people for their comments on their
+experiences on the job market, or anything else they wanted to say.
+I have their slightly edited responses:
+
+First, the original version of the survey included the flippant phrase:
+     "leaving mathematics for a job in finance"
+This elicited several responses:
+
+ I don't necessarily feel that I've "left mathematics" for finance.
+
+ I don't want to critize, but this is not the best way to phrase this. Say 
+ "leaving academia". There is plenty of math done on Wall Street, just 
+ most of us don't find it interesting. 
+
+Actually, I do find the mathematics invloved in finance intersting, the
+basic model used is quite elegant, but that is another story.  Also
+previous surveys joked about leaving mathematics for divinity school,
+but that was dropped after one respondent did just that.
+
+Here is some analysis:
+
+ I was told the following encouraging story by a few folks at the
+ college where I took the job:
+
+ For some years now, many colleges have been cutting back by replacing
+ retiring people with temporary positions.  This was due to a short
+ supply of 18 year olds.  Apparently, the demographics now show that
+ the famine is over and colleges are beginning to replace temporary
+ positions with tenure track ones.  Perhaps this is the beginning of
+ the end of the job crunch.
+
+And testimonials:
+
+ Just a word of hope for people out there. After almost 6 years on and
+ off the job market, I finally have a tenure track position. The
+ institution where I held a definite term position came through with a
+ tenure track offer when it was became clear I was earnestly looking for
+ a tenure track job elsewhere. (Asking the chair for 39 letters of
+ reference probably helped drive that home.)
+
+
+ The current trend (for the lucky) seems to be: grad school -- temporary
+ appointment --tenure track appointment.  Of course, people like me (with
+ tons of experience) steal some good positions from new PhDs.
+
+
+ I have quite a bit of experience with alternative forms of instruction
+ (including cooporative learning and using technology in the classroom).
+ It was clear to me that this was the major factor in my job offers.
+
+
+ I focus on applications to biology.  The inter-disciplinary nature of my
+ work seemed to usually help in the job search.
+
+ 
+ Spending a year of graduate school at a different institution helped in
+ finding a job.
+
+
+ I believe part of the reason XXXX's students are doing so well is that
+ many people prepared for non-academic careers during the last two years.
+
+
+ The post doc offer I received came from people who knew me and my work
+ well, they made their decision without looking at my application package
+ and recommendations.
+
+
+On my side was the breadth of my interests:  my thesis research is in an
+interdisciplinary applied area of math (population biology), involving
+dynamical systems (a buzzword of the day), and I also have a considerable
+amount of experience (and schooling) in math education, which is also 
+a hot topic these days.
+
+
+  The people I know of who were looking for jobs in industry this
+year all got offers with just three or four applications.
+
+
+If your advisor is too busy or you try 
+to take matters into your own hands, it's tough to get academic or government
+research institutions to look at you.
+
+
+
+This person landed a tenure track position after a string of SIX
+ONE-YEAR positions:
+
+ The job market seems to be a bit better this year.  But it still sucks.  
+
+Here are some general comments about the job market:
+
+ I do think the market is better than when I previously was in it two
+ years ago, but not as good as I would like to see it.
+
+
+ My impression was that the industrial job market was pretty good for
+ computational mathematicians, but it seemed to be a tough year for those
+ interested in academia.
+
+
+ I feel that the market is improving; also there are far more multiple 
+ position ads than in previous years.  
+
+
+ I have heard many claim the "market is getting better" but I do not share 
+ their optimism.  This is primiary my feeling about the academic scene.  
+ The industrial market is a bit better but a mathematican still has to 
+ work to impress a recruiter.  
+
+
+ Several people here were choosing from attractive offers: postdoc and
+ tenure track.  From my limited perspective, things are looking brighter.
+ 
+
+ Clearly the job market still sucks.  Aside from applying to a few
+ jobs, I was involved in 4 searches here at UUUU.  We have signed 3
+ tenure track assistant professors, and all 3 are coming off 3-year
+ postdocs.  We are also currently interviewing for a 1-year position,
+ and the quality of candidates still looking at this late date is
+ alarming.  We had 2 one-year people here at UUUU searching for tenure
+ track positions, and both (so far) have struck out.
+
+
+ I think the market is better this year than last, though it is still
+ tough, and in order to have a good shot, you need a lot on your side.
+
+
+ I have no idea if the market is better.  I searched the 3 previous
+ years with pretty bad luck - no good tenure track offers.  I did not
+ expect to get any offers this year, but I guess my vita improved
+ enough: number of publications went from 2 to 4.
+
+
+ People seem to be having an easy time finding jobs in industry,
+ especially with newly developing computer companies.  Jobs in academia,
+ of course, are harder to come by.
+
+
+ I really think that the market is getting better.  I thought there were
+ more jobs this year than there were last year.
+
+
+ Two things of interest.  First, all the faculty I met said the job market
+ was getting better. In addition, many places reported drops of 10-30%
+ in their applicant pool.
+
+
+ I think the market has softened somewhat, at least in terms on sheer
+ numbers of applicants. Many of the places I received rejection letters
+ from indicated pools of 150 - 200, but some even less.
+
+
+ One thing I have noticed is that I know people with great research and
+ people with great teaching who are still looking. The ones with both
+ good research and good teaching seem to be fairing the best. This is a
+ bit different than what I saw two years ago when teaching credentials
+ seemed to be the focal point for many schools.
+
+
+ I find the incessant whining about the job market to be irritating.  In
+ my field, people basically got jobs commensurate with their ability, by
+ and large. The main exceptions to this rule are the Chinese, who are
+ probably being discriminated against on the basis that they "can't speak
+ English well", whether or not the allegation is true (often, it
+ isn't). (They also tend not to be the ones complaining.)
+
+Here is a note from a Chinese mathematician, about other Chinese:
+
+ I know some Ph.D.'s doing math in other universities but they have all
+ switched to other things.  A guy from Berkeley (doing the height problem
+ in elliptic curves) has got a job in a computer company. Many others
+ have already switch to other things years ago though they are still
+ technically in Mathematics departments.  They graduate when they feel
+ they have enough preparation to get a job in industry.  I know a guy in
+ statistics is working in some company but he should graduate one year
+ ago. He told me he did not bother to get the Ph.D. so quick.
+ 
+
+Here are some personal stories:
+
+ My wife is a grad student at Cornell, and it would have been almost
+ impossible to get an academic job anywhere near there. We had no wish to
+ be separated any longer, and I did not have a burning desire to continue
+ in academic research mathematics. So I applied to nearby industrial
+ positions. In fact, I only applied to 1 job in Ithaca (the rest were
+ 30-100 miles away) and I got it.
+
+
+ I only applied to one position because I had a year left where I am but
+ the only one school nearby that could be a realistic solution to my
+ two-body problem.  I'm rather ecstatic at the moment about actually
+ getting the job, and still a bit amazed.  
+
+
+ It was a tough decision to turn MSRI down, but an uncertain future in 
+ academia doesn't compare well against a much higher salary in finance.
+
+
+
+I should add that I started taking actuarial exams last Novemember and I
+don't know how much longer I will wait before starting to apply for
+actuarial jobs.
+
+
+
+I had 4 interviews, the other three of which were at small liberal-arts 
+institutions. At two of the three schools, I'm pretty sure I didn't get 
+the job because the dean didn't like me.
+
+
+
+I have about 30 rejections and about 5 places where I've heard through 
+the grapevine that I am no longer under consideration but don't have
+an official rejection letter; one place indicated that I would not
+receive a rejection letter.  I haven't had any feedback at all other 
+than acknowledgements and rejections (neither has my friend without an
+offer).  I wish more places would make the status of their search
+available online (such as the bottom of MSU's page:
+http://www.mth.msu.edu/Hiring/current_ad.html ).  This would let everyone
+know what was going on without swamping limited secretarial resources.
+Actually, what would be even better would be to have a central
+position status site, similar to the job seekers page, listing positions
+by institution with the timestamped status of each position.  
+
+
+					
+								
+Receiving this offer in January was a major pain as it meant that most of
+the interested American Universities were not far enough through their
+reviewing process to know if they wanted to make a counter offer.
+
+
+    The two schools that made me an offer had both had job searches two
+years ago, and in both cases their first choice candidate turned them
+down after waiting a couple weeks.  As a result, they sped up their
+application process this year.  It worked out well for me, because I was
+very happy with the offer I accepted and it was nice to know early on,
+but it seems a disturbing trend that some schools move so much faster
+than others.  Offhand, it *seemed* like the schools that were more
+teaching than research made offers first, with the schools that were
+more research oriented moving slower.
+
+
+
+
+XXXX was early in making offers, so I called around to the other places
+I had applied.  About half were able to tell me "you didn't make
+our short list" (so I wondered why they couldn't have let me know
+that sooner!).  Some seemed completely caught off-guard, having not
+considered their applicants at all by the end of January.
+
+
+
+I am not overly pleased with my present position, even though I was
+lucky to get it, 3 years ago this month.  That was the year that I
+graduated, and I had sent out 200 applications, and my first interview
+was here at YYYY.  The next year I sent out about 50, and got nothing,
+not even an interview. The following year, this year, 1997, I only sent
+out for 8 academic positions, and 5 non- academic positions, and I
+haven't heard anything positive, but I have gotten 3 rejections, which
+is what I expected.  My wife and I have bought a house, because we are
+tired of waiting, and I think that I have accepted my situation, despite
+wanting a better job. I just don't see it coming in the near future, and
+how long am I going to wait?
+
+
+
+
+Both of the offers I got were due to my experience and research related
+to computer science.  One was a permanent research-programming staff
+position at a major, top-ranked research institution.  The other was a
+two year (to be reopened as tenure track after two years) teaching
+position at a small exclusive liberal arts college.  Since the latter
+was a position I have dreamt about for so long, I couldn't pass it up
+despite the exciting prospect of working at a major research
+institution.
+
+
+
+
+
+My field did quite well, with people getting post-docs at MIT, Brown,
+Johns Hopkins, Virginia, Michigan and U Wisconsin.  This is quite a
+turn-around from last year I hear when I heard of only one postdoc in
+algebraic topology.  So my final analysis is that I was fortunate to be
+a member of two lucky (for this year) subsets of the market: ZZZZ grads
+and algebraic topologists.  Both of these subsets have had trouble in
+the past, so it was nice to see it turn around this year.
+
+
+
+ No stories to tell, other than that the number of interviews I
+received was quite disappointingly small. 
+
+
+Initially I had a lot of interest in San Diego, but only one place
+actually materialized into an interview.  I am in fact quite pleased
+with the position and feel it suits me well, but also felt extremely
+worried for quite some time and wondered whether I could have changed
+something in my reaction to the short list notifications to have
+influenced the outcome more.  My overall impression in San Diego was
+that the market was improving somewhat, but based on my own experience
+and that of the two other post-docs in similar positions, I'm not so
+sure.  None of us had very much choice in the end, although we are all
+employed for next year.  The job seekers list and various anecdotes
+makes it clear there are still many good mathematicians without jobs,
+which would seem to indicate it is still pretty bad, although this is
+the first year such a list even existed so it is hard to compare.
+
+
+I feel strongly that many US citizens get their PhD without being ready
+to compete with people from other countries getting their PhDs at the
+same time.  I am convinced that this was the case for me.  In
+particular, somehow for the first three years after my 1991 PhD I
+managed to remain ignorant of the importance of publishing rapidly, and
+the ways to go about doing so, although perhaps most of this was due to
+stupidity on my part.  But I only spent 4 years in grad school, and I
+just did not have a broad enough mathematical base to compete well when
+I got out.  I was also lulled to complacency by early success: an NSF
+postdoc fellowship and a Moore Instructorship at MIT.  These mean little
+when set against a short vita, of course.  Indeed, I think they hurt at
+teaching schools.  The people at SSSS wrote very thoughtful teaching
+letters, which were crucial in my getting the first two offers above.
+
+
+I am a citizen of Germany I received 3 interviews (plus two more
+possibilites after I accepted my position).  My first interview was the
+least desirable position.  My last interview was the most desirable
+position.  In the end it worked out well for me, but because of this I
+might have been forced to accept a less desirable position.
+
+
+  I took a part time position last year; my advisor said I should have
+stayed an extra year as a graduate student, but I had been hopeful I
+would get a job over the summer (one offer, for an impossibly high
+teaching load and absolutely no job security at a business school where
+all faculty have one-year appointments; I turned this down).  Thus, I
+was free to take a position mid-year, where I am now.  It was presumed
+(but not guaranteed by any means) that I would be renewed for another
+year.  That was the only offer I got as of April, so I took it.
+
+
+
+I will continue doing mathematics for the next year withour thinking
+anything else. However if I can not get anything until next May, I will
+start thinking switch to something else like computer sciences. But, I
+claim I am still "loyal" to mathematics now. 
+
+
+
+
+The interviews in San Diego seems to function as a meat market. 
+
+
+I am an applied mathematican.  I think if you are pure mathematican you
+are in big trouble if you can't get an academic job.  Software places
+will always hire you but my industrial interviewing experience is that
+pure math people not not wanted in industry.
+
+I didn't mean to sound too despondant about the academic job market.  I'm 
+glad to get the job I did.  But an academic career was what I always had 
+in mind and it's hard to let that go.  Perhaps I should have mentioned in 
+my survey that I didn't have any publications yet.  That's not unusual 
+for our department but it sure hurts the academic job search.  When I get 
+done in a few months, I'll have enough to write a few papers on.
+
+
+I know of one frustrating instance of a qualified woman leaving academia
+for industry, by choice. I don't know if this is a general trend. 
+
+
+
+    I concentrated my applications geographically (10 of 36 were in
+Texas).  I had some interviews at the Joint Meetings, and things seemed
+to get going with some schools right after that, while others waited
+until April, with no real distinction between types of schools who
+waited and types who didn't (for me).  My double-disciplinary approach,
+I think, got my foot in the door at a number of places; on the other
+hand, the fact that I have no publications undoubtedly hurt me a lot at
+others.  I think that my being from Texas helped my application at the
+Texas schools; indeed, my being from the Dallas area seemed to come as a
+delightful surprise to the folks at the Dallas-area institution where I
+ended up accepting an offer.
+
+
+
+
+
+
+I got to see both sides of the application process this year since my
+present (soon to be former) institution was also hiring.  Since everyone
+in our department helped with the screening process I had the
+opportunity to read a number of applications.  It doesn't take too long
+to distinguish a well-prepared application from a poorly-prepared
+application.  Is it any coincidence that most, if not all, of the people
+who made our short list had well-prepared materials??  Who knows.
+However, it's hard to make a good impression when you have a cover
+letter which is either: (A) addressed to "Dear Sir" (our department
+chair is a woman and her name was included in the advertisement); (B)
+obviously photo-copied, but "tailored" because the applicant took five
+seconds to write "Dear Dr. Blank" in pen; (C) about two lines long; (D)
+addressed to the wrong school.
+
+
+Person A:
+  Anecdotally, the women here seemed to get more inquiries (and earlier)
+on fewer applications sent; they were really competitive candidates, so
+maybe it wasn't gender related.  Men and women with inside connections
+seemed to get want they wanted on an equal basis.
+ 
+  I feel as A does, but it should probably be best kept quite, that it
+was definitely a females' market and once they all had jobs, then they
+extended their search to include males.  It was also to my advantage
+that I had a year of high school teaching experience with a secondary
+education certificate.
+
+
+
+On the other hand, thanks a lot for organizing this survey. I understand
+the amount of work it takes and I definitely appreciate it.
+
+
+
+Thanks for doing this!
+
+
+	Thank you for compiling this important information. 
+
+
+I am glad that you are doing this survey.  Though the AMS keeps careful
+tabs on recent doctorates, there are no comparable surveys on people
+trying to make the transition from postdocs to tenure track positions.
+If one did, I think the 10% unemployment figure one sees for new
+doctorates would be echoed for those trying to make that transition.
+
+
+
+   Suggestion: It might be interesting to add to this survey the
+question of how long after Ph.D.  Some places I've talked to look for
+fresh Ph.D.'s while others are looking for people with several years of
+research, teaching and grant writing experience.  What is the general
+trend?  How does it divide among the various types of institutions.
+

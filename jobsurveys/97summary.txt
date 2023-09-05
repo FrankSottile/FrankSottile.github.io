@@ -1,0 +1,124 @@
+                   Summary of 1997 YMN Job Survey
+
+In May, we asked our readers to share with us their experiences on the
+job market this year.  We received 64  responses.  Here, I
+have tried to compile some of the data gleaned from those responses.
+These data suggest a possible softening of the academic job market.
+
+
+The following chart compares applicant's previous position (horizontal)
+versus situation next year (vertical).  These categories are what the
+applicants indicated about their positions.  
+
+tt := tenure track, temp := temporary, pd := postdoctoral positions,
+grad := graduate student, part := part time, ps := private sector & gov,
+nj := no job at the time of survey.
+
+        tt  temp  pd   grad   part   total
+
+tt      5    6     9    9              29
+temp         1     2    4      2        9
+pd                 5   10              15
+ps                 1    6               7
+nj           1     1    2               4
+
+total   5    8    18   31      2       64     
+
+Respondents were invited to indicate the duration of temporary or
+postdoctoral positions:
+
+	 temp   pd
+1-year    6      4
+2-year    3      5
+3-yer            6
+
+
+Here is a factoid:  People receiving academic job offers received an
+average of  1.72 each.   In 1995, this was 1.5, and in 1996, 1.75.
+
+
+The next chart is a histogram with frequency plotted horizontally.
+
+Date of initial job offer by type of employment.  
+
+X:= Tenure track position, 
+O := temporary position (including postdoctoral and part time), 
+I := Non-academic employment
+
+          0    5    10   15   20
+December   XXOII
+January    XOOOOO
+February   XXXXXXOOOO
+March      XXXXXXXXXOOOOIIIII
+April      XXXXXXXOOOOO
+May        XXXOOOO
+
+can't tell   OO
+
+This time scale is slightly wider than for past years:
+
+1995:
+          0    5    10   15   20
+January    XOO
+February   XXXOOOOI
+March      XXXXXXXXXXXXXXXXXXOOOOOOI
+April      XXXXXXXOOOOOI
+May        XXXOOOO 
+
+1996:
+          0    5    10   15   20
+January    OOOII
+February   XXXXXXXOOOOOOOO
+March      XXXXXXOOOOOOOOI
+April      XXXXOOOO
+May        XXXOOI
+
+
+Number of applications sent vs. outcome 
+
+         total  tt  temp  ps  nj
+
+  0-  9    8    2a   2b   2   2c     
+ 10- 19    6    4    2        
+ 20- 29    5    4         1
+ 30- 39   12    4    6    2     
+ 40- 49    7    3    4    
+ 50- 59    5    1    1    1d  2e
+ 60- 69    6    1    4    1                           
+ 70- 79    2    1    1              
+ 80- 89    5    2    3       
+ 90- 99    4    3    1     
+  > 100    4    4                      
+--------------------------------
+Median    43   42   45   30   -
+
+a : Both were working with a 2-body problem
+b : One is working around a 2-body problem
+c : One is ABD, the other has familial constraints.
+d : Applied to both academic and industrial positions
+e : One turned down an offer of a one year temp
+
+	    Comments
+
+There are significant differences between this survey and
+the surveys from the previous two years:
+
+First, only 4 out of 64, 6.25% are unemployed, less that 1/4 of 
+what we found last year.  That is quite encouraging.  
+
+Also, people sent out significantly fewer applications; there were
+medians of about 70 each of the past two years, and this year the
+median is closer to 40.   Perhaps this represents a greater optimism
+among the applicants.
+
+The width of the time scale (in particular, the earlier offers) may
+be due to competitive pressures between institutions to snap up
+candidates.  Several respondents were surprised by how quickly some
+institutions moved.
+
+In the anecdotes (compiled separately) there is quite a bit of optimism,
+something that has been missing in recent years.
+
+Since this survey was by no means scientific, we will have to wait until
+the Autumn when the AMS-SIAM-IMA survey comes out to find out the real
+picture (for more PhD's)

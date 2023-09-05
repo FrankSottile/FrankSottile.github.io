@@ -1,0 +1,243 @@
+
+           *Concerns of Young Mathematicians*
+                    Volume 3,  Issue 29 
+                       Oct. 4, 1995
+ 
+_____________________________________________________________________
+Item #4  Comments From the 1995 CoYM Employment Survey
+              Compiled by Frank Sottile
+              sottile@math.toronto.edu
+
+
+Last May, we ran an informal survey of asking our readers who were on the 
+job market last year to share their experiences with us.  Earlier, we 
+published two articles; one consisting of anecdotes about how others
+were faring at their institutions, and one containing a compilation of
+the responses.   In this article, I have included a selection of the 
+additional comments made by the respondents to the survey.  I have loosely
+grouped these comments together and different comments are separated by
+blank lines.  
+
+
+(*)  I ended the survey with what seemed to me to be a joke:
+ "...one is leaving mathematics for divinity school"
+but the joke was on me:
+
+ That was me - accepted at a seminary in Philly -  until I got the 11th
+ hour offers!
+
+ Actually I once was in a seminary, and it's not so bad.
+
+
+
+(*)  The more serious comments follow:
+
+   If someone really wants a job, there may be community colleges around in 
+ one's area.    Granted, you don't need a ph.D. for these, but some of them 
+ pay rather well--sometimes better than major universities.
+
+   In spite of the success I had, I think that the job market is worse now 
+ than 2 years ago.  I think I was successful for all of the following reasons:
+    1. Well-written resume and cover letter.
+    2. Teaching experience beyond graduate school at a first-rate
+        teaching school with good letters to back this up.
+    3. My research area(s) are applied.
+    4. I believe that being female helps get you noticed (but
+        I don't think it helps you to get the job.)
+
+   Judging from my experience, it is possible to spend 4 years at a liberal
+ arts college that doesn't emphasise research as much as I would like and then
+ move on to a tenure track job at a much better liberal arts school where
+ research matters.  
+ I suspect that being female helped me, but probably only at the last stage 
+ of the game.  I've been told that it works as a tie breaker at the place to 
+ which I am going.
+
+   I didn't look hard for the job I got.    I talked to a few people who asked 
+ for my resume and then invited me for interviews. Everything up to the 
+ interview stage was casual. My point is, NETWORKING is vital to private 
+ sector employment, and most grads don't seem to understand that.
+
+  I believe my success on the job market was due in part to several factors:
+    1. Well defined goals and a carefully selected list of colleges to apply
+        that seemed well matched to my goals/interests.
+    2. Strong publishing record, albeit mostly in conference proceedings.
+    3. Unusual background:  I worked in industry as a research and design 
+        software engineer, and taught high school before attending graduate 
+        school.
+    4. An advisor who went to great lengths to prepare me to be competitive
+        on the job market (encouraging me to give talks at conferences, 
+        financially supporting me at conferences, and nominating me for 
+        various awards).
+
+   People ought to be encouraged to apply more outside the U.S.  There seem to 
+ be a lot of temporary positions available in Europe.   Most opportunities 
+ never get advertised because postdocs are often funded by someone's personal 
+ grant. I have received offers for postdocs simply by writing to well-known 
+ European professors in my field whom I knew only through reading their papers.
+ The availability of permanent positions varies from country to country.
+ In most countries a large part of the scientific life is conducted in English
+ so language should not be automatically assumed a barrier. 
+
+   One of my on-site interviews was in the U.K., where interviews seem to 
+ be handled quite differently from North America.  All candidates visit 
+ on the same day and are questioned by a committee that makes an offer 
+ within a day or so of the interviews (candidates are expected to say 
+ yes or no equally promptly).
+
+   So here's what I am seeing [at my institution].  A significant number of 
+ grad students are leaving school with master's degrees.  For those staying in 
+ grad school, it seems to be taking longer to finish.  And when they do 
+ finish, the new PhDs are finding employment outside academics.  
+   All this in a department where significant education reform projects 
+ are underway which could translate into attractive job candidates for 
+ colleges and universities that emphasize teaching.  
+
+    I have heard this story repeatedly.  A university will fly some candidates
+ out to interview.  None accept the position and then the university is 
+ forced either to not hire or has a very difficult time flying out other
+ candidates.  This would not be an issue except I have heard that some  
+ interviewees admit during the interview that the have already accepted 
+ another offer.  To interview at a place that one is not seriously 
+ considering (given they have an alternative) is not reasonable behaviour. 
+  
+   The only reason I received an interview (I made the short list) at
+ one of the schools I applied to was simply because I knew someone
+ there. The same was true for my competitor. 
+   Neither of us got the job. Due to irregularities in the
+ selection procedure by the hiring committee, the tenure-track positions
+ which the school had advertised (4 in total) all were withdrawn.
+
+   The job market is in worse shape than is being portrayed by the
+ various mathematical organizations. This is a fact.
+
+     It is hard to gauge whether the job market is better or worse than 
+ when I was on the market 2 years ago.   I have heard of people who have 
+ had no luck whatsoever in looking for a job, so it's hard to imagine that 
+ things are better.
+
+   I think the job market is getting better for those who are not in pure 
+ mathematics, but the supply pool is still so bloated that it will be 
+ several years before the situation eases up.
+
+    It appears that schools prefer someone who has a Ph.D. in hand, making
+ it more difficult for new Ph.D.'s entering the market.  I was lucky. 
+
+   I noticed an effort on the part of many schools to interview and hire 
+ earlier in the season than in past years.  (I was in the market in 1992, 
+ 94, and 95.)  
+
+   Interviews and job offers seemed to go out in three "waves" this year.  
+ The first wave occured in February, when many of the larger state 
+ universities made their offers.  A second wave occured in late March and 
+ early April, when smaller private universities seemed to make their moves.  
+ There seemed to be another wave in early May.  This surprised me, I had 
+ come to expect that most schools would try to complete their hiring as 
+ early as possible. 
+
+   This is the second year that I've received an e-mail mass rejection
+ that contains the addresses of everyone being rejected.  
+
+   Some rejection letters I received pointed out that search committees were 
+ surprised at the volume of "excellent" applications they received this year.
+
+   I was surprised at the number of schools which sent me letters saying 
+ that the funding anticipated for the advertised position was no longer 
+ available. Is it common practise to advertise a position when there is 
+ uncertainty about its funding?
+
+   I was impressed with the efforts made by several schools to keep their 
+ applicants informed as the decision process moved along.  The time that they 
+ spent doing that was very much appreciated by those of us who were waiting 
+ anxiously.
+
+   Lyon College fills about the equivalent of one full-time math 
+ position with two or more part-time MA's teaching College Algebra and 
+ (next year) elementary functions, both for college credit.
+
+   I find these statistics very disturbing, especially since those [from 
+ my institution] looking in academia had very strong teaching records in
+ addition to their research qualifications.
+
+   Here are my (depressing) responses to your survey:
+
+   I am thinking of committing suicide at the Winter joint meeting.
+ .......Incidentally, I probably will not commit suicide, but I enjoy 
+ thinking about doing it at the Winter joint meeting.  (At one of the 
+ really big lectures.)
+	
+   As I see it, I just wasted half a decade overworking to get a degree
+ necessary for the job I wanted, and now can't get.  
+
+   I have received no responses to a flood of applications, and have come
+ to terms with the fact that no academic offer will be made.  I shall
+ leave academia PERMANENTLY when an industry job crops up.
+
+   Most of the Chinese students who came here [my home institution] for a
+ PhD in math 5-7 years ago have gotten masters degrees in computer
+ science and seem to be doing quite well getting jobs in industry.
+
+   I taught two years at XXXX State (Big Ten), and as far as I know, the new 
+ PhD's from there are doing terribly. Some people may be going into their 3rd 
+ year as a lecturer, a position offered to new graduates unable to find 
+ employment. 
+
+   I received a tenure-track job offer,  but turned it down since some of
+ the faculty there told me I'd never get any research done there.
+
+   Our profession is badly in need of a change in attitude as far as 
+ industrial employment and teaching go, and I heartily support the work YMN 
+ is doing to raise awareness of these issues. 
+
+   Thanks for taking your time to compile this!!!  It's always good to get
+ some information given how frustrating it is looking for jobs.
+
+   Thank you very much for taking the time to put these answers together.  I 
+ really benefited from reading the results of last year's survey, and I look 
+ forward to seeing this year's.
+
+   Thank you for all the service that you provide to our community.
+
+   Good luck with the survey!!!
+
+   Thanks for all the work you are doing with this!
+
+   Finally, I'd just like to express my appreciation to the YMN Board for 
+ getting out the information on the job market, and for providing a forum
+ for sharing our experiences in it.  I've found that the job 
+ scene has changed so much in the past few years that most established
+ mathematicians really have no idea as to how to deal with it.  The 
+ Newsletter was an invaluable aid to me in dealing with this difficult
+ situation.  Thanks.
+
+   I'm leaving my current jobs for personal reasons (2 body problem), and 
+ moving to a sparsely populated state with very few universities or colleges.
+ Things look pretty bleak for future academic employment, but my goal
+ since beginning graduate school has been academia.
+
+   It is quite possible that I would not have gotten the offer
+ that I did if my wife had not already accepted a tenure track offer
+ from the same institution.
+
+   It took me three times on the market for a permanent position to land one. 
+ In the end, I am very happy about the position I accepted.  
+
+   I feel that I really lucked out [winning an NSERC research grant].
+
+   I guess I could say that hard work has paid off. I'm four years beyond my 
+ PhD and every year I've done a little better on the market than the year 
+ before. This winter I finally got my first tenure track offer. 
+
+   Since I didn't know if I would be able to finish my PhD research this 
+ year I only applied to a couple of jobs, just in case something would 
+ work out.  It did!
+    I applied only to jobs that I really wanted, since otherwise it would 
+ make sense to stay in graduate school for another year.   I focused my job 
+ search to the three jobs most appropriate to my math education interests.  
+ This worked for me.  I was able to tell the people at my favorite job that
+ their position was, indeed, my main choice.  
+
+
+
+
+

@@ -1,0 +1,94 @@
+
+               *Concerns of Young Mathematicians*
+                       Volume 2  Issue 26
+                         August 17, 1994
+
+Item #6  Curtis Bennett    Employment Survey Results, Part 1
+
+I have finally completed tallying the results of the employment survey I
+conducted through the Concerns from 5/10 - 6/30.  In this article I will
+include the raw data concerning how many applicants had found positions
+when they responded and what type of positions they were.  Additionally, I
+will include the spectrum of the number of applications sent out by
+individuals.  Below the data, I will then discuss the results.  Later
+articles will discuss comments that people made and perhaps analyze other
+parts of the data that was collected.
+
+Survey Results
+
+                Grad Students           Post Graduate                   total
+Responses            41                      48                           89
+
+Found a position     29                      38                           67
+
+Type of pos.
+tenure track         11                      18                           29
+2+ year               7                       6                           13
+1 year                9                      13                           22
+other                 2                       1                            3
+
+#of applications  found job   didn't       found job     didn't
+0-30                  6         2              4            4             16
+31-60                 3         2             15            3             23
+61-90                 7         3             13            1             24
+91-120                9         5              2            0             16
+121-175               3         0              1            1              5
+175 -                 1         0              3            1              5
+
+mercy position received                                     1
+
+In tabulating the data, I tried to stay fairly close to what people
+reported of themselves.  Occassionally this may have caused me to put
+responses in the wrong category.  Also, it was unclear with me what I
+should do with so-called "mercy positions" (ie. those positions given by
+the host institution to graduates who don't find jobs or extensions of jobs
+by working around the bureaucratic system).
+
+The 1-year position numbers are a little off because if someone had a
+1-year position AND a two year position for afterwards (as is not uncommon
+for people going to MSRI (Math Science Research Institute) or IAS (the
+Institute for Advanced Study at Princeton) I put these people into the 2+
+year category.  Also, some 1-year positions are renewable and some are not.
+ As it was, I was unable to differentiate on all responses.
+
+Another comment concerns the peopl who sent out very few applications.
+Many (but not all) of these people were involved in 2-body problems or had
+other reasons for restricting the search.
+
+Of course, this survey is completely unscientific, and probably should not
+be used to make sweeping generalizations.  There are two items that
+probably will shift the data in opposite ways.  First, offers are still
+occassionally being made.  As a result, some of those who didn't find a job
+probably now have one (be it only a mercy position).  Second, people were
+probably more likely to respond if they had received an offer.
+Particularly if they were still waiting on a couple of letters or phone
+calls.
+
+That being said, I found the numbers surprisingly bleak.  To see that
+roughly one fourth of the respondents didn't have any offers (even of
+1-year positions) by mid-may was discouraging.  Particularly, as I expect
+that people without offers were less likely to respond.  I also was
+concerned that roughly one third of the offers that had been made by late
+May were 1-year positions.   I hope that the picture is this bleak only
+because of the early nature of the survey and its lack of random sampling,
+but I am afraid that is not the case.
+
+While the AMS studies usually show fuller employment than this study, there
+have been questions raised about the AMS study.  First, if you get a mercy
+position at your graduate institution, it usually counts as employment at a
+Type I school in the study.  Second, the AMS study does not count graduate
+students who extend their graduate study a year.  Finally, the AMS study
+only counts graduate students and does not figure in the postgraduate
+applicants.
+
+I would like to see the AMS or the JCEO do a new study in addition to the
+current study and the long term study that will soon be coming out.  I
+would like to see the AMS take a "generic" university (or maybe a random
+sampling of universities) and talk to all of the people who applied to that
+school (or a random sample of the applicants) and see what happened to
+those applicants.  This certainly will not be a good random sample
+(although the parenthetical might), but it should give a clearer picture of
+who is applying for positions, and how those people are doing.
+
+Curtis Bennett
+cbennet@andy.bgsu.edu
