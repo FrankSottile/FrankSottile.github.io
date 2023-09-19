@@ -1,7 +1,0 @@
-#Space_Quartic.maple
-#
-#########################################
-Curve:=spacecurve([t^2,-t,t^3],t=-1.45..1.45,color=blue,thickness=3,numpoints=200):
-Line:=spacecurve([1,-t,t],t=-2.6..3,color=red,thickness=3,numpoints=2):
-
-Space_Quartic:=[Curve,Line]:
