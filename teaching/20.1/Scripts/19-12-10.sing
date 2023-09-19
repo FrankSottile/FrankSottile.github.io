@@ -1,6 +1,0 @@
-ring R=0, (x), dp;
-ideal I = x^24-1, x^42-1;
-I = std(I);
-short=0;
-I;
-factorize(I[1]);

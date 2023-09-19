@@ -1,7 +1,0 @@
-<!--------------------------------------------------------------------------------->
-<hr>
-<!--------------------------------------------------------------------------------->
-PICA Course evaluation:
-<a href="https://pica.tamu.edu"><tt>https://pica.tamu.edu</tt></a>.
-Click on "Student Login", Login with your NetID and password, select appraisal and choose our course from the menu of
- your courses.
