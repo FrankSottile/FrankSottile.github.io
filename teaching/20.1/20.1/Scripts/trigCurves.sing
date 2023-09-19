@@ -1,0 +1,31 @@
+ring R = 0, (x,y,c,s), dp;
+//
+//   Quartic with 3 cusps
+//
+ideal I = s^2+c^2-1, 
+          c-(c^2-s^2)/2-x, 
+          s+2*s*c/2-y;
+short=0;
+eliminate(I,cs);
+//
+//  quartic with loops
+//
+I = s^2+c^2-1, 
+   c-2*(c^2-s^2)/3-x, 
+   s+4*s*c/3-y;
+short=0;
+eliminate(I,cs);
+//
+//  Three-leaved rose
+//
+I = s^2+c^2-1, 
+//   c*(1 - 3*(s^3 + 3*c^2*s))-x, 
+//   s*(1 - 3*(s^3 + 3*c^2*s))-y;
+//   c*(1 + c^3 - 3*s^2*c)-x, 
+//   s*(1 + c^3 - 3*s^2*c)-y;
+   c*(1 + 3*(4*c^3 - 3*c))-x, 
+   s*(1 + 3*(4*c^3 - 3*c))-y;
+short=0;
+eliminate(I,cs);
+
+quit;

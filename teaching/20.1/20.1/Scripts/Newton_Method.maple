@@ -1,0 +1,96 @@
+# Computes Newton's method
+#
+#
+interface(quiet=true):
+with(plots):
+Digits:=10:
+
+Newt_Step := proc(x0,f)
+#
+#  Computes a single Newton step for the function f applied to x_0
+#
+ local x,df:
+ df := diff(f(x),x):
+ return (x0 - f(x0)/subs(x=x0,df))
+end proc:
+######################################################
+NewtIter := proc(x0)
+#
+#  Computes N Newton steps for the function f applied to x_0
+#
+ local i,xi:
+ global f:
+ xi:=x0:
+ for i from 1 to 120 do
+  xi := evalf(Newt_Step(xi,f)):
+#  lprint(xi);
+ end do:
+ return(xi)
+end proc:
+######################################################
+Digits:=130:
+
+Digits:=30:
+
+f:= x -> x^3-2*x+2:
+
+x:=3:  x:=1: x:= 1+I/20:  x:= 1+I/80: x:=-2-I:  x:=2+I; x:=1.02+I/35:
+for i from 1 to 30 do
+ x:=evalf(x,50);   # experiment with commenting this out
+ lprint(evalf(x));
+ x:=Newt_Step(x,f):
+end do:
+
+#
+quit;
+
+
+
+
+Digits:=30:
+f := x -> x^3-1:
+
+#
+#  Experimenting with Chaos
+#
+x:=2:  x:=1+I: x:=1-I: x:=2*I: x:=-2: x:=-2+I/5: x:=-2+I/10: x:=-2+I/9: x:=-2+I/3:
+for i from 1 to 20 do
+ x:=evalf(x,50);   # experiment with commenting this out
+ lprint(evalf(x));
+ x:=Newt_Step(x,f):
+end do:
+
+#
+quit;
+
+
+
+
+f:= x -> x^2-2;
+
+##################################################
+#
+#  Illustrate quadratic convergence in log scale
+#
+x:=1: y:=0:
+for i from 1 to 15 do
+ lprint(evalf(x-y,5));
+ y:=x:
+ x:=Newt_Step(x,f):
+end do:
+
+quit;
+
+
+f:= x -> x^2-2;
+
+##################################################
+#
+# Show quadratic convergence in digits
+#
+x:=1:
+for i from 1 to 10 do
+ lprint(evalf(x));
+ x:=Newt_Step(x,f):
+end do:
+

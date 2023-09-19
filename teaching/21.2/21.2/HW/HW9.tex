@@ -1,0 +1,130 @@
+%HW9.tex
+%Ninth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large \vspace{2pt}\\
+\large
+Ninth Homework: \hfill Due \  8 November 2021
+\normalsize\medskip
+
+
+\noindent{\color{blue}\rule{528.3675pt}{2pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $R$ be an equivalence relation on $A = \{a, b, c, d, e, f , g\}$ such that $a R c$, $b R f$,  $c R d$, and $d R g$.
+    If there are three distinct equivalence classes resulting from $R$, then determine these equivalence classes and
+    determine all elements of $R$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $H$ be a nonempty subset of $\ZZ$.
+  Suppose that the relation $R$ defined on $\ZZ$ by $a R b$ if $a - b\in  H$ is an equivalence relation.
+  Verify the following
+  \begin{enumerate}
+    \item $0\in H$.
+    \item If $a\in H$, then $-a\in H$.
+    \item If $a,b\in H$, then $a+b\in H$.
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  (a) Let $R$ be the relation defined on $\ZZ$ by $a R b$ if $a+b$ is even.
+       Show that $R$ is an equivalence relation and determine the distinct equivalence classes.
+
+ (b) Suppose that ``even'' is replaced by ``odd'' in (a).
+       Which of the properties reflexive, symmetric, and/or transitive, does $R$ possess?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $R$ be a relation defined on the set $\NN$ by $a R b$ if either $a \mid 2b$ or $b \mid 2a$.
+       Prove or disprove: $R$ is an equivalence relation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \item  Determine all the congruence classes (equivalence classes) for the relation on the integers $\ZZ$ of congruence modulo 5.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item The relation $R$ on $\ZZ$ defined by $a R b$ if $a^4 \equiv b^4 \mod 8$ is known to be an equivalence relation.
+  Determine the distinct equivalence classes.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item In $\ZZ_{11}$, express the following sums and products as $[r]$, where $0\leq r < 11$.
+  
+  (a) $[7] + [5]$ \quad
+  (b) $[7]\cdot [5]$ \quad
+  (c) $[−82] + [207]$ \quad
+  (d) $[−82] \cdot [207]$\,.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Compute the addition and multiplication tables for $\ZZ_5$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that the multiplication in $\ZZ_m$, for $m\geq 2$, defined by $[a]_m\cdot[b]_m=[a\cdot b]_m$ is well-defined.
+          (See Result 4.11 in our book.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+
+  
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

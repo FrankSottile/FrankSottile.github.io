@@ -1,0 +1,46 @@
+%!PS-Adobe-3.0 EPSF 
+%%Title: face.eps
+%%Creator: Frank Sottile 
+%%Pages:  1 
+%%BoundingBox: 0  0  100 70 
+%%EndComments 
+20 dict begin
+/rad 35 def
+1 setlinejoin 
+1 setlinecap 
+1 setlinewidth
+
+%3 3 scale 0 50 translate 0 0 moveto 100 0 rlineto 0 70 rlineto -100 0 rlineto closepath stroke
+44 24 translate
+
+/arr {/r exch def  newpath 0 0 moveto r 0 rlineto stroke
+       0 setlinewidth newpath r 5 add 0 moveto -7 2 rlineto 2 -2 rlineto -2 -2 rlineto closepath fill} def
+
+
+0 0 0 setrgbcolor
+0.7 setlinewidth
+gsave
+-10 rotate  50 arr
+grestore
+
+gsave
+90 rotate  40 arr
+grestore
+
+gsave
+200 rotate  40 arr
+grestore
+
+1 setlinewidth
+1 0 0 setrgbcolor
+gsave
+90 rotate 25 arr
+grestore
+
+gsave
+-40 rotate 30 arr
+grestore
+
+showpage 
+grestore 
+end 

@@ -1,0 +1,161 @@
+%HW7.tex
+%Sixth Homework -- Math 300 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{.1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\defn}[1]{{\color{blue}\sl #1}}
+\newcommand{\deco}[1]{{\color{blue} #1}}
+
+\newcommand{\calP}{{\mathcal P}}
+
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300 Sections 902, 905}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Seventh Homework: \hfill Due 19 October 2020
+\normalsize    %%%% This returns the fontsize to 12 point
+%\vspace{10pt}  %%%% This makes a vertical space of 10 points (approx 70 points/inch) after the line break
+
+\noindent{\color{blue}\rule{529pt}{2pt}}
+
+
+\noindent {\color{Maroon}\bf Definition:}  Let $A$ be a set.  The \defn{power set of $A$}, \deco{$\calP(A)$} is the set whose elements are
+exactly all of the subsets of $A$.
+
+\noindent {\color{Maroon}\bf Recall:} The product of two real numbers is positive if and only if either both numbers are positive or both
+numbers are negative.
+
+Also,  the product of two real numbers is negative if and only if one number is positive and one number is negative.
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[15]} Do all parts of Problem 17 in the Exercises for Section 5.2 in the Sundstrom book.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[5]} Write the defining property of the power set of a set $A$ as a logical statment, using quantifiers and logical operators.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[12]} Let $A=\{\emptyset, \spadesuit, \Psi\}$.  Determine which of the following are true or false. (no proof needed)
+  
+  \begin{itemize}
+  \item[(a)] \makebox[100pt][l]{$\spadesuit\subseteq \calP(A)$}
+        (e)  \makebox[100pt][l]{$\emptyset\subseteq \calP(A)$}
+        (i)  \makebox[100pt][l]{$\{\emptyset,\{\spadesuit\}\}\subseteq \calP(A)$}
+  \item[(b)] \makebox[100pt][l]{$\Psi\in \calP(A)$}
+        (f)  \makebox[100pt][l]{$\emptyset\in \calP(A)$}
+        (j)  \makebox[100pt][l]{$\{\emptyset,\{\spadesuit\}\}\in \calP(A)$}
+  \item[(c)] \makebox[100pt][l]{$\{\Psi\}\subseteq \calP(A)$}
+        (g)  \makebox[100pt][l]{$\{\emptyset\}\subseteq \calP(A)$}
+        (k)  \makebox[100pt][l]{$A\subseteq \calP(A)$}
+  \item[(d)] \makebox[100pt][l]{$\{\spadesuit\}\in \calP(A)$}
+        (h)  \makebox[100pt][l]{$\{\emptyset\} \in \calP(A)$}
+        (l)  \makebox[100pt][l]{$A\in \calP(A)$}
+ \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[5]}  Write a very clean proof of the following statement:
+
+  ``For all sets $A$, $B$, and $C$, if $A\subseteq B$ and $B\subseteq C$, then $A\subseteq C$.''
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[8]} Suppose that $S:=\{n\in\ZZ\mid n\equiv 9 \mod 6\}$ and $T:=\{n\in\ZZ\mid n\equiv 3 \mod 12\}$.
+          Prove whichever of $S\subseteq T$, $T\subseteq S$ is true, or give counterexamples.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[8]}  Prove the following set equality.
+  \[
+     \{ x\in\RR\mid x^2-3x-10<0\}\ =\ \{x\in\RR\mid -2<x<5\}\,.
+  \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[8]}  Prove the following set equality.
+  \[
+     \{ x\in\RR\mid x^2\geq 4\}\ =\ \{x\in\RR\mid x\leq -2 \} \bigcup \{x\in\RR\mid x\geq 2\}\,.
+  \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[8]} Let  $U$ be some universal set.
+  Investigate the two sets $A-(B-C)$ and $(A-B)-C$.  Are they the same? different? Is one a subset of the other?
+
+  Make a conjecture about their relation, and prove it.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[8]}  Let $A$ and $B$ be subsets of some univesal set $U$.
+           Prove De Morgan's Law: $(A\cap B)^c= A^c\cup B^c$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[12]}  Let $A$ and $B$ be subsets of some univesal set $U$.
+  Give two, independent proofs of the set identity
+  \[
+  (A\cup B) - (A\cap B)\ =\ (A-B) \cup (B-A)\,.
+  \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{[11]}   Let $A$ and $B$ be sets.
+  For $a\in A$ and $b\in B$, consider the set: $\{\{a\},\{a,b\}\}$.
+  What is this set if $a=b$ ?
+  
+  Prove:  For all $a,c\in A$ and $b,d\in B$, we have 
+  $\{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}$ if and only if
+  $a=c$ and $b=d$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

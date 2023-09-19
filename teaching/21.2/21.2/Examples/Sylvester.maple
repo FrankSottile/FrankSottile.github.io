@@ -1,0 +1,11 @@
+#Sylvester.maple
+#
+#   Maple script for computing Sylvester matrix and resultant
+#
+#interface(quiet=true):
+with(LinearAlgebra):
+f:=a*x^3+b*x^2+c*x+d;
+g:=p*x^4+q*x^3+r*x^2+s*x+t;
+M:=SylvesterMatrix(f,g,x);
+Transpose(M);
+R:=Determinant(M);

@@ -1,0 +1,140 @@
+%HW6.tex
+%Sixth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Sixth Homework: \hfill Due \  18 October 2021\\
+Use English when possible.  Answers should not just be symbols.
+\normalsize\medskip
+
+
+\noindent{\color{blue}\rule{500pt}{2pt}}\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Use a proof by contradiction to show that if $a$ and $b$ are odd integers, then $4 \not|\ (a^2+b^2)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that when an irrational number is multiplied by a nonzero rational number, the resulting number is irrational.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that $\sqrt{2}+\sqrt{3}$ is an irrational number.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that there do not exist three distinct real numbers $a$, $b$, and $c$ such that all of the numbers $a+b+c$,
+  $ab$, $ac$, $bc$, and $abc$ are equal.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item Is the following proposition true or false?  (Justify your conclusion with a proof or a counterexample).\newline
+   ``For all nonnegative real numbers $x$ and $y$, $\sqrt{x+y}\leq\sqrt{x}+\sqrt{y}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item {\color{Maroon}\bf Polya's Theorem.}  {\color{RoyalPurple}\sl All horses have the same color.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  We prove that for each natural number $n$ if a herd of horses contains $n$ horses, then all the horses in that herd have the
+  same color.
+
+  {\color{Maroon}\sf Base case:}
+   The case with just one horse is trivial. If a herd has only one horse, then clearly all horses in that herd have the same color.
+
+
+   {\color{Maroon}\sf Inductive step:}
+   Let $k\in \NN$ and assume that in any herd of $k$ horses, all the horses have the same color.
+   Consider now a herd consisting of $k{+}1$ horses.
+
+   First, exclude one horse from the herd.  The remaining $k$ horses form a herd, and by induction, they all have the same
+   color.
+   Likewise, exclude some other horse (not the same one who was first removed) and look only at the other $k$ horses.
+   By the same reasoning, these too, must also be of the same color. Therefore, the first horse that was excluded is of the
+   same color as the non-excluded horses, who in turn are of the same color as the other excluded horse. Hence the first
+   horse excluded, the non-excluded horses, and last horse excluded are all of the same color.
+
+   This completes the proof.\ \ $\Box$\bigskip
+
+   {\color{blue}Analyze this proof of Polya's Theorem: determine if it is correct or not, and explain your analysis.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Explore the divisibility by 3 of positive powers of 4.  (E.g. $4^n \mod 3$, for $n\in\NN$.)
+        Make a conjecture and prove it.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write a proof in paragraph form of the inequality
+$3^n > 1+2^n$  for $n\geq 2$ using mathematical induction.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item{} Consider the sequence $\{a_n\mid n\in\NN\}$  defined by $a_1=1$, $a_2=3$ and for each $n\in \NN$,
+           $a_{n+2}=3 a_{n+1}-2a_n$.
+   Calculate the first eight terms of this sequence. 
+
+   Conjecture a formula for $a_n$ and prove it using induction.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item{} Consider the sequence $\{a_n\mid n\in\NN\}$  defined by $a_1=a_2=1$ and for each $n\in \NN$,
+           $a_{n+2}=\frac{1}{2}\left(a_{n+1}+\frac{2}{a_n}\right)$.
+   Calculate the first six terms of this sequence.
+
+   Prove, for all $n\in\NN$, that $1\leq a_n\leq 2$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+  
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
