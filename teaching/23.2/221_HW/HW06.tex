@@ -1,0 +1,164 @@
+%HW06.tex
+%Sixth Homework -- Math 221H
+% 
+%
+% Frank Sottile
+% 24 September 2023 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{0.25cm}{1cm}{0.5cm} % --- sets all four margins LTRB
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Macros  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard bold symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\bfa}{{\bf a}}    %Vectors
+\newcommand{\bfb}{{\bf b}}    %Vectors
+\newcommand{\bfi}{{\bf i}}    %Unit Vectors
+\newcommand{\bfj}{{\bf j}}    %Unit Vectors
+\newcommand{\bfk}{{\bf k}}    %Unit Vectors
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+                               % an acceptable (and common) alternative is \mid  (try it!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Honors Multivariate Calculus \hfill Math 221H Section 201}\vspace{2pt}\\
+\large
+Sixth Homework:\hfill 
+Due in recitation: Thursday 28 September 2023\vspace{2pt}
+
+\normalsize
+    {\bf {\color{Maroon}Homework about the chain rule and directional derivatives}}\vspace{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\item The length $\ell$, width $w$, and height $h$ of a box change with time.
+      At some time, we have $\ell=1$ and $w=h=2$ (all in metres), and $\ell$ and $w$ are decreasing at a rate of 1 m/s, while $h$ is
+      increasing at a rate of 3 m/s.
+      At this point in time, find the rates at which the following quantities are changing.\vspace{-2pt}
+      \[
+       (a)\ \mbox{The volume.}\qquad
+       (b)\ \mbox{The surface area.}\qquad
+       (c)\ \mbox{The main diagonal.}\vspace{-2pt}
+      \]      
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\item  Write out the chain rule for the partial derivatives of $u$ with respect to $x,y,z$, and $w$, if\vspace{-2pt}
+      \[
+      u\ =\ f(s,t)\,,\qquad
+      s\ =\ s(w,x,y,z)\,,\quad\mbox{and}\quad
+      t\ =\ t(w,x,y,z)\,.\vspace{-2pt}
+      \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+\item  If $z=f(x,y)$, where $x=s+t$ and $y=s-t$, show that
+  $   \Bigl(\frac{\partial z}{\partial x}\Bigr)^2  - 
+   \Bigl(\frac{\partial z}{\partial y}\Bigr)^2\ =\
+   \frac{\partial z}{\partial s}\ 
+   \frac{\partial z}{\partial t}$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that $f(x,y)=\sin(x+2y)$.
+  Find the directional derivative of $f$ at the point $(x,y)=(4,-2)$ in the direction of the angle $\theta=-2\pi/3$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that $f(x,y,z)=x^3 y^2 z$.
+  Find the gradient of $f$, evaluate it at the point $(1,-2,1)$, and find the rate of change of $f$ at this point
+  in the direction of $\langle \frac{1}{\sqrt{3}},- \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}\rangle$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that $f(x,y,z)=x^3-y^2z$.
+  Find the directional derivative $D_uf(2,1,6)$ where $u$ has the same direction as $\langle 12,3,4\rangle$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Find the maximum rate of change of the function at the given point, and the direction at which it occurs.\vspace{-2pt}
+  \[
+  f(x,y)=\ln(x^2+2y^2)\ \mbox{at }(x,y)=(3,4) \qquad
+  f(x,y,z)=\tfrac{x}{y} +\tfrac{y}{z}\ \mbox{at }(x,y,z)=(9,3,1)\,.\vspace{-2pt}
+ \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that the electric potential $V$ in a region of space has the formula $xyz + 5y^2 - 3xy$.
+  What is the rate of change of the potential at the point $(x,y,z)=(4,3,5)$ in the direction of $\bfi+\bfj-\bfk$?\vspace{-2pt}
+
+  In what direction does $V$ change most rapidly at this point?\vspace{-2pt}
+
+  What is the maximum rate of change at this point?\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Find equations of the tangent plane and the normal line to the implicit surface(s) at the  given point(s).\vspace{-2pt}
+  \[
+  (a)\  x^2-2y^2+z^2=3\ \mbox{at }(x,y,z)= (-1,1,2) \qquad\qquad
+  (b)\  x e^{yz}=1\ \mbox{at }(x,y,z)= (1,0,2)\,. \vspace{-2pt}
+ \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item If $f(x,y)=2x^3-3xy+y^2$ find the gradient vector $\nabla f(1,3)$ and use it to give an equation for the tangent line
+  to the curve $f(x,y)=2$ at the point $(x,y)=(1,3)$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Show that the tangent plane to the ellipsoid $x^2/a^2 + y^2/b^2 + z^2/c^2 =1$ at the point $(x_0,y_0,z_0)$
+  is given by the equation  $  \frac{x x_0}{a^2} + \frac{y y_0}{b^2} + \frac{z z_0}{c^2} = 1$. \vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Show that the sum of the $x$-, $y$-, and $z$-intercepts of any tangent plane to the surface
+  $\sqrt{x} + \sqrt{y} + \sqrt{z} = a$ ($a$ is a fixed positive real number) is a constant.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Find the points on the ellipsoid $3x^2+2y^2+z^2=1$ where the tangent plane is parallel to the plane
+  $3x+y-3z=9$.\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Find the points on the graph of the function $z=f(x,y)=\frac{(x+y+1)^2}{x^2+y^2+1}$ where the tangent plane is
+  horizontal.\vspace{-2pt} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
