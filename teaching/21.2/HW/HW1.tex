@@ -1,0 +1,179 @@
+%Homework1.tex
+%First Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+First Homework: \hfill 6 September 2021
+\normalsize\vspace{10pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write each of the following sets by listing its elements within braces.
+  \begin{enumerate}  %Notice how this is a nested listing environment, and note how it is numbered.
+
+  \item $A=\{n\in\mathbb{Z} \sep  -4\leq n\leq 4\}$
+
+  \item $B=\{n\in{\mathbb Z} \sep  n^2\leq 7\}$
+
+  \item $C=\{n\in{\mathbb N} \sep  n^3< 100\}$
+
+  \item $D=\{x\in\RR \sep  x^3-x=0\}$
+ 
+  \item $E=\{x\in\RR \sep  x^2+1=0\}$
+     
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $S=\{-10,-9,-8,\dotsc,8,9,10\}$.
+  Describe each of the following sets as $\{x\in S \sep  p(x)\}$, where $p(x)$ is some condition on $x$.
+  \begin{enumerate}  
+
+  \item $A=\{-10,-9,\dotsc,-1,1,\ldots,9,10\}$  %Notice how \dotsc and \ldots are about the same.  There is a reason to prefer \dotsc.
+
+  \item $B=\{-10,-9,\dotsc,-1,0\}$
+
+  \item $C=\{-5,-4,\dotsc,0,1,\dotsc,7\}$
+
+  \item $D=\{-10,-9,-8,\dotsc,4,6,7,\dotsc,10\}$
+ 
+     
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Give examples of three sets $A$, $B$, and $C$ such that 
+
+  \begin{enumerate} 
+  \item $A\subseteq  B \subsetneq C$
+
+  \item $A \in B$, $B\in C$, and $A\not\in C$
+
+  \item $A\in B$ and $A\subsetneq C$
+    
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Which of the following sets are equal?
+
+  \makebox[150pt][l]{$A=\{ n\in\ZZ \sep  |n|<2\}$} \makebox[150pt][l]{$B=\{ n\in\ZZ \sep  n^2\leq 1\}$}
+
+  \makebox[150pt][l]{$C=\{ n\in\ZZ \sep  n^3=n\}$} \makebox[150pt][l]{$D=\{-1, 0, 1\}$}
+
+  \makebox[150pt][l]{$E=\{ n\in\ZZ \sep  n^2\leq n\}$} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A=\{\emptyset, \spadesuit, \Psi\}$.  Determine which of the following are true or false.
+  
+  \begin{itemize}
+  \item[(a)] \makebox[100pt][l]{$\spadesuit\subseteq \calP(A)$}
+        (e)  \makebox[100pt][l]{$\emptyset\subseteq \calP(A)$}
+        (i)  \makebox[100pt][l]{$\{\emptyset,\{\spadesuit\}\}\subseteq \calP(A)$}
+  \item[(b)] \makebox[100pt][l]{$\Psi\in \calP(A)$}
+        (f)  \makebox[100pt][l]{$\emptyset\in \calP(A)$}
+        (j)  \makebox[100pt][l]{$\{\emptyset,\{\spadesuit\}\}\in \calP(A)$}
+  \item[(c)] \makebox[100pt][l]{$\{\Psi\}\subseteq \calP(A)$}
+        (g)  \makebox[100pt][l]{$\{\emptyset\}\subseteq \calP(A)$}
+        (k)  \makebox[100pt][l]{$A\subseteq \calP(A)$}
+  \item[(d)] \makebox[100pt][l]{$\{\spadesuit\}\in \calP(A)$}
+        (h)  \makebox[100pt][l]{$\{\emptyset\} \in \calP(A)$}
+        (l)  \makebox[100pt][l]{$A\in \calP(A)$}
+ \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let  $U$ be some universal set.
+  Investigate the two sets $A-(B-C)$ and $(A-B)-C$. \newline
+  Are they the same? different? Is one a subset of the other?
+
+  Make a conjecture about their relation, and explain why it holds.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Determine whether the following statements are true or false.
+
+  \begin{enumerate}
+  \item  If $\{1\}\in\calP(A)$, then $1\in A$ but $\{1\}\not\in A$.
+
+  \item If $A$, $B$, and $C$ are sets such that $A\subsetneq\calP(B)\subsetneq C$ and $|A|=2$, then $|C|$ can be 5, but it cannot be $4$.
+
+  \item If a set $B$ has one more element than a set $A$, then $\calP(B)$ has at least two more elements than $\calP(A)$.
+
+  \item If four sets $A$, $B$, $C$, and $D$ are subsets of $\{1,2,3\}$ such that $|A|=|B|=|C|=|D|=2$, then at least two of these sets are
+    equal. 
+
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Determine the cardinality of each of the following sets.
+
+  \begin{enumerate}
+  \item  $A=\{1,2,3,\{1,2,3\},4,\{4\}\}$
+
+  \item  $B=\{x\in\RR \sep  |x|=-\pi\}$
+
+  \item $C=\{m\in\NN \sep  2<m\leq 5\}$
+
+  \item $D=\{n\in\NN \sep  n<0\}$
+
+  \item $E=\{k\in\NN \sep  1\leq k^2\leq 100\}$
+
+  \item $F=\{k\in\ZZ \sep  1\leq k^2\leq 100\}$
+
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Given examples of three sets $A$, $B$, and $C$ such that $B\neq C$ but $B-A=C-A$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Given an example of two subsets $A$ and $B$ of $\{1,2,3\}$ such that all of the following sets are different:
+  $A\cup B$, $A\cup\overline{B}$, $\overline{A}\cup B$,     $\overline{A}\cup\overline{B}$,
+  $A\cap B$, $A\cap\overline{B}$, $\overline{A}\cap B$, and $\overline{A}\cap\overline{B}$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

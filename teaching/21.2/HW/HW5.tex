@@ -1,0 +1,150 @@
+%HW5.tex
+%Fifth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{2cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large YOUR NAME\vspace{2pt}\\
+\large
+Fifth Homework: \hfill Due \  4 October 2021\\
+Use English when possible.  Answers should not just be symbols.
+\normalsize\medskip
+
+
+
+\noindent{\color{blue}\rule{500pt}{2pt}}\medskip
+
+
+
+\noindent {\color{Maroon}\bf Definition:}  Let $a$, $b$, and $m$ be integers.
+We say that $a$ and $b$ are \demph{congruent modulo $m$} if $m$ divides their difference, $a-b$.
+That is, when $m|(a-b)$.
+We write \defcolor{$a\equiv b\mod m$} when this occurs.
+
+\noindent {\color{Maroon}\bf Definition:}
+A real number $x$ is a \demph{rational number} when there exists integers $n,d$ with $d\neq 0$ such that  $x=n/d$.
+  A real number that is not rational is an \demph{irrational number}.
+
+
+\noindent {\color{Maroon}\bf Definition:}
+Suppose that $a$ is a nonnegative real number.
+The \demph{square root of $a$} is the unique nonnegative real number $r$ such that $r^2=a$.
+We write \demph{$\sqrt{a}$} for the square root of $a$.
+
+
+
+\noindent{\color{blue}\rule{500pt}{2pt}}\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item In our text (and lectures), when we discuss congruence modulo a natural number $m$, we require that $m>0$.
+  Let us explore what happens in some extreme cases.
+  Your answers need not be more than a few sentences long, and do not need a proof, but should show understanding.
+  
+  \begin{enumerate}
+  \item Discuss what happens when $m=1$ in the above definition for congruence modulo $m$.
+        That is: what are its consequences, which numbers are congruent to others, and etc.
+
+  \item How about when $m=0$?   What are its consequences, etc.?
+
+
+  \item If we replace $m$ by $-m$ in the definition, what changes?
+
+  \end{enumerate}    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $a$ be an integer.   Prove or find a counterexample to the statement that if $a$ is odd, then $a^2 \equiv 1 \mod 8$.
+      (Recall that we proved in class that $4|(a^2-1)$.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write up a nice, clean proof of the arithmetic-geometric mean: \ 
+  ``For all positive real numbers $x$ and $y$,  we have $\sqrt{xy}\leq \frac{x+y}{2}$, and we have equality if and only if $x=y$.''
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $x$ be a positive real number.
+  Prove that $x+\frac{1}{x} \geq 2$.
+
+  Hint: There is an easy way to do this and a hard way to do this.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove for every three real numbers $x$, $y$ and $z$ that $|x - z| \leq |x - y| + |y - z|$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that for all real numbers $a,b,c,d$, we have $(ac+bd)^2\leq (a^2+b^2)(c^2+d^2)$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+  Is the following statement true or false? (If true, give a proof, if false, give a counterexample.)\newline
+  ``For each positive real number $x$, if $x$ is irrational, then $\sqrt{x}$ is irrational.''
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A$ and $B$ be sets. Prove that $A\cup B = (A - B) \cup (B - A) \cup (A \cap B)$.
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item In the context of the previous problem, under what conditions do those three sets form a partition
+  (See Section 1.5 of our text) of $A\cup B$?
+  Prove your assertion.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Prove that if $A$ and $B$ are sets such that $A\cup B\neq\emptyset$, then $A\neq\emptyset$ or $B\neq\emptyset$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

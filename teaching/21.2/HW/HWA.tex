@@ -1,0 +1,207 @@
+%HWA.tex
+%Tenth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large \vspace{2pt}\\
+\large
+Tenth Homework: \hfill Due \  15 November 2021
+\normalsize\medskip
+
+
+\noindent{\color{blue}\rule{528.3675pt}{2pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For $n\in \NN$, let $s(n)$ denote the sum of the digits of $n$, expressed in base 10.
+  That is, if we write $n=a_k\dotsc a_1 a_0$ in base 10 so that
+  \[
+     n\ =\ \left(a_k\cdot 10^k\right) +   \left(a_{k-1}\cdot 10^{k-1}\right) +\dotsb + 
+     \left(a_1\cdot 10\right) + a_0\,,
+  \]
+  then $s(n)=a_k+\dotsb+a_1+a_0$.
+   \begin{enumerate}
+     \item Use mathematical induction (or any other means, there are several valid proofs) to prove that for all $m\in\NN$, $10^m\equiv 1\mod 9$.
+     Thus $[10^m]_9=[1]_9$.
+
+     \item Use this to prove that $[n]_9 = [s(n)]_9$ and deduce that $9|n$ if and only if $9|s(n)$.
+
+     \item Show that for $a,b\in\ZZ$, we have $[a+ b]_9=[s(a)+ s(b)]_9$ and $[a\cdot b]_9=[s(a)\cdot s(b)]_9$.
+       This is the idea behind \demph{casting out nines}.
+       Do not forget that you can use previously proven results in your proofs.
+   \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item {\bf Proof Analysis.}   Which if the following is true for the proof below (is the statement true or false, and is
+  the proof correct or incorrect.) ?
+
+  {\bf Statement:} Every symmetric and transitive relation on a nonempty set $A$ is an equivalence relation.
+
+  {\bf Proof:} Let $R$ be a symmetric and transitive relation on a nonempty set $A$.
+  We need only to show that $R$ is reflexive.
+  Let $x\in A$.
+  Let $y\in A$ be such that $xRy$.
+  As $R$ is symmetric, we have $yRx$.
+  Now $xRy$ and $yRx$, so we conclude that $xRx$, by transitivity.
+  Thus, $R$ is reflexive. \hfill $\Box$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $A$ be a nonempty set.
+  Suppose that $R$ is a relation from $A$ to $A$ that is both an equivalence relation and a function.
+  What familiar function is $R$?
+  Justify your answer.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   Let $\nu$ be the function from $\NN$ to $\NN$ whose value at a positive integer $n$ is the number of digits in the American
+  English spelling of the number $n$.
+  For example $\nu(0)=4$, as `0' is written {\sf zero} with four letters.
+  Similarly, $\nu(22)=9$, as {\sf twentytwo} has nine letters.
+
+  If we restrict the domain of $\nu$ to $\{1,2,\dotsc,20\}$, what is its range?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item A \demph{real function} is one whose domain and codomain are subsets of $\RR$.
+  For each of the following real functions, determine their largest possible domain and their range.
+
+  (a) The function $f$ defined by $f(x)=x/(x^2-3x-2)$.
+
+  (b) The function $g$ defined by $g(x)=\ln(1-\cos(x))$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $s\colon\NN\to\NN$ be the function whose value $s(n)$ at a number $n$ is the sum of the distinct natural number divisors of
+  $n$. 
+  Compute the values of $s$ on the set $\{1,\dotsc,10\}$.
+  Is the function $s$ injective?  Is it surjective?  Justify your conclusions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $d\colon\NN\to\NN$ be the function whose value $d(n)$ at a number $n$ is the number of distinct natural number divisors of
+  $n$. 
+  Compute the values of $d$ on the set $\{1,\dotsc,10\}$.
+  Is the function $d$ injective?  Is it surjective?  Justify your conclusions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For a function $f\colon A\to B$ and subsets $C$ anbd $D$ of $A$ and $E$ and $F$ of $B$, prove the following:
+
+ \begin{enumerate}
+  \item  $f(C\cap D)\subseteq f(C)\cap f(D)$.
+
+  \item  $f^{-1}(E-F)= f^{-1}(E) - f^{-1}(F)$.
+
+ \end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item  Let $A$ and $B$ be sets.
+    Recall the definitions of the identity functions $I_A\colon A\to A$ and  $I_B\colon B\to B$:
+    For $a\in A$, $I_A(a)=a$ and for $b\in B$, $I_B(b)=b$.
+
+    Let $f\colon A\to B$ be a function.
+    Prove by a direct computation that $f=f\circ I_A$ and that $f=I_B\circ f$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item  Let $A$ be a set.  Prove that the identity function $I_A$ is a bijection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For each of the following, either give an example of functions $f\colon A\to B$ and $g\colon B\to C$ that satisfy the given
+  properties, or explain why no such example exists.
+
+ \begin{enumerate}
+  \item The function $g$ is a surjection, but the function $g\circ f$ is not a surjection.
+
+  \item The function $g$ is an injection, but the function $g\circ f$ is not an injection.
+
+  \item The function $f$ is not a surjection, but the function $g\circ f$ is a surjection.
+
+  \item The function $g$ is not an injection, but the function $g\circ f$ is an injection.
+
+  \item The function $g$ is not an injection, but the function $g\circ f$ is a surjection.
+
+ \end{enumerate}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  For functions $f$, $g$, and $h$ with domain and codomain $\RR$, prove or disprove the following:
+  
+ \begin{enumerate}
+    \item   $(g+h)\circ f = (g\circ f) + (h\circ f)$.
+
+    \item   $f\circ(g+h) = (f\circ g) + (f\circ h)$.   
+
+ \end{enumerate}  
+
+  {\bf Definition:} The sum of two $g$ and $h$  with domain and codomain $\RR$ is defined to be the function $g+h$ whose value at a number
+  $x\in \RR$ is $g(x)+h(x)$.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

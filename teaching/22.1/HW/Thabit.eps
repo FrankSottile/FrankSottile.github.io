@@ -1,0 +1,94 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title:  Thabit.eps
+%%Creator: Frank Sottile
+%%Pages:  1
+%%BoundingBox: 0 0 194 230
+%%EndComments
+20 dict begin
+%10 dict begin
+gsave
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Draws box from (a,b) to (c,d) 
+/BOX {/d exch def /c exch def /b exch def /a exch def 
+        a b moveto c b lineto c d lineto a d lineto closepath} def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%30 35 translate 2 2 scale 1 setlinewidth 1 0 1 setrgbcolor 0 0 194 230  BOX stroke
+
+
+/unit 20 def
+/side unit 6 mul def
+%  Apex of the triangle
+/xapex 29 12 div unit mul def
+/yapex 455 sqrt 12 div unit mul def
+% other side of triangle
+/xother 43 12 div unit mul def
+/BBp 3 2 div unit mul def
+/CCp 8 3 div unit mul def
+/ang -11 24 div arccos def
+/th  yapex xapex atan def
+
+/rad unit 2 div def
+
+
+1 1 translate
+yapex 0 translate
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% a 3-4-6 triangle
+%
+1 setlinejoin
+1 setlinecap
+
+0 setlinewidth
+1 1 0.4 setrgbcolor
+%
+%left square  and left rectangle
+%
+newpath 0 side moveto yapex neg xapex rlineto xapex yapex rlineto yapex xapex neg rlineto closepath fill
+newpath 0 0 moveto 0 side rlineto BBp 0 rlineto 0 side neg rlineto closepath fill
+
+1 0.5 1 setrgbcolor
+%
+%right square 
+%
+newpath side side moveto xother neg yapex rlineto yapex xother rlineto xother yapex neg rlineto closepath fill
+newpath side 0 moveto 0 side rlineto CCp neg 0 rlineto 0 side neg rlineto closepath fill
+
+0.9 setlinewidth
+0 0 1 setrgbcolor
+
+%
+%Big Square
+%
+newpath 0 0 moveto  side 0 rlineto 0 side rlineto side neg 0 rlineto closepath stroke
+
+%
+%left square 
+%
+newpath 0 side moveto yapex neg xapex rlineto xapex yapex rlineto yapex xapex neg rlineto closepath stroke
+
+%
+%right square 
+%
+newpath side side moveto xother neg yapex rlineto yapex xother rlineto xother yapex neg rlineto closepath stroke
+
+0.5 setlinewidth
+0 0 0 setrgbcolor
+xapex side yapex add rad 180 th add  180 th add ang add arc stroke
+BBp side             rad 180 ang sub 180  arc stroke
+side CCp sub side    rad 0 ang arc stroke
+
+
+0.7 setlinewidth
+0.2 0 1 setrgbcolor
+[2 2] 0 setdash
+%
+%
+newpath xapex side yapex add moveto BBp side lineto 0 side neg rlineto stroke
+newpath xapex side yapex add moveto side CCp sub side lineto 0 side neg rlineto stroke
+
+showpage
+grestore
+end
+%%EOF
