@@ -1,0 +1,75 @@
+//Feb_11.sing
+//
+// This is a Singular script to do some of the exercises
+//   from Cox, Little, and O'Shea, before we fully
+//   understand the theory of Groebner bases.
+/////////////////////////////////////////////////////////////////////////////////
+//Singular has a number of libraries that extend its core functionality
+// 
+LIB "primdec.lib";
+
+
+// These next line ensures that the output is as nice as possible
+option(redSB);
+// We always need to define the ring we are working in
+ring R=0, (x,y,z, t,u), dp;
+
+// Let's first do an example from Section I.3
+printf("Example from Section I.3");
+//
+//  Let us encode the parametrization of the tangents to the rational
+//    normal curve in an ideal
+//
+ideal TRNC = x-(t+u), y-(t^2+2*t*u), z-(t^3+3*t^2*u);
+short=0;
+//  Singular will eliminate variables from an ideal.  In this case,
+//    we get the equation for the tangent variety to the rational normal
+//    curve, as expressed in Section I.3
+eliminate(TRNC,tu);
+
+//////////////////////////////////////////////////////////////////////////////////
+// Let us do another one, Exercise 11 in Section I.3
+//
+printf("Exercise 11 in Section I.3");
+ideal Param = x-(t*(u^2-t^2)), y-(u), z-(u^2-t^2);
+eliminate(Param,tu);
+
+//////////////////////////////////////////////////////////////////////////////////
+//
+//  We can keep the same ring for this next one, Problem 3(c) on page 35
+printf("Problem 3(c) on page 35");
+ideal I = 2*x^2+3*y^2-11, x^2-y^2-3 ;
+//
+//  Let us compute a different generating set, a Groebner or standard basis for 
+std(I);
+// Note that this basis for I is the second pair of polynomials
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Problem 17 Section I.5
+//
+// the radical of an ideal J is I(V(J))
+//
+printf("Problem 17 Section I.5");
+I = std( ideal(x^5-2*x^4+2*x^2-x, x^5-x^4-2*x^3+2*x^2+x-1) ) ;
+//
+//  Factorizing the polynomial generator
+//
+factorize(I[1]);
+radical(I);
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Problem 1(c) Section II.1
+//
+printf("Problem 1(c) Section II.1");
+I = std( ideal(x^3-6*x^2+12*x-8, 2*x^3-10*x^2+16*x-8 ) );
+// If the anser is 0, then 
+reduce( x^2-4*x+4, I);
+/////////////////////////////////////////////////////////////////////////////////
+//
+// Some plane curves
+//
+printf("A crazy plane curve");
+I = ideal( x - (t^3-6*t^2+12*t-8), y - (t^5-2*t^4+2*t^2-t) );
+eliminate(I,t);
+

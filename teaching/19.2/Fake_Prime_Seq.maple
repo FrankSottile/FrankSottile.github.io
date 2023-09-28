@@ -1,0 +1,30 @@
+interface(quiet=true):
+
+#N:=99:
+#N:=999:
+#N:=9999:
+#N:=99999:
+#N:=999999:
+#N:=9999999:
+N:=99999999:  #This is running on Frank's Machine
+
+count:=0:
+for j from 0 to N do  
+ if nops(ifactor(j^2+j+41))=1 then count:=count+1: end if:
+end do:
+#lprint(count, N+1);
+
+printf("Out of the first %d numbers n, %d values of n^2+n+41 are prime\n",N+1,count);
+time();
+
+quit;
+Out of the first        100 numbers n,       86 values of n^2+n+41 are prime      0.028 sec
+Out of the first       1000 numbers n,      581 values of n^2+n+41 are prime      0.039 sec
+Out of the first      10000 numbers n,     4149 values of n^2+n+41 are prime      0.348 sec
+Out of the first     100000 numbers n,    31985 values of n^2+n+41 are prime      4.019 sec
+Out of the first    1000000 numbers n,   261081 values of n^2+n+41 are prime     91.748 sec
+Out of the first   10000000 numbers n,  2208197 values of n^2+n+41 are prime   1624.252 sec
+Out of the first  100000000 numbers n, 19132652 values of n^2+n+41 are prime  34739.672 sec
+
+This finished, but with some error message at the next power of 10.  I am curious what 
+the problem was.
