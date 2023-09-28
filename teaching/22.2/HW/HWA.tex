@@ -1,0 +1,116 @@
+%HWA.tex
+%Tenth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large \vspace{2pt}\\
+\large
+Tenth Homework: \hfill Due \  15 November 2022
+\normalsize\medskip
+
+
+\noindent{\color{blue}\rule{528.3675pt}{2pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $A=\{a,b\}$. How many relations are there on $A$?  If possible, do this without listing them.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Define a relation $R$ on $\NN$ (the strictly positive integers) by $aRb$ if $a/b\in \NN$.
+  For $c,d\in\NN$, under what conditions do we have $cR^{-1} d$?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A$ be a set with four elements, $|A|=4$.
+      What is the maximum number of elements that a relation $R$ on $A$ can contain such that $R\cap R^{-1}=\emptyset$?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A = \{p,q,r,s\}$.
+      How many relations defined on $A$ are reflexive, symmetric, and transitive and contain
+      the ordered pairs $(p,q)$, $(q,r)$, and $(r,s)$?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A=\{a,b,c,d\}$.
+  Give an example of a relation on $A$ that is:
+  \begin{enumerate}
+    \item reflexive and symmetric but not transitive.
+    \item reflexive and transitive but not symmetric.
+    \item symmetric and transitive but not reflexive.
+    \item reflexive but neither symmetric nor transitive.
+    \item symmetric but neither reflexive nor transitive.
+    \item transitive but neither reflexive nor symmetric
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $C$ be the set of all polynomials of degree at most 3.
+    An element $f$ of $C$ can then be expressed as
+    $f=ax^3 + bx^2 + cx+d$, where $a, b, c, d \in\RR$.
+    Define the relation $R$ on $C$ by $p R q$ if $p$ and $q$ have a root in common.
+    (For example, $p = (x-1)^2$ and $q = x^2 - 1$ have the root 1 in common so that $p R q$.)
+    Determine which of the properties:  reflexive, symmetric and transitive are possessed by $R$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $R$ be an equivalence relation on $A = \{a, b, c, d, e, f , g\}$ such that $a R c$, $b R f$,  $c R d$, and $d R g$.
+    If there are three distinct equivalence classes resulting from $R$, then determine these equivalence classes and
+    determine all elements of $R$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

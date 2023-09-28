@@ -1,0 +1,151 @@
+%HWC.tex
+%Tenth Homework -- Math 300H 
+%
+%  The percent sign is a comment character
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Look these up on line.  The first sets the type of document, and the next are for mathematics symbols, graphics and color
+%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,mathtools}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{1cm}{2cm}{1cm} % --- sets all four margins LTRB
+
+
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\QQ}{{\mathbb Q}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+\newcommand{\lsim}{\mathord{\sim}}  %  This is to remove the extra spacing around \sim (it is a binary relation) for the logical not
+
+\newcommand{\defcolor}[1]{{\color{blue}{#1}}}
+\newcommand{\demph}[1]{{\color{blue}\sl{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Please edit this as appropriate
+%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Foundations of Mathematics \hfill Math 300H Section 970}\vspace{2pt}\\
+\Large \vspace{2pt}\\
+\large
+Twelfth Homework: \hfill Due \  29 November 2022
+\normalsize\medskip
+
+
+\noindent{\color{blue}\rule{528.3675pt}{2pt}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}  %  the \begin{..}  \end{..} stars and ends an environment.
+
+
+%\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item  Let $A$ be a set.  Prove that the identity function $I_A$ is a bijection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item For each of the following, either give an example of functions $f\colon A\to B$ and $g\colon B\to C$ that satisfy the
+  given properties, or explain why no such example exists.  I urge simplicity.
+
+ \begin{enumerate}
+
+  \item The function $f$ is a surjection, but the function $g\circ f$ is not a surjection.
+
+  \item The function $f$ is an injection, but the function $g\circ f$ is not an injection.
+
+  \item The function $g$ is a surjection, but the function $g\circ f$ is not a surjection.
+
+  \item The function $g$ is an injection, but the function $g\circ f$ is not an injection.
+
+  \item The function $f$ is not a surjection, but the function $g\circ f$ is a surjection.
+
+  \item The function $f$ is not an injection, but the function $g\circ f$ is an injection.
+
+  \item The function $g$ is not a surjection, but the function $g\circ f$ is a surjection.
+
+  \item The function $g$ is not an injection, but the function $g\circ f$ is an injection.
+
+ \end{enumerate}  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  For functions $f$, $g$, and $h$ with domain and codomain $\RR$, prove or disprove the following:
+  
+ \begin{enumerate}
+    \item   $(g+h)\circ f = (g\circ f) + (h\circ f)$.
+
+    \item   $f\circ(g+h) = (f\circ g) + (f\circ h)$.   
+
+ \end{enumerate}  
+
+  {\bf Definition:} The sum of two $g$ and $h$  with domain and codomain $\RR$ is defined to be the function $g+h$ whose
+  value at a number $x\in \RR$ is $g(x)+h(x)$.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \item  Let $A$ and $B$ be sets.
+    Recall the definitions of the identity functions $I_A\colon A\to A$ and  $I_B\colon B\to B$:
+    For $a\in A$, $I_A(a)=a$ and for $b\in B$, $I_B(b)=b$.
+
+    Let $f\colon A\to B$ be a function.
+    Prove by a direct computation that $f=f\circ I_A$ and that $f=I_B\circ f$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A$, $B$, and $C$ be nonempty sets, and suppose that  $f\colon A\to B$ and $g\colon B\to C$ are functions.
+  Suppose that $g\circ f\colon A\to C$ is an injection.
+  Prove that $f$ is an injection.
+
+  Give an example of functions $f$ and $g$ with these properties illustrating that $g$ need not be an injection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A$, $B$, and $C$ be nonempty sets, and suppose that  $f\colon A\to B$ and $g\colon B\to C$ are functions.
+  Suppose that $g\circ f\colon A\to C$ is a surjection.
+  Prove that $g$ is a surjection.
+
+  Give an example of functions $f$ and $g$ with these properties illustrating that $f$ need not be a surjection.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $A$, $B$, and $C$ be nonempty sets, and suppose that  $f\colon A\to B$, $g\colon B\to C$, and $h\colon B\to C$ are functions.
+  For each of the following, prove or disprove:
+  
+ \begin{enumerate}
+  \item  If $g\circ f= h\circ f$, then $g=h$.
+  \item  If $f$ is one-to-one and $g\circ f= h\circ f$, then $g=h$.
+ \end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+  
