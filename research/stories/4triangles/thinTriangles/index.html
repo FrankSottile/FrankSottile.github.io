@@ -1,0 +1,394 @@
+<HTML>
+<HEAD>
+   <TITLE>62 Line Tangents to Four Thin Triangles</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<font size=+3>62 Line Tangents to Four Thin Triangles</font><BR>
+<BR>
+<font size=+1>
+H. Br&ouml;nnimann, O. Devillers,  S. Lazard, and F. Sottile</font><BR>
+
+<!---------------------------------------------------------------------------->
+<HR>
+
+Consider the four triangles in <B>R</B><SUP>3</SUP> whose vertices are as follows:<BR>
+<TABLE  border=1>
+ <TR>
+  <TD><font color="000099"><I>t</I><sub>1</sub></font></TD>
+  <TD> &nbsp; <font color="000099">(-10.5, 1, -10.5), <BR> &nbsp; 
+      (.5628568345479573470378601, 1, .5628568345479573470378601), <BR> &nbsp; 
+      (.56285683454726874605620706, .99999999999822994290647247, .56285683454726874605620706)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font color="990000"><I>t</I><sub>2</sub></font></TD>
+  <TD> &nbsp; <font color="990000">(-10.5, -1, 10.5), <BR> &nbsp; 
+      (1.394218989475, -1, -1.394218989475), <BR> &nbsp; 
+      (1.3942406911811439954597161, -1.0000237884694881275439271, -1.3942406911811439954597161)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font color="009900"><I>t</I><sub>3</sub></font></TD>
+  <TD> &nbsp; <font color="009900">(-9.5, -9.5, .25), <BR> &nbsp; 
+      (.685825, .685825, .25), <BR> &nbsp; 
+      (.69121730616063647303519136, .69121730616063647303519136, .26069756890079842876805653)</font>
+  </TD>
+ </TR>
+ <TR>
+  <TD><font color="990099"><I>t</I><sub>4</sub></font></TD>
+  <TD> &nbsp; <font color="990099">(9.5, 0, 0), <BR> &nbsp; 
+      (-.51, 0, 0), <BR> &nbsp; 
+      (-1.0873912730501133759642956, 0, -.51645811088049333541289247)</font>
+ </TD>
+ </TR>
+</TABLE><BR>
+
+ &nbsp; &nbsp;
+ These triangles are quite `thin', their smallest angles are (in degrees),
+ respectively <BR>
+<font color="000099"><I>t</I><sub>1</sub> : .64823e-11 </font> &nbsp;  &nbsp; 
+<font color="990000"><I>t</I><sub>2</sub> : .81028e-4</font> &nbsp;  &nbsp; 
+<font color="009900"><I>t</I><sub>3</sub> : .42527e-1</font> &nbsp;  &nbsp; 
+<font color="990099"><I>t</I><sub>4</sub> : 2.7927</font>.<BR><BR>
+
+
+<B>Theorem.</B>
+  There are exactly 62 lines in <B>R</B><sup>3</sup> that are tangent to the four 
+  triangles
+  <font color="000099"><I>t</I><sub>1</sub></font>, 
+  <font color="990000"><I>t</I><sub>2</sub></font>, 
+  <font color="009900"><I>t</I><sub>3</sub></font>, and
+  <font color="990099"><I>t</I><sub>4</sub></font>.
+<BR><BR>
+
+ &nbsp; &nbsp;
+The vertices above are decimal approximations to rational numbers obtained in
+our construction (outlined below).
+They are given to 26 decimal places.
+This precision is necessary:  If truncated to 25 decimal places, then
+there will be only 60 common tangents.
+Here is the last coordinate of the third point of  
+<font color="000099"><I>t</I><sub>1</sub></font>: <BR>
+ 70357104318408593257025882167/125000000000000000000000000000
+
+<!---------------------------------------------------------------------------->
+<HR>
+ &nbsp; &nbsp; 
+While this Theorem may be verified directly by simply computing the lines (that
+is the origin of the remark about decimal precision), it is more illuminating to
+contemplate our
+construction of these four triangles.
+This construction also explains the exponential shrinkage of the smallest angle, as we
+progress from  
+  <font color="990099"><I>t</I><sub>4</sub></font> down to 
+  <font color="000099"><I>t</I><sub>1</sub></font>.
+<BR>
+ &nbsp; &nbsp; 
+Our construction of four triangles having 62 common tangent is a pertubation of four
+lines having two common transversals. 
+The construction begins with the four lines, in
+ <font color="000099">blue</font>,
+ <font color="990000">red</font>,
+ <font color="009900">green</font>, and
+ <font color="990099">magenta</font>.
+The  <font color="000099">blue</font>,
+ <font color="990000">red</font>, and  <font color="990099">magenta</font>
+lines lie in one ruling of the 
+ <font color="FFCC00">yellow hyperbolic paraboloid</font>.
+There are two black lines that meet all four lines
+(and also lie on this hyperboloid).
+
+<CENTER>
+ <IMG SRC="start.gif">
+</CENTER>
+
+ &nbsp; &nbsp; 
+More precisely, the four lines are parametrized as follows:<BR>
+
+<font color="000099"><i>l</i><sub>1</sub>&nbsp;:&nbsp;(<i>t</i>,1,<i>t</i>)</font>,
+ &nbsp; &nbsp;
+<font color="990000"><i>l</i><sub>2</sub>&nbsp;:&nbsp;(<i>t</i>,-1,-<i>t</i>)</font>,
+ &nbsp; &nbsp;
+<font color="009900"><i>l</i><sub>3</sub>&nbsp;:&nbsp;(<i>t</i>,<i>t</i>,1/4)</font>,
+ &nbsp; &nbsp;and&nbsp; &nbsp;
+<font color="990099"><i>l</i><sub>4</sub>&nbsp;:&nbsp;(<i>t</i>,0,0)</font>.
+<BR><BR>
+
+
+ &nbsp; &nbsp; 
+Next, we perturb each line into a triangle, two of whose
+sides are close to the line with the third (shorter) side chosen judiciously.
+We do this by first considering a plane through each line.
+These planes 
+(<font color="000099"><I>P</I><sub>1</sub></font> ---
+<font color="990099"><I>P</I><sub>4</sub></font>)
+ are<BR>
+<font color="000099"><i>P</i><sub>1</sub>&nbsp;:&nbsp;<I>x</I>=<i>z</i></font>,
+ &nbsp; &nbsp;
+<font color="990000"><i>P</i><sub>2</sub>&nbsp;:&nbsp;<I>x</I>=-<i>z</i></font>,
+ &nbsp; &nbsp;
+<font color="009900"><i>P</i><sub>3</sub>&nbsp;:&nbsp;<I>x</I>=<i>y</i></font>,
+ &nbsp; &nbsp;and&nbsp; &nbsp;
+<font color="990099"><i>P</i><sub>4</sub>&nbsp;:&nbsp;<I>y</I>=0</font>.
+<BR>
+In each plane <i>P<sub>i</sub></i> consider the conic <i>C<sub>i</sub></i> that 
+is its intersection with the doubly-ruled hyperboloid on which the other lines lie.
+The plane  <i>P<sub>i</sub></i> was chosen so that the two intersections of this conic with the line 
+<i>l<sub>i</sub></i> are in the same connected component (branch) of 
+<i>C<sub>i</sub></i>&nbsp;.
+The picture in each plane is shown below.
+The coordinates (<i>t</i>,<i>u</I>) in each plane are chosen so that the line 
+<i>l<sub>i</sub></i> is <i>u</i>=0, and <i>t</i> is the parameter given above
+when describing the lines.
+
+<CENTER>
+<TABLE>
+ <TR>
+  <TD><img src="Plane1.gif"></TD><TD> &nbsp; </TD>
+  <TD><img src="Plane2.gif"></TD><TD> &nbsp; </TD>
+  <TD><img src="Plane3.gif"></TD><TD> &nbsp; </TD>
+  <TD><img src="Plane4.gif"></TD>
+ </TR>
+ <TR>
+  <TD align=center><font color="000099"><i>P</i><sub>1</sub></TD><TD> &nbsp; </TD>
+  <TD align=center><font color="990000"><i>P</i><sub>2</sub></TD><TD> &nbsp; </TD>
+  <TD align=center><font color="009900"><i>P</i><sub>3</sub></TD><TD> &nbsp; </TD>
+  <TD align=center><font color="990099"><i>P</i><sub>4</sub></TD>
+ </TR>
+</TABLE>
+</CENTER>
+
+ &nbsp; &nbsp; 
+These conics meet the lines (<font color="000099"><I>l</I><sub>1</sub></font> ---
+<font color="990099"><I>l</I><sub>4</sub></font>) at the same points as the two
+transversals.
+For each <i>i</I>=1,2,3,4, 
+write <i>l<sub>i</sub></I> now for some segment of the line which meets the
+conic <i>C<sub>i</sub></I> in two points.
+If we rotate each segment <i>l<sub>i</sub></I> slightly in the plane
+<i>P<sub>i</sub></I>&nbsp;, keeping one vertex fixed, we obtain a nearby segment
+<i>k<sub>i</sub></I>&nbsp;.
+These two lines  <i>l<sub>i</sub></I>  and <i>k<sub>i</sub></I>&nbsp; form a triangle
+<i>t<sub>i</sub></I>&nbsp; whose third side is <i>m<sub>i</sub></I>&nbsp;.
+If the rotation is sufficiently small and the common point far enough away from
+<i>C<sub>i</sub></I>&nbsp;, then each of the 16 four-tuples of 
+segments (choosing either <i>l<sub>i</sub></I> or <i>k<sub>i</sub></I> from each 
+triangle) will give 2 lines tangent to the four triangles, a total of 32 in all.
+<BR><BR>
+
+ &nbsp; &nbsp; 
+We can get more common tangents by carefully chosing the third sides
+(<i>m<sub>i</sub></I>) of the triangles. 
+We first introduce some notation.
+The choices of <i>l<sub>i</sub></I> or <i>k<sub>i</sub></I> give different
+conics in each of the planes, which we suggestively write as follows.
+Set <i>Clll<sub>i</sub></I>&nbsp;:=&nbsp;<i>C<sub>i</sub></I>&nbsp;, and for
+instance, set <font color="990000"><i>Cklk<sub>2</sub></I></font> to be the
+conic in   the plane <font color="990000"><i>P<sub>2</sub></I></font> which is
+the intersection of the lines meeting each of 
+<font color="000099"><i>k</i><sub>1</sub></font>,
+<font color="009900"><i>l</i><sub>3</sub></font>, and 
+<font color="990099"><i>k</i><sub>4</sub></font>
+with the plane 
+<font color="990000"><i>P</i><sub>2</sub></font>&nbsp;.
+Similarly,  <font color="009900"><i>Cllk<sub>3</sub></I></font> is the
+conic in  the plane <font color="009900"><i>P<sub>3</sub></I></font> where 
+the lines meeting each of 
+<font color="000099"><i>l</i><sub>1</sub></font>,
+<font color="990000"><i>l</i><sub>2</sub></font>, and 
+<font color="990099"><i>k</i><sub>4</sub></font>
+meet the plane <font color="009900"><i>P</i><sub>3</sub></font>&nbsp;.
+<BR><BR>
+
+ &nbsp; &nbsp; 
+These new conics are `near' to the original conics.
+For example, on the left below, we display the picture in the fourth plane
+<font color="990099"><i>P</i><sub>4</sub></font> 
+for the pertubation giving us 62 common tangents. 
+There, the horizontal coordinate is the usual <i>x</I> and the vertical coordinate is
+the usual <i>z</I> coordinate.
+In this picture, 
+<font color="red"><i>k</i><sub>4</sub></font> is red, 
+<font color=brown><i>Clll</i><sub>4</sub></font> is brown, 
+and <font color="009900"><i>Ckkk</i><sub>4</sub></font> is green.
+The other conics are not displayed, as they cannot be distinguished from one of
+these two.
+Since the two conics are so close, the configuration is better shown in
+different coordinates.
+On the right below, we display the part of the conics between the two lines  
+<font color="990099"><i>l</i><sub>4</sub></font> and 
+<font color="red"><i>k</i><sub>4</sub></font> on the left of the first picture,
+but in different coordinates.
+In these coordinates, <font color="990099"><i>l</i><sub>4</sub></font> remains
+horizontal, but the vertical direction is taken to be the <font color=blue>blue
+line</font>, which was secant to the conics 
+<font color=brown><i>Clll</i><sub>4</sub></font> 
+and <font color="009900"><i>Ckkk</i><sub>4</sub></font> .
+This, and the exaggeration of the horizontal scale were chosen to
+accentuate the curvature of the conics.
+<BR>
+
+<img src="P4.gif">
+<img src="P4.close.gif">
+<BR>
+ &nbsp; &nbsp; 
+The other conics are not shown for they lie very close to one of these two and 
+would not appear even in the second picture.
+There are four near <font color=brown><i>Clll</i><sub>4</sub></font>, all 
+come from <font color="009900"><i>l</i><sub>3</sub></font>
+(and have the form <font color=brown><i>Cxxl</i><sub>4</sub></font>), and there are four
+near <font color="009900"><i>Ckkk</i><sub>4</sub></font>, and all come from 
+the perturbed segment <font color="009900"><i>k</i><sub>3</sub></font>
+(and have the form <font color="009900"><i>Cxxk</i><sub>4</sub></font>),.
+Note that all 8 cut the <font color=blue>secant line</font> in two points
+each.
+If we let <font color="990099"><i>t</i><sub>4</sub></font> be the triangle
+formed by <font color="990099"><i>l</i><sub>4</sub></font>, 
+<font color="ff0000"><i>k</i><sub>4</sub></font>, 
+and  the <font color=blue>secant line <i>m</i><sub>4</sub></font>,
+then there are now 48 common tangents to the four triangles.
+<BR>
+
+ &nbsp; &nbsp; 
+One might naively expect that this construction may be repeated in each of the
+other three planes.
+However, that it not the case.
+In order for the conics in <font color="990099"><i>P</i><sub>4</sub></font>
+to be close enough so that the segment 
+<font color=blue><i>m</i><sub>4</sub></font> between 
+<font color="990099"><i>l</i><sub>4</sub></font> and
+<font color="ff0000"><i>k</i><sub>4</sub></font> can meet all 8, the perturbed
+lines
+<font color="000099"><I>k</I><sub>1</sub></font>, 
+<font color="990000"><I>k</I><sub>2</sub></font>,  and 
+<font color="009900"><I>k</I><sub>3</sub></font>
+had to be rather close to the original lines
+<font color="000099"><I>l</I><sub>1</sub></font>, 
+<font color="990000"><I>l</I><sub>2</sub></font>,  and 
+<font color="009900"><I>l</I><sub>3</sub></font>.
+In fact, they have to be significantly closer to the lines 
+<font color="000099"><I>l</I><sub>1</sub></font>, 
+<font color="990000"><I>l</I><sub>2</sub></font>,  and 
+<font color="009900"><I>l</I><sub>3</sub></font> than  
+<font color="ff0000"><i>k</i><sub>4</sub></font> was to 
+<font color="990099"><i>l</i><sub>4</sub></font>.
+(Which was not very close, as there needed to be enough curvature in the 
+conics <font color="990099"><i>Cxxx</i><sub>4</sub></font> for it to be
+possible to have <font color=blue><i>m</i><sub>4</sub></font> cut all of them.)
+A result of this is that the line segent 
+<font color="009900"><i>m</i><sub>3</sub></font>
+can meet at most four of the conics in 
+<font color="009900"><i>P</i><sub>3</sub></font>.
+<BR>
+
+ &nbsp; &nbsp;
+In fact it turns out that the four conics 
+<font color="009900"><i>Cxxl</i><sub>3</sub></font>
+are `inside' of the four conics
+<font color="009900"><i>Cxxk</i><sub>3</sub></font>, and these are the ones that 
+<font color="009900"><i>m</i><sub>3</sub></font> can meet.
+<BR>
+
+ &nbsp; &nbsp;
+In order for those conics to be close enough together, 
+<font color="990000"><I>l</I><sub>2</sub></font> and 
+<font color="990000"><I>k</I><sub>2</sub></font> must be significantly closer
+together than were the previous two pairs.
+Then, <font color="990000"><I>m</I><sub>2</sub></font> can be chosen to 
+meet the 2 conics 
+<font color="990000"><I>Cxkk</I><sub>2</sub></font>,
+which are the outermost of the 8 conics in 
+<font color="990000"><I>P</I><sub>2</sub></font>.
+<BR>
+
+ &nbsp; &nbsp;
+Finally, in the same way 
+<font color="000099"><I>l</I><sub>1</sub></font> and
+<font color="000099"><I>k</I><sub>1</sub></font> must 
+be microscopically close enough together to enable 
+ <font color="990000"><I>m</I><sub>2</sub></font> can be chosen to 
+meet the 2 conics 
+<font color="990000"><I>Cxkk</I><sub>2</sub></font>.
+Then it is only possible for 
+<font color="000099"><I>m</I><sub>1</sub></font>  to meet 
+the conic <font color="000099"><I>Clkk</I><sub>1</sub></font>, which turns out
+to be the outermost.
+<BR>
+
+ &nbsp; &nbsp;
+This gives 32 + 16 + 8 + 4 + 2 = 62 common tangent to the four triangles 
+  <font color="000099"><I>t</I><sub>1</sub></font>, 
+  <font color="990000"><I>t</I><sub>2</sub></font>, 
+  <font color="009900"><I>t</I><sub>3</sub></font>, and
+  <font color="990099"><I>t</I><sub>4</sub></font>,
+proving the Theorem.
+
+<!---------------------------------------------------------------------------->
+<HR>
+  Here are some files to accomplish the construction, check that there are
+  indeed 62 comon tangents, and draw some pictures.<BR>
+<TABLE>
+ <TR>
+  <TD><TT><A HREF="construction.maple">construction.maple</A></TT>&nbsp;</TD>
+  <TD>This is the skeleton file which actually contains the construction.</TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="procedures">procedures</A></TT></TD>
+  <TD>These are procedures which are necessary for computing the common tangents
+  to 4 triangles.</TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plotH1.maple">plotH1.maple</A></TT></TD>
+  <TD>This draws the hyperboloid on this page.</TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plane1.maple">plane1.maple</A></TT></TD>
+  <TD>Draws the picture in the first plane, 
+  <font color="000099"><I>P</I><sub>1</sub></font> </TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plane2.maple">plane2.maple</A></TT></TD>
+  <TD>Draws the picture in the second plane, 
+  <font color="990000"><I>P</I><sub>2</sub></font> </TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plane3.maple">plane3.maple</A></TT></TD>
+  <TD>Draws the picture in the third plane, 
+  <font color="009900"><I>P</I><sub>3</sub></font> </TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plane4.maple">plane4.maple</A></TT></TD>
+  <TD>Draws the picture in the fourth plane, 
+  <font color="990099"><I>P</I><sub>4</sub></font> </TD>
+ <TR>
+ <!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plotConics.maple">plotConics.maple</A></TT></TD>
+  <TD>This draws some of the pictures on this page.</TD>
+ <TR>
+<!----------------------------->
+ <TR>
+  <TD><TT><A HREF="plane4.www.maple">plane4.www.maple</A></TT></TD>
+  <TD>This is a version of <TT>plane4.maple</TT> for drawing some more of the
+     pictures.</TD> 
+ <TR>
+
+</TABLE>
+
+
+
+<!---------------------------------------------------------------------------->
+<HR>
+<I>Based upon work supported by the National Science Foundation 
+    under CAREER Grant DMS-0134860.</I><BR> 
+<HR>
+<I>Modified since: 4 January 2005 by Frank Sottile</I>
+
+</HTML> 

@@ -1,0 +1,53 @@
+#Plane2.maple
+#
+cl2:=traceHyperboloid(l3,l1,l4, Eqs[2]):
+ck2:=traceHyperboloid(l3,k1,l4, Eqs[2]):
+d2:=traceHyperboloid(l3,m1,l4, Eqs[2]):
+
+P2:=ParameterizePlane(l2, p2, u, v):
+Cl2:=CurveInPlane(P2,cl2):
+Ck2:=CurveInPlane(P2,ck2):
+D2:=CurveInPlane(P2,d2):
+K2:=ParameterizeLine(LineInPlane(P2,k2),t):
+L2:=ParameterizeLine(LineInPlane(P2,l2),t):
+M2:=ParameterizeLine(LineInPlane(P2,m2),t):
+
+Cl:=plot([Cl2[],t=-0.02..1.025],color=blue,thickness=2,numpoints=100):
+Ck:=plot([Ck2[],t=-0.02..1.025],color=green,thickness=2,numpoints=100):
+Dd:=plot([D2[],t=0.85..1.3],color=cyan,thickness=2,numpoints=50):
+L:=plot([L2[],t=-0.3..1.2],color=red,thickness=2,numpoints=2):
+K:=plot([K2[],t=-0.3..1.1],color=brown,thickness=2,numpoints=2):
+M:=plot([M2[],t=-0.1..0.3],color=magenta,thickness=2,numpoints=2):
+
+display([Dd,K,L,M,Cl,Ck],view=[-0.3..1.2,-0.1..0.6],title="Plane 2",axes=BOXED);
+
+L:=plot([L2[],t=-60..10],color=red,thickness=2,numpoints=2):
+K:=plot([K2[],t=-60..10],color=brown,thickness=2,numpoints=2):
+M:=plot([M2[],t=-0.00001..0.00002],color=magenta,thickness=2,numpoints=2):
+display([K,L,M],title="Triangle in Plane 2",axes=BOXED);
+
+Cl2:=shear(M2,Cl2):
+Ck2:=shear(M2,Ck2):
+K2:=shear(M2,K2):
+L2:=shear(M2,L2):
+M2:=shear(M2,M2):
+
+e:=20000:
+f:=20:
+g:=90:
+
+Cl2:=EXpand(Cl2,[1,0],0,e,f,g):
+Ck2:=EXpand(Ck2,[1,0],0,e,f,g):
+M2:=EXpand(M2,[1,0],0,e,f,g):
+K2:=EXpand(K2,[1,0],1,e,f,g):
+L2:=EXpand(L2,[1,0],1,e,f,g):
+
+Cl:=plot([Cl2[],t=-0.0008..0.002],color=blue,thickness=2,numpoints=150):
+Ck:=plot([Ck2[],t=-0.0008..0.002],color=green,thickness=2,numpoints=150):
+M:=plot([M2[],t=-0.0008..0.002],color=magenta,thickness=2,numpoints=2):
+L:=plot([L2[],t=0.999..1.0001],color=red,thickness=2,numpoints=2):
+K:=plot([K2[],t=0.8..1.3],color=brown,thickness=2,numpoints=2):
+
+display([Ck,Cl,K,L,M],view=[0.999995..1.000003,-0.0005..0.002],title="Plane 2 up close",axes=BOXED);
+
+

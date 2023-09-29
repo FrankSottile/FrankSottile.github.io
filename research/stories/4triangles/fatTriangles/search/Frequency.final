@@ -1,0 +1,42 @@
+# Results of an experiment:  Generated 5,000,000 4-tuples of triangles
+# by choosing 12 integer points at random in a box [-10000, 10000]^3
+# to be their vertices.  For each 4-tuple, checked that they were in 
+# general position (wiggling the vertices if necessary) and computed 
+# the number of common transversals.   This is recorded in the vector 
+# Frequency below.  Its ith component records how many times (i-1) 
+# transversals were found.  Observe that there are no cases with an 
+# odd number of transversals.   Once I noticed this in January, I
+# found a proof.
+#
+#   Maximum number of transversals found:  40
+#
+#   Total time of computation:  17,356,277.53 seconds.   I used an alpha
+#                                            processor for 1 million cases
+#                                            and 1.2G AMD boxes for the 
+#                                            other 4 million
+##############################################################################
+#
+Time:= 17356277.53:
+Frequency:=
+  [1515706,      0, 331443,      0, 646150,      0, 403679,      0,
+    637202,      0, 327159,      0, 358312,      0, 238913,      0,
+    253396,      0, 114046,      0,  80199,      0,  44870,      0,
+     27726,      0,  12426,      0,   5796,      0,   2016,      0,
+       813,      0,    111,      0,     30,      0,      3,      0,
+         4,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0,      0,      0,      0,      0,      0,
+         0,      0,      0]:
+sum(Frequency[i],i=1..50);

@@ -1,0 +1,67 @@
+#Plane3.maple
+#
+cll3:=traceHyperboloid(l1,l4,l2, Eqs[3]):
+ckl3:=traceHyperboloid(k1,l4,l2, Eqs[3]):
+clk3:=traceHyperboloid(l1,l4,k2, Eqs[3]):
+ckk3:=traceHyperboloid(k1,l4,k2, Eqs[3]):
+dml3:=simplify(subs(t=t/(4*t-1),traceHyperboloid(m1,l4,l2, Eqs[3]))):
+dmk3:=simplify(subs(t=t/(4*t-1),traceHyperboloid(m1,l4,k2, Eqs[3]))):
+dlm3:=traceHyperboloid(l1,m2,l4, Eqs[3]):
+dkm3:=traceHyperboloid(k1,m2,l4, Eqs[3]):
+
+P3:=ParameterizePlane(l3, p3, u, v):
+Cll3:=CurveInPlane(P3,cll3):
+Clk3:=CurveInPlane(P3,clk3):
+Ckl3:=CurveInPlane(P3,ckl3):
+Ckk3:=CurveInPlane(P3,ckk3):
+Dml3:=CurveInPlane(P3,dml3):
+Dmk3:=CurveInPlane(P3,dmk3):
+Dlm3:=CurveInPlane(P3,dlm3):
+Dkm3:=CurveInPlane(P3,dkm3):
+K3:=ParameterizeLine(LineInPlane(P3,k3),t):
+L3:=ParameterizeLine(LineInPlane(P3,l3),t):
+M3:=ParameterizeLine(LineInPlane(P3,m3),t):
+
+L:=plot([L3[],t=-0.3..1.2],color=red,thickness=2,numpoints=2):
+K:=plot([K3[],t=-0.3..1.2],color=brown,thickness=2,numpoints=2):
+M:=plot([M3[],t=-0.1..0.35],color=magenta,thickness=2,numpoints=2):
+Cll:=plot([Cll3[],t=-0.05..1.05],color=blue,thickness=2,numpoints=50):
+Ckl:=plot([Ckl3[],t=-0.05..1.05],color=blue,thickness=2,numpoints=50):
+Clk:=plot([Clk3[],t=-0.06..1.05],color=green,thickness=2,numpoints=50):
+Ckk:=plot([Ckk3[],t=-0.06..1.05],color=green,thickness=2,numpoints=50):
+
+C:=[Cll]: #,Clk,Ckl,Ckk]:
+
+Dml:=plot([Dml3[],t=-0.3..0.3],color=cyan,thickness=2,numpoints=50):
+Dmk:=plot([Dmk3[],t=-0.3..0.3],color=green,thickness=2,numpoints=50):
+
+Dlm:=plot([Dlm3[],t=0.9..1.2],color=pink,thickness=2,numpoints=50):
+Dkm:=plot([Dkm3[],t=0.9..1.2],color=yellow,thickness=2,numpoints=50):
+
+Dd:=[Dml,Dlm]:
+
+display([C[],Dd[],L,K,M],view=[-0.3..1.2,-0.2..0.05],title="Plane 3",axes=BOXED);
+
+L:=plot([L3[],t=-10..60],color=red,thickness=2,numpoints=2):
+K:=plot([K3[],t=-10..60],color=brown,thickness=2,numpoints=2):
+M:=plot([M3[],t=-0.002..0.02],color=magenta,thickness=2,numpoints=2):
+display([K,L,M],title="Triangle in Plane 3",axes=BOXED);
+
+
+Cll3:=shear(M3,Cll3):
+Ckl3:=shear(M3,Ckl3):
+Clk3:=shear(M3,Clk3):
+Ckk3:=shear(M3,Ckk3):
+K3:=shear(M3,K3):
+L3:=shear(M3,L3):
+M3:=shear(M3,M3):
+
+Cll:=plot([Cll3[],t=0.994..1.021],color=blue,thickness=2,numpoints=100):
+Ckl:=plot([Ckl3[],t=0.994..1.021],color=pink,thickness=2,numpoints=100):
+Clk:=plot([Clk3[],t=0.994..1.021],color=green,thickness=2,numpoints=100):
+Ckk:=plot([Ckk3[],t=0.994..1.021],color=brown,thickness=2,numpoints=100):
+M:=plot([M3[],t=-0.01..0.03],color=magenta,thickness=2,numpoints=2):
+L:=plot([L3[],t=-0.01..0.01],color=red,thickness=2,numpoints=2):
+K:=plot([K3[],t=-0.1..0.1],color=brown,thickness=2,numpoints=2):
+display([Cll,Ckl,Ckk,Clk,K,L,M],view=[-0.0001..0.0002,-0.004..0.013],title="Plane 3 up close",axes=BOXED);
+
