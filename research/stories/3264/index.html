@@ -1,0 +1,295 @@
+<HTML>
+<HEAD>
+<TITLE>3264 real conics</TITLE>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+<BODY BGCOLOR="#FFFFFF"  alink="#FFFFFF">
+</HEAD>
+
+<H1 ALIGN=CENTER>3264 real conics</H1>
+<STRONG><A Href="../../index.html">Frank Sottile</A></STRONG>
+<BR>29 July 2008, College Station, Texas.
+<HR>
+
+
+<CENTER><font size=+1 color=blue>Dedicated to the memory of 
+    <A HREF="http://www.unige.ch/math/folks/ronga/">Felice Ronga</A> (1942-2007)</font></CENTER>
+
+<hr>
+<a href="https://www.juliahomotopycontinuation.org/3264/">Here</a> is another take on this problem, with five
+explicit conics <a href="../alphaCertified/index.html">certifiably</a> having 3264 conics tangent to all five.<br>
+They have a web page that computes conice in real time:
+<a href="https://www.juliahomotopycontinuation.org/do-it-yourself/">3264 conics in a second<a> or so.
+A <a href="https://www.geogebra.org/m/ceacbe2k">Geogebra animation</a> of the 3264 real conics.
+
+
+<HR>
+A very fun <A HREF="3264.pdf">article</A> by 
+<A Href="http://www.umpa.ens-lyon.fr/~ghys/">&Eacute;tienne Ghys</A> on this story of
+conics, and a related Theorem of Welschinger. 
+<HR>
+
+
+<P>
+Enumerative geometry is the art of counting geometric figures satisfying 
+conditions imposed by <FONT COLOR="#8c24ff">other</FONT>, fixed, geometric figures.  
+For example, in 1848, Steiner&nbsp;[<A HREF="#St1848">5</A>] asked how many plane conics
+are tangent to five given conics?
+His answer, 6<sup>5</sup>=7776, 
+turned out to be incorrect, and in 1864 Chasles&nbsp;[<A HREF="#Ch1864">1</A>] gave the
+correct answer of 3264. 
+These methods were later systematized and used to great effect by
+Schubert&nbsp;[<A HREF="#Sch1879">4</A>], who codified the field of enumerative geometry.
+
+<P> &nbsp; &nbsp; 
+This classical work always concerned <FONT COLOR="#8c24ff"><I>complex</I></FONT> figures.
+It was only in 1984 that the question of reality was
+posed by 
+Fulton&nbsp;[<A HREF="#Fu96b">2</A>, p.&nbsp;55]: ``The question of how many solutions of real
+equations can be real is still very much open, particularly for enumerative
+problems.'' 
+He goes on to ask: ``For example, how many of the 3264 conics tangent to five
+general conics can be real?''
+He later determined that all can be real, but did not publish that
+result.
+Ronga, Tognoli, and Vust&nbsp;[<A HREF="#RTV97">3</A>] later gave a careful argument that 
+<FONT COLOR="#8c24ff">all</FONT> 3264 can be real.
+
+<P> &nbsp; &nbsp; 
+The basic idea of the arguments of Fulton and of Ronga, Tognoli, and Vust is to deform the
+same special configuration. 
+We will sketch the idea in Fulton's construction.
+Suppose that 
+<sub><IMG SRC="images/img3.png"></sub> are the lines supporting the edges of a
+convex pentagon and 
+<IMG ALIGN="bottom" BORDER="0" SRC="piinelli.png">, 
+for each <img src="images/i.png"> from 1 to 5
+are points in the interior of
+the corresponding edge. 
+<!---------------------------------------------------------->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG ALIGN="MIDDLE" BORDER="0" SRC="images/pentagon.png">
+</DIV><P></P>
+<!---------------------------------------------------------->
+The points in this example are 
+<IMG WIDTH="315" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"  SRC="img7.png">, and the corresponding
+ slopes of the lines are 
+<IMG  WIDTH="117" HEIGHT="40" ALIGN="MIDDLE" BORDER="0" SRC="img8.png">.
+
+<P> &nbsp; &nbsp; 
+For every subset <I>S</I> of the lines, there are 2<sup>min{|S|, 5-|S|}</sup>
+conics that are tangent to the lines in <I>S</I> and that meet the 5-|<I>S</I> | points
+not on the lines in <I>S</I>.
+This is the number of complex conics, and it does not depend upon the configuration of
+(generic) points and lines.
+However, when the points and lines are chosen in convex position,
+then all such conics will be real.
+Altogether, this gives
+<!--------------------------------------------------------------------------->
+<P></P>
+<DIV ALIGN="CENTER">
+<IMG  ALIGN="MIDDLE" BORDER="0" SRC="images/102_count.png">
+</DIV><P></P>
+<!--------------------------------------------------------------------------->
+<FONT COLOR="#8c24ff">real</FONT> conics, that, for each <img src="images/i.png"> 
+from 1 to 5 either meet <IMG src="images/pi.png">
+or are tangent to <IMG src="images/ell_i.png">: 
+<!--------------------------------------------------------------------------->
+<DIV ALIGN="CENTER">
+  <BR> <img src="images/102_conics.png"><BR><BR>
+</DIV>
+<!--------------------------------------------------------------------------->
+Exactly 51 of these conics meet each point <IMG SRC="images/pi.png">.
+Since our pentagon was asymmetric, none of the 102 conics are tangent to 
+<IMG src="images/ell_i.png"> at <IMG SRC="images/pi.png">.
+ 
+
+<P> &nbsp; &nbsp;
+The idea now is to replace each pair 
+<IMG src="images/pi.png"> lying on <IMG src="images/ell_i.png">  by a 
+hyperbola <sub><IMG SRC="images/hi.png"></sub> that is close to the pair <!-- MATH
+ $p_i\in\ell_i$
+ -->
+<IMG SRC="piinelli.png">,
+in that it is close to its asymptotes, which are two lines close to 
+<IMG src="images/ell_i.png"> that meet at
+<IMG SRC="images/pi.png">. 
+Then, for every conic in our configuration, there will be two nearby conics tangent to
+<sub><IMG SRC="images/hi.png"></sub>. 
+To see this, suppose that <img src="images/i.png">=1.
+Then the set  <I>C</I> of conics which satisfy one of the conditions ``meet 
+<sub><IMG src="images/pj.png"></sub>'' or 
+``tangent to <sub><IMG src="images/ellj.png"></sub>''
+ for each <IMG src="j.png">&nbsp;=&nbsp;2,3,4,5 will form an irreducible
+ curve  <I>C</I>. 
+For each conic in  <I>C</I> that meets <sub><IMG src="images/p1.png"></sub>,
+there will be two nearby conics in  <I>C</I> tangent to 
+<sub><IMG src="images/h1.png"></sub>  near 
+<sub><IMG src="images/p1.png"></sub>, and for each conic in
+ <I>C</I> tangent to <sub><IMG SRC="images/ell_1.png"></sub>, there will be two nearby  
+conics in  <I>C</I> tangent to each of the two nearby branches of 
+<sub><IMG src="images/h1.png"></sub>.
+We ilustrate this when  <I>C</I> is the curve of conics tangent to <!-- MATH
+ $\ell_2,\ell_3,\ell_4$
+ -->
+<IMG
+ WIDTH="67" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$ \ell_2,\ell_3,\ell_4$">, and
+<IMG
+ WIDTH="20" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$ \ell_5$">, showing the  conics in <I>C</I>, 
+<!--------------------------------------------------------------------------->
+ <DIV ALIGN="CENTER">
+  <IMG  SRC="images/family.png">
+ </DIV>
+<!--------------------------------------------------------------------------->
+and then a close up near <sub><IMG SRC="images/ell_1.png"></sub>.
+<!--------------------------------------------------------------------------->
+ <DIV ALIGN="CENTER">
+  <IMG SRC="images/nearby.png">
+ </Div>
+<!--------------------------------------------------------------------------->
+
+<P> &nbsp; &nbsp;
+For our configuration of 102 conics, the
+hyperbola
+<!--------------------------------------------------------------------------->
+<DIV ALIGN="CENTER">
+<IMG WIDTH="380" HEIGHT="40" ALIGN="MIDDLE" SRC="img30.png">
+<!-- MATH
+ \begin{displaymath}
+\Purple{h_1}\ \colon\qquad
+     (y\;-\;\tfrac{1}{15}x) (y\;+\;\tfrac{1}{15}x)  \ +\ \tfrac{1}{15000}\ =\ 0\,,
+\end{displaymath}
+ -->
+</DIV>
+<!--------------------------------------------------------------------------->
+has asymptotes that meet at 
+<sub><IMG src="images/p1.png"></sub> and are sufficiently close to 
+<sub><IMG SRC="images/ell_1.png"></sub>  so that each of our 102 conics
+that meet <sub><IMG src="images/p1.png"></sub> or are tangent to 
+<sub><IMG SRC="images/ell_1.png"></sub> becomes two conics 
+ tangent to <sub><IMG src="images/h1.png"></sub>.
+We illustrate this, first showing the  configuration of 102 conics
+ in the neighborhood of <sub><IMG SRC="images/ell_1.png"></sub>,
+<!--------------------------------------------------------------------------->
+<DIV ALIGN="CENTER">
+  <IMG SRC="images/conics_close.png" >
+</DIV>
+<!--------------------------------------------------------------------------->
+and then the resulting 204 conics in the same region.
+<!--------------------------------------------------------------------------->
+<DIV ALIGN="CENTER">
+ <IMG SRC="images/204_close.png">
+</DIV>
+<!--------------------------------------------------------------------------->
+The key to the existence of this construction was that no tangent direction to a 
+conic through <sub><IMG src="images/p1.png"></sub> met 
+<sub><IMG src="images/h1.png"></sub>, which is possible as no conic was tangent to
+ <sub><IMG SRC="images/ell_1.png"></sub> at <sub><IMG src="images/p1.png"></sub>.
+We show the resulting 204 conics that are tangent to 
+<sub><IMG src="images/h1.png"></sub> and, for each 
+<IMG src="images/i.png">=2,3,4,5  either contain 
+<IMG SRC="images/pi.png"> or are tangent to <IMG src="images/ell_i.png">.
+
+<!--------------------------------------------------------------------------->
+<DIV ALIGN="CENTER">
+<IMG SRC="images/204.png">
+</DIV>
+<!--------------------------------------------------------------------------->
+
+<P> &nbsp; &nbsp;
+If we now replace 
+<IMG  WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"  SRC="img36.png"
+ ALT="$ p_2\in\ell_2$"> by a similar nearby hyperbola, then the 204 conics
+become 408.
+Replacing 
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$ p_3\in\ell_3$"> by a nearby hyperbola, give 816 conics.
+Continuing with 
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$ p_4\in\ell_4$"> gives 1632, and finally replacing 
+<IMG
+ WIDTH="60" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$ p_5\in\ell_5$"> with 
+a hyperboloa gives five hyperbolae, 
+<IMG
+ WIDTH="83" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$ h_1,\dotsc,h_5$"> for which there are 
+ 3264 = (2<sup>5</sup> 102) real conics tangent to each <sub><IMG SRC="images/hi.png"></sub>.
+ In this way, the classical problem of 3264 conics can have all of its solutions be real.
+
+<!----------------------------------------------------------->
+<HR>
+<!----------------------------------------------------------->
+
+
+<H2>
+Bibliography</A>
+</H2>
+<table>
+ <tr valign=top>
+  <td><A NAME="Ch1864"><b>1</b></A></td><td></td>
+  <td>
+    M.&nbsp;Chasles, <I>Construction des coniques qui satisfont &#224; cinque
+    conditions</I>, C. R. Acad. Sci. Paris <B>58</B> (1864), 297-308.
+  </td>
+ </tr>
+ <!------------------------------------------->
+ <tr valign=top>
+  <td><A NAME="Fu96b"><b>2</b></A></td><td></td>
+  <td>
+   Wm. Fulton, <I>Introduction to intersection theory in algebraic geometry</I>,
+    CBMS 54, AMS, 1996, second edition.
+  </td>
+ </tr>
+ <!------------------------------------------->
+ <tr valign=top>
+  <td><A NAME="RTV97"><b>3</b></A></td><td></td>
+  <td>
+   F.&nbsp;Ronga, A.&nbsp;Tognoli, and Th. Vust, <I>The number of conics tangent to 5
+    given conics: the real case</I>, Rev. Mat. Univ. Complut. Madrid <B>10</B>
+    (1997), 391-421.
+  </td>
+ </tr>
+ <!------------------------------------------->
+ <tr valign=top>
+  <td><A NAME="Sch1879"><b>4</b></A></td><td></td>
+  <td>
+   H.&nbsp;Schubert, <I>Kalkul der abz&#228;hlenden Geometrie</I>, Springer-Verlag,
+    1879, reprinted with an introduction by S.&nbsp;Kleiman, 1979.
+  </td>
+ </tr>
+ <!------------------------------------------->
+ <tr valign=top>
+  <td><A NAME="St1848"><b>5</b></A></td><td></td>
+  <td>
+   J.&nbsp;Steiner, <I>Elementare L&#246;sung einer geometrischen Aufgabe, und
+     &#252;ber einige damit in Beziehung stehende Eigenschaften der
+    Kegelschnitte</I>, J. Reine Angew. Math. <B>37</B> (1848), 161-192.
+  </td>
+ </tr>
+ <!------------------------------------------->
+</table>
+<!------------------------------------------------------------->
+
+
+<!------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------->
+  Supported by the National Science Foundation grant DMS-0701050
+  and Texas Advanced Research Projects grant 010366-0054-2007.
+<!------------------------------------------------------------->
+<HR>
+<!------------------------------------------------------------->
+</BODY>
+</HTML>
