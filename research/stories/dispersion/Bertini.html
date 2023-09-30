@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Details of the Bertini Computation</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+ <table>
+  <tr valign=top>
+   <td rowspan=2>
+    <a href="dispersion_movie.gif"><img src="dispersion_small.png"></a> &nbsp; 
+   </td>
+   <td>
+     <h1>Generic properties of dispersion relations for discrete periodic operators</h1>
+       <font size="+2">
+     <A HREF="https://math.arizona.edu/~dothanhngocctsp/">Ngoc Thanh Do</A>,
+     <a href="/~peter.kuchment/">Peter Kuchment</a>, and 
+     <a href="/~sottile/index.html">Frank Sottile</a>.
+    </font>
+   </td>
+ </tr>
+  <tr><td><font size=+1>This page describes some details of the numerical computation
+    using Bertini in the article
+   <a href="../../pdf/DKS.pdf">Generic properties of dispersion relations for discrete periodic operators</a>.</font></td>
+ </tr>
+
+ </table>
+<!------------------------------------------------------------------------->
+<!------------------------------------------------------------------------->
+ <hr>
+<!------------------------------------------------------------------------->
+<table>
+  <tr>
+    <td width=1290pt>
+    <!------------------------------------>
+      Let us first recall the matrix <i>A</i>(&alpha;<sub>1</sub>,...&alpha;<sub>9</sub>,<i>z</i><sub>1</sub>,<i>z</i><sub>2</sub>) =
+<i>A</i>:=(<i>a<sub>ij</sub></i>), for <i>i</i>,<i>j</i>=1,2.
+<table>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>11</sub> </td> <td> = </td>
+  <td>  &alpha;<sub>2</sub> + &alpha;<sub>3</sub> + &alpha;<sub>5</sub> + &alpha;<sub>6</sub> + &alpha;<sub>9</sub>
+    + 2&alpha;<sub>1</sub>   + 2&alpha;<sub>4</sub>  - &alpha;<sub>1</sub>( <i>z</i><sub>1</sub> + <i>z</i><sub>1</sub><sup>-1</sup> )
+    - &alpha;<sub>4</sub>( <i>z</i><sub>2</sub> + <i>z</i><sub>2</sub><sup>-1</sup> ) </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>12</sub> </td> <td> = </td>
+  <td> -( &alpha;<sub>2</sub><i>z</i><sub>2</sub> + &alpha;<sub>3</sub><i>z</i><sub>1</sub>
+         + &alpha;<sub>6</sub><i>z</i><sub>2</sub><sup>-1</sup> + &alpha;<sub>9</sub><i>z</i><sub>1</sub><sup>-1</sup>  + &alpha;<sub>5</sub> )  </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>21</sub> </td> <td> = </td>
+  <td> -( &alpha;<sub>2</sub><i>z</i><sub>2</sub><sup>-1</sup>+ &alpha;<sub>3</sub><i>z</i><sub>1</sub><sup>-1</sup>
+         + &alpha;<sub>6</sub><i>z</i><sub>2</sub> + &alpha;<sub>9</sub><i>z</i><sub>1</sub>  + &alpha;<sub>5</sub> ) </td>
+ </tr>
+ <!------------------------------------>
+ <tr>
+  <td> &nbsp;  &nbsp;  </td><td> <i>a</i><sub>22</sub> </td> <td> = </td>
+  <td>   &alpha;<sub>2</sub> + &alpha;<sub>3</sub> + &alpha;<sub>5</sub> + &alpha;<sub>6</sub> + &alpha;<sub>9</sub>
+    + 2&alpha;<sub>7</sub>   + 2&alpha;<sub>8</sub>  - &alpha;<sub>7</sub>( <i>z</i><sub>2</sub> + <i>z</i><sub>2</sub><sup>-1</sup> )
+    - &alpha;<sub>8</sub>( <i>z</i><sub>1</sub> + <i>z</i><sub>1</sub><sup>-1</sup> )
+     </td>
+ </tr>
+ <!------------------------------------>
+</table>
+<!------------------------------------------------------------------>
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!------------------------------------>
+
+There are four equations.  The first is the characteristic equation for the eigenvalues &lambda; of the matrix
+<i>A</i>(&alpha;<sub>1</sub>,...&alpha;<sub>9</sub>,<i>z</i><sub>1</sub>,<i>z</i><sub>2</sub>).
+Then there are two implicit equations for &part;&lambda;/&part;<i>z<sub>i</sub></i> for <i>i</i>=1,2.
+The fourth equation is the Hessian determinant for the second (implicit) partial derivatives of &lambda; with respect to the <i>z<sub>i</sub></i>.
+  <br>
+  &nbsp; &nbsp; 
+    Implicit differentiation represents the implicit derivative as a rational expression of the parameters and variables.
+    Since our formulation is that these implicit derivatives vanish, we only take the numerators of the rational expressions.
+    This may introduce some extraneous solutions.
+    We used a <a href="https://www.maplesoft.com/">Maple</a> script, <a href="files/Bertini.maple">Bertini.maple</a> to generate these equations, and to write an
+    input file <a href="files/Bertini_input">Bertini_input</a> for the computation in <a href="https://bertini.nd.edu/">bertini</a>.
+    Running the file  <a href="files/Bertini.maple">Bertini.maple</a> creates the input file <a href="files/Bertini_input">Bertini_input</a>, we also have what this
+    run dumps to a VT100 terminal, in <a href="files/Bertini_output">Bertini_output</a>.
+<!---------------------------------------------------------------------------->
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!---------------------------------------------------------------------------->
+  &nbsp; &nbsp;
+  To run the computation in bertini, you need to
+  <ul>
+   <li> Download an executable file of the <a href="https://bertini.nd.edu/">bertini</a> software. </li>
+   <li> Create a directory in which to run bertini&ndash;it creates many auxillary files in the directory in which it is run.<br>
+        Move the file  <a href="files/Bertini_input">Bertini_input</a> into that directory, and rename it <tt>input</tt>.</li>
+   <li> This will create many files, and may take several days to a week to run, so it is best to run it on a server.
+        Bertini also dumps information to the screen, so you want to capture the stdout (standard output) to look at later.</li>
+   <li> We will later discuss some of the output files.</li>
+  </ul>
+
+  &nbsp; &nbsp;
+   Slightly better may be to use this   <a href="files/Seeded_input">version</a>.  It differs from  <a href="files/Bertini_input">Bertini_input</a>
+   in its header, which sets some parameters of the continuation, as well as a RandomSeed of  1545157539.
+  These parameters were discovered by trial and error, and the  RandomSeed  was saved from a run that had no failures.<br>
+  We ran this many times with different random seeds, and every time there were no numerical issues, the output was essentially the same.
+  This is why we claim that the output is robust.
+<!---------------------------------------------------------------------------->
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!---------------------------------------------------------------------------->
+  &nbsp; &nbsp;
+   Arguably the most important line in the input file is <tt>TrackType: 1;</tt>&mdash;this tells Bertini to compute what is called a numerical irreducible
+  decomposition.
+  While we will not describe exactly how that proceeds, suffice to say that, if the computation proceeds properly, for each irreducible component <i>X</i> of the
+   variety defined by our four equations, it computes a general linear section of <i>X</i>, that is, the points of the intersection of <i>X</i> with a linear
+  subspace of complimentary dimension. (This is also called a <b>witness set</b> for <i>X</i> and the points are <b>witness points</b>
+  The number of such points, multiplied by the multiplicity of <i>X</i> is the <b>degree</b> of <i>X</i>.)
+  In favorable circumstances, such as this, it is able to determine the scheme-theoretic multiplicity of <i>X</i> as well.
+  <br>
+  &nbsp; &nbsp;
+  The output of running Bertini contains many files.  We have links to some, which we describe.
+  The first is the captured <a href="files/Screen_output.txt">Screen_output.txt</a>.
+  This tells the curious user how the computation is progressing.
+  Bertini uses an equation-by-equation method called regeneration to compute these linear slices of the irreducible components <i>X</i>.
+  <br>
+  &nbsp; &nbsp;
+  Important for us, is the last few lines of that, which may be found in <a href="files/Summary.txt">Summary.txt</a>.
+  This contains two tables.
+  First, this one
+  <table><tr><td width=30pt> &nbsp; &nbsp; </td><td>
+    <table border=1>
+     <tr><th colspan=4 align=center> Witness Set Decomposition</th></tr>
+     <tr><th>dimension</th><th>components</th><th>classified</th><th>unclassified</th></tr>
+     <tr><td align=center> 9 </td><td align=center> 3 </td><td align=center>  18 </td><td align=center> 0 </td></tr>
+     <tr><td align=center> 8 </td><td align=center> 7 </td><td align=center> 775 </td><td align=center> 0 </td></tr>
+    </table>
+  </td></tr></table>
+  <!---------------------------------------------------------------------------------->
+  and then this one
+  <table><tr><td width=30pt> &nbsp; &nbsp; </td><td>
+    <table>
+     <tr><th colspan=2 align=center> Decomposition by Degree</th></tr>
+     <tr><td align=right>Dimension 9: </td><td align=left> 3 classified components</td></tr>
+     <tr><td colspan=2><hr></td></tr>  
+     <tr><td align=right>degree 2: </td><td align=left> 1 component</td></tr>
+     <tr><td align=right>degree 8: </td><td align=left> 2 components</td></tr>
+    <tr><td colspan=2> &nbsp; </td></tr>  
+     <tr><td align=right>Dimension 8: </td><td align=left> 7 classified components</td></tr>
+     <tr><td colspan=2><hr></td></tr>  
+     <tr><td align=right>degree 1: </td><td align=left> 1 component</td></tr>
+     <tr><td align=right>degree 3: </td><td align=left> 2 components</td></tr>
+     <tr><td align=right>degree 8: </td><td align=left> 3 components</td></tr>
+     <tr><td align=right>degree 744: </td><td align=left> 1 component</td></tr>
+     </table>
+  </td></tr></table>
+  <!---------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+</td></tr>
+<!---------------------------------------------------------------------------->
+<tr>
+<td width=1290pt>
+<!---------------------------------------------------------------------------->
+  &nbsp; &nbsp;
+  The most important output file is <a href="files/main_data">main_data</a>.
+  This contains all the witness points for all the components above, and is the source of some claims made in our paper.
+  Below we display the first 25 lines of it.
+  It explains there are 12 variables.  (Note that <i>t</i> is the variable for the eigenvalue &lambda;.)
+  The rank is the dimension of the linear span of the four equations.
+  Then the file presents the witness points (we show only the first of  793), first by dimension, and each is classified by its path number (this is an internal
+   pointer), and its component number&mdash;note that Bertini is 0-based.
+  Next is an estimation of the condition number of this approximate solution, and finally, the 12 components of that approximate solution, one on each line with the
+  first floating point number the real part and the second the imaginary part.
+  Notice that for this point, |z[2]| is about 10<sup>-20</sup>, which is effectively zero.
+  Lastly, it gives the multiplicity of this point, and the number of "Deflations" needed, which is a procedure for computing with a point of multiplicity greater
+   than one.
+<pre>
+Number of variables: 12
+Variables:  t a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] z[1] z[2]
+Rank: 4
+
+----------DIMENSION 9----------
+
+NONSINGULAR SOLUTIONS
+---------------
+Path number: 0
+Component number: 0
+Estimated condition number: 6.101364e+02
+-0.721967331326454350653548737497e0 0.245382113873441570720180379817e0
+0.139140675649982955399270550328e-1 0.899661766157386873340415809307e-2
+0.352352660478687112873077430449e-2 0.164079643334363109653114859131e-1
+0.365861627668185770763481734720e0 0.485838019801433375424192985841e0
+0.616030595687168833992359893895e0 0.164538621532066982344457189873e0
+-0.184476187404225760204257942500e0 0.527115733289102182329616332174e0
+0.435396083833439500495979826611e0 0.262772085789842067482880415987e0
+0.123683258840626653497702159177e0 0.500005970670088960248689249507e0
+-0.289254855815383953177237050991e0 0.297500236855863550190577797153e0
+0.300249665937637624027578378002e0 -0.588353927461884108734482644219e0
+0.298355499992708501682809502380e0 0.109663916819274410102181744076e0
+-0.107392521374849912053676749297e-19 0.100809888856741708943880081927e-19
+Multiplicity: 1
+Deflations needed: 0
+</pre>
+
+<!---------------------------------------------------------------------------->
+</td></tr>
+</table>
+
+<a href="index.html">Return to the main page</a>.
+
+<!----------------------------------------------------------------------->
+<hr>
+<!----------------------------------------------------------------------->
+
+<hr style="width: 100%; height: 2px;">
+<i>Work of Do and Kuchment supported by the National Science Foundation under Grant DMS-1517938.</i><br>
+<i>Work of Sottile supported by the National Science Foundation under Grant DMS-1501370.</i><br>
+<!---------------------------------------------------------------------------->
+<hr>
+
+<table width=1100>
+ <tr valign=center>
+  <td align=left width=50% valign=center>
+<!-- hhmts start -->Last modified: Sat Aug 17 17:32:49 CDT 2019 <!-- hhmts end -->
+  </td>
+  <td align=right width=50% valign=center>
+ <!--  <img src="images/fsm.png">-->
+  </td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12943815-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!---------------------------------------------------------------------------->
+</body> </html>
+
+

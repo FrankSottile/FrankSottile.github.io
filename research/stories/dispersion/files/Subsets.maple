@@ -1,0 +1,78 @@
+#Subsets.maple
+#
+# This maple file studies the fibre of the variety V of degenerate extrema over
+#  random specialisations of the weights.
+#
+interface(quiet=true):
+with(LinearAlgebra):
+with(Groebner):
+
+#randomize(100):
+randomize():
+die := rand(-20..20):
+#
+
+Small :={}:
+
+for Zed in combinat[powerset](9) do
+ triv := evalb(false):
+
+ for j from 1 to 10 do
+
+  # Specializes the edge weights to random numbers
+  for i from 1 to 9 do
+    a[i] := die():
+  end do:
+  
+  # Sets the weights in the set Zed to be zero
+  for i in Zed do
+    a[i] := 0:
+  end do:
+
+  # Now we create the matrix
+  Aa := Matrix([
+     [2*a[1]+a[2]+a[3]+2*a[4]+a[5]+a[6]+a[9] - a[1]*(z[2]+z[2]^(-1)) - a[4]*(z[1]+z[1]^(-1)),
+       -(a[2]*z[2] + a[6]*z[2]^(-1) + a[3]*z[1] + a[9]*z[1]^(-1) + a[5])],
+     [-(a[2]*z[2]^(-1) + a[6]*z[2] + a[3]*z[1]^(-1) + a[9]*z[1] + a[5]), 
+       a[2]+a[3]+a[5]+a[6]+2*a[7]+2*a[8]+a[9] - a[7]*(z[2]+z[2]^(-1)) - a[8]*(z[1]+z[1]^(-1))]]):
+
+  # Manually create the characteristic polynomial
+  TA:=Trace(Aa):
+  DA:=Determinant(Aa):
+
+  # Take its numerator
+  sCP:=numer(lam^2 - lam*TA + DA):
+
+  DA1:=expand(simplify(diff(DA,z[1]))):
+  DA2:=expand(simplify(diff(DA,z[2]))):
+
+  sN1:=numer(lam*diff(TA,z[1]) - DA1):
+  sN2:=numer(lam*diff(TA,z[2]) - DA2):
+
+  DA11:=expand(simplify(diff(DA,z[1],z[1]))):
+  DA21:=expand(simplify(diff(DA,z[2],z[1]))):
+  DA22:=expand(simplify(diff(DA,z[2],z[2]))):
+
+  Hess:=(numer(lam*diff(TA,z[1],z[1])-DA11)*numer(lam*diff(TA,z[2],z[2])-DA22)
+        -numer(lam*diff(TA,z[1],z[2])-DA21)^2):
+
+  # These are our equations.
+  EQS:=subs(z[1]=u,z[2]=v,[sCP, Hess, sN1, sN2]):
+
+  G:=Groebner[Basis]([EQS[],u*w-1, v*x-1],tdeg(lam,u,v,w,x)):
+
+#  lprint(G);
+
+  triv := evalb( triv or evalb(G=[1])) :
+ end do:
+ # Finish loop
+
+ #  Small is the set of edges with weight zero that had a degenerate extremal eigenvalue
+ #     For each of eight random choices of other edge weights.
+ if not triv then Small := Small union {Zed}: end if:
+end do:
+
+#Small;
+Nine:={1,2,3,4,5,6,7,8,9}:
+cplmt:= S -> Nine minus S:
+map(cplmt,Small);

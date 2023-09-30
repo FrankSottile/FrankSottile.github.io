@@ -1,0 +1,47 @@
+
+   Bertini(TM) v1.6
+    (May 22, 2018)
+
+ D.J. Bates, J.D. Hauenstein,
+ A.J. Sommese, C.W. Wampler
+
+(using GMP v6.0.0, MPFR v3.1.2)
+
+
+************* Witness Set Decomposition *************
+
+| dimension | components | classified | unclassified
+-----------------------------------------------------
+|   9       |   3        |   18       |  0
+|   8       |   7        |   775      |  0
+-----------------------------------------------------
+
+************** Decomposition by Degree **************
+
+Dimension 9: 3 classified components
+-----------------------------------------------------
+   degree 2: 1 component
+   degree 8: 2 components
+
+Dimension 8: 7 classified components
+-----------------------------------------------------
+   degree 1: 1 component
+   degree 3: 2 components
+   degree 8: 3 components
+   degree 744: 1 component
+
+*****************************************************
+
+Witness Points Deflated: 17
+
+
+
+
+*************** version information ***************
+Bertini(TM) v1.6
+GMP v6.0.0, MPFR v3.1.2
+
+Authors:
+D.J. Bates, J.D. Hauenstein,
+A.J. Sommese, C.W. Wampler
+

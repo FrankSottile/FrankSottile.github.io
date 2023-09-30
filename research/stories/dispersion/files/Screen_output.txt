@@ -1,0 +1,615 @@
+
+   Bertini(TM) v1.6
+    (May 22, 2018)
+
+ D.J. Bates, J.D. Hauenstein,
+ A.J. Sommese, C.W. Wampler
+
+(using GMP v6.0.0, MPFR v3.1.2)
+
+
+
+NOTE: You have requested to use adaptive path tracking.  Please make sure that you have
+setup the following tolerances appropriately:
+CoeffBound: 6.132263000000e+00, DegreeBound: 1.400000000000e+01
+AMPSafetyDigits1: 2, AMPSafetyDigits2: 2, AMPMaxPrec: 2048
+
+
+Tracking regeneration codim 1 of 4: 14 paths to track.
+Tracking path 0 of 14
+
+Sorting codimension 1 of 4: 14 paths to sort.
+Sorting 0 of 14
+
+Preparing regeneration codim 2 of 4: 98 witness points to move.
+Moving 0 of 98
+Moving 20 of 98
+Moving 40 of 98
+Moving 60 of 98
+Moving 80 of 98
+
+Tracking regeneration codim 2 of 4: 112 paths to track.
+Tracking path 0 of 112
+Tracking path 20 of 112
+Tracking path 40 of 112
+Tracking path 60 of 112
+Tracking path 80 of 112
+Tracking path 100 of 112
+
+Sorting codimension 2 of 4: 112 paths to sort.
+Sorting 0 of 112
+Sorting 20 of 112
+Sorting 40 of 112
+Sorting 60 of 112
+Sorting 80 of 112
+Sorting 100 of 112
+
+Preparing regeneration codim 3 of 4: 552 witness points to move.
+Moving 0 of 552
+Moving 20 of 552
+Moving 40 of 552
+Moving 60 of 552
+Moving 80 of 552
+Moving 100 of 552
+Moving 120 of 552
+Moving 140 of 552
+Moving 160 of 552
+Moving 180 of 552
+Moving 200 of 552
+Moving 220 of 552
+Moving 240 of 552
+Moving 260 of 552
+Moving 280 of 552
+Moving 300 of 552
+Moving 320 of 552
+Moving 340 of 552
+Moving 360 of 552
+Moving 380 of 552
+Moving 400 of 552
+Moving 420 of 552
+Moving 440 of 552
+Moving 460 of 552
+Moving 480 of 552
+Moving 500 of 552
+Moving 520 of 552
+Moving 540 of 552
+
+Tracking regeneration codim 3 of 4: 644 paths to track.
+Tracking path 0 of 644
+Tracking path 20 of 644
+Tracking path 40 of 644
+Tracking path 60 of 644
+Tracking path 80 of 644
+Tracking path 100 of 644
+Tracking path 120 of 644
+Tracking path 140 of 644
+Tracking path 160 of 644
+Tracking path 180 of 644
+Tracking path 200 of 644
+Tracking path 220 of 644
+Tracking path 240 of 644
+Tracking path 260 of 644
+Tracking path 280 of 644
+Tracking path 300 of 644
+Tracking path 320 of 644
+Tracking path 340 of 644
+Tracking path 360 of 644
+Tracking path 380 of 644
+Tracking path 400 of 644
+Tracking path 420 of 644
+Tracking path 440 of 644
+Tracking path 460 of 644
+Tracking path 480 of 644
+Tracking path 500 of 644
+Tracking path 520 of 644
+Tracking path 540 of 644
+Tracking path 560 of 644
+Tracking path 580 of 644
+Tracking path 600 of 644
+Tracking path 620 of 644
+Tracking path 640 of 644
+
+Sorting codimension 3 of 4: 644 paths to sort.
+Sorting 0 of 644
+Sorting 20 of 644
+Sorting 40 of 644
+Sorting 60 of 644
+Sorting 80 of 644
+Sorting 100 of 644
+Sorting 120 of 644
+Sorting 140 of 644
+Sorting 160 of 644
+Sorting 180 of 644
+Sorting 200 of 644
+Sorting 220 of 644
+Sorting 240 of 644
+Sorting 260 of 644
+Sorting 280 of 644
+Sorting 300 of 644
+Sorting 320 of 644
+Sorting 340 of 644
+Sorting 360 of 644
+Sorting 380 of 644
+Sorting 400 of 644
+Sorting 420 of 644
+Sorting 440 of 644
+Sorting 460 of 644
+Sorting 480 of 644
+Sorting 500 of 644
+Sorting 520 of 644
+Sorting 540 of 644
+Sorting 560 of 644
+Sorting 580 of 644
+Sorting 600 of 644
+Sorting 620 of 644
+Sorting 640 of 644
+
+Preparing regeneration codim 4 of 4: 2016 witness points to move.
+Moving 0 of 2016
+Moving 20 of 2016
+Moving 40 of 2016
+Moving 60 of 2016
+Moving 80 of 2016
+Moving 100 of 2016
+Moving 120 of 2016
+Moving 140 of 2016
+Moving 160 of 2016
+Moving 180 of 2016
+Moving 200 of 2016
+Moving 220 of 2016
+Moving 240 of 2016
+Moving 260 of 2016
+Moving 280 of 2016
+Moving 300 of 2016
+Moving 320 of 2016
+Moving 340 of 2016
+Moving 360 of 2016
+Moving 380 of 2016
+Moving 400 of 2016
+Moving 420 of 2016
+Moving 440 of 2016
+Moving 460 of 2016
+Moving 480 of 2016
+Moving 500 of 2016
+Moving 520 of 2016
+Moving 540 of 2016
+Moving 560 of 2016
+Moving 580 of 2016
+Moving 600 of 2016
+Moving 620 of 2016
+Moving 640 of 2016
+Moving 660 of 2016
+Moving 680 of 2016
+Moving 700 of 2016
+Moving 720 of 2016
+Moving 740 of 2016
+Moving 760 of 2016
+Moving 780 of 2016
+Moving 800 of 2016
+Moving 820 of 2016
+Moving 840 of 2016
+Moving 860 of 2016
+Moving 880 of 2016
+Moving 900 of 2016
+Moving 920 of 2016
+Moving 940 of 2016
+Moving 960 of 2016
+Moving 980 of 2016
+Moving 1000 of 2016
+Moving 1020 of 2016
+Moving 1040 of 2016
+Moving 1060 of 2016
+Moving 1080 of 2016
+Moving 1100 of 2016
+Moving 1120 of 2016
+Moving 1140 of 2016
+Moving 1160 of 2016
+Moving 1180 of 2016
+Moving 1200 of 2016
+Moving 1220 of 2016
+Moving 1240 of 2016
+Moving 1260 of 2016
+Moving 1280 of 2016
+Moving 1300 of 2016
+Moving 1320 of 2016
+Moving 1340 of 2016
+Moving 1360 of 2016
+Moving 1380 of 2016
+Moving 1400 of 2016
+Moving 1420 of 2016
+Moving 1440 of 2016
+Moving 1460 of 2016
+Moving 1480 of 2016
+Moving 1500 of 2016
+Moving 1520 of 2016
+Moving 1540 of 2016
+Moving 1560 of 2016
+Moving 1580 of 2016
+Moving 1600 of 2016
+Moving 1620 of 2016
+Moving 1640 of 2016
+Moving 1660 of 2016
+Moving 1680 of 2016
+Moving 1700 of 2016
+Moving 1720 of 2016
+Moving 1740 of 2016
+Moving 1760 of 2016
+Moving 1780 of 2016
+Moving 1800 of 2016
+Moving 1820 of 2016
+Moving 1840 of 2016
+Moving 1860 of 2016
+Moving 1880 of 2016
+Moving 1900 of 2016
+Moving 1920 of 2016
+Moving 1940 of 2016
+Moving 1960 of 2016
+Moving 1980 of 2016
+Moving 2000 of 2016
+
+Tracking regeneration codim 4 of 4: 2352 paths to track.
+Tracking path 0 of 2352
+Tracking path 20 of 2352
+Tracking path 40 of 2352
+Tracking path 60 of 2352
+Tracking path 80 of 2352
+Tracking path 100 of 2352
+Tracking path 120 of 2352
+Tracking path 140 of 2352
+Tracking path 160 of 2352
+Tracking path 180 of 2352
+Tracking path 200 of 2352
+Tracking path 220 of 2352
+Tracking path 240 of 2352
+Tracking path 260 of 2352
+Tracking path 280 of 2352
+Tracking path 300 of 2352
+Tracking path 320 of 2352
+Tracking path 340 of 2352
+Tracking path 360 of 2352
+Tracking path 380 of 2352
+Tracking path 400 of 2352
+Tracking path 420 of 2352
+Tracking path 440 of 2352
+Tracking path 460 of 2352
+Tracking path 480 of 2352
+Tracking path 500 of 2352
+Tracking path 520 of 2352
+Tracking path 540 of 2352
+Tracking path 560 of 2352
+Tracking path 580 of 2352
+Tracking path 600 of 2352
+Tracking path 620 of 2352
+Tracking path 640 of 2352
+Tracking path 660 of 2352
+Tracking path 680 of 2352
+Tracking path 700 of 2352
+Tracking path 720 of 2352
+Tracking path 740 of 2352
+Tracking path 760 of 2352
+Tracking path 780 of 2352
+Tracking path 800 of 2352
+Tracking path 820 of 2352
+Tracking path 840 of 2352
+Tracking path 860 of 2352
+Tracking path 880 of 2352
+Tracking path 900 of 2352
+Tracking path 920 of 2352
+Tracking path 940 of 2352
+Tracking path 960 of 2352
+Tracking path 980 of 2352
+Tracking path 1000 of 2352
+Tracking path 1020 of 2352
+Tracking path 1040 of 2352
+Tracking path 1060 of 2352
+Tracking path 1080 of 2352
+Tracking path 1100 of 2352
+Tracking path 1120 of 2352
+Tracking path 1140 of 2352
+Tracking path 1160 of 2352
+Tracking path 1180 of 2352
+Tracking path 1200 of 2352
+Tracking path 1220 of 2352
+Tracking path 1240 of 2352
+Tracking path 1260 of 2352
+Tracking path 1280 of 2352
+Tracking path 1300 of 2352
+Tracking path 1320 of 2352
+Tracking path 1340 of 2352
+Tracking path 1360 of 2352
+Tracking path 1380 of 2352
+Tracking path 1400 of 2352
+Tracking path 1420 of 2352
+Tracking path 1440 of 2352
+Tracking path 1460 of 2352
+Tracking path 1480 of 2352
+Tracking path 1500 of 2352
+Tracking path 1520 of 2352
+Tracking path 1540 of 2352
+Tracking path 1560 of 2352
+Tracking path 1580 of 2352
+Tracking path 1600 of 2352
+Tracking path 1620 of 2352
+Tracking path 1640 of 2352
+Tracking path 1660 of 2352
+Tracking path 1680 of 2352
+Tracking path 1700 of 2352
+Tracking path 1720 of 2352
+Tracking path 1740 of 2352
+Tracking path 1760 of 2352
+Tracking path 1780 of 2352
+Tracking path 1800 of 2352
+Tracking path 1820 of 2352
+Tracking path 1840 of 2352
+Tracking path 1860 of 2352
+Tracking path 1880 of 2352
+Tracking path 1900 of 2352
+Tracking path 1920 of 2352
+Tracking path 1940 of 2352
+Tracking path 1960 of 2352
+Tracking path 1980 of 2352
+Tracking path 2000 of 2352
+Tracking path 2020 of 2352
+Tracking path 2040 of 2352
+Tracking path 2060 of 2352
+Tracking path 2080 of 2352
+Tracking path 2100 of 2352
+Tracking path 2120 of 2352
+Tracking path 2140 of 2352
+Tracking path 2160 of 2352
+Tracking path 2180 of 2352
+Tracking path 2200 of 2352
+Tracking path 2220 of 2352
+Tracking path 2240 of 2352
+Tracking path 2260 of 2352
+Tracking path 2280 of 2352
+Tracking path 2300 of 2352
+Tracking path 2320 of 2352
+Tracking path 2340 of 2352
+
+Sorting codimension 4 of 4: 2352 paths to sort.
+Sorting 0 of 2352
+Sorting 20 of 2352
+Sorting 40 of 2352
+Sorting 60 of 2352
+Sorting 80 of 2352
+Sorting 100 of 2352
+Sorting 120 of 2352
+Sorting 140 of 2352
+Sorting 160 of 2352
+Sorting 180 of 2352
+Sorting 200 of 2352
+Sorting 220 of 2352
+Sorting 240 of 2352
+Sorting 260 of 2352
+Sorting 280 of 2352
+Sorting 300 of 2352
+Sorting 320 of 2352
+Sorting 340 of 2352
+Sorting 360 of 2352
+Sorting 380 of 2352
+Sorting 400 of 2352
+Sorting 420 of 2352
+Sorting 440 of 2352
+Sorting 460 of 2352
+Sorting 480 of 2352
+Sorting 500 of 2352
+Sorting 520 of 2352
+Sorting 540 of 2352
+Sorting 560 of 2352
+Sorting 580 of 2352
+Sorting 600 of 2352
+Sorting 620 of 2352
+Sorting 640 of 2352
+Sorting 660 of 2352
+Sorting 680 of 2352
+Sorting 700 of 2352
+Sorting 720 of 2352
+Sorting 740 of 2352
+Sorting 760 of 2352
+Sorting 780 of 2352
+Sorting 800 of 2352
+Sorting 820 of 2352
+Sorting 840 of 2352
+Sorting 860 of 2352
+Sorting 880 of 2352
+Sorting 900 of 2352
+Sorting 920 of 2352
+Sorting 940 of 2352
+Sorting 960 of 2352
+Sorting 980 of 2352
+Sorting 1000 of 2352
+Sorting 1020 of 2352
+Sorting 1040 of 2352
+Sorting 1060 of 2352
+Sorting 1080 of 2352
+Sorting 1100 of 2352
+Sorting 1120 of 2352
+Sorting 1140 of 2352
+Sorting 1160 of 2352
+Sorting 1180 of 2352
+Sorting 1200 of 2352
+Sorting 1220 of 2352
+Sorting 1240 of 2352
+Sorting 1260 of 2352
+Sorting 1280 of 2352
+Sorting 1300 of 2352
+Sorting 1320 of 2352
+Sorting 1340 of 2352
+Sorting 1360 of 2352
+Sorting 1380 of 2352
+Sorting 1400 of 2352
+Sorting 1420 of 2352
+Sorting 1440 of 2352
+Sorting 1460 of 2352
+Sorting 1480 of 2352
+Sorting 1500 of 2352
+Sorting 1520 of 2352
+Sorting 1540 of 2352
+Sorting 1560 of 2352
+Sorting 1580 of 2352
+Sorting 1600 of 2352
+Sorting 1620 of 2352
+Sorting 1640 of 2352
+Sorting 1660 of 2352
+Sorting 1680 of 2352
+Sorting 1700 of 2352
+Sorting 1720 of 2352
+Sorting 1740 of 2352
+Sorting 1760 of 2352
+Sorting 1780 of 2352
+Sorting 1800 of 2352
+Sorting 1820 of 2352
+Sorting 1840 of 2352
+Sorting 1860 of 2352
+Sorting 1880 of 2352
+Sorting 1900 of 2352
+Sorting 1920 of 2352
+Sorting 1940 of 2352
+Sorting 1960 of 2352
+Sorting 1980 of 2352
+Sorting 2000 of 2352
+Sorting 2020 of 2352
+Sorting 2040 of 2352
+Sorting 2060 of 2352
+Sorting 2080 of 2352
+Sorting 2100 of 2352
+Sorting 2120 of 2352
+Sorting 2140 of 2352
+Sorting 2160 of 2352
+Sorting 2180 of 2352
+Sorting 2200 of 2352
+Sorting 2220 of 2352
+Sorting 2240 of 2352
+Sorting 2260 of 2352
+Sorting 2280 of 2352
+Sorting 2300 of 2352
+Sorting 2320 of 2352
+Sorting 2340 of 2352
+
+
+************ Regenerative Cascade Summary ************
+
+NOTE: nonsingular vs singular is based on rank deficiency and identical endpoints
+
+|codim|   paths   |witness superset| nonsingular | singular |nonsolutions| inf endpoints | other bad endpoints
+----------------------------------------------------------------------------------------------------------------
+| 1   |   14      |   0            |  0          |  0       |  14        |   0           |  0
+| 2   |   112     |   0            |  0          |  0       |  92        |   20          |  0
+| 3   |   644     |   20           |  16         |  4       |  336       |   288         |  0
+| 4   |   2352    |   938          |  760        |  178     |  0         |   1408        |  6
+----------------------------------------------------------------------------------------------------------------
+|total|   3122
+
+****************************************************
+
+
+Removing junk points from codimension 4: 94 endpoints to check.
+Checking 0 of 94
+Checking 20 of 94
+Checking 40 of 94
+Checking 60 of 94
+Checking 80 of 94
+
+
+*************** Witness Set Summary ****************
+
+NOTE: nonsingular vs singular is based on rank deficiency and identical endpoints
+
+|codim| witness points | nonsingular | singular 
+-------------------------------------------------
+| 3   |   18           |  16         |  2       
+| 4   |   775          |  760        |  15      
+-------------------------------------------------
+
+****************************************************
+
+
+Calculating traces for codimension 3.
+Calculating 0 of 18
+
+Using monodromy to decompose codimension 3.
+Performing monodromy loops: 18 points left to classify
+Performing monodromy loops: 18 points left to classify
+Performing monodromy loops: 18 points left to classify
+
+Using combinatorial trace test to decompose codimension 3.
+
+Calculating traces for codimension 4.
+Calculating 0 of 775
+Calculating 20 of 775
+Calculating 40 of 775
+Calculating 60 of 775
+Calculating 80 of 775
+Calculating 100 of 775
+Calculating 120 of 775
+Calculating 140 of 775
+Calculating 160 of 775
+Calculating 180 of 775
+Calculating 200 of 775
+Calculating 220 of 775
+Calculating 240 of 775
+Calculating 260 of 775
+Calculating 280 of 775
+Calculating 300 of 775
+Calculating 320 of 775
+Calculating 340 of 775
+Calculating 360 of 775
+Calculating 380 of 775
+Calculating 400 of 775
+Calculating 420 of 775
+Calculating 440 of 775
+Calculating 460 of 775
+Calculating 480 of 775
+Calculating 500 of 775
+Calculating 520 of 775
+Calculating 540 of 775
+Calculating 560 of 775
+Calculating 580 of 775
+Calculating 600 of 775
+Calculating 620 of 775
+Calculating 640 of 775
+Calculating 660 of 775
+Calculating 680 of 775
+Calculating 700 of 775
+Calculating 720 of 775
+Calculating 740 of 775
+Calculating 760 of 775
+
+Using monodromy to decompose codimension 4.
+Performing monodromy loops: 774 points left to classify
+Performing monodromy loops: 771 points left to classify
+Performing monodromy loops: 771 points left to classify
+Performing monodromy loops: 752 points left to classify
+Performing monodromy loops: 752 points left to classify
+Performing monodromy loops: 752 points left to classify
+Performing monodromy loops: 752 points left to classify
+
+Using combinatorial trace test to decompose codimension 4.
+
+
+************* Witness Set Decomposition *************
+
+| dimension | components | classified | unclassified
+-----------------------------------------------------
+|   9       |   3        |   18       |  0
+|   8       |   7        |   775      |  0
+-----------------------------------------------------
+
+************** Decomposition by Degree **************
+
+Dimension 9: 3 classified components
+-----------------------------------------------------
+   degree 2: 1 component
+   degree 8: 2 components
+
+Dimension 8: 7 classified components
+-----------------------------------------------------
+   degree 1: 1 component
+   degree 3: 2 components
+   degree 8: 3 components
+   degree 744: 1 component
+
+*****************************************************
+
+Witness Points Deflated: 17
