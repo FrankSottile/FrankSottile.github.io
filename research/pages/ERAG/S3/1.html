@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: Enumerative Real Algebraic Geometry</TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+<!-- <A HREF="../S2/9.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> -->
+ <BR>
+ <B> Next:</B> <A HREF="2.html">3.ii. Enumerative problems not involving general conditions</A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: Table of Contents</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+
+<H1>3.i Enumerative Real Algebraic Geometry</H1>
+
+<P>
+In his treatise on enumerative geometry, Schubert&nbsp;[<A
+ HREF="../bibliography.html#Sch1879">Sch1</A>] declared
+enumerative geometry to be concerned with all questions of the following form:
+How many geometric figures of a fixed type satisfy certain conditions?
+This includes problems as diverse as the number of lines on a cubic surface
+(27) and the number of lines meeting four fixed lines in 3-space (see
+Section&nbsp;<A HREF="../S4/1.html#4lines">4.i</A> for the answer).
+These are archetypes for 
+two distinct classes of enumerative geometric problems.
+For the purpose of this survey, we ignore the first class (except in 
+Section&nbsp;<A HREF="2.html#old-real">3.ii</A>) and concentrate on the second.
+Specifically, we consider conditions imposed by geometric figures that
+may be moved independently into general position.
+
+<P>
+Enumerative geometry (in the broad sense) had a great
+flourishing in the 19th century in the hands of Chasles, Schubert, Halphen,
+Zeuthen, and others.
+(The survey of Kleiman&nbsp;[<A HREF="../bibliography.html#Kl76">Kl2</A>] is a
+good historical source.) 
+At that time, it had long been recognized that it was necessary to work over
+the complex numbers to ensure the existence of solutions.
+We know of only a handful of cases where the number of real solutions was
+considered.
+(We discuss some in Section&nbsp;<A HREF="2.html#old-real">3.ii</A>.)
+Asking how many solutions can be real is the motivating question of
+enumerative real algebraic geometry and an analog of Question&nbsp;<A
+HREF="../S1/1.html#q:one">1.1</A>. 
+
+<P>
+<P>
+<DIV><A NAME="ques:reality"><B>Question  3.1</B></A> &nbsp; 
+In a given enumerative geometric problem, if the general figures are chosen
+ to be real, how many of the solution figures can be real?</DIV><P></P>
+
+<P>
+For example, how many of the lines on a real cubic surface can be real?
+(Answer: all 27.) How many of the lines meeting four given real lines can be
+real? (Answer: all can.)
+This question was posed by Fulton&nbsp;[<A
+HREF="../bibliography.html#Fu96b">Fu2</A>, p.&nbsp;55]: 
+``The question of how many solutions of real equations can be real is still
+very much open, particularly for enumerative problems.''
+
+<P><A NAME="observation"></A>
+This problem is fundamentally hard.  
+Of the geometric figures satisfying real conditions, some will be real while
+the rest will occur in complex conjugate pairs, and the number which are
+real will depend subtly on the configuration of the conditions.
+Despite this difficulty, this is an important question often asked in
+applications.
+
+<P>
+One fruitful variant has been whether it is possible that <I>all</I> solution
+figures can be real.
+We call an enumerative problem <I>fully real</I> if there are general real
+conditions for which all solution figures are real.
+That is, if the upper bound of&nbsp;(<A
+HREF="../S1/1.html#eq:easy-bounds">1.2</A>) is sharp. 
+In light of the situation for sparse polynomial systems, it is quite
+surprising that there are no known enumerative problems which are not fully
+real. 
+For this it is important that the conditions are imposed by general figures.
+A related question is whether the opposite situation can occur:
+Is it possible to have no (or only one) real solutions?
+We give some examples in Section&nbsp;<A
+HREF="../S4/3.5.html#sec:lagriangian">4.iii.e</A>. 
+We shall see in Section&nbsp;<A HREF="../S6/index.html#sec:lower">6</A> that there are many enumerative
+problems whose number of real solutions is always at least 2.
+
+<P>
+In the above passage, Fulton&nbsp;[<A
+ HREF="../bibliography.html#Fu96b">Fu2</A>] goes on to ask:
+``For example, how many of the 3264 conics tangent to five general conics can
+be real?''
+He answered this question in the affirmative in 1986, but did not publish that
+result.
+Later, Ronga, Tognoli, and Vust&nbsp;[<A
+ HREF="../bibliography.html#RTV97">RTV</A>] gave a careful argument that all
+3264 can be real.
+This example is very striking, both for the number, 3264, and because this
+problem of conics has long been an important testing ground for ideas in
+enumerative geometry.
+
+<P>
+One difficulty with enumerative real algebraic geometry is that there are few
+techniques or theorems with a wide range of applicability.
+Sometimes a direct calculation suffices (Sections&nbsp;<A HREF="4.html#sec:ratcubics">3.iv</A>
+and&nbsp;<A HREF="5.html#sec:tangent">3.v</A>) or more commonly real
+solutions are constructed by 
+deforming from a special configuration, as in the homotopy algorithm of Huber
+and Sturmfels in Section&nbsp;<A HREF="../S2/2.3.html">2.ii.c</A>.
+Attempts to formalize this method include  `Schubert
+induction'&nbsp;[<A
+ HREF="../bibliography.html#So00c">So8</A>]; this is presented in the proof of
+Theorem&nbsp;<A HREF="../S4/2.3.html#thm:real-trans">4.6</A>, and used to establish the other results of
+Section&nbsp;<A HREF="../S4/index.html">4</A>.
+Another formalization is the notion of `real effective algebraic
+equivalence'&nbsp;[<A  HREF="../bibliography.html#So97b">So2</A>]. 
+That (together with Theorem&nbsp;<A HREF="../S4/2.html#thm:special">4.4</A>)
+gives such results 
+as&nbsp;[<A HREF="../bibliography.html#So97b">So2</A>, Theorem&nbsp;18]: The
+enumerative problem of 
+<DIV>
+ <TABLE align=center>
+  <TR><TD><IMG ALIGN="MIDDLE" SRC="Num.png"> 
+  </TD></TR></TABLE></DIV>
+codimension 2 planes meeting 2<I>n</I> - 2 rational normal curves is fully
+real and&nbsp;[<A HREF="../bibliography.html#So97c">So3</A>, Corollary 5]:
+The enumerative problem of 11,010,048 2-planes in <B>P</B><SUP>5</SUP> meeting
+9 general Veronese surfaces is fully real.
+
+<P>
+We devote the rest of this section to a description of some enumerative
+problems in the context of Question&nbsp;<A HREF="index.html#ques:reality">3.1</A>.
+
+<BR><HR>
+<!--Navigation Panel-->
+ <A HREF="2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+<!-- <A HREF="../S2/9.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> -->
+ <BR>
+ <B> Next:</B> <A HREF="2.html">3.ii. Enumerative problems not involving general conditions</A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: Table of Contents</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

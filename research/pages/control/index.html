@@ -1,0 +1,128 @@
+<HTML>
+<HEAD>
+   <TITLE>Some Remarks on Real and Complex Output Feedback</TITLE>
+</HEAD>
+<BODY BGCOLOR="#F0F0EE">
+
+<H2>A non-trivial real system that cannot be controlled by real output
+feedback </H2>
+
+
+<DD><B>Joachim Rosenthal.</B> 
+<TT><A HREF="mailto:Rosenthal.1@nd.edu">Rosenthal.1@nd.edu</A></TT></DD>
+
+<P> </P>
+
+<DD><B>Frank Sottile. </B>
+<TT><A HREF="mailto:sottile@msri.org">
+sottile@msri.org</A></TT>
+
+<P>This non-trivial example of a real system which is not controllable
+by real static output feedback, while presented in the paper (pages 5 and
+6 of the paper 
+<A HREF="../../publications.html#control"><I>Some Remarks on Real and Complex
+Output Feedback</A></I>), is not easy to 
+verify by hand. Below are some files which contain the feedback laws, and
+can be used to verify our claims. </P>
+
+<HR>
+
+<DL>
+<DT><A HREF="Feedback.maple">Feedback.maple. </A></DT>
+
+<DD>A MAPLE input file which contains the feedback laws for that example,
+the system (represented as a matrix [D(s):N(s)]), 
+and the poles (-8,-6,-4,-2,1,2,3,4).
+Running it will verify these are feedback laws for the given system. The
+beginning of the file contains some additional documentation.</DD>
+
+<P> </P>
+
+<DT><A HREF="polynomials.maple">polynomials.maple. </A></DT>
+
+<DD>This file contains polynomials whose roots are the coordinates of all
+the feedback laws.
+When run, it computes these roots, and then assembles them into 
+the matrices which are displayed on page 6 of the manuscript.</DD>
+
+<P> Verifying that these are the only feedback laws (equivalently, that
+the given system is nondegenerate) is more difficult. Algebraically, it
+amounts to showing that the 8 polynomial equations of displayed equation
+(7) on page 5 of the manuscript describe 14 distinct points in complex
+8-space. We used the Gr\&quot;obner basis package 
+<A HREF="http://www.mathematik.uni-kl.de/~zca/Singular">SINGULAR</A>
+to check this for us. </P>
+
+<DT><A HREF="input.singular">input.singular. </A></DT>
+
+<DD>This SINGULAR input file contains the equations (7), will compute a
+Gr\&quot;obner basis for the ideal, and then the dimension of the quotient
+ring and its degree. Since the degree is 14, and we have given 14 distinct
+solutions, this constitutes a proof that the system was nondegenerate.
+</DD>
+
+<DT><A HREF="input.maple">input.maple. </A></DT>
+
+<DD>This MAPLE input file creates the singular file <TT>input.singular</TT>,
+and may be used to verify that the equations in <TT>input.singular</TT>
+are indeed those of (7), as claimed. </DD>
+</DL>
+
+<P>
+<HR></P>
+
+<H3>Feedback laws for real m=2, p=4, n=8 systems </H3>
+
+<P>As part of this project, we generated a considerable number (15,000)
+of real m=2, p=4, n=8 systems with characteristic polynomials and for each,
+determined the number of real and complex feedback laws. This was accomplished
+by randomly generating linear systems and characteristic polynomials in
+SINGULAR. Then, also in SINGULAR, we computed an eliminant for each system
+and characteristic polynomial. Finally, we used the <TT>realroot </TT>routine
+of MAPLE to determine the number of real roots of the eliminant, and hence
+the number of real feedback laws. The results of this, as well as SINGULAR
+input files, are contained in the following files. </P>
+
+<DL>
+<DT><A HREF="search.singular">search.singular </A></DT>
+
+<DD>This will create 250 systems and compute an eliminant for each. It
+generates a MAPLE input file, which must be edited (documentation contained
+in <TT>search.singular</TT>). When the MAPLE file is run, it prints a matrix
+which records the number of real feedback laws for each system. </DD>
+
+<DT><A HREF="compilation.maple">compilation.maple </A></DT>
+
+<DD>This MAPLE input file contains the output matrices from 60 runs of
+ <TT>search.singular</TT>, as well as some documentation in the 
+form of comments.
+When run, it prints out </DD>
+  <br>
+
+<PRE>  
+  [   23,   804,  3370,  5345,  3854,  1325,   272,   7   ]
+
+  [.1533, 5.360, 22.47, 35.63, 25.69, 8.833, 1.813, .04667]
+</PRE>
+
+<P>The first vector records the frequency; its (j+1)th component is the
+number of systems generated with 2j real feedback laws, and the second
+vector similarly records the percentages. </P>
+
+<DT><A HREF="compilation.txt">compilation.txt </A></DT>
+
+<DD>This contains further documentation of this part of our project, in
+particular, the parameters used in the generation of the systems with SINGULAR.
+</DD>
+
+<DT><A HREF="reality.txt">reality.txt </A></DT>
+
+<DD>This contains some remarks about this study of m=2, p=4 systems and
+some questions that arose naturally out of the data we generated. </DD>
+</DL>
+<HR>
+
+<I> Last modified: June 1997</I>
+
+</BODY>
+</HTML>

@@ -1,0 +1,204 @@
+#twoOval.maple
+#
+#  This files considers the example of lines perpendicular to the x axis and 
+#  tangent to the sphere with center at (0,2,0) and radius 5^(1/2).
+#  There are two ovals in the genus 1 curve.
+#
+#
+interface(quiet=true):
+with(plots):
+########################################################
+#
+#  Computes quadratic form of sphere
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+########################################################
+#
+#  Computes second exterior power of a 4 by 4 matrix
+#
+Wedge := proc(Sph)
+local Pairs, i, j, wedge:
+ wedge := linalg[matrix](6, 6, 0):
+ Pairs := combinat[choose]([1,2,3,4],2):
+ for i from 1 to 6 do
+  for j from 1 to 6 do
+   wedge[i,j] := linalg[det](linalg[submatrix](Sph,Pairs[i],Pairs[j])):
+  od:
+ od:
+ evalm(wedge)
+end:  
+
+#
+#   Equation in Pl\"ucker coordinates for lines tangent to the sphere
+#   with center (a,b,c) and radius r
+#
+Equation := proc(a,b,c,r)
+local  plucker:
+ plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+ linalg[innerprod](plucker,Wedge(Sphere(a,b,c,r)),plucker)
+end:
+
+#
+#   Matrix for a general quadratic form
+#
+Quadric := (a,b,c,d,e,f,g,h,x,y) ->
+  linalg[matrix]([
+   [ a , b , c , d ],
+   [ b , e , f , g ],
+   [ c , f , h , x ],
+   [ d , g , x , y ]]):
+
+
+#######################################################################
+#
+#  This procedure computes the point of tangency of a given tangent line.
+#  We are working in the local coordinates for lines perpendicular to 
+#  x-axis, where A = b = 1.
+#
+#  a is the function a(B) stored in BSOLS
+#
+TanPoint := proc(Q,B,a)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t*a,t]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch*a), touch]
+end:
+##################################################################
+
+Coords:=linalg[vector]([1,X,Y,Z]):
+
+##################################################################
+F:=subs(p02=a*A,p03=b*A,p12=a*B,p13=b*B,p01=0,p23=0,Equation(0,2,0,s5)):
+plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+
+G:=subs(b=1,A=1,F):
+BSOLS:=[solve(subs(b=1,A=1,F)=0,a)]:
+#aSOLS:=[solve(subs(b=1,A=1,F)=0,B)]:
+bSOLS:=[solve(subs(a=1,A=1,F)=0,B)]:
+
+s5:=5^(1/2):
+
+############################################################
+Ideal1:= [x,h-y,g,f,d,c^2-4*e*y,b,a+e]:
+Family1:=Quadric(-1,0,c,0,1,0,0,c^2/4,0,c^2/4):
+linalg[innerprod](Coords,Family1,Coords)-
+expand(X^2+(c*Y+4)^2/4 + Z^2*c^2/4-5):
+
+c:= -2:
+Sphere1:=plot3d([s5*sin(ph)*cos(th), (2*s5*sin(ph)*sin(th)-4)/c,
+              2*s5*cos(ph)/c] ,ph=0..Pi,th=-Pi..Pi,color=coral):
+TCo1:=TanPoint(Family1,B,BSOLS[1]):
+TCo2:=TanPoint(Family1,B,BSOLS[2]):
+
+#########################################################
+Ideal2:= [x,h-y,g,f,d^2+4*e*y,c,b,a+5*e]:
+Family2:=Quadric(-5,0,0,d,1,0,0,-d^2/4,0,-d^2/4):
+linalg[innerprod](Coords,Family2,Coords)-
+expand(X^2-(d*Y)^2/4 -(d*Z-4)^2/4-1):
+d:=-3:
+twosheet11:=plot3d([sqrt(1+r^2),2*r*sin(th)/d,
+                  (2*r*cos(th)+4)/d],r=0..10,th=0..2*Pi,color=tan):
+twosheet12:=plot3d([-sqrt(1+r^2),2*r*sin(th)/d,
+                  (2*r*cos(th)+4)/d],r=0..10,th=0..2*Pi,color=tan):
+TCb1:=TanPoint(Family2,B,BSOLS[1]):
+TCb2:=TanPoint(Family2,B,BSOLS[2]):
+
+#########################################################
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+plotsetup(gif,plotoutput=`b-sm.gif`,plotoptions=`height=350,width=350`):
+plotsetup(gif,plotoutput=`II.gif`,plotoptions=`height=700,width=700`):
+
+macro(pagr=COLOR(RGB, .5, 1, .5)):
+
+display3d(
+#
+#  These are the tangent lines   5^(1/2) = 2.236
+#
+spacecurve([t,0,0],t=-6..6,color=green,thickness=5),
+spacecurve([1. ,subs(B=1. ,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.1,subs(B=1.1,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.2,subs(B=1.2,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.3,subs(B=1.3,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.4,subs(B=1.4,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.5,subs(B=1.5,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.6,subs(B=1.6,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.7,subs(B=1.7,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.8,subs(B=1.8,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.9,subs(B=1.9,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2. ,subs(B=2. ,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2.1,subs(B=2.1,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2.2,subs(B=2.2,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2.236,subs(B=2.236,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+#
+spacecurve([1. ,subs(B=1. ,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.1,subs(B=1.1,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.2,subs(B=1.2,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.3,subs(B=1.3,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.4,subs(B=1.4,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.5,subs(B=1.5,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.6,subs(B=1.6,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.7,subs(B=1.7,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.8,subs(B=1.8,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([1.9,subs(B=1.9,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2. ,subs(B=2. ,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2.1,subs(B=2.1,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([2.2,subs(B=2.2,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+#
+#
+#
+spacecurve([-1. ,subs(B=1. ,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.1,subs(B=1.1,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.2,subs(B=1.2,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.3,subs(B=1.3,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.4,subs(B=1.4,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.5,subs(B=1.5,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.6,subs(B=1.6,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.7,subs(B=1.7,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.8,subs(B=1.8,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.9,subs(B=1.9,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2. ,subs(B=2. ,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2.1,subs(B=2.1,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2.2,subs(B=2.2,t*BSOLS[1]),t],t=-10..10,color=pagr,numpoints=2),
+#
+spacecurve([-1. ,subs(B=1. ,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.1,subs(B=1.1,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.2,subs(B=1.2,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.3,subs(B=1.3,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.4,subs(B=1.4,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.5,subs(B=1.5,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.6,subs(B=1.6,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.7,subs(B=1.7,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.8,subs(B=1.8,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-1.9,subs(B=1.9,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2. ,subs(B=2. ,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2.1,subs(B=2.1,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2.2,subs(B=2.2,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+spacecurve([-2.236,subs(B=2.236,t*BSOLS[2]),t],t=-10..10,color=pagr,numpoints=2),
+#
+#  Done with the tangent lines
+#
+#   The original sphere
+#
+Sphere1,
+spacecurve([TCo1[]],B=1..5^(1/2),color=maroon,thickness=3,numpoints=100),
+spacecurve([TCo2[]],B=1..5^(1/2),color=maroon,thickness=3,numpoints=100),
+spacecurve([TCo1[]],B=-5^(1/2)..-1,color=maroon,thickness=3,numpoints=100),
+spacecurve([TCo2[]],B=-5^(1/2)..-1,color=maroon,thickness=3,numpoints=100),
+#
+#   The second family
+#
+twosheet11,twosheet12,
+spacecurve([TCb1[]],B=1..5^(1/2),color=BLUE,thickness=3,numpoints=100),
+spacecurve([TCb2[]],B=1..5^(1/2),color=BLUE,thickness=3,numpoints=100),
+spacecurve([TCb1[]],B=-5^(1/2)..-1,color=BLUE,thickness=3,numpoints=100),
+spacecurve([TCb2[]],B=-5^(1/2)..-1,color=BLUE,thickness=3,numpoints=100),
+#
+orientation=[-110,50],view=[-3.89..3.89,-5..5,-5..5],axes=none,scaling=CONSTRAINED);
+

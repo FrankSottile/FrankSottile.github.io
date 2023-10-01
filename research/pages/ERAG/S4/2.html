@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: The Special Schubert Calculus</TITLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="1.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">4.iii Further extensions of the Schubert calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">4.  The Schubert Calculus: 
+                Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="1.html">4.i. The Schubert Calculus of Lines</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+<A NAME="sec:SpSchCalc"></A>
+<H2>4.ii. The Special Schubert Calculus</H2>
+
+More generally, we may ask how many linear
+subspaces of a fixed dimension meet general linear subspaces 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I>.
+We formulate this question in terms of linear subspaces of a vector
+space.
+<P></P>
+
+<P>
+The set of <I>k</I>-dimensional subspaces 
+(<I>k</I>-planes) of an <I>n</I>-dimensional vector
+space forms the <I>Grassmannian of &nbsp;<I>k</I>-planes in <I>n</I>-space</I>, 
+Gr(<I>k</I>, <I>n</I>), which is 
+a smooth projective variety of dimension <I>k</I>(<I>n</I> - <I>k</I>).
+Those <I>k</I>-planes meeting a linear subspace <I>L</I> of dimension 
+<I>n</I>-<I>k</I>+1-<I>l</I> non-trivially (that is, the intersection has
+positive dimension) form the special Schubert subvariety 
+<I>X</I>(<I>L</I>) of Gr(<I>k</I>, <I>n</I>) which has 
+codimension <I>l</I>.
+The special Schubert calculus is concerned with the following question.
+
+<P>
+<P>
+<DIV><A NAME="ques:spSchub"><B>Question  4.3</B></A> &nbsp; 
+ Given general linear subspaces 
+ <I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I>
+  of <B>C</B><SUP><I>n</I></SUP> where the dimension of  <I>L<SUB>i</SUB></I>
+ is <I>n</I>-<I>k</I>+1-<I>l<SUB>i</SUB></I> and we have 
+ <I>l</I><SUB>1</SUB> + <I>l</I><SUB>2</SUB> + ... + <I>l<SUB>s</SUB></I>
+ equal to <I>k</I>(<I>n</I> - <I>k</I>), how many <I>k</I>-planes <I>K</I>
+ meet each subspace <I>L<SUB>i</SUB></I> non-trivially, that is, satisfy
+<BR>
+
+<A NAME="eq:special"></A>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+ <I>K</I> meets <I>L<SUB>i</SUB></I> non-trivially, for each 
+ <I>i</I>=1, 2, ..., <I>s</I> ?</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P></DIV><P></P>
+
+<P>
+The condition&nbsp;(<A HREF="#eq:special">4.2</A>) is expressed in the global
+geometry of Gr(<I>k</I>, <I>n</I>) as the number of points in the intersection
+of the special Schubert varieties
+<P></P>
+
+<A NAME="eq:special-int"></A>
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+<I>X</I>(<I>L</I><SUB>1</SUB>), <I>X</I>(<I>L</I><SUB>2</SUB>), 
+..., <I>X</I>(<I>L<SUB>s</SUB></I>),</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+when the intersection is transverse.
+(A general theorem of Kleiman&nbsp;[<A
+HREF="../bibliography.html#Kl1">Kl1</A>] guarantees transversality when 
+the <I>L<SUB>i</SUB></I> are in general position, and also implies
+transversality for the other intersections considered in this section.)
+
+<P>
+There are algorithms due to 
+Schubert&nbsp;[<A HREF="../bibliography.html#Sch1886b">Sch4</A>] (when each 
+<I>l<SUB>i</SUB></I> is 1) and
+Pieri&nbsp;[<A HREF="../bibliography.html#Pi1893">Pi</A>] to compute the
+expected number of solutions. 
+When each <I>l<SUB>i</SUB></I> is 1, 
+Schubert&nbsp;[<A HREF="../bibliography.html#Sch1886c">Sch2</A>] showed that
+the number of solutions is equal to 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<IMG SRC="dnk.png">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+A line in <B>P</B><SUP><I>n</I></SUP> is a 2-plane in 
+(<I>n</I>+1)-space
+and two linear subspaces in <B>P</B><SUP><I>n</I></SUP> meet if and only if
+the corresponding linear subspaces in (<I>n</I>+1)-space have a non-trivial 
+intersection. 
+Thus the problem of lines in projective space corresponds to the case 
+<I>k</I>=2 of the special Schubert calculus.
+While the geometric problem generalizes easily from <I>k</I>=2  to arbitrary
+values of <I>k</I>, the proof of 
+Theorem&nbsp;<A HREF="1.html#thm:reality">4.2</A> does not. 
+There is, however, a relatively simple argument that this special Schubert
+calculus is fully real.
+
+<A NAME="thm:special"></A>
+<P>
+<DIV><B>Theorem  4.4</B> 
+([<A HREF="../bibliography.html#So99a">So5</A>&nbsp;Theorem 1)  &nbsp; 
+ Suppose <I>n</I>, <I>k</I>, and 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l<SUB>s</SUB></I> 
+ are positive integers  with
+<I>l</I><SUB>1</SUB> + <I>l</I><SUB>2</SUB> + ... + <I>l<SUB>s</SUB></I> 
+equal to <I>k</I>(<I>n</I> - <I>k</I>).
+ Then there are linear subspaces 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L<SUB>s</SUB></I> 
+ of <B>R</B><SUP><I>n</I></SUP> in general position with 
+ the dimension of <I>L<SUB>s</SUB></I> equal to 
+ <I>n</I>-<I>k</I>+1-<I>l<SUB>i</SUB></I> such that
+ each of the a priori complex <I>k</I>-planes <I>K</I>
+ satisfying&nbsp;(<A HREF="#eq:special">4.2</A>) are in fact real.
+</DIV><P></P>
+
+<P>
+We present an elementary proof of this result in the important special case
+when each <I>l<SUB>i</SUB></I> equals 1 so that the conditions are simple,
+meaning each Special Schubert variety <I>X</I>(<I>L<SUB>i</SUB></I>) 
+is a hypersurface in the Grassmannian (has codimension 1).
+This proof generalizes to show that some other classes of enumerative problems
+in the Schubert calculus are fully real (see 
+Sections&nbsp;<A HREF="3.2.html#sec:quantum">4.iii.b</A>,&nbsp;<A
+HREF="3.3.html#sec:flags">4.iii.c</A>, and&nbsp;<A HREF="3.4.html">4.iii.d</A> ). 
+This generalization constructs sufficiently many real solutions using a
+limiting argument, as in 
+Section&nbsp;<A HREF="../S2/3.1.html#sec:SparsePS">2.iii.a</A>.
+Just as the arguments of 
+Section&nbsp;<A HREF="../S2/3.1.html#sec:SparsePS">2.iii.a.</A> were linked to the homotopy
+algorithms of Huber and Sturmfels, the proof of 
+Theorem&nbsp;<A HREF="#thm:special">4.4</A>
+leads to numerical homotopy methods for solving these
+problems&nbsp;[<A HREF="../bibliography.html#HSS98">HSS</A>,<A
+ HREF="../bibliography.html#HV00">HV</A>]. 
+<A NAME="subsections"></A>
+<BR>
+<HR>
+
+<!--Table of Child-Links-->
+<STRONG>Subsections</STRONG></A>
+
+<DL>
+<DD>4.ii.a. <A HREF="2.1.html">Geometry of Grassmann Varieties</A>
+<DD>4.ii.b. <A HREF="2.2.html">Degrees of Schubert Varieties</A>
+<DD>4.ii.c. <A HREF="2.3.html">Proof of Theorem&nbsp;<A HREF="#thm:special">4.4</A></A>
+</DL>
+<!--End of Table of Child-Links-->
+
+<HR>
+<!--Navigation Panel-->
+ <A HREF="3.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="1.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="3.html">4.iii Further extensions of the Schubert calculus</A><BR>
+ <B> Up:</B> <A HREF="index.html">4.  The Schubert Calculus: 
+                Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="1.html">4.i. The Schubert Calculus of Lines</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

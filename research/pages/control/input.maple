@@ -1,0 +1,48 @@
+#input.maple
+interface(quiet=true):
+
+#	Maple script to create Singular input file for verifying that 
+#	the system for the example in "Some remarks on real and complex
+#	output feedback" is indeed nondegenerate.   This example gives a
+#	a real linear system (m=2, p=4) that cannot be controlled with 
+#	real output feedback.
+#
+   
+with(linalg):
+
+F := x-> transpose(matrix([
+[ x^4 -16*x^3 + 3*x^2 +11*x    ,      6*x^3 - 4*x^2 - 9*x - 5],
+[     -26*x^3 +10*x^2 + 7*x +16, x^4 +3*x^3 -   x^2 -16*x -13],
+[       9*x^3 -12*x^2 +13*x -17,      8*x^3 - 6*x^2 + 5*x +15], 
+[     -31*x^3 -16*x^2 +43*x -23,     26*x^3 -14*x^2 -11*x +12],
+[         x^3 -36*x^2 + 8*x -13,     11*x^3 + 5*x^2 +11*x +33],
+[      23*x^3 -   x^2 + 2*x -21,             -7*x^2 +11*x + 5]])):
+ 
+Poles := vector([-8,-6,-4,-2,1, 2, 3, 4]):
+
+Coords := matrix([
+[X11,X12],
+[X21,X22],
+[X31,X32],
+[X41,X42]]):
+
+equations := {}:
+
+for ii from 1 to 8 do
+equations := equations union 
+{det(stack(F(Poles[ii]), concat(Coords,band([1],4))))}: 
+od:
+
+lprint(`ring R = 0,(X11,X12,X21,X22,X31,X32,X41,X42), (dp(7),dp(1));`);
+lprint(`ideal I =`);
+for ee in equations do
+lprint(ee,`,`);od;
+lprint(`0;`);
+
+lprint(`ideal G = std(I);`);
+lprint(`dim(G);`);
+lprint(`mult(G);`);
+lprint(`print(" ");`);
+lprint(`quit;`);
+
+quit

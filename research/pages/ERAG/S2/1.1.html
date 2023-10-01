@@ -1,0 +1,124 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: The BKK Bound</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+<A HREF="1.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+<A HREF="1.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+<BR>
+<B> Next:</B> <A HREF="1.2.html">2.i.b. An Example</A><BR>
+<B> Up:</B> <A HREF="1.html#subsections">2. Sparse Polynomial Systems: Contents</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+
+<H2>2.i.a. The BKK Bound</H2>
+
+
+<P>
+Given polytopes 
+<I>P</I><SUB>1</SUB>, <I>P</I><SUB>2</SUB>, ..., <I>P<SUB>m</SUB></I>
+in <B>R</B><SUP>n</SUP>,  their Minkowski sum
+is the pointwise sum
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<I>P</I><SUB>1</SUB> + <I>P</I><SUB>2</SUB> + ... + 
+<I>P<SUB>m</SUB></I> &nbsp; = &nbsp; 
+{<I>p</I><SUB>1</SUB> + <I>p</I><SUB>2</SUB> + ... + 
+ <I>p<SUB>m</SUB></I> | <I>p<sub>i</sub></I> in <I>P<sub>i</sub></I> 
+   for <I>i</I>=1,2,...,<I>m</I>} .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The mixed volume, 
+<I>MV</I>(<I>P</I><SUB>1</SUB>, <I>P</I><SUB>2</SUB>, ..., 
+          <I>P<SUB>m</SUB></I>), of a collection of <I>m</I>
+polytopes is the 
+coefficient of 
+<I>t</I><SUB>1</SUB><I>t</I><SUB>2</SUB>...<I>t<SUB>m</SUB></I>
+in the volume of
+<I>t</I><SUB>1</SUB><I>P</I><SUB>1</SUB> + 
+<I>t</I><SUB>2</SUB><I>P</I><SUB>2</SUB> + ... + 
+<I>t<SUB>m</SUB></I><I>P<SUB>m</SUB></I> .
+
+<P>
+When there are <I>n</I> equal polytopes,
+the mixed volume is 
+<I>n</I>! Vol(<I>P</I>), the normalized volume of the common
+Newton polytope <I>P</I>, and when the polytope 
+<I>P</I><SUB>i</sub></I> is a line segment of length 
+<I>d</I><SUB>i</sub></I> in the <I>i</I>th coordinate direction
+(so that <I>P</I><SUB>i</sub></I> = New(<I>f</I><SUB>i</sub></I>), 
+where <I>f</I><SUB>i</sub></I> is the polynomial given
+in&nbsp;(<A HREF="1.html#eq:max-real">2.2</A>)), the mixed volume is the 
+B&#233;zout number 
+<I>d</I><SUB>1</SUB><I>d</I><SUB>2</SUB>...<I>d<SUB>n</SUB></I>.
+
+
+<P>
+Given a list <B>A</B> = 
+(<I>P</I><SUB>1</SUB>, <I>P</I><SUB>2</SUB>, ..., <I>P<SUB>n</SUB></I>)
+of polytopes in <B>R</B><SUP><I>n</I></SUP>
+with vertices in the integral lattice 
+<B>N</B><SUP><I>n</I></SUP>, a <I>sparse
+polynomial system</I>  with structure <B>A</B> is a 
+system of polynomials&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) with 
+New(<I>f</I><SUB>1</SUB>) = <I>P</I><SUB>1</SUB>.
+These sparse systems may have trivial solutions
+where some coordinates vanish.
+Thus we only consider solutions with non-zero complex coordinates.
+We have the following basic result on the number of solutions to such a sparse
+system of polynomials.
+
+<P>
+<P>
+<DIV><A NAME="thm:BKK"><B>Theorem  2.2</B></A> (BKK bound)  &nbsp; 
+A sparse polynomial system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>) 
+ with structure <B>A</B> = 
+(<I>P</I><SUB>1</SUB>, <I>P</I><SUB>2</SUB>, ..., <I>P<SUB>n</SUB></I>)
+ has at most 
+ MV(<I>P</I><SUB>1</SUB>, <I>P</I><SUB>2</SUB>, ..., <I>P<SUB>n</SUB></I>)
+ isolated solutions in <B>C</B><I><SUP>n</SUP></I>
+with non-zero coordinates.
+ If the system is generic given its structure, then it has exactly this number
+ of solutions in <B>C</B><I><SUP>n</SUP></I>
+with non-zero coordinates.
+</DIV><P></P>
+
+<P>
+This result was developed in a series of papers by
+Kushnirenko&nbsp;[<A
+ HREF="../bibliography.html#Kushnirenko">Ko</A>], 
+Bernstein&nbsp;[<A HREF="../bibliography.html#Bernstein">Be</A>], and 
+Khovanskii&nbsp;[<A HREF="../bibliography.html#Kh78">Kh1</A>].
+For simplicity of exposition, we will largely restrict ourselves to the case
+when the polynomials all have the same Newton polytope <I>P</I>.
+
+
+The polyhedral homotopy algorithm of Huber and 
+Sturmfels&nbsp;[<A HREF="../bibliography.html#HS95">HS</A>]
+gives an effective demonstration of this BKK bound.
+It deforms the sparse system&nbsp;(<A HREF="1.html#eq:sqSystem">2.1</A>)
+into a system where the number of solutions is evident and is 
+based upon Sturmfels's generalization&nbsp;
+[<A HREF="../bibliography.html#St94a">Stu2</A>] of 
+Viro's method for constructing real varieties with controlled
+topology&nbsp;
+[<A HREF="../bibliography.html#Viro">Vi</A>].
+We will describe it in <A HREF="2.3.html">Section 2.ii.c</A>, after we give some
+examples and definitions.
+
+
+<BR><HR>
+<!--Navigation Panel-->
+<A HREF="1.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+<A HREF="1.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+<BR>
+<B> Next:</B> <A HREF="1.2.html">2.i.b. An Example</A><BR>
+<B> Up:</B> <A HREF="1.html#subsections">2. Sparse Polynomial Systems: Contents</A><BR>
+<!--End of Navigation Panel-->
+<HR>
+
+</BODY>
+</HTML>

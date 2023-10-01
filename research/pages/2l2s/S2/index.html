@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+   <TITLE>Proof for Asymmetric (2,2)-curves</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<H2>
+Computer Algebra Scripts Verifying Claims made in Section 3 of Paper<BR>
+</H2>
+<A HREF="../index.html#toc"><img src="../toc.gif"></A>
+<A HREF="../index.html#toc">Back</A> to Table of Contents.
+<HR>
+<P>
+For the main proof in Section 3, we use a Singular computation in order
+to factor an ideal. <BR>
+
+This singular program which is explained in detail in the appendix
+can be found <A HREF="Appendix.sing">here</A>. <BR>
+
+Its output can be found <A HREF="outcompleterun">here</A>. <P>
+
+Moreover, in the appendix one of the six factors of the main factorization
+(resulting as output of the factorizing Gr&ouml;bner basis algorithm) 
+is analyzed by hand.
+Although the other components look somewhat similar, they also
+have to be analyzed in the same way. <P>
+
+For completeness, in the text file which can be found 
+<A HREF="allcomponents.sing">here</A>
+we carry out this analysis for <B>all</B> six
+factors. Every factor describes two plane conics.
+By symmetry, it suffices to consider one of the two conics in each
+factor. <BR>
+In fact, the text file is a Singular program. Although the main
+steps in the analysis are done by hand, it was convenient
+to put all these calculations into a Singular file. Namely, several
+Singular steps serve to do some routine calculations and also to serve
+for verification purposes. <P>
+
+<BR>
+
+<HR>
+<I>Last modified on 25 June 2002</I>
+</BODY>
+</HTML>

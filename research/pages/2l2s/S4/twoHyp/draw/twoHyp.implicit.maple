@@ -1,0 +1,280 @@
+#
+#
+#
+#
+#
+#Digits:=20:
+interface(quiet=true):
+with(plots):
+with(linalg):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+############################################
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+
+Wedge := proc(Sph)
+local Pairs, i, j, wedge:
+ wedge := linalg[matrix](6, 6, 0):
+ Pairs := combinat[choose]([1,2,3,4],2):
+ for i from 1 to 6 do
+  for j from 1 to 6 do
+   wedge[i,j] := linalg[det](linalg[submatrix](Sph,Pairs[i],Pairs[j])):
+  od:
+ od:
+ evalm(wedge)
+end:
+
+Equation := proc(a,b,c,r)
+local  plucker:
+ plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+ linalg[innerprod](plucker,Wedge(Sphere(a,b,c,r)),plucker)
+end:
+
+Quadric := (a,b,c,d,e,f,g,h,x,y) ->
+  linalg[matrix]([
+   [ a , b , c , d ],
+   [ b , e , f , g ],
+   [ c , f , h , x ],
+   [ d , g , x , y ]]):
+
+
+##########################################
+#  We assume that A = b = 1.
+#  a is the function a(B) stored in aSOLS
+#
+TanPoint := proc(Q,B,a)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t*a,t]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch*a), touch]
+end:
+# [1,B,1,b]
+#  B is the function B(b) stored in aSOLS
+TanPointb := proc(Q,B,b)
+local Point, plugin, touch:
+ Point:=linalg[vector]([1,B,t,t*b]):
+ plugin:=linalg[innerprod](Point,Q,Point):
+ touch:= expand(-coeff(plugin,t)/2/coeff(plugin,t^2)):
+ [B, simplify(touch), simplify(touch*b)]
+end:
+
+Coords:=linalg[vector]([1,X,Y,Z]):
+plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+
+s2:=2^(1/2):
+
+#Hyp:=implicitplot3d(X^2+(Y-1)^2-Z^2-2,X=-4..4,Y=-4..4,Z=-4..4):
+#
+# This hyperboloid is very interesting:  The extra components all factor
+# over an extension of Z, and so we can plot the extra components.
+#
+#
+##################################################################
+F:=subs(p02=a*A,p03=b*A,p12=a*B,p13=b*B,p01=0,p23=0,
+    linalg[innerprod](plucker,Wedge(Quadric(-1,0,-1,0,1,0,0,1,0,-1)),plucker)):
+G:=subs(b=1,A=1,F):
+#implicitplot(G,B=-4..4,a=-4..4):
+
+aSOLS:=[solve(subs(b=1,A=1,F)=0,a)]:
+bSOLS:=[solve(subs(B=be,b=B,be=b,a=1,A=1,F)=0,b)]:
+#quit;
+#########################################################
+
+q2:=2^(1/4):
+#########################################################
+#
+#   Extra components!
+#
+#############################################################
+#Extra11 :=(1.,-1/2+1/4*2^(1/2),-a*2^(1/2),-a,-1/2*2^(1/2),-a,a,
+#      -4*a^2*2^(1/2)-4*a^2,a^2*2^(1/2),2*(1+2^(1/2))*a^2*2^(1/2))
+a:=-1/5:
+Family11:=Quadric(1.,-1/2+1/4*s2,-a*s2,-a,-1/2*s2,-a,a,
+      -4*a^2*s2-4*a^2,a^2*s2,2*(1+s2)*a^2*s2):
+F11:=linalg[innerprod](Coords,Family11,Coords):
+Hyp11:=implicitplot3d(F11,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+          ,axes=none,style=patchcontour):
+#############################################################
+#Extra12 :=(1.,-1/2-1/4*2^(1/2),b*2^(1/2),-b,1/2*2^(1/2),-b,b,
+#          4*b^2*2^(1/2)-4*b^2,-b^2*2^(1/2),2*(-1+2^(1/2))*b^2*2^(1/2))
+b:=1:
+Family12:=Quadric(1.,-1/2-1/4*2^(1/2),b*2^(1/2),-b,1/2*2^(1/2),-b,b,
+          4*b^2*2^(1/2)-4*b^2,-b^2*2^(1/2),2*(-1+2^(1/2))*b^2*2^(1/2)):
+F12:=linalg[innerprod](Coords,Family12,Coords):
+#Hyp12:=implicitplot3d(F12,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra21 :=(1.,1/2-1/4*2^(1/2),c*2^(1/2),c,-1/2*2^(1/2),-c,c,
+#        -4*c^2*2^(1/2)-4*c^2,c^2*2^(1/2),2*(1+2^(1/2))*c^2*2^(1/2))
+#
+c:=1:
+Family21:=Quadric(1.,1/2-1/4*2^(1/2),c*2^(1/2),c,-1/2*2^(1/2),-c,c,
+        -4*c^2*2^(1/2)-4*c^2,c^2*2^(1/2),2*(1+2^(1/2))*c^2*2^(1/2)):
+F21:=linalg[innerprod](Coords,Family21,Coords):
+#Hyp21:=implicitplot3d(F21,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra22 :=(1.,1/2+1/4*2^(1/2),-d*2^(1/2),d,1/2*2^(1/2),-d,d,
+#    4*d^2*2^(1/2)-4*d^2,-d^2*2^(1/2),2*(-1+2^(1/2))*d^2*2^(1/2))
+d:=1:
+Family22:=Quadric(1.,1/2+1/4*2^(1/2),-d*2^(1/2),d,1/2*2^(1/2),-d,d,
+    4*d^2*2^(1/2)-4*d^2,-d^2*2^(1/2),2*(-1+2^(1/2))*d^2*2^(1/2)):
+F22:=linalg[innerprod](Coords,Family22,Coords):
+#Hyp22:=implicitplot3d(F22,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra31 :=(1.,1/2+1/4*2^(1/2),e*2^(1/2),e,1/2*2^(1/2),e,e,
+#      4*e^2*2^(1/2)-4*e^2,e^2*2^(1/2),2*(-1+2^(1/2))*e^2*2^(1/2))
+e:=1:
+Family31:=Quadric(1.,1/2+1/4*2^(1/2),e*2^(1/2),e,1/2*2^(1/2),e,e,
+      4*e^2*2^(1/2)-4*e^2,e^2*2^(1/2),2*(-1+2^(1/2))*e^2*2^(1/2)):
+F31:=linalg[innerprod](Coords,Family31,Coords):
+#Hyp31:=implicitplot3d(F31,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra32 :=(1.,1/2-1/4*2^(1/2),-f*2^(1/2),f,-1/2*2^(1/2),f,f,
+#             -4*f^2*2^(1/2)-4*f^2,-f^2*2^(1/2),2*(1+2^(1/2))*f^2*2^(1/2))
+f:=1:
+Family32:=Quadric(1.,1/2-1/4*2^(1/2),-f*2^(1/2),f,-1/2*2^(1/2),f,f,
+             -4*f^2*2^(1/2)-4*f^2,-f^2*2^(1/2),2*(1+2^(1/2))*f^2*2^(1/2)):
+F32:=linalg[innerprod](Coords,Family32,Coords):
+#Hyp32:=implicitplot3d(F32,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra41 :=(1, -1/2-1/4*2^(1/2), -g*2^(1/2), -g, 1/2*2^(1/2), g, g, 
+#          4*g^2*2^(1/2)-4*g^2, g^2*2^(1/2), 2*(-1+2^(1/2))*g^2*2^(1/2))
+g:=1:
+Family41:=Quadric(1.,-1/2-1/4*s2,-g*s2,-g,1/2*s2,g,g,4*g^2*s2-4*g^2, 
+                   g^2*s2, 2*(-1+s2)*g^2*s2):
+Fun:=linalg[innerprod](Coords,Family41,Coords):
+#Hyp41:=implicitplot3d(Fun,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+#############################################################
+#Extra42 :=[1, -1/2+1/4*2^(1/2), h*2^(1/2), -h, -1/2*2^(1/2), h, h, 
+#          -4*h^2*2^(1/2)-4*h^2, -h^2*2^(1/2), 2*(2^(1/2)+1)*h^2*2^(1/2)]:
+h:=1:
+Family42:=Quadric(1, -1/2+1/4*s2, h*s2, -h, -1/2*s2, h, h, 
+          -4*h^2*s2-4*h^2, -h^2*s2, 2*(s2+1)*h^2*s2):
+F42:=linalg[innerprod](Coords,Family42,Coords):
+#Hyp42:=implicitplot3d(F42,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+macro(pagr=COLOR(RGB, 0, 1, 1)):
+#Hyp32:=implicitplot3d(F32,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#          ,axes=none,style=patchcontour):
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+plot3d([bSOLS[1],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([bSOLS[2],t,t*B],B=-.999..1,t=-3..5,color=pagr),
+plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[-100,60],view=[-6..6,-5..5,-5..5]):#,axes=none,labels=[X,Y,Z]):
+
+
+
+display3d(
+#implicitplot3d(F21,X=-4..4,Y=-4..4,Z=-4..-1,grid=[40,40,20]
+#          ,axes=none,style=patchcontour),
+#implicitplot3d(F21,X=-4..4,Y=-4..4,Z=-1..1,grid=[40,40,40]
+#          ,axes=none,style=patchcontour),
+#implicitplot3d(F21,X=-4..4,Y=-4..4,Z=1..4,grid=[40,40,20]
+#          ,axes=none,style=patchcontour),
+##implicitplot3d(F32,X=-4..4,Y=-4..4,Z=-4..4,grid=[40,40,40]
+#        ,axes=none,style=patchcontour):
+#
+Hyp11,#Hyp12,#Hyp21,#Hyp22,#Hyp31,#Hyp32,#Hyp41,#Hyp42,
+spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+#
+#plot3d([bSOLS[1],t,t*B],B=-.999..1,t=0..5,color=pagr),
+#plot3d([bSOLS[2],t,t*B],B=-.999..1,t=0..5,color=pagr),
+#plot3d([B,t*aSOLS[1],t],B=-1..1,t=-5..5,color=pagr),
+#plot3d([B,t*aSOLS[2],t],B=-1..1,t=-5..5,color=pagr),
+orientation=[90,0],view=[-6..6,-5..5,-5..5],axes=boxed,labels=[X,Y,Z]):
+
+
+display3d(Hyp11,spacecurve([t,0,0],t=-6..6,color=magenta,thickness=5),
+         orientation=[90,0],axes=boxed,labels=[X,Y,Z]);
+
+

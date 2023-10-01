@@ -1,0 +1,126 @@
+#stewart.maple
+#
+#
+with(plots):
+#
+
+Cyl:=proc(A,B,R,T,Th)
+local u,v,w,l1,l2,x,y,z,X,Y,Z:
+ u:=B[1]-A[1]:
+ v:=B[2]-A[2]:
+ w:=B[3]-A[3]:
+ l1:=sqrt(u^2+v^2):
+ l2:=sqrt(u^2*w^2+v^2*w^2+(u^2+v^2)^2):
+ x:=v/l1:
+ y:=-u/l1:
+ z:=0:
+ X:=u*w/l2:
+ Y:=v*w/l2:
+ Z:=(-u^2-v^2)/l2:
+ [ R*cos(Th)*x+R*sin(Th)*X+T*u+A[1],
+   R*cos(Th)*y+R*sin(Th)*Y+T*v+A[2],
+   R*cos(Th)*0+R*sin(Th)*Z+T*w+A[3]]
+end:
+
+rad:=.3:    # Radius of the balls
+r:=.17:     # The framework
+sr:=.1:     # The Actuators
+C:=[7/2,9/2,9/2]:
+#  The fixed points
+FP:=[[0,0,0],[2,0,0], [2,1,0],  [1,-1,1], [3,2,-1],[-1,3,1]]:
+#  The platform points
+SP:=[[3,3,3],[5,3,3], [5,5,3],  [3,1,5], [4,5,5],  [2,5,4]]:
+#     tan      blue      pink      green  magenta    yellow
+
+macro(pf=COLOR(RGB, .8, 0, .8)):
+
+Cyl1:=plot3d(Cyl(C,SP[1],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+Cyl2:=plot3d(Cyl(C,SP[2],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+Cyl3:=plot3d(Cyl(C,SP[3],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+Cyl4:=plot3d(Cyl(C,SP[4],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+Cyl5:=plot3d(Cyl(C,SP[5],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+Cyl6:=plot3d(Cyl(C,SP[6],r,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+
+rod1:=plot3d(Cyl(FP[1],SP[1],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+rod2:=plot3d(Cyl(FP[2],SP[2],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+rod3:=plot3d(Cyl(FP[3],SP[3],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+rod4:=plot3d(Cyl(FP[4],SP[4],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+rod5:=plot3d(Cyl(FP[5],SP[5],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+rod6:=plot3d(Cyl(FP[6],SP[6],sr,t,th),t=0..1,th=-Pi..Pi,style=PATCHNOGRID,color=wheat):
+
+#
+#
+#     tan      blue      pink      green  magenta    yellow
+Ball1:=plot3d([FP[1][1]+rad*sin(ph)*cos(th),FP[1][2]+rad*sin(ph)*sin(th),
+               FP[1][3]+rad*cos(ph)],ph=0..Pi,th=-Pi..Pi,
+              grid=[40,40],style=PATCHNOGRID,color=tan):
+Ball2:=plot3d([FP[2][1]+rad*sin(ph)*cos(th),FP[2][2]+rad*sin(ph)*sin(th),
+               FP[2][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Ball3:=plot3d([FP[3][1]+rad*sin(ph)*cos(th),FP[3][2]+rad*sin(ph)*sin(th),
+               FP[3][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pink):
+Ball4:=plot3d([FP[4][1]+rad*sin(ph)*cos(th),FP[4][2]+rad*sin(ph)*sin(th),
+               FP[4][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=green):
+Ball5:=plot3d([FP[5][1]+rad*sin(ph)*cos(th),FP[5][2]+rad*sin(ph)*sin(th),
+               FP[5][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=magenta):
+Ball6:=plot3d([FP[6][1]+rad*sin(ph)*cos(th),FP[6][2]+rad*sin(ph)*sin(th),
+               FP[6][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=yellow):
+
+Cone1:=plot3d([FP[1][1]+2*t/5*cos(th),FP[1][2]+2*t/5*sin(th),FP[1][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Cone2:=plot3d([FP[2][1]+2*t/5*cos(th),FP[2][2]+2*t/5*sin(th),FP[2][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Cone3:=plot3d([FP[3][1]+2*t/5*cos(th),FP[3][2]+2*t/5*sin(th),FP[3][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Cone4:=plot3d([FP[4][1]+2*t/5*cos(th),FP[4][2]+2*t/5*sin(th),FP[4][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Cone5:=plot3d([FP[5][1]+2*t/5*cos(th),FP[5][2]+2*t/5*sin(th),FP[5][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+Cone6:=plot3d([FP[6][1]+2*t/5*cos(th),FP[6][2]+2*t/5*sin(th),FP[6][3]-t],
+               t=0..4/5,th=-Pi..Pi,style=PATCHNOGRID,color=tan):
+
+ball1:=plot3d([SP[1][1]+rad*sin(ph)*cos(th),SP[1][2]+rad*sin(ph)*sin(th),
+               SP[1][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+ball2:=plot3d([SP[2][1]+rad*sin(ph)*cos(th),SP[2][2]+rad*sin(ph)*sin(th),
+               SP[2][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=blue):
+ball3:=plot3d([SP[3][1]+rad*sin(ph)*cos(th),SP[3][2]+rad*sin(ph)*sin(th),
+               SP[3][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+ball4:=plot3d([SP[4][1]+rad*sin(ph)*cos(th),SP[4][2]+rad*sin(ph)*sin(th),
+               SP[4][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+ball5:=plot3d([SP[5][1]+rad*sin(ph)*cos(th),SP[5][2]+rad*sin(ph)*sin(th),
+               SP[5][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+ball6:=plot3d([SP[6][1]+rad*sin(ph)*cos(th),SP[6][2]+rad*sin(ph)*sin(th),
+               SP[6][3]+rad*cos(ph)],
+              ph=0..Pi,th=-Pi..Pi,style=PATCHNOGRID,color=pf):
+
+Xa:=spacecurve([t,0,0],t=0..5,color=black):
+Ya:=spacecurve([0,t,0],t=0..5,color=black):
+Za:=spacecurve([0,0,t],t=0..5,color=black,thickness=2):
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+display3d(Cone1,Cone2,Cone3,Cone4,Cone5,Cone6,
+          Ball1,Ball2,Ball3,Ball4,Ball5,Ball6,
+          ball1,ball2,ball3,ball4,ball5,ball6,
+          Cyl1, Cyl2, Cyl3, Cyl4, Cyl5, Cyl6,
+          rod1, rod2, rod3, rod4, rod5, rod6, 
+          Xa,Ya,Za,
+    view=[-2..6,-2..6,-2..6],orientation=[-25,70],light=[50,5,1,1,1]);
+
+
+
+
+
+
+
+
+

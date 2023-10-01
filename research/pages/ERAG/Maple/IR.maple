@@ -1,0 +1,16 @@
+#IR.maple
+#
+# This computes the soliutions to the Itenberg-Roy counterexample
+# of Li and Wang
+#
+fsolve({y-x-1=0,y^3-2-9*x^3+0.01*x^3*y^3=0},{x,y});
+fsolve({y-x-1=0,y^3-2-9*x^3+0.01*x^3*y^3=0},{x,y},{x=0.001..1,y=1..2});
+fsolve({y-x-1=0,y^3-2-9*x^3+0.01*x^3*y^3=0},{x,y},{x=0.001..0.5,y=1..2});
+ 
+
+#Groebner[gbasis]([10*x^108+11*y^54-11*y, 10*y^108+11*x^54-11*x],plex(x,y));
+#fsolve({10*x^108+11*y^54-11*y=0, 10*y^108+11*x^54-11*x=0},{x,y});
+ 
+
+
+quit;

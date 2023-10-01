@@ -1,0 +1,94 @@
+#
+#
+#  This file factors the first of the degree 8 ideal of twoOval.out
+#
+#
+
+interface(quiet=true):
+Ideal:=[16*x^4+24*x^2*y^2+y^4,2*h*y-4*x^2-3*y^2,8*h*x^2+12*x^2*y+y^3,h^2-2*y^2,
+        f*y^2+2*g*h*x+2*g*x*y,2*f*x-g*h+g*y,f*h-f*y+2*g*x,f^2+g^2,
+        e*y^2+2*g^2*h+2*g^2*y,e*x-f*g,e*h-e*y+2*g^2,d-2*g,c*y+2*f*y-4*g*x,
+        c*x-g*h+2*g*y,c*h+4*f*y,c*g^2-e*f*y-2*f*g^2,c*f+e*y+2*g^2,c^2+8*g^2,
+        b*y-2*g^2,2*b*x-c*g-2*f*g,b*h+e*y+2*g^2,2*b*g^2-e^2*y-4*e*g^2,
+        2*b*f-c*e-2*e*f,b*c-c*e-4*e*f,b^2-2*b*e-e^2,a-4*b+4*e]:
+
+YX:=#[solve(subs(x=1,Ideal[1]),y)];
+[2*I*2^(1/2)-2*I, -2*I*2^(1/2)+2*I, 2*I+2*I*2^(1/2), -2*I-2*I*2^(1/2)]:
+
+#  First solution
+Y:=(2*I*2^(1/2)-2*I)*x:
+H:=-(4*I*x-2*I*x*2^(1/2)):
+F:=-I*g:
+Dd:=2*g:
+C:=-2*I*g*2^(1/2):
+E:=-(-2^(1/2)*b+b):
+B:=(2*a+2^(1/2)*a)/8:
+#
+#   This elimination leaves us with the ideal 
+#    x*a+4*I*g^2*2^(1/2), an imaginary conic
+#
+
+for eq in Ideal do
+# lprint(factor(primpart(subs(e=E,c=C,d=Dd,f=F,h=H,y=Y,b=B,eq))));
+od:
+
+#############################
+#  Second solution
+Y:=(-2*I*2^(1/2)+2*I)*x:
+H:=-(-4*I*x+2*I*x*2^(1/2)):
+F:=I*g:
+Dd:=2*g:
+C:=2*I*g*2^(1/2):
+E:=-(-2^(1/2)*b+b):
+B:=-(-2*a-2^(1/2)*a)/8:
+#
+#  We are left with the equation  x*a-4*I*g^2*2^(1/2)
+#
+for eq in Ideal do
+# lprint(factor(primpart(subs(e=E,c=C,d=Dd,f=F,h=H,y=Y,b=B,eq))));
+od:
+
+#############################
+#  Third solution
+#
+Y:=(2*I+2*I*2^(1/2))*x:
+H:=4*I*x+2*I*x*2^(1/2):
+F:=I*g:
+Dd:=2*g:
+C:=-2*I*g*2^(1/2):
+#
+#  These imply
+#
+E:= -(b+2^(1/2)*b):
+B:=-(-2*a+2^(1/2)*a)/8:
+#
+#  Finally, we are left with   x*a+4*I*g^2*2^(1/2)
+#  Thus this component of the ideal is an imaginary conic
+#
+for eq in Ideal do
+# lprint(factor(primpart(subs(e=E,c=C,d=Dd,f=F,y=Y,h=H,b=B,eq))));
+od:
+
+#############################
+#  Fourth solution
+
+Y:=x*(-2*I-2*I*2^(1/2)):
+H:=-(4*I*x+2*I*x*2^(1/2)):
+F:=-I*g:
+Dd:=2*g:
+C:=2*I*g*2^(1/2):
+E:=-(b+2^(1/2)*b):
+B:=-(-2*a+2^(1/2)*a)/8:
+#
+#  What remains is a non-real conic: -4*I*g^2*2^(1/2)+x*a
+#
+
+for eq in Ideal do
+ lprint(factor(simplify(subs(e=E,c=C,d=Dd,f=F,h=H,y=Y,b=B,eq))));
+od:
+
+
+
+
+
+

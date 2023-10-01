@@ -1,0 +1,110 @@
+#curve.maple
+#
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+############################################
+#
+Sphere := (a,b,c,r) ->
+  linalg[matrix]([
+   [a^2+b^2+c^2-r^2, -a, -b, -c],
+   [      -a     , 1 , 0 , 0 ],
+   [      -b     , 0 , 1 , 0 ],
+   [      -c     , 0 , 0 , 1 ]]):
+
+Quadric := (a,b,c,d,e,f,g,h,x,y) ->
+  linalg[matrix]([
+   [ a , b , c , d ],
+   [ b , e , f , g ],
+   [ c , f , h , x ],
+   [ d , g , x , y ]]):
+
+
+Wedge := proc(Sph)
+local Pairs, i, j, wedge:
+ wedge := linalg[matrix](6, 6, 0):
+ Pairs := combinat[choose]([1,2,3,4],2):
+ for i from 1 to 6 do
+  for j from 1 to 6 do
+   wedge[i,j] := linalg[det](linalg[submatrix](Sph,Pairs[i],Pairs[j])):
+  od:
+ od:
+ evalm(wedge)
+end:
+
+Equation := proc(a,b,c,r)
+local  plucker:
+ plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+ linalg[innerprod](plucker,Wedge(Sphere(a,b,c,r)),plucker)
+end:
+
+coords:=linalg[vector]([1,x,y,z]):
+plucker:=linalg[vector]([p01,p02,p03,p12,p13,p23]):
+#
+# This is the quadric x^2 + (y-1)^2 - z^2 = 2
+#
+linalg[innerprod](coords,Quadric(-1,0,-1,0,1,0,0,1,0,-1),coords);
+#
+#
+#   Here are the lines tangent to it, in Pl\"ucker coordinates
+#
+Sph := linalg[innerprod](plucker,Wedge(Quadric(-1,0,-1,0,1,0,0,1,0,-1)),plucker):
+F:=subs(p02=X*A,p03=Y*A,p12=X*B,p13=Y*B,p01=0,p23=0,Sph);
+#
+#  Here is the universal 2,2-curve (up to equivalence)
+#
+#F:=(2-s)*X^2*A^2 + s*X^2*A*B + X*Y*A*B + t*Y^2*A*B + (2-t)*Y^2*B^2;
+
+
+Quad:=linalg[innerprod](plucker,Wedge(Quadric(a,b,c,d,e,f,g,h,x,y)),plucker):
+G:=subs(p02=X*A,p03=Y*A,p12=X*B,p13=Y*B,p01=0,p23=0,Quad):
+
+CF:=[coeff(coeff(F,X^2),A^2),
+     coeff(coeff(coeff(F,X^2),A),B),
+     coeff(coeff(F,X^2),B^2),
+     coeff(coeff(F,Y^2),A^2),
+     coeff(coeff(coeff(F,Y^2),A),B),
+     coeff(coeff(F,Y^2),B^2) ,
+     subs(B=1,Y=1,coeff(coeff(F,X),A)),
+     subs(A=1,B=0,coeff(coeff(F,X),Y)),
+     subs(A=0,B=1,coeff(coeff(F,X),Y))]:
+CG:=[coeff(coeff(G,X^2),A^2),
+     coeff(coeff(coeff(G,X^2),A),B),
+     coeff(coeff(G,X^2),B^2),
+     coeff(coeff(G,Y^2),A^2),
+     coeff(coeff(coeff(G,Y^2),A),B),
+     coeff(coeff(G,Y^2),B^2) ,
+     subs(B=1,Y=1,coeff(coeff(G,X),A)),
+     subs(A=1,B=0,coeff(coeff(G,X),Y)),
+     subs(A=0,B=1,coeff(coeff(G,X),Y))]:
+M := matrix([CF,CG]):
+Eqs:={}:
+for i from 1 to 8 do 
+ for j from i+1 to 9 do
+  Eqs:= Eqs union {primpart(M[1,i]*M[2,j]-M[1,j]*M[2,i])}:
+od;od;
+Eqs := Eqs minus {0}:
+
+EEE:=eval(Eqs):
+Eqs:={}:
+for ee in EEE do
+ In:=false:
+ for  ff in Eqs do
+  In := In or evalb( ee+ff=0 ):
+ od:
+ if not(In) then Eqs:=Eqs union {ee}:  fi:
+od:
+
+
+for eq in Eqs do 
+ lprint(eq,`,`);
+od;
+
+
+
+
+
+
+
+
+

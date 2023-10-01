@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+   <TITLE>Infeasibile: too many Parameters</TITLE> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<HR>
+<TABLE>
+ <TR>
+  <TD width=800>
+   <FONT SIZE=+3 color=purple><B>Infeasibility With Parameters</B></FONT>
+  </TD>
+  <TD width=100>
+  <A href="factor.html"><img src="figures/next.gif"></A>
+  <A href="../index.html"><img src="figures/toc.gif"></A>
+  </TD>
+  <TD width=10 valign=top align=left><B>
+       <font color=GREEN size=+1>15</green></B></TD>
+ </TR>
+</TABLE>
+<HR>
+<FONT size=+1>
+&nbsp; &nbsp;
+The only problem with this straightforward analysis 
+is that the given formulation is infeasible:<BR><BR>
+
+<i>F</i><SUB>gen</sub> &nbsp; has <font color=red>9</font> homogeneous
+parameters,    
+so computations are over the field
+<B>Q</B>(<i>C</i><sub>22</sub>, <i>C</i><sub>21</sub>, ..., 
+         <i>C</i><sub>00</sub>).<BR>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+Such a computation is just not possible.
+<HR>
+
+<font color=magenta>Solution: Geometry</font>.<BR>
+&nbsp; &nbsp; 
+The automorphism group of the product 
+<i>l</i><sub>1</sub>x<i>l</i><sub>2</sub> has dimension 6<BR>
+We find a 2-dimensional family of (2,2)-forms<BR><BR>
+<CENTER>
+  <i>F</I>(<i>s</i>,<i>t</i>) &nbsp; = &nbsp; 
+     <i>s w</i><SUP>2</sup><i>z</i><SUP>2</SUP> &nbsp; 
+    + &nbsp; (1-<i>s</i>) <i>wxz</i><SUP>2</SUP> &nbsp; 
+    - &nbsp; 2 <i>wxyz</i> &nbsp; 
+    + &nbsp; (1-<i>t</i>) <i>wxy</i><SUP>2</SUP> &nbsp;
+    + &nbsp;  <i>t x</i><SUP>2</SUP><i>y</i><SUP>2</SUP>
+</CENTER>
+<BR> 
+whose orbit under this automorphism group is dense in 
+<B>P</B><sup>8</sup>.
+<HR>
+
+If we instead use the system &nbsp;
+<i>F</I>(<i>s</i>,<i>t</i>) &nbsp;=&nbsp; <i>F<sub>Q</sub></i>, 
+then we can apply our previous analysis, working now with the parameters
+<i>s</i>,<i>t</i> over the field
+<b>Q</b>(<i>s</i>,<i>t</i>).
+<HR>
+<B>Theorem.</b>
+ After removing the excess components from the ideal given by the equations
+<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<i>F</I>(<i>s</i>,<i>t</i>) &nbsp;=&nbsp; <i>F<sub>Q</sub></i>, 
+we have an ideal 
+<font color=red><i>I</i></font> 
+defining a curve of degree 24 in the projective space 
+<br>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<b>P</b><sup>9</sup><sub><b>Q</b>(<i>s</i>,<i>t</i>)</sub>
+of quadrics.
+<HR>
+<font color=red>Which curve of degree 24 ?</font>
+<HR>
+</BODY>
+</HTML>
+

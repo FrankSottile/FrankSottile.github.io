@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: The Geometry of Grassmann Varieties</TITLE>
+
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="2.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.2.html">4.ii.b. Degrees of Schubert Varieties</A><BR>
+ <B> Up:</B> <A HREF="2.html#subsections">4.ii  The Special Schubert Calculus</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+<A NAME="sec:SpSchCalc"></A>
+<H2>4.ii.a The Geometry of Grassmann Varieties</H2>
+
+<P>
+We develop further geometric properties of Grassmann varieties.
+The <I>k</I>th exterior power of the embedding
+<I>K</I> --> <B>C</B><SUP><I>n</I></SUP> of a <I>k</I>-plane <I>K</I> into 
+<B>C</B><SUP><I>n</I></SUP> gives the embedding
+<BR>
+<A NAME="eq:exter-prod"></A>
+
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+  <IMG SRC="Wedge-emb.png"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+whose image is a 1-dimensional subspace of the <I>k</I>th exterior power of
+<B>C</B><SUP><I>n</I></SUP>, and hence a point in the projective space 
+<B>P</B><SUP><i>M</I>-1</SUP>, where <I>M</I> is the number of <I>k</I>
+subsets of the numbers 1, 2, ..., <I>n</I>, the binomial coefficient 
+<I>n</I>!/<I>k</I>!(<I>n</I>-<I>k</I>)!.
+This point determines the <I>k</I>-plane <I>K</I> uniquely.
+The <I>Pl&#252;cker embedding</I> is the resulting projective embedding of the
+Grassmannian
+<BR><P></P>
+<DIV ALIGN="CENTER">
+ Gr(<I>k</I>, <I>n</I>) &nbsp; ----> &nbsp <B>P</B><SUP><I>M</I>-1</SUP>.
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+
+<P>
+The <I>n</I>!/<I>k</I>!(<I>n</I>-<I>k</I>)! homogeneous Pl&#252;cker
+coordinates for the Grassmannian in this embedding are realized concretely as
+follows. 
+Represent a <I>k</I>-plane <I>K</I>  as the row space of a 
+<I>k</I> by <I>n</I> matrix, also written <I>K</I>.
+A maximal minor of <I>K</I> = (<I>x<SUB>ij</SUB></I>)
+is the determinant of a <I>k</I> by <I>k</I> submatrix
+of <I>K</I>:
+Given a choice of columns 
+<I>a</I> : <I>a</I><SUB>1</SUB> < <I>a</I><SUB>2</SUB> < ... < 
+    <I>a<SUB>k</SUB></I> with <I>a<SUB>k</SUB></I> at most <I>n</I>, set
+<I>p<SUB>a</SUB></I>(<I>K</I>) := det (<I>K</I>|<SUB><I>a</I></SUB>),
+where <I>K</I>|<SUB><I>a</I></SUB> is the submatrix of <I>K</I> consisting of
+the columns from <I>a</I>:<BR>
+<DIV ALIGN="CENTER">
+<BR>
+<IMG SRC="plucker-coord.png">
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The vector (<I>p<SUB>a</SUB></I>(<I>K</I>)) of <I>N</I> maximal minors of
+<I>K</I> defines the map&nbsp;(<A HREF="#eq:exter-prod">4.4</A>) giving
+<I>Pl&#252;cker coordinates</I> for <I>K</I>.
+Let <I>C</I><SUB><I>n</I>,<I>k</I></SUB> be the collection of these indices of
+Pl&#252;cker coordinates. 
+
+<P>
+The indices <I>a</I>, <I>b</I> in 
+<I>C</I><SUB><I>n</I>,<I>k</I></SUB> have a natural Bruhat order
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<I>b</I> \leq <I>a</I> &nbsp; <==> &nbsp; 
+<I>b<SUB>j</SUB></I> \leq <I>a<SUB>j</SUB></I>
+ for every <I>j</I> from 1 to <I>k</I> .
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+The Schubert variety <I>X<SUB>a</SUB></I> is 
+<A NAME="eq:sch-def"></A><BR>
+
+
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP>
+ <I>X<SUB>a</SUB></I> &nbsp; = &nbsp; {<I>K</I> in Gr(<I>k</I>, <I>n</I>) |
+  <I>p<SUB>b</SUB></I>(<I>K</I>) = 0 whenever <I>b</I> is not less than or
+  equal to <I>a</I>} .
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.5)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+This has dimension 
+|<I>a</I>| := <I>a</I><SUB>1</SUB>-1 + <I>a</I><SUB>2</SUB>-2 + ... 
++ <I>a<SUB>k</I></SUB>-<I>k</I>.
+
+<P>
+The relevance of the Pl&#252;cker embedding to Question&nbsp;<A
+HREF="2.html#ques:spSchub">4.3</A> when each 
+<I>l<SUB>i</SUB></I> equals 1  is seen as follows.
+Let <I>L</I> be a (<I>n</I>-<I>k</I>)-plane, represented as the row space of a
+(<I>n</I>-<I>k</I>) by <I>n</I> matrix, also written <I>L</I>.
+Then a general <I>k</I>-plane <I>K</I> meets <I>L</I> non-trivially if and
+only if 
+<BR><P></P>
+<DIV ALIGN="CENTER">
+<TABLE><TR><TD valign=center><IMG SRC="detKL.png"></TD>
+           <TD valign=center>.</TD></TR></TABLE>
+</DIV>
+<BR CLEAR="ALL">
+<P></P>
+Laplace expansion along the rows of <I>K</I> gives
+<A NAME="eq:laplace"></A>
+<BR>
+
+<DIV ALIGN="RIGHT">
+
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD align=center>
+   <TABLE><TR><TD valign=center ALIGN="CENTER" NOWRAP>
+   <IMG SRC="detKL.png"></TD>
+   <TD valign=center> &nbsp; &nbsp; =  &nbsp; </TD>
+   <TD valign=center><IMG SRC="Sigma.gif"></TD>
+   <TD valign=center><I>p<SUB>a</SUB></I>(<I>K</I>) <I>L<SUB>a</SUB></I> ,
+</TD></TR></TABLE></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.6)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV>
+where the sum is over all <I>a</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB>
+and <I>L<SUB>a</SUB></I> is the appropriately signed minor of <I>L</I> given
+by the columns complementary to <I>a</I>.
+Hence the set <I>X</I>(<I>L</I>) of <I>k</I>-planes that meet the 
+(<I>n</I>-<I>k</I>)-plane <I>L</I> non-trivially is a hyperplane section of
+the Grassmannian in its Pl&#252;cker embedding.
+
+<P>
+Thus the set of <I>k</I>-planes meeting <I>k</I>(<I>n</I>-<I>k</I>) general
+(<I>n</I>-<I>k</I>)-planes non-trivially is a complementary linear section
+of the Grassmannian, and so the number <I>d</I>(<I>k</I>,<I>n</I>)
+of such <I>k</I>-planes is the degree of the Grassmannian in its Pl&#252;cker
+embedding. 
+More generally, if <I>a</I> in <I>C</I><SUB><I>n</I>,<I>k</I></SUB> and 
+<I>L</I><SUB>1</SUB>, <I>L</I><SUB>2</SUB>, ..., <I>L</I><SUB>|<I>a</I>|</SUB> 
+are general (<I>n</I>-<I>k</I>)-planes, then the number of points in the
+intersection of the Schubert varieties
+<A NAME="eq:schub-int">
+<BR>
+
+<DIV ALIGN="RIGHT">
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP></A>
+<I>X</I>(<I>L</I><SUB>1</SUB>), <I>X</I>(<I>L</I><SUB>2</SUB>), 
+..., <I>X</I>(<I>L</I><SUB>|<I>a</I>|</SUB>)
+</TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4.7)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+is the degree <I>d</I>(<I>a</I>) of the Schubert variety 
+<I>X<SUB>a</SUB></I>, which we
+compute in the next section.
+
+<HR>
+<!--Navigation Panel-->
+ <A HREF="2.2.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="2.html#subsections"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="2.2.html">4.ii.b. Degrees of Schubert Varieties</A><BR>
+ <B> Up:</B> <A HREF="2.html#subsections">4.ii  The Special Schubert Calculus</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>

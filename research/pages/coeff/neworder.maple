@@ -1,0 +1,80 @@
+#neworder.maple
+interface(quiet=true):
+
+##############################################################
+#
+#	This maple code computes the ranks of elements in the 
+#	symmetric group in the new order. 
+#
+#	Frank Sottile
+#	28 February 1997
+#
+###############################################################
+with(combinat):
+
+n:=11:
+
+m := iquo(n*n, 4):
+
+stat := array(1..m+1):
+
+for jj from 1 to m+1 do: stat[jj]:=0 od:
+
+pi:=[1]:
+
+for j from 2 to n do: pi := [pi[],j]; od:
+
+asc := 1:
+
+while (asc > 0) do:
+
+rank := 0:
+
+up := {}:   
+down := {};
+for j from 1 to n do:
+ if (j<pi[j]) then up:=up union {j} fi:
+ if (j>pi[j]) then down:=down union {j} fi:
+od:
+
+for a in up do:   for b in down do:
+if (pi[a]>pi[b]) then rank := rank +1  fi:
+if (a>b) then rank := rank -1 fi:
+od:od:
+
+for a in up do:     for aa in up do:
+if (a>aa and pi[a]<pi[aa]) then  rank := rank -1 fi:
+od:od:
+
+for a in down do:   for aa in down do:
+if (a>aa and pi[a]<pi[aa]) then  rank := rank -1 fi:
+od:od:
+
+stat[rank+1] := stat[rank+1] +1:
+
+w := eval(pi):
+
+asc := 0;
+for j from 1 to n-1 do:
+if (pi[j]<pi[j+1]) then asc := j fi: od;
+
+if (asc >0) then 
+dummy := eval(pi[asc]);
+
+for ii from asc+1 to n do:
+if (pi[ii]>dummy) then bigger:=ii fi: od:
+
+pi[asc]:= eval(w[bigger]):
+w[bigger]:= dummy:
+
+for jj from 1 to n-asc do;
+pi[asc+jj]:= eval(w[n+1-jj]); od;
+
+fi;
+od:
+
+print(stat);
+
+quit
+
+###################################

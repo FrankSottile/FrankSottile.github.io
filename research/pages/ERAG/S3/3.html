@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+<TITLE>Enumerative Real Algebraic Geometry: The Stewart-Gough platform</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="4.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="4.html">3.iv. Real rational cubics through 8 points in 
+      <B>P</B><SUP>2</SUP><SUB><B>R</B></SUB></A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.html">3.ii. Problems not involving general conditions</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+
+<H2>The Stewart-Gough platform</H2>
+The position of a rigid body in <B>R</B><SUP>3</SUP> has 6 degrees of freedom.
+This is exploited in robotics, giving rise to the Stewart-Gough
+platform&nbsp;[<A
+ HREF="../bibliography.html#Go57">Gou</A>,<A
+ HREF="../bibliography.html#St65">Ste</A>].
+Specifically, suppose we have 6 fixed points 
+<I>A</I><SUB>1</SUB>, <I>A</I><SUB>2</SUB>, ..., <I>A</I><SUB>6</SUB>
+in space and 6 points 
+<I>B</I><SUB>1</SUB>, <I>B</I><SUB>2</SUB>, ..., <I>B</I><SUB>6</SUB>
+on a rigid body <I>B</I> (the framework of
+Figure&nbsp;<A HREF="#fig:stewart">5</A>).<A NAME="fig:stewart"></A>
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<TR><TD align=center><IMG SRC="stewart.png"></TD></TR>
+<TR><TD align=center><STRONG>Figure 5:</STRONG> A Stewart Platform</TD></TR>
+<TR><TD align=center>Bigger <A HREF="Stewart.html">view</A> of this
+       platform</TD></TR> 
+</TABLE>
+</DIV><P></P>
+The body is controlled by varying each distance <I>l<SUB>i</SUB></I> between
+the fixed point <I>A<SUB>i</SUB></I> and the point <I>B<SUB>i</SUB></I>.
+This may be accomplished by attaching rigid actuators to
+spherical joints located at the points <I>B<SUB>i</SUB></I>, or by suspending
+the platform from cables.
+
+<P>
+Given a position of the body <I>B</I> in space, the distances 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l</I><SUB>6</SUB>
+are uniquely determined.
+A fundamental problem is the inverse question:
+Given a platform (positions of the <I>A<SUB>i</SUB></I> fixed and the relative
+positions between the <I>B<SUB>i</SUB></I> specified) and a sextuple of distances 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l</I><SUB>6</SUB>, what is
+the position of the platform in space?
+
+<P>
+It had long been understood that several positions were possible for a given
+sextuple of lengths.
+An early work in 1897 showed there could be as many as 16 different
+positions&nbsp;[<A HREF="../bibliography.html#Br1897">Br</A>]. 
+This leads to the following enumerative problem.
+
+<P>
+<P>
+<DIV><B>Question  3.4</B> &nbsp; 
+For a given Stewart platform, how many (complex) positions are there for a
+generic choice of the distances 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l</I><SUB>6</SUB>?
+How many of these can be real?</DIV><P></P>
+
+<P>
+In the early 1990's, several approaches (numerical
+experimentation&nbsp;[<A
+ HREF="../bibliography.html#Ra91">Ra</A>], intersection theory&nbsp;[<A
+ HREF="../bibliography.html#RV95">RV</A>], Gr&#246;bner
+bases&nbsp;[<A
+ HREF="../bibliography.html#La93">Laz</A>], resultants&nbsp;[<A
+ HREF="../bibliography.html#Mo93">Mo1</A>], and algebra&nbsp;[<A
+ HREF="../bibliography.html#Mo94">Mo2</A>]) each
+showed that there are 40 complex positions of a general Stewart platform.
+The obviously practical question of how many positions could be real 
+remained open until 1998, when Dietmaier introduced a novel method to
+find a value of the distances
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l</I><SUB>6</SUB>
+with all 40 positions real.
+
+<P>
+<P>
+<DIV><B>Theorem  3.5</B> (Dietmaier&nbsp;[<A
+ HREF="../bibliography.html#Di98">Di</A>])  &nbsp; 
+All 40  positions can be real.</DIV><P></P>
+
+<P>
+Dietmaier's method will find future applications to other problems of this kind.
+He began with a formulation of the problem as a system of equations depending
+upon the distances 
+<I>l</I><SUB>1</SUB>, <I>l</I><SUB>2</SUB>, ..., <I>l</I><SUB>6</SUB>.
+An initial solution for a given instance of the distances
+gave 6 real solutions and 17 pairs of complex conjugate solutions.
+He then used an ingenious algorithm to vary the distances in search of a
+configuration with all 40 solutions real.
+
+<P>
+This algorithm systematically varies the distances with the intention of
+increasing the number of real solutions.
+It proceeds in two stages.
+In the first stage, a pair of complex conjugate solutions 
+(<I>x</I>, <I>xbar</I>) are
+driven together, eventually creating a double solution,
+while at the same time the existing real solutions are kept bounded away from
+one another.
+At the formation of a double (necessarily real) solution, the distances are
+further incremented to create two new nearby real solutions 
+(<I>x</I><SUB>1</SUB>, <I>x</I><SUB>2</SUB>),
+which are then driven apart in the second stage.
+This procedure is repeated again with another pair of complex conjugate
+solutions, and <I>et cetera</I>.<A NAME="fig:Dietmaier"></A>
+Figure&nbsp;<A HREF="#fig:Dietmaier">6</A> illustrates the two stages.
+
+<P></P>
+<DIV ALIGN="CENTER">
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+The two stages of Dietmaier's algorithm.</CAPTION>
+<TR><TD><IMG SRC="Dietmaier.png"></TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+In each stage, Dietmaier accomplishes the given task (eg.&nbsp;colliding conjugate
+solutions) by linearizing the system at the current solutions and then  
+solving a linear program for the optimal increment of the distances for
+the given goal. 
+Changing the distances, he uses Newton's method beginning with the
+current solutions to find solutions for the new set of distances, and then
+repeats this procedure until the goal is achieved (eg.&nbsp;the conjugate pair
+collides). 
+This is an application of numerical homotopy 
+continuation&nbsp;[<A HREF="../bibliography.html#Ver99">Ve</A>]. 
+
+<P>
+While there is no guarantee that this method will even successfully collide
+two conjugate solutions, Dietmaier uses it to find a sextuple of distances
+with all 40 solutions real.
+While at each step the solutions are only numerical
+approximations to the actual solutions, the condition number 
+<I>N</I> guarantees the existence of a genuine solution within 
+1/<I>N</I>  of each approximate solution. 
+Since the approximate real solutions were separated by more than 
+2/<I>N</I>, the requirement that non-real solutions occur in complex
+conjugate pairs forced these genuine solutions to be real.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+ <A HREF="4.html"> <IMG ALT="next" SRC="../figures/next.png"></A> 
+ <A HREF="index.html"> <IMG ALT="up" SRC="../figures/up.png"></A> 
+ <A HREF="2.html"> <IMG ALT="prev" SRC="../figures/prev.png"></A> 
+ <BR>
+ <B> Next:</B> <A HREF="4.html">3.iv. Real rational cubics through 8 points in 
+      <B>P</B><SUP>2</SUP><SUB><B>R</B></SUB></A><BR>
+ <B> Up:</B> <A HREF="index.html">3. Enumerative Real Algebraic Geometry: Table of Contents</A><BR>
+ <B> Previous:</B> <A HREF="2.html">3.ii. Problems not involving general conditions</A><BR>
+<HR>
+<!--End of Navigation Panel-->
+</BODY>
+</HTML>
