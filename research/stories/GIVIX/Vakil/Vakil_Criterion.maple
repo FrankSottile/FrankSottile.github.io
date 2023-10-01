@@ -1,0 +1,17 @@
+interface(quiet=true):
+#
+#   This file will check all the Schubert problems on a given Grassmannian
+#
+read("Vakil_procedures"):
+for pr in [[2,4],[2,5],[2,6],[2,7],[2,8],[2,9],[2,10],[2,11],
+       [3,5],[3,6],[3,7],[3,8],[3,9],[4,6],[4,7],[4,8]] do
+ printf("############################################################################\n"):
+ printf("#  Computing for the  Grassmannian G(%d,%d)\n",pr[]):
+ T:=time():
+ biggalois(pr[]);
+ printf(" This took %5.2f seconds \n",time()-T):
+ printf("############################################################################\n"):
+
+end do:
+
+quit;

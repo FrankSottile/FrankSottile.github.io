@@ -1,0 +1,36 @@
+Sat Feb  3 20:24:15 CST 2018
+###########################################################
+#
+###        Grassmannian   Gr(2,13) 
+#
+###########################################################
+#   Number of Schubert problems that might not be at least alternating = 0
+#   Elapsed time = 2.994051   seconds 
+###########################################################
+#
+###        Grassmannian   Gr(2,14) 
+#
+###########################################################
+#   Number of Schubert problems that might not be at least alternating = 0
+#   Elapsed time = 7.383965   seconds 
+###########################################################
+#
+###        Grassmannian   Gr(2,15) 
+#
+###########################################################
+#   Number of Schubert problems that might not be at least alternating = 0
+#   Elapsed time = 17.742517   seconds 
+###########################################################
+#
+###        Grassmannian   Gr(2,16) 
+#
+###########################################################
+#   Number of Schubert problems that might not be at least alternating = 0
+#   Elapsed time = 54.101988   seconds 
+###########################################################
+#
+###        Grassmannian   Gr(2,17) 
+#
+###########################################################
+#   Number of Schubert problems that might not be at least alternating = 0
+#   Elapsed time = 572.366101   seconds 

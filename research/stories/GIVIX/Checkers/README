@@ -1,0 +1,21 @@
+This directory contains source code and computations 
+using the python implementation of Vakil's algorithm
+to study Schubert Galois groups on all small Grassmannians.
+
+README           This file
+ 
+G49_output/      This subdirectory contains the output from running an early
+                   version on G(4,9).   These data are the input for most of
+                   the computations and classifications in the paper 
+                   "Classification of Schubert Galois groups in the Grassmannian G(4,9)"
+ 
+Tests_G2n.txt    The output from testing G(2,n) for n=13,14,15,16,17 (test_G2n.sh)
+Tests_G3n.txt    The output from testing G(3,n) for n=11,12  (test_G3n.sh)
+Tests_py.txt     The output for Table 1, from running test_Grassmannians.sh
+readme.md        Brief readme file about the software, from its github page
+CheckerGame.txt  File describing some of the internal storage of Schubert problems in the python code
+src/             Directory with all the source python code (some of it compiled for a 
+                   Linux system)
+test_G2n.sh      These are bash shell script wrapping the calling of the python code
+test_G3n.sh        for some Grassmannians
+test_Grassmannians.sh

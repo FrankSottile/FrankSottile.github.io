@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+</head>
+
+<body>
+  <h1>Frobenius elements for
+    <img src="tableaux/1.gif"> <img src="tableaux/211.gif"> <img src="tableaux/22.gif"> <img src="tableaux/41.gif">
+    <img src="tableaux/33.gif">  = 6   on G(4,9).
+  </h1>
+
+
+<font size=+1>
+  We tried to compute 1 million Frobenius elements for each of the primes 1009, 5003, 10007, and 30011
+  <br>
+  for the enriched Schubert problem
+    <img src="tableaux/1.gif"> <img src="tableaux/211.gif"> <img src="tableaux/22.gif"> <img src="tableaux/41.gif">
+    <img src="tableaux/33.gif">  = 6   on G(4,9).
+ <br>
+  For each cycle type and prime, we record the number observed (frequency), the fraction, normalised to 72,
+  <br>
+  and an empirical
+  fraction, where we divide the frequency by number of times the identity was observed.
+  <br>
+
+The first table compares the observed fraction at the different primes, and later tables are for the computations at each prime.
+</font>
+
+
+<!---------------------------------------->
+<!-- Schubert Problem : [6, [5, 7, 8, 9], [4, 6, 7, 9], [4, 5, 8, 9], [2, 6, 8, 9], [3, 4, 8, 9]] -->
+<table border=1>
+ <tr><td colspan=5 align=center >Fractions found at different primes</tr>
+ <tr><td>Cycle Type</td>  <td>1009</td>   <td>5003</td>   <td>10007</td>   <td>30011</td>  </tr>
+ <tr><td>(6)</td>         <td>12.0656</td><td>12.0075</td><td>11.9929</td> <td>12.0146</td></tr>
+ <tr><td>(3,3)</td>        <td>4.0223</td> <td>3.9935</td> <td>4.0162</td>  <td>3.9713</td> </tr>
+ <tr><td>(2,4)</td>       <td>18.0475</td><td>17.9813</td><td>18.0396</td> <td>17.9603</td></tr>
+ <tr><td>(2,2,2)</td>      <td>6.0154</td> <td>6.0132</td> <td>6.0103</td>  <td>6.0280</td> </tr>
+ <tr><td>(1,2,3)</td>     <td>11.9587</td><td>12.0321</td><td>11.9848</td> <td>11.9977</td></tr>
+ <tr><td>(1,1,2,2)</td>    <td>8.9961</td> <td>8.9630</td> <td>8.9815</td>  <td>8.9924</td> </tr>
+ <tr><td>(1,1,1,3)</td>    <td>3.9460</td> <td>4.0101</td> <td>4.0062</td>  <td>4.0059</td> </tr>
+ <tr><td>(1,1,1,1,2)</td>  <td>5.9637</td> <td>5.9916</td> <td>5.9783</td>  <td>6.0218</td> </tr>
+ <tr><td>(1,1,1,1,1,1)</td><td>0.9847</td> <td>1.0077</td> <td>0.9901</td>  <td>1.0079</td> </tr>
+</table>
+<!---------------------------------------->
+
+
+
+
+
+<!---------------------------------------->
+<!-- Schubert Problem : [6, [5, 7, 8, 9], [4, 6, 7, 9], [4, 5, 8, 9], [2, 6, 8, 9], [3, 4, 8, 9]] -->
+<table border=1>
+ <tr><td colspan=3>Cycles found in 990177 samples </td>  <td>Prime 1009</td></tr>
+ <tr><td>Cycle Type</td><td>Frequency</td><td>Fraction</td><td>Empirical</td></tr>
+ <tr><td>(6)</td><td>165932</td><td>12.0656</td><td>12.25</td></tr>
+ <tr><td>(3,3)</td><td>55316</td><td>4.0223</td><td>4.08</td></tr>
+ <tr><td>(2,4)</td><td>248198</td><td>18.0475</td><td>18.33</td></tr>
+ <tr><td>(2,2,2)</td><td>82727</td><td>6.0154</td><td>6.11</td></tr>
+ <tr><td>(1,2,3)</td><td>164462</td><td>11.9587</td><td>12.14</td></tr>
+ <tr><td>(1,1,2,2)</td><td>123718</td><td>8.9961</td><td>9.14</td></tr>
+ <tr><td>(1,1,1,3)</td><td>54267</td><td>3.9460</td><td>4.01</td></tr>
+ <tr><td>(1,1,1,1,2)</td><td>82015</td><td>5.9637</td><td>6.06</td></tr>
+ <tr><td>(1,1,1,1,1,1)</td><td>13542</td><td>0.9847</td><td>1.00</td></tr>
+</table>
+<!---------------------------------------->
+
+<!---------------------------------------->
+<!-- Schubert Problem : [6, [5, 7, 8, 9], [4, 6, 7, 9], [4, 5, 8, 9], [2, 6, 8, 9], [3, 4, 8, 9]] -->
+<table border=1>
+ <tr><td colspan=3>Cycles found in 998075 samples </td><td>Prime 5003</td></tr>
+ <tr><td>Cycle Type</td><td>Frequency</td><td>Fraction</td><td>Empirical</td></tr>
+ <tr><td>(6)</td><td>166450</td><td>12.0075</td><td>11.92</td></tr>
+ <tr><td>(3,3)</td><td>55358</td><td>3.9935</td><td>3.96</td></tr>
+ <tr><td>(2,4)</td><td>249259</td><td>17.9813</td><td>17.84</td></tr>
+ <tr><td>(2,2,2)</td><td>83356</td><td>6.0132</td><td>5.97</td></tr>
+ <tr><td>(1,2,3)</td><td>166791</td><td>12.0321</td><td>11.94</td></tr>
+ <tr><td>(1,1,2,2)</td><td>124247</td><td>8.9630</td><td>8.89</td></tr>
+ <tr><td>(1,1,1,3)</td><td>55589</td><td>4.0101</td><td>3.98</td></tr>
+ <tr><td>(1,1,1,1,2)</td><td>83056</td><td>5.9916</td><td>5.95</td></tr>
+ <tr><td>(1,1,1,1,1,1)</td><td>13969</td><td>1.0077</td><td>1.00</td></tr>
+</table>
+<!---------------------------------------->
+
+<!---------------------------------------->
+<!-- Schubert Problem : [6, [5, 7, 8, 9], [4, 6, 7, 9], [4, 5, 8, 9], [2, 6, 8, 9], [3, 4, 8, 9]] -->
+<table border=1>
+ <tr><td colspan=3>Cycles found in 998970 samples </td> <td>Prime 10007</td></tr>
+ <tr><td>Cycle Type</td><td>Frequency</td><td>Fraction</td><td>Empirical</td></tr>
+ <tr><td>(6)</td><td>166397</td><td>11.9929</td><td>12.11</td></tr>
+ <tr><td>(3,3)</td><td>55723</td><td>4.0162</td><td>4.06</td></tr>
+ <tr><td>(2,4)</td><td>250292</td><td>18.0396</td><td>18.22</td></tr>
+ <tr><td>(2,2,2)</td><td>83390</td><td>6.0103</td><td>6.07</td></tr>
+ <tr><td>(1,2,3)</td><td>166284</td><td>11.9848</td><td>12.10</td></tr>
+ <tr><td>(1,1,2,2)</td><td>124615</td><td>8.9815</td><td>9.07</td></tr>
+ <tr><td>(1,1,1,3)</td><td>55585</td><td>4.0062</td><td>4.05</td></tr>
+ <tr><td>(1,1,1,1,2)</td><td>82947</td><td>5.9783</td><td>6.04</td></tr>
+ <tr><td>(1,1,1,1,1,1)</td><td>13737</td><td>0.9901</td><td>1.00</td></tr>
+</table>
+<!---------------------------------------->
+
+<!---------------------------------------->
+<!-- Schubert Problem : [6, [5, 7, 8, 9], [4, 6, 7, 9], [4, 5, 8, 9], [2, 6, 8, 9], [3, 4, 8, 9]] -->
+<table border=1>
+ <tr><td colspan=3>Cycles found in 999695 samples </td><td>Prime 30011</td></tr>
+ <tr><td>Cycle Type</td><td>Frequency</td><td>Fraction</td><td>Empirical</td></tr>
+ <tr><td>(6)</td><td>166819</td><td>12.0146</td><td>11.92</td></tr>
+ <tr><td>(3,3)</td><td>55140</td><td>3.9713</td><td>3.94</td></tr>
+ <tr><td>(2,4)</td><td>249372</td><td>17.9603</td><td>17.82</td></tr>
+ <tr><td>(2,2,2)</td><td>83697</td><td>6.0280</td><td>5.98</td></tr>
+ <tr><td>(1,2,3)</td><td>166584</td><td>11.9977</td><td>11.90</td></tr>
+ <tr><td>(1,1,2,2)</td><td>124857</td><td>8.9924</td><td>8.92</td></tr>
+ <tr><td>(1,1,1,3)</td><td>55621</td><td>4.0059</td><td>3.97</td></tr>
+ <tr><td>(1,1,1,1,2)</td><td>83610</td><td>6.0218</td><td>5.97</td></tr>
+ <tr><td>(1,1,1,1,1,1)</td><td>13995</td><td>1.0079</td><td>1.00</td></tr>
+</table>
+<!---------------------------------------->
+
+
+<hr>
+<address></address>
+<!-- hhmts start -->Last modified: Fri Oct 19 17:12:23 CDT 2018 <!-- hhmts end -->
+</body> </html>

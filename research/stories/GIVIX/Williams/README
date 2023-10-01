@@ -1,0 +1,46 @@
+Directory of GIVIX/Williams
+
+These codes need Python2 and Singular (https://www.singular.uni-kl.de/)
+
+Williams.tar               This .tar file has all of the directory.
+README                     This file
+
+FrobAlg.py                 Robert's implementation of the Frobenius algorithm for studying a list of Schubert problems.
+                            It is in Python2, runs Singular, and uses the Singular library schubert.lib.
+			    It reads Schubert problems in a particular format, in schubertprob.txt
+			    (This is formatted by the Python script prettyFormat.py from our Python library in the
+			    checkerboard game, and the format is explained in FrobAlg.py).  For each, it runs the Frobenius
+			    algorithm, determining if it is the full symmetric group, or if it cannot tell.
+			    This uses Singular, using the library schubert.lib
+
+                           With suitable modification, it can be used to test other lists of Schubert problems.
+			    
+schubertprob.txt           This contains the initial list of Schubert problems to be tested.
+
+schubert.lib               Singular library for computing Schubert problems.
+
+Full_Symmetric_Group.txt   These are the Schubert problems that it found has full symmetric Galois groups
+Unknown_Galois_Group.txt   These are the Schubert problems that is could not tell if they had full symmetric Galois groups
+schubert_template.sing     This is a template file.  It should not be altered.
+
+SchubertStats.py           This takes a lies of Schubert problems in Unknown_Galois_Group.txt and computes 50,000 Frobenius
+                           elements for the problem, writing the output to a text file Schubert_Stats.txt that, for each
+			   Schubert problem in Unknown_Galois_Group.txt contains both a plain text frequency table of
+			   the cycle types found, as well as a formatted LaTeX table.
+
+                           It uses both schubert.lib and cycle_sample.sing
+cycle_sample.sing          This is a template file.  It should not be altered.  It could be deleted.
+Schubert_Stats.txt         The output from SchubertStats.py
+
+Simplify.py                This Python 3 script reads Schubert_Stats.txt and writes just the lines with the
+                            Schubert problems and ASCII frequency table to the file Raw_data.txt
+Raw_data.txt               The output file
+
+mkHtml.py                  A Python3 script that reads Raw_data.txt and writes it into a .html file Frobenius_Raw.html.
+                            It needs the file procedures.py
+procedures.py              Procedures for mkHtml.py
+
+Frobenius_Raw.html         The raw data in .html format.  This requires .gif files of Young tableaux, which is available
+                            in the .tarball Tableaux.tar
+           
+Tableaux.tar               All the tableaux for Frobenius_Raw.html
