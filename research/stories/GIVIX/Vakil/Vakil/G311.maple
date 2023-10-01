@@ -1,8 +1,0 @@
-interface(quiet=true):
-#
-#   This file will check all the Schubert problems on a given Grassmannian
-#
-read("Vakil_procedures"):
-biggalois(3,11);
-time();
-quit;
