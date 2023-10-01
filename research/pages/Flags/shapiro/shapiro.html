@@ -1,0 +1,307 @@
+<HTML> 
+<HEAD> 
+   <TITLE>The Shapiro Conjecture</TITLE> 
+</HEAD> 
+<BODY BGCOLOR=#FFFFFF> 
+<!----------------   Navigation Panel   ---------------------->
+<!-- <A HREF=".html"><IMG SRC="../images/back.gif"></A> -->
+ <A HREF="../index.html#toc"><IMG SRC="../images/up.gif"></A>
+ <A HREF="../overview.html"><IMG SRC="../images/back.gif"></A>
+<!--  <A HREF=".html"><IMG SRC="../images/next.gif"></A> -->
+ <BR>
+<!--  <B> Next:</B> 
+  <A HREF=".html"></A>
+  <BR> -->
+ <B> Up:&nbsp; &nbsp; </B> 
+  <A HREF="../index.html#toc">Table of Contents</A>
+  <BR>
+<B> Back:</B> 
+  <A HREF="../overview.html">Overview</A>
+  <BR>
+<!-------------   End of Navigation Panel   ------------------->
+<HR>
+<font size=+3><B>The Shapiro Conjecture</B></FONT>
+<!-------------------------------------------------------------------------->
+<HR>
+ 
+<TABLE>
+ <TR valign=top>
+  <TD> &nbsp; &nbsp; 
+   The Shapiro conjecture is concerned with the solutions to geometric problems
+   from the classical Schubert calculus of enumerative geometry.
+   These geometric problems involve counting the number of linear subspaces of a
+   vector space which satisfy certain incidence conditions with respect to other,
+   fixed linear subspaces. 
+   The classic example of this is the number of lines in 3-space that meet four
+   given lines in 3-space. There are 2, if the four lines are general. See 
+   <A HREF="#discriminant">below</A>  or 
+   <A HREF="../../../stories/4lines.html">this</A> for a
+   discussion.
+   The picture at right is a figure showing the two 
+   <font color=green>green lines</font> meeting four given 
+   <font color=blue>blue lines</font>.
+   The hyperboloid is an auxiliary geometric figure to aid in the construction
+   of the two <font color=green>green lines</font>.
+  </TD>
+  <TD>
+   <IMG SRC="images/4lines.png">
+  </TD>
+ </TR>
+</TABLE>
+
+
+<P> &nbsp; &nbsp; 
+ The Shapiro conjecture asserts that if the fixed subspaces are chosen in a
+ specified way, then all of the solution linear subspaces will be real. 
+ This special choice of the fixed subspaces is that they all osculate a rational
+ normal, or moment, curve at real points.
+ There is considerable evidence for this conjecture.
+ Most notably, 
+ Eremenko and Gabrielov&nbsp;[<A href="bibliography.html#EG00">EG00</a>]
+ have established the conjecture  it when the solution linear subspaces are 2-dimensional
+ (lines in the formulation in projective space).
+ Impressive numerical evidence has also 
+ accumulated&nbsp;[<a href="bibliography.html#So_WWW">So_WWW</A>,
+ <a href="bibliography.html#So00a">So00a</A>,
+ <a href="bibliography.html#V">V</A>], and it holds asymptotically for
+ special Schubert problems
+ [<a href="bibliography.html#So99">So99</a>].
+
+<P> &nbsp; &nbsp; 
+ The rational normal curve  in <I>n</I>-space is a nondegenerate 
+ parametrized curve <i>g</i>(<i>s</i>) of degree <i>n</i>.
+ There is a choice of basis for which it is the moment curve:
+<CENTER>
+  <i>g</i>(<i>s</i>) &nbsp; := &nbsp; 
+  (1, &nbsp; <i>s</i>, &nbsp; 
+   <i>s</i><sup><SMALL>2</SMALL></sup>, &nbsp;
+   <i>s</i><sup><SMALL>3</SMALL></sup>, &nbsp; ..., &nbsp;
+   <i>s</i><sup><SMALL><i>n</I>-1</SMALL></sup>).
+</CENTER><BR>
+ The linear subspace 
+ <i>F</I><SUB><SMALL><I>k</I></SMALL></SUB>(<i>s</i><SUB><SMALL>0</SMALL></SUB>)
+ of dimension <i>k</i> osculating the rational normal curve
+ <i>g</i>(<i>s</i>) at a point <I>s</I><SUB><SMALL>0</SMALL></SUB> is the linear
+ span of  <i>g</i>(<i>s</i><SUB><SMALL>0</SMALL></SUB>) and the first 
+ <i>k</i>-1 derivatives of <i>g</i>(<i>s</i>), evaluated at
+ <i>s</i>=<i>s</i><SUB><SMALL>0</SMALL></SUB>.
+
+<P> &nbsp; &nbsp; 
+ The first interesting case of the Shapiro conjecture occurs in 3-dimensional
+ space. 
+ There, it concerns the lines in 3-space meeting four given tangent lines to
+ the rational normal curve that are tangent at real points.
+ That is, the case corresponding to the picture above.
+ You may follow this 
+ <A HREF="1.html">link</A> for a visual proof of this result.
+
+<A NAME="discriminant">
+<!-------------------------------------------------------------------------->
+<HR>
+<!-------------------------------------------------------------------------->
+
+<P> &nbsp; &nbsp; 
+ While this problem of 4 lines is readily analyzed with the auxiliary
+ hyperboloid, there are no such aids for more general problems in the Schubert
+ calculus.
+ Thus these general problems are more difficult to analyze.
+
+<P> &nbsp; &nbsp; 
+ A different, algebraic, proof of this problem of four lines which may
+ generalize involves its discriminant.
+ Let <i>s</i>, <i>t</i>, <i>u</i>, and <i>v</i> be the four points on the
+ rational normal curve where the lines are tangent.
+ Then in the global <A HREF="pluecker_coordinates.html">Pl&uuml;cker
+ coordinates</A> for the Grassmannian of lines in 3-space this problem may be
+ formulated as four linear equations 
+<CENTER>
+ <TABLE>
+  <TR>
+   <TD align=center>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>s</i><i>p</i><SUB><SMALL>13</SMALL></SUB>
+    &nbsp;+&nbsp;3<i>s</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>12</SMALL></SUB>
+    &nbsp;+&nbsp;<i>s</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>03</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>s</i><SUP><SMALL>3</SMALL></SUP><i>p</i><SUB><SMALL>02</SMALL></SUB>
+    &nbsp;+&nbsp;<i>s</i><SUP><SMALL>4</SMALL></SUP><i>p</i><SUB><SMALL>01</SMALL></SUB>
+   </TD><TD>&nbsp;=&nbsp;</TD><TD>&nbsp;0&nbsp;,</TD>
+ </TR>
+<!----------------------------------------------------------->
+  <TR align=center>
+   <TD>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>t</i><i>p</i><SUB><SMALL>13</SMALL></SUB>
+    &nbsp;+&nbsp;3<i>t</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>12</SMALL></SUB>
+    &nbsp;+&nbsp;<i>t</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>03</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>t</i><SUP><SMALL>3</SMALL></SUP><i>p</i><SUB><SMALL>02</SMALL></SUB>
+    &nbsp;+&nbsp;<i>t</i><SUP><SMALL>4</SMALL></SUP><i>p</i><SUB><SMALL>01</SMALL></SUB>
+   </TD><TD>&nbsp;=&nbsp;</TD><TD>&nbsp;0&nbsp;,</TD>
+  </TR>
+<!----------------------------------------------------------->
+  <TR>
+   <TD align=center>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>u</i><i>p</i><SUB><SMALL>13</SMALL></SUB>
+    &nbsp;+&nbsp;3<i>u</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>12</SMALL></SUB>
+    &nbsp;+&nbsp;<i>u</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>03</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>u</i><SUP><SMALL>3</SMALL></SUP><i>p</i><SUB><SMALL>02</SMALL></SUB>
+    &nbsp;+&nbsp;<i>u</i><SUP><SMALL>4</SMALL></SUP><i>p</i><SUB><SMALL>01</SMALL></SUB>
+    </TD><TD>&nbsp;=&nbsp;</TD><TD>&nbsp;0&nbsp;,</TD>
+  </TR>
+<!----------------------------------------------------------->
+  <TR>
+   <TD align=center>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>v</i><i>p</i><SUB><SMALL>13</SMALL></SUB>
+    &nbsp;+&nbsp;3<i>v</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>12</SMALL></SUB>
+    &nbsp;+&nbsp;<i>v</i><SUP><SMALL>2</SMALL></SUP><i>p</i><SUB><SMALL>03</SMALL></SUB>
+    &nbsp;-&nbsp;2<i>v</i><SUP><SMALL>3</SMALL></SUP><i>p</i><SUB><SMALL>02</SMALL></SUB>
+    &nbsp;+&nbsp;<i>v</i><SUP><SMALL>4</SMALL></SUP><i>p</i><SUB><SMALL>01</SMALL></SUB>
+   </TD><TD>&nbsp;=&nbsp;</TD><TD>&nbsp;0&nbsp;,</TD>
+  </TR>
+<!----------------------------------------------------------->
+ </TABLE>
+</CENTER>
+
+and the quadratic Pl&uuml;cker equation 
+<CENTER>
+   <i>p</i><SUB><SMALL>03</SMALL></SUB>
+   <i>p</i><SUB><SMALL>12</SMALL></SUB>
+   &nbsp;-&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB>
+    <i>p</i><SUB><SMALL>02</SMALL></SUB>
+   &nbsp;+&nbsp;<i>p</i><SUB><SMALL>01</SMALL></SUB>
+    <i>p</i><SUB><SMALL>23</SMALL></SUB>
+   &nbsp; &nbsp;=&nbsp; &nbsp;0&nbsp;,</TD>
+ </CENTER>
+
+ in the 5-dimensional projective space with coordinates
+  <i>p</i><SUB><SMALL>01</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>02</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>03</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>12</SMALL></SUB>,&nbsp;<i>p</i><SUB><SMALL>13</SMALL></SUB>,&nbsp;and&nbsp;<i>p</i><SUB><SMALL>23</SMALL></SUB>.
+ (The sole quadratic equation explains why there are two solutions.)
+ These equations are equivalent to the system
+
+<CENTER>
+ <TABLE>
+  <TR>
+   <TD align=left>0 &nbsp; = &nbsp; 
+      2 <i>p</i><SUB><SMALL>02</SMALL></SUB>  &nbsp;-&nbsp; 
+      <i>e</i><SUB><SMALL>1</SMALL></SUB>
+      <i>p</i><SUB><SMALL>01</SMALL></SUB>
+   </TD>
+  </TR>
+
+  <TR>
+    <TD align=left>0 &nbsp; = &nbsp; 
+     <i>p</i><SUB><SMALL>03</SMALL></SUB> 
+      &nbsp;+&nbsp; 3   <i>p</i><SUB><SMALL>12</SMALL></SUB> 
+      &nbsp;-&nbsp; <i>e</i><SUB><SMALL>2</SMALL></SUB> 
+      <i>p</i><SUB><SMALL>01</SMALL></SUB> 
+  </TR>
+
+  <TR>
+   <TD align=left>0 &nbsp; = &nbsp; 
+    &nbsp;2&nbsp;  <i>p</i><SUB><SMALL>13</SMALL></SUB>
+    &nbsp;-&nbsp; <i>e</i><SUB><SMALL>3</SMALL></SUB>
+      <i>p</i><SUB><SMALL>01</SMALL></SUB> 
+   </TR>
+
+  <TR>
+   <TD align=left>0 &nbsp; = &nbsp; 
+     <i>p</i><SUB><SMALL>03</SMALL></SUB>
+    &nbsp;-&nbsp; <i>e</i><SUB><SMALL>4</SMALL></SUB>
+      <i>p</i><SUB><SMALL>01</SMALL></SUB> 
+    </TR>
+
+  <TR>
+   <TD align=left>0 &nbsp; = &nbsp; 
+    12  <i>p</i><SUB><SMALL>12</SMALL></SUB><SUP><SMALL>2</SMALL></SUP>
+    - 4 <i>e</i><SUB><SMALL>2</SMALL></SUB>
+     <i>p</i><SUB><SMALL>01</SMALL></SUB>
+     <i>p</i><SUB><SMALL>12</SMALL></SUB> 
+    + (<i>e</i><SUB><SMALL>1</SMALL></SUB>
+      <i>e</i><SUB><SMALL>3</SMALL></SUB> 
+     - <i>e</i><SUB><SMALL>4</SMALL></SUB>)
+    <i>p</i><SUB><SMALL>01</SMALL></SUB><SUP><SMALL>2</SMALL></SUP>
+  </TR>
+
+ </TABLE>
+</CENTER>
+where <i>e<SUB><SMALL>i</SMALL></SUB></i> is the <i>i</i>th elementary symmetric
+polynomial in the variables <I>s</I>, <I>t</I>, <I>u</I>, and <I>v</I>.
+
+
+<P>&nbsp; &nbsp;
+The discriminant of this last quadratic has a simple form
+<CENTER>
+  8(
+ (<i>s</I>-<i>t</i>)<SUP><SMALL>2</SMALL></SUP>
+ (<i>u</I>-<i>v</i>)<SUP><SMALL>2</SMALL></SUP>
+  +
+ (<i>s</I>-<i>u</i>)<SUP><SMALL>2</SMALL></SUP>
+ (<i>t</I>-<i>v</i>)<SUP><SMALL>2</SMALL></SUP>
+  +
+ (<i>s</I>-<i>v</i>)<SUP><SMALL>2</SMALL></SUP>
+ (<i>t</I>-<i>u</i>)<SUP><SMALL>2</SMALL></SUP>
+ )
+</CENTER>
+which is always positive for any distinct real numbers <I>s</I>, <I>t</I>,
+<I>u</I>, or <I>v</I>.
+
+
+<P>&nbsp; &nbsp;
+It rarely vanishes.  
+Since any automorphism of <b>P</b><SUP><SMALL>1</SMALL></SUP> (a M&ouml;bius
+transformation) acts on the
+parametrization of the rational normal curve without affecting the geometry of
+this problem and so we may freely choose values for any three of the parameters
+ <i>s</I>, <i>t</I>, <i>u</I>, <i>v</I>.)
+We take the values of <i>t</I>, <i>u</I>, and <i>v</I> to be the three cube
+roots of 1.
+Then the discriminant becomes 144<i>s</I>, and so we see that
+the discriminant vanishes when we also have <I>s</I>=0.
+Furthermore, it vanishes only for parameter values on 
+<b>P</b><SUP><SMALL>1</SMALL></SUP> equivalent to this set
+(0 and the three cube roots of 1).
+under a M&ouml;bius transformation.
+One may check the equations to see that this selection gives a double solution,
+so that the fourth tangent line to the rational normal curve is tangent
+to the resulting hyperboloid.
+This special four-tuple was first observed by Eisenbud and Harris in Section 9
+of&nbsp;[<A HREF="../bibliography.html#EH">EH</A>].
+
+
+<P>&nbsp; &nbsp;
+Before we close this discussion of Shapiro's conjecture, note that we show    
+this discriminant to non-negative by expressing it as a sum of squares.
+Every discriminant that has been computed has similarly been shown to be a sum
+of squares.
+This is unexpected, as non-negative polynomials cannot always be written as
+a sum of squares.
+It suggests that there is a deeper reason for these discriminant having this 
+form, and elucidating that may be a way to prove the Shapiro conjecture.
+
+<A NAME="bottom"></A>
+<HR>
+
+<!-------------------------------------------------------------------------->
+<!----------------   Navigation Panel   ---------------------->
+<!-- <A HREF=".html"><IMG SRC="../images/back.gif"></A> -->
+ <A HREF="../index.html#toc"><IMG SRC="../images/up.gif"></A>
+ <A HREF="../overview.html"><IMG SRC="../images/back.gif"></A>
+<!--  <A HREF=".html"><IMG SRC="../images/next.gif"></A> -->
+ <BR>
+<!--  <B> Next:</B> 
+  <A HREF=".html"></A>
+  <BR> -->
+ <B> Up:&nbsp; &nbsp; </B> 
+  <A HREF="../index.html#toc">Table of Contents</A>
+  <BR>
+<B> Back:</B> 
+  <A HREF="../overview.html">Overview</A>
+  <BR>
+<!-------------   End of Navigation Panel   ------------------->
+<HR>
+<I><FONT COLOR=#BB00FF>Last Modified Friday 19 September 2003
+    by <A HREF="../../../../index.html">Frank Sottile</A></FONT></I>
+<HR>
+</BODY> 
+</HTML> 

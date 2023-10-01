@@ -1,0 +1,31 @@
+//SturmSequence = f -> (
+//     assert( isPolynomialRing ring f );
+//     assert( numgens ring f === 1 );
+//     R := ring f;
+//     assert( char R == 0 );
+//     x := R_0;
+//     n := first degree f;
+//     c := new MutableList from toList (0 .. n);
+//     if n >= 0 then (
+//     	  c#0 = f;
+//          if n >= 1 then (
+//               c#1 = diff(x,f);
+//               scan(2 .. n, i -> c#i = - c#(i-2) % c#(i-1));
+//               ));
+//     toList c)
+
+ring R = (0,T), t, lp;
+poly F = (-431*T^4+2832*T^3-15264*T^2+47493*T-63261)*t^8
+        +(2178*T^4+7146*T^3-64071*T^2+164025*T-95256)*t^7
+        +(-13356*T^4+45279*T^3-181521*T^2+262926*T-83106)*t^6
+        +(10989*T^4+84645*T^3-267786*T^2+202662*T-17496)*t^5
+        +(-31104*T^4+135594*T^3-231822*T^2+85293*T-6561)*t^4
+        +(-23328*T^4+104976*T^3-98415*T^2+6561*T)*t^3
+        +(-26244*T^4+45927*T^3-6561*T^2)*t^2+(6561*T^4+6561*T^3)*t-6561*T^4;
+short=0;
+poly G = diff(F,t);
+
+leadcoef(G)*F-t*leadcoef(F)*G;
+
+
+quit;

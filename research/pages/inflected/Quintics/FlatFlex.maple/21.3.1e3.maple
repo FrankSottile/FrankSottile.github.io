@@ -1,0 +1,140 @@
+#21.111.1e3.maple
+#
+# Frank Sottile
+# 27 January 2001
+# Amherst, Massachusetts
+#
+#  There are two ways to choose the conditions
+#
+# Claw,  Flex, Planar Flex, Flex, Flex:      Neither has a crossing
+# 21 * 111 * 1 * 1 * 1
+# 0    oo   -1   1   2
+#
+# Claw, Flex, Flex, Flex, Planar Flex:     One with a Crossing, and one without
+# 21 * 111 * 1 * 1 * 1
+# -1   oo    2   1   0
+#
+interface(quiet=true):
+with(linalg):
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+read(`equations.maple`):
+read(`EasySolve.maple`):
+
+BM:=matrix([
+[1,s,s^2,  s^3,s^4  ,   s^5],
+[0,1,2*s,3*s^2,4*s^3, 5*s^4],
+[0,0, 1 ,3*s  ,6*s^2,10*s^3],
+[0,0, 0 , 1   ,4*s  ,10*s^2],
+[0,0, 0 , 0   ,  1  , 5*s  ],
+[0,1, 0 , 0   ,  a  ,  d   ],
+[0,0, 1 , 0   ,  b  ,  e   ],
+[0,0, 0 , 1   ,  c  ,  f   ]]):
+
+M:=linalg[submatrix](BM,[1,2,3,4,6,7,8],[1,2,3,4,5,6]):
+
+Coords:=matrix([
+[0,1, 0 , 0   ,  a  ,  d   ],
+[0,0, 1 , 0   ,  b  ,  e   ],
+[0,0, 0 , 1   ,  c  ,  f   ]]):
+
+Ker:={[1, 0, 0, 0, 0, 0], [0, -a, -b, -c, 1, 0], [0, -d, -e, -f, 0, 1]}:
+
+####################################################################
+#
+# Claw, Flex, Planar Flex, Flex, Flex
+# 21 * 111 * 1 * 1 * 1 
+#  0   oo   -1  1   2
+#
+equations:=[TwoOneEq(M,0)[],OneEq(M,2),OneEq(M,1),OneEq(M,-1)]:
+Eqs:=Groebner[gbasis](equations,plex(a,d,b,c,e,f)):
+#
+#  There are some problems here, so I computed the equations by hand
+#
+y:=1:
+x:=-5/2*s^2+(5/6-5/6*13^(1/2))*s^3+s^5:
+z:=(-1/3-1/3*13^(1/2))*s^2-4/3*s^3+s^4:
+
+y:=x+10*y:           zero:=fsolve(y=0,s):
+z:=(z-subs(s=zero-.0001,z/x)*x):
+teps:=.3: seps:=.6:
+Xs:=(x-4*z/5)/y:
+Ys:=z/y:
+Xt:=simplify(subs(s=1/t,Xs)):
+Yt:=simplify(subs(s=1/t,Ys)):
+plotsetup(gif,plotoutput=`21.111.1e3.a.gif`,plotoptions=`height=180,width=180`):
+P:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=magenta):
+PP:=pointplot({[subs(s=2,Xs),subs(s=2,Ys)],
+               [subs(s=1,Xs),subs(s=1,Ys)],
+               [subs(s=-1,Xs),subs(s=-1,Ys)]},symbol=circle,color=red):
+Q:=plot({[Xs,Ys,s=zero+seps..1],[Xt,Yt,t=1/zero+teps..1]},
+          numpoints=200,color=blue,axes=none):
+  display(Q,P,PP);
+##################################################################
+z:=1:
+x:=-5/2*s^2+(5/6+5/6*13^(1/2))*s^3+s^5:
+y:=(-1/3+1/3*13^(1/2))*s^2-4/3*s^3+s^4:
+
+z:=x+4*z+2*y:           zero:=fsolve(z=0,s):
+y:=(y-subs(s=zero-.0001,y/x)*x):
+teps:=.3: seps:=.5:
+Xs:=(x-8*y)/z:
+Ys:=y/z:
+Xt:=simplify(subs(s=1/t,Xs)):
+Yt:=simplify(subs(s=1/t,Ys)):
+plotsetup(gif,plotoutput=`21.111.1e3.b.gif`,plotoptions=`height=180,width=180`):
+P:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=magenta):
+PP:=pointplot({[subs(s=2,Xs),subs(s=2,Ys)],
+               [subs(s=1,Xs),subs(s=1,Ys)],
+               [subs(s=-1,Xs),subs(s=-1,Ys)]},symbol=circle,color=red):
+Q:=plot({[Xs,Ys,s=zero+seps..1],[Xt,Yt,t=1/zero+teps..1]},
+          numpoints=200,color=blue,axes=none):
+  display(Q,P,PP);
+
+########################################################################
+#
+# Claw, Flex, Flex, Flex, Planar Flex
+# 21 * 111 * 1 * 1 * 1 
+# -1   oo    2   1   0
+#
+equations:=[TwoOneEq(M,-1)[],OneEq(M,2),OneEq(M,1),OneEq(M,0)]:
+Eqs:=Groebner[gbasis](equations,plex(a,b,c,d,e,f)):
+Polys:=MakePolys(Ker,Eqs):
+y:=Polys[1][1]:
+z:=Polys[1][2]:
+x:=Polys[1][3]:
+y:=x+4*y+3*z:           zero:=fsolve(y=0,s):
+z:=(z-subs(s=zero-.0001,z/x)*x):
+teps:=.2: seps:=.2:
+Xs:=(x-13*z)/y:
+Ys:=z/y:
+Xt:=simplify(subs(s=1/t,Xs)):
+Yt:=simplify(subs(s=1/t,Ys)):
+plotsetup(gif,plotoutput=`21.111.1e3.A.gif`,plotoptions=`height=180,width=180`):
+P:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=magenta):
+PP:=pointplot({[subs(s=2,Xs),subs(s=2,Ys)],
+               [subs(s=1,Xs),subs(s=1,Ys)],
+               [subs(s=0,Xs),subs(s=0,Ys)]},symbol=circle,color=red):
+Q:=plot({[Xs,Ys,s=zero+seps..1],[Xt,Yt,t=1/zero+teps..1]},
+          numpoints=200,color=blue,axes=none):
+  display(Q,P,PP);
+##################################################################
+y:=Polys[2][1]:
+z:=Polys[2][2]:
+x:=Polys[2][3]:
+y:=x+8*y-2/3*z:           zero:=fsolve(y=0,s):
+z:=(z-subs(s=zero-.0001,z/x)*x):
+teps:=.2: seps:=.3:
+Xs:=(x-z/2)/y:
+Ys:=z/y:
+Xt:=simplify(subs(s=1/t,Xs)):
+Yt:=simplify(subs(s=1/t,Ys)):
+plotsetup(gif,plotoutput=`21.111.1e3.B.gif`,plotoptions=`height=180,width=180`):
+P:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=magenta):
+PP:=pointplot({[subs(s=2,Xs),subs(s=2,Ys)],
+               [subs(s=1,Xs),subs(s=1,Ys)],
+               [subs(s=0,Xs),subs(s=0,Ys)]},symbol=circle,color=red):
+Q:=plot({[Xs,Ys,s=zero+seps..1],[Xt,Yt,t=1/zero+teps..1]},
+          numpoints=200,color=blue,axes=none):
+  display(Q,P,PP);
+

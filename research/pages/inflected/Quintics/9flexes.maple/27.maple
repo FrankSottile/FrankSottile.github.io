@@ -1,0 +1,60 @@
+#0_cusp/1/27.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 24 February 2001
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Zeroes:=[fsolve(z[27]=0,s)]:
+X:=x[27]/z[27]:
+Y:=y[27]/z[27]:
+slope:=(subs(s=Zeroes[1]-0.0001,Y)-subs(s=Zeroes[1]+0.0001,Y))/
+       (subs(s=Zeroes[1]-0.0001,X)-subs(s=Zeroes[1]+0.0001,X)):
+Y:=simplify(Y-slope*X):
+Z:=simplify(Y-75):
+Root:=fsolve(Z=0,s):
+X:=(X-Y)/Z:
+Y:=Y/Z:
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+
+Pt:=[[subs(t=0,Xt),subs(t=0,Yt)]]: 
+Pt28:=[[subs(t=0,-Xt),subs(t=0,Yt)]]: 
+for j from 1 to 8 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+ Pt28:=[Pt28[],[subs(s=Infl[j],-X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+P28:=pointplot({Pt28[]},symbol=circle,color=red):
+
+SP:=[]:SP28:=[]:
+for zz in SOL[27] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),Re(evalf(subs(s=zz,Y)))]]:
+  SP28:=[SP28[],[Re(evalf(subs(s=zz,-X))),Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+Sol28:=pointplot({SP28[]},symbol=cross,color=green):
+
+S:="27th quintic":
+Q:=plot({
+         [Xt,Yt,t=1/Root+0.15..1],
+         [X,Y,s=Root+0.3..1]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+#plotsetup(gif,plotoutput=`27.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);
+##################################################################
+Q28:=plot({
+         [-Xt,Yt,t=1/Root+0.15..1],
+         [-X,Y,s=Root+0.3..1]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+plotsetup(gif,plotoutput=`28.gif`,plotoptions=`height=200,width=200`):
+display(Q28,P28,Sol28);

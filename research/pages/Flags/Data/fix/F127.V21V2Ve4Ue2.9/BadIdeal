@@ -1,0 +1,3 @@
+#BadIdeals here, if any
+#Data:=[[-45, -9, -5, 9, 15, 45, 57], [1, 3, 4, 6, 7, 2, 5]]: # Wrong Degree
+#Data:=[[-41, -35, -23, -21, -11, 37, 49], [4, 1, 3, 5, 6, 2, 7]]: # NoGoodEliminant

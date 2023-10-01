@@ -1,0 +1,47 @@
+#1_cusp/examples/01.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 14 March 2002
+# New Brunswick
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+Ends:=[-10,10]:
+Gaps:=[.1,.1,.1,.1]:
+
+Infl:=[-3,-2,-1,1,2,3]:
+Zeroes:=[fsolve(x[1]=0,s)]:
+
+X:=z[1]/x[1]:
+Y:=-y[1]/x[1]:
+Xt:=subs(s=1/t,X):
+Yt:=subs(s=1/t,Y):
+
+Pt:=[]: 
+for j from 1 to 6 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+
+SP:=[]:
+for zz in SOL[1] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("1st quintic"):
+if nops(Zeroes)=1 then 
+ Q:=plot({
+    [X,Y,s=-1..-0.1], [X,Y,s=0.1..1],
+    [Xt,Yt,t=-1..1]
+     },axes=none,title=convert(S,symbol), color=blue,numpoints=100):
+fi:
+
+plotsetup(gif,plotoutput=`1/01.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);

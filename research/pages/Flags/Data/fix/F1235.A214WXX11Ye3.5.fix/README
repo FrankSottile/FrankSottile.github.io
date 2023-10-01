@@ -1,0 +1,23 @@
+These are the files to run instances of the enumerative problem.
+
+1)  Put these into a directory with a datafile, named  "data.initial"
+     This may already have happened
+
+2)  type "maple ../MapleFiles/initial.maple"
+
+(The next two are often not necessary,and you can just skip to 5
+
+  3)  type "./test.sh"  to run 10 instances for timing purposes
+                       --- Fewer for a big problem
+
+            Look into data for the timing, and decide how many instances are
+            feasuble for computing.  Edit run.sh accordingly
+
+  4) Repeat #2
+)
+    
+5)  type  "nohup ./run.sh &"
+
+Wait for the output, which will get mailed to all of us.
+
+Also, check on the computation periodically.

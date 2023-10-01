@@ -1,0 +1,61 @@
+#0_cusp/1/35.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 24 February 2001
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Zeroes:=[fsolve(z[35]=0,s)]:
+X:=x[35]/z[35]:
+Y:=y[35]/z[35]:
+slope:=(subs(s=Zeroes[1]-0.0001,Y)-subs(s=Zeroes[1]+0.0001,Y))/
+       (subs(s=Zeroes[1]-0.0001,X)-subs(s=Zeroes[1]+0.0001,X)):
+Y:=simplify(y[35]-slope*x[35])/z[35]:
+Z:=simplify(Y-40):
+Root:=fsolve(Z=0,s):
+X:=X/Z:
+Y:=Y/Z:
+Xt:=simplify(subs(s=1/t,X)):
+Yt:=simplify(subs(s=1/t,Y)):
+
+Pt:=[[subs(t=0,Xt),subs(t=0,Yt)]]: 
+Pt36:=[[subs(t=0,-Xt),subs(t=0,Yt)]]: 
+for j from 1 to 8 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+ Pt36:=[Pt36[],[subs(s=Infl[j],-X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+P36:=pointplot({Pt36[]},symbol=circle,color=red):
+
+SP:=[]:SP36:=[]:
+for zz in SOL[35] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),Re(evalf(subs(s=zz,Y)))]]:
+  SP36:=[SP36[],[Re(evalf(subs(s=zz,-X))),Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+Sol36:=pointplot({SP36[]},symbol=cross,color=green):
+
+S:=cat("35th quintic"):
+Q:=plot({
+         [Xt,Yt,t=-1..1.5],
+         [X,Y,s=-1..Root-0.35]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+#plotsetup(gif,plotoutput=`35.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);
+############################################################
+Q36:=plot({
+         [-Xt,Yt,t=-1..1.5],
+         [-X,Y,s=-1..Root-0.35]
+        },axes=none,title=convert(S,symbol),color=blue,numpoints=200):
+
+plotsetup(gif,plotoutput=`36.gif`,plotoptions=`height=200,width=200`):
+display(Q36,P36,Sol36);
+

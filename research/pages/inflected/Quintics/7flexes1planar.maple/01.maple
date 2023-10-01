@@ -1,0 +1,43 @@
+#1_planar/examples/01.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 26 March 2002
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Infl:=[-3,-2,-1,1,2,3]:
+Y:=simplify(x[1]/z[1]):
+X:=simplify(y[1]/z[1]):
+Z:=simplify(Y+150):
+X:=X/Z:
+Y:=Y/Z:
+Xt:=simplify(subs(s=1/t,X)):Yt:=simplify(subs(s=1/t,Y)):
+
+Pt:=[]: 
+for j from 1 to 6 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+PP:=pointplot({[subs(t=0,Xt),subs(t=0,Yt)]},symbol=circle,color=green):
+
+SP:=[]:
+for zz in SOL[1] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:=cat("1st quintic"):
+Q:=plot({
+   [X,Y,s=-2..-0.09],  [X,Y,s=0.09..2],[Xt,Yt,t=-1/2..1/2]
+    },axes=none,title=convert(S,symbol), color=blue,numpoints=100):
+
+#plotsetup(gif,plotoutput=`1/01.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,PP,Sol);

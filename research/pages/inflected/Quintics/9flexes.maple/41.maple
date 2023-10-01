@@ -1,0 +1,56 @@
+#0_cusp/1/41.maple
+#
+# Frank Sottile
+# 6 February  2002
+# Albany
+#
+interface(quiet=true):
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+Zeroes:=[fsolve((y[41]+40*z[41])=0,s)]:
+X:= x[41]/(y[41]+40*z[41]):
+Y:=-y[41]/(y[41]+40*z[41]):
+X:=X-9*Y:
+Xt:=subs(s=1/t,X):
+Yt:=subs(s=1/t,Y):
+
+SP:=[]:
+SP42:=[]:
+for Xs in SOL[41] do
+ SP:=[SP[],[10^(-6)*trunc(10^6*subs(s=Xs,X)),10^(-6)*trunc(10^6*subs(s=Xs,Y))]]:
+ SP42:=[SP42[],
+        [10^(-6)*trunc(10^6*subs(s=Xs,-X)),10^(-6)*trunc(10^6*subs(s=Xs,Y))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+Sol42:=pointplot({SP42[]},symbol=cross,color=green):
+
+Pt:=[]: 
+Pt42:=[]: 
+for j from 1 to 8 do
+  Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+  Pt42:=[Pt42[],[subs(s=Infl[j],-X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+P42:=pointplot({Pt42[]},symbol=circle,color=red):
+
+S:="41st quintic":
+Q:=plot({[X,Y,s=-1..1],[Xt,Yt,t=-1..-0.01],[Xt,Yt,t=0.01..1]}, 
+             axes=none,
+              color=blue,numpoints=400):
+
+#plotsetup(gif,plotoutput=`41.gif`,plotoptions=`height=200,width=200`):
+#display(Q,P,Sol,view=[-3..8,-4..2.2],title=convert(S,symbol));
+plotsetup(gif,plotoutput=`41.close.gif`,plotoptions=`height=170,width=200`):
+display(Q,P,Sol,view=[.5..2.4,.09..0.55],title=`closeup`);
+
+#Q42:=plot({[-X,Y,s=-1..1],[-Xt,Yt,t=-1..-0.01],[-Xt,Yt,t=0.01..1]}, 
+#             axes=none,color=blue,numpoints=200):
+
+#plotsetup(gif,plotoutput=`42.gif`,plotoptions=`height=200,width=200`):
+#display(Q42,P42,Sol42,view=[-8..3,-4..2.2]);
+
+

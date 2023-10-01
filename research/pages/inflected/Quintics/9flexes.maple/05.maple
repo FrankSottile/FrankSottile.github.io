@@ -1,0 +1,42 @@
+#0_cusp/1/05.maple
+interface(quiet=true):
+#
+# Frank Sottile
+# 22 February 2001
+# Amherst
+#
+#################################################################
+with(plots):
+Digits:=20:
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+read(data):
+
+X:=x[5]/z[5]:
+Y:=y[5]/z[5]:
+Z:=simplify(Y-6):
+Zeroes:=[fsolve(Z=0,s)]:
+X:=X/Z:
+Y:=-Y/Z:
+
+Pt:=[]: 
+for j from 1 to 8 do
+ Pt:=[Pt[],[subs(s=Infl[j],X),subs(s=Infl[j],Y)]]:
+od:
+P:=pointplot({Pt[]},symbol=circle,color=red):
+
+SP:=[]:
+for zz in SOL[5] do
+  SP:=[SP[],[Re(evalf(subs(s=zz,X))),
+             Re(evalf(subs(s=zz,Y)))]]:
+od:
+Sol:=pointplot({SP[]},symbol=cross,color=green):
+
+S:="5th quintic":
+Q:=plot({[X,Y,s=-13..13]}, axes=none,#title=convert(S,symbol),
+            color=blue,numpoints=250):
+
+#plotsetup(gif,plotoutput=`05.gif`,plotoptions=`height=200,width=200`):
+display(Q,P,Sol);
+#plotsetup(ps,plotoutput=`FigA.eps`,plotoptions=`color,noborder,portrait,width=1in,height=1in`);
+#display(Q,P);

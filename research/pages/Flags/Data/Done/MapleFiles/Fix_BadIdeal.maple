@@ -1,0 +1,25 @@
+
+#Data:=[]:
+Perms:= [ [1, 2, 3, 4] ,[1, 3, 2, 4]
+            ,[1, 4, 2, 3] ,[2, 1, 3, 4]
+            ,[3, 1, 2, 4] ,[2, 3, 1, 4]
+           ]:
+for pi in Perms do
+ data[pi]:=[]:
+end do:
+
+for Pair in Data do
+  data[Pair[2]]:=[data[Pair[2]][],Pair]:
+end do:
+
+file:= fopen("badideals",WRITE):
+for pi in Perms do
+ fprintf(file,"######################################\n"):
+ fprintf(file,"######### %a #########\n",pi):
+ fprintf(file,"######################################\n"):
+ for Pair in data[pi] do
+  fprintf(file," %a,\n",Pair):
+ end do:
+end do:
+
+fclose(file):

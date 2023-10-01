@@ -1,0 +1,44 @@
+#NumberTested.maple
+#
+# This file ?estimates? the number of instance of the conjecture which were tested.
+#
+# fm:= Number of different flag manifolds
+# sp:= Number of different Schubert problems
+# ns:= Number of different polynomial systems
+# tt:= Total time of computation
+interface(quiet=true):
+read(ListOfFiles):
+S:=[indices(Data)]:
+
+
+fm:=0:
+sp:=0:
+ns:=0:
+tt:=0:
+for FM in S do 
+ hasGrass:=false:
+ if convert(FM[],string)[4] <> "" then 
+   for SP in Data[FM[]] do
+    if SP[1]<>"A" then
+     hasGrass:=true:
+     sp:=sp+1:
+     read(sprintf("%s/%s.data",FM[],SP)):
+     ns:=ns+Instance:
+    end if:
+   end do:
+   if hasGrass then fm:=fm+1: end if:
+
+  else
+
+   fm:=fm+1:
+   for SP in Data[FM[]] do
+    sp:=sp+1:
+    read(sprintf("%s/%s.data",FM[],SP)):
+    ns:=ns+Instance*nops(Necklaces):
+   end do:
+ end if:
+end do:
+
+printf(" Number of different flag manifolds = %d\n",fm):
+printf(" Number of different Schubert problems = %d\n",sp):
+printf(" Number of different polynomial systems = %d\n",ns):

@@ -1,0 +1,12 @@
+Directories[4]:=[F124, F234, F1234]:
+
+Directories[5]:=
+[F125, F135, F235, F245, F345, F1235, F1245, F2345, F12345]:
+
+Directories[6]:=
+[F36, F126, F236, F246, F1246, F1356, F2346, F2456, F12346, F12356, F12456, F123456]:
+
+Directories[7]:=[F37, F127, F347, F23457]:
+
+Directories[8]:=[F48]:
+

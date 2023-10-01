@@ -1,0 +1,29 @@
+interface(quiet=true):
+#ComputeReal.maple
+#
+#
+#
+read(`../MapleFiles/procedures.maple`);
+read(`data`);
+#Table:=array(Table);
+read(`temp.out`):
+#############################################################################
+#
+#  temp.out contains the output from the Singular computation.  Specifically,
+#         Eliminants   := list of univariate (in the variable a) eliminants 
+#                          one for each necklace, with an extra `0' at the end.
+#         SingularTime := Is the CPU time for the Singular computation.
+#
+#############################################################################
+Instance:=1:
+for i from 1 to nops(Eliminants) do 
+ if (Eliminants[i] <> 0) then 
+  NR:=(nops(realroot(Eliminants[i]))+2-(NumberOfSolutions mod 2))/2:
+  lprint(NR); 
+ fi:
+od:
+GroebnerTime := GroebnerTime+SingularTime:
+RealTime:=RealTime+time():
+printf("GroebnerTime := %7.2f\n",GroebnerTime):
+printf("RealTime := %7.2f\n",RealTime):
+quit:

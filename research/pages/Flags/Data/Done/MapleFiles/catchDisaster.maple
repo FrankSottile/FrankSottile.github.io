@@ -1,0 +1,13 @@
+MailError:="mail -s  $(hostname) sottile@math.umass.edu < data.safe":
+
+try
+ read(`data`)
+catch:
+ system(MailError);
+ system("exit");
+end try: 
+
+if type(CoefficientHeight,symbol) then 
+ system(MailError);
+ system("exit");
+end if:

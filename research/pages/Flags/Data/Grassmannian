@@ -1,0 +1,58 @@
+#Grassmannian
+#
+# This is a data file listing the various Grassmannian problems with
+# their number of solutions.  The names (Grassmannian) are separated 
+# from the Number of soluitons (NSols)
+#
+Grassmannian:=[
+#   G(2,4)
+"Ye4.2", 
+#
+#  G(1,5)
+#
+"We4.1", "We2W2.1", "W2e2.1", "WW3.1", 
+#
+#   G(2,5)
+#
+"Xe6.6", "Xe4X2.3", "Xe4X11.2", "Xe3X21.2", "Xe2X2e2.2",
+#
+#   G(3,5)
+#
+"Ye4Y11.3", "Ye4Y2.2", "Ye3Y21.2", "Ye2Y11e2.2",
+#
+#  G(4,5)
+#  
+"Ze4.1", "Ze2Z11.1", "Z11e2.1", "Ze2Z11.1", "ZZ111.1",
+###########################################################
+#
+#   G(2,6)
+#
+"We8.14", "We6W2.9", "We4W2e2.6", "We2W2e3.4", "We5W3.4",  "We4W31.3", "W2e4.3",  
+"We3W2W3.3", "We3W32.2", "We2W3e2.2", 
+"W11e4.1", "W2e3W11.1","W11W2e3.1", 
+ "W2e2W11e2.1", "W11e2W2e2.1", 
+#
+#    G(3,6)
+#
+"Xe6X21.16", "Xe5X22.6", "Xe3X21e2.6", "Xe2X2X11X21.4", "XX2e2X11e2.2", "Xe4X311.2",
+#
+#    G(4,6)
+#
+"Ye5Y21.5", "Ye6Y2.5", "Ye5Y111.4", "Ye2Y11e3.4",
+"Y11e4.3", "Ye4Y211.3",
+"Ye4Y11e2.2", 
+"Y2Y11e3.1", "Y11e3Y2.1", "Y2e2Y11e2.1", "Y11e2Y2e2.1", "Y2e4.1", 
+#
+#    G(3,7)
+#
+"We2W2W31e2.7", "We2W2W31e2.7",  "We2W2W22e2.4",
+"WW21W31e2.4", "W2e2W22e2.3", "W2e3W42.3", 
+"W2e3W321.2", "W31e3.2",
+#
+#   G(4,7)
+#
+"Xe4X21X221.12", "Xe2X11X211e2.7", "Xe2X11X21X221.7", 
+"Xe2X2X21X221.5", "X11X21e2X211.5", "XX21X211e2.4", "X211e3.2"
+]:
+
+

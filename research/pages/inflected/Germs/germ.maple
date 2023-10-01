@@ -1,0 +1,27 @@
+#germ.maple
+#
+# Frank Sottile
+# 1 October 2000
+# Amherst
+#
+# This code draws germs of singularities of plane curves
+# for display in the web page
+#
+#
+interface(quiet=true):
+with(plots):
+
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+
+i:=2:
+j:=3:
+
+Title:=cat(`Germ of type (`,convert(i,symbol),`,`,convert(j,symbol),`)`):
+filename:=cat(`g`,convert(i,symbol),convert(j,symbol),`.gif`):
+plotsetup(gif,plotoutput=filename,plotoptions=`height=80,width=100`):
+#display(plot({[s^i,s^j*(1+3*s),s=-0.1..0.1]},color=blue, axes=none,title=Title,numpoints=2000));
+display(plot({[s^i,s^j,s=-0.1..0.1]},color=blue,  axes=none,title=Title,numpoints=2000));
+
+
+

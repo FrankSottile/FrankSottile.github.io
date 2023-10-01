@@ -1,0 +1,25 @@
+#CheckTitles.maple
+#
+#########################################
+interface(quiet=true):
+read(`../HTML_Procedures.maple`):
+############################################################################
+read(sprintf("%s.data",NAME)):
+
+NSols:=StringTools[Split](NAME,".")[2]:
+
+directory := Directory(FlagVariety):
+
+TitleString:=titleString("",FlagVariety,EnumerativeProblem,Num):
+
+######################################################################
+
+
+FileName:=sprintf("%s.%s",TitleString,NSols):
+#  lprint("    ",FileName);
+if FileName <> NAME then
+  lprint("    ",FileName);
+  printf(" %s.data has an incorrect name\n",NAME);
+fi:
+
+quit;

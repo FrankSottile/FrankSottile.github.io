@@ -1,0 +1,64 @@
+#makeTable
+#
+# Frank Sottile
+# 27 February 2002
+# Amherst, MA
+#
+####################################################################
+#
+#   This file will figure out how many of the 21 curves have
+#  a given numner of nodes, solitary points, and complex nodes
+#
+#  - maple -q -c "i:=loopVariable" makeTable 
+#    (Table stores the double points, cumulatively, as well as the flexes)
+#    (This also creates a file with a list of the curves among the 21 with
+#     3 double points, triples)
+###################################################################
+interface(quiet=true):
+read(data):
+read(doubles):
+Digits:=40:
+
+
+######################################################
+Num:=0:
+for j from 1 to 21 do
+#
+#    First figures out the real nodes
+#
+  RE:=sort([fsolve(doubleEqs[j]=0,s)]):
+  Reals:=[]:                   #  The positions of the nodes
+  Pts:=[]:                     #  Coordinates of the nodes
+  for r in RE do
+   Reals:=[Reals[],.000000000000001*trunc(10^15*r)]:
+###   Pt:=[.0001*trunc(10^4*subs(s=r,x[j]/z[j])),
+#        .0001*trunc(10^4*subs(s=r,y[j]/z[j]))]:
+#   Pts:=[Pts[],Pt]:
+  od:
+#
+#  Solitary points and Complex nodes
+#
+  Zeroes:={fsolve(doubleEqs[j]=0,s,complex)} minus {RE[]}:
+  Solitary:={}:
+  CNodes:=[]:
+  SNodes:=[]:
+  for zz in Zeroes do
+   if subs(s=zz,z[j]) <> 0 then 
+     Pt:=trunc(10^6*subs(s=zz,x[j]/z[j]))+
+         trunc(10^6*subs(s=zz,y[j]/z[j])):
+     if type(Pt,realcons) then 
+       Solitary:=Solitary union {zz}:
+       SNodes:=[SNodes[],.0000001*trunc(10^7*zz)]:
+      else
+       CNodes:=[CNodes[],.0000001*trunc(10^7*zz)]:
+     fi:
+    fi:
+   od:
+#lprint(j,nops(RE),nops(SNodes),nops(CNodes));
+#lprint(SNodes);
+#lprint(CNodes);
+od:
+
+quit;
+
+

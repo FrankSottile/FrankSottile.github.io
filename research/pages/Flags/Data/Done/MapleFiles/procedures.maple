@@ -1,0 +1,351 @@
+#procedures.maple
+# 
+#   This contains the procedurees for our experiments
+#  (document better later)
+#
+#   -->>  There are few error messages right now.  This should be fixed
+#
+#
+############################################################################
+#
+#  The flag variety ( FlagVariety ) is a global variable, as is 
+#  the number of variables ( NumVar ), which is computed.
+#
+#  The symbol s for the parameter of a point in the affine part of P^1 
+#     (rational normal curve) is reserved
+#
+#  The symbols x1, x2, x3, x4, ... are reserved for our variables in Maple
+#    They are converted to x(1), x(2), ... for the Singular input file, and
+#    Singular comes up with an eliminant in Q[a].
+#
+###########################################################################
+#                Procedures
+###########################################################################
+# QuasiUniformPoints(N, r)  List of integral points closest to N 
+#           uniform points on the circle of radius r
+#   -->  Need r about N/2 to ensure the points are distinct.
+#
+# QuasiUniformPointsAss(N, r)  List of integral points closest to N 
+#        uniform, but assymmetric, points on the circle of radius r
+#   -->  Need r about N to ensure the points are sufficiently assymmetric.
+#
+# Primes(N)  List of first n prime numbers, centered around zero.#
+#
+# LocalCoordinates(w)     Returns the matrix of coordinates for the 
+#           Schubert cell of the permutation w.  Also computes NumVars              
+#
+# OsculatingFlag()  Returns the flag of subspaces osculating the moment curve.
+#                  Later, other parametrizations may be useful.
+#
+# ConditionsThatMatter(alpha)  Returns a list of the conditions that
+#                   matter in the Grassmannian datum alpha.
+#
+# GrassmannCondition(H, alpha)   Returns the list of equations obtained by
+#                 imposing the Grassmannian condition alpha on the set of 
+#                 subspaces parametrized by the matrix H.
+#
+# FlagCondition(v, Coords)      Returns the list of equations for the
+#       Schubert variety X_v F(s), where v is a permutation whose
+#       descents are compatible with the Flag Variety. Coords is the
+#       set of local coordinates that we are using for the Flag Variety
+#
+# makeDataFile()
+#
+#   global FlagVariety, EnumerativeProblem, NumberOfSolutions, Necklaces, 
+#   PreTime, GroebnerTime, RealTime, Table, Instance,  CoefficientHeight:
+#
+#   This procedure rewrites the data file which stores all the information 
+#  about the computation being performed.  
+
+#
+#   Precomputation Procedures
+#
+#
+##############################################################################
+Primes := proc(N)
+local Points,p, i, j:
+ p:=[1]:
+ for i from 1 to N-1 do p:=[p[],nextprime(p[i])]: end do:
+ j:=4*trunc((p[N]+1)/8):
+ Points:=[]:
+ for i in p do
+  Points:=[Points[],[1,i-j]]:
+ end do:
+ return(Points)
+end proc:
+##############################################################################
+QuasiUniformPoints := proc(N, r)
+#
+#  QuasiUniformPoints   This returns a list of N points whose directions
+#       are quasi-uniform. Read the code for details.          
+#
+#  N:=number of points
+#  r:=radius or resolution
+#
+local Points, i:
+ Points:=[]:
+ for i from 1 to N do 
+  Points:=[Points[], 
+           [round(r*sin(i*Pi/(N+1))), 
+            round(r*cos(i*Pi/(N+1)))] ]:
+ od:
+ Points
+end:
+##############################################################################
+QuasiUniformPointsAss := proc(N, r)
+#
+#  QuasiUniformPoints   This returns a list of N points whose directions
+#       are quasi-uniform. Read the code for details.          
+#
+#  N:=number of points
+#  r:=radius or resolution
+#
+local Points, i:
+ Points:=[]:
+ for i from 1 to N do 
+  Points:=[Points[], 
+           [round(r*sin((i+1/3)*Pi/(N+1))), 
+            round(r*cos((i+1/3)*Pi/(N+1)))] ]:
+ od:
+ Points
+end:
+##############################################################################
+
+##############################################################################
+LocalCoordinates := proc(w)
+#
+#   Returns the matrix of coordinates for the Schubert cell of w
+#
+ local n, k, Coordinates, b, a, i, j, nVar:
+ global FlagVariety, NumVars:
+ n:=FlagVariety[nops(FlagVariety)]:
+ k:=FlagVariety[nops(FlagVariety)-1]:
+ Coordinates:=linalg[matrix](k,n,2):
+
+ b:=0:
+ for a in FlagVariety do 
+  if a < n then 
+   for i from b+1 to a do  
+    for j from b+1 to k do Coordinates[j,w[i]]:=0: od:
+    for j from 1 to w[i]-1 do Coordinates[i,j]:=0: od:
+    Coordinates[i,w[i]]:=1:
+   od:
+   b:=a:
+  fi:
+ od:
+ NumVars:=0:
+ for i from 1 to k do  
+  for j from 1 to n do 
+   if Coordinates[i,j]=2 then 
+      NumVars:=NumVars+1:
+      Coordinates[i,j]:= x||NumVars:
+   fi:
+  od:
+ od:
+ evalm(Coordinates)
+end:
+##############################################################################
+OsculatingFlag := proc()
+#
+# OsculatingFlag  returns the flag of subspaces osculating 
+#      the moment curve, a special parametrization of the rational  
+#      normal curve.  Later, other parametrizations may be useful.
+#
+#   Very important.  The parameter s here cannot be used for
+#                    anything else in this suite of programs.
+#
+ local n, f:
+ n := FlagVariety[nops(FlagVariety)]:
+ f := (i,j) -> binomial(j,i)*s^(j-i):
+ linalg[matrix](n, n, f) 
+end:
+##############################################################################
+ConditionsThatMatter:=proc(alpha)
+#
+#  This figures out which conditions in the 
+#  Grassmannian data alpha matter
+#
+ local beta, CM, j:
+ beta:=[0,alpha[]]:
+ CM:=[]:
+ for j from 1 to nops(alpha) do
+  if alpha[j]-1>beta[j] then CM:=[CM[],j]: fi:
+ od:
+ CM
+end:
+##############################################################################
+GrassmannCondition := proc(H, alpha)
+#
+#  GrassmannCondition returns the list of equations obtained by
+#        imposing the Grassmannian condition alpha on the set of 
+#        subspaces parametrized by the matrix H.
+#
+local Fdot, n, k, Eqs, M, MinorSize, j, Row, Col:
+ if nops(op(3,linalg[col](H,1)))<>nops(alpha) then
+  printf("Data mismatch in GrassmannCondition"):
+  printf(" alpha = %a,  Local coords are\n %a\n",alpha,evalm(H)):
+  quit;
+ fi:
+ Fdot:=OsculatingFlag():
+ n:=FlagVariety[nops(FlagVariety)]:
+ k:=nops(alpha):    
+ Eqs:=[]:
+ for j in ConditionsThatMatter(alpha) do 
+  M:=linalg[stackmatrix](H, 
+      linalg[submatrix](Fdot,[seq(i,i=1..(n+1-alpha[j]))],[seq(i,i=1..n)]));
+     
+  MinorSize:=n+j+1-alpha[j];
+  for Row in combinat[choose](n+k+1-alpha[j],MinorSize) do 
+   for Col in combinat[choose](n,MinorSize) do 
+    Eqs:=[Eqs[],linalg[det](linalg[submatrix](M, Row, Col))]:
+   od:
+  od:
+ od:
+ Eqs
+end:
+##############################################################################
+FlagCondition := proc(v, Coords)
+#
+#  Returns the list of equations for the Schubert variety X_v F(s), where
+#  v is a permutation whose descents are compatible with the Flag Variety
+#  Coords is the set of local coordinates that we are using#
+#
+ local n, k, a, i, H, alpha, Eqs:
+ global FlagVariety:
+ Eqs:=[]:
+ n:=FlagVariety[nops(FlagVariety)]:
+ for a from 1 to nops(FlagVariety)-1 do 
+  k:=FlagVariety[a]:
+  alpha:=sort([seq(v[i],i=1..k)]):
+  H:=linalg[submatrix](Coords,[seq(i,i=1..k)], [seq(i,i=1..n)]):
+  Eqs:=[Eqs[], GrassmannCondition(H, alpha)[]]:
+ od:
+ Eqs
+end:
+##############################################################################
+makeDataFile  :=proc()
+#
+#   This procedure rewrites the data file which stores all the information 
+#  about the computation being performed.  There are two types of data in 
+#  this file: Static data that identifies the enumerative problem that is 
+#  being studied, and the record of the data taken.
+#
+#  Here is a list of the data
+#
+#   Static data
+#
+# FlagVariety   Stores the type of the flag, the ambient space
+# EnumerativeProblem  List of Schubert conditions on this flag variety.
+#                      The first gives local coordinates for the problem
+# Label A string identifying the problem
+# NumberOfSolutions   The expected number of solutions
+# Necklaces     The list of necklaces to be computed
+# Points    A list of points from at which to evaluate the flags.
+#            in each loop, we select a random (nops(Labels)-1) - subset of 
+#            these points (with MAPLE _seed := Instance: ) at which to evaluate
+#            all the necklaces.
+# PointSelection  A string recording how the points were selected
+# Machine  The name of the machine the computation is being performed on
+#          e.g "Schur P 4 1.80GHz, 512MB"
+##############################################################################
+#
+#  Dynamic data recording the problem to be studied
+#
+# Instance      Which instance is being computed.   This will be the _seed 
+# PreTime       Cumulative CPU time for the precomputation
+# GroebnerTime  Cumulative CPU time for the Groebner basis computation
+# RealTime      Cumulative CPU time for the Computation of number of real roots
+# Table         A list of lists or an array.  The rows (outer list) correspond to 
+#                 the necklaces, while the columns (inner list) are the frequency 
+#                 vectors recording the number of times a particular number of real
+#                 solutions occurs for that necklace.
+#               The possible numbers of solutions is congruent to NumberOfSolutions
+#                 modulo 2, so the length of the inner list is NumberOfSolutions/2+1.
+# CoefficientHeight  Average number of base ten digits of the coefficients of the
+#                      Eliminant in the first 100 instances.
+#####################################################################################
+ local file, i, j:
+ global FlagVariety, EnumerativeProblem, NumberOfSolutions, Necklaces, PreTime, 
+        Machine, GroebnerTime, RealTime, Table, iterate, 
+        CoefficientHeight:
+ file := fopen(`data`,WRITE):
+ fprintf(file,"#######################################"):
+ fprintf(file,"#######################################\n"):
+ fprintf(file,"#\n"):
+ fprintf(file,"#  Data for the enumerative problem\n"):
+ fprintf(file,"#  %s = %d on %s\n",Label,NumberOfSolutions, Machine):
+ fprintf(file,"#\n"):
+ fprintf(file,"#######################################"):
+ fprintf(file,"#######################################\n"):
+
+ fprintf(file,"FlagVariety:=%a:\n", FlagVariety):
+#
+ fprintf(file,"Label := %a:\n", Label):
+#
+ fprintf(file,"EnumerativeProblem:=[ %a",EnumerativeProblem[1]):
+  for i from 2 to nops(EnumerativeProblem) do 
+   fprintf(file," ,%a",EnumerativeProblem[i]):
+   if (i mod 2 = 0) then fprintf(file,"\n                    "): fi:
+  od:
+ fprintf(file,"]:\n"):
+#
+ fprintf(file,"NumberOfSolutions := %d:\n",NumberOfSolutions):
+#
+ fprintf(file,"Necklaces:=[ %a", Necklaces[1]):
+  for i from 2 to nops(Necklaces) do 
+   fprintf(file," ,%a",Necklaces[i]):
+   if (i mod 2 = 0) then fprintf(file,"\n           "): fi:
+  od:
+ fprintf(file,"]:\n"):
+#
+ fprintf(file,"Points:=[%a",Points[1]):
+  for i from 2 to nops(Points) do 
+   fprintf(file,",%a",Points[i]):
+   if (i mod 7 = 0) then fprintf(file,"\n       "): fi:
+  od:
+ fprintf(file," ]:\n"):
+#
+ fprintf(file,"PointSelection := %a:\n",PointSelection):
+#
+ fprintf(file,"Machine := %a:\n",Machine)::
+#
+# fprintf(file,"NumberOfIterations := %d:\n",NumberOfIterations):
+#
+ fprintf(file,"#######################################"):
+ fprintf(file,"#######################################\n"):
+ fprintf(file,"Instance:=%d:\n",Instance):
+ fprintf(file,"PreTime:=%10.2f:\n",PreTime):
+ fprintf(file,"GroebnerTime:=%10.2f:\n",GroebnerTime):
+ fprintf(file,"RealTime:=%10.2f:\n",RealTime):
+ if type(Table,list) then 
+  fprintf(file,"Table:=[ %a",Table[1]):
+   for i from 2 to nops(Table) do 
+    fprintf(file,"\n        ,%a",Table[i]):
+   od:
+   fprintf(file,"]:\n"):
+ fi:
+ if type(Table,array) then 
+  for i from 1 to nops(Necklaces) do 
+   if i=1 then
+     fprintf(file,"Table:=[[%d",Table[i,1]):
+    else
+     fprintf(file,"\n       ,[%d",Table[i,1]):
+   fi:
+   for j from 2 to trunc(NumberOfSolutions/2)+1 do
+    fprintf(file,",%d",Table[i,j]):
+   od:   
+  fprintf(file,"]"):
+  od:
+  fprintf(file,"]:\n"):
+ fi:
+
+ fprintf(file,"CoefficientHeight:=%7.1f:\n",CoefficientHeight):
+ fclose(file):
+end:
+##############################################################################
+##############################################################################
+##############################################################################
+##############################################################################
+##############################################################################
+##############################################################################
+

@@ -1,0 +1,382 @@
+<HTML>
+<HEAD>
+   <TITLE>Maximally Inflected Curves With Maximally Many Solitary Points</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<!--Navigation Panel-->
+ <A HREF="../Shustin/Shustin.html"><IMG SRC="../images/prev.gif" ALT="Previous"></A>
+ <A HREF="../Constructions.html"><IMG SRC="../images/toc.gif" ALT="Contents"></A>
+<BR>
+ <B> Previous:</B> <A HREF="../Shustin/Shustin.html">6.i. Curves With
+       Maximally Many Real Nodes</A><BR> 
+ <B> Up:</B> <A HREF="../Constructions.html">6. Classical Constructions</A>
+<!--End of Navigation Panel-->
+<HR>
+
+<H1>6.ii. Curves With Maximally Many Solitary Points</H1>
+
+&nbsp; &nbsp;
+We use results of E.&nbsp;Shustin to construct maximally inflected curves of
+any degree with only flexes, all of whose double points are solitary points.
+
+
+<P>
+&nbsp; &nbsp; 
+Viro's method for constructing real plane curves with prescribed
+topology&nbsp;[<A HREF="../Bib.html#Vi83">Vi83</A>,
+              <A HREF="../Bib.html#Vi84">Vi84</A>] 
+(see also&nbsp;[<A HREF="../Bib.html#Ri">Ri</A>]) begins with a
+subdivision of the simplex
+<CENTER>
+  <IMG SRC="img01.png">
+</CENTER>
+defined by a piecewise linear convex  <I>lifting function</I>.
+Reflecting this subdivision in the coordinate axes and in the origin gives a
+subdivision of the region
+<CENTER>
+  <IMG SRC="img02.png">
+</CENTER>
+Gluing opposite edges of <IMG ALIGN="MIDDLE" SRC="lozenge.png"> gives a
+PL-space homeomorphic to <IMG SRC="RP2.png">.
+
+<P> &nbsp; &nbsp; 
+The other ingredient is, for each facet <I>F</I> of the subdivision, a real
+polynomial <I>f<sub>F</sub></i> whose Newton polytope is <I>F</I> and
+such that <I>f<sub>F</sub></i>=0 defines a
+smooth curve in the torus <IMG ALIGN="MIDDLE" SRC="torus.png">.
+These polynomials additionally satisfy a compatibility condition:
+For an edge <I>e</i> common to two facets <I>F</I> and <I>G</I>,
+we have <i>f<sub>F</sub></i>|<sub><i>e</i></sub>
+       =<i>f<sub>G</sub></i>|<sub><i>e</i></sub>, where the latter expressions
+denote the truncations of the polynomials <i>f<sub>F</sub></i> and 
+<i>f<sub>G</sub></i> to the edge <i>e</i> (i.e., those monomials whose
+exponent vector is in <i>e</i>).
+Furthermore, this common truncation
+has no multiple factors (except <i>x</i> and <i>y</i>).
+
+
+<P> &nbsp; &nbsp; 
+The real points of the real curve <i>f<sub>F</sub></i>=0 lie
+naturally in the four copies of the facet
+<i>F</i> in <IMG ALIGN="MIDDLE" SRC="lozenge.png"> (with the boundary points
+representing the asymptotic behavior of solutions, or, equivalently,
+the zeros of the restriction <i>f<sub>F</sub></i> to the corresponding edge).
+The pair consisting of these facets and curves
+will be called the <i>Newton portrait</i>
+of  <i>f<sub>F</sub></i>=0.
+By the compatibility condition, the Newton portraits of the facet curves glue
+naturally together, giving a  topological curve <IMG SRC="Gamma.png"> in
+<IMG SRC="RP2.png">.
+Viro's theorem asserts that there exists a curve <i>C</i> of degree <i>d</i>
+in <IMG SRC="RP2.png"> such that the pair 
+<font size=+1>(</font><IMG SRC="RP2.png">,<i>C</i><font size=+1>)</font> 
+is homeomorphic to the pair 
+<font size=+1>(</font><IMG SRC="RP2.png">,
+               <IMG SRC="Gamma.png"><font size=+1>)</font>.
+The homeomorphism
+preserves each coordinate axis and each quadrant.
+The complex points of <i>C</i> are smooth, and
+<IMG SRC="Gamma.png"> and <i>C</i> meet
+each coordinate axis in the same number of points.<BR>
+
+
+<P> &nbsp; &nbsp; 
+Shustin&nbsp;[<A HREF="../Bib.html#Sh85">Sh85</A>] 
+(see also&nbsp;[<A HREF="../Bib.html#Sh93">Sh93</A>,
+                <A HREF="../Bib.html#Sh98">Sh98</A>]) showed how to modify
+this construction when the facet curves (<i>f<sub>F</SUB></i>=0) have
+singularities in <IMG align="middle" SRC="torus.png">.
+If a numerical criterion is satisfied
+(such a criterion is given in Theorem 1.7 
+of&nbsp;[<A HREF="../Bib.html#Sh93">Sh93</A>]), there exists a curve
+of degree <i>d</i> in <IMG SRC="RP2.png"> whose singularities are the disjoint
+union of the singularities of the facet curves, and whose topology is glued
+from that of the facet curves as before.
+(See Theorem~1.8 of&nbsp;[<A HREF="../Bib.html#Sh93">Sh93</A>], originally
+proven in&nbsp;[<A HREF="../Bib.html#Sh85">Sh85</A>].) 
+In particular, Shustin shows the following.
+
+<A NAME="prop:Shustin}"></A>
+<P>
+<B>Proposition 7.ii.1.</B>
+(See&nbsp;[<A HREF="../Bib.html#Sh85">Sh85</A>] 
+ and&nbsp;[<A HREF="../Bib.html#Sh93">Sh93</A>)<BR>
+ &nbsp; &nbsp; <i>
+ If the singularities of the facet curves are only nodal, then there exists a
+ curve of degree d in <IMG SRC="RP2.png"> whose only (complex) singularities
+ are the disjoint union of the singularities of the facet curves, and whose
+ topology is given by gluing the facet curves as in the Viro construction.
+</i>
+
+<P>
+We use this to construct maximally inflected curves of any degree whose only
+ramification is flexes and whose double points are all solitary points.
+Consider the subdivision of <IMG align="middle" SRC="Delta_d.png"> 
+given by the piecewise linear convex lifting function <i>w</i>
+which we define for some the vertices of <IMG align="middle" SRC="Delta_d.png">.
+Set <i>w</i>(0,0) = <i>w</i>(<i>d</i>,0) = 0, and
+<CENTER>
+ <TABLE>
+  <TR>
+   <TD valign=center align=right>
+     w(0, 2<i>i</I>+2) &nbsp; = &nbsp; (2<i>i</I>+2)<SUP>2</SUP><BR>
+     w(<i>d</I>-1-2<i>i</i>, 2<i>i</I>+1)
+          &nbsp; = &nbsp; (2<i>i</I>+1)<SUP>2</SUP>
+   </TD>
+   <TD valign=center align=right>
+     &nbsp; &nbsp; 
+     for <i>i</i> an integer between 0 and (<i>d</i>-1)/2 .
+   </TD>
+  </TR>
+ </TABLE>
+</CENTER>
+Here is the resulting subdivision of <IMG align="middle" SRC="Delta_4.png">
+and the values of the lifting function.
+<CENTER>
+  <IMG SRC="T.png">
+</CENTER>
+
+&nbsp; &nbsp; 
+This regular subdivision of <IMG align="middle" SRC="Delta_d.png"> has three
+types of triangles 
+<TABLE>
+ <TR valign=top><TD>(i)</TD>
+  <TD>The triangle <i>H<SUB>d</SUB></i> with vertices 
+      {(0,0),&nbsp; (<i>d</i>,0),&nbsp; (<i>d</i>-1,1)}.</TD></TR>
+  <TR valign=top><TD>(ii)</TD>
+  <TD>The triangle <i>P<SUB>i</SUB></i> with vertices
+      {(0,2<i>i</i>),&nbsp; (0,2<i>i</i>+2),&nbsp; 
+        (<i>d</i>-1-2<i>i</i>,2<i>i</i>+1)}
+      for each integer <i>i</i> lying between 0 and 
+       (<i>d</i>-1)/2.</TD></TR>
+  <TR valign=top><TD>(iii)</TD>
+  <TD>The triangle <i>Q<SUB>i</SUB></i> with vertices
+      {(0,2<i>i</i>+2),&nbsp; (<i>d</i>-1-2<i>i</i>,2<i>i</i>+1),&nbsp; 
+       (<i>d</i>-3-2<i>i</i>,2<i>i</i>+3)}
+      for  each integer <i>i</i> lying between 0 and 
+        (<i>d</i>-3)/2.</TD></TR>
+</TABLE>
+
+<P>&nbsp; &nbsp; 
+For each facet, we give polynomials <i>f<SUB>F</sub></i> 
+that define curves with only solitary points.
+These will not necessarily satisfy the compatibility
+condition, but rather a weaker one:
+A common edge <i>e</i> between two facets <i>F</i> and <i>G</i> contains only
+two lattice points, and after possibly multiplying one of the facet
+polynomials by -1, the signs of the monomials from the two facet polynomials
+agree. 
+This weak compatibility implies that there are monomial transformations
+with positive coefficients of the
+facet polynomials which do satisfy the compatibility criteria
+after adjusting the sign of one of the two polynomials.
+Since these monomial transformations do not change the geometry
+(number of solitary points, topology of the glued curve 
+<IMG SRC="Gamma.png">),
+and the dual graph to the triangulation is a chain,
+it will suffice to construct polynomials satisfying the weaker criteria
+and giving the desired topology.
+
+We describe the monomial transformations.
+Consider first a common edge <i>e</i> between adjacent facets <i>F</i> and
+<i>G</i> of the triangulation.
+Since <i>e</i> has no interior lattice points, the restrictions of the facet
+polynomials to <i>e</i> will be binomials of the form
+<CENTER>
+  <i>f<sub>F</sub></i>|<sub><i>e</i></sub> &nbsp = &nbsp  
+    <i>Ax<sup>a</sup>y<sup>b</sup></i> 
+  + <i>Bx<sup>c</sup>y</i><sup><i>b</i>+1</sup>
+  &nbsp &nbsp &nbsp and &nbsp &nbsp &nbsp 
+  <i>f<sub>G</sub></i>|<sub><i>e</i></sub> &nbsp = &nbsp  
+    <i>Cx<sup>a</sup>y<sup>b</sup></i>
+  + <i>D x<sup>c</sup>y</i><sup><i>b</i>+1</sup>&nbsp;.
+</CENTER>
+(Not only do the exponents of <i>y</i> differ by 1, 
+but one of <i>a</i> or <i>c</i> is zero.)
+For <i>z</i> not equal to zero, 
+set sgn(<i>z</i>):=<i>z</i>/|<i>z</i>|.
+We compute<BR>
+
+&nbsp; &nbsp; &nbsp; 
+sgn <img align="middle" src="mess1.png"><BR>
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &nbsp; 
+<img align="middle" src="mess2.png"><BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &nbsp; 
+<img align="middle" src="mess3.png"><BR>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &nbsp;
+    <i>Cx<sup>a</sup>y<sup>b</sup></i>
+  + <i>D x<sup>c</sup>y</i><sup><i>b</i>+1</sup>&nbsp;,<BR>
+as the weak compatibility criteria ensures that
+sgn(<i>A/C</i>)=sgn(<i>D/B</i>).
+
+
+<P>&nbsp; &nbsp;
+Since the dual graph of the triangulation is a chain,
+we encounter no obstructions when
+transforming the facet polynomials so that they
+satisfy the compatibility condition.
+More precisely, given the facet polynomial for <i>H<sub>d</sub></i>, 
+we transform the facet polynomial for 
+<i>P</i><sub>0</sub> as above, then the facet polynomial for 
+<i>Q</i><sub>0</sub>, then for
+<i>P</i><sub>1</sub>, and <i>et cetera</I>.
+
+<P>&nbsp; &nbsp;
+We now give the facet polynomials.
+The reader is invited to check that the weak compatibility conditions
+are satisfied.
+The facet <i>H<sub>d</sub></i> is the Newton polytope of the polynomial
+<i>h<sub>d</sub></i> := <i>x</i><sup><i>d</i>-1</sup>y - 
+  (1-<i>x</i>)(2-<i>x</i>) ... (<i>d</i>-<i>x</i>).
+Here are the Newton portraits of <i>h</i><sub>3</sub> and <i>h</i><sub>4</sub>.
+<CENTER>
+ <!-- fig2dev -Lpng H3.fig ../html/Harnack/C5.png -->
+  <img align=middle src="H3.png"> &nbsp; &nbsp; 
+  <img align=middle src="H4.png"> 
+</center>
+
+
+<P>&nbsp; &nbsp;
+The remaining facet polynomials are based on an idea of
+Shustin&nbsp;[p.&nbsp;849, <A HREF="../Bib.html#Sh93">Sh93</A>].
+Recall that the Chebyshev polynomials 
+<img src="Tc.png"><sub><i>k</i></sub>(<i>x</i>) 
+(defined recursively by
+<CENTER>
+ <img src="Tc.png"><sub>0</sub> := 1, &nbsp; 
+ <img src="Tc.png"><sub>1</sub> := <i>x</i>, &nbsp
+  and for <i>k</i>>1,
+ <img src="Tc.png"><sub><i>k</i></sub>(<i>x</i>) := 
+   2<i>x</i><img src="Tc.png"><sub><i>k</i>-1</sub>(<i>x</i>) 
+   - <img src="Tc.png"><sub><i>k</i>-2</sub>(<i>x</i>)&nbsp.)
+</center>
+have the property that  <img src="Tc.png"><sub><i>k</i>-1</sub>(<i>x</i>)
+has exactly <i>k</i> roots in the interval (-1,1) and 
+<i>k</i>-1 local extrema in this interval with values at 1 and -1, and 
+for |<i>x</i>|>1, |<img src="Tc.png"><sub><i>k</i></sub>(<i>x</i>)|>1.
+Lastly, the leading term of <<img src="Tc.png"><sub><i>k</i></sub>(<i>x</i>) 
+is 2<sup><i>k</i>-1</sup><i>x<sup>k</sup></i>.
+Then the polynomial
+<i>f<sub>k</sub></i>(<i>x</i>):=<i>y</i><sup>2</sup>-
+2<i>y</i><img src="Tc.png"><sub><i>k</i></sub>(<i>x</i>+2)+1 has Newton
+polytope the triangle 
+<CENTER>
+  Convex hull of  {(0,0), &nbsp; (1,<i>k</i>), &nbsp; (0, 2)}&nbsp;,
+</center>
+which is a translate of the polytope <i>P<sub>i</sub></i> by 
+(0,-2<i>i</i>) when <i>d</i>-1-2<i>i</i>=<i>k</i>.
+The curve <i>f<sub>k</sub></i>=0 in <img src="R2.png"> has 2 connected
+components and  <i>k</i>-1 solitary points.
+We display these curves for <i>k</i>=2, 3, and 4, scaling the <i>y</i>-axis by
+the transformation <i>y</i> |----> sgn(<i>y</i>)|<i>y</i>|<sup>1/<i>k</i></sup>.
+<CENTER> 
+ <IMG SRC="F_n.png">
+</CENTER>
+Here are the Newton portraits of these curves.
+We omit the interior lattice
+points in the triangles.
+<CENTER>
+ <!--fig2dev -Lpng  -m0.8  P2.fig ../html/Harnack/P2.png-->
+ <IMG ALIGN="MIDDLE"  SRC="P2.png"> &nbsp;  &nbsp; 
+ <IMG ALIGN="MIDDLE"  SRC="P3.png"> &nbsp;  &nbsp; 
+ <IMG ALIGN="MIDDLE"  SRC="P4.png"> &nbsp;  &nbsp; 
+</CENTER>
+Let <i>y</i><sup>2<i>i</i></sup><i>f</i><sub><i>d</i>-1-2<i>i</i></sub> 
+be the facet polynomial for the facet <i>P<sub>i</sub></i>.
+
+
+<P>&nbsp; &nbsp;
+Finally, set
+<DIV align="center">
+ <IMG ALIGN="MIDDLE"  SRC="mess4.png">
+ <IMG ALIGN="BOTTOM" BORDER="0" SRC="Tc.png"><IMG ALIGN="MIDDLE" SRC="mess5.png">
+</DIV>
+The Newton polytope of <i>g<sub>k</sub></i> has vertices 
+{(0,0),  (-2,2), \ (-<i>k</I>-1, 1)}.
+We display the Newton portraits of <i>g</i><sub>1</sub>, <i>g</i><sub>2</sub>, 
+<i>g</i><sub>3</sub>, and <i>g</i><sub>4</sub>.
+(For this, we first translate their Newton polytopes by 
+ (<i>k</i>+1,0), placing it into the positive quadrant.)
+<CENTER>
+ <IMG ALIGN="MIDDLE"  SRC="Pp1.png"> &nbsp;  &nbsp; 
+ <IMG ALIGN="MIDDLE"  SRC="Pp2.png"> &nbsp;  &nbsp; 
+ <IMG ALIGN="MIDDLE"  SRC="Pp3.png"> &nbsp;  &nbsp; 
+ <IMG ALIGN="MIDDLE"  SRC="Pp4.png"> &nbsp;  &nbsp; 
+</CENTER>
+Let <i>x</i><sup><i>d</i>-1-2<i>i</i></sup<i>>y</i><sup>1+2<i>i</i></sup><i>g</i><sub><i>d</i>-2-2<i>i</i></sub> be the facet polynomial of the facet
+<i>Q<sub>i</sub></i>.<BR>
+
+
+<P>&nbsp; &nbsp;
+The curve <i>C<SUB>d</SUB></i> constructed from these data by 
+Proposition&nbsp;<A HREF="#prop:Shustin">7.ii.1</A>
+has 3(<i>d</i>-2) flexes and 
+<img align=middle src="binom.png">  solitary points as claimed.
+First, since the facet curves <i>f<sub>k</sub></i> and <i>g<sub>k</sub></i> 
+each have <i>k</i>-1 solitary points,
+<i>C<SUB>d</SUB></i> has 
+(<i>d</i>-2)+(<i>d</i>-3)+\cdots+1+0 = <img align=middle src="binom.png">
+solitary points, and so is rational (in fact, the solitary points
+correspond to internal integer points of the Newton polygon).
+From the Newton portrait
+of <i>h<sub>d</sub></i>, we see that <i>C<SUB>d</SUB></i> meets the
+<i>x</i>-axis in <i>d</i> points.
+Each facet <i>P<sub>k</sub></i> contributes 2 points of intersection of 
+<i>C<SUB>d</SUB></i> with
+the <i>y</i>-axis. 
+When <i>d</i> is even, this gives <i>d</i> points of intersection, and when
+<i>d</i> is odd, <i>d</i>-1 points of intersection.
+When <i>d</i> is odd, the last facet <i>Q</i><sub>1</sub>
+(corresponding to <i>g</i><sub>1</sub>)
+contributes an additional point of
+intersection with the <i>y</i>-axis.
+Finally, each facet <i>Q<sub>k</sub></i> contributes 2 points of intersection
+of <i>C<SUB>d</SUB></i> with the 
+<i>z</i>-axis, giving <i>d</i>-2 points of intersection when <i>d</i> is even
+and <i>d</i>-1 points 
+of intersection when <i>d</i> is odd.
+The facet <i>H<sub>d</sub></i> contributes an additional point, and when
+<i>d</i> is even, the facet <img align="middle" src="Psub.png">
+(corresponding to <i>f</i><sub>2</sub>)
+contributes one point.
+
+<P>&nbsp; &nbsp;
+As a result, the curve <i>C<SUB>d</SUB></i>
+has three separate segments, each intersecting
+a different coordinate axis in <i>d</i> consecutive points going in the same
+order on the curve and on the axis.
+Thus, by counting the Whitney indices by means of the
+Gauss map we find at least <i>d</i>-2 flexes on each segment.
+Hence, the curve constructed has 3(<i>d</i>-2) flexes.
+<img align=middle src="../Shustin/qed.gif">
+
+<P>&nbsp; &nbsp;
+We show the curves <i>C</i><SUB>4</SUB>,  <i>C</i><SUB>5</SUB>, and 
+<i>C</i><SUB>6</SUB>.
+The curves next to <i>C</i><SUB>4</SUB> and <i>C</i><SUB>5</SUB> 
+are curves we computed that have the same topological type as the patchworked
+curves. 
+<CENTER>
+  <!-- fig2dev -Lpng -m0.8 C4.fig ../html/Harnack/C5.png -->
+  <IMG align="middle" SRC="../Quartics/GIF/6infl-circ.gif">
+  &nbsp; &nbsp; <IMG align="middle" SRC="C4.png"> 
+    <BR>
+  <IMG align="middle" SRC="../Quintics/9flexes/04.gif ">
+  &nbsp; &nbsp; <IMG  align="middle" SRC="C5.png">
+    <BR>
+  &nbsp; &nbsp; <IMG  align="middle" SRC="C6.png">
+</CENTER>
+
+
+<HR>
+<!--Navigation Panel-->
+ <A HREF="../Shustin/Shustin.html"><IMG SRC="../images/prev.gif" ALT="Previous"></A>
+ <A HREF="../Constructions.html"><IMG SRC="../images/toc.gif" ALT="Contents"></A>
+<BR>
+ <B> Previous:</B> <A HREF="../Shustin/Shustin.html">6.i. Curves With Maximally Many Real Nodes</A><BR>
+ <B> Up:</B> <A HREF="../Constructions.html">6. Classical Constructions</A>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
