@@ -1,0 +1,120 @@
+#C1_spline.maple
+#
+#  This file makes the animation of the three C_0 splines
+#
+with(plots):
+with(plottools):
+plotsetup(x11):
+#
+#  Here are the polynomials defining the edges of the domain cells
+#
+edges:=[x, (x-1)^2+(y+1)^2-2, x^2+(y-1)^2-1 ]:
+#
+#   This is the Macaulay 2 output of the basis fof the C1 splines.   Besides the 
+# constant splines, there is one sextic and two septic splines
+#
+#  C^1 splines
+#
+# | 1 x6+2x4y2+x2y4-4x4y-4x2y3+4x2y2                    
+# | 1 x6+2x4y2+x2y4-4x5+4x4y-4x3y2+4x2y3+4x4-8x3y+4x2y2 
+# | 1 0                                                    
+#------------------------------------------------------------------------------------------------------------------
+#  x6y+3x4y3+3x2y5+y7-4x5y-8x3y3-4xy5+8xy4-8y5-32xy2+16y3+16xy3  -8x5 +4x4y  -4x2y3+32x3y-16x2y2
+#  x6y+3x4y3+3x2y5+y7-4x5y-8x3y3-4xy5+8xy4-8y5-32xy2+16y3+16xy3  +8x4y+8x3y2       -16x3y        +16x2y 
+# 0
+#------------------------------------------------------------------------------------------------------------------
+# x7+3x5y2+3x3y4+xy6-8xy4+16xy2   +4x5        -4x3y2       -16x3y                   |
+# x7+3x5y2+3x3y4+xy6-8xy4+16xy2   -8x5+24x4y -16x3y2+24x2y3-32x3y+32x2y2+16x3-32x2y |
+# 0                                                                                 |
+#------------------------------------------------------------------------------------------------------------------
+#
+#  These have zero last component.  We add a constant spline to each and scale the result.
+#
+F:=[x^6+2*x^4*y^2+x^2*y^4-4*x^4*y-4*x^2*y^3+4*x^2*y^2,
+    x^6+2*x^4*y^2+x^2*y^4-4*x^5  +4*x^4*y-4*x^3*y^2+4*x^2*y^3+4*x^4-8*x^3*y+4*x^2*y^2, 0]:
+g:=x^6*y+3*x^4*y^3+3*x^2*y^5+y^7-4*x^5*y-8*x^3*y^3-4*x*y^5+8*x*y^4-8*y^5-32*x*y^2+16*y^3+16*x*y^3:
+G:=[g -8*x^5+4*x^4*y-4*x^2*y^3+32*x^3*y-16*x^2*y^2,
+    g +8*x^4*y+8*x^3*y^2 -16*x^3*y  +16*x^2*y, 0 ]:
+h:=x^7+3*x^5*y^2+3*x^3*y^4+x*y^6-8*x*y^4+16*x*y^2:
+H:=[4*x^5-4*x^3*y^2-16*x^3*y, -8*x^5+24*x^4*y -16*x^3*y^2+24*x^2*y^3-32*x^3*y+32*x^2*y^2+16*x^3-32*x^2*y,-h]:
+factor(F[1]-F[2]),factor(F[1]),factor(F[2]);
+factor(G[1]-G[2]),factor(G[1]),factor(G[2]);
+factor(H[1]-H[2]),factor(H[1]),factor(H[2]);
+
+#
+SP:=[seq(2*(F[i]+6*x^2*y^3)/3.2,i=1..3)]:a:=-0.5:              # C1_spline.I
+#SP:=[seq((G[i]/13.5-y^5/2+x/3)*0.9,i=1..3)]:a:=-1.25:         # C1_spline.II
+#SP:=[seq((H[i]/10 + x^2*y^5+(y-x)/2)*0.999,i=1..3)]:a:=-0.5:  # C1_spline.III
+#SP:=[seq(((H[i]+h)/15-x^5/2)*0.85,i=1..3)]:a:=-0.6:
+
+###################################################################
+SplI := proc(r,t,Sp)
+local X,Y,Th:
+ Th := t*(Pi-arcsin(r/2)) + (1-t)*(3*Pi/2):
+ X:= r*cos(Th):
+ Y:= r*sin(Th):
+ return([X,Y,subs(x=X,y=Y, Sp[1])])
+end proc:
+###################################################################
+SplII := proc(r,t,Sp)
+local X,Y,Th:
+ Th := t*(-Pi/2) + (1-t)*(arccos(r/2/sqrt(2))-Pi/4):
+ X:= r*cos(Th):
+ Y:= r*sin(Th):
+ return([X,Y,subs(x=X,y=Y, Sp[2])])
+end proc:
+###################################################################
+SplIII := proc(r,t,Sp)
+local X,Y,Th:
+ Th := t*(arccos(r/2/sqrt(2))-Pi/4) + (1-t)*(Pi-arcsin(r/2)):
+ X:= r*cos(Th):
+ Y:= r*sin(Th):
+ return([X,Y,subs(x=X,y=Y, Sp[3])])
+end proc:
+###################################################################
+
+Edges:=[
+    spacecurve(SplI(1,t,SP) , t=0..1, thickness=2,color=red,numpoints=23),
+    spacecurve(SplII(1,t,SP) , t=0..1, thickness=2,color=red,numpoints=23),
+    spacecurve(SplIII(1,t,SP) , t=0..1, thickness=2,color=red,numpoints=23)]:
+Rays:=[
+    spacecurve(SplI(r,0,SP) , r=0..1, thickness=3,color=brown,numpoints=11),
+    spacecurve(SplII(r,0,SP) , r=0..1, thickness=3,color=brown,numpoints=11),
+    spacecurve(SplIII(r,0,SP) , r=0..1, thickness=3,color=brown,numpoints=11)]:
+GI:= plot3d(SplI(r,t,SP) ,r=0..1, t=0..1,grid=[11,23],color=cyan):
+GII:= plot3d(SplII(r,t,SP) ,r=0..1, t=0..1,grid=[11,23],color=yellow):
+GIII:= plot3d(SplIII(r,t,SP) ,r=0..1, t=0..1,grid=[11,23],color=green):
+aa:=[a,a,a]:
+BaseI:=plot3d(SplI(r,t,aa) ,r=0..1, t=0..1,grid=[11,23],color=cyan, style=patchnogrid):
+BaseII:=plot3d(SplII(r,t,aa) ,r=0..1, t=0..1,grid=[11,23],color=yellow, style=patchnogrid):
+BaseIII:=plot3d(SplIII(r,t,aa) ,r=0..1, t=0..1,grid=[11,23],color=green, style=patchnogrid):
+BEdges:=[
+    spacecurve(SplI(r,0,aa) , r=0..1, thickness=3,color=brown,numpoints=11),
+    spacecurve(SplII(r,0,aa) , r=0..1, thickness=3,color=brown,numpoints=11),
+    spacecurve(SplIII(r,0,aa) , r=0..1, thickness=3,color=brown,numpoints=11),
+    spacecurve(SplI(1,t,aa) , t=0..1, thickness=2,color=red,numpoints=23),
+    spacecurve(SplII(1,t,aa) , t=0..1, thickness=2,color=red,numpoints=23),
+    spacecurve(SplIII(1,t,aa) , t=0..1, thickness=2,color=red,numpoints=23)]:
+SPointIII:=evalf(SplII(1,0,SP)):
+Lines:=[line([0,0,a],[0,0,0], color=black, numpoints=2),
+        line(SplI(1,0,SP),[SplI(1,0,SP)[1..2][],a], color=black, numpoints=2),
+        line(SPointIII,[SPointIII[1..2][],a], color=black, numpoints=2),
+        line(SplIII(1,0,SP),[SplIII(1,0,SP)[1..2][],a], color=black, numpoints=2),
+	NULL]:
+
+SPL:=[GI,GII,GIII,Edges[],Rays[],BaseI,BaseII,BaseIII,BEdges[],Lines[]]:
+
+Pic:= ang -> display(SPL,orientation=[ang,70]):
+#
+#
+NFr:=180:
+#plotsetup(gif,plotoutput="movie.gif",plotoptions=`height=700,width=600`): 
+plotsetup(gif,plotoutput="med.gif",plotoptions=`height=350,width=300`): 
+#
+animate(Pic,[ang],ang=0..(1-1/NFr)*360,scaling=constrained,axes=none,frames=NFr,paraminfo=false);
+# animate(Pic,[ang],ang=20..35,scaling=constrained,axes=none,frames=NFr);
+ 
+#plotsetup(gif,plotoutput="movieII.gif",plotoptions=`height=800,width=500`): 
+#animate(Pic,[ang],ang=150..180,scaling=constrained,axes=none,frames=NFr);
+ 
+
