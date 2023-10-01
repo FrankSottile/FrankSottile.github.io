@@ -1,0 +1,24 @@
+####################################################################
+#
+#   The copyright to this file, and the images it draws are owned by 
+# Frank Sottile.  We allow the free use of this, but you must first
+# ask permission of either Frank Sottile or Adriana Ortiz, and 
+# acknowledge our creation of these images.
+#
+####################################################################
+interface(quiet=true):
+with(plots):
+plotsetup(x11,plotoptions=`width=6in,height=6in`):
+
+
+
+f:=-9+8*x-20*y-22*x^2+24*y^2+39*y^3-17*y^4-80*x^3+15*x^4+71*x*y^2-21*x*y^3-10*x^2*y-3*x^2*y^2+4*x^3*y+36*x*y:
+
+H:=linalg[det](linalg[hessian](f,[x,y])):
+
+A:=implicitplot(H,x=-7..7,y=-4..8,grid=[200,200],axes=none,color=blue):
+#plotsetup(gif,plotoutput=sprintf("4.3o2u.gif"),plotoptions=`height=400,width=400`):
+#plotsetup(ps,plotoutput=`4.3o2u.eps`,plotoptions=`color,portrait,width=3in,height=3in,noborder`):
+display(A);
+
+time();

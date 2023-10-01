@@ -1,0 +1,18 @@
+interface(quiet=true):
+with(plots):
+with(Statistics):
+
+read("Triangles_367.data"):
+
+Points:= pointplot(Data, symbol=Circle, color=red):
+TrueLine := plot(180-60/7*x,x=-0.5..10.5, color=blue, thickness=2):
+
+X:=Vector([seq(Data[i][1],i=1..nops(Data))],datatype=float):
+Y:=Vector([seq(Data[i][2],i=1..nops(Data))],datatype=float):
+L:=LinearFit([1,t],X,Y,t);
+ 	
+TheirLine := plot(L, t=-0.5..10.5, color=maroon, thickness=2):
+
+plotsetup(gif,plotoutput="Triangles_367.gif",plotoptions="height=450,width=800"):
+
+display(Points,TrueLine,TheirLine, labels=["Number of Internal Vertices", "Sum of Angles"], labeldirections=[horizontal,vertical]  );

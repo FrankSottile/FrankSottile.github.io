@@ -1,0 +1,16 @@
+interface(quiet=true):
+#
+#   This file will check all the Schubert problems on a given Grassmannian
+#
+read("Vakil_procedures"):
+for n from 4 to 20 do 
+ printf("############################################################################\n"):
+ printf("#  Computing for the  Grassmannian G(2,%d)\n",n):
+ T:=time():
+ biggalois(2,n);
+ printf(" This took %5.2f seconds \n",time()-T):
+ printf("############################################################################\n"):
+
+end do:
+
+quit;

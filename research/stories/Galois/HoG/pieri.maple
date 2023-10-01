@@ -1,0 +1,53 @@
+# maple pieri.maple
+#
+#########################################################################
+# Build the DAG of Pieri homotopies for the given SchubertData and
+# compute Galois group for the Schubert problem at the top node of the DAG.
+#########################################################################
+#
+# Execution: see README
+#
+# Comments:
+#     simply rerun the script if it crashes for any reason;
+#     the computation will restart from the last processed node.
+
+
+############## initialization #################################
+
+# defaults
+if whattype(SchubertData)=symbol then
+  #SchubertData := [2, [[1, 0], [1, 0], 2]]:
+  #SchubertData := [5, [[1, 0], [1, 0], 4]]:
+  SchubertData := [14, [[1, 0], [1, 0], 6]]:
+  #SchubertData := [42, [[1, 0, 0], [1, 0, 0], 7]]: seed := 2:
+  #SchubertData := [132, [[1, 0], [1, 0], 10]]:
+  #SchubertData := [462, [[1, 0, 0], [1, 0, 0], 10]]:
+  #SchubertData := [4862, [[1, 0], [1, 0], 16]]:
+  #SchubertData := [6006, [[1, 0, 0], [1, 0, 0], 13]]:
+  #SchubertData := [16796, [[1, 0], [1, 0], 18]]:
+  #SchubertData := [28, [[2, 0], [1, 0], 7]]:
+  #SchubertData := [34, [[3, 0], [2, 0], 7]]:
+fi:
+if whattype(seed)=symbol then seed := 1: fi:
+if whattype(software)=symbol then
+  software := "PHCpack":
+  #software := "Bertini":
+fi:
+if whattype(debug_level)=symbol then debug_level := 0: fi:
+if not our_strategy in {half,short,long} then
+    our_strategy := short: # other choices: long, half
+fi:
+
+# homotopy parameters
+hom_cond:=0:   hom_k:=2:
+step_size:=0.1:
+sol_tolerance := 1e-4:
+
+read(procedures):
+
+############## create DAG, solve by Pieri homotopy ###########
+head := setupPieriHomotopyNodes(SchubertData, seed);
+computeMaster_PHN(head);
+read head:
+############## compute the Galois groups #####################
+computeGalois_PHN(head, our_strategy);

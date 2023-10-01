@@ -1,0 +1,134 @@
+#Corollary22_b.maple
+#
+#   This is the maple computation reported in the proof of Corollary 22 
+#
+#  It is for the Schubert problem (3,1)*(4)*(2,1,1)*(2,1,1)*(2,1,1) = 6
+#
+# Frank Sottile
+# 7 December 2018
+#################################################################################
+#interface(quiet=true):
+kernelopts(printbytes=false):
+
+die:=rand(-1..2):
+
+with(LinearAlgebra):
+
+# These are local coordinates for (3,1) * (4)
+#  The second row with last three entries x, w+x, w-x is a bit sneaky
+#  The block structure of its columns will be important.
+#  Rows 1 and 4 give a 2-plane in cols (12789) that meets a 2-plane
+#   and a complementary 3-plane
+
+Coords := Matrix([
+ [ 0, 0,   0, 0, 0, 0,   1, a, b],
+ [ 0, 0,   0, 1, z, y,   x, w+x, w-x],
+ [ 0, 1,   v, u, t, s,   r, 0, 0],
+ [ 1, c,   0, 0, 0, 0,   0, 0, 0]]):
+
+#  These are 3-planes in the C^2 given by columns 1,2,7,8,9 that are in 
+#   a particular special position.  They are the intersections of the
+#   three seven planes defining (211), (211), (211)
+
+LI := Matrix([
+ [1, 1,  0, 0, 0, 0,  1, 1, 1],
+ [1, 2,  0, 0, 0, 0,  2, 2, 0],
+ [1, 3,  0, 0, 0, 0,  3, 0, 3]]):
+
+LII := Matrix([
+ [1, 1,  0, 0, 0, 0,  2, 2, 2],
+ [1, 2,  0, 0, 0, 0,  3, 3, 0],
+ [1, 3,  0, 0, 0, 0,  1, 0, 1]]):
+
+LIII := Matrix([
+ [1, 1,  0, 0, 0, 0,  3, 3, 3],
+ [1, 2,  0, 0, 0, 0,  2, 2, 0],
+ [1, 3,  0, 0, 0, 0,  1, 0, 1]]):
+
+#ij:=2:
+#LR := [seq(die()+ij,i=1..9)]:
+#LR := [seq(r,i=1..8),1+2*ij]:
+# The first two are an attempt to find the 'right' general row for the last row of LaI.
+LP := [1,2,3,seq(p,i=1..5),1]:
+
+LaI := Matrix(3,9,die):
+LaIlp := Matrix(1,9,LP);
+LaII := Matrix(4,9,die):
+LaIII := Matrix(4,9,die):
+
+CLLI   := Matrix([[Coords], [LI],   [LaI], [LaIlp]]) ;
+CLLII  := Matrix([[Coords], [LII],  [LaII]]) :
+CLLIII := Matrix([[Coords], [LIII], [LaIII]]) :
+
+COLS :=[seq(ii,ii=1..9)]:
+#
+#  These are the equations for the auxillary problem in G(2,5)
+#    given by rows 1 and 4 of the coordinates and columns 1,2,7,8,9
+#
+SEqs:=[
+Determinant(SubMatrix(CLLI,   [1,4,5,6,7], [1,2,7,8,9])),
+Determinant(SubMatrix(CLLII,  [1,4,5,6,7], [1,2,7,8,9])),
+Determinant(SubMatrix(CLLIII, [1,4,5,6,7], [1,2,7,8,9]))];
+GB:=Groebner[Basis](SEqs,plex(a,b,c));
+factor(GB[1]);
+
+#  
+#  As this factors, it shows that the three solutions correspond to c=1,2,3
+#   which are defined over Q (and are constant)
+
+Eqs:=[]:
+
+for ROWS in combinat[choose]([seq(ii,ii=5..11)],5) do
+  Eqs:=[Eqs[],Determinant(SubMatrix(CLLI,   [1,2,3,4,ROWS[]], COLS))
+             ,Determinant(SubMatrix(CLLII,  [1,2,3,4,ROWS[]], COLS))
+             ,Determinant(SubMatrix(CLLIII, [1,2,3,4,ROWS[]], COLS))]:
+end do:
+for CLS in combinat[choose](COLS,8) do
+  Eqs:=[Eqs[],Determinant(SubMatrix(CLLI,   [1,2,3,4,8,9,10,11], CLS))
+             ,Determinant(SubMatrix(CLLII,  [1,2,3,4,8,9,10,11], CLS))
+             ,Determinant(SubMatrix(CLLIII, [1,2,3,4,8,9,10,11], CLS))]:
+end do:
+
+GG:=Groebner[Basis](subs(p=5,Eqs),lexdeg([z,y,x,w,v,u,t,s,r],[a,b,c])):
+GG:=Groebner[Basis](GG,plex(z,y,x,w,v,u,t,s,r,a,b,c)):
+with(PolynomialIdeals):
+J:=<GG>;
+
+NumberOfSolutions(J);
+#
+#  There are six solutions when p=5, which is what is expected.
+#
+
+#
+#  We check that for each value of c=1,2,3 there are two solutions to the Schubert problem, as shown by the degree is 2 in s.
+#
+GG:=Groebner[Basis](subs(c=1,Eqs),plex(a,b,z,y,x,w,v,u,t,r,s)):
+S1:=GG[1];
+GG:=Groebner[Basis](subs(c=2,Eqs),plex(a,b,z,y,x,w,v,u,t,r,s)):
+S2:=GG[1];
+GG:=Groebner[Basis](subs(c=3,Eqs),plex(a,b,z,y,x,w,v,u,t,r,s)):
+S3:=GG[1];
+
+#
+#  Let us compute their discriminants as functions of 4
+#
+D1:= primpart(expand(coeff(S1,s^2)^2 - 4* coeff(S1,s)*subs(s=0,S1)));
+D2:= primpart(expand(coeff(S2,s^2)^2 - 4* coeff(S2,s)*subs(s=0,S2)));
+D3:= primpart(expand(coeff(S3,s^2)^2 - 4* coeff(S3,s)*subs(s=0,S3)));
+#
+#  Check that these are relatively prime
+#
+Groebner[Basis]([D1,D2], plex(s));
+Groebner[Basis]([D1,D3], plex(s));
+Groebner[Basis]([D3,D2], plex(s));
+#
+#   As these are relatively prime, their branch points in the p-line are distinct.
+#
+#
+#  Numerically find the roots of the discriminants
+#
+fsolve(D1=0,complex);
+fsolve(D2=0,complex);
+fsolve(D3=0,complex);
+
+quit;
