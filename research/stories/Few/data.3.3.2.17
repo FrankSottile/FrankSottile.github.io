@@ -1,0 +1,18 @@
+#data.3.3.2.17
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^3*z^5 - h(z) = 0,
+#
+#  f, g, and h all have degree 3.
+#
+#######################################################
+k:=3:
+p:=3:
+l:=2:
+Iterations:=500:
+Instance:=5000:
+deg:=17:   #   Degree of the enumerative problem
+data:=[7102, 1692148, 2352940, 947749, 61, 0, 0, 0, 0]:
+Time:=990660.57:
+##############################################################

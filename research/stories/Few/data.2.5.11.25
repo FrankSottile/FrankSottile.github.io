@@ -1,0 +1,18 @@
+#data.2.5.11.25
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^5*z^13 - h(z) = 0,
+#
+#  f, g, and h all have degree 2.
+#
+#######################################################
+k:=2:
+p:=5:
+l:=11:
+Iterations:=500:
+Instance:=1000:
+deg:=25:   #   Degree of the enumerative problem
+data:=[85012, 509661, 403708, 1619, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+Time:=547932.59:
+##############################################################

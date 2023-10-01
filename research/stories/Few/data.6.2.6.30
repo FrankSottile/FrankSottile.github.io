@@ -1,0 +1,18 @@
+#data.6.2.6.30
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^2*z^12 - h(z) = 0,
+#
+#  f, g, and h all have degree 6.
+#
+#######################################################
+k:=6:
+p:=2:
+l:=6:
+Iterations:=500:
+Instance:=1000:
+deg:=30:   #   Degree of the enumerative problem
+data:=[27425, 208376, 308049, 283724, 129464, 34395, 7797, 739, 31, 0, 0, 0, 0, 0, 0, 0]:
+Time:=626804.01:
+##############################################################

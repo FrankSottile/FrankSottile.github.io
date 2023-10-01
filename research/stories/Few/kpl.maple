@@ -1,0 +1,85 @@
+#kpl.maple
+#
+#  This draws the polytope of these experiments.
+#
+interface(quiet=true):
+with(plots):
+with(plottools):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+AX:=1:              # 2   \
+edge_thickness:=2:  # 3    > For the Big picture
+rad:=0.1:           # .6  /
+
+k:=3:
+m:=5:
+
+Faces:=[
+[ [0,0,0], [1,0,0], [0,1,0] ],
+[ [0,0,0], [1,0,0], [0,0,k] ],
+[ [0,0,0], [0,1,0], [0,0,k] ],
+[ [1,0,0], [0,1,0], [1,2,m] ],
+[ [1,0,0], [0,0,k], [1,2,m] ],
+[ [0,1,0], [0,0,k], [1,2,m] ]]:
+
+Edges:={}:
+for F in Faces do 
+ Edges:=Edges union {{F[1],F[2]}, {F[2],F[3]}, {F[3],F[1]}}:
+end do:
+Edges:=convert(Edges, list):
+for i from 1 to nops(Edges) do 
+ Edges[i]:=convert(Edges[i], list):
+end do:
+
+Vertices:=[seq([0,0,j],j=0..k),[1,0,0],[0,1,0],[1,2,m]]:
+
+################################################################
+macro(palegreen=COLOR(RGB, .5, 1, .5)):
+macro(palegreen=COLOR(RGB, 1, 1,0)):
+
+Poly:=[]:
+for vertex in Vertices do
+ Poly:=[Poly[], sphere(vertex,0.08,color=red, style=PATCHNOGRID, grid=[10,10])]:
+end do:
+for Edge in Edges do 
+ Poly:=[Poly[],line(Edge[1],Edge[2], color=blue, thickness=2)]:
+end do:
+for Face in Faces do
+  v1:=Face[1]:
+  v2:=Face[2]:
+  v3:=Face[3]:
+  face:=[v1[1]+(th*v2[1]+(1-th)*v3[1]-v1[1])*r,
+         v1[2]+(th*v2[2]+(1-th)*v3[2]-v1[2])*r,
+         v1[3]+(th*v2[3]+(1-th)*v3[3]-v1[3])*r]:
+  Poly:=[Poly[],
+     plot3d(face, r=0..1, th=0..1, grid=[2,20], color=palegreen, style=PATCHNOGRID)]:
+end do:
+
+#
+#  Axes
+#
+Xa:=spacecurve([t,0,0],t=-0.4..1.8,color=black,thickness=AX):
+XC:=plot3d([2-t,t/5*cos(th),t/5*sin(th)],
+               t=0..1/4,th=-Pi..Pi,style=PATCHNOGRID,color=black):
+Ya:=spacecurve([0,t,0],t=-0.4..1.8,color=black,thickness=AX):
+YC:=plot3d([t/5*cos(th),2-t,t/5*sin(th)],
+               t=0..1/4,th=-Pi..Pi,style=PATCHNOGRID,color=black):
+Za:=spacecurve([0,0,t],t=-0.4..max(k,m)-0.1,color=black,thickness=AX):
+ZC:=plot3d([t/5*cos(th),t/5*sin(th),max(k,m)-t],
+               t=0..1/3,th=-Pi..Pi,style=PATCHNOGRID,color=black):
+
+Axes:=[Xa,Ya,Za,XC,YC,ZC]:
+
+#plotsetup(ps,plotoutput=`Polytope.eps`,
+#          plotoptions=`color,portrait,width=1.5in,height=3.5in,noborder`);
+#
+#    660,660 is for the webpage, and 220,220 is for the page: stories
+#    270x450                          90x150
+#
+#plotsetup(gif,plotoutput=`kpl.gif`,plotoptions=`height=220,width=220`):
+plotsetup(gif,plotoutput=`kpl.gif`,plotoptions=`height=660,width=660`):
+display([Poly[],Axes[]
+],view=[-.4..2.2,-.4..2.2,-.4..max(k+1,m)+0.4],orientation=[-25,60],scaling=CONSTRAINED);
+
+
+

@@ -1,0 +1,18 @@
+#data.5.3.-3.22
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^3*z^2 - h(z) = 0,
+#
+#  f, g, and h all have degree 5.
+#
+#######################################################
+k:=5:
+p:=3:
+l:=-3:
+Iterations:=500:
+Instance:=1000:
+deg:=22:   #   Degree of the enumerative problem
+data:=[181, 128320, 328423, 335118, 169531, 35829, 2541, 57, 0, 0, 0, 0]:
+Time:=516843.14:
+##############################################################

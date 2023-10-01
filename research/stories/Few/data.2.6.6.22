@@ -1,0 +1,18 @@
+#data.2.6.6.22
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^6*z^8 - h(z) = 0,
+#
+#  f, g, and h all have degree 2.
+#
+#######################################################
+k:=2:
+p:=6:
+l:=6:
+Iterations:=500:
+Instance:=2000:
+deg:=22:   #   Degree of the enumerative problem
+data:=[136970, 672042, 665280, 453457, 72251, 0, 0, 0, 0, 0, 0, 0]:
+Time:=825799.05:
+##############################################################

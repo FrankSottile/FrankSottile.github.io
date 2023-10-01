@@ -1,0 +1,18 @@
+#data.2.6.11.27
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^6*z^13 - h(z) = 0,
+#
+#  f, g, and h all have degree 2.
+#
+#######################################################
+k:=2:
+p:=6:
+l:=11:
+Iterations:=500:
+Instance:=1000:
+deg:=27:   #   Degree of the enumerative problem
+data:=[121611, 480554, 347351, 50120, 364, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+Time:=660824.70:
+##############################################################

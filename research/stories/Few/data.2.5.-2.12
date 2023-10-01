@@ -1,0 +1,18 @@
+#data.2.5.-2.12
+#
+# We study the maximum number of real solutions to 
+#
+# f(z)*g(z)^5*z^0 - h(z) = 0,
+#
+#  f, g, and h all have degree 2.
+#
+#######################################################
+k:=2:
+p:=5:
+l:=-2:
+Iterations:=500:
+Instance:=3000:
+deg:=12:   #   Degree of the enumerative problem
+data:=[208616, 745818, 2044317, 1249, 0, 0, 0]:
+Time:=427646.37:
+##############################################################
