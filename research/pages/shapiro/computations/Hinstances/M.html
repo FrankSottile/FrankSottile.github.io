@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+   <TITLE>Shapiro and Shapiro: Hypersurface Schubert conditions</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="../../SectII.7.html"><IMG SRC="../../figures/prev.gif" 
+ALT="Previous"></A>
+<HR>
+
+<H2>Case  <I>m,p</I>=4,2</H2>
+
+
+This is the first case where evidence for Shapro's conjecture was found by
+Rosenthal and Sottile [<a href="Bib.html">RS</a>] (A
+<a href="http://www.nd.edu/~rosen/pole/index.html">description</A> of the
+computations.) 
+It is hard to express how astounding it was to see that the choices in
+Conjecture 1 seemed to give only real solutions after doing many more
+general computations.
+<P>
+
+To test Conjecture 1 in these cases, we need only use a MapleV.5 script,
+which you can 
+<A HREF="42.instances">view</A>.
+This script generates an instance, computes a degree reverse lexicographic
+Gr&ouml;bner basis, and then uses
+the FGLM conversion algorithm to compute the eliminant, and then finally
+checks to see if all the roots are real.
+If not, it prints an error message.
+Some procedures to do the FGLM conversion are contained in another Maple
+script, 
+<A HREF="MakeLex">MakeLex</A>.
+
+
+<P>
+We use local coordinates which reduce the number of parameters by 2.
+While this complicates the first degree reverse lexicographic Gr&ouml;bner
+basis (Strange, that fewer variables slow the computation!), it greatly
+expediates the computation of the eliminant.
+
+
+
+<HR>
+<A HREF="../../SectII.7.html"><IMG SRC="../../figures/prev.gif" ALT="Previous"></A>
+</BODY>
+</HTML>

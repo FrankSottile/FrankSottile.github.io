@@ -1,0 +1,99 @@
+ 6*e*h*g*c*a+ 4*e*h*g*b*a+f*h*d*b*a+ 4*h*d*g*b*a+ 3*e*h*g*c+ 3*e*h*g*b-e*h
+*b*a+ 4*f*h*d*b-f*h*c*a+ 2*f*d*b*a+ 4*h*d*g*b-4*h*g*c*a+ 2*e*h*g-4*e*h*b-2*
+e*b*a+ 3*f*h*d-4*f*h*c+ 2*f*d*b-2*f*c*a+ 2*h*d*g-4*h*g*c-3*e*h-2*e*b+ 5*f*h
++ 6*f*d-2*f*c+ 3*h*g-6*e+ 6*f+ 4*h+ 3;
+ 4*e*h*g*c*a+ 6*e*h*g*b*a+f*h*d*b*a+ 4*h*d*g*b*a+ 6*e*h*g*c+e*h*g*b-e*h*b*
+a+ 3*f*h*d*b-f*h*c*a+ 3*f*d*b*a+ 6*h*d*g*b-4*h*g*c*a+ 6*e*h*g-3*e*h*b-3*e*b
+*a+ 6*f*h*d-3*f*h*c+ 4*f*d*b-3*f*c*a+ 3*h*d*g-6*h*g*c-6*e*h-4*e*b+ 2*f*h+ 3
+*f*d-4*f*c+h*g-3*e+ 4*f+ 2*h+ 1;
+e*h*g*c*a+e*h*g*b*a+ 2*f*h*d*b*a+ 6*h*d*g*b*a+ 4*e*h*g*c+ 2*e*h*g*b-2*e*h*
+b*a+ 2*f*h*d*b-2*f*h*c*a+ 4*f*d*b*a+ 4*h*d*g*b-6*h*g*c*a+e*h*g-2*e*h*b-4*e*
+b*a+ 6*f*h*d-2*f*h*c+ 2*f*d*b-4*f*c*a+ 6*h*d*g-4*h*g*c-6*e*h-2*e*b+ 4*f*h+
+ 2*f*d-2*f*c+ 4*h*g-2*e+ 5*f+h+ 5;
+ 2*e*h*g*c*a+ 2*e*h*g*b*a+f*h*d*b*a+ 3*h*d*g*b*a+ 5*e*h*g*c+ 6*e*h*g*b-e*h
+*b*a+ 3*f*h*d*b-f*h*c*a+ 6*f*d*b*a+ 6*h*d*g*b-3*h*g*c*a+ 4*e*h*g-3*e*h*b-6*
+e*b*a+ 4*f*h*d-3*f*h*c+ 4*f*d*b-6*f*c*a+ 3*h*d*g-6*h*g*c-4*e*h-4*e*b+ 4*f*h
++ 3*f*d-4*f*c+ 5*h*g-3*e+f+ 4*h+ 2;
+ 6*e*h*g*c*a+ 4*e*h*g*b*a+ 4*f*h*d*b*a+ 5*h*d*g*b*a+e*h*g*c+ 2*e*h*g*b-4*e
+*h*b*a+ 2*f*h*d*b-4*f*h*c*a+ 2*f*d*b*a+ 3*h*d*g*b-5*h*g*c*a+ 4*e*h*g-2*e*h*
+b-2*e*b*a+ 4*f*h*d-2*f*h*c+ 6*f*d*b-2*f*c*a+ 6*h*d*g-3*h*g*c-4*e*h-6*e*b+ 6
+*f*h+ 4*f*d-6*f*c+ 5*h*g-4*e+ 5*f+ 2*h+ 5;
+ 3*e*h*g*c*a+ 2*e*h*g*b*a+ 5*f*h*d*b*a+ 4*h*d*g*b*a+ 5*e*h*g*c+ 6*e*h*g*b
+-5*e*h*b*a+f*h*d*b-5*f*h*c*a+ 6*f*d*b*a+ 6*h*d*g*b-4*h*g*c*a+e*h*g-e*h*b-6*e
+*b*a+ 2*f*h*d-f*h*c+ 5*f*d*b-6*f*c*a+ 3*h*d*g-6*h*g*c-2*e*h-5*e*b+f*h+ 4*f*
+d-5*f*c+ 5*h*g-4*e+ 5*f+ 3*h+ 6;
+ 4*e*h*g*c*a+ 2*e*h*g*b*a+f*h*d*b*a+ 4*h*d*g*b*a+ 5*e*h*g*c+ 5*e*h*g*b-e*h
+*b*a+ 3*f*h*d*b-f*h*c*a+ 6*f*d*b*a+ 5*h*d*g*b-4*h*g*c*a+ 3*e*h*g-3*e*h*b-6*
+e*b*a+ 4*f*h*d-3*f*h*c+ 4*f*d*b-6*f*c*a+h*d*g-5*h*g*c-4*e*h-4*e*b+ 3*f*h+f*
+d-4*f*c+ 4*h*g-e+ 2*f+ 5*h+ 5;
+ 4*e*h*g*c*a+e*h*g*b*a+ 6*f*h*d*b*a+ 6*h*d*g*b*a+ 3*e*h*g*c+ 4*e*h*g*b-6*e
+*h*b*a+f*h*d*b-6*f*h*c*a+ 6*f*d*b*a+h*d*g*b-6*h*g*c*a+ 6*e*h*g-e*h*b-6*e*b*
+a+ 4*f*h*d-f*h*c+ 5*f*d*b-6*f*c*a+ 4*h*d*g-h*g*c-4*e*h-5*e*b+ 5*f*h+ 3*f*d
+-5*f*c+h*g-3*e+ 4*f+ 5*h+ 3;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                  1.870000000 =  0h 0m 1s870ms
+User time in seconds was                         1.870000000 =  0h 0m 1s870ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                         41
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+THE LIFTED SUPPORTS :
+
+ 1 0 1 0 1 1 0 0 0
+ 1 0 1 0 0 0 1 1 0
+ 1 0 1 0 1 0 1 1 0
+ 0 1 1 0 0 1 0 1 0
+ 0 1 0 1 0 0 1 1 0
+ 0 0 1 1 1 0 1 1 0
+ 0 1 1 1 0 0 1 1 0
+ 1 0 1 0 1 1 0 1 0
+ 0 0 0 0 0 0 0 0 0
+ 0 1 1 1 0 0 1 0 1
+ 1 0 0 0 0 0 1 1 1
+ 1 0 1 0 1 0 1 0 3
+ 0 1 0 1 0 0 0 0 1
+ 1 0 0 0 0 0 1 0 5
+ 0 0 1 0 1 1 0 1 4
+ 0 1 0 0 0 1 0 1 5
+ 0 0 1 1 1 0 0 0 4
+ 1 0 0 0 0 0 0 0 6
+ 0 1 0 1 0 0 1 0 7
+ 0 1 0 0 0 1 0 0 13
+ 0 0 1 0 1 1 0 0 17
+ 0 0 1 1 1 0 1 0 27
+ 1 0 1 0 1 0 0 0 19
+ 0 0 1 0 0 0 0 0 64
+ 1 0 1 0 0 0 1 0 71
+ 1 0 1 0 0 0 0 0 88
+ 0 1 0 0 0 0 0 0 33
+ 0 1 1 0 0 1 0 0 96
+ 0 0 1 0 1 0 0 0 124
+ 0 1 1 1 0 0 0 0 125
+ 0 1 1 0 0 0 0 0 246
+
+THE TRIANGULATION :
+
+Dimension without lifting : 8
+Number of simplices : 360
+
+The volume : 364
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                  0.480000000 =  0h 0m 0s480ms
+User time in seconds was                         0.460000000 =  0h 0m 0s460ms
+System CPU time in seconds was                   0.020000000 =  0h 0m 0s 20ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+

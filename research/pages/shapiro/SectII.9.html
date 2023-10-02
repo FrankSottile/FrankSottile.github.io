@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+   <TITLE>Why these equations are interesting</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectII.8.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIII.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>2.ix. Why these equations are interesting</H2>
+
+The polynomial systems involved in Shapiro's conjecture are interesting not
+only because they arise in both geometry and the control of linear systems,
+and are conjectured to have all solutions real, but because they are highly
+deficient.
+By this we mean that they have far fewer solutions than standard
+combinatorial bounds.
+We illustrate this in the table below (Verschelde has a similar, but more
+intensive, table).
+Below each pair <I>m,p</I>, we give the bound on the number of solutions
+<I>d<SUB>m,p</SUB></I>, and then two standard combinatorial bounds.
+The first is the volume of the Newton Polytope of the polynomials in the
+polynomial systems.
+This was computed using Jan Verschelde's program 
+<A HREF="http://www.msri.org/people/members/jan/PHCpack/paper.html">PHC</A>.
+The last is the B&eacute;zout bound, the degree min(<I>m,p</I>) of the
+system raised to the power <I>mp</I>-2, which is the number of equations.
+<P>
+<FONT SIZE=+1 COLOR="5c3317"><B>Combinatorial Bounds
+vs. <I>d<SUB>m,p</SUB></I></B></FONT>  
+<BR><BR>
+
+
+<TABLE ALIGN=left BORDER=1>
+<TR><TH><I>m,p</I>
+   <TH>2,2<TH>3,2<TH>4,2<TH>5,2<TH>6,2<TH>7,2<TH>8,2<TH>9,2
+<TR><TH><I>d<SUB>m,p</SUB></I>
+   <TD>&nbsp;&nbsp;2<TD>&nbsp;&nbsp;5<TD>&nbsp;&nbsp;14
+   <TD>&nbsp;&nbsp;42<TD>&nbsp;&nbsp;132<TD>&nbsp;&nbsp;429&nbsp;
+   <TD>&nbsp;&nbsp;1430&nbsp;<TD>&nbsp;&nbsp;4862&nbsp;
+<TR><TH>Newton Polytope
+   <TD>&nbsp;&nbsp;2<TD>&nbsp;&nbsp;5<TD>&nbsp;&nbsp;18
+   <TD>&nbsp;&nbsp;67<TD>&nbsp;&nbsp;248<TD>&nbsp;&nbsp;919
+   <TD>&nbsp;&nbsp;3246<TD>&nbsp;12863&nbsp;
+<TR><TH>B&eacute;zout Bound
+   <TD>&nbsp;&nbsp;4<TD>&nbsp;16<TD>&nbsp;&nbsp;64&nbsp;
+   <TD>&nbsp;256&nbsp;<TD>&nbsp;1024&nbsp;
+   <TD>&nbsp;4096&nbsp;<TD>&nbsp;16384&nbsp;<TD>&nbsp;65536&nbsp;
+</TABLE>
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+
+<TABLE ALIGN=left BORDER=1>
+<TR><TH><I>m,p</I>
+   <TH>2,3<TH>3,3<TH>4,3<TH>5,3<TH>2,4<TH>3,4<TH>2,5<TH>2,6
+<TR><TH><I>d<SUB>m,p</SUB></I>
+   <TD>&nbsp;&nbsp;5<TD>&nbsp;&nbsp;&nbsp;42
+   <TD>&nbsp;&nbsp;&nbsp;462<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6006
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;14<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;462
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;132
+<TR><TH>Newton Polytope
+   <TD>&nbsp;&nbsp;5<TD>&nbsp;&nbsp;130
+   <TD>&nbsp;&nbsp;3004<TD>&nbsp;&nbsp;&nbsp;&nbsp;74645&nbsp;
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;42<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7156&nbsp;
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;364<TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4136
+<TR><TH>B&eacute;zout Bound
+   <TD>&nbsp;81&nbsp;<TD>&nbsp;2187&nbsp;
+   <TD>&nbsp;59049&nbsp;<TD>&nbsp;1594323&nbsp;
+   <TD>&nbsp;4096&nbsp;<TD>&nbsp;1048576&nbsp;
+   <TD>&nbsp;390625&nbsp;<TD>&nbsp;60465776&nbsp;
+</TABLE>
+<BR><BR><BR><BR><BR><BR><BR><BR>
+The 
+<A HREF="http://www.msri.org/people/members/jan/PHCpack/paper.html">PHC</A>
+input files (all named Vmp) and output files (named Omp) used for this table
+may be obtained by <A HREF="computations/PHC/index.html">browsing</A>.
+There, the files pX.maple were used to generate the files Vmp.
+
+
+<HR>
+<A HREF="SectII.8.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIII.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>

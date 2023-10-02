@@ -1,0 +1,60 @@
+interface(quiet=true):
+
+##########################################################################
+#
+#	This MAPLE code is designed to set up and run a single instance
+#	of Shapiro's conjecture concerning real enumerative goemetry.
+#
+#	It treats the enumerative problem of 12 codimension 1 Schubert
+#	hypersurfaces in G_{3,4}, each defined by a codimension 3-plane.   
+#	There are 462 3-planes meeting 13 codimension 3 linear subspaces
+#	in C^7.  
+#
+#					                seconds 
+#	Computing drl gr\"obner basis  (SINGULAR)     
+#	 
+##############################
+with(linalg):
+
+L := s -> matrix([
+[s^6, 6*s^5,15*s^4,20*s^3, j , k , l],
+[s^5, 5*s^4,10*s^3,10*s^2, g , h , i],
+[s^4, 4*s^3, 6*s^2, 4*s  , d , e , f],
+[s^3, 3*s^2, 3*s  ,  1   , a , b , c],
+[s^2, 2*s  ,  1   ,  0   , 0 , 0 , 1],
+[s  ,  1   ,  0   ,  0   , 0 , 1 , 0],
+[1  ,  0   ,  0   ,  0   , 1 , 0 , 0]]):
+
+
+
+lprint(`int t=timer;`);
+
+lprint(`ring R = 0,(a,b,c,d,e,f,g,h,i,j,k,l), (dp(12));`);
+
+Index:={1,2,3,4,5,6,7,8,9,10,11,12}:
+
+equations:= {}:
+for ii in Index do
+equations:= equations union {det(L(ii))}:
+od:
+
+
+lprint(`print("interface(quiet=true):");`);
+lprint(`print("with(linalg):");`);
+lprint(`print("readlib(realroot):");`);
+lprint(`print("");`);
+
+
+lprint(`ideal I =`);
+for ee in equations do
+lprint(eval(ee),`,`);od;
+lprint(`0;`);
+lprint(`ideal G = std(I);`);
+lprint(`dim(G);`);
+lprint(`mult(G);`);
+lprint(`timer-t;`);
+lprint(`print(G);`);
+lprint(`quit;`);
+
+
+quit;

@@ -1,0 +1,44 @@
+#Theorem38iv.final
+#
+#   This file completes the demonstration of Theorem 3.9 (iv)
+# We first take the Gr\"obner basis computed by Singular, and then 
+# we eliminate the variables c,d,e,f, simply by dropping the equations
+# containing them.  We next successively eliminate the variable b, leaving a
+# single degree 8 equation in a and the parameters s and t.   This is
+# factored into quadratics, each of which is solved.
+#
+#
+with(Groebner):
+
+G:=[]:for i from 1 to 65 do G:=[G[],0]: od:
+
+read("Theorem39iveqs"):
+
+nops(G);
+
+H:=[]:
+
+for i from 1 to nops(G) do 
+if (indets(op(i,G)) minus {a,b,s,t} )={} then H:=[H[],op(i,G)]: fi: od:
+
+nops(H);
+
+HH:=gbasis(H,wdeg([1,1],[a,b])):
+HH:=gbasis(HH,wdeg([1,4],[a,b])):
+HH:=gbasis(HH,wdeg([1,6],[a,b])):
+HH:=gbasis(HH,wdeg([2,13],[a,b])):
+HH:=gbasis(HH,wdeg([2,14],[a,b])):
+HH:=gbasis(HH,wdeg([3,22],[a,b])):
+
+for i from 1 to nops(HH) do indets(HH[i]); od;
+
+elim:=HH[2]:
+
+FAC:=factor(elim):
+lprint(FAC);
+solve(op(1,FAC)=0,a);
+solve(op(2,FAC)=0,a);
+solve(op(3,FAC)=0,a);
+solve(op(4,FAC)=0,a);
+
+quit;

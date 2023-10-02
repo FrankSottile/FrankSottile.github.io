@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+   <TITLE>Equivalent systems</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectII.4.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.6.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>2.v. Equivalent systems</H2>
+
+The conjecture of Shapiro and Shapiro 
+(<B><A HREF="SectII.2.html#conj">Conjecture 1</A></B>) concerns a very
+specific polynomial  <I>f(s)</I>:
+<BR>
+<TABLE  ALIGN=center><TR><TD>
+<img src="figures/FKs.gif"  height=90 width=210><BR>
+</TABLE>
+There are a number of equivalent polynomial systems, including those with
+fewer indeterminants.
+To see this, we appeal to geometry.
+<P>
+
+&#160;&#160;
+First, our choice of <I>F</I> as local coordinates for the Grassmannian is
+not canonical, and any other choice will give an equivalent system of
+polynomials.
+We caution that  for some choices of the parameters
+<I>s<SUB>1</SUB>, s<SUB>2</SUB>, ..., s<SUB>mp</SUB></I>, there may be 
+solutions that do not lie in the chosen coordinate patch.
+<P>
+
+&#160;&#160;
+More interesting is the matrix <I>K(s)</I>.
+The first row consists of all monomials of degree less than <I>m+p</I>,
+and subsequent rows are derivatives of the first.
+The first row is a parameterization of a rational normal curve in 
+<B>C</B><SUP><I>m+p</I></SUP>, and so it follows that <I>K(s)</I> is the
+<I>m</I>-plane osculating this curve.
+Since all parameterized rational normal curves are projectively equivalent,
+we are free to replace <I>K(s)</I> in the definition of <I>f(s)</I> above 
+by <I>any</I> <I>m</I>-plane osculating a parameterized real rational normal
+curve.
+(This is equivalent to choosing different local coordinates for the
+Grassmannian.)
+<P>
+
+&#160;&#160;
+Reparameterizing the original rational normal curve, we may assume that up
+to 3 of the <I>s<SUB>i</SUB></I> are any fixed points on the projective line.
+It is most useful to fix one to be 0 and one to be the point at infinity.
+Doing so, we may reduce the parameters by 2, and choose local coordinates
+for the set of <I>p</I>-planes <I>H</I> which meet the <I>m</I>-plane 
+osculating at 0 and infinity.
+For details on the selection, see Section 2.5 of "Real Schubert Calculus:
+Polynomial systems and a conjecture of Shapiro and Shapiro".
+We have a Maple script that will <A HREF="computations/Loc_Coords.maple">
+generate</A> local coordinates.
+
+<HR>
+<A HREF="SectII.4.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.6.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>

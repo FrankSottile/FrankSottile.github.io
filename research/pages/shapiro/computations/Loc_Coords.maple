@@ -1,0 +1,69 @@
+#Loc_Coords.maple
+#
+# This maple file takes as input m and p, and two Schubert conditions
+# \alpha and \beta.   Its output will be a matrix giving local coordintes
+# for the intersection of the Schubert varieties X_\alpha and X_\beta, 
+# defied by opposite flags.   (The Column space of the matrix gives a
+# p-plane.) 
+#
+interface(quiet=true):
+
+#####################
+                    #   Change these !
+m := 5:    p:=3:    #   
+alpha:=[1,2,6]:     #  alpha and beta are increasing sequences 
+beta:= [1,3,5]:     #  of length  p lying between 1 and m+p.
+                    #  For Hypersurface Schubert conditions, 
+                    #  alpha = beta = 1, 2, ..., p-1, p+1.
+#####################
+#
+#    Check that  m, p, alpha and beta are compatible.
+#
+OK:= true:
+OK:=OK and evalb(m>0) and evalb(p>0):
+if not(OK) then 
+  lprint(`m or p not both positive`):  quit:
+fi:
+OK:=OK and evalb(alpha[1]>0) and evalb(beta[1]>0):
+if not(OK) then 
+  lprint(`alpha  or  beta  not both positive`):  quit:
+fi:
+for i from 2 to p do
+  OK:=OK and evalb(alpha[i]>alpha[i-1]):
+  OK:=OK and evalb(beta[i]>beta[i-1]):
+od:
+if not(OK) then 
+  lprint(`alpha or beta not both increasing`):  quit:
+fi:
+
+for i from 1 to p do                              #  Checks if alpha
+  OK:= OK and evalb(alpha[i]+beta[p+1-i]<m+p+1):  #  and beta give a
+od:                                               #  nonempty ntersection
+if not(OK) then 
+  lprint(`X_alpha and X_beta have empty intersection!`): quit:
+fi:
+
+###########################################################
+#                                                         #
+#   Construct Coords, the matrix of local coordinates     #
+#                                                         #
+###########################################################
+Coords:=linalg[matrix](m+p,p,0):
+
+for i from 1 to m+p do
+   for j from 1 to p do
+     if (i=alpha[j]) then Coords[i,j]:=1: fi:
+     if (i>alpha[j]) and (i+beta[p+1-j]<m+p+2) then 
+        Coords[i,j]:=x.i.j:
+     fi:
+   od:
+od:
+
+evalm(Coords);
+print(alpha,beta);
+
+quit;
+
+
+
+

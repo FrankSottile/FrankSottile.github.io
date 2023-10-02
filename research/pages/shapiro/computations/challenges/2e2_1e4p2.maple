@@ -1,0 +1,23 @@
+with(linalg):
+with(Groebner):
+read(ELEMENTARIZE):
+#
+Eq := s ->det( matrix([
+[1, s ,s^2,  s^3,  s^4,   s^5],
+[0, 1 ,2*s,3*s^2,4*s^3, 5*s^4],
+[0, 0 , 1 ,3*s  ,6*s^2,10*s^3],
+[0, 0 , 0 ,  1  ,4*s  ,10*s^2],
+[1,x12,x13,  0  ,  0  ,  0   ],
+[0, 0 , 0 ,  1  , x25 , x26  ]])):
+#
+#
+G:=gbasis([Eq(s),Eq(t),Eq(u),Eq(v)],
+	plex(x12,x26,x13,x25)):
+UniversalEliminant:=G[1]:
+#AA:=sort(Elementarize(UniversalEliminant,[s,t,u,v]),[x25]):
+#Disc:=discrim(DD,x25):
+Discriminant:=discrim(UniversalEliminant,x25):
+lprint(Discriminant);
+#
+quit;
+Disc:=sort(expand(subs(E1=s+t+u+v,E2=s*t+s*u+s*v+t*u+t*v+u*v,E3=s*t*u+s*t*v+s*u*v+t*u*v,E4=s*t*u*v,Discriminant)),[s,t,u,v]):

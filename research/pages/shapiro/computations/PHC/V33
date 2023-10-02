@@ -1,0 +1,15 @@
+7
+3+4*f+6*g+5*c+3*c*f+6*c*g+3*d*f-3*e+2*d*g+2*e*g+2*a*c-2*b+4*a*c*f-4*b*f+4*a*c*g
+-4*b*g+3*a*d*f-3*a*e+3*a*d*g+2*a*e*g+b*d*f-b*e+4*b*d*g+4*b*e*g   ;
+1+f+2*g+4*c+2*c*f+c*g+3*d*f-3*e+6*d*g+3*e*g+6*a*c-6*b+4*a*c*f-4*b*f+3*a*c*g-3*b
+*g+6*a*d*f-6*a*e+a*d*g+6*a*e*g+3*b*d*f-3*b*e+b*d*g+4*b*e*g   ;
+3+2*f+5*g+c+5*c*f+4*c*g+4*d*f-4*e+2*d*g+6*e*g+6*a*c-6*b+a*c*f-b*f+2*a*c*g-2*b*g
++2*a*d*f-2*a*e+4*a*d*g+2*a*e*g+4*b*d*f-4*b*e+4*b*d*g+2*b*e*g   ;
+1+4*f+4*g+2*c+4*c*f+c*g+4*d*f-4*e+5*d*g+3*e*g+4*a*c-4*b+3*a*c*f-3*b*f+4*a*c*g-4
+*b*g+4*a*d*f-4*a*e+3*a*d*g+6*a*e*g+6*b*d*f-6*b*e+5*b*d*g+6*b*e*g   ;
+2+2*f+5*g+c+5*c*f+2*c*g+5*d*f-5*e+6*d*g+5*e*g+4*a*c-4*b+4*a*c*f-4*b*f+6*a*c*g-6
+*b*g+4*a*d*f-4*a*e+6*a*d*g+2*a*e*g+3*b*d*f-3*b*e+2*b*d*g+b*e*g   ;
+5+4*f+6*g+c+2*c*f+6*c*g+3*d*f-3*e+5*d*g+e*g+5*a*c-5*b+4*a*c*f-4*b*f+2*a*c*g-2*b
+*g+3*a*d*f-3*a*e+a*d*g+5*a*e*g+b*d*f-b*e+6*b*d*g+6*b*e*g   ;
+5+4*f+2*g+3*c+5*c*f+3*c*g+5*d*f-5*e+5*d*g+2*e*g+3*a*c-3*b+4*a*c*f-4*b*f+a*c*g-b
+*g+4*a*d*f-4*a*e+a*d*g+3*a*e*g+4*b*d*f-4*b*e+3*b*d*g+5*b*e*g   ;

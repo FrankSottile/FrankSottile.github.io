@@ -1,0 +1,171 @@
+#62.instances
+#
+# This maple file is set up to run instances of 
+# Shapiro's conjecture for Grass(6,2), namely, the 132 2-planes
+# which meet 12 6-planes in C^8
+#
+# We work in local coordinates for the set of 2-planes which meet
+# the 6-planes K_6(0) and K_6(\infty).  The idea here is to compute
+# instances corresponding to the limit as one of other 2-planes
+# moves in coincidience with K_6(0) and another one moves into coincidence
+# with K_6(\infty).  This decomposes the equations into four pieces, one of
+# degree 62, two of degree 28, and one of degree 14,
+# each of which we do separately.
+#
+# This checks rather degenerate instances of Shapiro's conjecture in this
+# case.  This particular computation led to the breakthrough in real
+# enumetative geometry described in "The special Schubert calculus is real".
+#
+# We create a Singular input file with the resulting equations, then run it
+# to create a MAPLE file to test for real roots.
+#
+#     choose([1,2,3,4,5,6,7,8,9],8):     choose([-3,-2,-1,1,2,3,4,5,6,7],8):
+#
+#          9 Instances				    45 Instances
+#
+#                       time      size       time      size
+#  Create systems        76       65675      395      309682
+#  Compute Eliminants  1510      113519     4699      450207
+#  Show roots real     2205                10300
+#
+#
+#
+##################################################################
+#
+interface(quiet=true):
+
+with(combinat):
+with(linalg):
+with(Groebner):
+
+ST_Nreal:="lprint(`realroots = `,NREAL1,NREAL2,NREAL3,NREAL4,`Vals = `,":
+ST_end:=");":
+
+trials:=choose([-3,-2,-1,1,2,3,4,5,6,7],8):
+#
+nops(trials);   quit;
+
+Eq1 := s -> simplify(det(stackmatrix(
+submatrix(exponential(band([0,0,1],8),s),[1,2,3,4,5,6],[1,2,3,4,5,6,7,8]),
+   matrix([   [1,a, b , c , d , 0 , 0 , 0 ],
+              [0,0, 0 , 1 , e , f , g , h ]])))/s/s):
+
+Eq2 := s -> simplify(det(stackmatrix(
+submatrix(exponential(band([0,0,1],8),s),[1,2,3,4,5,6],[1,2,3,4,5,6,7,8]),
+   matrix([   [0,1,a, b , c , 0 , 0 , 0 ],
+              [0,0,1, d , e , f , g , h ]])))/s/s):
+
+Eq3 := s -> simplify(det(stackmatrix(
+submatrix(exponential(band([0,0,1],8),s),[1,2,3,4,5,6],[1,2,3,4,5,6,7,8]),
+   matrix([   [1,a, b , c , d , e , 0 , 0 ],
+              [0,0, 0 , 1 , f , g , h , 0 ]])))/s/s):
+
+Eq4 := s -> simplify(det(stackmatrix(
+submatrix(exponential(band([0,0,1],8),s),[1,2,3,4,5,6],[1,2,3,4,5,6,7,8]),
+   matrix([   [0,1,a, b , c , d , 0 , 0 ],
+              [0,0,1, e , f , g , h , 0 ]])))/s/s):
+
+#############################################################################
+#
+
+lprint(`timer = 1;`);
+lprint(`option(redSB);`);
+lprint(`int t=timer;`);
+lprint(`ring R= 0, (a,b,c,d,e,f,g,h), dp;`);
+lprint(`ideal I;`);
+lprint(`ideal H;`);
+lprint(`ring S= 0, (h,g,f,e,d,c,b,a), (dp(7),dp(1));`);
+lprint(`ideal G;`);
+lprint(`ring T= 0, (h,g,f,e,d,b,a,c), (dp(7),dp(1));`);
+lprint(`ideal K;`);
+lprint(`print("interface(quiet=true):");`);
+lprint(`print("readlib(realroot):");`);
+
+for ntimes from 1 to  nops(trials) do
+
+ Vals:=trials[ntimes]:
+
+
+ lprint(`setring R;`);
+ lprint(`I = `);
+ for i from 1 to 8 do  
+ lprint(primpart(Eq1(Vals[i])),`,`);  od:
+ lprint(`0;`);
+ lprint(`H = std(I);`);
+ lprint(`setring S;`);
+ lprint(`G  = fglm(R,H);`);
+ lprint(`print("POLY1:=");`);
+ lprint(`short=0;`);
+ lprint(`G[1];`);
+ lprint(`print(":");`);
+
+ lprint(`setring R;`);
+ lprint(`I = `);
+ for i from 1 to 8 do  
+ lprint(primpart(Eq2(Vals[i])),`,`);  od:
+ lprint(`0;`);
+ lprint(`H = std(I);`);
+ lprint(`setring S;`);
+ lprint(`G  = fglm(R,H);`);
+ lprint(`print("POLY2:=");`);
+ lprint(`short=0;`);
+ lprint(`G[1];`);
+ lprint(`print(":");`);
+
+
+ lprint(`setring R;`);
+ lprint(`I = `);
+ for i from 1 to 8 do  
+ lprint(primpart(Eq3(Vals[i])),`,`);  od:
+ lprint(`0;`);
+ lprint(`H = std(I);`);
+ lprint(`setring T;`);
+ lprint(`K  = fglm(R,H);`);
+ lprint(`print("POLY3:=");`);
+ lprint(`short=0;`);
+ lprint(`K[1];`);
+ lprint(`print(":");`);
+
+
+ lprint(`setring R;`);
+ lprint(`I = `);
+ for i from 1 to 8 do  
+ lprint(primpart(Eq4(Vals[i])),`,`);  od:
+ lprint(`0;`);
+ lprint(`H = std(I);`);
+ lprint(`setring S;`);
+ lprint(`G  = fglm(R,H);`);
+ lprint(`print("POLY4:=");`);
+ lprint(`short=0;`);
+ lprint(`G[1];`);
+ lprint(`print(":");`);
+
+
+ lprint(`print("NREAL1:= nops(realroot(POLY1, 1/100)); ");`);
+ lprint(`print("NREAL2:= nops(realroot(POLY2, 1/100)); ");`);
+ lprint(`print("NREAL3:= nops(realroot(POLY3, 1/100)); ");`);
+ lprint(`print("NREAL4:= nops(realroot(POLY4, 1/100)); ");`);
+ lprint(`print(" if (NREAL1+NREAL2+NREAL3+NREAL4)<132 then");`);
+ lprint(`print("`,convert(ST_Nreal,symbol));
+ lprint(convert(Vals,symbol));
+ lprint(convert(ST_end,symbol),` ");`);
+ lprint(`print("fi: ");`);
+ lprint(`print(" ");`);
+ lprint(`print(" ");`);
+ lprint(`print("#######################################################");`);
+ lprint(`print("#                                                     #");`);
+ lprint(`print("#          Next One                                   #");`);
+ lprint(`print("#                                                     #");`);
+ lprint(`print("#######################################################");`);
+ lprint(`print(" ");`);
+od:
+
+lprint(`print("time(); ");`);
+lprint(`print("quit; ");`);
+lprint(`timer-t;`);
+lprint(`quit;`);
+
+time();
+
+quit;
+

@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+   <TITLE>Shapiro and Shapiro: Calcul d' FRZV</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="../../SectII.7.html"><IMG SRC="../../figures/prev.gif" 
+ALT="Previous"></A>
+<HR>
+
+<H2>Hard Cases</H2>
+
+<TABLE ALIGN=left BORDER=1>
+<TR><TH><I>m,p</I>
+<TH>7,2<TH>4,3<TH>8,2
+<TR><TH><I>d<SUB>m,p</SUB></I>
+   <TD>429<TD>462<TD>1430
+<TR><TH>Number checked
+<TD>3<TD>2<TD>1
+</TABLE>
+<BR><BR><BR><BR><BR><P>
+
+Most exciting of all these computations are symbolic
+computations of Faug&egrave;re, Rouillier, and
+Zimmermann and the numerical computations of Verschelde.
+<P>
+
+
+
+My (Sottile's) recent interest in this conjecture was spurred by the
+communication of the computation of an instance of 
+<I>m,p</I>=4,3 of Faug&egrave;re, Rouillier, and
+Zimmermann.
+
+They first used FGB to calculate a degree reverse
+lexicographic Gr&ouml;bner basis for the polynomial system
+of Conjecture 1  for <I>m,p</I>=3,4 with 
+<I>s</I><SUB>i</SUB>=<I>i</I>. 
+This yielded a Gr&ouml;bner basis of size 32M.
+They then computed a rational univariate 
+representation (a sophisticated substitute for an
+eliminant) in two ways.
+Once using a multi-modular implementation of the
+FGLM algorithm and a second time using RS, 
+an improvement of the RealSolving
+software under development.
+The eliminant had degree 462 and size 3M, thus its general
+coefficient had 2,000 digits.
+Using an early implementation of Uspensky's algorithm, they
+verified that all 
+of its zeroes were real, establishing an instance of 
+Conjecture 1 for <I>m,p</I>=3,4. 
+In the course of this calculation, they found it necessary
+to rewrite their software.
+<P>
+
+Also notable is the case <I>m,p</I>=8,2 (also one instance each of 7,2 and 4,3)
+computed by Jan Verschelde 
+[<A HREF="../../Bib.html#verschelde">V</A>] using his
+implementation of the SAGBI homotopy algorithm in 
+[<A HREF="../../Bib.html">HSS</A>].
+Since the polynomial system of Conjecture 1 was
+ill-conditioned, he instead used the equivalent system of
+Conjecture 1 described <A HREF="../../SectII.4.html">previously</A>
+where the rational normal curve is paramerteised by Chebyshev polynomials. 
+These numerical calculations give approximate
+solutions whose condition numbers determine a neighborhood
+containing a solution.
+The solutions of this real system are stable under complex 
+conjugation, so it sufficed to check that each neighbourhood and its complex
+conjugate were disjoint from all other neighborhoods.
+This computation took approximately 25 hours on a 166MHz Pentium II
+processor with 64M running Linux.
+These algorithms are `embarrassingly parallelizable', and
+in principle they can be used to check far larger polynomial systems.
+
+
+
+<HR>
+<A HREF="../../SectII.7.html"><IMG SRC="../../figures/prev.gif" ALT="Previous"></A>
+</BODY>
+</HTML>

@@ -1,0 +1,65 @@
+#Example22.maple
+#
+#   Frank Sottile
+#   27 June 1998   
+#   Toronto, Canada
+#
+#   This Maple script computes the lexocigraphic Gr\"obner basis for 
+#   the case m=p=2 of Shapiro's conjecture as described in Example 2.2
+#   of "Real Schubert Calculus: 
+#	Polynomial systems and a conjecture of Shapiro and Shapiro"
+#
+#   The computation is in the ring R(s,t,u,v)[x21,x22,x12,x11],
+#   with term order x21 < x22 < x12 < x11.
+#
+#   The Gr\"obner basis is G1, G3, G3, and G4.   G4 is the eliminant.
+#   We also express G4 in terms of the elementary symmetric polynomials
+#   in s,t,u,v  and compute its discriminant.
+
+
+with(linalg):
+F := s -> det(matrix(4,4,
+      [1,s,s^2,s^3,0,1,2*s,3*s^2,1,0,x11,x12,0,1,x21,x22])):
+
+G1:= sort(simplify(-det(matrix(4,4,
+                    [1,s,s^2,F(s),1,t,t^2,F(t),1,u,u^2,F(u),1,v,v^2,F(v)]))/
+     det(matrix(4,4,[1,s,s^2,s^3, 1,t,t^2,t^3, 1,u,u^2,u^3, 1,v,v^2,v^3]))),
+      [x21,x22,x12,x11,s,t,u,v],plex):
+
+G2:= sort(simplify(det(matrix(3,3,[1,s,F(s),1,t,F(t),1,u,F(u)]))/
+     det(matrix(3,3,[1,s,s^2, 1,t,t^2, 1,u,u^2]))
+        +(s+t+u)*G1),
+      [x21,x22,x12,x11,s,t,u,v],plex):
+
+G3:=sort(simplify((F(s)-F(t))/(s-t) + (s^2+s*t+t^2)*G1 - (s+t)*G2),
+      [x21,x22,x12,x11,s,t,u,v],plex):
+
+G4:=sort(simplify(
+      4*F(s) + 2*(x12+2*s^3)*G1 - 4*(x11+s^2)*G2 + (-3*s+t+u+v)*G3),
+         [x21,x22,x12,x11,s,t,u,v],plex):
+
+# 
+# G1, G2, G3, G4 are the Gr\"obner basis in the purely lexicographic term
+# order x21 < x22 < x12 < x11
+#
+G1;
+G2;
+G3;
+G4;
+#
+# We represent G4 in terms of the elementary symmetric polynomials:
+#
+E1:=s+t+u+v:
+E2:=s*t+s*u+s*v+t*u+t*v+u*v:
+E3:=s*t*u+s*t*v+s*u*v+t*u*v:
+E4:=s*t*u*v:
+simplify(G4 - (12*x11^2 + 4*x11*E2 + E1*E3 - 4*E4));
+#
+# The Discriminant of G4 is then  (4*E2)^2 - 4*12*(E1*E3 - 4*E4) , which
+# has a nice representation in terms of the differences s-t, s-u, etc.:
+#
+simplify(16*E2^2 - 4*12*(E1*E3 - 4*E4)  - 
+          8*((s-t)^2*(u-v)^2 + (s-u)^2*(t-v)^2 + (s-v)^2*(u-t)^2)   );
+
+quit;
+

@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+   <TITLE>Complexity of these computations</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectII.7.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.9.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>2.viii. Complexity of these computations</H2>
+
+A measure of the complexity of symbolic computation is the degree of the
+system (number of solutions) and the dimension of the ambient variety
+(number of variables).
+Also useful are the size and time it takes to compute a (particular)
+Gr&ouml;bner basis.
+The table below displays, for each small <I>m,p</I> the degree, 
+<I>d<SUB>m,p</SUB></I> of the system, the time it takes to compute a degree
+reverse lexicographic Gr&ouml;bner basis, the size of that basis, and number
+of generators.
+These were all computed using 
+<A HREF="http://www.mathematik.uni-kl.de/~zca/Singular">Singular-1.2.1</A> on
+a K6/2 300MHz processor with 256M memory running Linux.
+The data <I>m,p</I> are each linked to a Maple V.5 script that generates a 
+Singular script that calculates a degree reverse lexicographic Gr&ouml;bner
+basis. 
+The Singular script is viewed by clicking on the time entry.
+These computations were done in local coordinates for the Grassmannian;
+while there are 2 more variables than the used for the verifications 
+in <A HREF="SectII.7.html">Section 2.vii</A>,
+the degree reverse lexicographic Gr&ouml;bner basis computation is
+considerably faster with this choice of local coordinates.
+<P>
+<FONT SIZE=+1 COLOR="5c3317"><B>Computing Degree Reverse Lexicographic
+Gr&ouml;bner Bases</B></FONT> 
+<BR><BR>
+
+<DD>
+<TABLE ALIGN=left BORDER=1>
+<TR><TH><I>m,p</I>
+<TH><A HREF="computations/drl/42.maple">4,2</A>
+<TH><A HREF="computations/drl/24.maple">2,4</A>
+<TH><A HREF="computations/drl/52.maple">5,2</A>
+<TH><A HREF="computations/drl/25.maple">2,5</A>
+<TH><A HREF="computations/drl/33.maple">3,3</A>
+<TH><A HREF="computations/drl/62.maple">6,2</A>
+<TH><A HREF="computations/drl/26.maple">2,6</A>
+<TH><A HREF="computations/drl/72.maple">7,2</A>
+<TR><TH><I>d<SUB>m,p</I></SUB>
+   <TD>&nbsp;&nbsp;&nbsp;14<TD>&nbsp;&nbsp;&nbsp;14
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;42<TD>&nbsp;&nbsp;&nbsp;&nbsp;42
+   <TD>&nbsp;&nbsp;&nbsp;42<TD>&nbsp;&nbsp;132
+   <TD>&nbsp;&nbsp;&nbsp;132<TD>&nbsp;&nbsp;&nbsp;&nbsp;429
+<TR><TH>time(sec)
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/42.sing">.04</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/24.sing">.02</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/52.sing">1.45</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/25.sing">3.69</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/33.sing">1.50</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/62.sing">78.6</A>
+<TD>&nbsp;<A HREF="computations/drl/26.sing">509.8</A>
+<TD>&nbsp;&nbsp;<A HREF="computations/drl/72.sing">8175</A>
+<TR><TH>Size
+   <TD>&nbsp;1.3K&nbsp;<TD>&nbsp;1.1K&nbsp;
+   <TD>&nbsp;12.8K&nbsp;<TD>&nbsp;15.4K&nbsp;
+   <TD>&nbsp;18.6K&nbsp;<TD>&nbsp;&nbsp;202K&nbsp;
+   <TD>&nbsp;&nbsp;368K&nbsp;<TD>&nbsp;4.58M&nbsp;
+<TR><TH># Generators
+   <TD>&nbsp;&nbsp;&nbsp;20<TD>&nbsp;&nbsp;&nbsp;18
+   <TD>&nbsp;&nbsp;&nbsp;&nbsp;47<TD>&nbsp;&nbsp;&nbsp;&nbsp;43
+   <TD>&nbsp;&nbsp;&nbsp;43<TD>&nbsp;&nbsp;120
+   <TD>&nbsp;&nbsp;127<TD>&nbsp;&nbsp;&nbsp;&nbsp;334
+</TABLE>
+<BR><BR><BR><BR><BR><BR><BR><BR>
+<HR>
+<A HREF="SectII.7.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectII.9.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#toc"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>

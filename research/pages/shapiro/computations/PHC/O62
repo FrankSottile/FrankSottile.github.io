@@ -1,0 +1,62 @@
+ 4*y*a+ 2*y*g+ 2*y*c+ 5*y*e+ 2*y*b+ 2*a*d+ 5*a*f+a*h+ 3*a*z-5*g*d-2*g*f+ 5
+*g*z+ 3*c*f+ 5*c*h+ 4*c*z-3*e*d+ 2*e*h+ 4*e*z+d*b+ 5*f*b+h*b+ 2*z*b+ 4*y+ 4
+*a-g-c-5*e+ 3*d+ 4*f+ 2*h+z+ 1;
+ 2*y*a+ 4*y*g+ 5*y*c+ 4*y*e+ 3*y*b+a*d+ 5*a*f+a*h+a*z-3*g*d-2*g*f+g*z+ 4*c
+*f+ 3*c*h+c*z-4*e*d+ 2*e*h+ 4*e*z+ 5*d*b+ 5*f*b+h*b+ 3*z*b+ 2*y+ 4*a-g-5*c
+-5*e+ 2*d+ 4*f+h+ 4*z+ 3;
+ 3*y*a+y*g+ 3*y*c+ 3*y*e+ 3*y*b+ 3*a*d+ 2*a*f+ 3*a*h+ 4*a*z-g*d-5*g*f+g*z+
+ 5*c*f+c*h+ 3*c*z-5*e*d+ 5*e*h+ 5*e*z+ 3*d*b+ 3*f*b+ 4*h*b+ 3*z*b+ 4*y+a-4*g
+-3*c-3*e+ 3*d+ 5*f+ 5*h+z+ 3;
+y*a+ 2*y*g+ 5*y*c+ 2*y*e+ 2*y*b+ 5*a*d+ 3*a*f+ 4*a*h+ 5*a*z-4*g*d-5*g*f+g*
+z+c*f+ 4*c*h+ 4*c*z-e*d+ 5*e*h+e*z+ 2*d*b+ 2*f*b+ 5*h*b+ 2*z*b+y+ 2*a-5*g-2
+*c-2*e+d+ 5*f+ 4*h+ 5*z+ 2;
+y*a+ 2*y*g+y*c+ 2*y*e+ 4*y*b+a*d+ 2*a*f+ 3*a*h+ 2*a*z-5*g*d-5*g*f+g*z+ 5*c
+*f+ 5*c*h+ 5*c*z-5*e*d+ 5*e*h+ 3*e*z+d*b+ 3*f*b+h*b+z*b+ 3*y+ 5*a-g-c-3*e+
+ 2*d+ 2*f+ 3*h+ 2*z+ 2;
+y*a+y*g+ 2*y*c+y*e+ 3*y*b+a*d+ 2*a*f+ 2*a*h+a*z-5*g*d-3*g*f+ 5*g*z+ 4*c*f+
+ 5*c*h+ 4*c*z-4*e*d+ 3*e*h+ 3*e*z+ 4*d*b+ 3*f*b+ 2*h*b+z*b+ 5*y+a-2*g-4*c-3*
+e+ 2*d+ 2*f+ 5*h+ 3*z+ 4;
+y*a+ 2*y*g+ 5*y*c+ 5*y*e+ 3*y*b+ 4*a*d+ 4*a*f+a*h+ 2*a*z-4*g*d-3*g*f+ 4*g*
+z+ 5*c*f+ 4*c*h+ 4*c*z-5*e*d+ 3*e*h+ 5*e*z+ 5*d*b+ 2*f*b+ 5*h*b+ 3*z*b+ 3*y
++ 5*a-5*g-5*c-2*e+d+ 3*f+h+ 4*z+ 3;
+ 3*y*a+ 5*y*g+ 3*y*c+ 4*y*e+ 3*y*b+ 5*a*d+ 4*a*f+a*h+a*z-2*g*d-g*f+ 2*g*z+
+ 4*c*f+ 2*c*h+ 2*c*z-4*e*d+e*h+ 5*e*z+d*b+ 2*f*b+ 2*h*b+ 5*z*b+ 3*y+ 3*a-2*g
+-c-2*e+ 3*d+f+h+ 2*z+ 2;
+ 4*y*a+ 4*y*g+ 4*y*c+y*e+y*b+ 2*a*d+ 2*a*f+a*h+ 4*a*z-5*g*d-3*g*f+g*z+ 2*c
+*f+ 5*c*h+ 5*c*z-2*e*d+ 3*e*h+ 3*e*z+d*b+ 3*f*b+ 2*h*b+ 3*z*b+ 3*y+a-2*g-c
+-3*e+ 5*d+f+ 3*h+z+ 4;
+ 3*y*a+y*g+y*c+ 5*y*e+ 3*y*b+a*d+a*f+ 3*a*h+ 4*a*z-g*d-5*g*f+ 3*g*z+c*f+c*
+h+ 2*c*z-e*d+ 5*e*h+e*z+ 3*d*b+ 3*f*b+ 4*h*b+ 3*z*b+ 4*y+a-4*g-3*c-3*e+ 4*d
++ 3*f+ 3*h+ 3*z+ 4;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                  2.010000000 =  0h 0m 2s 10ms
+User time in seconds was                         2.010000000 =  0h 0m 2s 10ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                         40
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+THE TRIANGULATION :
+
+Dimension without lifting : 10
+Number of simplices : 248
+
+The volume : 248
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                  0.540000000 =  0h 0m 0s540ms
+User time in seconds was                         0.510000000 =  0h 0m 0s510ms
+System CPU time in seconds was                   0.030000000 =  0h 0m 0s 30ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0

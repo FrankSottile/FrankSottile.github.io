@@ -1,0 +1,47 @@
+#MakeLex
+#
+LEX:= proc(GB_org,Vars)
+#################################################################
+# This procedure uses the FGLM algorithm to convert from the terms order
+# wdeg([1,15,15,15,15,15],[a,b,c,d,e,f]) to plex(Vars)
+# and returns the resulting grobner basis
+#################################################################
+local GB_new, Poly_Alg, T_org,T_new,NFproc,FDproc,TMproc,FGLM,i,F;
+
+ Poly_Alg:=poly_algebra(a,b,c,d,e,f):
+ T_org:=termorder(Poly_Alg,wdeg([1,15,15,15,15,15],[a,b,c,d,e,f])):
+
+ # Define NFproc and FDproc in view of a call to fglm. 
+ NFproc:=proc(t,NF,TOrd)
+  NF[t]:=normalf(t,GB_org,T_org)
+ end:
+ FDproc:=proc(M,NF)
+  local ind_lst,term,eta,sol;
+  ind_lst:=map(op,[indices(NF)]);
+  for term in M do
+   ind_lst:=remove(divide,ind_lst,term)
+  od;
+   expand(numer(normal(add(eta[term]*NF[term],term=ind_lst))));
+   sol:=[solve({coeffs(%,{a,b,c,d,e,f})},
+         {seq(eta[term],term=ind_lst)})];
+   subs(op(1,sol),add(eta[term]*term,term=ind_lst));
+       `if`(%=0,FAIL,collect(primpart(numer(subs(map(n->n=1,
+        map2(op,1,select(evalb,sol[1]))),%)),
+	   [a,b,c,d,e,f]),[a,b,c,d,e,f],distributed,factor))
+ end:
+ TMproc:=proc(border,monoideal,TOrd)
+   border<>[]
+ end:
+
+ T_new:=termorder(Poly_Alg,plex(Vars[])):
+ FGLM:=[fglm(NFproc,FDproc,TMproc,T_new)]:
+ # Up to a sort, here is the final Groebner basis: 
+ GB_new:=map(op,[entries(FGLM[2])]):
+GB_new
+ # for i from 1 to nops(GB_new) do
+ #  if nops(indets(GB_new[i]))=1 then
+ #  F:=GB_new[i]  fi:
+ # od:
+ # F
+end:
+

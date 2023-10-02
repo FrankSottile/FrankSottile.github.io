@@ -1,0 +1,103 @@
+-6*y*f*b*e+y*f*c*a-y*f*a*e+ 6*y*d*b*g+y*d*a*g+ 2*y*c*a*g-4*f*b*z*e+f*c*z*a
+-3*f*z*a*e+ 3*d*b*h*z+ 4*d*b*z*g+ 6*d*h*z*a+ 3*d*z*a*g+ 6*b*h*z*e+ 2*c*h*z*a
++ 4*c*z*a*g+ 3*h*z*a*e-y*f*b+ 4*y*f*c-y*f*e-y*d*a+y*d*g-2*y*b*g+ 3*y*c*g-2*
+y*a*e-f*b*z+ 4*f*c*z+f*c*a-4*f*z*e-6*d*b*h+ 4*d*h*z-d*h*a-d*z*a+ 4*d*z*g-2*
+b*h*z-4*b*z*g+ 2*c*h*z-2*c*h*a+ 3*c*z*g+ 6*h*z*e-4*z*a*e+ 3*y*f-4*y*d-3*y*e
++ 3*y*g-f*b+ 2*f*c+ 6*f*z-d*h-4*d*z-d*a+ 2*b*h-3*c*h+ 2*h*z-3*z*e+ 2*z*g+ 4
+*y+ 5*f-2*d-3*h+ 6*z+ 3;
+-4*y*f*b*e+ 4*y*f*c*a-y*f*a*e+ 4*y*d*b*g+y*d*a*g+ 2*y*c*a*g-f*b*z*e+ 4*f*c
+*z*a-4*f*z*a*e+ 4*d*b*h*z+d*b*z*g+ 4*d*h*z*a+ 4*d*z*a*g+ 5*b*h*z*e+c*h*z*a+
+ 6*c*z*a*g+ 2*h*z*a*e-4*y*f*b+ 4*y*f*c-y*f*e-4*y*d*a+y*d*g-2*y*b*g+ 2*y*c*g
+-2*y*a*e-4*f*b*z+ 4*f*c*z+ 2*f*c*a-2*f*z*e-4*d*b*h+ 2*d*h*z-d*h*a-4*d*z*a+ 2
+*d*z*g-b*h*z-6*b*z*g+ 6*c*h*z-2*c*h*a+ 6*c*z*g+ 4*h*z*e-6*z*a*e+ 4*y*f-4*y*
+d-2*y*e+ 2*y*g-2*f*b+ 5*f*c+ 3*f*z-d*h-4*d*z-2*d*a+ 2*b*h-2*c*h+h*z-6*z*e+
+ 5*z*g+y+ 6*f-5*d-2*h+ 4*z+ 3;
+-4*y*f*b*e+ 4*y*f*c*a-3*y*f*a*e+ 4*y*d*b*g+ 3*y*d*a*g+ 4*y*c*a*g-5*f*b*z*e
++ 6*f*c*z*a-2*f*z*a*e+ 4*d*b*h*z+ 5*d*b*z*g+d*h*z*a+ 2*d*z*a*g+ 6*b*h*z*e+
+ 2*c*h*z*a+ 6*c*z*a*g+ 2*h*z*a*e-4*y*f*b+ 2*y*f*c-2*y*f*e-4*y*d*a+ 2*y*d*g-4
+*y*b*g+ 5*y*c*g-4*y*a*e-6*f*b*z+ 2*f*c*z+ 4*f*c*a-5*f*z*e-4*d*b*h+ 6*d*h*z
+-3*d*h*a-6*d*z*a+ 5*d*z*g-2*b*h*z-6*b*z*g+ 5*c*h*z-4*c*h*a+c*z*g+ 5*h*z*e-6*
+z*a*e+ 6*y*f-2*y*d-5*y*e+ 5*y*g-4*f*b+ 3*f*c+ 6*f*z-2*d*h-2*d*z-4*d*a+ 4*b*
+h-5*c*h+h*z-z*e+ 6*z*g+ 4*y+ 3*f-3*d-5*h+ 4*z+ 3;
+-3*y*f*b*e+ 3*y*f*c*a-4*y*f*a*e+ 3*y*d*b*g+ 4*y*d*a*g+ 5*y*c*a*g-4*f*b*z*e
++ 5*f*c*z*a-f*z*a*e+ 3*d*b*h*z+ 4*d*b*z*g+ 4*d*h*z*a+d*z*a*g+ 5*b*h*z*e+ 3*
+c*h*z*a+ 2*c*z*a*g+h*z*a*e-3*y*f*b+y*f*c-5*y*f*e-3*y*d*a+ 5*y*d*g-5*y*b*g+
+ 6*y*c*g-5*y*a*e-5*f*b*z+ 6*f*c*z+ 5*f*c*a-4*f*z*e-3*d*b*h+ 2*d*h*z-4*d*h*a
+-5*d*z*a+ 4*d*z*g-3*b*h*z-2*b*z*g+ 6*c*h*z-5*c*h*a+ 5*c*z*g+ 3*h*z*e-2*z*a*e
++ 5*y*f-y*d-6*y*e+ 2*y*g-5*f*b+ 5*f*c+ 4*f*z-5*d*h-6*d*z-5*d*a+ 5*b*h-6*c*h
++h*z-5*z*e+ 3*z*g+ 3*y+f-5*d-2*h+ 5*z+ 6;
+-2*y*f*b*e+ 3*y*f*c*a-4*y*f*a*e+ 2*y*d*b*g+ 4*y*d*a*g+ 6*y*c*a*g-2*f*b*z*e
++ 6*f*c*z*a-4*f*z*a*e+ 6*d*b*h*z+ 2*d*b*z*g+ 2*d*h*z*a+ 4*d*z*a*g+ 4*b*h*z*
+e+c*h*z*a+ 6*c*z*a*g+ 2*h*z*a*e-3*y*f*b+ 5*y*f*c-6*y*f*e-3*y*d*a+ 6*y*d*g-6
+*y*b*g+ 3*y*c*g-6*y*a*e-6*f*b*z+f*c*z+ 4*f*c*a-5*f*z*e-2*d*b*h+d*h*z-4*d*h*
+a-6*d*z*a+ 5*d*z*g-b*h*z-6*b*z*g+ 4*c*h*z-6*c*h*a+ 4*c*z*g+h*z*e-6*z*a*e+ 4
+*y*f-5*y*d-3*y*e+ 3*y*g-4*f*b+ 4*f*c+ 4*f*z-6*d*h-d*z-4*d*a+ 6*b*h-3*c*h+ 5
+*h*z-4*z*e+ 3*z*g+y+ 2*f-4*d-3*h+ 4*z+ 6;
+-4*y*f*b*e+ 4*y*f*c*a-6*y*f*a*e+ 4*y*d*b*g+ 6*y*d*a*g+ 3*y*c*a*g-4*f*b*z*e
++ 2*f*c*z*a-6*f*z*a*e+ 2*d*b*h*z+ 4*d*b*z*g+ 3*d*h*z*a+ 6*d*z*a*g+b*h*z*e+
+ 3*c*h*z*a+c*z*a*g+ 2*h*z*a*e-4*y*f*b+ 5*y*f*c-6*y*f*e-4*y*d*a+ 6*y*d*g-3*y*
+b*g+ 3*y*c*g-3*y*a*e-2*f*b*z+ 4*f*c*z+ 4*f*c*a-f*z*e-4*d*b*h+d*h*z-6*d*h*a
+-2*d*z*a+d*z*g-3*b*h*z-b*z*g+ 4*c*h*z-3*c*h*a+ 2*c*z*g+ 3*h*z*e-z*a*e+ 3*y*f
+-5*y*d-3*y*e+y*g-4*f*b+ 3*f*c+ 6*f*z-6*d*h-4*d*z-4*d*a+ 3*b*h-3*c*h+ 2*h*z-2
+*z*e+ 5*z*g+ 6*y+ 3*f-3*d-h+ 3*z+ 6;
+-2*y*f*b*e+ 3*y*f*c*a-5*y*f*a*e+ 2*y*d*b*g+ 5*y*d*a*g+ 6*y*c*a*g-4*f*b*z*e
++ 6*f*c*z*a-4*f*z*a*e+ 2*d*b*h*z+ 4*d*b*z*g+ 2*d*h*z*a+ 4*d*z*a*g+ 6*b*h*z*
+e+ 2*c*h*z*a+ 4*c*z*a*g+ 3*h*z*a*e-3*y*f*b+ 2*y*f*c-5*y*f*e-3*y*d*a+ 5*y*d*
+g-6*y*b*g+y*c*g-6*y*a*e-6*f*b*z+f*c*z+ 5*f*c*a-6*f*z*e-2*d*b*h+ 5*d*h*z-5*d
+*h*a-6*d*z*a+ 6*d*z*g-2*b*h*z-4*b*z*g+ 5*c*h*z-6*c*h*a+ 5*c*z*g+ 6*h*z*e-4*
+z*a*e+ 4*y*f-2*y*d-y*e+ 5*y*g-5*f*b+f*c+ 2*f*z-5*d*h-d*z-5*d*a+ 6*b*h-c*h+
+ 6*h*z-5*z*e+ 4*z*g+ 3*y+ 4*f-d-5*h+ 5*z+ 2;
+-3*y*f*b*e+ 4*y*f*c*a-5*y*f*a*e+ 3*y*d*b*g+ 5*y*d*a*g+ 2*y*c*a*g-2*f*b*z*e
++ 4*f*c*z*a-6*f*z*a*e+ 4*d*b*h*z+ 2*d*b*z*g+ 2*d*h*z*a+ 6*d*z*a*g+ 5*b*h*z*
+e+ 5*c*h*z*a+ 5*c*z*a*g+ 4*h*z*a*e-4*y*f*b+ 3*y*f*c-3*y*f*e-4*y*d*a+ 3*y*d*
+g-2*y*b*g+ 6*y*c*g-2*y*a*e-4*f*b*z+ 4*f*c*z+ 6*f*c*a-3*f*z*e-3*d*b*h+ 4*d*h
+*z-5*d*h*a-4*d*z*a+ 3*d*z*g-5*b*h*z-5*b*z*g+ 2*c*h*z-2*c*h*a+ 6*c*z*g+ 5*h*
+z*e-5*z*a*e+ 3*y*f-3*y*d-6*y*e+ 6*y*g-6*f*b+f*c+f*z-3*d*h-4*d*z-6*d*a+ 2*b*
+h-6*c*h+ 3*h*z-6*z*e+ 4*z*g+ 5*y+f-d-6*h+ 6*z+ 3;
+-6*y*f*b*e+y*f*c*a-2*y*f*a*e+ 6*y*d*b*g+ 2*y*d*a*g+ 5*y*c*a*g-3*f*b*z*e+ 5
+*f*c*z*a-3*f*z*a*e+ 5*d*b*h*z+ 3*d*b*z*g+ 6*d*h*z*a+ 3*d*z*a*g+b*h*z*e+ 6*c
+*h*z*a+ 3*c*z*a*g+ 4*h*z*a*e-y*f*b+ 5*y*f*c-2*y*f*e-y*d*a+ 2*y*d*g-5*y*b*g+
+ 2*y*c*g-5*y*a*e-5*f*b*z+ 5*f*c*z+ 6*f*c*a-5*f*z*e-6*d*b*h+ 5*d*h*z-2*d*h*a
+-5*d*z*a+ 5*d*z*g-6*b*h*z-3*b*z*g+ 4*c*h*z-5*c*h*a+ 2*c*z*g+ 2*h*z*e-3*z*a*e
++ 5*y*f-5*y*d-2*y*e+ 5*y*g-6*f*b+ 6*f*c+ 2*f*z-2*d*h-5*d*z-6*d*a+ 5*b*h-2*c
+*h+ 6*h*z-2*z*e+z*g+ 6*y+ 6*f-6*d-5*h+ 6*z+ 2;
+-5*y*f*b*e+ 3*y*f*c*a-2*y*f*a*e+ 5*y*d*b*g+ 2*y*d*a*g+ 6*y*c*a*g-5*f*b*z*e
++ 2*f*c*z*a-f*z*a*e+d*b*h*z+ 5*d*b*z*g+ 4*d*h*z*a+d*z*a*g+ 6*b*h*z*e+ 4*c*h
+*z*a+ 5*c*z*a*g+ 4*h*z*a*e-3*y*f*b+ 5*y*f*c-5*y*f*e-3*y*d*a+ 5*y*d*g-6*y*b*
+g+ 6*y*c*g-6*y*a*e-2*f*b*z+ 4*f*c*z+ 6*f*c*a-4*f*z*e-5*d*b*h+ 5*d*h*z-2*d*h
+*a-2*d*z*a+ 4*d*z*g-4*b*h*z-5*b*z*g+ 5*c*h*z-6*c*h*a+ 5*c*z*g+ 4*h*z*e-5*z*
+a*e+ 3*y*f-5*y*d-6*y*e+ 2*y*g-6*f*b+ 6*f*c+ 6*f*z-5*d*h-4*d*z-6*d*a+ 6*b*h
+-6*c*h+h*z-5*z*e+z*g+y+f-6*d-2*h+z+ 3;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                159.410000000 =  0h 2m39s410ms
+User time in seconds was                       159.250000000 =  0h 2m39s250ms
+System CPU time in seconds was                   0.160000000 =  0h 0m 0s160ms
+Non-I/O page faults was                       1085
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+THE TRIANGULATION :
+
+Dimension without lifting : 10
+Number of simplices : 7016
+The volume : 7156
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                 14.090000000 =  0h 0m14s 90ms
+User time in seconds was                        13.550000000 =  0h 0m13s550ms
+System CPU time in seconds was                   0.540000000 =  0h 0m 0s540ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+

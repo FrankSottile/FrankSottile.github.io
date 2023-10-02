@@ -1,0 +1,103 @@
+int t = timer; 
+option(redSB); 
+print("////////////////////////////////////////////////////////////////////////\
+/");
+print("//");
+print("//  This calculation proceeds in positive characteristic, rather than");
+print("//  characteristic zero.  Since we do find that the eliminant has degree\
+");
+print("//  320, the Shape Lemma holds and so the ideal is reduced if and only")\
+;
+print("//  if the eliminant has no repeated factors.  We show that it does not.\
+");
+print("//");
+print("//  Our conclusion for characteristic zero uses the contrapositive of");
+print("//    {Multiple solutions of an ideal in characteristic zero}");
+print("//             ====>");
+print("//    {Multiple solutions in any reduction of that ideal}");
+print("//");
+print("////////////////////////////////////////////////////////////////////////\
+/");
+print("//");
+print("//  We set up the rings and the ideal");
+print("//");
+ring S=31991, (a,b,c,d,e,f), (dp(5),dp(1));
+ring R=31991, (a,b,c,d,e,f), dp;
+ideal I = 
+-5+2*a+36*a*e-6*b*d-160*a*f+92*d*c-20*b*f-20*e*c+24*d+2*e+6*b-12*f-36*c-28*a*e^
+2*c+22*e*b-16*d*e+68*d*f+16*e*f-32*d*a-7*a^2-36*a*e*d*c-36*b*d*a*f-26*a*f*e*c-\
+26*d*c*b*f+74*a*f*d*c+48*a*e*b*d-62*b*f*e*c+28*a*e*b*f+28*b*d*e*c+10*f*e*c-22*d
+^2-6*e^2-43*f^2+56*b*e*c+10*c*b*f-28*b^2*d*f+36*d*a*e-37*a^2*f^2+22*a*f^2+20*a^
+2*f-76*d*c^2-56*e^2*c-10*b*f^2-37*d^2*c^2-24*a^2*e^2-24*b^2*d^2+31*b^2*f^2+31*e
+^2*c^2-56*b^2*f-10*e*c^2-36*b*d^2+44*a*e^2+6*a^2*e-26*b^2*d+76*d^2*c+10*a*b+4*b
+^2-29*c^2+100*f*c-32*a*c+8*b*c+56*e*b*f-76*d*a*f+60*c*b*d+12*c*a*e+26*b*a*e-6*a
+*b*d+40*f*b*d+4*f*a*e-44*e*b*d+26*d*c^2*e+26*a*f^2*b+36*b*d^2*c+36*a^2*e*f+76*c
+*a*f-72*b*a*f-20*a*d*c-22*f*d*c-44*e*d*c   ,
+-4-6*a+32*a*e-94*b*d+72*a*f-114*d*c-44*b*f+4*e*c-26*d+4*e-12*b-4*f-20*c+28*a*e^
+2*c-2*e*b-26*d*e+26*d*f-64*e*f-12*a^2-16*a*e*d*c-16*b*d*a*f-56*a*f*e*c-56*d*c*b
+*f-32*a*f*d*c+104*a*e*b*d+42*b*f*e*c-28*a*e*b*f-28*b*d*e*c+64*f*e*c-13*d^2-13*e
+^2-64*f^2+22*b*e*c-16*c*b*f+28*b^2*d*f+52*d*a*e+16*a^2*f^2-18*a*f^2+40*a^2*f+52
+*d*c^2+46*e^2*c-64*b*f^2+16*d^2*c^2-52*a^2*e^2-52*b^2*d^2-21*b^2*f^2-21*e^2*c^2
+-22*b^2*f+16*e*c^2-52*b*d^2+52*a*e^2-40*a^2*e-44*b^2*d-52*d^2*c+4*a*b-5*b^2-4*c
+^2-52*f*c-28*a*c-8*b*c-46*e*b*f+52*d*a*f-48*c*b*d-36*c*a*e+44*b*a*e+40*a*b*d+
+126*f*b*d+60*f*a*e-52*e*b*d+56*d*c^2*e+56*a*f^2*b+16*b*d^2*c+16*a^2*e*f-52*c*a*
+f+84*b*a*f-40*a*d*c+18*f*d*c-186*e*d*c   ,
+-12-20*a-56*a*e-80*b*d+96*a*f+60*d*c-72*b*f+48*e*c-32*d+48*e+24*b-88*f-64*c-8*e
+*b-40*d*e+40*d*f+56*e*f-122*a*e*d*c-122*b*d*a*f+112*a*f*e*c+112*d*c*b*f+58*a*f*
+d*c+122*a*e*b*d+48*b*f*e*c-64*f*e*c+12*d^2-28*e^2+4*f^2-30*b*e*c-62*c*b*f-4*d*a
+*e-29*a^2*f^2+36*a*f^2-28*a^2*f+78*d*c^2+64*b*f^2-29*d^2*c^2-61*a^2*e^2-61*b^2*
+d^2-24*b^2*f^2-24*e^2*c^2+30*b^2*f+62*e*c^2+4*b*d^2+68*a*e^2-12*a^2*e+40*b^2*d-\
+4*d^2*c-6*a*b-7*b^2-44*c^2+96*f*c-14*a*c+34*b*c+4*d*a*f-150*c*b*d-30*c*a*e-40*b
+*a*e+12*a*b*d+68*f*b*d-136*f*a*e-68*e*b*d-112*d*c^2*e-112*a*f^2*b+122*b*d^2*c+
+122*a^2*e*f-78*c*a*f+180*b*a*f+28*a*d*c-36*f*d*c+68*e*d*c+40*d*a   ,
+-16+8*a+144*a*e+36*b*d+120*a*f-12*d*c-48*b*f-12*e*c+40*d-24*e+24*b-16*f+32*c+4*
+e*b+30*d*e+20*d*f-12*e*f+24*a*e*d*c+24*b*d*a*f-84*a*f*e*c-84*d*c*b*f+106*a*f*d*
+c+142*a*e*b*d-70*b*f*e*c+42*f*e*c-25*d^2-9*e^2-4*f^2-60*b*e*c-84*c*b*f+18*d*a*e
+-53*a^2*f^2+78*a*f^2-68*a^2*f-80*d*c^2-42*b*f^2-53*d^2*c^2-71*a^2*e^2-71*b^2*d^
+2+35*b^2*f^2+35*e^2*c^2+60*b^2*f+84*e*c^2-18*b*d^2+86*a*e^2-36*a^2*e-112*b^2*d+
+8*d^2*c+96*a*b-16*b^2-8*c^2+32*f*c+64*a*c-72*b*c+20*e*b*f+20*b^2*d*f+20*a*e^2*c
+-20*e^2*c-44*a^2-8*d*a*f-20*b*d*e*c-96*c*b*d-24*c*a*e+112*b*a*e+36*a*b*d-20*a*e
+*b*f+36*f*a*e-86*e*b*d+84*d*c^2*e+84*a*f^2*b-24*b*d^2*c-24*a^2*e*f+80*c*a*f+120
+*b*a*f+68*a*d*c-78*f*d*c-36*e*d*c-96*d*a   ,
+-18+54*a-30*a*e-30*b*d-160*a*f+92*d*c-128*b*f+124*e*c-36*d-36*e+54*b+24*f+48*c-\
+30*e*b-78*d*e+4*d*f+20*e*f+60*a*e*d*c+60*b*d*a*f-60*a*f*e*c-60*d*c*b*f+72*a*f*d
+*c+100*a*e*b*d-20*b*f*e*c+98*f*e*c-59*d^2-39*e^2+14*f^2+42*f*b*d-10*b*e*c-10*c*
+b*f-140*d*a*e-36*a^2*f^2-98*a*f^2-70*a^2*f+58*d*c^2-98*b*f^2-36*d^2*c^2-50*a^2*
+e^2-50*b^2*d^2+10*b^2*f^2+10*e^2*c^2+10*b^2*f+10*e*c^2+140*b*d^2-100*a^2*e+14*d
+^2*c-60*a*b-30*b^2-43*c^2+56*f*c-62*a*c-70*b*c-70*e*b*f-40*b^2*d*f-40*a*e^2*c+
+70*e^2*c-20*a^2-14*d*a*f+40*b*d*e*c+30*c*b*d-90*c*a*e+100*a*b*d+40*a*e*b*f-126*
+f*a*e+60*d*c^2*e+60*a*f^2*b-60*b*d^2*c-60*a^2*e*f-58*c*a*f+60*b*a*f+70*a*d*c+98
+*f*d*c+84*e*d*c-110*d*a   ,
+-39+30*a-102*a*e+24*b*d+90*d*c+148*b*f-14*e*c-12*d+58*e+128*b+26*f+130*c+12*e*b
++24*d*e-12*d*f-74*e*f-28*a*e*d*c-28*b*d*a*f+42*a*f*e*c+42*d*c*b*f+42*a*f*d*c+48
+*a*e*b*d+20*b*f*e*c-32*f*e*c+8*d^2-43*e^2-31*f^2+144*f*b*d+42*b*e*c-6*c*b*f+56*
+d*a*e-21*a^2*f^2-30*a*f^2-66*a^2*f-18*d*c^2+32*b*f^2-21*d^2*c^2-24*a^2*e^2-24*b
+^2*d^2-10*b^2*f^2-10*e^2*c^2-42*b^2*f+6*e*c^2-56*b*d^2+84*a*e^2+12*a^2*e+18*b^2
+*d-40*d^2*c-102*a*b-30*b^2-15*c^2+90*f*c+6*a*c-22*b*c+44*e*b*f-6*b^2*d*f-6*a*e^
+2*c-44*e^2*c-37*a^2+40*d*a*f+6*b*d*e*c+66*c*b*d+102*c*a*e-18*b*a*e-12*a*b*d+6*a
+*e*b*f+18*f*a*e-84*e*b*d-42*d*c^2*e-42*a*f^2*b+28*b*d^2*c+28*a^2*e*f+18*c*a*f-\
+168*b*a*f+66*a*d*c+30*f*d*c-162*e*d*c-40*d*a   ;
+print("////////////////////////////////////////////////////////////////////////\
+/");
+print("//");
+print("//  We compute the Groebner basis of the this ideal");
+print("//");
+ideal G=std(I);
+print("//  The ideal has degree 320 and dimension 0");
+degree(G);
+print("//  This is the time for the first Groebner basis calculation");
+timer - t;
+setring S;
+print("//  Now we compute an eliminant using fglm, it will be H[1]");
+ideal H = fglm(R,G);
+print("//  The eliminant has degree 320");
+degree(std(H[1]));
+print("//  We compute the ideal of the eliminant and its first derivative");
+ideal K = H[1], diff(H[1],f);
+print("//  Since this is the unit ideal, the eliminant has no repeated factors"\
+);
+print("//  and thus the original ideal is reduced.");
+std(K);
+print("//  This is the time for the full calculation");
+timer-t;
+quit;

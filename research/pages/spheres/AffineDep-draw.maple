@@ -1,0 +1,92 @@
+interface(quiet=true):
+Digits:=30:
+
+#                The line has parameterization:  p + t * s
+#  1 0 a b  =: p
+#  0 1 c d  =: s
+#  C:= (x, y, 0)
+#
+#The expression for a line represented by p & s to have dist sqrt(R) from C
+
+Expr:=(d*y-a*d+b*c)^2 + (b+x*d)^2 + (x*c-y+a)^2 - R*(1+c^2+d^2):
+
+
+with(plots):
+plotsetup(x11,plotoptions=`width=3in,height=2.5in`):
+
+
+#   Centers:   (0, 0), (A, 0), (B, j), (k, l)
+#   Data giving 12 real common tangents
+List:=[
+#                      Radii
+# #  A  B  j  k  l   1  2  3  4
+[12, 1, 3,-3, 3, 2,  3, 2, 5, 7],  
+[12, 1, 3,-3, 3, 2,  4, 2, 5, 4], 
+[12, 1, 3,-3, 3, 2,  4, 2, 6, 3], 
+[12, 1, 3,-2, 3, 3,  2, 1, 4, 7],  
+[12, 1, 3,-2, 3, 3,  2, 1, 5, 7],  
+[12, 1, 3,-2, 3, 3,  3, 2, 6, 7],
+[12, 1, 3,-2, 3, 3,  4, 2, 3, 6],
+[12, 1, 3,-2, 3, 3,  4, 2, 4, 5],
+[12, 1, 3,-2, 3, 3,  5, 3, 4, 7],
+[12, 1, 3,-3, 3, 2,  3, 2, 7, 6],
+[12, 1, 3, 2, 3,-3,  4, 2, 3, 6],
+[12, 1, 3, 2, 3,-3,  4, 2, 4, 5]
+]:
+
+
+j:=4:   #10, 19,20,
+L:=List[j]:
+#
+#   The fourth one has a nicer view
+#
+#
+ L := [12, 1, 3, -2, 3, 3, 2, 1, 4, 7]:
+
+[0,0,L[7]], [L[2],0,L[8]], [L[3],L[4],L[9]], [L[5],L[6],L[10]];
+
+
+Eqs:=[subs(x=0,y=0,R=L[7],Expr),subs(x=L[2],y=0,R=L[8],Expr),
+subs(x=L[3],y=L[4],R=L[9],Expr),subs(x=L[5],y=L[6],R=L[10],Expr)]:
+
+#G:=Groebner[gbasis](Eqs,plex(a,b,c,d)):
+
+G:=[-64428*d^2+676+2327149*d^4-38365182*d^6+261440581*d^8-354870060*d^10+25704900
+*d^12, 11565900*c-139103839988100*d^10+1914585845772840*d^8-1334727226868269*d
+^6+151796445297421*d^4-6247963426778*d^2+87589249268, 28797600*b+
+957451565432700*d^11-13178149149555180*d^9+9187704183496083*d^7-\
+1045267518505648*d^5+43007907134607*d^3-602188721030*d, 1804280400*a+
+64998898145251200*d^10-894629023201785180*d^8+623712234802228088*d^6-\
+70953142189838747*d^4+2921301908774371*d^2-40965832997986]:
+
+Ds:=[fsolve(G[1]=0,d)]:
+As:=[]:  Bs:=[]:  Cs:=[]:
+for dd in Ds do
+  Cs:=[Cs[],solve(subs(d=dd,G[2])=0,c)]:
+  Bs:=[Bs[],solve(subs(d=dd,G[3])=0,b)]:
+  As:=[As[],solve(subs(d=dd,G[4])=0,a)]:
+od:
+
+for i from 1 to 12 do 
+ T.i:=spacecurve([t,As[i]+t*Cs[i],Bs[i]+t*Ds[i]],t=-7..7,
+       color=green,thickness=2,numpoints=80):
+od:
+
+r1:=.99*sqrt(L[7]):
+r2:=.99*sqrt(L[8]):
+r3:=.99*sqrt(L[9]):
+r4:=.99*sqrt(L[10]):
+
+S1:=plot3d([r1*sin(ph)*cos(th),r1*sin(ph)*sin(th),r1*cos(ph)],
+        ph=0..Pi,th=-Pi..Pi,grid=[12,33],color=gold):
+S2:=plot3d([L[2]+r2*sin(ph)*cos(th),r2*sin(ph)*sin(th),r2*cos(ph)],
+        ph=0..Pi,th=-Pi..Pi,grid=[12,33],color=red):
+S3:=plot3d([L[3]+r3*sin(ph)*cos(th),L[4]+r3*sin(ph)*sin(th),r3*cos(ph)],
+        ph=0..Pi,th=-Pi..Pi,grid=[12,33],color=pink):
+S4:=plot3d([L[5]+r4*sin(ph)*cos(th),L[6]+r4*sin(ph)*sin(th),r4*cos(ph)],
+        ph=0..Pi,th=-Pi..Pi,grid=[12,33],color=yellow):
+
+
+#plotsetup(gif,plotoutput=`A4.gif`,plotoptions=`height=1080,width=900,color,portrait,noborder`);
+display3d(S1,S2,S3,S4,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,
+           view=[-5..8,-5..7,-4..4],orientation=[0,32.5]);

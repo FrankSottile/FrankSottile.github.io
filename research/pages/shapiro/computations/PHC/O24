@@ -1,0 +1,43 @@
+ 4*f*d*b*a+ 4*f*e*b*a+ 3*f*e*c*a+ 3*f*d*b+ 2*f*e*b+ 2*f*e*c-4*f*c*a+ 2*d*b
+*a+ 5*f*d+ 3*f*e-3*f*c+ 6*d*b-2*c*a+ 4*f+ 6*d-6*c+ 3;
+f*d*b*a+ 3*f*e*b*a+ 6*f*e*c*a+f*d*b+ 2*f*e*b+ 4*f*e*c-f*c*a+ 2*d*b*a+ 6*f*
+d+f*e-f*c+d*b-2*c*a+ 4*f+ 4*d-c+ 1;
+ 3*f*d*b*a+ 2*f*e*b*a+ 5*f*e*c*a+f*d*b+ 4*f*e*b+ 6*f*e*c-3*f*c*a+ 4*d*b*a+
+f*d+ 6*f*e-f*c+ 3*d*b-4*c*a+ 3*f+ 6*d-3*c+ 4;
+ 4*f*d*b*a+ 4*f*e*b*a+ 2*f*e*c*a+ 2*f*d*b+ 2*f*e*b+ 4*f*e*c-4*f*c*a+ 2*d*b
+*a+ 6*f*d+ 6*f*e-2*f*c+d*b-2*c*a+ 4*f+ 2*d-c+ 4;
+ 3*f*d*b*a+ 4*f*e*b*a+ 4*f*e*c*a+ 4*f*d*b+ 5*f*e*b+ 3*f*e*c-3*f*c*a+ 4*d*b
+*a+ 2*f*d+ 4*f*e-4*f*c+d*b-4*c*a+ 4*f+ 4*d-c+ 1;
+ 2*f*d*b*a+ 5*f*e*b*a+ 6*f*e*c*a+ 2*f*d*b+ 5*f*e*b+f*e*c-2*f*c*a+ 5*d*b*a+
+f*d+ 3*f*e-2*f*c+ 2*d*b-5*c*a+ 5*f+ 6*d-2*c+ 6;
+
+DYNAMIC LIFTING
+
+CREATION OF THE TRIANGULATION :
+
+
+TIMING INFORMATION for computing the triangulation
+The elapsed time in seconds was                  0.090000000 =  0h 0m 0s 90ms
+User time in seconds was                         0.090000000 =  0h 0m 0s 90ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                          4
+I/O page faults was                              7
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0
+
+THE TRIANGULATION :
+
+Number of simplices : 42
+
+The volume : 42
+
+TIMING INFORMATION for computing the volume
+The elapsed time in seconds was                  0.030000000 =  0h 0m 0s 30ms
+User time in seconds was                         0.030000000 =  0h 0m 0s 30ms
+System CPU time in seconds was                   0.000000000 =  0h 0m 0s  0ms
+Non-I/O page faults was                          0
+I/O page faults was                              0
+Signals delivered was                            0
+Swaps was                                        0
+Total context switches was                       0

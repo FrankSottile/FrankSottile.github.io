@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+   <TITLE>Challenge problems</TITLE> 
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="SectIII.6.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIV.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#3"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+<HR>
+
+<H2>3.vii. Challenge problems</H2>
+
+One case we find most interesting is the case of the 6 2-planes in 
+<B>C</B><SUP>7</SUP> satisfying (<I>J</I><SUB>2</SUB>)<SUP>5</SUP>,
+that is meeting 5 4-planes osculating the rational normal curve.
+While we came very close to proving this case, we have yet to complete it.
+<P>
+
+&nbsp;&nbsp;
+We have a Maple <A HREF="computations/challenges/2e5p2.maple">script</A>
+which computes the universal 
+<A HREF="computations/challenges/2e5p2.elim">eliminant</A>, as well as the 
+<A HREF="computations/challenges/2e5p2.disc">discriminant</A>.
+The universal eliminant is a polynomial of
+degree 6 in the variable <I>x</I>25 and the parameters <I>s</I>, <I>t</I>,
+and <I>u</I>.
+The <A HREF="computations/challenges/2e5p2.disc">discriminant</A> has 388
+terms and has degree 30 in the parameters <I>s</I>, <I>t</I>,
+and <I>u</I>.
+The problem is to show the discriminant is a sum of squares.
+By the first column of the table of 
+<A HREF="SectIII.6.html">Section 3.vi</A>, this would then prove the
+conjecture of Shapiro and Shapiro in this case.
+<P>
+
+&nbsp;&nbsp;
+Here is another challenge.
+There are 6 2-planes in <B>C</B><SUP>6</SUP> satisfying 
+(<I>J</I><SUB>2</SUB>)<SUP>2</SUP>(<I>J</I><SUB>1</SUB>)<SUP>4</SUP>,
+that is meeting 2 3-planes and 4 4-planes.
+We have a Maple <A HREF="computations/challenges/2e2_1e4p2.maple">script</A>
+which computes
+<A HREF="computations/challenges/2e2_1e4p2.elim">eliminant</A>, and the 
+<A HREF="computations/challenges/2e2_1e4p2.disc">discriminant</A>.
+The universal eliminant is a polynomial of
+degree 6 in the variable <I>x</I>25 and the parameters <I>s</I>, <I>t</I>,
+<I>u</I>, and <I>v</I>. 
+This <A HREF="computations/challenges/2e2_1e4p2.disc">discriminant</A> 
+factors as the square of a cubic form and one form of degree
+24 in the parameters <I>s</I>, <I>t</I>, <I>u</I>,
+and <I>v</I> with 1289 terms.
+The problem is to show the discriminant is a sum of squares.
+Since all 6 2-planes are real when <I>s, t, u, v</I> = 1, 2, 3, 4, this
+would prove the conjecture in this case.
+<P>
+
+&nbsp;&nbsp;
+Another challenge is the following.
+In the case of 14 2-planes which meet 8 given 4-planes in
+<B>C</B><SUP>6</SUP>, we are unable to compute anything if
+we allow all 8 points of osculation to vary, or even when we fix two, but
+let the other 6 vary.
+We have a specialization which does allow us to compute an eliminant:
+Fix one point of osculation to be at infinity, another to be at zero, and
+the remaining 6 to be in pairs <I>s, -s</I>, <I>t, -t</I>, and <I>u, -u</I>.
+We have a Maple V.5
+<A HREF="computations/challenges/G24.maple">script</A> which 
+computes a universal 
+<A HREF="computations/challenges/G24.elim">eliminant</A> 
+(a polynomial of degree 14 in the variable <I>x</I><SUB>12</SUB>)
+and the <A HREF="computations/challenges/G24.disc">discriminant</A>. 
+The discriminant has several factors, the most interesting being its third
+factor, which is a square of a degree 72 polynomial in <I>s</I>, <I>t</I>,
+and <I>u</I> with 595 terms.
+<P>
+
+&nbsp;&nbsp;
+The universal eliminant has only even powers of the variable 
+<I>x</I><SUB>12</SUB>, so we obtain a simpler 
+<A HREF="computations/challenges/G24.simple.elim">eliminant</A> of degree 7
+by substituting the square root of <I>x</I><SUB>12</SUB>.
+This also give a simpler 
+<A HREF="computations/challenges/G24.simple.disc">discriminant</A>
+which has three factors, the first is inconsequential, the second is a
+square, but the third has degree 48 in <I>s</I>, <I>t</I>,
+and <I>u</I> with 217 terms.
+
+<P>
+
+&nbsp;&nbsp;
+Both discriminants are polynomials in <I>s</I><SUP>2</SUP>, 
+<I>t</I><SUP>2</SUP>, and <I>u</I><SUP>2</SUP>, and so we may substitute
+the square roots of the variables, to obtain even simpler `discriminants'.
+Here is the 
+<A HREF="computations/challenges/G24.half.disc">simplification</A> 
+of the first discriminant, and here is the 
+<A HREF="computations/challenges/G24.tiny.disc">simplification</A> 
+of the second.
+The challenge here is to show that these are sums of squares, and also to
+properly interpret this geometrically.
+
+<HR>
+<A HREF="SectIII.6.html"><IMG SRC="figures/prev.gif" ALT="Previous"></A>
+<A HREF="SectIV.html"><IMG SRC="figures/next.gif" ALT="Next"></A>
+<A HREF="index.html#3"><IMG SRC="figures/toc.gif" ALT="Contents"></A>
+</BODY>
+</HTML>
