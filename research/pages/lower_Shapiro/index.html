@@ -1,0 +1,1928 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Beyond the Shapiro Conjecture and Eremenko-Gabrielov lower bounds</title>
+  <link rel="shortcut icon" href="../../images/sottile.ico"> 
+  <link href="../../images/frank.css" rel="stylesheet" type="text/css">
+</head>
+<body bgcolor="#ffffff">
+<!---------------------------------------------------------------------->
+<table>
+ <tr valign=top>
+<!--  <td>
+   <img src="fb-med.104.gif">
+  </td>-->
+  <td width=15> </td>
+  <td>
+   <h1>Beyond the Shapiro Conjecture and Eremenko-Gabrielov lower bounds</h1> 
+   <font size="+2"> 
+   <a href="/~jhauenst"></A>Jonathan Hauenstein, 
+   <a href="/~nickolas.hein/"></A>Nick Hein, 
+   <a href="/~abraham.martindelcamposanchez/"></A>Abraham Mart&iacute;n del Campo,  and 
+   <a href="../../../index.html">Frank Sottile</a>.
+   </font>
+  </td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------->
+<h3>
+ <a href="#Description">Description</a> &nbsp;
+ <a href="#Notation">Notation</a> &nbsp;
+ <a href="#Data">Data</a> &nbsp;
+ <a href="#Bibliography">Bibliography</a> &nbsp;
+</h3>
+<!---------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------->
+<A NAME="Description"></A>
+<h2>Description</h2>
+&nbsp;&nbsp; 
+The Shapiro Conjecture for the Grassmannians (now Theorem of Mukhin, Tarasov,
+and Varchenko) 
+posits that  
+all the points in an intersection of Schubert varieties will be real, when those
+Schubert varieties are defined by flags osculating the rational normal curve at real points.
+This is implied via a standard limiting argument from the family of special cases in which the
+Schubert varieties all have codimension 1.
+This family of special cases is in turn is equivalent to the assertion that the Wronski map
+<br>
+<table>
+ <tr>
+  <td>(*)</td>
+  <td width=100>&nbsp;</td>
+  <td>
+   <center>
+    <font color=blue>
+      Wr&nbsp;:&nbsp;
+      Gr(<i>k</i>;<b>C</b><sub><i>n</i>-1</sub>[t]) &nbsp;--->&nbsp; 
+      <b>P</b><sup><i>k</i>(<i>n</i>-<i>k</i>)</sup>,
+     </font>
+    </center>
+  </td>
+ </tr>
+</table>
+has only real points in its fibres over the set of 
+<i>hyperbolic polynomials</i>, those polynomials with only real roots.
+This is a finite map from the Grassmannian of <font color=blue><i>k</i></font>-dimensional
+linear spaces of polynomials of degree <font color=blue><i>n</i>-1</sub></font> to 
+the projective space of polynomials of degree 
+<font color=blue><i>k</i>(<i>n</i>-<i>k</i>)</font>, 
+<br>
+
+&nbsp;&nbsp;
+Eremenko and Gabrielov [EG] established the following weak form of the Shapiro
+Conjecture: 
+They considered the real Wronski map, the restriction of (*) to the real points
+of the Grassmannian, which sends spaces of real polynomials to real Wronski polynomials.
+Their main result is that when <font color=blue><i>n</i></sub></font> is odd, this map is
+surjective, and they computed a lower bound for its number of inverse images.
+(They also showed that when <font color=blue><i>k</i>=2</sub></font>, the map is not surjective
+ when <font color=blue><i>n</i></sub></font> is even.[])
+<br>
+
+&nbsp;&nbsp;
+Here, we report on computations that go beyond these two results.
+We consider intersections of Schubert varieties given by flags osculating the rational normal
+curve where some of the flags are real and some come in complex conjugate pairs.
+(To ensure that the resulting intersection is defined over the real numbers <b>R</b>,
+we need that the two flags in each complex conjugate pair define Schubert varieties of
+the same type.) 
+<!---------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------->
+<A NAME="Notation"></A>
+<h2>Notation</h2>
+&nbsp;&nbsp;
+We use the following notation for Schubert conditions, which is uniform for the 
+<a href="/~secant">Frontiers of Reality</a> project:<br>
+
+&nbsp;&nbsp;
+The Schubert problem on Gr(2;6) denoted by 
+<font color=#6600aa><b>(W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>4</SUP></b></font> = 3 
+asks for the set of 2-planes in <b>C</b><sup>6</sup> that meet each of four given 3-planes.
+Here, the symbol <font color=#6600aa><b>W</b></font> and its color indicate a codimension four
+linear subspace (<font color=#6600aa><b>W</b></font> is fourth from the last in the Roman
+alphabet).
+The subscript <IMG SRC="Tableau/2.purple.Small.gif"> is the Young diagram of the partition
+corresponding to the Schubert condition.
+The exponent <font color=#6600aa><b><SUP>4</SUP></b></font> means that this
+Schubert condition which has codimension two, the number of boxes in the partition.
+<font color=#6600aa><b>W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB></b></font> is
+repeated four times, and the =&nbsp;3 indicates that there are three solutions
+to this problem.
+Observe that 2+2+2+2 is equal to the dimension of the Grassmannian Gr(2;6).<br>
+
+&nbsp;&nbsp;
+There are three ways that this problem can be evaluated at flags osculating the
+rational normal curve, so that the resulting intersection is defined over
+<b>R</b>.
+Namely, evaluating the conditions at four real points, two real points
+and one complex conjugate pair, and at no real points and two complex conjugate
+pairs.  
+We indicate these types by the shorthand 
+<font color=#6600aa>4r0c</font>, 
+<font color=#6600aa>2r1c</font>, and
+<font color=#6600aa>0r2c</font>.
+The first case of <font color=#6600aa>4r0c</font> is the Shapiro Conjecture 
+(Theorem of Muknin, Tarasov, and Varchenko), and we do not test cases
+corresponding to the Shapiro Conjecture.
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<A NAME="Data"></A>
+<h2>Data</h2>
+
+
+Here are data from a small experiment that we conducted in October 2010 for
+several different Schubert problems on several different Grassmannians.
+We report these data in frequency tables. 
+The columns represent the numbers of real solutions, and the rows represent the 
+types of evaluation (as in <font color=#6600aa>2r1c</font> and
+<font color=#6600aa>0r2c</font>).
+<!---------------------------------------------------------------------------->
+
+<table>
+ <tr valign=top>
+ <td>
+<!-------------------------------    G26_2^4 = 3   ---------------------------->
+<table border=1>
+ <tr><td colspan=4 align=center><font color=#6600aa><b>
+      (W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>4</SUP> = 3
+      &nbsp; &nbsp; on Gr(2;6)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=2># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>1</td><td align=right>3</td>
+ </tr>
+ <tr>
+  <td align=right><font color=#6600aa>2r1c</font></td>
+  <td align=right>5685</td><td align=right>4315</td>
+ </tr>
+ <tr>
+  <td align=right><font color=#6600aa>0r2c</font></td>
+  <td align=right>&nbsp;</td><td align=right>10000 </td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+<!-------------------------------   G26_2_1^6 = 9   --------------------------->
+<table border=1>
+ <tr><td colspan=9 align=center><font color=#6600aa><b>
+      W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)
+      (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>6</SUP> = 9
+      &nbsp; &nbsp; on Gr(2;6)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=9># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td><td align=right>5</td>
+   <td align=right>7</td><td align=right>9</td>
+ </tr>
+ <tr><!-- G26_2_1^6.1c  0 58233 16671 5495 19601  -->
+   <td align=right><font color=#6600aa>0c</font></td>
+   <td align=right><font color=#6600aa>4r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>58233</td><td align=right>16671</td>
+   <td align=right>5495</td><td align=right>19601</td>
+ </tr>
+ <tr><!-- G26_2_1^6.2c  268 511 132 26 63 -->
+  <td align=right><font color=#6600aa>0c</font></td>
+  <td align=right><font color=#6600aa>2r2c</font></td>
+  <td align=right>268</td><td align=right>511</td>
+  <td align=right>132</td><td align=right>26</td>
+  <td align=right>63</td>
+ <tr><!-- G26_2_1^6.3c  0 76009 18542 1248 4201  -->
+  <td align=right><font color=#6600aa>0c</font></td>
+  <td align=right><font color=#6600aa>0r3c</font></td>
+  <td align=right>&nbsp;</td><td align=right>76009</td><td align=right>18542</td>
+  <td align=right>1248</td><td align=right>4201</td>
+ </tr>
+
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+<!-------------------------------   G26_1^8 = 14   --------------------------->
+<table border=1>
+ <tr><td colspan=9 align=center><font color=#6600aa><b>
+      (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>8</SUP> = 14
+      &nbsp; &nbsp; on Gr(2;6)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=8># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+ </tr>
+ <tr><!-- G26_1^8.1c 0 0 3501 1643 1460 673 199 2524 -->
+  <td align=right><font color=#6600aa>6r1c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>3501</td> <td align=right>1643</td> 
+  <td align=right>1460</td> <td align=right>673</td> 
+  <td align=right>199</td> <td align=right>2524</td> 
+ </tr>
+ <tr><!-- G26_1^8.2c 0 31317 27221 20417 11343 3407 1121 5174 -->
+  <td align=right><font color=#6600aa>4r2c</font></td>
+  <td align=right>&nbsp;</td><td align=right>31317</td> 
+  <td align=right>27221</td> <td align=right>20417</td> 
+  <td align=right>11343</td> <td align=right>3407</td> 
+  <td align=right>1121</td> <td align=right>5174</td>
+ </tr>
+ <tr><!-- G26_1^8.3c 950 3692 1790 2574 650 153 45 146 -->
+  <td align=right><font color=#6600aa>2r3c</font></td>
+  <td align=right>950</td> <td align=right>3692</td> 
+  <td align=right>1790</td> <td align=right>2574</td> 
+  <td align=right>650</td> <td align=right>153</td> 
+  <td align=right>45</td> <td align=right>146</td>
+ </tr>
+ <tr><!-- G26_1^8.4c 0 0 0 88180 9511 1207 290 812 -->
+  <td align=right><font color=#6600aa>0r4c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>&nbsp;</td><td align=right>88180</td> 
+  <td align=right>9511</td> <td align=right>1207</td> 
+  <td align=right>290</td> <td align=right>812</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<table>
+ <tr valign=top><td>
+<!----------------------------   G36_2^2_1^5 = 11   --------------------------->
+<table border=1>
+ <tr><td colspan=8 align=center>
+   <font color=#0000ff><b>
+      (X<SUB><IMG SRC="Tableau/2.blue.Small.gif"></SUB>)<SUP>2</SUP>
+      (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>5</SUP>
+       = 11 on   Gr(3;6)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=6># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.blue.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.blue.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+   <td align=right>11</td>
+ </tr> 
+ <tr> <!-- G36_2^2_1^5.0c1c  226 691 474 136 67 406  -->
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right><font color=#0000ff>3r1c</font></td>
+   <td align=right>226</td><td align=right>691</td><td align=right>474</td>
+   <td align=right>136</td><td align=right>67</td><td align=right>406</td>
+ </tr>
+ <tr> <!-- G36_2^2_1^5.0c2c  901 593 297 82 35 92  -->
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right><font color=#0000ff>1r2c</font></td>
+   <td align=right>901</td><td align=right>593</td><td align=right>297</td>
+   <td align=right>82</td><td align=right>35</td><td align=right>92</td>
+ </tr>
+ <tr> <!-- G36_2^2_1^5.1c0c  347 597 396 117 91 452  -->
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right><font color=#0000ff>5r0c</font></td>
+   <td align=right>347</td><td align=right>597</td><td align=right>396</td>
+   <td align=right>117</td><td align=right>91</td><td align=right>452</td>
+ </tr>
+ <tr> <!-- G36_2^2_1^5.1c1c  475 1005 309 68 39 104  -->
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right><font color=#0000ff>3r1c</font></td>
+   <td align=right>475</td><td align=right>1005</td><td align=right>309</td>
+   <td align=right>68</td><td align=right>39</td><td align=right>104</td>
+ </tr>
+ <tr> <!-- G36_2^2_1^5.1c2c  0 81859 12833 2039 1032 2237  -->
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right><font color=#0000ff>1r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>81859</td><td align=right>12833</td>
+   <td align=right>2039</td><td align=right>1032</td><td align=right>2237</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+<!----------------------------   G36_21_1^6 = 16   --------------------------->
+<table border=1>
+  <tr><td colspan=11 align=center>
+   <font color=#0000ff><b>
+      X<SUB><SUB><IMG SRC="Tableau/21.blue.Small.gif"></SUB></SUB>
+      (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>6</SUP>
+       = 16 on   Gr(3;6)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=9># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/21.blue.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.blue.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td>
+   <td align=right>6</td><td align=right>8</td><td align=right>10</td>
+   <td align=right>12</td><td align=right>14</td><td align=right>16</td>
+ </tr>
+ <tr>
+ <!-- G36_21_1^6.0c1c  21255 0 35482 0 17176 0 7228 0 18859  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>4r1c</font></td>
+   <td align=right>21255</td><td align=right>&nbsp;</td><td align=right>35482</td>
+   <td align=right>&nbsp;</td><td align=right>17176</td><td align=right>&nbsp;</td>
+   <td align=right>7228</td><td align=right>&nbsp;</td><td align=right>18859</td>
+ </tr>
+ <tr>
+ <!-- G36_21_1^6.0c2c  46357 0 32374 0 12268 0 3654 0 5347  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>2r2c</font></td>
+   <td align=right>46357</td><td align=right>&nbsp;</td><td align=right>32374</td>
+   <td align=right>&nbsp;</td><td align=right>12268</td><td align=right>&nbsp;</td>
+   <td align=right>3654</td><td align=right>&nbsp;</td><td align=right>5347</td>
+ </tr>
+ <tr>
+ <!-- G36_21_1^6.0c3c  60437 0 15351 0 18321 0 2116 0 3775  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>0r3c</font></td>
+   <td align=right>60437</td><td align=right>&nbsp;</td><td align=right>15351</td>
+   <td align=right>&nbsp;</td><td align=right>18321</td><td align=right>&nbsp;</td>
+   <td align=right>2116</td><td align=right>&nbsp;</td><td align=right>3775</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td></tr></table>
+<!----------------------------   G36_2_1^7 = 21   ---------------------------->
+<table border=1>
+ <tr><td colspan=13 align=center>
+   <font color=#0000ff><b>
+      X<SUB><IMG SRC="Tableau/2.blue.Small.gif"></SUB>
+      (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>7</SUP>
+       = 21 on   Gr(3;6)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=11># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.blue.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.blue.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+   <td align=right>11</td><td align=right>13</td><td align=right>15</td>
+   <td align=right>17</td><td align=right>19</td><td align=right>21</td>
+ </tr>
+ <tr>
+ <!-- G36_2_1^7.0c1c  79 427 1614 548 344 727 105 185 107 6 858  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>5r1c</font></td>
+   <td align=right>79</td><td align=right>427</td><td align=right>1614</td>
+   <td align=right>548</td><td align=right>344</td><td align=right>727</td>
+   <td align=right>105</td><td align=right>185</td><td align=right>107</td>
+   <td align=right>6</td><td align=right>858</td>
+ </tr>
+ <tr>
+ <!-- G36_2_1^7.0c2c  618 1708 1374 335 211 392 53 90 54 5 160  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>3r2c</font></td>
+   <td align=right>618</td><td align=right>1708</td><td align=right>1374</td>
+   <td align=right>335</td><td align=right>211</td><td align=right>392</td>
+   <td align=right>53</td><td align=right>90</td><td align=right>54</td>
+   <td align=right>5</td><td align=right>160</td>
+ </tr>
+ <tr>
+ <!-- G36_2_1^7.3c  0 5754 2626 457 296 500 54 82 66 3 162  -->
+   <td align=right><font color=#0000ff>1r</font></td>
+   <td align=right><font color=#0000ff>1r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>5754</td><td align=right>2626</td>
+   <td align=right>457</td><td align=right>296</td><td align=right>500</td>
+   <td align=right>54</td><td align=right>82</td><td align=right>66</td>
+   <td align=right>3</td><td align=right>162</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+
+<!-------------------------------   G36_1^9 = 42  ---------------------------->
+<table border=1>
+ <tr><td colspan=23 align=center>
+   <font color=#0000ff><b>
+      (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>9</SUP>
+       = 42 on   Gr(3;6)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=22># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td><td align=right>30</td><td align=right>32</td>
+   <td align=right>34</td><td align=right>36</td><td align=right>38</td>
+   <td align=right>40</td><td align=right>42</td>
+ </tr>
+ <tr>
+  <!-- G36_1^9.1c  0 1099 0 7975 0 42235 0 9081 0 6102 0 8827 0 1597 0 4207 0 1343 0 172 0 17362  -->
+  <td align=right><font color=#0000ff>7r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>1099</td><td align=right>&nbsp;</td>
+   <td align=right>7975</td><td align=right>&nbsp;</td><td align=right>42235</td>
+   <td align=right>&nbsp;</td><td align=right>9081</td><td align=right>&nbsp;</td>
+   <td align=right>6102</td><td align=right>&nbsp;</td><td align=right>8827</td>
+   <td align=right>&nbsp;</td><td align=right>1597</td><td align=right>&nbsp;</td>
+   <td align=right>4207</td><td align=right>&nbsp;</td><td align=right>1343</td>
+   <td align=right>&nbsp;</td><td align=right>172</td><td align=right>&nbsp;</td>
+   <td align=right>17362</td>
+ </tr>
+ <tr>
+ <!-- G36_1^9.2c  0 24495 0 30089 0 25992 0 5054 0 3632 0 4114 0 955 0 1586 0 832 0 63 0 3188 -->
+  <td align=right><font color=#0000ff>5r2c</font></td>
+    <td align=right>&nbsp;</td><td align=right>24495</td><td align=right>&nbsp;</td>
+   <td align=right>30089</td><td align=right>&nbsp;</td><td align=right>25992</td>
+   <td align=right>&nbsp;</td><td align=right>5054</td><td align=right>&nbsp;</td>
+   <td align=right>3632</td><td align=right>&nbsp;</td><td align=right>4114</td>
+   <td align=right>&nbsp;</td><td align=right>955</td><td align=right>&nbsp;</td>
+   <td align=right>1586</td><td align=right>&nbsp;</td><td align=right>832</td>
+   <td align=right>&nbsp;</td><td align=right>63</td><td align=right>&nbsp;</td>
+   <td align=right>3188</td>
+ </tr>
+ <tr><!-- G36_1^9.3c  0 39371 0 35022 0 15924 0 3150 0 1990 0 2183 0 494 0 622 0 367 0 35 0 842  -->
+  <td align=right><font color=#0000ff>3r3c</font></td>
+  <td align=right>&nbsp;</td><td align=right>39371</td>
+  <td align=right>&nbsp;</td><td align=right>35022</td>
+  <td align=right>&nbsp;</td><td align=right>15924</td>
+  <td align=right>&nbsp;</td><td align=right>3150</td>
+  <td align=right>&nbsp;</td><td align=right>1990</td>
+  <td align=right>&nbsp;</td><td align=right>2183</td>
+  <td align=right>&nbsp;</td><td align=right>494</td>
+  <td align=right>&nbsp;</td><td align=right>622</td>
+  <td align=right>&nbsp;</td><td align=right>367</td>
+  <td align=right>&nbsp;</td><td align=right>35</td>
+  <td align=right>&nbsp;</td><td align=right>842</td>
+ </tr>
+ <tr><!-- G36_1^9.4c 0 0 0 76117 0 14481 0 3754 0 1375 0 2925 0 271 0 364 0 204 0 32 0 477  -->
+  <td align=right><font color=#0000ff>1r4c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>&nbsp;</td><td align=right>76117</td>
+  <td align=right>&nbsp;</td><td align=right>14481</td>
+  <td align=right>&nbsp;</td><td align=right>3574</td>
+  <td align=right>&nbsp;</td><td align=right>1375</td>
+  <td align=right>&nbsp;</td><td align=right>2925</td>
+  <td align=right>&nbsp;</td><td align=right>271</td>
+  <td align=right>&nbsp;</td><td align=right>364</td>
+  <td align=right>&nbsp;</td><td align=right>204</td>
+  <td align=right>&nbsp;</td><td align=right>32</td>
+  <td align=right>&nbsp;</td><td align=right>477</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+<table>
+ <tr valign=top>
+ <td>
+<!-----------------------------   G27_2^5 = 6  ---------------------------->
+<table border=1>
+ <tr><td colspan=5 align=center><font color=#AAAA00><b>
+    (V<SUB><IMG SRC="Tableau/2.yellow.Small.gif"></SUB>)<SUP>5</SUP> = 6 
+      &nbsp; &nbsp; on Gr(2;7)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=4># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td>
+ </tr>
+ <tr>
+  <td align=right><font color=#AAAA00>3r1c</font></td>
+  <td align=right>247</td><td align=right>289</td>
+  <td align=right>185</td><td align=right>279</td>
+ </tr>
+ <tr>
+  <td align=right><font color=#AAAA00>1r2c</font></td>
+  <td align=right>&nbsp;</td><td align=right> 68044</td>
+  <td align=right>21486</td><td align=right>10470</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+<!----------------------------   G27_2^3_1^4 = 13  --------------------------->
+<table border=1>
+ <tr><td colspan=9 align=center><font color=#AAAA00><b>
+    (V<SUB><IMG SRC="Tableau/2.yellow.Small.gif"></SUB>)<SUP>3</SUP>
+    (V<SUB><IMG SRC="Tableau/1.yellow.Small.gif"></SUB>)<SUP>4</SUP> = 13 
+      &nbsp; &nbsp; on Gr(2;7)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=7># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.yellow.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.yellow.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+   <td align=right>11</td><td align=right>13</td>
+ </tr>
+ <tr>
+ <!-- G27_2^3_1^4.0c1c  0 0 5087 1483 684 296 2450  -->
+   <td align=right><font color=#AAAA00>3r0c</font></td>
+   <td align=right><font color=#AAAA00>2r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>5087</td>
+   <td align=right>1483</td><td align=right>684</td><td align=right>296</td>
+   <td align=right>2450</td>
+ </tr>
+ <tr>
+ <!-- G27_2^3_1^4.0c2c  17 23 45 8 3 2 2  -->
+   <td align=right><font color=#AAAA00>3r0c</font></td>
+   <td align=right><font color=#AAAA00>0r2c</font></td>
+   <td align=right>17</td><td align=right>23</td><td align=right>45</td>
+   <td align=right>8</td><td align=right>3</td><td align=right>2</td>
+   <td align=right>2</td>
+ </tr>
+ <tr>
+ <!-- G27_2^3_1^4.1c0c  31 13 4 14 10 3 25  -->
+   <td align=right><font color=#AAAA00>1r1c</font></td>
+   <td align=right><font color=#AAAA00>0r0c</font></td>
+   <td align=right>31</td><td align=right>13</td><td align=right>4</td>
+   <td align=right>14</td><td align=right>10</td><td align=right>3</td>
+   <td align=right>25</td>
+ </tr>
+ <tr>
+ <!-- G27_2^3_1^4.1c1c  638 391 444 292 113 41 81  -->
+   <td align=right><font color=#AAAA00>1r1c</font></td>
+   <td align=right><font color=#AAAA00>2r1c</font></td>
+   <td align=right>638</td><td align=right>391</td><td align=right>444</td>
+   <td align=right>292</td><td align=right>113</td><td align=right>41</td>
+   <td align=right>81</td>
+ </tr>
+ <tr>
+ <!-- G27_2^3_1^4.1c2c  0 6350 2353 890 195 93 119  -->
+   <td align=right><font color=#AAAA00>1r1c</font></td>
+   <td align=right><font color=#AAAA00>0r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>6350</td><td align=right>2353</td>
+   <td align=right>890</td><td align=right>195</td><td align=right>93</td>
+   <td align=right>119</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td></tr></table>
+
+<!----------------------------   G27_2^2_1^6 = 19  --------------------------->
+<table border=1>
+ <tr><td colspan=12 align=center><font color=#AAAA00><b>
+    (V<SUB><IMG SRC="Tableau/2.yellow.Small.gif"></SUB>)<SUP>2</SUP>
+    (V<SUB><IMG SRC="Tableau/1.yellow.Small.gif"></SUB>)<SUP>6</SUP> = 19 
+      &nbsp; &nbsp; on Gr(2;7)</b></font>
+ </td></tr>
+ <tr> 
+   <td align=right colspan=2><b>type</b></td>
+   <td colspan=10># real solutions</td>
+ </tr> 
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.yellow.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.yellow.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+   <td align=right>11</td><td align=right>13</td><td align=right>15</td>
+   <td align=right>17</td><td align=right>19</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.0c1c  0 0 0 56372 13010 6407 4790 1775 1222 16424  -->
+   <td align=right><font color=#AAAA00>2r0c</font></td>
+   <td align=right><font color=#AAAA00>4r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>56372</td><td align=right>13010</td><td align=right>6407</td>
+   <td align=right>4790</td><td align=right>1775</td><td align=right>1222</td>
+   <td align=right>16424</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.0c2c  0 38101 18757 26416 7083 3123 2109 639 693 3079  -->
+   <td align=right><font color=#AAAA00>2r0c</font></td>
+   <td align=right><font color=#AAAA00>2r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>38101</td><td align=right>18757</td>
+   <td align=right>26416</td><td align=right>7083</td><td align=right>3123</td>
+   <td align=right>2109</td><td align=right>639</td><td align=right>693</td>
+   <td align=right>3079</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.0c3c  26054 32176 18698 15245 3485 2113 637 215 464 913  -->
+   <td align=right><font color=#AAAA00>2r0c</font></td>
+   <td align=right><font color=#AAAA00>0r3c</font></td>
+   <td align=right>26054</td><td align=right>32176</td><td align=right>18698</td>
+   <td align=right>15245</td><td align=right>3485</td><td align=right>2113</td>
+   <td align=right>637</td><td align=right>215</td><td align=right>464</td>
+   <td align=right>913</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.1c0c  352 88 46 80 60 56 72 51 17 178  -->
+   <td align=right><font color=#AAAA00>0r1c</font></td>
+   <td align=right><font color=#AAAA00>6r0c</font></td>
+   <td align=right>352</td><td align=right>88</td><td align=right>46</td>
+   <td align=right>80</td><td align=right>60</td><td align=right>56</td>
+   <td align=right>72</td><td align=right>51</td><td align=right>17</td>
+   <td align=right>178</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.1c1c  347 125 110 158 99 75 26 13 12 35  -->
+   <td align=right><font color=#AAAA00>0r1c</font></td>
+   <td align=right><font color=#AAAA00>4r1c</font></td>
+   <td align=right>347</td><td align=right>125</td><td align=right>110</td>
+   <td align=right>158</td><td align=right>99</td><td align=right>75</td>
+   <td align=right>26</td><td align=right>13</td><td align=right>12</td>
+   <td align=right>35</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.1c2c  289 231 110 205 79 47 17 11 2 9  -->
+   <td align=right><font color=#AAAA00>0r1c</font></td>
+   <td align=right><font color=#AAAA00>2r2c</font></td>
+   <td align=right>289</td><td align=right>231</td><td align=right>110</td>
+   <td align=right>205</td><td align=right>79</td><td align=right>47</td>
+   <td align=right>17</td><td align=right>11</td><td align=right>2</td>
+   <td align=right>9</td>
+ </tr>
+ <tr>
+ <!-- G27_2^2_1^6.1c3c  0 0 0 7768 1529 528 73 39 22 41  -->
+   <td align=right><font color=#AAAA00>0r1c</font></td>
+   <td align=right><font color=#AAAA00>0r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>7768</td><td align=right>1529</td><td align=right>528</td>
+   <td align=right>73</td><td align=right>39</td><td align=right>22</td>
+   <td align=right>41</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<!-----------------------------   G27_2_1^8 = 28  ---------------------------->
+<table border=1>
+ <tr><td colspan=16 align=center><font color=#AAAA00><b>
+    V<SUB><IMG SRC="Tableau/2.yellow.Small.gif"></SUB>
+    (V<SUB><IMG SRC="Tableau/1.yellow.Small.gif"></SUB>)<SUP>8</SUP> = 28 
+      &nbsp; &nbsp; on Gr(2;7)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=15># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td>
+ </tr>
+ <tr>
+ <!-- G27_2_1^8.1c  0 0 0 0 0 12679 3370 1856 1283 754 454 420 229 169 3786  -->
+   <td align=right><font color=#AAAA00>6r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>12679</td>
+   <td align=right>3370</td><td align=right>1856</td><td align=right>1283</td>
+   <td align=right>754</td><td align=right>454</td><td align=right>420</td>
+   <td align=right>229</td><td align=right>169</td><td align=right>3786</td>
+ </tr>
+ <tr>
+ <!-- G27_2_1^8.2c  0 0 7644 4693 2673 5103 1789 883 651 309 158 208 86 80 723  -->
+   <td align=right><font color=#AAAA00>4r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>7644</td>
+   <td align=right>4693</td><td align=right>2673</td><td align=right>5103</td>
+   <td align=right>1789</td><td align=right>883</td><td align=right>651</td>
+   <td align=right>309</td><td align=right>158</td><td align=right>208</td>
+   <td align=right>86</td><td align=right>80</td><td align=right>723</td>
+ </tr>
+ <tr>
+ <!-- G27_2_1^8.3c  0 5936 7947 4234 1971 2584 1030 454 369 122 66 61 18 43 165  -->
+   <td align=right><font color=#AAAA00>2r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>5936</td><td align=right>7947</td>
+   <td align=right>4234</td><td align=right>1971</td><td align=right>2584</td>
+   <td align=right>1030</td><td align=right>454</td><td align=right>369</td>
+   <td align=right>122</td><td align=right>66</td><td align=right>61</td>
+   <td align=right>18</td><td align=right>43</td><td align=right>165</td>
+ </tr>
+ <tr>
+ <!-- G27_2_1^8.4c  0 0 10216 6901 2051 3477 1153 392 493 94 42 37 15 44 85  -->
+   <td align=right><font color=#AAAA00>0r4c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>10216</td>
+   <td align=right>6901</td><td align=right>2051</td><td align=right>3477</td>
+   <td align=right>1153</td><td align=right>392</td><td align=right>493</td>
+   <td align=right>94</td><td align=right>42</td><td align=right>37</td>
+   <td align=right>15</td><td align=right>44</td><td align=right>85</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<!-----------------------------   G27_1^10 = 42   ---------------------------->
+<table border=1>
+ <tr><td colspan=23 align=center><font color=#AAAA00><b>
+    (V<SUB><IMG SRC="Tableau/1.yellow.Small.gif"></SUB>)<SUP>10</SUP> = 42 
+      &nbsp; &nbsp; on Gr(2;7)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=22># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td><td align=right>30</td><td align=right>32</td>
+   <td align=right>34</td><td align=right>36</td><td align=right>38</td>
+   <td align=right>40</td><td align=right>42</td>
+ </tr>
+ <tr>
+ <!-- G27_1^10.1c  0 0 0 0 0 0 0 36255 12869 13072 6062 2456 5385 1408 1843 1142 2364 354 497 571 422 15300  -->
+   <td align=right><font color=#AAAA00>8r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>36255</td><td align=right>12869</td>
+   <td align=right>13072</td><td align=right>6062</td><td align=right>2456</td>
+   <td align=right>5385</td><td align=right>1408</td><td align=right>1843</td>
+   <td align=right>1142</td><td align=right>2364</td><td align=right>354</td>
+   <td align=right>497</td><td align=right>571</td><td align=right>422</td>
+   <td align=right>15300</td>
+ </tr>
+ <tr>
+ <!-- G27_1^10.2c  0 0 0 34152 12848 4772 8225 15552 6150 6351 2503 1533 2133 689 753 428 680 178 215 206 186 2446 -->
+   <td align=right><font color=#AAAA00>6r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>34152</td><td align=right>12848</td><td align=right>4772</td>
+   <td align=right>8225</td><td align=right>15552</td><td align=right>6150</td>
+   <td align=right>6351</td><td align=right>2503</td><td align=right>1533</td>
+   <td align=right>2133</td><td align=right>689</td><td align=right>753</td>
+   <td align=right>428</td><td align=right>680</td><td align=right>178</td>
+   <td align=right>215</td><td align=right>206</td><td align=right>186</td>
+   <td align=right>2446</td>
+ </tr>
+ <tr>
+ <!-- G27_1^10.3c  0 17431 18125 27288 9794 5390 5983 6075 3154 2431 1028 718 891 302 244 151 185 77 91 79 65 498  -->
+   <td align=right><font color=#AAAA00>4r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>17431</td><td align=right>18125</td>
+   <td align=right>27288</td><td align=right>9794</td><td align=right>5390</td>
+   <td align=right>5983</td><td align=right>6075</td><td align=right>3154</td>
+   <td align=right>2431</td><td align=right>1028</td><td align=right>718</td>
+   <td align=right>891</td><td align=right>302</td><td align=right>244</td>
+   <td align=right>151</td><td align=right>185</td><td align=right>77</td>
+   <td align=right>91</td><td align=right>79</td><td align=right>65</td>
+   <td align=right>498</td>
+ </tr>
+ <tr>
+ <!-- G27_1^10.4c  0 32514 19740 20091 7270 5964 4686 3640 2521 1377 629 422 474 141 94 82 75 37 30 48 17 148  -->
+   <td align=right><font color=#AAAA00>2r4c</font></td>
+   <td align=right>&nbsp;</td><td align=right>32514</td><td align=right>19740</td>
+   <td align=right>20091</td><td align=right>7270</td><td align=right>5964</td>
+   <td align=right>4686</td><td align=right>3640</td><td align=right>2521</td>
+   <td align=right>1377</td><td align=right>629</td><td align=right>422</td>
+   <td align=right>474</td><td align=right>141</td><td align=right>94</td>
+   <td align=right>82</td><td align=right>75</td><td align=right>37</td>
+   <td align=right>30</td><td align=right>48</td><td align=right>17</td>
+   <td align=right>148</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<table>
+ <tr valign=top>
+  <td>
+<!-----------------------------   G37_21^4 = 8    ---------------------------->
+<table border=1>
+ <tr><td colspan=6 align=center><font color=#6600aa><b>
+      (W<SUB><IMG SRC="Tableau/21.purple.Small.gif"></SUB>)<SUP>4</SUP> = 8
+      &nbsp; &nbsp; on Gr(3;7)</b></font>
+  </td>
+ </tr>
+ <tr><td colspan=6># real solutions</td></tr> 
+ <tr>
+   <td colspan=1 align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+ </tr>
+ <tr>
+ <!-- G37_21^4.1c  3590 292 6118 0 0  -->
+   <td align=right><font color=#6600aa>2r1c</font></td>
+   <td align=right>3590</td><td align=right>292</td><td align=right>6118</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- G37_21^4.2c  0 0 10000 0 0  -->
+   <td align=right><font color=#6600aa>0r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>10000</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+<!-----------------------------   G37_2^6 = 16    ---------------------------->
+<table border=1>
+ <tr><td colspan=10 align=center><font color=#6600aa><b>
+      (W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>6</SUP> = 16
+      &nbsp; &nbsp; on Gr(3;7)</b></font>
+  </td>
+ </tr>
+ <tr><td></td><td colspan=9># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td>
+ </tr>
+ <tr>
+ <!-- G37_2^6.1c     0  4051  4395  9097  4959  2236   647   689  3926   509974  -->
+  <td align=right><font color=#6600aa>4r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>4051</td><td align=right>4395</td>
+   <td align=right>9097</td><td align=right>4959</td><td align=right>2236</td>
+   <td align=right>647</td><td align=right>689</td><td align=right>3926</td>
+ </tr>
+ </tr>
+ <tr>
+ <!-- G37_2^6.2c     0     0 17397  6880  2693  1332   454   324   920   663320   -->
+  <td align=right><font color=#6600aa>2r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>17397</td>
+   <td align=right>6880</td><td align=right>2693</td><td align=right>1332</td>
+   <td align=right>454</td><td align=right>324</td><td align=right>920</td>
+ </tr>
+ </tr>
+ <tr>
+  <td align=right><font color=#6600aa>0r3c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>&nbsp;</td><td align=right>7541</td>
+  <td align=right>778</td><td align=right>1427</td>
+  <td align=right>31</td><td align=right>70</td>
+  <td align=right>153</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td>
+ </tr>
+</table>
+
+<!-----------------------------   G28_2^6 = 15    ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=11 align=center><font color=#FF6600><b>
+    (U<SUB><IMG SRC="Tableau/2.orange.Small.gif"></SUB>)<SUP>6</SUP>
+      = 15 on Gr(2;8)</b></font>
+  </td>
+ </tr>
+ <tr><td></td><td colspan=9># real solutions</td></tr> 
+ <tr>
+   <td align=right><b>type</b></td><td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+   <td align=right>11</td><td align=right>13</td><td align=right>15</td>
+ </tr>
+ <tr>
+ <!-- G28_2^6.1c  0 95926 32427 9639 12386 17390 5327 26905 -->
+  <td align=right><font color=#FF6600>4r1c</font></td>
+  <td align=right>&nbsp;</td><td align=right>95926</td>
+  <td align=right>32427</td><td align=right>9639</td>
+  <td align=right>12386</td><td align=right>17390</td>
+  <td align=right>5327</td><td align=right>26905</td>
+ </tr>
+ <tr>
+ <!-- G28_2^6.2c  0 130489 28312 12541 11679 7507 2058 7414 -->
+  <td align=right><font color=#FF6600>2r2c</font></td>
+  <td align=right>&nbsp;</td><td align=right>130489</td>
+  <td align=right>28312</td><td align=right>12541</td>
+  <td align=right>11679</td><td align=right>7507</td>
+  <td align=right>2058</td><td align=right>7414</td>
+ </tr>
+ <tr>
+ <!-- G28_2^6.3c  0 0 0 164540 19349 10548 3260 2303 -->
+  <td align=right><font color=#FF6600>0r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>164540</td><td align=right>19349</td><td align=right>10548</td>
+   <td align=right>3260</td><td align=right>2303</td>
+ </tr>
+ </tr>
+
+</table>
+<!---------------------------------------------------------------------------->
+
+
+
+
+
+<!-----------------------------   G28_1^8_4 = 20  ---------------------------->
+<table border=1>
+ <tr><td colspan=13 align=center><font color=#FF6600><b>
+     (U<SUB><IMG SRC="Tableau/1.orange.Small.gif"></SUB>)<SUP>8</SUP>
+     (U<SUB><IMG SRC="Tableau/4.orange.Small.gif"></SUB>)<SUP></SUP>
+      = 20 &nbsp; &nbsp; on Gr(2;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=11># real solutions</td></tr> 
+ </tr>
+ <tr>
+  <td align=right><IMG SRC="Tableau/1.orange.Small.gif"></td>
+  <td align=right><IMG SRC="Tableau/4.orange.Small.gif"></td>
+  <td align=right>0</td><td align=right>2</td>
+  <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+  <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+  <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+ </tr>
+ <tr>
+ <!--G28_1^8_4.1c  0 0 0 0 0 282976 39121 6899 5397 11200 54407-->
+  <td align=right><font color=#FF6600>6r1c</font></td>
+  <td align=right><font color=#FF6600>1r</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>282976</td><td align=right>39121</td>
+   <td align=right>6899</td><td align=right>5397</td>
+   <td align=right>11200</td><td align=right>54407</td>
+  </tr>
+  <tr>
+  <!-- G28_1^8_4.2c 0 0 165393 73446 30332 94183 17094 3586 2767 3506 9693-->
+   <td align=right><font color=#FF6600>4r2c</font></td>
+   <td align=right><font color=#FF6600>1r</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>165393</td><td align=right>73446</td>
+   <td align=right>30332</td><td align=right>94183</td>
+   <td align=right>17094</td><td align=right>3586</td>
+   <td align=right>2767</td><td align=right>3506</td><td align=right>9693</td>
+  </tr>
+  <tr>
+  <!-- G28_1^8_4.3c 0 99395 165903 64304 19189 36187 8255 1617 1291 1252 2607-->
+   <td align=right><font color=#FF6600>2r3c</font></td>
+   <td align=right><font color=#FF6600>1r</font></td>
+   <td align=right>&nbsp;</td><td align=right>99395</td>
+   <td align=right>165903</td><td align=right>64304</td>
+   <td align=right>19189</td><td align=right>36187</td>
+   <td align=right>8255</td><td align=right>1617</td>
+   <td align=right>1291</td><td align=right>1252</td>
+   <td align=right>2607</td>
+  </tr>
+  <tr>
+  <!-- G28_1^8_4.4c 0 0 247841 105047 10832 23264 9001 891 1111 584 1429-->
+   <td align=right><font color=#FF6600>0r4c</font></td>
+   <td align=right><font color=#FF6600>1r</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>247841</td><td align=right>105047</td>
+   <td align=right>10832</td><td align=right>23264</td>
+   <td align=right>9001</td><td align=right>891</td>
+   <td align=right>1111</td><td align=right>584</td>
+   <td align=right>1429</td>
+  </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<!-----------------------------   G28_1^6_3^2 = 20  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=13 align=center><font color=#FF6600><b>
+     (U<SUB><IMG SRC="Tableau/1.orange.Small.gif"></SUB>)<SUP>6</SUP>
+     (U<SUB><IMG SRC="Tableau/3.orange.Small.gif"></SUB>)<SUP>2</SUP>
+     = 20 on Gr(2;8)</b></font>
+  </td>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=11># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/1.orange.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/3.orange.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.1c0c   0 0 0 0 262715 31064 20542 16791 5271 4164 59453 -->
+  <td align=right><font color=#FF6600>4r1c</font></td><td align=right><font color=#FF6600>2r0c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>262715</td><td align=right>31064</td>
+  <td align=right>20542</td><td align=right>16791</td> 
+  <td align=right>5271</td><td align=right>4164</td> 
+  <td align=right>59453</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.2c0c  0 0 198333 53393 103867 15161 8873 6383 1653 2225 10112-->
+  <td align=right><font color=#FF6600>2r2c</font></td><td align=right><font color=#FF6600>2r0c</font></td>
+  <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+  <td align=right>198333</td> <td align=right>53393</td>
+  <td align=right>103867</td> <td align=right>15161</td> 
+  <td align=right>8873</td> <td align=right>6383</td> 
+  <td align=right>1653</td> <td align=right>2225</td> 
+  <td align=right>10112</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.3c0c  85534 59686 145049 42829 47329 8070 5381 1706 558 1216 2642 -->
+  <td align=right><font color=#FF6600>0r3c</font></td><td align=right><font color=#FF6600>2r0c</font></td>
+  <td align=right>85534</td><td align=right>59686</td>
+  <td align=right>145049</td><td align=right>42829</td>
+  <td align=right>47329</td><td align=right>8070</td>
+  <td align=right>5381</td><td align=right>1706</td>
+  <td align=right>558</td><td align=right>1216</td>
+  <td align=right>2642 
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.0c1c  4464 922 519 219 645 378 364 517 355 106 1511 -->
+  <td align=right><font color=#FF6600>6r0c</font></td><td align=right><font color=#FF6600>0r1c</font></td>
+  <td align=right>4464</td><td align=right>922</td>
+  <td align=right>519</td><td align=right>219</td>
+  <td align=right>645</td><td align=right>378</td>
+  <td align=right>364</td><td align=right>517</td>
+  <td align=right>355</td><td align=right>106</td>
+  <td align=right>1511</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.1c1c  3766 1072 916 752 1438 798 564 240 144 75 235 -->
+  <td align=right><font color=#FF6600>4r1c</font></td>
+  <td align=right><font color=#FF6600>0r1c</font></td>
+  <td align=right>3766</td><td align=right>1072</td>
+  <td align=right>916</td><td align=right>752</td>
+  <td align=right>1438</td><td align=right>798</td>
+  <td align=right>564</td><td align=right>240</td>
+  <td align=right>144</td><td align=right>75</td>
+  <td align=right>235</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.2c1c 2727 1471 1817 796 1940 667 343 102 54 25 58 -->
+  <td align=right><font color=#FF6600>2r2c</font></td>
+  <td align=right><font color=#FF6600>0r1c</font></td>
+  <td align=right>2727</td><td align=right>1471</td>
+  <td align=right>1817</td><td align=right>796</td>
+  <td align=right>1940</td><td align=right>667</td>
+  <td align=right>343</td><td align=right>102</td>
+  <td align=right>54</td><td align=right>25</td>
+  <td align=right>58</td>
+ </tr>
+ <tr>
+ <!-- G28_1^6_3^2.3c1c  0 0 0 0 196030 30047 10213 1709 805 476 720  -->
+   <td align=right><font color=#FF6600>0r3c</font></td>
+   <td align=right><font color=#FF6600>0r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>196030</td><td align=right>30047</td>
+   <td align=right>10213</td><td align=right>1709</td><td align=right>805</td>
+   <td align=right>476</td><td align=right>720</td>
+ </tr>
+
+</table>
+<!---------------------------------------------------------------------------->
+
+<!---------------------------   G28_1^4_2^4 = 30  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=18 align=center><font color=#FF6600><b>
+    (U<SUB><IMG SRC="Tableau/1.orange.Small.gif"></SUB>)<SUP>4</SUP>
+    (U<SUB><IMG SRC="Tableau/2.orange.Small.gif"></SUB>)<SUP>4</SUP>
+      = 30 on Gr(2;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=17># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/1.orange.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/2.orange.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td><td align=right>30</td>
+ </tr>
+ <tr>
+ <!-- G28_1^4_2^4.0c1c  0 0 18204 7579 3290 3942 1629 955 1123 1730 1367 1412 1634 547 474 6114  -->
+   <td align=right><font color=#FF6600>4r0c</font></td>
+   <td align=right><font color=#FF6600>2r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>18204</td>
+   <td align=right>7579</td><td align=right>3290</td><td align=right>3942</td>
+   <td align=right>1629</td><td align=right>955</td><td align=right>1123</td>
+   <td align=right>1730</td><td align=right>1367</td><td align=right>1412</td>
+   <td align=right>1634</td><td align=right>547</td><td align=right>474</td>
+   <td align=right>6114</td>
+ </tr>
+ <tr>
+ <!-- G28_1^4_2^4.1c0c  0 0 0 0 0 0 28687 5488 3295 1871 973 873 424 492 385 7512 -->
+   <td align=right><font color=#FF6600>2r1c</font></td>
+   <td align=right><font color=#FF6600>4r0c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>28687</td><td align=right>5488</td><td align=right>3295</td>
+   <td align=right>1871</td><td align=right>973</td><td align=right>873</td>
+   <td align=right>424</td><td align=right>492</td><td align=right>385</td>
+   <td align=right>7512</td>
+ </tr>
+ <tr>
+ <!-- G28_1^4_2^4.1c1c  0 2179 2654 1306 696 791 1063 370 201 151 129 88 89 36 33 214 -->
+   <td align=right><font color=#FF6600>2r1c</font></td>
+   <td align=right><font color=#FF6600>2r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>2179</td><td align=right>2654</td>
+   <td align=right>1306</td><td align=right>696</td><td align=right>791</td>
+   <td align=right>1063</td><td align=right>370</td><td align=right>201</td>
+   <td align=right>151</td><td align=right>129</td><td align=right>88</td>
+   <td align=right>89</td><td align=right>36</td><td align=right>33</td>
+   <td align=right>214</td>
+ </tr>
+ <tr>
+ <!-- G28_1^4_2^4.2c0c  0 0 0 21676 7258 2636 11017 2645 1443 1063 194 274 192 194 139 1269  -->
+   <td align=right><font color=#FF6600>0r2c</font></td>
+   <td align=right><font color=#FF6600>4r0c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>21676</td><td align=right>7258</td><td align=right>2636</td>
+   <td align=right>11017</td><td align=right>2645</td><td align=right>1443</td>
+   <td align=right>1063</td><td align=right>194</td><td align=right>274</td>
+   <td align=right>192</td><td align=right>194</td><td align=right>139</td>
+   <td align=right>1269</td>
+ </tr>
+ <tr>
+ <!-- G28_1^4_2^4.2c1c  0 0 5070 2009 835 781 684 233 120 91 36 19 19 26 18 59  -->
+   <td align=right><font color=#FF6600>0r2c</font></td>
+   <td align=right><font color=#FF6600>2r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>5070</td>
+   <td align=right>2009</td><td align=right>835</td><td align=right>781</td>
+   <td align=right>684</td><td align=right>233</td><td align=right>120</td>
+   <td align=right>91</td><td align=right>36</td><td align=right>19</td>
+   <td align=right>19</td><td align=right>26</td><td align=right>18</td>
+   <td align=right>59</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<table>
+  <tr valign=top>
+    <td>
+<!---------------------------   G48_333_21_1^4 = 6  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=7 align=center><font color=#6600aa><b>
+    W<SUB><SUB><SUB><IMG SRC="Tableau/333.purple.Small.gif"></SUB></SUB></SUB>
+    W<SUB><SUB><IMG SRC="Tableau/21.purple.Small.gif"></SUB></SUB>
+    (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>4</SUP>
+      = 6 on Gr(4;8)</b></font>
+   </td>
+ </tr>
+ <tr>
+  <td align=right colspan=3><b>type</b></td>
+   <td colspan=4># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/333.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/21.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td>
+ </tr>
+ <tr>
+ <!-- G48_333_21_1^4.1c  0 79951 0 20049  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>2r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>79951</td><td align=right>&nbsp;</td>
+   <td align=right>20049</td>
+ </tr>
+ <tr>
+ <!-- G48_333_21_1^4.2c  0 93154 0 6846  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>0r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>93154</td><td align=right>&nbsp;</td>
+   <td align=right>6846</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+</td><td>
+
+<!---------------------------   G48_31^4 = 9  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=6 align=center><font color=#6600aa><b>
+    (W<SUB><IMG SRC="Tableau/31.purple.Small.gif"></SUB>)<SUP>4</SUP>
+      = 9 on Gr(4;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=1><b>type</b></td>
+   <td colspan=5># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/31.purple.Small.gif"></td>
+   <td align=right>1</td><td align=right>3</td>
+   <td align=right>5</td><td align=right>7</td><td align=right>9</td>
+  </tr>
+ <tr>
+ <!-- G48_31^4.1c  4995 13 4692 0 0  -->
+   <td align=right><font color=#6600aa>2r1c</font></td>
+   <td align=right>4995</td><td align=right>13</td><td align=right>4692</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- G48_31^4.2c  0 0 7500 0 0  -->
+   <td align=right><font color=#6600aa>0r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>7500</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr></table>
+<!---------------------------------------------------------------------------->
+</td></tr></table>
+
+
+<!---------------------------   G48_333_1^7 = 20  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=17 align=center><font color=#6600aa><b>
+    W<SUB><SUB><SUB><IMG SRC="Tableau/333.purple.Small.gif"></SUB></SUB></SUB>
+    (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>7</SUP>
+      = 20 on Gr(4;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=15># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/333.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+ </tr>
+ <tr>
+ <!-- G48_333_1^7.1c  0 0 0 0 90088 0 0 0 0 0 19912  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>5r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>90088</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>19912</td>
+ </tr>
+ <tr>
+ <!-- G48_333_1^7.2c  0 0 64725 0 40087 0 0 0 0 0 5188  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>3r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>64725</td>
+   <td align=right>&nbsp;</td><td align=right>40087</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>5188</td>
+ </tr>
+ <tr>
+ <!-- G48_333_1^7.3c  27041 0 58900 0 21784 0 0 0 0 0 2275 -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r3c</font></td>
+   <td align=right>27041</td><td align=right>&nbsp;</td><td align=right>58900</td>
+   <td align=right>&nbsp;</td><td align=right>21784</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>2275</td>
+ </tr>
+</table>
+
+
+<!---------------------------   G48_332_21_1^5 = 30  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=19 align=center><font color=#6600aa><b>
+    W<SUB><SUB><SUB><IMG SRC="Tableau/332.purple.Small.gif"></SUB></SUB></SUB>
+    W<SUB><SUB><IMG SRC="Tableau/21.purple.Small.gif"></SUB></SUB>
+    (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>5</SUP>
+      = 30 on Gr(4;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=3><b>type</b></td>
+   <td colspan=16># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/332.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/21.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td><td align=right>30</td>
+ </tr>
+ <tr>
+ <!-- G48_332_21_1^5.1c  0 0 0 49016 0 17671 0 8986 0 5890 0 1052 0 2304 0 15081  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>3r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>49016</td><td align=right>&nbsp;</td><td align=right>17671</td>
+   <td align=right>&nbsp;</td><td align=right>8986</td><td align=right>&nbsp;</td>
+   <td align=right>5890</td><td align=right>&nbsp;</td><td align=right>1052</td>
+   <td align=right>&nbsp;</td><td align=right>2304</td><td align=right>&nbsp;</td>
+   <td align=right>15081</td>
+ </tr>
+ <tr>
+ <!-- G48_332_21_1^5.2c  0 42741 0 35629 0 9520 0 4283 0 3028 0 744 0 828 0 3227  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>1r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>42741</td><td align=right>&nbsp;</td>
+   <td align=right>35629</td><td align=right>&nbsp;</td><td align=right>9520</td>
+   <td align=right>&nbsp;</td><td align=right>4283</td><td align=right>&nbsp;</td>
+   <td align=right>3028</td><td align=right>&nbsp;</td><td align=right>744</td>
+   <td align=right>&nbsp;</td><td align=right>828</td><td align=right>&nbsp;</td>
+   <td align=right>3227</td>
+ </tr>
+</table>
+
+
+<!---------------------------   G48_332_1^8 = 90  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=48 align=left><font color=#6600aa><b>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    W<SUB><SUB><SUB><IMG SRC="Tableau/332.purple.Small.gif"></SUB></SUB></SUB>
+    (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>8</SUP>
+      = 90 on Gr(4;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=46># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/332.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td><td align=right>26</td>
+   <td align=right>28</td><td align=right>30</td><td align=right>32</td>
+   <td align=right>34</td><td align=right>36</td><td align=right>38</td>
+   <td align=right>40</td><td align=right>42</td><td align=right>44</td>
+   <td align=right>46</td><td align=right>48</td><td align=right>50</td>
+   <td align=right>52</td><td align=right>54</td><td align=right>56</td>
+   <td align=right>58</td><td align=right>60</td><td align=right>62</td>
+   <td align=right>64</td><td align=right>66</td><td align=right>68</td>
+   <td align=right>70</td><td align=right>72</td><td align=right>74</td>
+   <td align=right>76</td><td align=right>78</td><td align=right>80</td>
+   <td align=right>82</td><td align=right>84</td><td align=right>86</td>
+   <td align=right>88</td><td align=right>90</td>
+ </tr>
+
+ <tr>
+ <!-- G48_332_1^8.1c  0 0 0 0 0 0 0 0 0 1586 0 510 0 270 0 924 0 118 0 86 0 348 0 44 0 39 0 70 0 123 0 15 0 36 0 16 0 8 0 100 0 1 0 1 0 705  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>6r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>1586</td><td align=right>&nbsp;</td><td align=right>510</td>
+   <td align=right>&nbsp;</td><td align=right>270</td><td align=right>&nbsp;</td>
+   <td align=right>924</td><td align=right>&nbsp;</td><td align=right>118</td>
+   <td align=right>&nbsp;</td><td align=right>86</td><td align=right>&nbsp;</td>
+   <td align=right>348</td><td align=right>&nbsp;</td><td align=right>44</td>
+   <td align=right>&nbsp;</td><td align=right>39</td><td align=right>&nbsp;</td>
+   <td align=right>70</td><td align=right>&nbsp;</td><td align=right>123</td>
+   <td align=right>&nbsp;</td><td align=right>15</td><td align=right>&nbsp;</td>
+   <td align=right>36</td><td align=right>&nbsp;</td><td align=right>16</td>
+   <td align=right>&nbsp;</td><td align=right>8</td><td align=right>&nbsp;</td>
+   <td align=right>100</td><td align=right>&nbsp;</td><td align=right>1</td>
+   <td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td>
+   <td align=right>705</td>
+ </tr>
+ <tr>
+ <!-- G48_332_1^8.2c  0 0 0 1611 0 850 0 423 0 557 0 373 0 195 0 432 0 42 0 61 0 179 0 21 0 23 0 31 0 26 0 5 0 19 0 3 0 1 0 46 0 0 0 0 0 102  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>4r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>1611</td><td align=right>&nbsp;</td><td align=right>850</td>
+   <td align=right>&nbsp;</td><td align=right>423</td><td align=right>&nbsp;</td>
+   <td align=right>557</td><td align=right>&nbsp;</td><td align=right>373</td>
+   <td align=right>&nbsp;</td><td align=right>195</td><td align=right>&nbsp;</td>
+   <td align=right>432</td><td align=right>&nbsp;</td><td align=right>42</td>
+   <td align=right>&nbsp;</td><td align=right>61</td><td align=right>&nbsp;</td>
+   <td align=right>179</td><td align=right>&nbsp;</td><td align=right>21</td>
+   <td align=right>&nbsp;</td><td align=right>23</td><td align=right>&nbsp;</td>
+   <td align=right>31</td><td align=right>&nbsp;</td><td align=right>26</td>
+   <td align=right>&nbsp;</td><td align=right>5</td><td align=right>&nbsp;</td>
+   <td align=right>19</td><td align=right>&nbsp;</td><td align=right>3</td>
+   <td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td>
+   <td align=right>46</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>102</td>
+ </tr>
+ <tr>
+ <!-- G48_332_1^8.3c  0 1080 0 1708 0 773 0 394 0 319 0 210 0 85 0 198 0 25 0 23 0 84 0 11 0 9 0 14 0 10 0 2 0 14 0 0 0 1 0 15 0 0 0 0 0 25  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>2r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>1080</td><td align=right>&nbsp;</td>
+   <td align=right>1708</td><td align=right>&nbsp;</td><td align=right>773</td>
+   <td align=right>&nbsp;</td><td align=right>394</td><td align=right>&nbsp;</td>
+   <td align=right>319</td><td align=right>&nbsp;</td><td align=right>210</td>
+   <td align=right>&nbsp;</td><td align=right>85</td><td align=right>&nbsp;</td>
+   <td align=right>198</td><td align=right>&nbsp;</td><td align=right>25</td>
+   <td align=right>&nbsp;</td><td align=right>23</td><td align=right>&nbsp;</td>
+   <td align=right>84</td><td align=right>&nbsp;</td><td align=right>11</td>
+   <td align=right>&nbsp;</td><td align=right>9</td><td align=right>&nbsp;</td>
+   <td align=right>14</td><td align=right>&nbsp;</td><td align=right>10</td>
+   <td align=right>&nbsp;</td><td align=right>2</td><td align=right>&nbsp;</td>
+   <td align=right>14</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td>
+   <td align=right>15</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>25</td>
+ </tr>
+ <tr>
+ <!-- G48_332_1^8.4c  0 0 0 2756 0 807 0 747 0 162 0 178 0 59 0 95 0 23 0 34 0 89 0 0 0 4 0 6 0 5 0 0 0 12 0 0 0 0 0 5 0 1 0 0 0 17  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>0r4c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>2756</td><td align=right>&nbsp;</td><td align=right>807</td>
+   <td align=right>&nbsp;</td><td align=right>747</td><td align=right>&nbsp;</td>
+   <td align=right>162</td><td align=right>&nbsp;</td><td align=right>178</td>
+   <td align=right>&nbsp;</td><td align=right>59</td><td align=right>&nbsp;</td>
+   <td align=right>95</td><td align=right>&nbsp;</td><td align=right>23</td>
+   <td align=right>&nbsp;</td><td align=right>34</td><td align=right>&nbsp;</td>
+   <td align=right>89</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>4</td><td align=right>&nbsp;</td>
+   <td align=right>6</td><td align=right>&nbsp;</td><td align=right>5</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>12</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>5</td><td align=right>&nbsp;</td><td align=right>1</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>17</td>
+ </tr>
+</table>
+
+<!---------------------------   G48_2^8 = 126  ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=66 align=left><font color=#6600aa><b>
+     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    (W<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>8</SUP>
+      = 126 on Gr(4;8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=1><b>type</b></td>
+   <td colspan=65># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td><td align=right>6</td><td align=right>8</td><td align=right>10</td>
+   <td align=right>12</td><td align=right>14</td><td align=right>16</td><td align=right>18</td><td align=right>20</td><td align=right>22</td>
+   <td align=right>24</td><td align=right>26</td><td align=right>28</td><td align=right>30</td><td align=right>32</td><td align=right>34</td>
+   <td align=right>36</td><td align=right>38</td><td align=right>40</td><td align=right>42</td><td align=right>44</td><td align=right>46</td>
+   <td align=right>48</td><td align=right>50</td><td align=right>52</td><td align=right>54</td><td align=right>56</td><td align=right>58</td>
+   <td align=right>60</td><td align=right>62</td><td align=right>64</td><td align=right>66</td><td align=right>68</td><td align=right>70</td>
+   <td align=right>72</td><td align=right>74</td><td align=right>76</td><td align=right>78</td><td align=right>80</td><td align=right>82</td>
+   <td align=right>84</td><td align=right>86</td><td align=right>88</td><td align=right>90</td><td align=right>92</td><td align=right>94</td>
+   <td align=right>96</td><td align=right>98</td><td align=right>100</td><td align=right>102</td><td align=right>104</td><td align=right>106</td>
+   <td align=right>108</td><td align=right>110</td><td align=right>112</td><td align=right>114</td><td align=right>116</td><td align=right>118</td>
+   <td align=right>120</td><td align=right>122</td><td align=right>124</td><td align=right>126</td>
+   <td align=right>total</td>
+ </tr>
+ <tr>
+ <!-- G48_2^8.txt.8r0c    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -->
+   <!-- 0 0 0 0 0 0 0 0 0 0 0  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1000 -->  
+   <td align=right><font color=#6600aa>8r0c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>1000</td>
+<td align=right>1000</td> </tr>
+
+<tr>
+ <!-- G48_2^8.txt.6r1c   0 0 0 0 0 6 0 6 0 10 0 88 0 616 0 830 0 554 0 1888 0 1832 0 1747 0 2916 0 2744 0 4160 0 3187 0 3589 0 2732 0 2383 0 1846 0 3150 0 1409 0 5135 0 1222 0 917 0 814 0 675 0 681 0 697 0 930 0 868 0 2020 0 671 0 648 0 1023 0 236 0 408 0 734 0 262 0 380 0 346 0 196 0 162 0 270 0 155 0 110 0 416 0 100 0 77 0 174 0 61 0 72 0 103 0 63 0 56 0 42 0 133 0 52 0 50 0 182 0 76 0 69 0 2021
+ -->
+   <td align=right><font color=#6600aa>6r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>6</td><td align=right>6</td><td align=right>10</td>
+   <td align=right>88</td><td align=right>616</td><td align=right>830</td><td align=right>554</td><td align=right>1888</td><td align=right>1832</td>
+   <td align=right>1747</td><td align=right>2916</td><td align=right>2744</td><td align=right>4160</td><td align=right>3187</td><td align=right>3589</td>
+   <td align=right>2732</td><td align=right>2383</td><td align=right>1846</td><td align=right>3150</td><td align=right>1409</td><td align=right>5135</td>
+   <td align=right>1222</td><td align=right>917</td><td align=right>814</td><td align=right>675</td><td align=right>681</td><td align=right>697</td>
+   <td align=right>930</td><td align=right>868</td><td align=right>2020</td><td align=right>671</td><td align=right>648</td><td align=right>1023</td>
+   <td align=right>236</td><td align=right>408</td><td align=right>734</td><td align=right>262</td><td align=right>380</td><td align=right>346</td>
+   <td align=right>196</td><td align=right>162</td><td align=right>270</td><td align=right>155</td><td align=right>110</td><td align=right>416</td>
+   <td align=right>100</td><td align=right>77</td><td align=right>174</td><td align=right>61</td><td align=right>72</td><td align=right>103</td>
+   <td align=right>63</td><td align=right>56</td><td align=right>42</td><td align=right>133</td><td align=right>52</td><td align=right>50</td>
+   <td align=right>182</td><td align=right>76</td><td align=right>69</td><td align=right>2021</td>
+<td align=right>59000</td> </tr>
+ 
+ <tr>
+ <!-- G48_2^8.txt.4r2c   0 0 0 0 0 2614 3771 2497 1512 3285 1579 1378 1074 974 567 848 523 -->
+   <!-- 650 338 268 235 377 183 239 105 89 72 74 83 64 69 55 64 46 41 44 23 23 31 13 14 20 -->
+   <!-- 7 11 14 3 10 15 4 3 8 6 5 6 3 2 1 9 4 1 3 4 1 38 --> 
+   <td align=right><font color=#6600aa>4r2c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>2614</td>
+   <td align=right>3771</td><td align=right>2497</td><td align=right>1512</td><td align=right>3285</td><td align=right>1579</td><td align=right>1378</td>
+   <td align=right>1074</td><td align=right>974</td><td align=right>567</td><td align=right>848</td><td align=right>523</td><td align=right>650</td>
+   <td align=right>338</td><td align=right>268</td><td align=right>235</td><td align=right>377</td><td align=right>183</td><td align=right>239</td>
+   <td align=right>105</td><td align=right>89</td><td align=right>72</td><td align=right>74</td><td align=right>83</td><td align=right>64</td>
+   <td align=right>69</td><td align=right>55</td><td align=right>64</td><td align=right>46</td><td align=right>41</td><td align=right>44</td>
+   <td align=right>23</td><td align=right>23</td><td align=right>31</td><td align=right>13</td><td align=right>14</td><td align=right>20</td>
+   <td align=right>7</td><td align=right>11</td><td align=right>14</td><td align=right>3</td><td align=right>10</td><td align=right>15</td>
+   <td align=right>4</td><td align=right>3</td><td align=right>8</td><td align=right>6</td><td align=right>5</td><td align=right>6</td>
+   <td align=right>3</td><td align=right>2</td><td align=right>1</td><td align=right>9</td><td align=right>4</td><td align=right>1</td>
+   <td align=right>3</td><td align=right>4</td><td align=right>1</td><td align=right>38</td>
+<td align=right>24000</td> </tr>
+ <tr>
+ <!-- G48_2^8.txt.2r3c  0 0 0 0 0 8896 4479 1667 1620 1079 721 2586 595 478 215 292 188 -->
+   <!-- 163 106 63 56 62 27 55 29 16 16 11 15 3 4 7 6 7 7 6 2 3 5 1 1 2 2 1 1 0 0 1 2 1 0 -->
+   <!-- 0 0 0 1 0 0 1 0 0 1 0 0 0 --> 
+   <td align=right><font color=#6600aa>2r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>8896</td>
+   <td align=right>4479</td><td align=right>1667</td><td align=right>1620</td><td align=right>1079</td><td align=right>721</td><td align=right>2586</td>
+   <td align=right>595</td><td align=right>478</td><td align=right>215</td><td align=right>292</td><td align=right>188</td><td align=right>163</td>
+   <td align=right>106</td><td align=right>63</td><td align=right>56</td><td align=right>62</td><td align=right>27</td><td align=right>55</td>
+   <td align=right>29</td><td align=right>16</td><td align=right>16</td><td align=right>11</td><td align=right>15</td><td align=right>3</td>
+   <td align=right>4</td><td align=right>7</td><td align=right>6</td><td align=right>7</td><td align=right>7</td><td align=right>6</td>
+   <td align=right>2</td><td align=right>3</td><td align=right>5</td><td align=right>1</td><td align=right>1</td><td align=right>2</td>
+   <td align=right>2</td><td align=right>1</td><td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>1</td>
+   <td align=right>2</td><td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+<td align=right>23500</td> </tr>
+ <tr>
+ <!-- G48_2^8.txt.0r4c    0 0 0 0 0 0 0 0 0 0 0 19134 1585 606 287 361 158 123 32 35 28 40 -->
+   <!-- 28 20 7 4 12 2 8 1 6 2 4 1 1 1 1 2 3 2 1 1 0 1 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 -->
+   <!-- 0 1 -->  
+  <td align=right><font color=#6600aa>0r4c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>19134</td>
+   <td align=right>1585</td><td align=right>606</td><td align=right>287</td><td align=right>361</td><td align=right>158</td><td align=right>123</td>
+   <td align=right>32</td><td align=right>35</td><td align=right>28</td><td align=right>40</td><td align=right>28</td><td align=right>20</td>
+   <td align=right>7</td><td align=right>4</td><td align=right>12</td><td align=right>2</td><td align=right>8</td><td align=right>1</td>
+   <td align=right>6</td><td align=right>2</td><td align=right>4</td><td align=right>1</td><td align=right>1</td><td align=right>1</td>
+   <td align=right>1</td><td align=right>2</td><td align=right>3</td><td align=right>2</td><td align=right>1</td><td align=right>1</td>
+   <td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>1</td><td align=right>&nbsp;</td><td align=right>1</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>1</td>
+<td align=right>23500</td> </tr>
+
+ 
+ </table>
+<!---------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+<hr>
+<hr>
+<!---------------------------------------------------------------------------->
+<h1>Computations in Lagrangian Grassmannians</h1> 
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+
+<table>
+ <tr valign=top>
+  <td>
+<!---------------------------   L36_2^2_1^2 = 4 ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=7 align=center>   <font color=#0000ff><b>
+    (X<SUB><IMG SRC="Tableau/2.blue.Small.gif"></SUB>)<SUP>2</SUP>
+    (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>2</SUP>
+      = 4 on L(3; 6)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=5># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.blue.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.blue.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td>
+ </tr>
+ <tr>
+ <!-- L3_2^2_1^2.0c0c  25000 0 0  -->
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right>25000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L3_2^2_1^2.0c1c  6033 6972 11995  -->
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right>6033</td><td align=right>6972</td><td align=right>11995</td>
+ </tr>
+ <tr>
+ <!-- L3_2^2_1^2.1c0c  11906 7053 6041  -->
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right><font color=#0000ff>2r0c</font></td>
+   <td align=right>11906</td><td align=right>7053</td><td align=right>6041</td>
+ </tr>
+ <tr>
+ <!-- L3_2^2_1^2.1c1c  25000 0 0  -->
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right><font color=#0000ff>0r1c</font></td>
+   <td align=right>25000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+
+</table> 
+<!---------------------------------------------------------------------------->
+ </td><td>
+<!---------------------------   L36_2_1^4 = 8 ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=7 align=center>   <font color=#0000ff><b>
+    X<SUB><IMG SRC="Tableau/2.blue.Small.gif"></SUB>
+    (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>4</SUP>
+      = 8 on L(3; 6)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=5># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.blue.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.blue.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+ </tr>
+ <tr> <!-- L3_2_1^4.0c0c  25000 0 0 0 0  -->
+   <td align=right><font color=#0000ff>1r0c</font></td>
+   <td align=right><font color=#0000ff>4r0c</font></td>
+   <td align=right>25000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+
+ <tr>
+ <!-- L3_2_1^4.0c1c  11805 12215 980 0 0  -->
+   <td align=right><font color=#0000ff>1r0c</font></td>
+   <td align=right><font color=#0000ff>2r1c</font></td>
+   <td align=right>11805</td><td align=right>12215</td><td align=right>980</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L3_2_1^4.0c2c  11538 3220 6781 753 2708  -->
+   <td align=right><font color=#0000ff>1r0c</font></td>
+   <td align=right><font color=#0000ff>0r2c</font></td>
+   <td align=right>11538</td><td align=right>3220</td><td align=right>6781</td>
+   <td align=right>753</td><td align=right>2708</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td></tr></table>
+ 
+<!---------------------------   L36_1^6 = 16 ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=10 align=center>   <font color=#0000ff><b>
+    (X<SUB><IMG SRC="Tableau/1.blue.Small.gif"></SUB>)<SUP>6</SUP>
+      = 16 on L(3; 6)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right><b>&nbsp;</b></td>
+   <td colspan=9># real solutions</td></tr> 
+ </tr>
+ <tr>
+  <td align=right><b>type</b></td>
+   <td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td>
+ </tr>
+ <tr> <!-- L3_1^6.0c  25000 0 0 0 0 0 0 0 0  -->
+  <td align=right><font color=#0000ff>6r0c</font></td>
+   <td align=right>25000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L3_1^6.1c  25000 0 0 0 0 0 0 0 0  -->
+  <td align=right><font color=#0000ff>4r1c</font></td>
+   <td align=right>25000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L3_1^6.2c  28377 3869 32008 11177 22259 784 26 0 0  -->
+   <!-- [172291, 23874, 194932, 67798, 135189, 4741, 175, 0, 0, 938798 -->
+  <td align=right><font color=#0000ff>2r2c</font></td>
+   <td align=right>172291</td><td align=right>23874</td><td align=right>194932</td>
+   <td align=right>67798</td><td align=right>135189</td><td align=right>4741</td>
+   <td align=right>175</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L3_1^6.3c  26229 4717 6312 2902 6889 395 714 122 1720  -->
+  <td align=right><font color=#0000ff>0r3c</font></td>
+   <td align=right>26229</td><td align=right>4717</td><td align=right>6312</td>
+   <td align=right>2902</td><td align=right>6889</td><td align=right>395</td>
+   <td align=right>714</td><td align=right>122</td><td align=right>1720</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<table>
+  <tr valign=top>
+    <td>
+<!---------------------------   L48_31_2^3 = 10 ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=8 align=center>   <font color=#6600aa><b>
+    X<SUB><SUB><IMG SRC="Tableau/31.purple.Small.gif"></SUB></SUB>
+    (X<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>3</SUP>
+      = 10 on L(4; 8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=2><b>type</b></td>
+   <td colspan=6># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/31.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/2.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td>
+   <td align=right>6</td><td align=right>8</td><td align=right>10</td>
+ </tr>
+ <tr> <!-- L4_31_2^3.0c0c  10000 0 0 0 0 0  -->
+  <td align=right><font color=#6600aa>1r0c</font></td>
+  <td align=right><font color=#6600aa>3r0c</font></td>
+   <td align=right>10000</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L4_31_2^3.0c1c  0 14011 5989 0 0 0  -->
+  <td align=right><font color=#6600aa>1r0c</font></td>
+  <td align=right><font color=#6600aa>1r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>14011</td><td align=right>5989</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+</td><td>
+
+<!-------------------------   L48_31_2^2_1^2 = 20 ---------------------------->
+<table border=1>
+ <tr>
+  <td colspan=14 align=center>   <font color=#6600aa><b>
+    X<SUB><SUB><IMG SRC="Tableau/31.purple.Small.gif"></SUB></SUB>
+    (X<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>2</SUP>
+    (X<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>2</SUP>
+      = 20 on L(4; 8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=3><b>type</b></td>
+   <td colspan=11># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/31.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/2.purple.Small.gif"></td>
+   <td align=right><IMG SRC="Tableau/1.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td>
+   <td align=right>6</td><td align=right>8</td><td align=right>10</td>
+   <td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+ </tr>
+ <tr>
+ <!-- L4_31_2^2_1^2.0c0c0c  19800 0 0 0 0 0 0 0 0 0 0  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>2r0c</font></td>
+   <td align=right><font color=#6600aa>2r0c</font></td>
+   <td align=right>19800</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L4_31_2^2_1^2.0c0c1c  5070 4494 5288 463 85 0 0 0 0 0 0  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>2r0c</font></td>
+   <td align=right><font color=#6600aa>0r1c</font></td>
+   <td align=right>5070</td><td align=right>4494</td><td align=right>5288</td>
+   <td align=right>463</td><td align=right>85</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L4_31_2^2_1^2.0c1c0c  7947 2169 387 97 0 0 0 0 0 0 0  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>0r1c</font></td>
+   <td align=right><font color=#6600aa>2r0c</font></td>
+   <td align=right>7947</td><td align=right>2169</td><td align=right>387</td>
+   <td align=right>97</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L4_31_2^2_1^2.0c1c1c  0 0 7478 810 912 0 0 0 0 0 0  -->
+   <td align=right><font color=#6600aa>1r0c</font></td>
+   <td align=right><font color=#6600aa>0r1c</font></td>
+   <td align=right><font color=#6600aa>0r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>7478</td>
+   <td align=right>810</td><td align=right>912</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+
+</table>
+<!---------------------------------------------------------------------------->
+</td><tr><table>
+
+<!-------------------------   L48_2^5 = 24   --------------------------------->
+<table border=1>
+ <tr>
+  <td colspan=14 align=center>   <font color=#6600aa><b>
+    (X<SUB><IMG SRC="Tableau/2.purple.Small.gif"></SUB>)<SUP>5</SUP>
+      = 24 on L(4; 8)</b></font>
+  </td>
+ </tr>
+ <tr>
+  <td align=right colspan=3><b>type</b></td>
+   <td colspan=11># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><IMG SRC="Tableau/2.purple.Small.gif"></td>
+   <td align=right>0</td><td align=right>2</td><td align=right>4</td>
+   <td align=right>6</td><td align=right>8</td><td align=right>10</td>
+   <td align=right>12</td><td align=right>14</td>
+   <td align=right>16</td><td align=right>18</td><td align=right>20</td>
+   <td align=right>22</td><td align=right>24</td>
+ </tr>
+
+ <tr>
+ <!-- L4_2^5.0c  500 0 0 0 0 0 0 0 0 0 0 0 0 %%% Time 1898298 -->
+   <td align=right><font color=#6600aa>5r0c</font></td>
+   <td align=right>500</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+
+ <!-- L4_2^5.1c  315, 441, 744, 113, 253, 134, 0, 0, 0, 0, 0, 0, 0%%% Time = 10214866 -->
+   <td align=right><font color=#6600aa>3r1c</font></td>
+   <td align=right>315</td><td align=right>441</td><td align=right>744</td>
+   <td align=right>113</td><td align=right>253</td><td align=right>134</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td>
+ </tr>
+ <tr>
+ <!-- L4_2^5.2c  500 0 0 0 0 0 0 0 0 0 0 0 0  %%%% Time 3120788-->
+   <td align=right><font color=#6600aa>1r2c</font></td>
+   <td align=right>500</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+   <td align=right>&nbsp;</td>
+ </tr>
+</table>
+
+
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<h1>Computations in Symplectic flag manifolds</h1> 
+<!---------------------------------------------------------------------------->
+<hr>
+
+<!---------------------------   L26_1^7 = 14 ---------------------------->
+<table border=1>
+ <tr><td colspan=9 align=center><font color=#6600aa><b>
+      (W<SUB><IMG SRC="Tableau/1.purple.Small.gif"></SUB>)<SUP>7</SUP> = 14
+      &nbsp; &nbsp; on L(2;6)</b></font>
+ </td></tr>
+ <tr><td></td><td colspan=2># real solutions</td></tr> 
+ </tr>
+ <tr>
+   <td align=right><b>type</b></td><td align=right>0</td><td align=right>2</td>
+   <td align=right>4</td><td align=right>6</td><td align=right>8</td>
+   <td align=right>10</td><td align=right>12</td><td align=right>14</td>
+ </tr>
+ <tr> <!-- L26_1^7.0c  7517 7639 7807 16041 10960 36 0 0  -->
+   <td align=right><font color=#6600aa>7r0c</font></td>
+   <td align=right>7517</td><td align=right>7639</td><td align=right>7807</td>
+   <td align=right>16041</td><td align=right>10960</td><td align=right>36</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L26_1^7.1c  0 9307 15587 15115 9671 320 0 0  -->
+   <td align=right><font color=#6600aa>5r1c</font></td>
+   <td align=right>&nbsp;</td><td align=right>9307</td><td align=right>15587</td>
+   <td align=right>15115</td><td align=right>9671</td><td align=right>320</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L26_1^7.2c  6169 11901 10343 10286 10992 309 0 0  -->
+   <td align=right><font color=#6600aa>3r2c</font></td>
+   <td align=right>6169</td><td align=right>11901</td><td align=right>10343</td>
+   <td align=right>10286</td><td align=right>10992</td><td align=right>309</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+ <tr> <!-- L26_1^7.3c  0 21758 9796 6371 11878 197 0 0  -->
+   <td align=right><font color=#6600aa>1r3c</font></td>
+   <td align=right>&nbsp;</td><td align=right>21758</td><td align=right>9796</td>
+   <td align=right>6371</td><td align=right>11878</td><td align=right>197</td>
+   <td align=right>&nbsp;</td><td align=right>&nbsp;</td>
+ </tr>
+
+</table>
+<!---------------------------------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<h2>Bibliography</h2><A NAME="Bibliography"></A>
+
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<font color="#aa00aa">
+<i><!-- hhmts start --> Last modified: Fri Mar 25 16:12:57 CET 2011 <!-- hhmts end --></i>
+</font>
+</body>
+</html>

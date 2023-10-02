@@ -1,0 +1,114 @@
+####################################################
+#
+#   This procedure creates a TeX-ed term of the coproduct, 
+#   given a triple T and a symbol X for the variables
+#
+HtmlTerm:=proc(T,St)
+local Str, n1, j, n2: 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB>`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`</SUB>`):
+ fi:
+Str
+end:
+################################################################
+Format := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in HTML
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   L:=Sort(L):
+   Str:=HtmlTerm(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,HtmlTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 8 = 0 then  Str:=cat(Str,`<BR>\n`): fi:
+      if (j mod 8 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   fi:
+ fi:
+ Str
+end:
+###############################################################
+Fix := proc(L)
+#
+#  Takes a list L of permutations (asumed to be a multiplicity-free sum)
+#  and appends a 1 onto each, to make a set of pairs.
+#
+local Fixed,w:
+ Fixed:=[]:
+ for w in L do 
+  Fixed:=[Fixed[],[1,w]]:
+ od:
+ Fixed
+end:
+###############################################################
+LHtmlTerm:=proc(T,St)
+local Str, n1, j, n2: 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB><IMG SRC="figures/`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`.gif"></SUB>`):
+ fi:
+Str
+end:
+################################################################
+LFormat := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in HTML
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   L:=Sort(L):
+   Str:=HtmlTerm(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,LHtmlTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 8 = 0 then  Str:=cat(Str,`<BR>\n`): fi:
+      if (j mod 8 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   fi:
+ fi:
+ Str
+end:
+

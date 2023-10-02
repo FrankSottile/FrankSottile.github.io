@@ -1,0 +1,8 @@
+fig2dev -L gif -m 0.4 1.fig 1.gif
+fig2dev -L gif -m 0.27 12.fig 12.gif
+fig2dev -L gif -m 0.27 21.fig 21.gif
+sh makeGif.sh tree3 0.2
+sh makeGif.sh tree4 0.16
+sh makeGif.sh tree5 0.14
+sh makeGif.sh tree6 0.115
+

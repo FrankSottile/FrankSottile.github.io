@@ -1,0 +1,59 @@
+##############################################################
+# F-product.maple
+#
+#   This computes and prints out a HTML file of the products of 
+#  the F-functions of YSym
+#
+read(`LodayProcedures`);
+read(`HtmlProcedures`);
+interface(quiet=true):
+############################################################
+file:=fopen(`../F-Product.html`,WRITE):
+
+fprintf(file,`<HTML>\n`):
+fprintf(file,`<HEAD>\n`):
+fprintf(file,`   <TITLE>Products of the Fundamental Basis of <B>Y</B><I>Sym</I></TITLE>\n`):
+fprintf(file,`</HEAD>\n`):
+fprintf(file,`<BODY BGCOLOR="#FFFFFF">\n\n`):
+
+fprintf(file,`<H1>Products of the Fundamental basis of <B>Y</B><I>Sym</I></H1>\n\n`):
+fprintf(file,`<HR COLOR="#0000FF" size=2 noshade>\n\n`):
+
+fprintf(file,`<!------------------------------------------------------------->\n\n`):
+
+MAX:=5:
+
+for n from 2 to MAX do 
+ fprintf(file,cat(`<FONT SIZE=+1 COLOR="5c3317"><B>Products of total degree `,n)):
+ fprintf(file,`</B></FONT><BR>\n\n`):
+ fprintf(file,`<TABLE>\n`):
+ for k from 1 to n-1 do 
+  fprintf(file,` <TR><TD><FONT COLOR="#EE1188">Degree `):
+  fprintf(file,cat(k,` by degree `,n-k,`:</FONT></TD></TR>\n`)):
+  fprintf(file,` <TR><TD>\n  <TABLE>\n`):
+  for w in Trees[k] do
+   for v in Trees[n-k] do
+    fprintf(file,cat(`   <TR VALIGN=TOP><TD>`,YHtmlTerm([1,w],"<B>F</B>"),` &middot `)):
+    fprintf(file,cat(YHtmlTerm([1,v],"<B>F</B>"),`&nbsp; &nbsp; =</TD>\n`)):
+    fprintf(file,cat(`    <TD>&nbsp; &nbsp; `,YFormat(makeList(F_sh(w,v)),"<B>F</B>"))):
+    fprintf(file,cat(`</TD></TR>\n`)):
+   od:
+  od:
+  fprintf(file,`  </TABLE>\n </TD></TR>\n`):
+  fprintf(file,` <!------------------------------------------------------------->\n`):
+ od:
+ fprintf(file,`</TABLE>\n\n`):
+ if n<MAX then 
+  fprintf(file,`<!------------------------------------------------------------->\n`):
+  fprintf(file,cat(`<HR size=1 noshade width=800 align=left>\n`)):
+  fprintf(file,`<!------------------------------------------------------------->\n\n`):
+ else 
+  fprintf(file,`<!------------------------------------------------------------->\n\n`):
+ fi:
+od:
+
+fprintf(file,`<HR COLOR="#0000FF" size=2 noshade>\n\n`):
+fprintf(file,`<I><FONT COLOR="#BB00FF">Created 20 August 2002</font></I>\n`):
+fprintf(file,`</BODY>\n</HTML>\n`):
+
+quit:

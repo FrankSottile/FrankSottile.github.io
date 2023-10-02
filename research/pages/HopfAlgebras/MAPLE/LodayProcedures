@@ -1,0 +1,279 @@
+#LodayProcedures
+#
+#  This file contains procedures for computing in the Loday-Ronco
+#  Hopf algebra of planar binary trees
+#
+######################################################################
+#
+#  For better or worse, we encode trees by permutations choosing the 
+#  maximal permutation encoding a given tree (we follow the Loday-Ronco
+#  papers)
+#
+#########################################################################
+#
+#   Procedures
+#
+# Inv(w)      Computes the inversion det of the permutation/tree w
+# Std(w)      Flattens the sequence w
+# isTree(w)   Determines if a permutation w is the maximal permutation
+#             encoding a tree
+# makeTree(w) Computes the maximal permutation giving the same tree as w
+##
+# F_sh(u,v)   Computes the `shuffles' of the pair u,v
+# F_coprod(w) computes the splitting of the tree w
+###
+# Lowest(Set) Computes a shortest length tree in Set
+# MakeLMu(w)  Computes the Moebius fn
+# MakeLMon    Constructs the `monomial' function associated to a 
+#               tree w, as a list of  [coeff, tree]
+# LFtoM(tree) Writes the F function in terms of the M functions
+#
+############################################################################
+read(MalvenutoProcedures):
+read(QSymProcedures):
+read(Trees):
+read(TreesOrder):
+###########################################################################
+Inv:=proc(w)
+local inver,i,j:
+ inver:={}:
+ for i from 1 to nops(w)-1 do
+  for j from i+1 to nops(w) do
+   if w[i]>w[j] then inver := inver union {[i,j]}: fi:
+  od:
+ od:
+ inver
+end:
+###########################################################################
+Std := proc(w)
+local u,n,v,i,j:
+ n:=nops(w):
+ u:=sort(w);
+ v:=[]:
+ for i from 1 to n do
+  for j from 1 to n do 
+   if w[i]=u[j] then v:=[v[],j]: fi:
+  od:
+ od:
+ v
+end:
+###########################################################
+isTree := proc(w)
+local j, n, istree:
+ n:=nops(w):
+ if n<=2 then
+   istree:=evalb(true):
+  else
+   for j from 1 to n do 
+    if n=w[j]then
+     if j=1 then istree:=evalb(isTree(Std(w[2..n]))): fi:
+     if j=n then istree:=evalb(isTree(Std(w[1..(n-1)]))): fi:
+     if (1<j and j<n) then
+      istree:=evalb(min(w[1..(j-1)][])=n+1-j):
+      if istree then 
+       istree:=evalb(isTree(Std(w[1..(j-1)])) and 
+                     isTree(Std(w[(j+1)..n]))):
+      fi:
+     fi:
+    fi:
+   od:
+ fi:
+ evalb(istree)
+end:
+#############################################################################
+makeTree:=proc(w)
+local i,Peak,u,v:
+ if nops(w)>2 then
+   for i from 1 to nops(w) do
+    if w[i]=nops(w) then Peak:=i: fi:
+   od:
+   u:=Std(w[1..(Peak-1)]):
+   if not(isTree(u)) then u:=makeTree(u): fi:
+   v:=Std(w[(Peak+1)..nops(w)]):
+   if not(isTree(v)) then v:=makeTree(v): fi:
+   for i from 1 to Peak-1 do
+    u[i]:=u[i]+nops(w)-Peak:
+   od:
+   [u[],nops(w),v[]]
+  else
+   w
+ fi:
+end:
+######################################################################
+F_sh := proc(w,v)
+ local n,m,shuffles,S,newperm,iw,iv,i;
+ n:=nops(w):
+ m:=nops(v):
+ shuffles:=[]:
+ for S in combinat[choose](n+m,m) do 
+  newperm:=[]:
+  iw:=0:
+  iv:=0:
+  for i from 1 to n+m do
+   if member(i,S) then 
+    iv:=iv+1:
+    newperm:=[newperm[],n+v[iv]]:
+   else
+    iw:=iw+1:
+    newperm:=[newperm[],w[iw]]:
+   fi:
+  od:
+  shuffles:=[shuffles[],makeTree(newperm)]:
+ od:
+ shuffles
+end:
+#################################################
+makeList := proc(L)
+local List,sh:
+ List:=[]:
+ for sh in L do
+  List:=[List[],[1,sh]]:
+ od:
+ List
+end:
+#################################################
+F_coprod := proc(w)
+local cop,j;
+ cop:=[]:
+ for j from 0 to nops(w) do 
+  cop:=[cop[], [Std(w[1..j]), Std(w[(j+1)..nops(w)])]]:
+ od:
+ cop
+end:
+###############################################
+Lowest:=proc(SetTrees)
+local v,lowest:
+ lowest:=op(1,SetTrees):
+ for v in SetTrees do
+  if Ell(v)<Ell(lowest) then lowest:=v: fi:
+ od:
+ lowest
+end:
+################################################
+MakeLMu:=proc(w)
+local v, Below, ToDo, Mu, Next, u:
+global bigger:
+#    Computes the trees in the intervals [w,v]
+ for v in bigger[w] union {w} do
+  Below[v]:={v}:
+  for u in bigger[w] union {w} do 
+   if member(v, bigger[u]) then Below[v]:=Below[v] union {u}: fi:
+  od:
+ od:
+#   Computes the Moebius Function
+ ToDo:=bigger[w]:
+ Mu[w]:=1:
+ while ToDo<>{} do
+  Next:=Lowest(ToDo):
+  ToDo:=ToDo minus {Next}:
+  Mu[Next]:=0:
+  for u in Below[Next] minus {Next} do
+   Mu[Next]:=Mu[Next]-Mu[u]:
+  od:
+ od:
+Mu
+end: 
+############################################
+MakeLMon := proc(w)
+ local mu,monom,u;
+ global bigger:
+ monom :=[]:
+ if w<>[] then
+   mu:=MakeLMu(w):
+   for u in bigger[w] union {w} do
+    if mu[u]<>0 then monom := [monom[],[mu[u],u]]: fi:
+   od:
+   monom
+  else
+   [1,[]]
+ fi:
+end:
+#############################################
+Coproduct := proc(w)
+local L, coprod, k, Lk, pair, minEll, i, place, ML, term1, term2; 
+ L:=MakeLMon(w):
+ coprod:=[[1,[],w]]:
+ for k from 1 to nops(w)-1 do 
+  ####          Creates the k, n-k piece of the coproduct, as a list
+  Lk:=[]:
+  for pair in L do
+   Lk:=[Lk[],[pair[1],Split(pair[2],k)[]]]:
+  od:
+  Lk:=CombineCoprod(Lk):
+  ####         Need to apply the subduction algorithm
+  while Lk<>[] do
+   ####   Step 1: find a leading term
+   minEll:=nops(w)^2:
+   for i from 1 to nops(Lk) do
+    if minEll>(Ell(Lk[i][2])+Ell(Lk[i][3])) then 
+     minEll:=Ell(Lk[i][2])+Ell(Lk[i][3]):
+     place := i:
+    fi:
+   od:
+   #########################   Put the new term in the sum
+   coprod:=[coprod[],Lk[place]]:
+   #########################   Write out the new term as a tensor in the F-basis
+   ML:=[]:
+   for term1 in MakeLMon(Lk[place][2]) do
+    for term2 in MakeLMon(Lk[place][3]) do
+     ML:=[ML[],[-Lk[place][1]*term1[1]*term2[1],term1[2],term2[2]]]:
+    od:
+   od:
+   #########    Subtract the resulting pair of monomial functions
+   Lk:=CombineCoprod([Lk[],ML[]]):
+  od:
+ od: 
+ [coprod[],[1,w,[]]]
+end:
+##########################################################
+LProd :=proc(w,v)
+local Monw, Monv, Lsum, termw, termv, L, perm, prod,i,minEll,place,ML,term; 
+ Monw:=MakeLMon(w);
+ Monv:=MakeLMon(v);
+ if w=[] or v=[] then 
+  if w=[] then Lsum:=Monv: fi:
+  if v=[] then Lsum:=Monw: fi:
+ else 
+ #   Lsum will be the list recording the shuffle product of the monomial functions
+  Lsum:=[]:
+  for termw in Monw do
+   for termv in Monv do
+    L:=F_sh(termw[2],termv[2]):
+    for perm in L do
+     Lsum:=[Lsum[],[termw[1]*termv[1],perm]]:
+    od:
+   od:
+  od:
+ fi:
+#    Need to run the subduction algorithm
+ prod:=[]:
+ while Lsum<>[] do
+  ####   Step 1: find a leading term
+  minEll:=(nops(w)+nops(v))^2:
+  for i from 1 to nops(Lsum) do
+   if minEll>Ell(Lsum[i][2]) then 
+    minEll:=Ell(Lsum[i][2]):
+    place := i:
+   fi:
+  od:
+  #########################   Put the new term in the sum
+  prod:=[prod[],Lsum[place]]:
+  #########################   Write out the new term in the F-basis
+  ML:=[]:
+  for term in MakeLMon(Lsum[place][2]) do
+   ML:=[ML[],[-Lsum[place][1]*term[1],term[2]]]:
+  od:
+  #########    Subtract the resulting monomial function
+  Lsum:=Combine([Lsum[],ML[]]):
+ od: 
+ prod
+end:
+#################################################################
+LFtoM:=proc(tree)
+local F,Tr:
+ F:=[[1,tree]]:
+ for Tr in bigger[tree] do
+  F:=[F[],[1,Tr]]:
+ od:
+ F;
+ end:

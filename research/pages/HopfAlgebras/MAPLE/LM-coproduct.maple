@@ -1,0 +1,102 @@
+#LM-coproduct.maple
+#
+#  This prints out a file of the coproduct in the M-basis of the 
+#  Loday-Ronco algebra
+#
+read(`LodayProcedures`);
+#
+#   This procedure creates a TeX-ed term of the coproduct, 
+#   given a triple T and a symbol X for the variables
+#
+Term:=proc(T,X)
+local Str, n1, j, n2; 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1\\otimes `):
+ else
+  Str:=cat(Str,` `,convert(X,symbol),`_{\\epsffile{figures/`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`.eps}}\\otimes `):
+ fi:
+ n2:=nops(T[3]):
+ if n2=0 then 
+  Str:=cat(Str,`1`):
+ else
+  Str:=cat(Str,` `,convert(X,symbol),`_{\\epsffile{figures/`):
+  for j from 1 to n2 do
+   Str:=cat(Str,convert(T[3][j],symbol)):
+  od:
+  Str:=cat(Str,`.eps}}`):
+ fi:
+Str
+end:
+###################################################################
+#
+# Takes a list of triples and writes it as a sum of tensors, formated for TeX.
+#
+Format := proc(L,X)
+local Str, i, triple;
+ Str:=Term(L[1],X):
+ for i from 2 to nops(L) do
+  if L[i][1]>0 then Str:=cat(Str,`+`): fi:
+  Str := cat(Str,Term(L[i],X)):
+ od:
+cat(Str,`$\n`);
+end:
+##################################################################################
+file:=fopen(`LM-coproduct.tex`,WRITE):
+
+fprintf(file,`\\documentclass[12pt]{article}\n`):
+fprintf(file,`\\usepackage{amssymb}\n`):
+fprintf(file,`\\usepackage{epsf}\n`):
+fprintf(file,`\\headheight=8pt \\topmargin=-20pt\n`): 
+fprintf(file,`\\textheight=670pt \\textwidth=472pt\n`):
+fprintf(file,`\\oddsidemargin=-2pt \\evensidemargin=-2pt\n\n`):
+fprintf(file,`\\begin{document}\n\n`):
+fprintf(file,`\\begin{center}\\Large\\bf\n`):
+fprintf(file,`Coproduct in the Monomial basis of `): 
+fprintf(file,`$\\mathfrak{T}\\mathit{Sym}$\\\\ \n`):
+fprintf(file,`M. Aguiar \\& F. Sottile \\\\ \n`):
+fprintf(file,`1 April 2002 \n`):
+fprintf(file,`\\end{center}\n`):
+
+fprintf(file,`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`):
+fprintf(file,`\n\n`):
+
+for n from 1 to 5 do 
+
+ fprintf(file,cat(`\\hspace{-50pt}{\\bf Coproducts of total degree `,n,`:}`)):
+ fprintf(file,`\\vspace{-10pt}\n\n`):
+ fprintf(file,`\\begin{enumerate}\n`):
+ fprintf(file,`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n`):
+
+ for w in Trees[n] do 
+  Str:=`\\item[]\\hspace{-50pt}$\\Delta M_{\\epsffile{figures/`:
+  for i from 1 to nops(w) do 
+   Str:=cat(Str,convert(w[i],symbol)):
+  od:
+  Str:=cat(Str,`.eps}}=\n     `);
+  fprintf(file,cat(Str,Format(Coproduct(w),M)));
+ od:
+ fprintf(file,cat(`\\end{enumerate}\n\n`)):
+ fprintf(file,`\\hspace{-50pt}\\underline{\\rule{430pt}{1pt}}\\medskip\n\n`):
+od:
+
+fprintf(file,`\\end{document}\n`):
+fclose(file):
+time();
+quit;
+
+
+
+for w in combinat[permute](4) do 
+ Format(Coproduct([1,2,3]),RM);
+od:
+
+
+time();

@@ -1,0 +1,182 @@
+####################################################
+#
+#   This procedure creates a HTML term for SSym, 
+#   given a triple T and a symbol X for the variables (F or M)
+#
+HtmlTerm:=proc(T,St)
+local Str, n1, j, n2: 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB>`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`</SUB>`):
+ fi:
+Str
+end:
+################################################################
+Format := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in HTML for SSYm
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   L:=Sort(L):
+   Str:=HtmlTerm(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,HtmlTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 8 = 0 then  Str:=cat(Str,`<BR>\n`): fi:
+      if (j mod 8 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   fi:
+ fi:
+ Str
+end:
+###############################################################
+Fix := proc(L)
+#
+#  Takes a list L of permutations (asumed to be a multiplicity-free sum)
+#  and appends a 1 onto each, to make a set of pairs.
+#
+local Fixed,w:
+ Fixed:=[]:
+ for w in L do 
+  Fixed:=[Fixed[],[1,w]]:
+ od:
+ Fixed
+end:
+###############################################################
+#
+#   This procedure creates a HTML term for YSym, 
+#   given a pair T and a symbol X for the variables (F or M)
+#
+YHtmlTerm:=proc(T,St)
+local Str, n1, j, n2: 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB><SUB><SUB><IMG SRC="figures/`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`.gif"></SUB></SUB></SUB>`):
+ fi:
+Str
+end:
+################################################################
+YFormat := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in HTML for YSym
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   L:=Sort(L):
+   Str:=YHtmlTerm(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,YHtmlTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 8 = 0 then  Str:=cat(Str,`<BR><BR>\n`): fi:
+      if (j mod 8 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   fi:
+ fi:
+ Str
+end:
+################################################################
+YtenFormat := proc(Li,X)
+#
+#  Given a list Li, of triples [1,t,s] this makes the formal sum of tensors
+#  in L in HTML for YSym with the variables X
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   Str:=YHtmlTen(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,YHtmlTen(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 4 = 0 then  Str:=cat(Str,`<BR><BR>\n`): fi:
+      if (j mod 4 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   fi:
+ fi:
+ Str
+end:
+###############################################################
+#
+#   This procedure creates a HTML tensor for YSym, 
+#   given a triple T and a symbol X for the variables (F or M)
+#
+YHtmlTen:=proc(T,St)
+local Str, n1, j, n2: 
+ if T[1]=1 then Str:= `&nbsp;`: fi:
+ if T[1]=-1 then Str:= `&nbsp;-`: fi:
+ if abs(T[1])<>1 then Str:=convert(T[1],symbol): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB><SUB><SUB><IMG SRC="figures/`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`.gif"></SUB></SUB></SUB>`):
+ fi:
+ Str:=cat(Str,` <IMG SRC="figures/ten.gif"> `):
+ n2:=nops(T[3]):
+ if n2=0 then 
+  Str:=cat(Str,`1 `):
+ else
+  Str:=cat(Str,St,`<SUB><SUB><SUB><IMG SRC="figures/`):
+  for j from 1 to n2 do
+   Str:=cat(Str,convert(T[3][j],symbol)):
+  od:
+  Str:=cat(Str,`.gif"></SUB></SUB></SUB>&nbsp;`):
+ fi:
+Str
+end:
+################################################################
+

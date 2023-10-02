@@ -1,0 +1,570 @@
+Dear Marcelo,
+  Conjecture 2 fails.
+
+  For example, if u = [3,4,2,1] and w = [1,3,4,2], then the set of 
+shuffles zeta in B_S(u,w) is  {  [1,2,4,3], and [1,4,2,3] }.
+I checked this by hand. (and it agrees with my computer calculation),
+
+One may note that this is an interval in the `right` weak order,
+but there are some sets B_S(u,w) which are intervals in the left and not
+the right weak order.  For example, My program computes 
+
+B_S( [4,3,1,2], [3,2,1,4] ) = { [2,1,3,4], [3,1,2,4], [3,2,1,4]} 
+
+
+The situation in S_5 is even more interesting.  When 
+u:=[5,4,2,3,1]:  and w:=[3,2,5,1,4]:   and S = [1,2,4], the global descents 
+of u, then my program computes B_S(u,w) to be 
+  { [2,1,4,5,3], [4,1,2,3,5], [4,1,2,5,3], [4,2,1,3,5], [4,2,1,5,3] }
+The lengths of these permutations are , respectively 3, 3, 4, 4, and 5.
+There is no reasonable order in which they are an interval.
+
+-Frank
+
+##########################################
+#                                        #
+#    Maple code for these computations   #
+#                                        #
+##########################################
+#Conjecture2.maple
+# 16 November 2001
+# Frank Sottile
+# Amherst, MASS
+#
+#  This file will make computations relevant to Conjecture 2 in the manuscript 
+# with Marcelo Aguiar.
+#
+#  This concerns the set of permutations
+#
+#  B_S(u,w).  Here u,w are in S_n and S is a subset of the global descents
+#             of u.
+#  This set is a subset of the set of S-shuffles in S_n defined by the
+#    conditions 1 -- 3 below.  Here the S-shuffles are the minimal coset
+#    representatives of the parabolic W_S.
+#
+#  1) u^S \zeta^{-1} \leq w
+#  2) If v \geq u and v^S \zeta^{-1} \leq w, then u = v
+#
+#     Easy Argument: u \leq v iff u^S \leq v^S
+#
+#  3) If Des(\zeta) \subset T \subset S and u^T\zeta^{-1} \leq w, then T=S
+#
+#  Here u^S is the permutation u' x u'' x ... x u^(p), where
+#  u^(i) is the flattening of u inbetween two adjacent elements of S
+#
+##########################################################################
+#
+# Data structure for S (= [S_1, ..., S_t])-shuffles:
+#    t-tuple T = [T_1, ..., T_t] with 
+#        each T_i a S_i-subset of [n-S_{i-1}] choose (S_i-S_{i-1})
+# 
+#  We may walk through the collection of t-tuples, and easily convert
+#  one to a shuffle.
+#
+#######################################################################
+#  n   := Positive integer
+#  u,w := permutations on n letters
+#  L   := List of permutations
+#  S   := positions of (Global) Descents
+#  T   := Data structure for S-shuffles
+#
+# Des(u)             Descents of u
+# GlobalDescent(u)   Global descents of u
+# Flatten(u)         `flattens' a list u
+# Times(L)           L[1] x L[2] x ... L[ nops(L) ]
+# US(u,S)            Computes u^S
+# Init(S,n)          Initial data for the S-shuffle
+# Next(T,S,n)        Computes the next S-shuffle after T
+# MakeZeta(T,S,n)    Computes the shuffle zeta from the shuffle data
+# ell(u)             Computed the length of the permutation u
+# Covers(u)          Finds the covers of u in the weak order
+# Covered(u)         Finds the permutations covered by u in the weak order
+# UpperInt(u)        The set of permutations above u in the weak order
+# UpperGrInt(u)      The permutations above u in the weak order (ranked)
+# LowerInt(u)
+# TU(u)              Computes the transpositions shortening u in the Bruhat order
+# LT(u,w)            Evaluates the relation u \LessEq w
+# UVi(u,v)           Computes u v^{-1}
+# MultiNomial(S,n)   Multinomial coefficient, the number of S-shuffles
+# ConditionOne(u,w,S)  \    Finds the set of S-shuffles zeta satisfying
+# ConditionOne(u,w,S)   >   the respective  condition 1 --3
+# ConditionOne(u,w,S)  /
+# BetaS(u,w,S)       Finds the S-shuffles zeta satisfying 1--3  
+# GrInterval(u,v)    Computes the graded interval between u and v
+# Interval(u,v)      Computes the interval between u and v
+# CheckInt(A)        Checks if a given set of permutations is an interval
+#
+#########################################################################
+Des := proc(u)
+#
+#  The descents of u
+#
+ local i, des:
+ des:=[]: 
+ for i from 1 to nops(u)-1 do
+  if u[i]>u[i+1] then des:=[des[],i]: fi:
+ od:
+ des
+end:
+#########################################################################
+GlobalDescent := proc(u)
+#
+#   Computes the global descents of u
+#
+local n, p, GD:
+ n:=nops(u):
+ GD:=[]:
+ for p from 1 to n-1 do
+  if min(u[1..p][])= n+1-p then GD := [GD[],p]: fi:
+ od:
+ GD
+end:
+##########################################################################
+Flatten := proc(u)
+#
+#  `flattens' a permutation
+#
+local Sort, i, j, fl:
+ Sort:=sort(u);
+ fl:=[]:
+ for i from 1 to nops(u) do
+  for j from 1 to nops(u) do
+   if Sort[j]=u[i] then fl:=[fl[],j]: fi:
+ od:od:
+ fl
+end:
+###########################################################################
+Times := proc(L)
+#
+#  Computes the product of the permutations in the list L
+#  Can handle a single permutation or a list of length 1
+#
+ local ell, TT, i, j:
+ if type(L[1],`integer`) then L 
+ else
+  ell := 0:
+  TT := []:
+  for i from 1 to nops(L) do
+   for j from 1 to nops(L[i]) do 
+    TT := [TT[],L[i][j]+ell]:
+   od:
+   ell := ell+nops(L[i]):
+  od:
+  TT
+ fi:
+end:
+##########################################################################
+US := proc(u,S)
+#
+#  Computes the permutation u^S, where u is a permutation in S_n
+#   and S is a subset of [n-1].  Handles S = []:
+#
+ local Se, i, LS:
+ Se:=[0,S[],nops(u)]:
+ LS:=[]:
+ for i from 1 to nops(Se)-1 do
+  LS:= [LS[],Flatten(u[Se[i]+1..Se[i+1]])]:
+ od:
+ Times(LS)
+end:
+##########################################################################
+Init := proc(S,n)
+#
+#  Creates the initial piece of data for a S-shuffle.
+#  When S=[], it returns [].
+#
+local Se, Ini, i, j:
+ Se:=[0,S[],n];
+ Ini:=[]:
+ for i from 1 to nops(S) do
+  Ini := [Ini[], [seq(j,j=1..(S[i]-Se[i]))]]:
+ od:
+ Ini
+end:
+####################################################################
+Next := proc(T,S,n)
+#
+#  Computes the next shuffle in the backwards lexicographic order
+#  Returns `error` if at the end.  Must use control structures
+#     to not call this when at the end.
+#
+local Se, lastI, NT, ind, temp, j, i;
+ Se:=[0,S[],n]:
+ ###########   Finds last i where T[i] is not maximal
+ lastI:=nops(S):
+ while (lastI>0) and (T[lastI][1]=n+1-S[lastI]) do
+  lastI:=lastI-1:
+ od:
+ NT:=eval(T);
+ if lastI > 0 then 
+  ind := S[lastI]-Se[lastI];
+  while (NT[lastI][ind] >= n-S[lastI]+ind) do: ind := ind-1: od:
+  temp:= eval(NT[lastI][ind]):
+  for j from ind to S[lastI]-Se[lastI] do:
+   NT[lastI][j] := temp+j+1-ind: 
+  od:
+  if lastI < nops(S) then
+   for i from lastI+1 to nops(S) do
+    NT[i]:=Init(S,n)[i]:
+   od:
+ fi:
+ NT
+ else
+ `error`
+ fi:
+end:
+######################################################
+MakeZeta := proc(T,S,n)
+#
+#  Makes shuffle zeta from the shuffle data.
+#  Returns the identity if presented with T=S=[]
+#
+local N, j, zeta, i, A;
+ N:={seq(j,j=1..n)}:
+ if T=[] then [seq(j,j=1..n)]
+ else
+  zeta:=[T[1][]]:
+  for i from 2 to nops(S) do
+   A:=sort(convert(N minus {zeta[]},list)):
+   for j from 1 to nops(T[i]) do
+    zeta:=[zeta[],A[T[i][j]]]:
+   od:
+  od:
+  A:=sort(convert(N minus {zeta[]},list)):
+  zeta:=[zeta[],A[]]:
+  zeta
+ fi:
+end:
+#################################################
+ell := proc(u)
+#
+#  Computes the length of the permutation u
+#
+local l,i,j;
+ l:=0:
+ for i from 1 to nops(u)-1 do
+  for j from i+1 to nops(u) do
+   if u[i]>u[j] then l:=l+1: fi:
+ od:od:
+ l
+end:
+#####################################################
+Covers := proc(u)
+#
+#  Finds the covers of u in the left weak order
+#
+ local Cov, i, j, uc:
+ Cov:={}:
+ for i from 1 to nops(u)-1 do
+  for j from i+1 to nops(u) do
+   if u[i]+1=u[j] then 
+    uc:=eval(u):
+    uc[i]:=u[i]+1:
+    uc[j]:=u[j]-1:
+    Cov:= Cov union {uc}:
+   fi:
+ od:od:
+ Cov
+end:
+#########################################
+Covered := proc(u)
+#
+#  Finds the permutations covered by u in the left weak order
+#
+ local Cov, i, j, uc:
+ Cov:={}:
+ for i from 1 to nops(u)-1 do
+  for j from i+1 to nops(u) do
+   if u[i]=u[j]+1 then 
+    uc:=eval(u):
+    uc[i]:=u[i]-1:
+    uc[j]:=u[j]+1:
+    Cov:= Cov union {uc}:
+   fi:
+ od:od:
+ Cov
+end:
+#########################################
+UpperGrInt := proc(u)
+#
+#  Finds the permutations greater than u in the weak order
+#
+ local n, Bigger, i, v;
+ n:=nops(u);
+ Bigger:=[seq({},i=0..(n-1)*n/2-ell(u))];
+ Bigger[1]:={u};
+ for i from 1 to (n-1)*n/2-ell(u) do  
+  for v in Bigger[i] do
+   Bigger[i+1]:=Bigger[i+1] union Covers(v):
+  od:
+ od:
+ Bigger
+ end:
+##########################################
+UpperInt := proc(u)
+#
+#  Finds the permutations greater than u in the weak order
+#
+ local n, Bigger, i, v, all;
+ n:=nops(u);
+ Bigger:=[seq({},i=0..(n-1)*n/2-ell(u))];
+ Bigger[1]:={u};
+ for i from 1 to (n-1)*n/2-ell(u) do  
+  for v in Bigger[i] do
+   Bigger[i+1]:=Bigger[i+1] union Covers(v):
+  od:
+ od:
+ all:= Bigger[1]:
+ for i from 1 to (n-1)*n/2-ell(u) do  
+  all := all union Bigger[i+1]:
+ od:
+ all
+ end:
+#########################################################
+TU := proc(u)
+#
+#  The transpositions shortening u in the Bruhat order
+#
+ local Tu, i, j:
+ Tu:={}:
+ for i from 1 to nops(u)-1 do
+  for j from i+1 to nops(u) do
+   if u[i]>u[j] then Tu :=  Tu union {[i,j]}: fi:
+ od:od:
+ Tu
+ end:
+#######################################################
+LT :=proc(u,w):
+#
+#  Checks of u \lessEq w in the weak order
+#
+ nops(u)=nops(w) and TU(u) minus TU(w) = {} 
+end:
+##################################################
+UVi := proc(u,v)
+#
+#  Computes u v^{-1}
+#
+ local uvi, i:
+ uvi:=[seq(0,i=1..nops(u))]:
+ for i from 1 to nops(u) do
+  uvi[v[i]]:=u[i]:
+ od:
+ uvi
+end:
+###############################################################
+MultiNomial := proc(S,n)
+#
+#  Computes the multinomial coefficients, the number of S-shuffles
+#
+ local Se, i, Num:
+ Se:=[0,S[],n]:
+ Num:=n!:
+ for i from 2 to nops(Se) do
+  Num:=Num/(Se[i]-Se[i-1])!:
+ od:
+ Num
+end:
+############################################################
+ConditionOne := proc(u,w,S)
+#
+#  Computes the set of shuffles zeta satisfying Condition 1
+#
+local n, B_S, T, i, uS, zeta:
+ n:=nops(u):
+ uS := US(u,S):
+ B_S:={}:
+ T:=Init(S,n): 
+ for i from 1 to MultiNomial(S,n) do 
+  zeta:=MakeZeta(T,S,n):
+  if LT( UVi(uS, zeta), w) then 
+   B_S := B_S union {zeta}:
+  fi:           
+  T:=Next(T,S,n):
+ od:
+ B_S
+end:
+########################################################
+ConditionTwo := proc(u,w,S)
+#
+#  Computes the set of shuffles zeta satisfying Condition 2
+#
+ local n, B_S, BigU, T, i, zeta, envy, v:
+ n := nops(u):
+ B_S:={}:
+ BigU:=UpperInt(u):
+ T:=Init(S,n):
+ for i from 1 to MultiNomial(S,n) do 
+  zeta:=MakeZeta(T,S,n):
+  envy := 0:
+  for v in BigU do
+   if LT( UVi(US(v,S), zeta), w) then
+    envy := envy + 1:
+   fi:
+  od:
+  if envy=1 then 
+   B_S := B_S union {zeta}:
+  fi:
+  T:=Next(T,S,n):
+ od:
+ B_S
+end:
+####################################################
+ConditionThree := proc(u,w,S)
+#
+#  Computes the set of shuffles zeta satisfying Condition 3
+#
+ local n, B_S, T, i, zeta, nT, U:
+ n:=nops(u):
+ B_S:={}:
+ T:=Init(S,n):
+ for i from 1 to MultiNomial(S,n) do 
+  zeta:=MakeZeta(T,S,n):
+  nT:=0:
+  for U in combinat[powerset](convert(S,set) minus convert(Des(zeta),set)) do
+   if LT( UVi(US(u, sort([op(U), op(Des(zeta))])), zeta), w) then 
+    nT := nT + 1:
+   fi:
+  od:
+  if nT=1 then 
+   B_S := B_S union {zeta}: 
+  fi:
+  T:=Next(T,S,n):
+ od:
+ B_S
+end:
+#########################################################
+BetaS := proc(u,w,S)
+#
+#  Computes the set of shuffles zeta satisfying the conditions
+#  1, 2, and 3.
+#
+ `intersect`(ConditionOne(u,w,S), 
+             ConditionTwo(u,w,S),
+             ConditionThree(u,w,S))
+end:
+#########################################
+GrInterval := proc(u,v)
+#
+#  Computes the graded interval between u and v
+#   Fails if u and v are incompatible (in length)
+#
+local n, Bigger, i, V, Smaller, U, Grinterval:
+ n:=nops(u):
+ Bigger:=[seq({},i=0..ell(v)-ell(u))]:
+ Bigger[1]:={u}:
+ for i from 1 to nops(Bigger)-1 do  
+  for V in Bigger[i] do
+   Bigger[i+1]:=Bigger[i+1] union Covers(V):
+  od:
+ od:
+ Smaller:=[seq({},i=1..nops(Bigger))]:
+ Smaller[ell(v)-ell(u)+1]:={v}:
+ for i from nops(Smaller) to 2 by -1 do
+  for U in Smaller[i] do
+   Smaller[i-1]:=Smaller[i-1] union Covered(U):
+  od:
+ od:
+ Grinterval:=[seq({},i=1..nops(Bigger))]:
+ for i from 1 to nops(Grinterval) do
+  Grinterval[i]:= Bigger[i] intersect Smaller[i]:
+ od:
+ Grinterval
+end:
+################################################################
+Interval := proc(U,V)
+ local interval, Level:
+ interval := {}:
+ for Level in GrInterval(U,V) do
+  interval:=interval union Level:
+ od:
+ interval
+ end:
+##############################################################
+CheckInt := proc(A)
+#
+#  This checks if A is an interval
+#
+ local Min, Max, perm, B:
+ if A = {} then evalb(1=1) 
+ else
+  Min:=op(1,A):
+  Max:=op(1,A):
+  for perm in A do
+   if ell(perm)<ell(Min) then Min:=perm fi:
+   if ell(perm)>ell(Max) then Max:=perm fi:
+  od:
+  B:=Interval(Min,Max):
+  evalb((A minus B) union (B minus A) = {})
+ fi:
+end:
+##############################################################
+
+
+S:= [ [2,1,4,5,3], [4,1,2,3,5], [4,1,2,5,3], [4,2,1,3,5], [4,2,1,5,3] ];
+ for perm in S do 
+  lprint(perm, ell(perm));
+od;
+quit;
+
+
+
+#u:=[3, 4, 2, 1]: w:=[1, 3, 4, 2]:  T:=[2, 3]:
+#u:=[5,3,4,2,1]: w:=[2,5,1,4,3]:  T:=GlobalDescent(u):
+u:=[5,4,2,3,1]: w:=[3,2,5,1,4]:   T:=GlobalDescent(u);
+
+ T:=GlobalDescent(u);
+#ConditionOne(u,w,T);
+#ConditionTwo(u,w,T);
+#ConditionThree(u,w,T);
+BetaS(u,w,T);
+CheckInt(BetaS(u,w,T));
+quit;
+
+########################################################
+#  SOme permutations with BB:=beta_S(u,w) big
+#
+#                                       Number of Shuffles satisfying
+#                                        condition (i) of B_S(u,w)
+#                                    BB
+#################################      #    (1)    (2)    (3)  
+#u:=[2,3,4,1]: w:=[1,2,4,3]:         # 2     2      2      2
+#u:=[4,2,3,1]: w:=[2,4,1,3]:         # 3     4      3      4
+#u:=[4,5,2,3,1]: w:=[1,3,5,2,4]:     # 3     4      3      3
+#u:=[4,2,3,1]: w:=[2,1,4,3]:         # 4     4      4      4
+#u:=[5,3,4,2,1]: w:=[2,1,4,3,5]:     # 4     4      4      4
+#u:=[4,5,3,1,2]: w:=[4,1,3,2,5]:     # 4     6      4      6
+#u:=[5,4,2,3,1]: w:=[3,2,5,1,4]:     # 5    12     10      6
+#u:=[5,3,4,2,1]: w:=[2,5,1,4,3]:     # 5    12     10      6
+#u:=[3,5,4,2,1]: w:=[1,5,4,3,2]:     # 6    12     12      6
+#u:=[5,4,6,2,3,1]: w:=[3,1,6,2,5,4]: # 2     5      2      4
+
+
+for n from 4 to 4 do
+ Sn:=combinat[permute](n):
+ for u in Sn do
+  S:=GlobalDescent(u):
+#  for T in combinat[powerset](S) do
+   for w in Sn do
+   #if not(CheckInt(BetaS(u,w,S))) then   lprint(u,w,BetaS(u,w,S));    fi:
+   if BetaS(u,w,S)<>{} then   lprint(u,w,BetaS(u,w,S));    fi:
+  od:
+#  od:
+ od:
+od:
+time();
+  
+
+
+quit;
+
+
+########     finds the sets Beta_T for all T <= GD(u)
+#S:=GlobalDescent(u);
+#for T in combinat[powerset](S) do
+# BetaS(u,w,T);
+#od;
+#######################################################
+
+quit
+;

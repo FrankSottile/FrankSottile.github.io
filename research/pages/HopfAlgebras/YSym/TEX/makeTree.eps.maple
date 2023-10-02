@@ -1,0 +1,120 @@
+#makeTree.eps.maple
+#
+#  This makes an .eps drawing a tree from the 132-avoiding permutation
+#
+interface(quiet=true):
+read(`LodayProcedures`);
+
+makeLine2:=proc(V1,V2)
+local line2:
+ line2:=cat(`newpath `,convert(V1[1],string),` `,convert(V1[2],string)):
+ line2:=cat(line2,` moveto `,convert(V2[1],string),` `):
+ line2:=cat(line2,convert(V2[2],string),` lineto stroke\n`):
+ line2
+end:
+###################################################################
+drawTree:=proc(vertex,tree)
+local i,treeL,treeR,vertexL,vertexR,Position:
+global file,step:
+#                            Finds position of peak in tree
+ for i from 1 to nops(tree) do
+  if tree[i]=nops(tree) then Position:=i: fi:
+ od:
+
+ treeL:=Std(tree[1..Position-1]);
+ vertexL:=[vertex[1]-(nops(tree)-Position+1)*step,
+           vertex[2]+(nops(tree)-Position+1)*step];
+
+ fprintf(file,makeLine2(vertex,[vertexL[1],vertexL[2]])):
+
+ if nops(treeL)>1 then  drawTree(vertexL,treeL): fi:
+ if nops(treeL)=1 then 
+  fprintf(file,makeLine2(vertexL,[vertexL[1]-step,vertexL[2]+step])):
+  fprintf(file,makeLine2(vertexL,[vertexL[1]+step,vertexL[2]+step])):
+ fi:
+
+ treeR:=Std(tree[Position+1..nops(tree)]);
+ vertexR:=[vertex[1]+Position*step,vertex[2]+Position*step];
+ fprintf(file,makeLine2(vertex,[vertexR[1],vertexR[2]])):
+
+ if nops(treeR)>1 then  drawTree(vertexR,treeR): fi:
+ if nops(treeR)=1 then 
+  fprintf(file,makeLine2(vertexR,[vertexR[1]-step,vertexR[2]+step])):
+  fprintf(file,makeLine2(vertexR,[vertexR[1]+step,vertexR[2]+step])):
+ fi:
+
+end: 
+###################################################################
+Digits:=4:
+
+tree:=[3,2,1]:
+tree:=[1,2,3]: Height:=20:
+tree:=[1]: Height:=10:
+
+tree:=[2,3,1]: Height:=20:
+tree:=[4,3,5,1,2]: Height:=20:
+tree:=[7,8,6,9,4,3,5,1,2]: Height:=25:
+tree:=[2,3,1,4]: Height:=18:
+tree:=[2,1,3]: Height:=15:
+tree:=[1,2]: Height:=12:
+tree:=[2,1]: Height:=12:
+tree:=[4,3,5,1,2]: Height:=20:
+A:= [[3, 4, 1, 2], [3, 4, 2, 1], [4, 3, 1, 2],  [4, 3, 2, 1]]: Height:=12:
+
+tree:=[3,4,2,5,6,1]: Height:=20:
+tree:=[5,6,4,7,8,3,9,1,2]: Height:=25:
+tree:=[1,2]: Height:=20:
+tree:=[7,8,9,3,4,5,6,1,2]: Height:=25:
+tree:=[6,8,7,9,5,3,2,4,1]: Height:=25:
+tree:=[8,9,5,6,7,4,2,3,1]: Height:=25:
+
+tree:=[3,4,2,5,6,7,1]: Height:=25:
+tree:=[6,7,5,2,3,4,1]: Height:=25:
+tree:=[2,3,4,1]: Height:=20:
+
+tree:=[5,6,4,7,2,3,1]: Height:=10:
+
+
+#for n from 1 to 5 do 
+# for tree in Trees[n] do 
+# for tree in A do 
+
+  step:=evalf(Height/(nops(tree)+2)):
+  vertex:=[nops(tree)*step,2*step]:
+  Width:=trunc(1+2*nops(tree)*step):
+
+  fname:=`../figures/`:
+#  fname:=`../diagrams/`:
+  for i in tree do fname:=cat(fname,convert(i,symbol)): od:
+#  fname:=cat(fname,`-big`):
+#  fname:=cat(fname,`-sm`):
+  fname:=cat(fname,`.eps`):
+  file:=fopen(fname,WRITE):
+
+  fprintf(file,`%%!PS-Adobe-3.0 EPSF \n`):
+  fprintf(file,cat(`%%%%Title: Tree `,fname,`\n`)):
+  fprintf(file,`%%%%Creator: Frank Sottile \n`):
+  fprintf(file,`%%%%Pages:  1 \n`):
+  fprintf(file,cat(`%%%%BoundingBox: 0  0  `,convert(Width,symbol))):
+      fprintf(file,cat(` `,convert(Height,symbol),` \n`)):
+  fprintf(file,`%%%%EndComments \n`):
+  fprintf(file,`20 dict begin \n`):
+  fprintf(file,`1 setlinejoin \n`):
+  fprintf(file,`1 setlinecap \n`):
+#  fprintf(file,`0 0 1  setrgbcolor \n`):   #   Blue
+  fprintf(file,`0 0 0  setrgbcolor \n`):   #   Black
+  fprintf(file,`0.4 setlinewidth \n`):  # Width for subscripts
+#  fprintf(file,`0.5 setlinewidth \n`):  # Width for normal text
+
+  fprintf(file,makeLine2(vertex,[vertex[1],vertex[2]-2*step])):
+  drawTree(vertex,tree):
+
+  fprintf(file,`showpage \n`):
+  fprintf(file,`grestore \n`):
+  fprintf(file,`end \n`):
+
+  fclose(file):
+# od:
+#od:
+quit;
+

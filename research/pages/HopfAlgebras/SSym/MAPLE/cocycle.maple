@@ -1,0 +1,230 @@
+#cocycle.maple
+#
+# 29 January 2001
+# Marcelo Aguiar
+# Frank Sottile
+#
+#    This code will compute the cocycle on primitives giving the 
+# smash product decomposition of SSym = A #_\sigma Qsym, where 
+#   A  is the coinvariants of SSym
+#        (those x \in SSym with  \sum x_1 \otimes D(x_2) = x \otimes 1 )
+#   \sigma : QSym \otimes QSym ---> A
+#
+#  The formula is
+#
+#  \sigma (a, b) = \sum Z(a_1) Z(b_1) (SZ)(a_2b_2)
+#
+#      Strategy
+#
+# 1) First compute (SZ)(a_2b_2), using the precomputed Antipode (S)
+#    to give an answer as a formal sum of monomial functions.
+#
+# 2) Next Multiply this by Z(b_1) and get a formal sum of Fundamental
+#    functions.
+#
+# 3) Finally, convert Z(a_1) into a sum of fundamental functions and 
+#    multipy the previous answer by that sum.
+#
+# 4) Lastly, convert the big sum of fundamental functions into a sum of 
+#     monomial functions.
+#
+interface(quiet=true):
+read(`MalvenutoProcedures`):
+read(`QSymProcedures`):
+read(`Antipode`):
+read(`HtmlProcedures`):
+######################################################################
+MakeTerm:=proc(T,X)
+#
+#   This procedure creates a TeX-ed term of algebra,
+#   given a pair T and a symbol X for the variables
+#
+local Str, n1, j, n2; 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=cat(convert(T[1],symbol)): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1  `):
+ else
+  Str:=cat(Str,`\\`,convert(X,symbol),`_{`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`} `):
+ fi:
+Str
+end:
+##################################################################################
+#
+MakeZeta:=proc(alpha)
+#
+#  Makes the closed permutation \zeta_\alpha
+#
+local zeta, a, j, n:
+ zeta:=[]: n:=0:
+ for a in alpha do
+  for j from 1 to n do zeta[j]:=zeta[j]+a: od:
+  for j from 1 to a do zeta:=[zeta[],j]: od:
+  n:=n+a: 
+ od:
+ zeta
+end:
+######################################
+ZetaL := proc(List)
+#
+#  Takes a list of compositions representing a multiplicity-free sum of 
+#  M_\alpha's in QSym and applies Zeta to this sum, returning a 
+#  list of permutations
+#
+ local Z, alpha:
+ Z:=[]:
+ for alpha in List do
+  Z:=[Z[],MakeZeta(alpha)]:
+ od:
+ Z
+end:
+###################################
+AntiPode:=proc(List)
+#
+#  This takes a list of permutations representing a multiplicity-free
+#  sum of M_u's in SSym and applies the antipode to this sum, returning
+#  a list of pairs  [Coeff, Permutation]
+#
+ local SZ, w:
+ SZ:=[]:
+ for w in List do
+  SZ:=[SZ[],S[w][]]:
+ od:
+ Combine(SZ)
+end:
+######################################################
+###                                               ####
+######################################################
+MakeSigma := proc(alpha,beta)
+#
+#   This procedure computes the cocycle
+#
+local s,t,SUM,i,j,a1,a2,b1,b2,a2b2,Za2b2,SZ,Zb1,Terms,Pair,Pr,Za1,C,List,w:
+ s:=nops(alpha):
+ t:=nops(beta):
+ SUM:=[]:
+ for i from 0 to s do
+  for j from 0 to t do 
+   a1 := alpha[1..i]:
+   a2 := alpha[(i+1)..s]:
+   b1 := beta[1..j]:
+   b2 := beta[(j+1)..t]:
+#
+#  We first compute (SZ)(a_2b_2)
+#
+   a2b2 := QProd(a2,b2):
+   Za2b2 := ZetaL(a2b2):
+   SZ := AntiPode(Za2b2):
+#
+#  Now, we get Z(b_1) and multiply this by the previous answer
+#
+   Zb1:=MakeZeta(b1):
+   Terms:=[]:
+   for Pair in SZ do
+    for Pr in Prod(Zb1,Pair[2]) do
+     Terms:=[Terms[],[Pair[1]*Pr[1],Pr[2]]]:
+    od:
+   od:
+   Terms:=Combine(Terms):
+   Za1:=MakeMonom(MakeZeta(a1)):
+#
+#   Now we are ready to combine things and make the full term
+#
+   for Pair in Terms do
+    for Pr in Za1 do
+     C:=Pair[1]*Pr[1]:
+     List:= Shuffle(Pr[2],Pair[2]):
+     for w in List do SUM:=[SUM[],[C,w]]: od:
+    od:
+   od:
+  od:
+ od:
+ SUM:=Combine(SUM):
+ if SUM <> [] then 
+  SUM:=FtoM(Combine(SUM)):
+ fi:
+ SUM
+end:
+###################################################
+
+file:=fopen(`../Cocycle.html`,WRITE):
+
+
+fprintf(file,`<HTML>\n`):
+fprintf(file,`<HEAD>\n`):
+fprintf(file,`   <TITLE>Hopf cocycle on SSym in the Monomial bases</TITLE>\n`):
+fprintf(file,`</HEAD>\n`):
+fprintf(file,`<BODY BGCOLOR="#FFFFFF">\n\n`):
+
+
+fprintf(file,`<H1>Hopf cocycle in terms of the Monomial bases\n`):
+fprintf(file,`for the smash product decomposition of <B>S</B><I>Sym</I>\n`):
+fprintf(file,`evaluated on the monomial basis of <B>Q</B><I>Sym</I></H1>\n\n`):
+
+fprintf(file,`<HR COLOR="#0000FF" size=2 noshade>\n\n`):
+
+fprintf(file,`<!------------------------------------------------------------>\n\n`):
+
+#    Compositions
+
+C[1]:=[[1]]:
+C[2]:=[[2],[1,1]]:
+C[3]:=[[3],[2,1],[1,2],[1,1,1]]:
+C[4]:=[[4],[3,1],[2,2],[1,3],[2,1,1],[1,2,1],[1,1,2],[1,1,1,1]]:
+C[5]:=[[5],[4,1],[3,2],[2,3],[1,4],[3,1,1],[1,3,1],[1,1,3],[2,2,1],
+       [2,1,2],[1,2,2],[2,1,1,1],[1,2,1,1],[1,1,2,1],[1,1,1,2],[1,1,1,1,1]]:
+
+
+fprintf(file,`<FONT SIZE=+1 COLOR="5c3317"><B>Cocycle of total degree 0`):
+fprintf(file,`</B></FONT><BR>\n\n`):
+fprintf(file,`<TABLE>\n`):
+fprintf(file,`   <TR VALIGN=TOP><TD>sigma(<I>M</I><SUB>()</SUB>, `):
+fprintf(file,` <I>M</I><SUB>()</SUB>) &nbsp; &nbsp; =</TD>\n`):
+fprintf(file,`    <TD>&nbsp; &nbsp; <B>M</B><SUB>0</SUB></TD></TR>\n</TABLE>\n\n`):
+fprintf(file,`<!----------------------------------------------------------->\n`):
+fprintf(file,cat(`<HR size=1 noshade width=800 align=left>\n`)):
+fprintf(file,`<!----------------------------------------------------------->\n\n`):
+
+
+for n from 2 to 5 do 
+ if n=2 then
+   fprintf(file,cat(`<FONT SIZE=+1 COLOR="5c3317"><B>Cocycle of total degree `,n)):
+  else
+   fprintf(file,cat(`<FONT SIZE=+1 COLOR="5c3317"><B>Cocycles of total degree `,n)):
+ fi:
+ fprintf(file,`</B></FONT><BR>\n\n`):
+ fprintf(file,`<TABLE>\n`):
+ for i from 1 to n-1 do
+  for alpha in C[i] do
+   for beta in C[n-i] do
+    fprintf(file,cat(`   <TR VALIGN=TOP><TD>sigma(<I>M</I><SUB>(`,alpha[])):
+    fprintf(file,cat(`)</SUB>, <I>M</I><SUB>(`,beta[])):
+    fprintf(file,cat(`)</SUB>)&nbsp; &nbsp; =</TD>\n    <TD>&nbsp; &nbsp; `)):
+    fprintf(file,cat(Format(MakeSigma(alpha,beta),"<B>M</B>"))):
+    fprintf(file,cat(`</TD></TR>\n`)):
+   od:
+  od:
+ od:
+ fprintf(file,`</TABLE>\n\n`):
+ if n<>6 then 
+  fprintf(file,`<!----------------------------------------------------------->\n`):
+  fprintf(file,cat(`<HR size=1 noshade width=800 align=left>\n`)):
+  fprintf(file,`<!----------------------------------------------------------->\n\n`):
+ fi:
+od:
+
+fprintf(file,`<HR COLOR="#0000FF" size=2 noshade>\n\n`):
+fprintf(file,`<I><FONT COLOR="#BB00FF">Created 5 August 2002</font></i>\n`):
+fprintf(file,`</BODY>\n</HTML>\n`):
+
+fclose(file):
+
+time();
+quit;
+

@@ -1,0 +1,149 @@
+#QEuler.maple
+#
+#  Frank Sottile
+#  19 March 2002
+#
+#  The dimensions of the Eulerian subalgebras of QSym and SSym 
+#  are computed here.
+#
+###################################################################
+interface(quiet=true):
+###################################################################
+#
+#   QZeta(alpha)   zeta function of QSym
+#
+###################################################################
+QZeta := proc(alpha)
+ local zeta:
+ zeta:=0:
+ if nops(alpha)<=1 then zeta:=1: fi:
+ zeta
+end:
+###################################################################
+QMu := proc(alpha)
+ local mu,n,a:
+ n:=0:
+ for a in alpha do 
+  n:=n+a:
+ od:
+ mu:=0:
+ if nops(alpha)<=1 then mu:=(-1)^n: fi:
+ mu
+end:
+###################################################################
+QMMu := proc(alpha)
+ (-1)^nops(alpha)
+end:
+###################################################################
+QM_Al := proc(alpha)
+ local n,a:
+ n:=0:
+ for a in alpha do 
+  n:=n+a:
+ od:
+ QMMu(alpha) - (-1)^n*QZeta(alpha)
+end:
+###################################################################
+Collect := proc(L)
+local S,T,ind,COEFFS,collected ;
+ S:={}:
+ for T in L do 
+  S:=S union {T[2]}:
+ od:
+ for ind in S do 
+  COEFFS[ind]:=0:
+ od:
+ for T in L do 
+  COEFFS[T[2]]:=COEFFS[T[2]]+T[1]:
+ od:
+ collected:=[]:
+ for ind in S do
+  collected:=[collected[],[COEFFS[ind],ind]]:
+ od:
+ collected
+end:
+###################################################################
+CollShort := proc(L)
+local S,T,ind,COEFFS,collected ;
+ S:={}:
+ for T in L do 
+  S:=S union {T[2]}:
+ od:
+ for ind in S do 
+  COEFFS[ind]:=0:
+ od:
+ for T in L do 
+  COEFFS[T[2]]:=COEFFS[T[2]]+T[1]:
+ od:
+ collected:=[]:
+ for ind in S do
+  if COEFFS[ind]<>0 then 
+   collected:=[collected[],[COEFFS[ind],ind]]:
+  fi:
+ od:
+ collected
+end:
+#####################################################################
+read(QSymProcedures);
+################################################################
+#
+#   This part sucessfully computes the dimensions of the Eulerian subalgebra of
+#   QSym
+#
+###################################################################
+
+for n from 2 to 8 do 
+ Th:=[]:  Vars:={}:
+ for S in combinat[powerset](n-1) do
+  al:=SetToComp(S,n):
+  A:=cat(`a`);
+  for Val in al do 
+   A:=cat(A,convert(Val,symbol)):
+  od:
+  Th:=[Th[],[A,al]]:
+  Vars:=Vars union {A}:
+ od:
+ 
+ IdAlId:=[]:
+ for MF in Th do 
+  for Term in QMCoprod(MF) do
+   for T in QMCoprod([Term[1],Term[2]]) do
+    IdAlId:=[IdAlId[],[T[1]*QM_Al(T[3]),[T[2],Term[3]]]]:
+   od:
+  od:
+ od:
+
+ Eqs:={}:
+ for Pair in  CollShort(IdAlId) do
+  Eqs:= Eqs union {Pair[1]=0}:
+ od:
+
+ COLS:=convert(indets(Eqs),list):
+ Eqs:=convert(Eqs,list):
+ C:=nops(COLS):
+ R:=nops(Eqs):
+ f:= x -> 0:
+ M:=linalg[matrix](R,C,f):
+ for i from 1 to R do
+  eq:=Eqs[i]:
+  if whattype(op(1,expand(2*eq)))<>`*` then 
+    for term in op(1,expand(2*eq)) do
+     for j from 1 to C do
+      if op(2,term)=COLS[j] then M[i,j]:=op(1,term): fi:
+     od:
+    od:
+   else
+    term:=op(1,expand(2*eq)):
+    for j from 1 to C do
+     if op(2,term)=COLS[j] then M[i,j]:=op(1,term): fi:
+    od:
+   fi:
+ od:
+
+
+ lprint(2^(n-1)-linalg[rank](M));
+
+od:
+quit;
+
+

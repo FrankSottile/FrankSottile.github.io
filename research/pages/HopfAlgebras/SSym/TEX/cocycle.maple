@@ -1,0 +1,271 @@
+#cocycle.maple
+#
+# 29 January 2001
+# Marcelo Aguiar
+# Frank Sottile
+#
+#    This code will compute the cocycle on primitives giving the 
+# smash product decomposition of SSym = A #_\sigma Qsym, where 
+#   A  is the coinvariants of SSym
+#        (those x \in SSym with  \sum x_1 \otimes D(x_2) = x \otimes 1 )
+#   \sigma : QSym \otimes QSym ---> A
+#
+#  The formula is
+#
+#  \sigma (a, b) = \sum Z(a_1) Z(b_1) (SZ)(a_2b_2)
+#
+#      Strategy
+#
+# 1) First compute (SZ)(a_2b_2), using the precomputed Antipode (S)
+#    to give an answer as a formal sum of monomial functions.
+#
+# 2) Next Multiply this by Z(b_1) and get a formal sum of Fundamental
+#    functions.
+#
+# 3) Finally, convert Z(a_1) into a sum of fundamental functions and 
+#    multipy the previous answer by that sum.
+#
+# 4) Lastly, convert the big sum of fundamental functions into a sum of 
+#     monomial functions.
+#
+interface(quiet=true):
+read(`MalvenutoProcedures`):
+read(`QSymProcedures`):
+read(`Antipode`):
+######################################################################
+MakeTerm:=proc(T,X)
+#
+#   This procedure creates a TeX-ed term of algebra,
+#   given a pair T and a symbol X for the variables
+#
+local Str, n1, j, n2; 
+ if T[1]=1 then Str:= ``: fi:
+ if T[1]=-1 then Str:= `-`: fi:
+ if abs(T[1])<>1 then Str:=cat(convert(T[1],symbol)): fi:
+ n1:=nops(T[2]):
+ if n1=0 then 
+  Str:=cat(Str,`1  `):
+ else
+  Str:=cat(Str,`\\`,convert(X,symbol),`_{`):
+  for j from 1 to n1 do
+   Str:=cat(Str,convert(T[2][j],symbol)):
+  od:
+  Str:=cat(Str,`} `):
+ fi:
+Str
+end:
+##################################################################################
+Format := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in TeX
+#
+local  L, Str, j;
+ L:=Li:
+ if L=[] then Str:=cat(`0$.`): 
+  else
+   L:=Sort(L):
+   Str:=MakeTerm(L[1],X):
+   if nops(L)=1 then Str:=cat(Str,`$.`): fi:
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,`+`):
+     fi:
+      Str:=cat(Str,MakeTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`$.`): 
+     fi:
+     if j<>nops(L) then
+      if j mod 7 = 0 then  
+         Str:=cat(Str,`$\\vspace{-6pt}\n\n      `): 
+         Str:=cat(Str,`\\hspace{10pt}\n      $`):
+      fi:
+      if (j mod 7 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n       `): fi:
+     fi:
+    od:
+   fi:
+  fi:
+ Str
+end:
+#####################################################
+#
+MakeZeta:=proc(alpha)
+#
+#  Makes the closed permutation \zeta_\alpha
+#
+local zeta, a, j, n:
+ zeta:=[]: n:=0:
+ for a in alpha do
+  for j from 1 to n do zeta[j]:=zeta[j]+a: od:
+  for j from 1 to a do zeta:=[zeta[],j]: od:
+  n:=n+a: 
+ od:
+ zeta
+end:
+######################################
+ZetaL := proc(List)
+#
+#  Takes a list of compositions representing a multiplicity-free sum of 
+#  M_\alpha's in QSym and applies Zeta to this sum, returning a 
+#  list of permutations
+#
+ local Z, alpha:
+ Z:=[]:
+ for alpha in List do
+  Z:=[Z[],MakeZeta(alpha)]:
+ od:
+ Z
+end:
+###################################
+AntiPode:=proc(List)
+#
+#  This takes a list of permutations representing a multiplicity-free
+#  sum of M_u's in SSym and applies the antipode to this sum, returning
+#  a list of pairs  [Coeff, Permutation]
+#
+ local SZ, w:
+ SZ:=[]:
+ for w in List do
+  SZ:=[SZ[],S[w][]]:
+ od:
+ Combine(SZ)
+end:
+######################################################
+###                                               ####
+######################################################
+MakeSigma := proc(alpha,beta)
+#
+#   This procedure computes the cocycle
+#
+local s,t,SUM,i,j,a1,a2,b1,b2,a2b2,Za2b2,SZ,Zb1,Terms,Pair,Pr,Za1,C,List,w:
+ s:=nops(alpha):
+ t:=nops(beta):
+ SUM:=[]:
+ for i from 0 to s do
+  for j from 0 to t do 
+   a1 := alpha[1..i]:
+   a2 := alpha[(i+1)..s]:
+   b1 := beta[1..j]:
+   b2 := beta[(j+1)..t]:
+#
+#  We first compute (SZ)(a_2b_2)
+#
+   a2b2 := QProd(a2,b2):
+   Za2b2 := ZetaL(a2b2):
+   SZ := AntiPode(Za2b2):
+#
+#  Now, we get Z(b_1) and multiply this by the previous answer
+#
+   Zb1:=MakeZeta(b1):
+   Terms:=[]:
+   for Pair in SZ do
+    for Pr in Prod(Zb1,Pair[2]) do
+     Terms:=[Terms[],[Pair[1]*Pr[1],Pr[2]]]:
+    od:
+   od:
+   Terms:=Combine(Terms):
+   Za1:=MakeMonom(MakeZeta(a1)):
+#
+#   Now we are ready to combine things and make the full term
+#
+   for Pair in Terms do
+    for Pr in Za1 do
+     C:=Pair[1]*Pr[1]:
+     List:= Shuffle(Pr[2],Pair[2]):
+     for w in List do SUM:=[SUM[],[C,w]]: od:
+    od:
+   od:
+  od:
+ od:
+ SUM:=Combine(SUM):
+ if SUM <> [] then 
+  SUM:=FtoM(Combine(SUM)):
+ fi:
+ SUM
+end:
+###################################################
+
+file:=fopen(`M-Cocycle.tex`,WRITE):
+
+fprintf(file,`\\documentclass[12pt]{article}\n`):
+fprintf(file,`\\usepackage{amssymb}\n`):
+fprintf(file,`\\newcommand{\\M}{\\mathcal{M}}\n`):
+fprintf(file,`\\newcommand{\\F}{\\mathcal{F}}\n`):
+fprintf(file,`\\newcommand{\\Z}{\\mathcal{Z}}\n`):
+fprintf(file,`\\newcommand{\\D}{\\mathcal{D}}\n`):
+fprintf(file,`\\newcommand{\\QSym}{\\mathcal{Q}\\mathit{Sym}}\n`):
+fprintf(file,`\\newcommand{\\SSym}{\\mathfrak{S}\\mathit{Sym}}\n`):
+fprintf(file,`\\headheight=8pt \\topmargin=-20pt\n`): 
+fprintf(file,`\\textheight=690pt \\textwidth=472pt\n`):
+fprintf(file,`\\oddsidemargin=-2pt \\evensidemargin=-2pt\n\n`):
+
+fprintf(file,`\\begin{document}\n`):
+
+fprintf(file,`\\begin{center}\\Large\\bf\n`):
+fprintf(file,`Hopf cocycle in terms of the Monomial bases\n`):
+fprintf(file,`for the smash product decomposition of $\\SSym$\n`):
+fprintf(file,`evaluated on the primitive elements of $\\QSym$\n`):
+fprintf(file,`\\end{center}\n`):
+
+fprintf(file,`\\hspace{-20pt}\\rule{512pt}{1pt}\\medskip\n\n`):
+
+fprintf(file,`The Hopf cocycle is a map \n`):
+fprintf(file,`$\\sigma\\colon\\QSym\\otimes\\QSym\\to A$, \n`):
+fprintf(file,`defined by\n \\[\n`):
+fprintf(file,`    \\sigma(M_\\alpha,M_\\beta)\\ :=\\  \n`):
+fprintf(file,`    \\sum \\Z(\\alpha_{(1)})\\Z(\\beta_{(1)})\n`):
+fprintf(file,`      (S\\Z)(\\alpha_{(2)}\\beta_{(2)})\\ .\n \\]\n`):
+fprintf(file,`Here, the subalgebra $A\\subset\\SSym$ is the left Hopf\n`):
+fprintf(file,` kernel of the map $\\D\\colon\\SSym\\to\\QSym$, \n`):
+fprintf(file,` those $h\\in\\SSym$ satisfying\n \\[\n`):
+fprintf(file,`     \\sum h_1\\otimes\\D(h_2)\\ =\\ h\\otimes 1\\ .\n \\]\n`):
+
+fprintf(file,`\\hspace{-20pt}\\rule{512pt}{1pt}\\medskip\n\n`):
+
+fprintf(file,`%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%`):
+fprintf(file,`\n\n`):
+
+
+#    Compositions
+
+C[1]:=[[1]]:
+C[2]:=[[2],[1,1]]:
+C[3]:=[[3],[2,1],[1,2],[1,1,1]]:
+C[4]:=[[4],[3,1],[2,2],[1,3],[2,1,1],[1,2,1],[1,1,2],[1,1,1,1]]:
+C[5]:=[[5],[4,1],[3,2],[2,3],[1,4],[3,1,1],[1,3,1],[1,1,3],[2,2,1],
+       [2,1,2],[1,2,2],[2,1,1,1],[1,2,1,1],[1,1,2,1],[1,1,1,2],[1,1,1,1,1]]:
+
+fprintf(file,`\\begin{enumerate}\n`):
+
+fprintf(file,`\\item[]\\hspace{-50pt}$`):
+fprintf(file,`\\sigma(M_{()},M_{()})\\ =\n        `):
+fprintf(file,`\\M_{\\emptyset}$.\\vspace{-8pt}\n`):
+fprintf(file,cat(`\\end{enumerate}\n`)):
+
+
+for n from 2 to 5 do 
+ fprintf(file,`\\hspace{-50pt}\\underline{\\rule{490pt}{1pt}}\\medskip\n\n`):
+ if n=5 then fprintf(file,`\\newpage\n`): fi:
+ fprintf(file,cat(`Hopf cocyles of total degree `,n,`.\n`)):
+ fprintf(file,`\\begin{enumerate}\n`):
+ for i from 1 to n-1 do
+#  fprintf(file,`\n\n\\hspace{-50pt}\\underline{\\hspace{300pt}}\n`):
+  for alpha in C[i] do
+   for beta in C[n-i] do
+    fprintf(file,`\\item[]\\hspace{-50pt}$`): 
+    fprintf(file,cat(`\\sigma(M_{(`,alpha[])): 
+    fprintf(file,cat(`)},\\,M_{(`,beta[],`)})\\ =\\ \n        `)):
+    fprintf(file,cat(Format(MakeSigma(alpha,beta),\M))):
+    fprintf(file,`\\vspace{-8pt}\n`):
+   od:
+  od:
+ od:
+ fprintf(file,cat(`\\end{enumerate}\n`)):
+od:
+fprintf(file,`\\hspace{-50pt}\\underline{\\rule{490pt}{1pt}}\\medskip\n\n`):
+fprintf(file,`\\end{document}\n`):
+
+fclose(file):
+
+time();
+quit;

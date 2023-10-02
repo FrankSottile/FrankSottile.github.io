@@ -1,0 +1,97 @@
+#Fix
+#
+#   Fixes M-antipode-html.maple, which crashes upon srting alist of length 120
+#
+#  This computes the antipode in the M-basis
+#
+#  We use the formula
+#      m ( s \otimes 1 )\delta M_w = 0
+#  to compute the antipode recursively
+#  S[w]:=antipode of w
+#
+interface(quiet=true):
+read(`MalvenutoProcedures`):
+read(`HtmlProcedures`):
+######################################################################
+################################################################
+NFormat := proc(Li,X)
+#
+#  Given a list Li, this makes the formal sum L in HTML
+#
+local  L, Str, j:
+ L:=Li:
+ if L=[]
+   then Str:=cat(`0.<BR>\n       `): 
+  else
+   Str:=HtmlTerm(L[1],X):
+   if nops(L)>1 then
+    for j from 2 to nops(L) do
+     if L[j][1]>0 then 
+       Str:=cat(Str,` + `):
+     fi:
+     Str:=cat(Str,HtmlTerm(L[j],X)):
+     if j=nops(L) then 
+       Str:=cat(Str,`.<BR>\n       `): 
+     fi:
+     if j<>nops(L) then
+      if j mod 8 = 0 then  Str:=cat(Str,`<BR>\n`): fi:
+      if (j mod 8 <> 0) and (j mod 2 = 0) then Str:=cat(Str,`\n      `): fi:
+     fi:
+    od:
+   else 
+     Str:=cat(Str,`.<BR>\n       `): 
+   fi:
+ fi:
+ Str
+end:
+######################################################################
+
+file:=fopen(`../M-Antipode.html`,APPEND):
+S5:=[]:
+L1:={1,2,3,4,5}:
+for j1 from 1 to 5 do
+ i1 := op(j1,L1):
+ L2 := sort( L1 minus {i1} ):
+ for j2 from 1 to 4 do 
+  i2 := op(j2,L2):
+  L3 := sort( L2 minus {i2} ):
+  for j3 from 1 to 3 do 
+   i3:= op(j3,L3):
+   L4:= sort( L3 minus {i3} ):
+   for j4 from 1 to 2 do
+    i4 := op(j4,L4):
+    L5 := L4 minus {i4}:
+    i5 := op(1,L5):
+    S5 := [S5[], [i1,i2,i3,i4,i5]]:
+   od:
+  od:
+ od:
+od:
+
+
+w:=[5,4,3,2,1]:
+S:=[]:
+for u in S5 do 
+ S := [S[],[-1,u]]:
+od:
+
+  fprintf(file,cat(`   <TR VALIGN=TOP><TD>S(`,HtmlTerm([1,w],"<B>M</B>"))):
+  fprintf(file,cat(`)&nbsp; &nbsp; =</TD>\n`)):
+  fprintf(file,cat(`    <TD>&nbsp; &nbsp; `,NFormat(S,"<B>M</B>"))):
+  fprintf(file,cat(`</TD></TR>\n`)):
+
+ fprintf(file,`</TABLE>\n\n`):
+ fprintf(file,`<!----------------------------------------------------------->\n`):
+ fprintf(file,cat(`<HR size=1 noshade width=800 align=left>\n`)):
+ fprintf(file,`<!----------------------------------------------------------->\n\n`):
+
+
+
+fprintf(file,`<HR COLOR="#0000FF" size=2 noshade>\n\n`):
+fprintf(file,`<I><FONT COLOR="#BB00FF">Created 5 August 2002</FONT></I>\n`):
+fprintf(file,`</BODY>\n</HTML>\n`):
+
+fclose(file):
+
+time();
+quit:
