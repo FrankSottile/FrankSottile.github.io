@@ -1,0 +1,22 @@
+#quartic.maple
+#
+#
+################################################################
+
+with(plots):
+plotsetup(x11):
+#
+plotsetup(gif,plotoutput=`A.gif`,plotoptions=`height=1000,width=1000`);                                 
+R:=1:
+r:=0.5:
+
+
+
+X:=cos(th)-2*(cos(th)*cos(th) - sin(th)*sin(th))/3:
+Y:=sin(th)+4*sin(th)*cos(th)/3:
+
+plot([X,Y,th=0..2*Pi], color=red);
+
+plotsetup(gif,plotoutput=`B.gif`,plotoptions=`height=1000,width=1000`);                                 
+implicitplot(324*x^4+648*x^2*y^2+324*y^4+972*x^3-2916*x*y^2+765*x^2+765*y^2-125,
+    x=-1.7..1, y=-1.5..1.5,grid=[300,300]);

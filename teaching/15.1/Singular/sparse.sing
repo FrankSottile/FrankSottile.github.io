@@ -1,0 +1,39 @@
+//sparse.sing
+//
+// Frank Sottile
+// 25 February 2015
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//   This script is a framework for investigating the number of solutions 
+//     to sparse systems.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+option(redSB);
+//system("random",1009);  // start random generator with seed 210
+
+int numMonoms = 7;
+intmat A[2][7] = 0, 1,  0, 1, 2, 3,  2,
+                 0, 0,  1, 1, 1, 1,  2;
+
+ring R = 0, (x,y), lp;
+
+poly f;
+int i,j;
+ideal I = 0;
+
+for (j=1;  j<=2; j=j+1) {
+ f=0;
+ for (i=1; i<=numMonoms; i=i+1) {
+  f = f +  random(-100,100)*x^A[1,i]*y^A[2,i];
+ }
+ I = I + ideal(f);
+}
+
+short=0;
+I;
+
+print("/////////////////////////////////////////////////");
+I=std(I);
+I;
+dim(I),deg(I),  mult(I);
+quit;

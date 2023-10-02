@@ -1,0 +1,40 @@
+  Algebraic Geometry is a regularly scheduled advanced
+graduate class (once every two years) that lies between the
+qualifier courses and topics courses.
+
+   Algebraic geometry is a core mathematical discipline
+that uses algebra to understand geometric objects.  Our
+department has several faculty who work in the area or
+use it in their work, including me, Lima-Filho, Landsberg,
+Pearlstein, Matusevich, Rojas, and Robles.  Next year
+we will be joined by Anne Shiu, and there are others
+for whom familiarity with algebraic geometry is basic 
+knowledge.   I point out that with Rojas, Landsberg,
+Shiu and me, our department has a particular strength in
+people working on the applications of algebraic geometry.
+For example, I founded the SIAM activity group on algebraic
+geometry and Landsberg is running a semester on this topic
+at the Simons Center for Theoretical Computing.  With 
+Robles and Pearlstein, we also have a strength in 
+Hodge Theory.
+
+   This course will follow an introductory text by Perrin
+whose goal is Bezout's Theorem and the Riemann-Roch theorem 
+for curves.  Fundamental concepts such as affine and projective 
+varieties, sheaves, dimension, and cohomology will be treated.
+
+   Grading will be based on class attendance (I believe that
+advanced graduate courses should accommodate students with
+differing goals), as well as a small amount of homework,
+which will help you to become familiar with some basic objects
+and concepts of the course.  Note the emphasis on small,
+which I add for those reeling from qualifying courses.
+
+  The course has a webpage:
+http://www.math.tamu.edu/~sottile/teaching/14.1/620.html
+
+The prerequisite is Graduate Algebra (it may be taken concurrent 
+with 654).
+
+Sincerely,
+-Frank Sottile
