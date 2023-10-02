@@ -1,0 +1,97 @@
+//
+//   This Singular input file gives several examples of the Kouchnirenko
+//  Theorem for systems of master functions in the paper
+//  "Gale duality for complete intersections".   By Frederic Bihan
+//  and Frank Sottile.
+//
+//    The ideal J is the sparse system (in diagonal form, with 
+//  the denominators cleared) of Example 2.2 [Equation (2.4)].  
+//  To compute the number of solutions in the torus, we need to 
+//  saturate (actually a simple quotient works) by the ideal of 
+//  the two axes. 
+//
+//     The ideal I is the dual system of master functions from 
+//  Example 2.2 [Equation (2.5)].  It must be saturated by the 
+//  ideal of the line arrangement.
+//
+//     The ideal K is the additional system of Master functions 
+//  give in Example 3.3
+//
+//     We give a bonus example at the end of a system of master 
+//  functions in C^4 having 7 hyperplanes whose exponents B
+//  are dual to the vertices of the unit 3-cube, and therefore
+//  its Kouchnirenko number is 6 (which is what we compute).
+//
+option(redSB);
+
+ring R=0, (x,y), lp;
+
+//ideal J =  x  *y^2-(x^4/y      + x^4*y - 1),  
+//           x^3*y^2-(x^4/y      - x^4*y -1/2);
+
+ideal J =  x  *y^3-(x^4 + x^4*y^2 - y),  
+           x^3*y^3-(x^4 - x^4*y^2 - y/2);
+
+J=std(J);
+mult(J);
+J=std(quotient(J,ideal(x*y)));
+mult(J);
+
+
+ideal I =  x^2*(x+y-1)^3-y^2*(x-y-1/2), x*(x-y-1/2)^3-y^3*(x+y-1);
+I=std(I);
+mult(I);
+
+I=std(quotient(I,ideal(x*y*(x+y-1)*(x-y-1/2))));
+mult(I);
+short=0;
+I[1];
+
+ideal K =  (2*x-3*y)^2*(4*x+y-7)^3- (1+x-3*y)^2*(x-7*y-2),
+           (2*x-3*y)  *(x-7*y-2)^3- (1+x-3*y)^3*(4*x+y-7);
+K=std(K);
+mult(K);
+
+K=std(quotient(K,(2*x-3*y)*(4*x+y-7)*(1+x-3*y)*(x-7*y-2)));
+mult(K);
+K[1];
+////////////////////////////////////////////////////////////////////////////////
+ring S=0, (x,y,z,w), dp;
+
+list p = x,
+         y,
+         x-z,
+         x+y+z+w-1,
+         4*x-3*y +2*z-w +1,
+         5*x+7*y-11*z-13*w+101,
+         x-y+3*z-7*w+6;
+
+/////////////////////////////////////////
+//B:=matrix([[-1, -1,  0, 1, 0, 0, 0], 
+//           [ 0, -1, -1, 0, 1, 0, 0], 
+//           [-1,  0, -1, 0, 0, 1, 0], 
+//           [-1, -1, -1, 0, 0, 0, 1]]);
+///////////////////////////////////////////
+ideal L = p[1]*p[2] - p[4],
+          p[2]*p[3] - p[5],
+          p[1]*p[3] - p[6],
+          p[1]*p[2]*p[3] - p[7];
+I=std(L);
+dim(L);
+mult(L);
+
+/////////////////////////////////////////
+//
+//   The kernel of B is the following matrix W, whose columns
+// are the vertices of the unit 3-cube.   This has volume 1,
+// so the corresponding dual system of sparse polynomials has
+// six solutions.
+//
+//W:=matrix([[1,0,0,1,0,1,1],
+//           [0,1,0,1,1,0,1],
+//           [0,0,1,0,1,1,1]]);
+///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+quit;
+

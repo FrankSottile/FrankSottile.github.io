@@ -1,0 +1,97 @@
+						December 2, 2001
+
+
+Editor, AMS Notices
+
+Dear Editor,
+
+The Digital Millennium Copyright Act (DMCA), promoted by the music and
+motion picture industries under the banner of protecting intellectual
+property rights, was passed into law in July, 1998. Section
+1201(b)(1)(A) of the DMCA prohibits trafficking in ``any
+technology...that is primarily designed or produced for the purpose of
+circumventing [copyright] protection''.  Unfortunately, the DMCA is
+being used to discourage scientific research related to
+encryption. With no stretch of the imagination, mathematics will be
+directly and adversely affected, as the fields of computer security
+and data encryption already are.
+
+The names of Edward Felten and Dmitry Sklyarov are associated with
+events of interest to mathematicians. As part of a public challenge
+issued by the Secure Digital Music Initiative (SDMI), Felten's team
+broke several ``watermarking'' technologies for digital music, then
+rejected a monetary prize in favor of publication. The SDMI and the
+Recording Industry Association of America (RIAA) warned Felten that
+publication would ``subject [Felten's] team to enforcement actions
+under the DMCA and possibly other federal laws.'' After negotiating
+with the recording industry, Felten's team presented its results at
+the 10th Annual USENIX Security Symposium, but the wording of
+subsequent public announcements by the SDMI and RIAA leads us to
+believe that the recording industry's seeming acquiescence represents
+merely their perception of current public opinion.
+
+The second case concerns a Russian software developer and cryptography
+student named Dmitry Sklyarov. As an employee of the Russian software
+firm ElcomSoft, Sklyarov authored a commercial program to circumvent
+password protection on Adobe eBook files. This software is legal
+outside the United States, and has legitimate applications that are
+not provided by Adobe's own software.  Sklyarov was also an invited
+speaker at the Def Con security conference held in Las Vegas in July,
+2001. Acting on a motion filed by Adobe Software, the FBI arrested
+Sklyarov on July 16, charging him with violating Section 1201(b)(1)(A)
+of the DMCA. In response to strong negative public reaction, Adobe
+dropped its complaint, but the Department of Justice is pursuing the
+case. On August 30, Sklyarov was charged with five counts, each
+carrying a maximum penalty of 5 years imprisonment and a fine of
+$500,000.
+
+Sklyarov's case is relevant to academics because he was in the United
+States as a conference participant, not as a representative of
+ElcomSoft. However, all such cases are important to research
+mathematicians: Many commercial ``content protection technologies''
+are currently at the level of Rot-13 (an involution of the Roman
+alphabet), Fermat's little theorem, and mod 2 linear algebra, relying
+on public ignorance for their effectiveness. To criminalize
+publication of work that *could be used* to thwart such measures is
+misguided. A mathematician whose work has cryptographic applications
+could run afoul of the DMCA. We do not believe criminal charges would
+be upheld in such a case, but find it unacceptable that the DMCA
+contains provisions for raising these charges at all.
+
+The chilling effect of the DMCA on academic research has not been
+emphasized in media accounts, but it is extant, and will only get
+worse as the entertainment industry pushes for more enforcement of the
+DMCA. In July, Alan Cox (the maintainer of the stable Linux kernel)
+stated that he would boycott conferences held in the United States,
+and urged others to do the same. In August, Dutch cryptographer Neils
+Ferguson (a co-designer of the Twofish encryption algorithm) announced
+that he had broken the encryption used in Intel's High-bandwidth
+Digital Content Protection (HDCP). Because he visits the United States
+regularly, Ferguson has declined to discuss the details of his
+findings, even to Intel, since that could constitute ``trafficking''
+under the DMCA.
+
+Readers can find up-to-date information on legal aspects of the
+Sklyarov and Felten cases at the Electronic Frontier Foundation: 
+http://www.eff.org
+
+Technical and practical aspects of encryption are engagingly discussed
+at David Touretzky's Carnegie-Mellon University site. His gallery of
+DVD descramblers pointedly illustrates the fact that source code---a
+form of mathematical expression---is speech that should be protected
+by the First Amendment.
+http://www.cs.cmu.edu/~dst
+
+Two undergraduates broke the weak encryption used by Mattel's "Cyber
+Patrol 4" Internet blocking software. They detail their methods, and
+what they found, in this article:
+http://tcn.dhs.org/mirrors/cp4break/cp4break.htm
+It is excellent reading, at a level suitable for an undergraduate
+algebra class.
+
+			Sincerely yours,
+
+			George Avrunin, UMass Amherst
+			Anders Buch, MIT
+			Andrew D. Hwang, College of the Holy Cross
+			Frank Sottile, UMass Amherst

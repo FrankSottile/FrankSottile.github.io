@@ -1,0 +1,162 @@
+Getting Started in Research
+
+Frank Sottile <sottile@msri.org>
+
+How do you get started on research, post-Ph.D.?  That is, how do you make
+the transition from graduate student to a budding research mathematician?
+Specifically, how do you go from working on a problem for several years with
+their advisor's attention and counsel, to independently seeking out and
+solving your own problems?  Anecdotal evidence and advice I have been given
+point to this being a critical transition, one which many (most?) young
+mathematicians do not make.
+
+I don't really have the answer.  Mathematical research is a very personal
+pursuit, and what works for one may not work for another.  However, I think
+I have made that transition, and I have thought a lot about it and have some
+observations, which I share here.  I will refer to events in my career, and
+so this won't apply to everyone, but hopefully it will either stimulate
+discussion, or help someone.
+
+I managed to prove a new result within two months of starting my first job.
+I feel that I was fortunate to get so quickly started in new directions, but
+also that it was absolutely necessary; you can't go very far extending your
+thesis or living off ideas that your advisor sends your way.  The key is to
+generate your own ideas.  This may seem rather daunting.  One way to do this
+is to attend lots of talks and conferences and talk mathematics with as many
+different people as possible. I also 
+recommend casting a wide net for potential problems; not only are you more
+likely to find something to your liking, but you will learn more along the
+way.  You don't have to work on problems similar to your thesis for the rest
+of your career.
+
+That said, you should publish the main results from your thesis.  I didn't
+do this for about a year, and the delay later cost me a lot of time.
+Instead, I moved to a new city and got settled in.  I had heard of people
+who moved, got settled in, then their first term started and they got caught
+up in their new responsibilities.  After a couple of terms of that, they
+hadn't done any research and found it difficult to get started.
+
+To avoid this, as soon as I arrived in my new city, I started to think about
+two ideas I had earlier in my graduate career, but unrelated to my thesis.
+They were vague, and I didn't get too far on them.  One was cut short by the
+appearance of a manuscript - by someone I had innocently talked to the
+previous spring.  I still think the other is interesting, but school quickly
+started, and by the time I had the time again, I had other ideas.
+
+The first week of any academic term is a week to organize your classes and
+schedule and see your colleagues after a break. It doesn't seem to be a good
+time to try to get any research done.  If this is a new job, then there is a
+lot more dislocation: adjusting to new responsibilities, a new town, new
+department, and new people.   It took me several weeks before I was able to
+do much else, and by then I had other responsibilities: I was scheduled to
+give a seminar at my home institution, and then speak at a regional
+conference the next weekend.
+
+Giving and attending talks is an important component of my research
+activity.  I use talks, particularly at my home institution, to help me
+organize my ideas or cast them in a new light.  It is a challenge to present
+a coherent explanation of your work in any format.  The choices of what and
+how to present the material is always leads to improvements in how I think
+about them, which shortens proofs and suggests new avenues to explore.
+Giving a talk introduces you to your audience, and such introductions lead
+to worthwhile interactions.  This is also a reason to attend seminars,
+colloquiua and to travel to conferences. I recommend footing the bill for
+some travel yourself if no outside support is available.  After all,
+this is a vital part of the mathematical enterprise.
+
+Another responsibility was a grant application, which turned out to be one
+of the better uses of my time.  In a grant application, you must convince
+other mathematicians that your good ideas are worth supporting.  The
+exercise of writing one forces you to do overcome a big post-Ph.D. stumbling
+block: generate new ideas of what to work on.  Along with introspectively
+trying to describe what I was interested in, its value, and what I might
+want to do next, I contacted several people at other institutions and
+started a dialogue. I have recently written two joint papers with people I
+first contacted at that time, almost 30 months ago.  The value of those
+contacts isn't these recent papers, but how they helped my thinking about
+mathematics to evolve.
+
+How do you make contacts with others when you are a fresh Ph.D?  I already
+mentioned giving talks and attending conferences.  When I travel, or when
+the department has visitors, I socialize and ask people questions that come
+to mind.  It is easiest to get to know people who live nearby.  I knew one
+of my coauthors from his papers, and met him when I learned that he had also
+just moved to the same town.
+
+
+One way I have met other mathematicians is by distributing copies of my
+papers.  When I complete a manuscript and get ready to send it to a journal,
+I also make a list of other mathematicians who may be interested in these
+results, and then I send them copies with a cover letter describing the main
+results and sometimes pointing them to parts of the paper which may interest
+them.  This list is generated by people whose papers I have read or cited,
+people who I have heard speak or heard about, people who have asked me for
+copies of my work, and my local colleagues.  I am not shy about this; at
+worst, they won't read my paper.  I also put my papers on electronic
+preprint servers, and plan to eventually post them on a web page.  I have
+met several people this way, some of whom have had me visit or give a talk
+and one with whom I just wrote a paper.
+
+When writing that grant application, one of the people I contacted pointed
+me to a conjecture (in algebra) in one of her papers that I added to my
+mental list of problems worth thinking about.  After finishing the grant
+application, I hadn't done any new work in the several months since I handed
+in my dissertation.  Rather than get started, I traveled to the Midwest to
+give a seminar, visit a friend, and attend a weekend conference.  While
+there, I had a flash of insight one morning in the shower (really!).  I
+realized how it should be possible to prove the afore-mentioned conjecture
+using geometry.
+
+Generating ideas is necessary, but then you need to bring them to fruition.
+Research, like other quality pursuits, requires time and dedication.
+Discipline may be the most important part of my doing mathematics.  I impose
+deadlines on myself, reserve time solely for research, and try to use my
+time efficiently.  In short, hard, dedicated work is essential.
+I jealously guard my research time; otherwise it evaporates as there are
+many other demands on my time.
+
+When I returned home after that trip.  I arranged my schedule to give myself
+some uninterrupted blocks of time.  This was a matter of changing when I did
+my class preparation and other necessary tasks (email, meeting with my TA's,
+grading homework, lunch, etc.)  so that I would have these periods.  Then I
+used this time to try and prove this conjecture.  After a very dedicated few
+weeks, I did it.  After a couple of hours of euphoria, I began the hard part
+- writing up this result and obvious extensions.  I am not kidding, I find
+that I spend more time writing than research, and it is not nearly as fun.
+It is absolutely necessary to do so - if my papers are not carefully written
+and if I do not make every effort to improve the exposition and clean up the
+arguments, then few will read my papers.  Remember, your readership is a
+monotone decreasing function of line number.
+
+While writing this result up, I started to work with a coauthor on a further
+extension, which would have been a fantastic result.  After six months of my
+doing nothing else, we gave up.  This failure to get results is quite
+common, a lot of promising lines of my research fizzle out, or else I cannot
+solve them.  Don't let this keep you from trying.  When working on a
+problem, you inevitably learn some new mathematics or get some ideas, or
+obtain partial results.
+
+Partial results are not necessarily second-class; the problem might be
+harder than you thought.  If the partial results are interesting and lead
+somewhere, then they are publishable.  Only last summer, my coauthor and I
+came back to this work and write a paper whose genesis was the successes we
+had among our many failures.  I now think this paper is the best I have
+written, and we have several more in planning.  While we have yet to solve
+the problem we set out to do, this work has my most interesting line of
+research.
+
+During the last half of that first year, I did other things, as well; I gave
+several talks and attended an instructional conference in an area that I am
+only now just beginning to work in.  There I met someone who was very
+enthusiastic about my thesis and gave me the encouragement I needed to write
+it up, and who has now become a very important mentor.  I also met a student
+there whose research gave me an idea of an application of some geometric
+constructions I had been thinking about.  This helped me complete those
+constructions and write them up, and now we are writing a joint paper on
+those applications.
+
+At the end of my first year out, while I had failed even to massage my
+thesis into a preprint and had only solved one new problem, I think that I
+was on the right track.  I had made serious work a regular habit, I was in
+regular contact with a number of other mathematicians, and I was thinking
+about a number of different problems.
