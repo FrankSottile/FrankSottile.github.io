@@ -1,0 +1,96 @@
+Schedule for 
+
+Special Session on the Modern Schubert Calculus
+______________________________________________________________
+ Saturday Morning:
+
+   9:00 - 9:20  
+   GKM spaces with non-isolated fixed points. 
+   Victor Guillemin, vwg@math.mit.edu
+   
+   9:30 - 9:50     
+   Schur and Schubert polynomials are Thom  polynomials. 
+   Richard Rimanyi, rimanyi@math.ohio-state.edu
+   
+   10:00 - 10:20   
+   Schubert Calculus on Bott-Samelson Manifolds.  
+   Rebecca Goldin, rgoldin@gmu.edu
+  
+   10:30 - 10:50    
+   Polynomials associated to Bott-Samelson resolutions and torsion 
+                  in intersection cohomology.
+   Tom Braden, braden@math.umass.edu
+
+Saturday Afternoon:
+
+   2:30 - 2:50 
+   Geometric proofs of Horn and Saturation conjectures.
+   Prakash Belkale, belkale@email.unc.edu
+   
+   3:00 - 3:20 
+   A Vanishing and a Non-Vanishing Criterion for Schubert Calculus on $G/B$.
+   Kevin Purbhoo, kpurbhoo@math.berkeley.edu
+   
+   3:30 - 3:50  
+   Divided differences and spaces of subwords.  
+   Catalin Zara, zara@math.yale.edu
+   
+   4:00 - 4:20 
+   Schubert Calculus over Free Skew-fields.   
+   Vladimir Retakh, vretakh@math.rutgers.edu
+   
+   4:30 - 4:50  
+   Degenerating Schubert varieties to unions of toric 
+                varieties associated to rc-graphs.
+   Mikhail Kogan, misha@research.neu.edu
+   
+   5:00 - 5:20 
+   Positivity of quiver cycles via deformation. 
+   Ezra Miller, ezra@math.mit.edu
+ 
+ Sunday Morning:
+
+   9:00 - 9:20  
+   A Schubert calculus recurrence from the noncomplex $W$-action on $G/B$.
+   Allen Knutson, allenk@math.berkeley.edu
+   
+   9:30 - 9:50    
+   Grothendieck Polynomials via Permutation Patterns and 
+   Chains in the Bruhat Order. 
+   Shawn Robinson, shawnr@math.rutgers.edu
+  
+   10:00 - 10:20 
+   Schubert Class formulas.  
+   Alexander Yong, ayong@umich.edu 
+
+   10:30 - 10:50 
+   Multiplication Formulas in the Grothendieck Ring of a Flag Variety.    
+   Cristian P. Lenart, lenart@csc.albany.edu
+ 
+Sunday afternoon:
+
+   2:00 - 2:20 
+   Polynomial representatives of Schubert classes in  $QH^(G/B)$.
+   Liviu Mare, amare@math.toronto.edu
+
+   2:30 - 2:50  
+   A Pieri formula for universal Schubert polynomials. 
+   Linda Chen, lchen@math.columbia.edu
+   
+   3:00 - 3:20  
+   The Peterson variety and total positivity.   
+   Konstanze Rietsch, rietsch@maths.ox.ac.uk
+
+   3:30 - 3:50  
+   Symmetries in quantum Schubert calculus.   
+   Harald Hengelbrock, harald.hengelbrock@ruhr-uni-bochum.de
+
+   4:00 - 4:20  
+   Quantum Bruhat graph and Schubert polynomials.
+   Alex Postnikov  apost@math.mit.edu
+
+   4:30 - 4:50  
+   Gromov-Witten invariants on Grassmannians.
+   Harry Tamvakis, harryt@brandeis.edu
+
+

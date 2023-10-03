@@ -1,0 +1,434 @@
+<HTML>
+<HEAD>
+   <TITLE>Abstracts for The Modern Schubert Calculus</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+
+<A NAME="TOP"></A>
+<TABLE>
+ <TR>
+  <TD><A HREF="movie.html"><IMG SRC="MSC.gif"></A></TD>
+  <TD><H2>Abstracts for AMS Special Session</H2>
+      <H2><FONT COLOR=BLUE>The Modern Schubert Calculus</FONT><BR>
+          <A HREF="http://www.ams.org/amsmtgs/2113_program.html">2004 Fall AMS
+           Central Section Meeting</A><BR>
+           Northwestern University, Evanston<br>
+           23-24 October 2004.</H2>
+   </TD></TR></TABLE>
+
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Belkale"></A>
+<HR>
+ <B><font color="FF00FF">Eigenvalue problems and a new product in the cohomology of flag
+varieties.</font><BR>
+ <A HREF="http://www.math./"></A>Prakash Belkale, North Carolina.</b>
+ <p>
+ We define a new ("smaller") product on the cohomology of projective homogenous
+spaces <I>G</I>/<I>P</I> based on a geometric degeneration and show that it this
+product 
+which is relevant to Eigenvalue problems and the Geometric Horn problem. We
+exhibit a relation   of this product to Lie algebra cohomology. We also obtain
+two (a priori) different sets of necessary recursive conditions  on when a
+cohomology product of Schubert cycles in a <I>G</I>/<I>P</I> is non-zero (the
+Geometric Horn problem).
+
+ <BR><A HREF="index.html">Back</A>
+<!--------------------------------------------------------------------------------->
+<A NAME="Braden"></A>
+<HR>
+ <B><font color="FF00FF">Equivariant cohomology of the Quot scheme.</font><BR>
+ <A HREF="http://www.math.umass.edu/~braden">Tom Braden</A>, 
+  University of Massachusetts.</b>
+ <p>
+ We describe the <I>T</I>-equivariant cohomology of the Quot scheme
+compactifying the space of degree <I>d</I> maps from <b>P</b><sup>1</sup>
+to the Grassmannian Gr(<i>r</I>,<i>n</i>), where <i>T</I> is the product of
+the natural torus acting on the Grassmannian with a <b>c</b><SUP>*</SUP>
+acting on <b>P</b><sup>1</sup>.  The calculation is by equivariant localization.
+The one-dimensional orbits are not isolated, but we
+can describe explicitly the relations coming from each connected family of
+one-dimensional orbits, since the closure of each such family is a product of
+projective spaces.
+<p>
+This is joint work with Linda Chen and Frank Sottile.
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Coskun"></A>
+<HR>
+ <B><font color="FF00FF">Mondrian tableaux and Littlewood-Richardson rules.</font><BR>
+ <A HREF="http://www.math./">Izzet Coskun</A> Harvard University.</b>
+ <p>
+ In this talk I will discuss new Littlewood-Richardson rules in terms of
+combinatorial objects called Mondrian tableaux. These rules are obtained using
+degeneration techniques.
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Gabrielov"></A>
+<HR>
+ <B><font color="FF00FF">Lower bounds in some problems of real Schubert calculus.</font><BR>
+ <A HREF="http:/"></A>Andrei Gabrielov, Purdue University.</b>
+ <p>
+ We single out some problems of Schubert calculus of subspaces of codimension
+2 that have the property that all their solutions are real whenever the data
+are real. For other similar problems we prove non-trivial lower bounds for the
+number of real solutions.
+Our arguments explore the connection between subspaces of codimension 2 and
+rational functions of one variable. Part of these results is our joint work
+with M. Shapiro and A. Vainshtein.
+
+ <BR><A HREF="index.html">Back</A>
+
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Harada"></A>
+<HR>
+ <B><font color="FF00FF">The <i>T</I>-equivariant cohomology of cell complexes
+ and the case of infinite Grassmannians.</font><BR>
+ <A HREF="http://www.math./"></A>Megumi Harada, Toronto.</b>
+ <p>
+ Explicit computations of equivariant cohomology rings have many
+applications. In 1998, Goresky, Kottwitz, and MacPherson showed that for
+certain spaces with a torus action, the equivariant cohomology ring can be
+explicitly described by combinatorial data obtained from its orbit
+decomposition. We generalize their theorem to the (possibly
+infinite-dimensional) setting of cell complexes. These results include
+many new examples, including homogeneous spaces of a loop group <i>LG</I>.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Kamnitzer"></A>
+<HR>
+ <B><font color="FF00FF">Mirkovic-Vilonen cycles and polytopes.</font><BR>
+ <A HREF="http://www.math./"></A>Joel Kamnitzer, Berkeley.</b>
+ <p>
+ Mirkovic-Vilonen showed that certain subvarieties of the affine
+Grassmanian, called Mirkovic-Vilonen cycles, give bases for
+representations of complex semisimple groups.  Anderson observed that to each
+MV cycle, it is possible to associate its moment map image, called a
+Mirkovic-Vilonen polytope.  He showed that these polytopes can be used to count
+tensor product multiplicities.\par
+Here, we give a uniform description of the MV cycles and polytopes for all
+complex semisimple groups.  Our description is in terms of the combinatorics
+developed by Berenstein-Zelevinsky in their tensor product multiplicities
+paper. However, our work does not rely on their results and it gives a new
+proof of their tensor product multiplicity formula.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Knutson"></A>
+<HR>
+ <B><font color="FF00FF">Kogan's and Buch's problems via transition.</font><BR>
+ <A HREF="http://www.math./"></A>Allen Knutson, Berkeley.</b>
+ <p>
+ Misha Kogan selected a strange-looking subset of the ``Schubert
+polynomial times Schur polynomial'' class of problems: the Schubert
+polynomial shouldn't mention any of the variables the Schur doesn't.
+In particular, it includes the usual Littlewood-Richardson problem,
+in which the Schubert polynomial is another Schur polynomial,
+in the same number of variables.
+<p>
+We use the transition formula for Grothendieck polynomials (which is
+given a geometric explanation in Alex Yong's talk) to give a
+satisfying explanation of the naturality of Kogan's condition, while
+giving a simpler derivation, and one which extends to <i>K</I>-theory (but
+not equivariantly!).
+<p>
+Our rule is in terms of ``marching moves'' on the diagram of a
+permutation.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Lenart"></A>
+<HR>
+ <B><font color="FF00FF">A New Combinatorial Model for the Equivariant
+                  <I>K</I>-theory of <I>G</I>/<I>P</I>.</font><BR> 
+ <A HREF="http://math.albany.edu:8000/math/pers/lenart/">Cristian Lenart</A>, University at Albany.</b>
+ <p>
+We present new Chevalley-type and Pieri-type multiplication formulas in the
+<I>T</I>-equivariant <I>K</I>-theory of generalized flag varieties 
+<I>G</I>/<I>P</I>. By these, we
+mean formulas for multiplying arbitrary Schubert classes in equivariant
+<I>K</I>-theory, on the one hand, with classes of certain line bundles, and
+Schubert classes indexed by simple reflections, on the other hand. The
+construction is given in terms of decompositions of a fixed affine Weyl group
+element, and saturated chains in the Bruhat order on the (nonaffine) Weyl
+group. Our model has certain advantages over the Littelmann path model, on
+which a Chevalley-type formula due to Pittie and Ram is based. As an
+application, we are able to give simple proofs of certain symmetries of the
+coefficients in the Chevalley-type formula, which are difficult to derive by
+other methods. This is a joint work with Alexander Postnikov. We also discuss
+the way in which our model leads to a more general multiplication formula (by
+certain Schubert classes pulled back from a Grassmannian projection) in the
+<I>K</I>-theory of the type <I>A</I> flag variety. The latter formula was obtained in
+collaboration with Frank Sottile.
+ 
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Mihalcea"></A>
+<HR>
+ <B><font color="FF00FF">Equivariant Quantum Schubert Calculus.</font><BR>
+ <A HREF="http://www.math./">Leonardo Constantin Mihalcea</A>, University of Michigan.</b>
+ <p>
+ The (small) equivariant quantum cohomology (eq.q.coh.) of a
+(smooth) variety <i>X</i> is an algebra which is a deformation of both
+equivariant and quantum cohomology algebras of <i>X</i>.
+
+<P>
+In this talk I will present two properties of the equivariant quantum cohomology
+of the Grassmannian
+which extend from its equivariant restriction. One is that there is a certain
+recurrence relation, which is implied by the equivariant quantum  Pieri rule
+(i.e. the 
+multiplication with the divisor class), and which determines completely the
+eq.q. multiplication.
+<P>
+nd is a positivity property of the structure constants of the
+equivariant quantum cohomology, which are certain polynomials (the 3-point,
+genus 0, equivariant Gromov-Witten invariants, introduced by Givental and
+Kim). This positivity holds for any homogeneous space <i>G</i>/<i>P</i> and
+generalizes the equivariant positivity conjectured by 
+Peterson and proved by Graham.
+
+ <BR><A HREF="index.html">Back</A>
+
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Osserman"></A>
+<HR>
+ <B><font color="FF00FF">Tranversality of non-general Schubert cycles.</font><BR>
+ <A HREF="http://www.math.berkeley.edu/~bosserman/">Brian Osserman</A>, Berkeley and MSRI.</b>
+ <p>
+ 
+We discuss the question of transversality of Schubert cycles which are not
+general, but are associated to osculating flags at general points of the
+rational normal curve. This question may be rephrased in terms of maps from the
+projective line to projective spaces with prescribed ramification, and in this
+context it is natural to ask the same question for higher-genus curves as well.
+We give a simple degeneration argument using the theory of limit linear series
+to reduce the problem to the case of three ramification points on the
+projective line. We also discuss the consequences of this argument for reality
+of the maps in question. <BR><A HREF="index.html">Back</A>
+
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Postnikov"></A>
+<HR>
+ <B><font color="FF00FF">Degrees of Schubert varieties.</font><BR>
+ <A HREF="http://www.math./"></A>Alexander Postnikov, MIT.</b>
+ <p>
+ We study a family of polynomials whose values
+express degrees of Schubert varieties in the
+generalized flag manifold <I>G</I>/<I>B</I>.  The polynomials
+are given by weighted sums over saturated chains in the Bruhat order.   
+We derive several explicit formulas for these polynomials, and investigate
+their relations with Schubert polynomials, harmonic polynomials, 
+Demazure characters, and generalized Littlewood-Richardson coefficients.
+We specialize the results to the classical (type <I>A</I>) flag manifold 
+and discuss related combinatorial objects: flagged Schur polynomials, 312-avoiding
+permutations, generalized Gelfand-Tsetlin
+polytopes, Stanley-Pitman polytopes, parking
+functions, binary trees, and the inverse extended
+Kostka matrix.  The talk is based on a joint work
+with Richard Stanley.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Purbhoo"></A>
+<HR>
+ <B><font color="FF00FF">A Horn-type Recursion for Minuscule Schubert Calculus.</font><BR>
+ <A HREF="http://www.math./">Kevin Purbhoo</A>, Fields Institute.</b>
+ <p>
+ Horn's conjecture as classically stated, is a statement about the
+possible eigenvalues of triples of Hermitian matrices (<I>A</I>,<I>B</I>,<I>C</I>)
+satisfying <I>A</I>+<I>B</I>+<I>C</I>=0.  Restated however, it can be viewed as a
+recursive construction of the set of non-vanishing
+Littlewood-Richardson numbers.  We prove a generalisation of Horn's
+conjecture, which recursively characterises the non-vanishing Schubert
+intersection numbers for all minuscule flag varieties.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Rimanyi"></A>
+<HR>
+ <B><font color="FF00FF">Some new results on Thom polynomials.</font><BR>
+ <A HREF="http://www.unc.edu/~rimanyi">Richard Rimanyi</A>, North Carolina.</b>
+ <p>
+ Giambelli's formula computes the class of an orbit closure in
+the <I>GL</I>(<i>n</I>) \times <I>GL</I>(<i>p</I>)-equivariant cohomology of 
+HOM(<B>C</B><SUP><i>n</i></SUP>,<B>C</B><SUP><i>p</i></SUP>).
+In this talk we will present some new results in two different
+natural generalizations. (1) Quiver representations occur when we consider
+direct sums of HOM spaces---instead of just one of them---arranged with
+respect to a diagram. We will show how a simplification of earlier work (by A.
+Buch, L. Feher, R.R.), gives the sought equivariant class formulas in the 
+<I>A<SUB>n</SUB></I>
+quiver case (arbitrarily oriented) [joint work with A. Buch]. (2) Instead of
+linear maps we can consider holomorphic germs from <B>C</B><SUP><i>n</i></SUP> 
+to <B>C</B><SUP><i>p</i></SUP>. Then
+generalizations of the Giambelli formula are called the Thom polynomials of
+singularities. We will present a so far hidden structure of these Thom
+polynomials [joint work with L. Feher].
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Soprunova"></A>
+<HR>
+ <B><font color="FF00FF">Experimentation in real Schubert calculus for flag
+   manifolds.</font><BR> 
+ <A HREF="http://www.math./"></A>Evgenia Soprunova, University of Massachusetts.</b>
+ <p>
+ The Shapiro conjecture in the real Schubert calculus fails to hold for flag
+manifolds, but in a very interesting way. We give a refinement of that
+conjecture for the flag manifold and present massive experimentation that
+supports this conjecture. We also prove many special cases using discriminants
+and establish relationships between the different cases of the conjecture.<BR>
+
+&nbsp; &nbsp;  This is joint work with Jim Ruffo, Yuval Sivan, and Frank Sottile.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Speyer"></A>
+<HR>
+ <B><font color="FF00FF">Horn's Problem, Honeycombs and Vinnikov Curves.</font><BR>
+ <A HREF="http://wwwmath.berkeley.edu/~speyer/">David E. Speyer</A>, Berkeley.</b>
+ <p>
+ The multiplicative version of Horn's problem asks what the
+possible critical values of three matrices <I>A</I>, <I>B</I> and <I>C</I> are, given
+<I>ABC</I>=1. 
+A Vinnikov curve is a projective plane curve which can be written
+as det(<I>xX</I>+<I>yY</I>+<I>zZ</I>)=0 with 
+<I>X</I>, <I>Y</I> and <I>Z</I> positive definite Hermitian
+matrices; Vinnikov has solved the problem of classifying such curves. We
+will relate these two problems to each other and pose tropical versions of
+them. This allows us to reprove Knutson and Tao's criterion for the
+solvability of Horn's problem in terms of honeycombs and illuminate the
+origins of honeycombs.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Tamvakis"></A>
+<HR>
+ <B><font color="FF00FF">Quantum cohomology of isotropic Grassmannians.</font><BR>
+ <A HREF="http://www.math./"></A>Harry Tamvakis, Brandeis University.</b>
+ <p>
+ Let <I>G</I> be a classical Lie group and <I>P</I> be a maximal parabolic
+ subgroup 
+of <I>G</I>. The homogeneous space <I>X</I>=<I>G/P</I> is a Grassmannian which
+parametrizes subspaces in affine space which are isotropic with
+respect to a nondegenerate symmetric or skew symmetric bilinear
+form. We will discuss certain aspects of our work on the structure
+of the classical and small quantum cohomology ring of <I>X</I>;
+this is a joint project with Anders Buch and Andrew Kresch.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Tymoczko"></A>
+<HR>
+ <B><font color="FF00FF">Generalizing group exponents using the topology of
+ subvarieties of the flag variety.</font><BR>
+ <A HREF="http://www.math.lsa.umich.edu/~tymoczko">Julianna Tymoczko</A>, 
+  University of Michigan.</b>
+ <p>
+ 
+Subvarieties of the flag variety defined by certain linear conditions
+arise naturally in many areas, including geometric representation theory,
+number theory, and numerical analysis.  These subvarieties, called
+Hessenberg varieties, are naturally paved by the intersection of a Bruhat
+decomposition with the Hessenberg variety.  In many cases, the Bruhat
+decomposition can be chosen so that each Schubert cell intersects the
+Hessenberg variety in an affine cell.  We discuss properties of this cell
+decomposition.  In particular, we show that the Poincare polynomials of a
+family of Hessenberg varieties factor in a way that generalizes the
+exponents of the group.  Part of these results are joint work with E.&nbsp;Sommers.
+
+ <BR><A HREF="index.html">Back</A>
+
+
+<!--------------------------------------------------------------------------------->
+ <A NAME="Vakil"></A>
+<HR>
+ <B><font color="FF00FF">Monodromy and Galois groups of Schubert problems.</font><BR>
+ <A HREF="http://www.math./">Ravi Vakil</A>, Stanford University.</b>
+ <p>
+ Enumerative problems in geometry often have groups attached, which have
+different interpretations in geometry, arithmetic, and algebra.  The geometric
+interpretation is as follows:  if the problem has <i>N</i> solutions, and the
+conditions are moved about and returned to their starting positions, how can
+the <i>N</i> solutions be permuted?  Schubert problems are the only known enumerative
+problems that can have unexpectedly small Galois groups; the first such example
+is due to Derksen.  By solving Schubert problems over the rational numbers (and
+using Schubert induction) we can compute these monodromy groups explicitly; we
+give examples where it is the full symmetric group, and where it seems to be
+mysteriously small.  This is part of a larger project with Sara Billey.
+
+ <BR><A HREF="index.html">Back</A>
+
+<!--------------------------------------------------------------------------------->
+<A NAME="Wang"></A>
+<HR>
+ <B><font color="FF00FF">Applying Pieri Homotopies to compute dynamic output feedback
+laws</font><BR>
+ <A HREF="http://www.math./"></A>Yusong Wang, UIC.</b>
+ <p>
+  The pole placement problem asks to find laws to feed the output of
+a plant governed by a linear system of differential equations back to the
+input of the plant, so that the resulting closed-loop system has a desired set
+of eigenvalues. In this talk, we first show the connection between dynamic
+output feedback pole placement and enumerative geometry. Then we will present
+the realization of the output of the Pieri Homotopies as a useful control
+feedback machine in the time domain, which will involve numerical calculations
+of greatest common divisor. An application will be presented to illustrate
+real feedback laws may be found with dynamic feedback method when all the
+static feedback laws have nonzero imaginary coefficients. We implemented a
+parallel version of Pieri Homotopy algorithm and observed the algorithm is
+suitable for parallel computing.
+
+ <BR><A HREF="index.html">Back</A>
+<!--------------------------------------------------------------------------------->
+ <A NAME="Yong"></A>
+<HR>
+ <B><font color="FF00FF">Gr&ouml;obner geometry of Schubert and Grothendieck
+ transition formulae.</font><BR> 
+ <A HREF="http://www.math./"></A>Alexander Yong, Berkeley.</b>
+ <p>
+ We geometrically interpret Alain Lascoux's transition formula for Grothendieck
+polynomials. For a permutation \pi thought of
+as a permutation matrix, let X_\pi be the closure (in the set of 
+complex <i>n</I>-by-<i>n</I>-matrices) of the double coset
+ <i>B</I><sub>-</sub> \pi <i>B</I><sub>+</sub>.
+This is a <font color=red><i>matrix Schubert variety</I></font>.
+We construct a flat family whose general fiber is isomorphic
+to X_\pi and whose special fiber is reduced and Cohen-Macaulay.
+The components of the limit are also matrix Schubert varieties (one of which is
+intersected with an
+``irrelevant'' coordinate hyperplane).
+We relate this geometry to some subtraction-free formulae (both new and old)
+from the study of (K-theory) Schubert calculus and degeneracy loci; see Allen
+Knutson's talk. For example, we deduce another geometric interpretation of the
+classical Littlewood-Richardson rule, as counting components of a partially
+degenerated matrix Schubert variety.
+
+ <BR><A HREF="index.html">Back</A>
+
+
+<HR>
+
+ Organizers:  
+ <A HREF="../index.html">Frank Sottile</A> &amp; 
+ <A HREF=http://www.math.umn.edu/~ezra/>Ezra Miller</A>
+
+
+</HTML>
