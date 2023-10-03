@@ -1,0 +1,90 @@
+Lecture Day 1 (Outline)
+
+* Pass out information sheet (Printout of WWW page)
+
+    - Discuss near-term schedule; only expected missed
+      lectures.
+
+* Pass around 3x5 cards   - Name
+                          - Background
+                          - Contact  (email/phone)
+                          - Computer Acess
+                          - What hope to learn from class
+
+* Talk about course
+   - Purpose is to introduce algebraic geometry via some
+     examples of applications; will teach some systems theory.
+     Frank is expert in algebraic geometry, not systems theory.
+   - Handouts from the drafts of the book.  Feedback is welcome,
+     particularly negative comments.
+
+* Have a round the class introductions, after the 3x5 cards.
+   Take notes on them. 
+
+* Begin Lecture
+   - State-Space form of a linear system.
+      proper & strictly proper linear systems
+      McMillan degree
+   - Controllable, observable, & minimal realizations
+   - Output Feedback. 
+       Response measured by autonomous system
+       Dynamic output feedback
+       Characteristic polynomial
+
+   - Minimal   stability
+               quick damping
+               oscillation
+   - Pole-Placement
+      arbitrary pole-assignable
+
+   - Summary
+
+__________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+__________________________________________________________
+
+Books of Frank Sottile for participants in Math 697R
+
+__________________________________________________________
+
+Algebraic Geometry:
+  Shafarevich, Basic Algebraic Geometry.
+  Atiyah & Macdonald, Introduction to Commutative Algebra.
+  Fulton, Young Tableaux.
+  Cox, Little, and O'Shea, Ideals, Varieties, Algorithms.
+  Cox, Little, and O'Shea, Using Algebraic Geometry.
+  Harris, Algebraic Geometry.
+__________________________________________________________
+
+Algebraic Geometry & Control Theory:
+  Peter Falb, Methods of Algebraic Geometry in Control Theory,
+              Part I: affine algebraic methods.
+  Peter Falb, Methods of Algebraic Geometry in Control Theory,
+              Part II: projective algebraic methods.
+  S. Abhyankhar, Algebraic Geometry for Scientists and Engineers.
+__________________________________________________________
+
+Mathematical Control Theory:
+  S. Barnett & R.G. Cameron, Mathematical Control Theory.
+  W. Wonham, Linear Multivariate Control: Geometric methods.
+

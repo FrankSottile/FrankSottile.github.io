@@ -1,0 +1,358 @@
+%notes03.tex
+%
+% Frank Sottile
+% 2 February 2000
+% Madison, WI
+%
+%
+\documentclass[12pt]{amsart}
+\usepackage{amssymb}
+\usepackage{epsf}
+
+\headheight=8pt     \topmargin=0pt
+\textheight=624pt   \textwidth=442pt
+\oddsidemargin=13pt \evensidemargin=13pt
+
+\def\silentfootnote#1{{\let\thefootnote\relax\footnotetext{#1}}}
+
+%\def\baselinestretch{1.2}
+
+\begin{document}
+\begin{center}
+\Large
+The Geometry of Algebraic Groups\\
+\large
+Math 841\\
+Frank Sottile\\
+{\tt notes03}
+\end{center}\bigskip
+
+\silentfootnote{\sl Version of 8 February 2000.} 
+
+\section{Linearization of affine algebraic groups}
+
+
+\noindent{\bf Definition. }
+A left action of an affine algebraic group $G$ on a variety $X$
+is a regular map $\varphi\colon G\times X\to X$, written $(g,x)\mapsto g.x$,
+which satisfies the group action laws:
+$$
+  g.(h.x)\ =\ gh.x\qquad\mbox{and}\qquad e.x\ =\ x\,.
+$$
+For $g\in G$, let $\varphi_g\colon \{g\}\times X\to X$ be the restriction of
+$\varphi$, an isomorphism of $X$.
+The action $\varphi$ gives a map $\varphi^*\colon k[X]\to k[G]\otimes k[X]$,
+which exhibits 
+$k[X]$ as a comodule for the Hopf algebra $k[G]$.
+
+For $g\in G$, 
+Define the {\it left translation by $g$} of functions in $k[X]$ by 
+$\lambda_g(f)(x):=f(g.x)$, which is $(\varphi_g)^*$. 
+This is obtained by composing the map $\varphi^*$ with the map 
+$k[G]\to k$ given by evaluating functions at the point $g$,
+which is the homomorphism associated to the inclusion 
+$\{g\}\hookrightarrow G$.
+These left translations give an action of $G$ on $k[X]$.
+\medskip
+
+\noindent{\bf Theorem. }
+{\it 
+Let $G$ be an affine algebraic group defined over $k$ with a $k$-action
+$\varphi$ on the affine $k$-variety $X$.
+Set ${\mathbb K}$ be the algebraic closure of $k$.
+Let $F$ be a finite dimensional subspace of ${\mathbb K}[X]$.
+Then there is a finite dimensional subspace $E$ of
+${\mathbb K}[X]$ which is defined over $k$, contains $F$, and is stable
+under left translation by $G$. 
+Moreover, a subspace  $F$ of ${\mathbb K}[X]$ is stable under left
+translation by $G$ if and only if  
+$\varphi^*F\subset {\mathbb K}[G]\otimes_{\mathbb K} F$.
+}\medskip
+
+\noindent{\sl Proof.}
+For the first assertion, we may if necessary enlarge $F$ and assume $F$ is
+defined over $k$, and then assume the $F$ is the span of a single
+function $f\in k[X]$.
+Write $\varphi^*(f)=\sum_{i=1}^n h_i\otimes f_i\in k[G]\otimes_k k[X]$.
+Then for $g\in G$, we have 
+$$
+ (\lambda_gf)(x)\ =\ (\varphi_g)^*f\ =\ 
+  \sum_ih_i(g)\otimes f_i(x)\,.
+$$
+Thus the linear span of $f_1,\ldots,f_n$ is a $k$-vector space containing
+all the translations $\lambda_g(f)$, and so the intersection of all 
+linear subspaces defined over $k$ which contain all translates $\lambda_gf$ of
+$f$ is finite dimensional, defined over $k$, and $G$-stable. 
+
+To prove the last assertion, let $F$ be a subspace of ${\mathbb K}[X]$
+with $\{f_i\}$ a basis for $F$.
+Extend this to a basis $\{f_i\}\cup\{h_j\}$ of ${\mathbb K}[X]$.
+If $f\in F$, write $\varphi^*(f)$ in terms of this basis:
+$\varphi^*(f)=\sum_ir_i\otimes f_i + \sum_j s_j h_j$.
+Then $\lambda_gf=\sum_i r_i(g)f_i + \sum_j s_j(g) h_j$.
+Thus for $g\in G$, $\lambda_gf$ lies in $F$ if and only if $s_j$ vanishes at 
+$g$.
+Varying $g\in G$ and $f\in F$, we see that $F$ is stable under left
+translation by all elements of $G$ if and only if 
+$\varphi^*F\subset {\mathbb K}[G]\otimes_{\mathbb K} F$.
+(We use the fact that $s_i|_G\equiv 0$ if and only if $s_i$ is zero in 
+${\mathbb K}[G]$.)\qed\medskip
+
+
+\noindent{\bf Example. }
+An important example of this is when $X=G$.
+In this case, we have a linear action of $G$ on $k[G]$.
+Functions in $k[G]$ are restrictions of polynomials in ${\mathbb A}^n$
+(when $G\subset {\mathbb A}^n$).
+Since polynomials separate points in ${\mathbb A}^n$, the kernel of this
+action is trivial, as functions in $k[G]$ are constant on the kernel.
+Every algebraic (many people prefer the adjective rational)
+representation of $G$ on a $k$ vector space $V$ appears in 
+this representation.
+The reason for this is that $k[G]$ contains all regular functions on
+$G$, and given a representation $\rho\colon G\to GL(V)$, the matrix
+coefficients of such a representation are regular functions on $G$.
+(Defined over $k$ if $\rho$ is defined over $k$.)
+\medskip
+
+\noindent{\bf Theorem. }(Linearization of algebraic groups.)
+{\it
+Let $G$ be an affine $k$-group.
+Then $G$ is isomorphic to a closed subgroup of some $GL(n,k)$.
+}\medskip
+
+\noindent{\bf Remark. }
+A {\sl linear group} is a group isomorphic to a subgroup of a general linear
+group, that is a group with a faithful action on some finite-dimensional
+vector space $V$. 
+This theorem shows that affine algebraic groups $G$ are linear algebraic
+groups, with faithful actions defined over the field of definition of $G$. 
+\medskip
+
+\noindent{\sl Proof. }
+Let $k[G]=k[f_1,\ldots,f_n]$.
+If necessary, we can expand this list of ring generators, so that their
+linear span $F$ in ${\mathbb K}[G]$ is stable under left translation, 
+that is, $\varphi^* F \subset {\mathbb K}[G]\otimes_{\mathbb K} F$.
+Thus for each $j$, we have 
+$$
+  \varphi^*(f_j)\ =\ \sum_j m_{ij}\otimes f_i\,,
+$$ 
+for some $m_{ij}\in k[G]$.
+For $g\in G$, then $\lambda_g f_j=\sum_i m_{ij}(g) f_i$.
+Thus $g\mapsto (m_{ij}(g))$ gives a map (defined over $k$ as the $m_{ij}$
+are) of algebraic groups $\alpha\colon G \to GL(n,k)$.
+
+These functions $m_{ij}$ are the matrix coefficients of this representation,
+and so are in the image of $\alpha^*$.
+In fact, they are in $\alpha^*(k[x_{ij}])$.
+Since for $g\in G({\mathbb K})$, 
+we have
+$$
+  f_j(g)\ =\ f_j(g.e)\ =\ (\lambda_gf)(e)\ =\ \sum_i m_{ij}(g)f_i(e)\,,
+$$
+so $f_j= \sum m_{ij}f_i(e)$, we see that $f_j$ is contained in the image of
+$\alpha^*$, and so $\alpha^*$ is surjective.
+Thus $\alpha$ is a closed embedding of algebraic groups.
+\qed
+
+\section{Dimension of an Algebraic Variety}
+
+\noindent{\bf Definition. }
+Let $Y$ be an affine variety.
+If $Y$ is irreducible, then $k[Y]$ is a domain and we define the dimension,
+$\dim Y$, of $Y$ to be
+%
+\begin{eqnarray*}
+  \dim Y&=& \mbox{transcendence degree of the quotient field of }k[X]\\
+        &=& \max\{n\mid \exists f_1,\ldots,f_n\in k[X] 
+            \mbox{ which are algebraically independent}\}
+\end{eqnarray*}
+%
+If $Y$ is reducible, then the dimension of $Y$ is the maximum of the
+dimensions of its irreducible components.
+
+\noindent{\bf Example. }
+The dimension of ${\mathbb A}^n$ is $n$.
+Suppose $X$ is irreducible and $Y= X-{\mathcal V}(f)$ is a principal open
+subset of $X$.
+Then $\dim X=\dim Y$.
+Indeed, we have $k[Y]=k[X][1/f]$ and hence 
+$k[Y]$ has the same quotient field as does $k[X]$.
+
+The dimension of $GL(n,k)$ is $n^2$, as
+${\rm Mat}_{n\times n}$ has dimension $n^2$.
+\medskip
+
+\noindent
+{\bf Theorem. }
+{\it
+Suppose $Z$	s a closed subset of $Y$.
+Then we have $\dim Z \leq \dim Y$.
+If $Y$ is irreducible and 
+$\dim Z=\dim Y$, then  $Z= Y$.
+}\medskip
+
+\begin{proof}
+For the first statement, suppose $\dim Y=n$.
+Given $n+1$ functions in $k[Z]$, lift them to $k[Y]$.
+Then they are algebraically dependent, and this dependence drops to $k[Z]$. 
+
+For the second statement, suppose $\dim Y=\dim Z=n$.
+Let $x_1,\ldots,x_n\in k[Z]$ be algebraically independent.
+Then any lifts to $k[Y]$, also denoted $x_1,\ldots,x_n$, are also
+independent.
+For $t\in k[Y]$, there is a polynomial $a(X,T)\in k[X_1,\ldots,X_n][T]$
+such that $a(x,t)=0$ in $k[Y]$, and so 
+$$
+   a(x,t)\ =\ a_0(x_1,\ldots,x_n)t^l + \cdots + a_l(x_1,\ldots,x_n)
+    \ =\ 0\,.\eqno{(*) \ }
+$$
+Suppose further that we have chosen the polynomial $a(X,T)$ to be
+irreducible with this property (which we may do as $k[Y]$ is a domain).
+
+Suppose $t$ vanishes on $Z$.
+Since $(*)$ holds on $Z$, we have
+that $a_l(x_1,\ldots,x_n)=0$ in $k[Z]$.
+Since $x_1,\ldots,x_n$ are algebraically independent, we see that
+$a_l(X)=0$ as a polynomial, which contradicts the irreducibility of
+$a(X,T)$.
+\end{proof}
+
+The second statement can be strengthened as follows:
+\medskip
+
+\noindent{\bf Theorem. }
+{\it 
+If $Y$ is irreducible and has dimension $n$, and $f\in k[Y]$ is non-zero,
+then every irreducible component of ${\mathcal V}(f)$ has dimension $n-1$.}
+\medskip
+
+A proof of this may be found in Shafarevich \S I.6.2.
+We may give a proof later, if we do Noether Normalization.
+
+A consequence of this is the combinatorial definition of dimension.
+The dimension of a variety $X$ is the largest number $n$ for which there
+exists a chain of irreducible subvarieties of $X$.
+$$
+   X_1\ \subsetneq\ X_2\ \cdots\ \subsetneq\ X_n\ \subset\  X\,,
+$$ 
+
+
+\section{Homomorphisms of algebraic groups}
+
+We want to study homomorphisms of algebraic groups, which are considerably
+better behaved than regular maps of general algebraic varieties.
+A starting point is some properties of regular maps of algebraic
+varieties.
+\medskip
+
+\noindent{\bf Example. }
+Let $X={\mathcal V}(y-xz)\subset{\mathbb A}^3$, and 
+$\pi:{\mathbb A}^3\to{\mathbb A}^2$ be the projection to the $xy$-plane.
+Then the image of $X$ under $\pi$ is
+${\mathbb A}^2-\{\mbox{$y$-axis}\} \cup \{(0,0)\}$.
+This is neither open nor closed.
+\medskip
+
+We give the main theorem on images of regular maps (whose proof I will not
+present---It requires a fair bit of algebra which I hope to avoid).
+\medskip
+
+\noindent{\bf Theorem. }
+{\it
+If $f\colon X\to Y$ is a regular map and $f(X)$ is dense in $Y$, then $f(X)$
+contains an open subset of $Y$.
+}\medskip
+
+For a proof of this, see Humphreys, \S4.3 (p.32), or Shafarevich, Theorem 6
+in \S I.5.3.
+This theorem follows from an algebraic version of the Stein Factorization
+Theorem: 
+Given such a regular map $f\colon X\to Y$, there are open subsets $V$ of $X$
+and $U$ of $Y$ with 
+$$
+  f\colon V\to {\mathbb A}^n\times U \to U\,,
+$$
+with the fist map surjective with finite fibres, and the second a
+projection.
+\medskip
+
+\noindent{\bf Lemma. }
+{\it 
+Let $U,V$ be dense open subsets of an affine algebraic group $G$.
+Then $U\cdot V=G$.
+}\medskip
+
+\begin{proof}
+Let $g\in G$.
+Then $U$ and $gV^{-1}$ are dense open subsets, so they have a point in
+common.
+Writing such a point in two ways as $u=gv^{-1}$, we see that $g=uv$,
+which proves $U\cdot V=G$.
+\end{proof}
+
+\noindent{\bf Theorem. }
+{\it
+Let $\varphi\colon H\to G$ be a homomorphism of algebraic groups.
+Then $\varphi(H)$ is a closed subgroup of $G$ which is defined over $k$ if
+$G,H,\varphi$ are defined over $k$.
+}\medskip
+
+\begin{proof}
+From our previous Theorems, $\varphi(H)$ contains an open subset $U$
+(necessarily dense) of its closure, and this closure is a subgroup of $G$,
+as $\varphi$ is a homomorphism.
+By the lemma, this closure is then $U\cdot U$, and hence
+$\varphi(G)=\varphi(G)\cdot\varphi(G)$ is this closure, proving the theorem.
+\end{proof}
+
+
+To compare this result to images of general maps of algebraic varieties, we
+need first to make a definition.
+
+\noindent{\bf Definition. }
+A subset $Y$ of a topological space is locally closed if $Y$ is the
+intersection of an open subset with a closed subset; i.e. $Y$ is open in its
+closure $\overline{Y}$.
+A finite union of locally closed subsets is a {\sl constructible} set.
+Such a set is defined by a collection of equations and inequations.
+\medskip
+
+\noindent{\bf Theorem. }(Chevalley)
+{\it
+A map $\varphi\colon X\to Y$ of algebraic varieties
+maps constructible sets to constructible sets.
+}\medskip
+
+
+\begin{proof}
+We prove that $\varphi(X)$ is constructible.
+When we later extend our notion of an algebraic variety
+(which will include any locally closed subset), this same proof will 
+prove the general case.
+
+We may assume that $X$ (and hence $Y$) are irreducible.
+We proceed by Noetherian induction on $\dim Y$.
+(This is also called {\it devissage}.)
+When $Y$ has dimension 0, and is a point, there is nothing to prove.
+By induction, we need only consider $\varphi$ such that
+$\overline{\varphi(X)}=Y$.
+
+
+Let $U\subset Y$ be any open subset contained in $\varphi(X)$.
+Then the irreducible components $W_1,\ldots, W_s$ of $Y-U$ each have smaller
+dimension than $Y$.
+Then by induction, the images of the restrictions of $\varphi$  to the
+components $Z_{ij}$ of inverse images $\varphi^{-1}(W_i)$ of these
+components are constructible.
+The theorem follows as any finite union of constructible sets is
+constructible. 
+\end{proof}
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,48 @@
+Wednesday 8 November 2000
+
+Day 18: Math 697R
+
+Applicable Algebraic Geometry
+___________________________________________________________
+
+ Definition: Quasi-Projective Variety
+                 (Locally closed subvariety)
+
+ Extensions of tangent space, smooth & singular points,
+               dimension, irreducible/reducible
+        to Projective varieties
+_____________________________________________________
+ *Maps of Projective Varieties
+
+ Only get reasonable functions of allow F/G F,G forms of
+       the same degree.
+ - Field of rational functions on an irreducible X
+ - Domain of regularity; regular function 
+    (need algebraic closure)
+ - Rational maps (tuples of forms of the same degree)
+   When two are equal.
+   Domain of regularity; regular map.
+ - Rational functions = rational maps to P^1
+
+ - Example:  Linear projection
+             Twisted Cubic
+ - Isomorphism, Birational Isomorphism, function fields
+
+ - Example:   Classify Birational Automorphisms of P^1
+       - All rational maps are regular!
+       - If biregular, given by quotient of linear forms
+       - GL_2(k) -->> Aut P^1
+         Quotient = scalars, called PSL_2(k).
+
+       - One or two fixed points of such a map
+
+ - Example Elliptic curve, automorphism of order 2 with
+        4 fixed points.
+   Theorem.  Function field of P^1 is not equal to that of
+             Elliptic curve
+
+ - Definition: Projective & Affine varietites
+ - Quasi-projective varieties have open covers
+ - Manifold-like.
+
+ Products.  Segre Embedding.  P^1xP^1.

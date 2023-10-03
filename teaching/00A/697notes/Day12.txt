@@ -1,0 +1,36 @@
+Day 12
+Applicable Algebraic Geometry
+
+Wednesday 25 5:00 1530  LGRT
+
+Intrinsic Definition of Tangent Spaces
+
+ (review)  d_x : K[X] --> dual of tangent space
+
+ - Theorem:   This is an isomorphism on m_x/(m_x)^2.
+
+ - New Definition of tangent space.
+ - Functoriality
+ - Exercise:  Composition
+              Behavior under isomorphism
+ - Example:  V(y^2-x^3) \not \sim A^1
+ - Theorem:   Algebraic groups are smooth
+
+ Definition of Dimension
+  Ex:  dim A^n = n
+       dim cubic curves = 1
+     Def:  Curve, Surface
+____________________________________________________________
+
+Chapter 2: Effective and computational geometry
+
+ Two algorithms for simplifying polynomials:
+ - Euclidean
+ - Gaussian Elimination
+
+ What to do for arbitrary polynomials?
+
+ Definition:  Monomial; Total order
+    A *monomial order* is a total order on monomials with
+    - 1 minimal,  and - respects multiplication by monomials.
+

@@ -1,0 +1,181 @@
+#deadbeat.maple
+#
+# Frank Sottile
+# 19 September
+# Amherst, Mass
+#
+# This is intended to illustrate today's lecture of Math 697R
+#
+with(linalg):
+kernelopts(gcfreq=8000000):   # Garbage collection interval increased
+#
+#  A m=2, p=2, n=4 linear system.
+#
+A:= array( [[0,0,1,0],
+            [0,0,1,0],
+            [0,1,0,0],
+            [1,0,1,2]] ):
+
+B:= array( [[1,0],
+            [0,1],
+            [0,0],
+            [0,0]] ):
+
+C:= array( [[1,0,0,0],
+            [0,1,0,2]] ):
+
+#  Test for controllability
+#
+rowdim( concat( B, A&*B, A^2&*B, A^3&*B));
+#  Test for observability
+#
+coldim( stackmatrix( C, C&*A, C&*A^2, C&*A^3));
+
+# Coordinates for the putative feedback law
+ 
+K:= array( [[x, y],
+            [z, w]] ):
+#   The matrix R := A + BKC
+#
+R:=evalm(A+B&*K&*C);
+
+# The 16 equations R^4=0 are the equations for deadbeat control,
+# We compute their degrees
+#
+N:=evalm(R^4):  DEG:=matrix(4,4,0):
+for i from 1 to 4 do
+  for j from 1 to 4 do
+   DEG[i,j]:=degree(N[i,j],[x,y,z,w]);
+od;od;
+evalm(DEG);
+
+# We set up the system of equations
+#
+Eqs:={}:  for i from 1 to 4 do for j from 1 to 4 do
+         Eqs:=Eqs union {N[i,j]=0}:  od:od:
+#
+#  and solve them
+#
+t:=time():
+Sol1:=solve( Eqs );
+allvalues(Sol1);
+t1:=time()-t:
+#
+#
+#  We now compute the characteristic polynomial
+#
+t:=time():
+phi:=charpoly(R,s);
+Coeffs:=[subs(s=0,phi)]:  
+for i from 1 to 3 do Coeffs:=[Coeffs[],coeff(phi,s^i)]: od:
+Deg:=[]:  for i from 1 to 4 do  Deg:=[Deg[],degree(Coeffs[i])]: od:
+#
+#  Fewer equations, and of lower degrees!
+#
+lprint(Deg);
+Eqs:={}:  for i from 1 to 4 do Eqs:=Eqs union {Coeffs[i]=0}: od:
+
+Sol2:=solve( Eqs );
+allvalues(Sol2);
+#
+lprint(`Time for naieve solution is `,t1,` seconds`);
+lprint(`Time for sophisticated solution is `,time()-t,` seconds`);
+
+From sottile@schubert.math.umass.edu Tue Sep 19 12:06 EDT 2000
+Received: from schubert (IDENT:root@schubert [128.119.47.237])
+	by math.umass.edu (8.9.3/8.9.3) with ESMTP id MAA10455
+	for <sottile@math.umass.edu>; Tue, 19 Sep 2000 12:06:12 -0400 (EDT)
+Received: (from sottile@localhost)
+	by schubert (8.9.3/8.9.3) id MAA04811
+	for sottile@math.umass.edu; Tue, 19 Sep 2000 12:07:14 -0400
+Date: Tue, 19 Sep 2000 12:07:14 -0400
+From: Frank Sottile <sottile@schubert.math.umass.edu>
+Message-Id: <200009191607.MAA04811@schubert>
+To: sottile@math.umass.edu
+Content-Type: text
+Content-Length: 1799
+
+#deadbeat.maple
+#
+# Frank Sottile
+# 19 September
+# Amherst, Mass
+#
+# This is intended to illustrate today's lecture of Math 697R
+#
+with(linalg):
+interface(screenwidth=70):    # For thinner printing
+kernelopts(gcfreq=8000000):   # Garbage collection interval increased
+#
+#  A m=2, p=2, n=4 linear system.
+#
+A:= array( [[0,0,1,0],
+            [0,0,1,0],
+            [0,1,0,0],
+            [1,0,1,2]] ):
+
+B:= array( [[1,0],
+            [0,1],
+            [0,0],
+            [0,0]] ):
+
+C:= array( [[1,0,0,0],
+            [0,1,0,2]] ):
+
+#  Test for controllability
+#
+rowdim( concat( B, A&*B, A^2&*B, A^3&*B));
+#  Test for observability
+#
+coldim( stackmatrix( C, C&*A, C&*A^2, C&*A^3));
+
+# Coordinates for the putative feedback law
+ 
+K:= array( [[x, y],
+            [z, w]] ):
+#   The matrix R := A + BKC
+#
+R:=evalm(A+B&*K&*C);
+
+# The 16 equations R^4=0 are the equations for deadbeat control,
+# We compute their degrees
+#
+N:=evalm(R^4):  DEG:=matrix(4,4,0):
+for i from 1 to 4 do
+  for j from 1 to 4 do
+   DEG[i,j]:=degree(N[i,j],[x,y,z,w]);
+od;od;
+evalm(DEG);
+
+# We set up the system of equations
+#
+Eqs:={}:  for i from 1 to 4 do for j from 1 to 4 do
+         Eqs:=Eqs union {N[i,j]=0}:  od:od:
+#
+#  and solve them
+#
+t:=time():
+Sol1:=solve( Eqs );
+allvalues(Sol1);
+t1:=time()-t:
+#
+#
+#  We now compute the characteristic polynomial
+#
+t:=time():
+phi:=charpoly(R,s);
+Coeffs:=[subs(s=0,phi)]:  
+for i from 1 to 3 do Coeffs:=[Coeffs[],coeff(phi,s^i)]: od:
+Deg:=[]:  for i from 1 to 4 do  Deg:=[Deg[],degree(Coeffs[i])]: od:
+#
+#  Fewer equations, and of lower degrees!
+#
+lprint(Deg);
+Eqs:={}:  for i from 1 to 4 do Eqs:=Eqs union {Coeffs[i]=0}: od:
+
+Sol2:=solve( Eqs );
+allvalues(Sol2);
+#
+lprint(`Time for naieve solution is `,t1,` seconds`);
+lprint(`Time for sophisticated solution is `,time()-t,` seconds`);
+
