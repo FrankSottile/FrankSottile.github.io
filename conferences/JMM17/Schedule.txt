@@ -1,0 +1,15 @@
+
+13:00  Peter Bubenik     An Introduction to Topological Data Analysis
+13:30  Erica Flapan      Topological Complexity in Protein Structures
+14:00  Gheorghe Craciun  Toric Differential Inclusions and a Proof of the Global Attractor Conjecture
+14:30  Nathaniel Strawn  Connectivity and Irreducibility of Finite Unit-Norm Tight Frame Varieties
+15:00  Anton Leykin      Solving polynomial systems via monodromy and trace test
+15:30  Cynthia Vinzant   Convex algebraic geometry
+16:00  Ileana Streinu    Periodic auxetics
+16:30  Jon Lee           Volume-based comparison for some polytopes arising in optimization.
+17:00  Josephine Yu      Product-Mix Auctions and Tropical Geometry
+17:30  Kristin Lauter    The Future of Curves in Cryptography (?)
+
+
+
+

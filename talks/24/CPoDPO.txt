@@ -1,0 +1,17 @@
+Critical Points Of Discrete Periodic Operators
+
+It is believed that the dispersion relation of a Schrodinger operator with
+a  periodic  potential has  non-degenerate  critical  points, for  general
+values of the potential and  interaction strengths.  In work with Kuchment
+and Do, we  considered this for discrete operators on  a periodic graph G,
+for then the dispersion relation  is an algebraic hypersurface.  We showed
+how, for a given  periodic graph G, this may be  established from a single
+numerical  verification, if  we knew  the  number of  critical points  for
+general values of the parameters.
+
+With Matthew Faust,  we use ideas from combinatorial  algebraic geometry to
+give  an  upper  bound  for  the  number  of  critical  points  at  generic
+parameters, and  also a  criterion for  when that  bound is  obtained.  The
+dispersion relation has a natural  compactification in a toric variety, and
+the criterion concerns  the smoothness of the dispersion  relation at toric
+infinity.

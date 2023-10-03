@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb,amsmath,amsthm} 
+\usepackage[margin=1.2in]{geometry}
+\usepackage{graphicx,ctable,booktabs}
+\usepackage{amsfonts}
+\usepackage[section]{placeins}
+\usepackage[mathscr]{euscript}
+\usepackage[margin=0.5cm]{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\lstloadlanguages{[5.2]Mathematica}
+\newcommand{\genby}[1]{\langle #1 \rangle}
+\usepackage{enumerate}
+\usepackage{listings}
+
+\usepackage{blindtext}
+\newenvironment{texto}[1][\textwidth]{
+   \begin{center} % so the minipage is centered
+   \begin{minipage}[t]{#1}
+   \raggedright % so the minipage's text is left justified
+   \hspace{-.5 cm}
+}{
+  \end{minipage}
+   \end{center}
+}
+
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{nonexample}[1][Nonexample]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+
+
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\lcm}{\text{lcm}}
+\newcommand{\ini}{\text{in}}
+\renewcommand{\NN}{\mathbb{N}}
+\newcommand{\ceil}[1]{\lceil#1 \rceil}
+\newcommand{\floor}[1]{\lfloor#1 \rfloor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{claim}{Claim}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{exercise}{Exercise}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[L]{\small\scshape TACO Seminar} 
+\rfoot{\footnotesize Madeline Brandt} 
+\rhead{ } 
+\renewcommand{\headrulewidth}{0pt} 
+
+\usepackage{aurical}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\title{\textsc{Ideals and Varieties Exercises}}
+\author{Praise Adeyemo}
+
+\maketitle
+
+\thispagestyle{empty}
+
+\begin{exercise} Let $\mathbb{A}_K^{n^2}$ be identified with the set of $M_{n \times n}$ matrices.
+\begin{enumerate}
+\item Show that the general linear group $GL_n(K) \subset \mathbb{A}_K^{n^2}$ of invertible matrices is not algebraic.
+\item How can it be made algebraic?
+\item Repeat both parts for the algebraic torus $(\mathbb{C}^*)^n \subset \mathbb{C}^n$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Let $f(x)= x^4 + x^3 - x^2 + x - 2$, and $g(x) = x^3 + x^2 + x+1$. Use the Sylvester matrix of $f$ and $g$ to investigate whether or not the polynomials share a common root in $\mathbb{Q}[x]$. Then, do this with the Euclidean algorithm.
+\end{exercise}
+
+\begin{exercise} How would you describe lines in $\mathbb{A}_K^2$? What is the algebraic interpretation of your description?
+\end{exercise}
+
+\begin{exercise} A map $\phi : \mathbb{A}_k^2 \rightarrow \mathbb{A}_K^2$ is an \emph{affine transformation} if and only if there exists a vector $v \in \mathbb{K}^2$ and a matrix $A \in GL_2(K)$ such that $\phi(x) = Ax+v$ for all $x \in \mathbb{A}_K^2$. Show that the set of all affine transformations, denoted by $\text{Aff}(\mathbb{A}_K^2)$, forms a group.
+\end{exercise}
+
+\begin{exercise} Show that the Zariski topology on $\mathbb{A}_k^n$ is not Hausdorff when $K$ is an infinite field. What happens when $K$ is finite?
+\end{exercise}
+
+\begin{exercise} The equation $x^2+y^2 = z^2$ has many solutions over $\mathbb{Z}$. If $(a,b,c)$ is a solution and $n \in \mathbb{N}$, then $(n \cdot a, n \cdot b, n\cdot c)$ is also a solution. Find infinitely many solutions where $(a,b,c)$ have no common factor greater than 1.
+\end{exercise}
+
+\begin{exercise} Show that $V(x+y,x^2) = V(x+y,y^2)$. 
+\end{exercise}
+
+\begin{exercise} Show that the set of matrices in $\mathbb{A}_k^{n^2}$ with a repeated eigenvalue is an algebraic set.
+\end{exercise}
+
+\maketitle
+
+
+\end{document}
