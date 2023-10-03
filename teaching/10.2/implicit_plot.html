@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>implicit_plot.html</title>
+<!-- Created by Maple 9.50, Mac OS X -->
+</head>
+<body bgcolor="FFFFFF">
+<a name="MapleAutoBookmark1" />
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>with(plots):</strong></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>Stuff:='grid=[140,140],axes=boxed,thickness=2':</strong></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">implicitplot(x^3+y^3-6*x*y,x=-4..4,y=-4..4,Stuff);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_1.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">implicitplot(abs(x)^(1/2)+abs(y)^(1/2)-2,x=0..4,y=0..4,Stuff);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_2.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">implicitplot(abs(x)^(1/2)+abs(y)^(1/2)-2,x=-4..4,y=-4..4,Stuff);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_3.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">implicitplot(y^2-(5*x^4-x^2),x=-2..2,y=-8..8,Stuff);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_4.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">A:=implicitplot(x^2+y^2=2*x,x=-1..2,y=-1..2,color=blue,thickness=2):</strong></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">B:=implicitplot(x^2+y^2=3*y,x=-1..2,y=-1..2,color=red,thickness=2):</strong></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">display(A,B,axes=boxed, scaling=constrained);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_5.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></font><font color="#ff0000" size="6" face="Monospaced">implicitplot(x^2-x*y+y^2-3,x=-2..2,y=-2..2,color=blue,thickness=2);</strong></font></td>
+</tr>
+</table></p>
+<p align="center"><img src="implicit_plot/implicit_plot_6.gif" width="400" height="400" alt="[Plot]" align="center"></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong>&gt; </strong></font></td>
+<td width="100%" valign="top"><font color="#ff0000" size="3" face="Monospaced"><strong></strong></font></td>
+</tr>
+</table></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font></p>
+<p></p>
+<p></p>
+<p></p>
+</body>
+</html>
