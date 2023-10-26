@@ -2,14 +2,19 @@ Bloch Discriminants
 
 Frank Sottile
 
-Abstract:  For a given a periodic graph G, there is a finite-dimensional parameter space encoding all possible edge weights
-and potentials.  For each point in this parameter space, one may consider the corresponding Bloch variety and its various
-features (critical points and values, band gaps, singularities, etc.)  Understanding/classifying how these features vary
-and change at different points in the parameter space is referred to as determining the geography of parameter space, and is
-a notoriously hard yet fundamental question considered in real algebraic geometry.
+Abstract: For  a given a  periodic graph  G, there is  a finite-dimensional
+parameter space  encoding all  possible edge  weights and  potentials.  For
+each  point in  this parameter  space, one  may consider  the corresponding
+Bloch variety  and its various  features (critical points and  values, band
+gaps,  singularities, etc.)   Understanding/classifying how  these features
+vary and change  at different points in the parameter  space is referred to
+as determining the geography of parameter  space, and is a notoriously hard
+yet fundamental question considered in real algebraic geometry.
 
-In this talk, I will discuss this classification for a few diatomic graphs, and why this question for Bloch varieties is
-interesting from the perspective of real algebraic geometry.  For spectral theory, this recovers the well-known
-counterexample of Filonov and Kachkovskiy to optimistic hopes for critical points of Bloch varieties, while providing
-the context of the operators with other parameters on the same graph.   This is joint work with Margaret Regan and Simon
-Telen. 
+In this talk, I will discuss this classification for a few diatomic graphs,
+and  why  this  question  for  Bloch  varieties  is  interesting  from  the
+perspective of real algebraic geometry.  For spectral theory, this recovers
+the  well-known counterexample  of  Filonov and  Kachkovskiy to  optimistic
+hopes for critical  points of Bloch varieties, while  providing the context
+of the  operators with other parameters  on the same graph.   This is joint
+work with Margaret Regan and Simon Telen.
