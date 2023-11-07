@@ -1,0 +1,220 @@
+%HW11.tex
+%Eleventh Homework -- Math 221H
+% 
+%
+% Frank Sottile
+% 5 November 2023 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{multirow}   % This is for more control over tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Layout     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{vmargin}
+\setpapersize{USletter}
+\setmargrb{1cm}{0.25cm}{1cm}{0.5cm} % --- sets all four margins LTRB
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Macros  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\RR}{{\mathbb R}}  % This is the backboard bold symbol for the real numbers.  Note how it is used below
+\newcommand{\NN}{{\mathbb N}}  % 
+\newcommand{\ZZ}{{\mathbb Z}}  %
+
+\newcommand{\calP}{{\mathcal P}}  %Caligraphic P for power set
+
+\newcommand{\bfa}{{\bf a}}    %Vectors
+\newcommand{\bfb}{{\bf b}}    %Vectors
+\newcommand{\bfF}{{\bf F}}    %Vectors
+\newcommand{\bfr}{{\bf r}}    %Vectors
+\newcommand{\bfi}{{\bf i}}    %Unit Vectors
+\newcommand{\bfj}{{\bf j}}    %Unit Vectors
+\newcommand{\bfk}{{\bf k}}    %Unit Vectors
+
+\newcommand{\sep}{{\ :\ }}     % This is for the : in our notation for building sets.
+                               % an acceptable (and common) alternative is \mid  (try it!)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\LARGE 
+\noindent
+{\color{Maroon}Honors Multivariate Calculus \hfill Math 221H Section 201}\vspace{2pt}\\
+\large
+Evelenth Homework:\hfill 
+Due in recitation: Thursday 9 November 2023\vspace{2pt}
+
+\normalsize
+    \vspace{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Recall the transformations from polar to rectilinear coordinates,
+  $x=x(\rho,\phi,\theta)=\rho\, \sin\phi\, \cos\theta$, \newline
+  $y=y(\rho,\phi,\theta)=\rho\, \sin\phi\, \sin\theta$, and 
+  $z=z(\rho,\phi,\theta)=\rho\, \cos\phi$.
+
+  Let $\nabla_{\rho,\phi,\theta}$ denote the gradient with respect to the spherical coordinates (e.g. vector of partial derivatives with
+  respect to $\rho$, $\phi$, and $\theta$).
+
+  Compute the vector triple product
+  $(\nabla_{\rho,\phi,\theta}\,x \times \nabla_{\rho,\phi,\theta}\, y ) \cdot \nabla_{\rho,\phi,\theta}\, z$
+  and compare it to the spherical volume element.
+  
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item What are the surfaces with the following equations?
+
+  (a) $\rho\sin\phi = 2$ \qquad
+  (b) $\rho^2(\sin^2\phi\ -\ 4\cos^2\theta) = 1$ \qquad
+  (c) $\rho^2-6\rho + 8=0$\,.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Write the following equations in both cylindrical and polar coordinates.
+
+  (a) $x^2+y^2=2z$ \qquad
+  (b) $z=x^2-y^2$\qquad
+  (c) $x^2+y^2-z^2=16$\,.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item In class, we computed the volume of a four-dimensional balls of radius $a$, using its 2-dimensional cross sections over
+  a disc in the pane of radius $a$.   (The cross sections were themselves discs.)
+
+  Redo this yourself.
+
+  
+  One may try to use the 1-dimensional cross sections of the four ball over its (equitorial) 3-ball, using spherical coordinates.
+  Set this up, think abut it, but do not try to solve it.
+
+  Write a paragraph comparing these two approaches, including what you are (trying to) do.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Consider a  five-dimensional ball $B$ of radius $a$.
+  Observe that its cross sections over the disc of radius $a$ in the $x,y$-plane are 3-dimensional balls (of varying radii).
+  Similarly, its cross setions over the 3-dimensional ball of radius $a$ (say, in the $x,y,z$-coordinate 3-plane) are discs of varying
+  radii.
+  
+  Set up two different integrals for the volume of the five-dimensional ball illustrating these approaches and solve both.
+  You should get the same answer.  
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Evaluate $\iiint_E x^2 dV$, where $E$ is the solid that lies within the cylinder $x^2+y^2=2$, above the plane $z=0$,
+  and below the 
+  cone $z^2=4x^2+4y^2$.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   
+   
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Find the centroid of a solid with constsnt mass density bounded by the paraboloids $z=x^2+y^2$ and $z=36-3x^2-3y^2$. 
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Evaluate $\iiint_E xe^{(x^2+y^2+z^2)^2} dV$, whre $E$ is the solid that lies between the spheres of radius 1 and 2, respectively, in
+  the positive octant.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Find the mass of a solid hemisphere of radius $a$ if the density at a point is proportional to the distane of that point to the
+  centre of the base.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Evaluate the line integral $\int_C y \, ds$, where $C$ is parametrized by $x=t^3$, $y=t^2$, for $0\leq t \leq 1$.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Evaluate the line integral $\int_C xy^2 \, ds$, where $C$ is the right half of the circle of radius 4.
+  What about the same integral over the top half of that circle?
+\vspace{-2pt}\vfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hfill {{\color{red}\sc Please Turn Over}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item Which of the following vector fields are conservative
+\[
+  \begin{picture}(125,130)
+   \put(0,14){\includegraphics[height=110pt]{field/vf2.eps}}
+   \put(47,0){(a)}
+  \end{picture}
+  \begin{picture}(125,130)
+   \put(0,14){\includegraphics[height=110pt]{field/vf4.eps}}
+   \put(47,0){(b)}
+  \end{picture}
+  \begin{picture}(125,130)
+   \put(0,14){\includegraphics[height=110pt]{field/vf1.eps}}
+   \put(47,0){(c)}
+  \end{picture}
+  \begin{picture}(125,130)
+   \put(0,14){\includegraphics[height=110pt]{field/vf3.eps}}
+   \put(47,0){(d)}
+  \end{picture}
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Evaluate $\int_C yz\, dy \ +\ xy\,dz$, where $C$ is the curve with parametrizzation $x=\sqrt{t}$, $y=t$, $z=t^2$, and $0\leq t\leq 1$.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Evaluate $\int_C \bfF \cdot d\bfr$, where  $\bfF(x,y,z)=x^2\bfi+xy\bfj + z^2\bfk$,
+    $\bfr(t)= \sin t \bfi + \cos t \bfj + t^2\bfk$, and $0\leq t \leq \pi/2$.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Find the mass an centre of mass of a thin wire in the shape of a quarter circle $x^2+y^2=r^2$ in the positive quadrant if the mass
+  density function is $\rho(x,y)=x+y$.
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+
+\end{enumerate}
+
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+polar/Lune
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+\vspace{-2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
