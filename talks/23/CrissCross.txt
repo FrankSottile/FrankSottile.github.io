@@ -1,0 +1,6 @@
+The Game of Criss-Cross
+
+We will play the game of criss-cross, in which two players take 
+turns connecting dots with noncrossing paths.  The winner is the 
+last player to make a legal move.  We will play this game and 
+then analyze it.
