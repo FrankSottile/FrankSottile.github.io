@@ -1,18 +1,10 @@
 December
-  4 15:00 Jake Levinson
-    16:00 Senate meeting with Dean
-  6 8-8:30 BVOMS
-    9-11 AM HUR Council mtg.
-    3-4:15 Faust Prelim  Blocker 338
-  8 8--10 221H final
- 11 Faculty Senate
- 12 10:30--12:30 653 final 4 PM filling
  15 2 PM Graduation
  27 15:00 Senate Planning Committee
    December 2023          January 2024      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-                1  2      1  2  3  4  5  6  
- 3  4  5  6  7  8  9   7  8  9 10 11 12 13  
+                          1  2  3  4  5  6  
+       5  6  7  8  9   7  8  9 10 11 12 13  
 10 11 12 13 14 15 16  14 15 16 17 18 19 20  
 17 18 19 20 21 22 23  21 22 23 24 25 26 27  
 24 25 26 27 28 29 30  28 29 30 31           
@@ -28,6 +20,7 @@ January
  22:  Reset Net ID password
  22-26 Newton Institute
  24 15:00 CST Senate Planning Committee
+ 29-30 Edinburgh
 February
   1 Term on AMS JMM Program committee begins
  12 Faculty Senate
@@ -47,6 +40,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 March
  11 Faculty Senate
  22-24 SRAC 2024 @U Houston ?
+ 25 Algebra Seminar
  27 15:00 Senate Planning Committee
  28 Colloquium at Georgia Tech
     Spend up to a week there ?
@@ -99,4 +93,7 @@ February 10 Faculty Senate
 March 10 Faculty Senate
 April 14 Faculty Senate
 May 12 Faculty Senate
-AUgust 6-9 MathFest
+August 6-9 MathFest
+
+2026
+ July/Aug   SIAM ANnual meeting (SIAM AG minisymposia)
