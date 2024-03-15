@@ -1,4 +1,4 @@
-Critical Points Of Discrete Periodic Operators
+Critical Points of Discrete Periodic Operators
 
 It is believed that the dispersion relation of a Schrodinger operator with
 a  periodic  potential has  non-degenerate  critical  points, for  general
