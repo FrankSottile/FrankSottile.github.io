@@ -1,0 +1,46 @@
+Title:  Toric varieties
+
+   Among the most accessible classes of algebraic varieties
+are toric varieties.   This is fortunate for these are also among
+the most commonly encountered outside of algebraic geometry 
+within mathematics and in the applications of algebraic 
+geometry.  Toric varieties in particular are currently
+widely studied in algebraic geometry and its applications.
+
+   This course would introduce the students to toric varieties,
+emphasizing their fundamental combinatorial nature while focusing
+on concrete examples and explaining some of their applications.
+
+  Because of the elementary nature of these varieties, the
+prerequisite will be graduate algebra, although courses in
+commutative algebra and algebraic geometry will be helpful.
+
+Here is an Outline:
+ -Toric ideals
+    Generation of toric ideals
+    Groebner bases
+    Computation
+ -Affine toric varieties
+ -Projective toric varieties
+    Orbit decomposition and Limiting behavior
+ -Lattice Polytopes
+    Algebraic-Combinatorial Geometric Dictionary
+    Normality of Sturmfellian Toric Varieties
+ -Real projective toric varieties
+    Irrational toric varieties
+    Algebraic moment map
+ -Geometric combinatorics, lattices and fans
+ -Abstract Construction of Toric Varieties
+    Arithmetic toric varieties
+ -Cox/Delzant quotient construction
+    Cox Coordinate Ring
+  Line bundles on toric varieties
+  Toric Degenerations
+
+Grading will be based on class participation and a project/presentation at the end of the course
+
+There are two texts that may accompany the class,
+ - Toric Varieties by Wm Fulton (this book is hard to get)
+ - Toric Varieties by Cox, Little, and Schenck
+ - Ibadan Lectures on Toric Varieties (Notes that I have from a summer school)
+
