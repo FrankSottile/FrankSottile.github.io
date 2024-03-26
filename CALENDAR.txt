@@ -2,7 +2,6 @@ December
 2024
 March
     Marian Poppr
- 22 Flight to CLL
  23-24 CombinaTexas
  24 Flight to ATL
  25 Algebra Seminar
@@ -39,6 +38,7 @@ May
  1-3 Georgia Benkart @ SLMath
  4-5 SFSU AMS Meeting   (Registered and submitted abstract)
  5 BMC Colloquoum: Cardano and the cubic
+        Dwinelle Hall, Room 145  6-7pm
  13 Faculty Senate 
  19-24 BIRS Granada
  22 15:00 Senate Planning Committee
@@ -83,7 +83,9 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 September  9  Faculty Senate
  14/15 San Antonio
  16-20 Sarah away
-October 14 Faculty Senate
+October 
+ 11-13 SIAM TX-LA Meeting Baylor
+ 14 Faculty Senate
  21-25  AIM SQuaRE
 November 11 Faculty Senate
 December 9 Faculty Senate
