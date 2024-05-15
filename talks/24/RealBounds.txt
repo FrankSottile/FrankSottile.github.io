@@ -1,0 +1,16 @@
+Bounds on reality
+
+Frank Sottile
+
+In applications of algebraic geometry, it is the real (often positive) solutions
+which matter.   The gold  standard for bounds  on the number  of real  zeroes is
+Descartes'  bound  for  univariate  polynomials.   Multivariate  generalisations
+remain  elusive.  Khovanskii  famously  gave astronomical  fewnomial bounds  for
+positive  solutions to  a  system of  equations  that depend  on  the number  of
+monomials.   While improved  by  work of  Bihan and  others,  the bounds  remain
+unrealistically large.   Bihan's method,  Gale duality ofor  polynomial systems,
+replaces a  system of  n polynomials  in n  variables and  n+1+k monomials  by a
+system  of   rational  functions  in   a  k-dimensional  polyhedron.    This  is
+particularly efficacious when  k=1 (a circuit) where it  gives a Descartes'-like
+bound.  I will survey these developments  and lay out some challenges, including
+extending this to non-standard real structures.
