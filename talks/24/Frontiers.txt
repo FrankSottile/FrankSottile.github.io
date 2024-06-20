@@ -1,0 +1,13 @@
+Frontiers of Arithmetic in Enumerative Geometry
+
+The  Schubert calculus  of  enumerative geometry  is  a rich  and
+well-understood  family  of  structured problems  in  enumerative
+geometry.  With  many millions  of computable  problems, it  is a
+laboratory  for   investigating  new  phenomena   in  enumerative
+geometry.  I have been using it as  such for the past 25 years in
+projects  to study  arithmetical questiions  (reality and  Galois
+groups) in enumerative geometry and  more generally in systems of
+equations.  These projects  use different computational resources
+and well  over 15 TeraHertz-years  of computing.  This  talk will
+sketch some  of the mathematics  and some of the  lessons learned
+from these investigations.
