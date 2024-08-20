@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+ <TITLE>Math 666: Toric varieties  -- Fall 2024</TITLE>
+ <link rel="shortcut icon" href="../../images/sottile.ico"> 
+ <link href="i../../mages/frank.css" rel="stylesheet" type="text/css">
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</HEAD>
+<!---------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------->
+<table>
+ <tr valign=top>
+  <td>
+   <img src="../../research/stories/ControlPolytope/Tensor4x3.sm.gif">
+  </td>
+  <td>
+  </td>
+  <td>
+   <H1>Math 666: Toric varieties</h1> 
+
+   <font size=+1 color=brown><b>Instructor:</b></font>
+      <a href="../../index.html">Frank Sottile</a><br>
+   <font size=+1 color=brown><b>Lectures:</b></font> 
+        TuTh 9:35&ndash;10:50 Blocker 306<br>
+
+   <font size=+1 color=brown><b>Course webpage:</b></font>
+     <a href="https://franksottile.github.io/teaching/24.2/toric.html">https://franksottile.github.io/teaching/24.2/Toric.html</a><br>
+
+   <font size=+1 color=brown><b>Grading:</b></font>
+     Based on class participation and end of term project.<br>
+   <!---------------------------------------------------------------------------------------------------->
+   <table>
+    <tr valign=top><td colspan=3 rowspan=2><font color=blue><b>Office Hours:</b></font> Blocker 601L</td>
+     <td> Mondays </td><td>14:00-15:00 </td>
+    </tr>
+    <!-------------------------------------------------->
+    <tr><td>  Tuesdays </td><td>11:00-12:00 </td> </tr>
+    <!-------------------------------------------------->
+   </table>
+<!------------------------------->
+  </td>
+  <td>
+  </td>
+  <td>
+   <img height=200pt src="FK.png">
+  </td>
+ </tr>
+</table>
+<!---------------------------------------------------------------------------->
+
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<font size=+1 color=brown>Abstract</font><br>
+<p>
+   Among the most accessible classes of algebraic varieties
+are toric varieties.   This is fortunate for these are also among
+the most commonly encountered outside of algebraic geometry 
+within mathematics and in the applications of algebraic 
+geometry.  Toric varieties in particular are currently
+widely studied in algebraic geometry and its applications.
+</p>
+
+<p>
+This course would introduce the students to toric varieties,
+emphasizing their fundamental combinatorial nature while focusing
+on concrete examples and explaining some of their applications.
+</p>
+
+<p>
+  Because of the elementary nature of these varieties, the
+prerequisite will be graduate algebra, although courses in
+commutative algebra and algebraic geometry will be helpful.
+</p>
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+<font size=+1 color=brown>Grading</font><br>
+<p>
+ I feel that in advanced graduate classes, the students get out of the
+ class what they put in.
+ Consequently, I do not assign regular homework to be collected and marked.
+ (But I will mention exercises, which are intended for you to fill in 
+  gaps in the presentation, thereby learning a bit more.)
+ At the end of the term, students will present projects.
+ <!-- I am starting a file  with some suggestions <a href="Projects.txt">here</a>. -->
+</p>
+<!---------------------------------------------------------------------------->
+<hr>
+<!---------------------------------------------------------------------------->
+
+<table>
+ <tr valign=top>
+  <td>
+   <font size=+1 color=brown>Schedule</font><br>
+   &nbsp; &nbsp;<font size=+1 color=magenta>Toric Varieties</font>
+   <ul>
+    <li> <font color=blue><b>Toric ideals</b></font> </li>
+     <ul> 
+      <li>Generation of toric ideals</li>
+      <li>Groebner bases</li>
+      <li>Computation</li>
+     </ul>
+    <li> <font color=blue><b>Affine toric varieties</b></font> </li>
+    <li> <font color=blue><b>Projective toric varieties</b></font> </li>
+     <ul> 
+      <li> Orbit decomposition and Limiting behavior</li>
+     </ul>
+    <li> <font color=blue><b>Lattice Polytopes</b></font> </li>
+     <ul> 
+      <li> Algebraic-Combinatorial Geometric Dictionary</li>
+      <li> Normality of Sturmfellian Toric Varieties</li>
+     </ul>
+    <li> <font color=blue><b>Real projective toric varieties</b></font> </li>
+     <ul> 
+      <li> Irrational toric varieties</li>
+      <li> Algebraic moment map</li>
+     </ul>
+    <li> <font color=blue><b>Geometric combinatorics, lattices and fans</b></font> </li>
+    <li> <font color=blue><b>Abstract Construction of Toric Varieties</b></font> </li>
+    <li> <font color=blue><b>Cox/Delzant quotient construction</b></font> </li>
+     <ul> 
+      <li> Cox Coordinate Ring</li>
+     </ul>
+    <li> <font color=blue><b>Line bundles on toric varieties</b></font> </li>
+
+    <li> <font color=blue><b>Toric Degenerations</b></font> </li>
+   </ul>
+  </td>
+
+  <!---------------------------------------------------------------------------->
+  <td width=10>&nbsp;</td>
+  <!---------------------------------------------------------------------------->
+  <td width=600>
+   <!---------------------------------------------------------------------------->
+   <font color=brown size=+1>Text Book:</font><br>
+
+   &nbsp; &nbsp;   I do not plan to follow a text book for this class.    
+    I will be using my own notes.<br>
+
+   <font color=brown size=+1>Some Sources:</font><br>
+
+   <table>
+   <tr valign=top>
+     <td colspan=2> I have some notes that I wrote for a CIMPA school in Ibadan, Nigeria in 2017:
+     <a href="../../research/pdf/CIMPA17.pdf"><i>Ibadan Lectures on Toric Varieties</i></a>.<br><br>
+
+     </td>
+   </tr>
+   <!---------------------------------------------------------------------------------------------------->
+    <tr valign=top>
+    <td>
+      I can recommend the  monumental book
+       <i>Toric Varieties</i> by Cox, Little, and Schenck.   
+       This is an encyclopedia of toric varieties, with a wealth of material, far more than 
+       can be digested in a term.
+      This is and will be the definitive source for the subject for many years to come.
+      It is published by the American Mathematical Society
+     </td>
+     <td><img height=200pt src="CLS.jpg"></td>
+    </tr>
+   </table>
+  
+
+   
+  <table>
+   <tr valign=top>
+    <td>
+      Another popular book is Fulton's <i>Introduction to Toric Varieties</i>, by 
+      Princeton University Press.
+      Its publication in the 1990's made the subject accessible and really opened up
+      the field.
+      It is not as elementary as the book by Cox, Little, and Schenck or that by Ewald, but it
+      is much shorter and gives a good introduction to the subject.
+     </td>
+     <td><img height=180pt src="fulton.jpg"></td>
+    </tr>
+   </table>
+  
+  <table>
+   <tr>
+    <td valign=top>
+      This book by Ewald treats both the algebraic geometry of toric varieties, and the related
+       geometric combinatorics.
+      Many from combinatorics find it the right introduction to the subject.
+     </td>
+     <td><img height=180pt src="ewald.jpg"></td>
+    </tr>
+   </table>
+  
+   <!---------------------------------------------------------------------------->
+  </td> 
+  <!---------------------------------------------------------------------------->
+
+ </tr>
+</table>
+
+
+
+
+<hr>
+<!---------------------------------------------------------------------------->
+<address></address>
+<i><font color="AA00AA">
+<!-- hhmts start -->Last modified: Tu Aug 20 08:10 CDT 2024 <!-- hhmts end -->
+</i></font>
+</body> </html>
