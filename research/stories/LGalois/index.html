@@ -22,26 +22,44 @@
 	The Lagrangian Grassmannian is the set of <i>n</i>-dimensional isotropic linear subspaces in 2<i>n</i>-dimension space equipped
 	with a nondegenerate alternating form (a symplectic vector space).
 	This has dimension <i>n</i>(<i>n</i>-1)/2.
-	It has Schubert subvarieties and a rich Schubert calculus of enumereative geometry.
-	Its Schubert problems turn out to have very rich Galois groups, much more interesting than the ordinary (type A) Grassmannian and
-	flag manifolds.
+	It has Schubert subvarieties and a rich Schubert calculus of enumerative geometry.
+	Its Schubert problems turn out to have very interesting Galois groups, much more varied than those found in the ordinary (type A)
+	Grassmannian and flag manifolds.
       </font></td>
   </tr>
 </table>
 <!---------------------------------------------------------------------------------------------------->
 <hr>
 <!---------------------------------------------------------------------------------------------------->
-There are 44 essential Schubert problems on the Lagrangian Grassmannian of isotropic 4-planes in 8-space, LG(4).
+<p>There are 44 essential Schubert problems on the Lagrangian Grassmannian of isotropic 4-planes in 8-space, LG(4).
 (By essential, we mean that they do not reduce to a smaller Lagrangian Grassmannian, and have more than two solutions.)
 Of these three have been determined to be enriched in that they do not have full symmetric Galois groups.
-We are using the Frobenius algorithm.<br>
-<font color=red>Do give the time of the computations, including the one with 384 solutions.</font><br>
-Two problems, one with 384 solutions (<img src="Tableaux/2.Small.gif"><sub>&middot;</sub><img src="Tableaux/1.Small.gif"><sup>8</sup>=384)
-is still being computed while the with 768 solutions (<img src="Tableaux/1.Small.gif"><sup>10</sup>=768)  has resisted efforts to compute an
-eliminant.
+The method used is to compute Frobenius elements in the Galois groups over <b>Q</b>, giving a type of a lower bound 
+the Galois group.
+When the Galois group is the full symmetric group, this often quickly determines that, and  it can be used to infer that the problem is
+enriched.
+</p>  
 
 <p>
-The three all have different Galois groups, which are discussed in <img src="images/pdf.gif">
+More specifically, given an enumerative problem, formulating it over a finite field (e.g. such as <b>F</b><sub>65521</sub>), and then
+computing and factoring a univariate eliminant gives the cycle type of the correspomding Frobenius elements.
+It is known that this selects fairly uniformly, so that by computing enough Frobenius elements will reveal the poccible cycle types of
+Frobenius elements and eventually the distribution of cycle types in the Galois group.
+</p>  
+
+<p>
+Of the 44 essential Schubert problems, only one, with 768 solutions (<img src="Tableaux/1.Small.gif"><sup>10</sup>=768) has resisted efforts
+to compute an eliminant.
+</p>  
+
+<p>
+The 40 that were determined to have the full symmetric group as their Galois group took 79.26 days for that determination, of which 78.39
+days were spent on the largest problem, which has 384 solutions,
+(<img src="Tableaux/2.Small.gif"><sub>&middot;</sub><img src="Tableaux/1.Small.gif"><sup>8</sup>=384)
+</p>  
+
+<p>
+The three enriched problems all have different Galois groups, and these are discussed in <a href="LG4.pdf"><img src="images/pdf.gif"></a>.
 <!---------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------->
 <hr>
