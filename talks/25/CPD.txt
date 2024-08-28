@@ -1,0 +1,13 @@
+The Critical Point Degree of a Bloch Variety
+
+Given an operator on a Z^d-periodic graph, its Bloch variety encodes
+its spectrum with respect to the unitary characters of Z^d.  Finer
+questions about the spectrum involve understanding the critical points
+of the projection to R.  Previous work with Faust gave a bound for the
+number of complex critical points in terms of the volume of the Newton
+polytope of the dispersion polynomial.
+
+This talk will present background and then describe refined bounds on
+the number of critical points that are combinatorial in nature and
+involve an analysis of asymptotic behavior of the Bloch variety.  This
+is Joint work with Faust and Robinson.
