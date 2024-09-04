@@ -1,4 +1,4 @@
-The Critical Point Degree of a Periodic Graph
+The Critical Point Degree of a Bloch Variety
 
 Given an operator on a Z^d-periodic graph, its Bloch variety encodes
 its spectrum with respect to the unitary characters of Z^d.  Finer
