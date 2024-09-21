@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>First steps</TITLE>
+<META NAME="description" CONTENT="First steps">
+<META NAME="keywords" CONTENT="introduction-maple">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="introduction-maple.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="introduction-maple.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html40"
+  HREF="introduction-maple.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html34"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+  HREF="node4.html">Equation Solving in Maple</A>
+<B> Up:</B> <A NAME="tex2html41"
+  HREF="introduction-maple.html">An introduction to Maple</A>
+<B> Previous:</B> <A NAME="tex2html35"
+  HREF="node2.html">Acknowledgments</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION0003000000000000000000">
+First steps</A>
+</H1>
+
+<P>
+Once Maple is started, it awaits an input after the prompt <IMG
+ WIDTH="20" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ &gt;$">. Every statement has to be terminated by ; (or : if 
+you would like to suppress printing the output).
+
+<P>
+<PRE>
+5^2+2*3-1;
+# 30
+</PRE>
+
+<P>
+The symbol # is used by Maple to indicate a comment, and any text following it is disregarded
+when executing the line.
+
+<P>
+All objects have a type, however, unlike some other systems (such as Singular), Maple keeps track
+of types internally (there is an exception when one uses Maple's programming language; we will
+see this later on).  This might create some confusion when different types interact (and it does), but in general,
+Maple's type conversion decisions are pretty good.
+
+<P>
+An assignment is done with the symbol <IMG
+ WIDTH="25" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="$ :=$">, while comparison is accomplished 
+by using the symbols <IMG
+ WIDTH="20" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="$ =$"> or <IMG
+ WIDTH="34" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ &lt;&gt;$"> along with the function <TT>evalb</TT> (again, this will change slightly
+when programming).
+
+<P>
+<PRE>
+text := "Hello World!":
+print(text);
+evalb( text = "Hello World!" );
+num1 := 42.000:
+num2 := 42:
+evalb( num1 &lt;&gt; num2 );
+convert(num1 + num2,string);
+
+# "Hello World!"
+# true
+# false
+# "84.000"
+</PRE>
+
+<P>
+The last displayed result is always available with the symbol <IMG
+ WIDTH="21" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \%$"> (second to last with <IMG
+ WIDTH="36" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ \%\%$">
+and so on).   This is particularly useful if you are doing an long interactive computation 
+and you forgot to store the result in a variable.
+
+<P>
+<PRE>
+z3 := 3:
+f := (x-z1)*(x-z2)*(x-z3);
+eval( f,{x=z1} );
+eval( f,{z1=t,z2=2} );
+eval( %,{x=4});
+g := expand(%%);
+sort(collect(g,x),x);
+
+# f := (x - z1) (x - z2) (x - 3)
+# 0
+# (x - t) (x - 2) (x - 3)
+# 8 - 2t
+# g := x^3  - 5 x^2  + 6 x - t x^2  + 5 t x - 6 t
+# x^3  + (-t - 5) x^2  + (5 t + 6) x - 6 t
+</PRE>   
+
+<P>
+The previous example shows many Maple features which are worth describing. 
+The first line defines a variable <IMG
+ WIDTH="24" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ z3$"> to be the integer <IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="$ 3$"> (and suppresses the output). 
+Next, a polynomial expression in the variables
+<IMG
+ WIDTH="70" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$ x,z1,z2$">, and <IMG
+ WIDTH="24" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ z3$"> is defined using the variable <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ f$">.  Notice that Maple 
+understands that <IMG
+ WIDTH="24" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ z3$"> has already been assigned, and thus it replaces each instance of <IMG
+ WIDTH="24" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="$ z3$"> with this value.
+Unlike Singular, Maple needs no ring declarations; you can bring any variables you choose into the 
+worksheet at any time.
+
+<P>
+In the next line, the function is <TT>eval</TT> is used to take an expression and <I>evaluate</I> it upon substitution
+of variables with other expressions (possibly involving other variables).  In this case,
+we see that <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ f$"> evaluates to 0 when <IMG
+ WIDTH="60" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="$ x = z1$">.  It is important to realize that the function <TT>eval</TT>
+does not change <IMG
+ WIDTH="16" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ f$"> in any way, which gives us its versatility.  The command <TT>expand</TT> takes 
+an expression and returns its most, well, expanded form.  Finally, we have used the two functions
+<TT>collect</TT> and <TT>sort</TT> to visualize the polynomial <IMG
+ WIDTH="15" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ g$"> as an expression in <IMG
+ WIDTH="16" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="$ x$"> with 
+the coefficients (in <IMG
+ WIDTH="12" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="$ t$">) collected.
+
+<P>
+We should remark that this last line could also have been generated by making a call
+to the useful function <TT>coeff</TT>:
+
+<P>
+<PRE>
+coeff(g,x,3)*x^3 + coeff(g,x,2)*x^2 + coeff(g,x,1)*x + coeff(g,x,0);
+# x^3  + (-t - 5) x^2  + (5 t + 6) x - 6 t
+</PRE>   
+
+<P>
+The best way to learn Maple is to read the online documentation either through Maple's web site or 
+through the many tutorials on the web.  Within the program, you can access help by preceding 
+a key word with the symbol ?.  For instance, to learn more about the function <TT>coeff</TT>, we would 
+type:
+
+<P>
+<PRE>
+?coeff
+
+# coeff(p, x)
+# coeff(p, x, n)
+# coeff(p, x^n)
+# 
+# Parameters
+# p - polynomial in x
+# x - variable (an expression)
+# n - (optional) an integer
+# 
+# Description
+# -The coeff function extracts the coefficient of x^n in the polynomial p. 
+.........
+</PRE> 
+
+<P>
+Maple provides some useful built-in data structures such as arrays and matrices.  To work with
+matrices as algebraic objects, however, one must include the linear algebra library by typing the 
+following command.  Its output should contain the list of functions within the library.
+
+<P>
+<PRE>
+with(linalg);
+</PRE>
+
+<P>
+We begin by defining an array.  One way is the following.
+
+<P>
+<PRE>
+n := 5:
+arr := array(1..n):
+arr[3] := "3rd":
+print(arr);
+# [arr[1], arr[2], "3rd", arr[4], arr[5]]
+</PRE>
+
+<P>
+In the case of matrices, we might create a <!-- MATH
+ $3 \times 3$
+ -->
+<IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$ 3 \times 3$"> matrix in two ways as follows.
+
+<P>
+<PRE>
+M := matrix(3,3,[1,2,3,4,5,6,7,8,9]):
+N := [[1,2,3],[4,5,6],[7,8,9]]:
+evalb( M = N );
+M[1,2] := 0:
+evalm(M);
+trace(M);
+det(M);
+evalm(det(M)*inverse(M));
+
+# false
+# 	    [ 1 0 3 ]
+# M := [ 4 5 6 ]
+# 	    [ 7 8 9 ]
+# 15
+# -12
+# [ -3 24 -15 ]
+# [  6 -12  6 ]
+# [ -3 -8   5 ]
+</PRE>
+
+<P>
+This last example reveals that one must be careful when dealing with
+matrices and equality in Maple.  In general, you might need to use the function
+ <TT>evalm</TT> to convert a matrix from its data structure representation to its algebraic
+ object (for instance, to evaluate <IMG
+ WIDTH="65" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$ M+N$"> as a matrix, one would type <TT>evalm(M+N)</TT>).
+
+<P>
+Yet another way to make a matrix (or array) is with a loop.
+
+<P>
+<PRE>
+P := matrix(3,3):
+for i from 0 to 2 do
+  for j from 1 to 3 do
+     P[i+1,j] := 3*i+j;
+  end;
+end;
+evalm(P);
+# creates the same matrix as M
+</PRE>
+
+<P>
+To format the output of your worksheet, the command <TT>print</TT> is useful.  Below, the
+concatenation operator <IMG
+ WIDTH="15" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$ \Vert$"> is used to combine objects into one string.
+
+<P>
+<PRE>
+print("The number n has value " || n);
+# "The number n has value 5"
+</PRE>
+
+<P>
+You can plot curves and surfaces in Maple with the <TT>plot</TT> command. 
+Before getting to more technical stuff, let's create the pictures from the first chapter
+of the notes at <TT><A NAME="tex2html3"
+  HREF="www.math.tamu.edu/~sottile/conferences/Summer_IMA07/Sottile.pdf">www.math.tamu.edu/~sottile/conferences/Summer_IMA07/Sottile.pdf</A></TT>.
+
+<P>
+<PRE>
+with(plots):
+# plane curves
+p := y^2-x^3-x^2:
+implicitplot(p,x=-2..2,y=-2..2);
+implicitplot(p+1/20,x=-2..2,y=-2..2);
+implicitplot(p-1/20,x=-2..2,y=-2..2);
+
+# hyperboloids
+hp := x*y+z;
+hos := x^2-x+y^2+y*z;
+implicitplot3d(hp,x=-2..2,y=-2..2,z=-2..2);
+implicitplot3d(hos,x=-2..2,y=-2..2,z=-2..2);
+
+solve({hos,hp},{x,y,z});  # finds intersection parametrically
+</PRE>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html42"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html40"
+  HREF="introduction-maple.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html34"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html43"
+  HREF="node4.html">Equation Solving in Maple</A>
+<B> Up:</B> <A NAME="tex2html41"
+  HREF="introduction-maple.html">An introduction to Maple</A>
+<B> Previous:</B> <A NAME="tex2html35"
+  HREF="node2.html">Acknowledgments</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Frank Sottile
+2007-07-23
+</ADDRESS>
+</BODY>
+</HTML>

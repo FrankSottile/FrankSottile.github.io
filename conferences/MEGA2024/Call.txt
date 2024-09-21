@@ -1,0 +1,74 @@
+---------------------------------
+MEGA 2024: Call for Participation
+---------------------------------
+
+The eighteenth MEGA conference 2023 will take place at in Leipzig, Germany during the period 29 July - 2 August 2024. The meeting is hosted by Leipzig University and the Max Planck Institute for Mathematics in the Sciences.
+
+The webpage of the conference can be found at https://www.mis.mpg.de/calendar/conferences/2024/mega.html
+
+MEGA is the acronym for Effective Methods in Algebraic Geometry (and its equivalent in Italian, French, Spanish, German, Russian, etc.). This series of biennial international conferences, which began in 1990, is devoted to computational and application aspects of Algebraic Geometry and related topics.  The permanent webpage of the MEGA conferences is at https://mega.sciencesconf.org/.
+
+MEGA conferences have emerged from the leading research activity in Effective Algebraic Geometry developed in Europe over the last decades. They have established themselves as an important vehicle in the exploration of the broad interactions between Algebraic Geometry and Computational and Applied domains of Mathematics. The conferences have also increasingly been attracting young talented researchers, showing the strength and vitality of the community. The MEGA conferences aim at promoting the development of the subject through academic exchange between international researchers, at presenting the recent progress of the domain through the presentation of selected talks, at updating the community knowledge through the invitation of talented researchers from Europe and outside, and at attracting and supporting young students and researchers to join the current research area.
+
+Invited Speakers
+----------------
+Francis Brown (Oxford University)
+Türkü Özlüm Çelik (Koç University)
+Carlos D'Andrea (Universitat de Barcelona)
+Daniel Erman (University of Hawai`i at Mānoa)
+Fulvio Gesmundo (Paul Sabatier Univerisity)
+Victor Magron (CNRS LAAS)
+Fatemeh Mohammadi (KU Leuven)
+Anna Wienhard (MPI for Mathematics in the Sciences)
+Josephine Yu (Georgia Institute of Technology)
+
+Contributed Presentations
+-------------------------
+
+Submissions of papers/extended abstracts are open and available at EasyChair https://easychair.org/my/conference?conf=mega24
+
+Deadline for submissions of papers/extended abstracts: 1 February 2024
+
+Notification of acceptance of papers/extended abstracts: 18 April 2024
+
+Deadline for submission of computation presentations/posters: 25 April 2024
+
+Notification of acceptance of computation presentations/posters: 23 May 2024
+
+Submissions should contain recent original research relevant to effective methods in algebraic geometry (in a broad sense), including their foundations, analysis, complexity, computational aspects, practical issues, and applications.
+
+There are three types of submissions, distributed over the two deadlines above:
+
++ Regular papers, aimed to contributed talks: for these, authors can choose to submit either an extended abstract of at least six pages (not counting bibliography) that should contain full results, an outline of the proofs and all of the main ideas; or else a full paper with complete proofs.
+
++ Computation presentations: these can concern new software packages, but also experiments with existing software that have led to new computational approaches to mathematical proofs/applications relevant to MEGA. Submission should be in the form of a short paper describing the software or computations.
+
++ Posters: to be printed on A1, the posters will be exhibited during most of the conference, and during a poster session the authors will have the opportunity to discuss their work with the conference participants. All submissions should clearly state the contributions and achievements, with sufficient detail to understand their significance.
+
+Submissions may contain material already submitted elsewhere, but this fact has to be stated explicitly in the abstract.
+
+Acceptance of a submitted contribution means acceptance for oral or poster presentation only. A special issue of a journal is planned. Authors of accepted original papers will be invited to submit the full version after the conference. Only original research contributions will be considered for publication in the journal special issue.
+
+We particularly encourage the participation of young researchers.
+
+
+Committees
+-------------------------
+Executive Committee:
+Alessandra Bernardi (Università di Trento)
+Elisa Gorla (Université de Neuchâtel)
+Teresa Krick (Universidad de Buenos Aires)
+Kaie Kubjas (Aalto University)
+Pierre Lairez (École Polytechnique)
+Claudiu Raicu (University of Notre Dame)
+Frank Sottile (Texas A&M University)
+Simon Telen (MPI for Mathematics in the Sciences)
+
+Organizing Committee:
+Christian Lehn (Technische Universität Chemnitz)
+Irem Portakal (MPI for Mathematics in the Sciences)
+Rainer Sinn (Universität Leipzig, Institut für Mathematik)
+Bernd Sturmfels (MPI for Mathematics in the Sciences)
+Simon Telen (MPI for Mathematics in the Sciences)
+
+ 

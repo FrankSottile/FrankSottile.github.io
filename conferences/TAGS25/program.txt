@@ -1,0 +1,116 @@
+<b>Conference Program</b>
+   &nbsp; &nbsp;  &nbsp; &nbsp; <a href="abstracts.html"><b>Abstracts</b></a><br>
+
+<table border=1 cellspacing="5">
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Friday, 28 March</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr>
+    <td>16:00&ndash;17:00 PM</td>
+    <td>Maxson Lecture by David Eisenbud</td>
+    <td>Blocker Building 117</td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>17:00&ndash;17:30 PM</td>
+    <td>Arrival and Registration</td>
+    <td>Ground floor of <a href="http://wikimapia.org/6170/John-R-Blocker-Building">Blocker Building</a></td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>17:30&ndash;18:30 </td>
+    <td>Catered Dinner on site</td><td>TAZ Indian Restaurant</td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>18:30&ndash;18:35 </td>
+    <td>Opening Remarks</td><td></td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>18:35&ndash;19:30 </td>
+    <td>Chiara Damiolini</td><td><a href="abstracts.html#CD">A gentle introduction to Conformal Blocks</a></td>
+  </tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Saturday, 6 April</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr>
+    <td> 8:30&ndash;9:00</td>
+    <td>Registration and Coffee </td><td></td>
+  </tr>
+   <tr>
+    <td> 9:00&ndash;9:55</td>
+    <td> Giorgio Ottaviani</td><td><a href="abstracts.html#GO">The Hessian Map</a></td>
+  </tr>
+  <tr>
+    <td> 10:00&ndash;10:30</td>
+    <td>  Break </td><td></td>
+  </tr>
+  <tr>
+    <td> 10:30&ndash;11:30</td>
+    <td> Juanita Duque-Rosero  </td><td><a href="abstracts.html#JDR">Local heights on hyperelliptic curves for quadratic Chabauty</a></td>
+  </tr>
+  <tr>
+    <td> 11:30&ndash;11:45</td>
+    <td>  Students meet with speakers</td><td>Blocker 166</td>
+  </tr>
+   <tr>
+    <td> 11:45&ndash;14:00</td>
+    <td>  Lunch &nbsp; (put up posters)</td><td>Local Restaurants</td>
+  </tr>
+  <tr>
+    <td> 14:00&ndash;14:55</td>
+    <td> Pierrick Bousseau </td><td><a href="abstracts.html#PB">The KSBA moduli space of log Calabi-Yau surfaces</a></td>
+  </tr>
+  <tr>
+    <td> 15:00&ndash;15:30</td>
+    <td> Break </td><td></td>
+  </tr>
+  <tr>
+    <td> 15:30&ndash;16:25</td>
+    <td> Hannah Larson    </td><td><a href="abstracts.html#HL">Cohomology of moduli spaces of curves</a></td>
+  </tr>
+  <tr>
+    <td> 16:30&ndash;16:45</td>
+    <td>   Students meet with speakers </td><td></td>
+  </tr>
+  <tr>
+    <td> 16:45&ndash;18:30</td>
+    <td>  Reception and poster session </td><td></td>
+  </tr>
+  <tr>
+    <td> 19:00&mdash;  </td>
+    <td>      Dinner at local restaurant </td><td>Mo&apos;s</td>
+  </tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Sunday, 7 April</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+   <tr>
+    <td> 8:30&ndash;9:00</td>
+   <td> Coffee </td><td></td>
+  </tr> 
+   <tr>
+    <td> 9:00&ndash;9:55</td>
+    <td> Alicia Lamarche </td><td><a href="abstracts.html#AL">Local-to-global principles for zero-cycles</a></td>
+  </tr>
+  <tr>
+    <td> 10:00&ndash;11:30</td>
+    <td> Break </td><td></td>
+  </tr>
+  <tr>
+    <td>  10:30&ndash;11:25</td>
+    <td> David Eisenbud </td><td><a href="abstracts.html#DE">Looking inside infinite resolutions</a></td>
+  </tr>
+
+  <tr>
+    <td>  11:30&ndash;11:35</td>
+    <td> Closing Remarks </td><td></td>
+  </tr>
+ <tr>
+     <td> 11:35&ndash;11:50</td>
+    <td>   Students meet with speakers </td><td></td>
+  </tr>
+
+
+</table>
+
