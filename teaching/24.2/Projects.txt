@@ -1,0 +1,34 @@
+Toric Varieties, Fall 2024.
+
+Projects for the end-of-semester presentations
+
+(No one has yet told me officially what they are doing)
+
+
+
+Suggestions (these are broad, we should discuss what one would actually do)
+
+Arithmetic toric varieties
+Toric varieties in algebraic statistics
+A-Discriminant
+Stanley's g- Theorem
+Secondary fan of a point configuration and its Toric Variety
+SAGBI (or Khovanskii) bases and toric varieties
+Vertically parametrized polynomial systems
+fewnomial bounds via Gale duality
+Complexity one T-varieties (rational)
+Irrational Toric Varieties
+[Ask your advisor for a suggestion]
+
+
+Topics from past semesters:
+
+ "The A-Discriminant Amoeba Structure"
+ "Gale diagrams for codimension 2 lattice ideals"
+ "Geometry of complete intersection toric varieties"
+ "A Toric Degeneration of the Grassmannian"
+ "Vector bundles over toric varieties"
+ "Real structures on toric varieties"
+ "Toric Varieties Associated to Graphs"
+ "Three-Dimensional Staircases"
+ "Buchberger's algorithm for Groebner bases"  (Not appropriate)
