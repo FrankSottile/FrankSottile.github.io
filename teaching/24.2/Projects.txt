@@ -2,22 +2,19 @@ Toric Varieties, Fall 2024.
 
 Projects for the end-of-semester presentations
 
-(No one has yet told me officially what they are doing)
-
-
 
 Suggestions (these are broad, we should discuss what one would actually do)
 
-Arithmetic toric varieties
+Arithmetic toric varieties               Jordy, Somak, and Ruzho
 Toric varieties in algebraic statistics
 A-Discriminant
 Stanley's g- Theorem
-Secondary fan of a point configuration and its Toric Variety
+Secondary fan of a point configuration and its toric variety
 SAGBI (or Khovanskii) bases and toric varieties
 Vertically parametrized polynomial systems
 fewnomial bounds via Gale duality
 Complexity one T-varieties (rational)
-Irrational Toric Varieties
+Irrational toric varieties
 [Ask your advisor for a suggestion]
 
 
