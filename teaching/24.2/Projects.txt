@@ -5,7 +5,7 @@ Projects for the end-of-semester presentations
 
 Suggestions (these are broad, we should discuss what one would actually do)
 
-Arithmetic toric varieties               Jordy, Somak, and Ruzho
+Arithmetic toric varieties               Jordy, Somak, and Ruzho  Need to do it December 2
 Toric varieties in algebraic statistics
 A-Discriminant
 Stanley's g- Theorem

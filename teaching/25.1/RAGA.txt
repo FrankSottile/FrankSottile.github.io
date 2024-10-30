@@ -1,0 +1,15 @@
+Real Algebraic Geometry for Applications. 
+
+   Real algebraic geometry is a fundamental input for many
+applications of algebraic geometry.  Its goals and methods 
+are also distinct from classical algebraic geometry.  
+I expect to cover topics such as real solutions to systems 
+of equations, including upper and lower bounds, positivity
+and sums of squares, real toric varieties, and non-standard
+real structures.
+
+  This would be based on parts of my book "Real solutions
+to Equations from Geometry" and three relevant chapters 
+in Theobald's book "Algebraic Geometry for Applications".  
+The expected background is a graduate course in algebra,
+possibly concurrent.
