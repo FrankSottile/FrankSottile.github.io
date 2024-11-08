@@ -1,27 +1,33 @@
 December
 2024
 
-October 
-     October               November              December        
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-                                      1  2   1  2  3  4  5  6  7  
-                       3  4  5  6  7  8  9   8  9 10 11 12 13 14  
-                      10 11 12 13 14 15 16  15 16 17 18 19 20 21  
-                      17 18 19 20 21 22 23  22 23 24 25 26 27 28  
-            31        24 25 26 27 28 29 30  29 30 31       
 November 
  4 HURAC meeting 1 PM
- 6 11:30-12:30 Lunch with UG students?
+ 6 11:30-12:30 Lunch with UG students
+ 7 Colloquium dinner
  8 Algebra and Combinatorics Seminar
  9 Math Circle, advanced
-11 Faculty Senate  
+11 Faculty Senate
+16 2-week window for NSF grant starts  
 19 4:30-6:30 LAUNCH Social Univ. Club 
+
+  November 2024         December 2024      
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                1  2   1  2  3  4  5  6  7  
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14  
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  
+24 25 26 27 28 29 30  29 30 31       
+
 December 
+ 4 9 AM HURAC Meeting
+ 6-23 New Zealand
  9 SIAM AG Minisymposium proposal submissions
  9 Faculty Senate
  9-13 NZMS, AustMS, AMS Joint meeting Auckland
 2025
 January
+ 3-12 Washington
  8-11 JMM Seattle
  13 Faculty Senate
     1:40 BS&W
@@ -35,6 +41,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 26 27 28 29 30 31     23 24 25 26 27 28     23 24 25 26 27 28 29
                                             30 31
 March
+  9 US Daylight savings time
  10 Faculty Senate
  12-18 Schubert calculus in Hong Kong 
  28-30 TAGS 2025
