@@ -5,12 +5,12 @@ Projects for the end-of-semester presentations
 
 Suggestions (these are broad, we should discuss what one would actually do)
 
-Arithmetic toric varieties                        Jordy Lopez and Somak Dutta   9 AM Wednesday December 3
-SAGBI (or Khovanskii) bases and toric varieties   Pooja Joshi and Zijin Xiao
-Differential algebras on toric varieties          Michael Keeler and Yaoze Zou
+Arithmetic toric varieties                        Jordy Lopez and Somak Dutta    *9 AM Wednesday December 3
+SAGBI (or Khovanskii) bases and toric varieties   Pooja Joshi and Zijin Xiao     Either day
+Differential algebras on toric varieties          Michael Keeler and Yaoze Zou   *December 3
 Stanley's g- Theorem                              Derek Wu and Abishek Hariharan Dec 3 ?
-Multigraded Hilbert Scheme                        CJ Bott and Phil Speegle       Dec 4 after John and Manasi
-Divisors on Toric Varieties                       John Ajayi and Manasi Gore     December 4
+Multigraded Hilbert Scheme                        CJ Bott and Phil Speegle       *Dec 4 after John and Manasi
+Divisors on Toric Varieties                       John Ajayi and Manasi Gore     *December 4
 Toric Varieties Package in Macaulay2              Paul Dessauer and Daniel Dale
 
 If 4 talks, every 40 minutes

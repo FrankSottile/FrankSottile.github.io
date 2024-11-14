@@ -50,6 +50,7 @@ July 7-11 SIAM AG Madison, WI
      21-25 FPSAC Sapporo, Japan
      28-1A ISSAC Guanajuato, Mx
 August 6-9 MathFest
+October 20-24 AIM SQuaRE
 November 10-15 ICERM Computation in Representation Theory
 December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.uba.ar/~coalaga/
 2026
