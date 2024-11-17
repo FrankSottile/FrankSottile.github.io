@@ -8,8 +8,35 @@ of equations, including upper and lower bounds, positivity
 and sums of squares, real toric varieties, and non-standard
 real structures.
 
-  This would be based on parts of my book "Real solutions
-to Equations from Geometry" and three relevant chapters 
-in Theobald's book "Algebraic Geometry for Applications".  
-The expected background is a graduate course in algebra,
-possibly concurrent.
+   This is based on parts of my book "Real solutions
+to Equations from Geometry", two chapters 
+in Theobald's book "Real Algebraic Geometry and Optimization", 
+as well as papers and other sources.
+
+Grading is through class attendance and end-of-term presentations.
+
+NOTE:   To sign up for this and for Landsberg's Algebraic Geometry II
+      (both MATH 666), you need to write Briana Hague and ask for a waiver.
+
+Course Outline:
+
+Classical methods for real roots of equations
+ Theorems of Sturm and Descartes
+ Stability and Routh-Hurwicz
+ Hermite trace form
+
+Positive polynomials
+  Positivity and sums of squares
+  Hilbert's 17th problem
+  Positivstellensatz
+  Theorems of Polya, Handelman, Putinar, and Schmudgen
+
+Bounds on numbers of solutions
+  Gale Duality for upper bounds
+  Lower bounds 
+  Conditions for injectivity
+
+Real Toric varieties
+  Real points of toric varieties
+  Non-standard real toric varieties
+  Irrational toric varieties
