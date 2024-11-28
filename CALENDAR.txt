@@ -3,17 +3,17 @@ December
 
 November 
 16 2-week window for NSF grant starts  
-19 4:30-6:30 LAUNCH Social Univ. Club 
 
   November 2024         December 2024      
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-                1  2   1  2  3  4  5  6  7  
- 3  4  5  6  7  8  9   8  9 10 11 12 13 14  
-10 11 12 13 14 15 16  15 16 17 18 19 20 21  
-17 18 19 20 21 22 23  22 23 24 25 26 27 28  
-24 25 26 27 28 29 30  29 30 31       
+                       1  2  3  4  5  6  7  
+                       8  9 10 11 12 13 14  
+                      15 16 17 18 19 20 21  
+                      22 23 24 25 26 27 28  
+      26 27 28 29 30  29 30 31       
 
 December 
+ 3 4 PM Faculty meeting on Hiring
  4 9 AM HURAC Meeting
  6-23 New Zealand
  9 SIAM AG Minisymposium proposal submissions
@@ -25,7 +25,10 @@ January
  8-11 JMM Seattle
  13 Faculty Senate
     1:40 BS&W
-February 10 Faculty Senate
+ 31 January--2 February Symmetries and Singularities in Texas
+February
+  8 - 16 Maria and Gosha visit
+ 10 Faculty Senate
       January               February               March
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
           1  2  3  4                     1                     1
@@ -50,7 +53,9 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28
 27 28 29 30           25 26 27 28 29 30 31  29 30
 May 12 Faculty Senate
-
+    26-30 Fields Institute
+    28-4 June Port TOwnshend
+    7 DC
 July 7-11 SIAM AG Madison, WI
      21-25 FPSAC Sapporo, Japan
      28-1A ISSAC Guanajuato, Mx

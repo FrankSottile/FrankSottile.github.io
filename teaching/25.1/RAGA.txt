@@ -1,29 +1,31 @@
 Real Algebraic Geometry for Applications. 
 
-   Real algebraic geometry is a fundamental input for many
-applications of algebraic geometry.  Its goals and methods 
-are also distinct from classical algebraic geometry.  
-I expect to cover topics such as real solutions to systems 
-of equations, including upper and lower bounds, positivity
-and sums of squares, real toric varieties, and non-standard
+   Real algebraic geometry is  a fundamental input for many
+applications of algebraic geometry.   Its goals and methods
+are  also distinct  from classical  algebraic geometry.   I
+expect to cover topics such as real solutions to systems of
+equations, including upper and lower bounds, positivity and
+sums  of squares,  real toric  varieties, and  non-standard
 real structures.
 
-   This is based on parts of my book "Real solutions
-to Equations from Geometry", two chapters 
-in Theobald's book "Real Algebraic Geometry and Optimization", 
-as well as papers and other sources.
+   This is  based on  parts of my  book "Real  solutions to
+Equations from  Geometry", two chapters in  Theobald's book
+"Real  Algebraic Geometry  and  Optimization",  as well  as
+papers and other sources.
 
 Grading is through class attendance and end-of-term presentations.
 
 NOTE:   To sign up for this and for Landsberg's Algebraic Geometry II
       (both MATH 666), you need to write Briana Hague and ask for a waiver.
 
+Course WWW: https://franksottile.github.io/teaching/25.1/RAGA.html
+
 Course Outline:
 
 Classical methods for real roots of equations
- Theorems of Sturm and Descartes
- Stability and Routh-Hurwicz
- Hermite trace form
+  Theorems of Sturm and Descartes
+  Stability and Routh-Hurwicz
+  Hermite trace form
 
 Positive polynomials
   Positivity and sums of squares
@@ -31,12 +33,12 @@ Positive polynomials
   Positivstellensatz
   Theorems of Polya, Handelman, Putinar, and Schmudgen
 
-Bounds on numbers of solutions
-  Gale Duality for upper bounds
+Bounds on numbers of real solutions
+  Gale duality for upper bounds
   Lower bounds 
   Conditions for injectivity
 
-Real Toric varieties
+Real toric varieties
   Real points of toric varieties
   Non-standard real toric varieties
   Irrational toric varieties
