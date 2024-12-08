@@ -1,20 +1,11 @@
-December
-2024
-
-November 
-16 2-week window for NSF grant starts  
-
-  November 2024         December 2024      
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-                       1  2  3  4  5  6  7  
-                       8  9 10 11 12 13 14  
-                      15 16 17 18 19 20 21  
-                      22 23 24 25 26 27 28  
-      26 27 28 29 30  29 30 31       
+  December 2024      
+Su Mo Tu We Th Fr Sa  
+ 8  9 10 11 12 13 14  
+15 16 17 18 19 20 21  
+22 23 24 25 26 27 28  
+29 30 31              
 
 December 
- 3 4 PM Faculty meeting on Hiring
- 4 9 AM HURAC Meeting
  6-23 New Zealand
  9 SIAM AG Minisymposium proposal submissions
  9 Faculty Senate
@@ -41,10 +32,13 @@ March
   9 US Daylight savings time
  10 Faculty Senate
  12-18 Schubert calculus in Hong Kong 
+ 21-22-23  UH Undergraduate mathematics conference
  28-30 TAGS 2025
  31 Senate meet with Dean  4 PM
-April 14 Faculty Senate
+April
  6-11 Oberwolfach Toric Varieties
+ 14 Faculty Senate
+ 19 9 AM Ernst
       April                  May                   June
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
        1  2  3  4  5               1  2  3   1  2  3  4  5  6  7
@@ -70,4 +64,5 @@ December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.ub
      23-30 ICM Philadelphia
  July/Aug   SIAM Annual meeting (SIAM AG minisymposia)
  Program at the IPAM on Algebraic Geometry and Chemistry
-   During the academic year 2026-7
+  Spring 2027
+ Also ICERM (metric algenbraic geometry), and SLMath (alg combin & tropical)
