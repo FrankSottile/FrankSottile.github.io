@@ -16,6 +16,7 @@ January
  8-11 JMM Seattle
  13 Faculty Senate
     1:40 BS&W
+ 23 10-11 AnSRS4U presentation on DEI compliance for research.
  31 January--2 February Symmetries and Singularities in Texas
 February
   8 - 16 Maria and Gosha visit
@@ -46,15 +47,19 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 13 14 15 16 17 18 19  11 12 13 14 15 16 17  15 16 17 18 19 20 21
 20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28
 27 28 29 30           25 26 27 28 29 30 31  29 30
-May 12 Faculty Senate
-    26-30 Fields Institute
-    28-4 June Port TOwnshend
-    7 DC
-July 7-11 SIAM AG Madison, WI
-     21-25 FPSAC Sapporo, Japan
-     28-1A ISSAC Guanajuato, Mx
+May
+ 12 Faculty Senate
+ 26-30 Fields Institute
+ 28-4 June Port Townshend
+June   7 DC
+July
+  7-11 SIAM AG Madison, WI
+ 21-25 FPSAC Sapporo, Japan
+ 28-1A ISSAC Guanajuato, Mx
 August 6-9 MathFest
-October 20-24 AIM SQuaRE
+October 
+  6-10 Real Algebraic Geometry and Interactions  Nice
+ 20-24 AIM SQuaRE
 November 10-15 ICERM Computation in Representation Theory
 December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.uba.ar/~coalaga/
 2026
