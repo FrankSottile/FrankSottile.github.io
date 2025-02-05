@@ -1,12 +1,16 @@
-This is a series of informal discussions about Grassmannians and flag varieties,
-with the goal of describing both how to represent Schubert problems on a
-computer and some goals of this computational study.   This includes reality,
-Galois groups, and new work around the Wronski map.
+Computing Schubrt Problems
+
+This is a series of  informal discussions about Grassmannians and flag
+varieties, with the goal of  describing both how to represent Schubert
+problems on  a computer  and some goals  of this  computational study.
+This includes reality, Galois groups,  and new work around the Wronski
+map.
 
 Discussion 1:  28 January 2025
 
-Defined Grassmannian and its projective embedding.  Explained Stiefel
-coordinates and began to discuss it decomposition into Schubert cells.
+Defined  the Grassmannian  and  its  projective embedding.   Explained
+Stiefel  coordinates  and  began  to  discuss  it  decomposition  into
+Schubert cells.
 
 Discussion 2:  4 February 2025
 
