@@ -2,10 +2,10 @@
 2025
 February
   8 - 16 Maria and Gosha visit
- 10 Faculty Senate
- 12 UPC Meeting 4-5
+ 19 11 AM IPAM meeting
  22 Math and Stats Fair  Need assistants
  28 Colleen Robichaux
+    8 AM BSW
    February 2025           March 2025       
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
                                          1  
@@ -15,18 +15,21 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 23 24 25 26 27 28     23 24 25 26 27 28 29  
                       30 31    
 March
-  3 UT-TAMU Joint senate meeting in Austin
+  3 Noon to 5 PM UT-TAMU Joint senate meeting in Austin
  7/8 --- 16/17 Trip to Hawaii and Stanford
   9 US Daylight savings time
  10 Faculty Senate
  21-22-23  UH Undergraduate mathematics conference
  24-27 External review
+ 24  9-9:45 EC mtg with ERT
+ 25  9:45-10:30 UPC mtg w/ ERT
  28-30 TAGS 2025
  31 Senate meet with Dean  4 PM
 April
  6-11 Oberwolfach Toric Varieties
  14 Faculty Senate
- 19 9 AM Ernst
+ 16 9 AM Ernst
+ 30 Tell Eva Donnelly  dates for AG 25 (for hotel)
       April                  May                   June
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
        1  2  3  4  5               1  2  3   1  2  3  4  5  6  7
@@ -45,8 +48,9 @@ July
  28-1A SIAM Annual Meeting, Montreal
 August 6-9 MathFest
 October 
-  4-5 AMS meeting in Tulane.
+  4-5 AMS meeting in Tulane.   I cannot attend
   6-10 Real Algebraic Geometry and Interactions  Nice
+ 18-19 AMS Meeting in St. Louis University
  20-24 AIM SQuaRE
 November 10-15 ICERM Computation in Representation Theory
 December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.uba.ar/~coalaga/
