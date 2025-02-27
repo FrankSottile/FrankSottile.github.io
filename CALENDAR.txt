@@ -1,9 +1,6 @@
 
 2025
 February
- 19 11 AM IPAM meeting
- 22 Math and Stats Fair  
- 23-24 Thoms Yahl
  28 Colleen Robichaux
     8 AM BSW
    February 2025           March 2025       
@@ -11,24 +8,27 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                                          1  
                        2  3  4  5  6  7  8  
                        9 10 11 12 13 14 15  
-16 17 18 19 20 21 22  16 17 18 19 20 21 22  
-23 24 25 26 27 28     23 24 25 26 27 28 29  
+                      16 17 18 19 20 21 22  
+      25 26 27 28     23 24 25 26 27 28 29  
                       30 31    
 March
   3 Noon to 5 PM UT-TAMU Joint senate meeting in Austin
  7/8 --- 16/17 Trip to Hawaii and Stanford
   9 US Daylight savings time
  17 Faculty Senate
+     Set up end-of-term undergraduate research symposium
  22-23  UH Undergraduate mathematics conference
  24-27 External review
  24  9-9:45 EC mtg with ERT
  25  9:45-10:30 UPC mtg w/ ERT
+ 27 Merri Stillman's exam 14-15:30 (zoom)
  28-30 TAGS 2025
  31 Senate meet with Dean  4 PM
 April
  6-11 Oberwolfach Toric Varieties
  14 Faculty Senate
  16 9 AM Ernst
+ 23 12:30 PM N Day Prelim
  30 Tell Eva Donnelly  dates for AG 25 (for hotel)
       April                  May                   June
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
@@ -38,11 +38,13 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 20 21 22 23 24 25 26  18 19 20 21 22 23 24  22 23 24 25 26 27 28
 27 28 29 30           25 26 27 28 29 30 31  29 30
 May
+  8 7 PM Reed (Math majors graduation)
  12 Faculty Senate
  26-30 Fields Institute
  28-4 June Port Townshend
 June   7 DC
 July
+  3 arrive in Madison ?
   7-11 SIAM AG Madison, WI
  21-25 FPSAC Sapporo, Japan
  28-1A SIAM Annual Meeting, Montreal
@@ -63,6 +65,7 @@ December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.ub
     8--18 FoCM Vienna
     23-30 ICM Philadelphia
  July/Aug   SIAM Annual meeting (SIAM AG minisymposia)
- Program at the IPAM on Algebraic Geometry and Chemistry
   Spring 2027
  Also ICERM (metric algebraic geometry), and SLMath (alg combin & tropical)
+ Program at the IPAM on Algebraic Geometry and Chemistry
+
