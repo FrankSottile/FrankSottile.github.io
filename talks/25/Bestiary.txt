@@ -1,0 +1,18 @@
+To a <b>Z</b><sup>d</sup>-periodic weighted graph with vertices <i>V</i>, we may associated a periodic graph operator that acts on &ell;<sub>2</sub>(<i>V</i>).   After Floquet transform, we obtain its Bloch variety, which is an algebraic hypersurface in <b>T</b><sup>d</sup>&times;<b>R</b>  whose projection to <b>R</b> is the spectrum of the operator.   Features on Bloch varieties such as Dirac (double) points, critical points, and their level sets (Fermi varieties) reflect spectral properties of the operator.<br>  &nbsp; &nbsp; With students Faust and Robinison, and using the Brazos cluster, we investigated many thousands of small periodic graphs, recording invariants and features of their Bloch anf Fermi varieties.  In this talk, I will briefly discuss the background and present some examples of interesting behavior of Bloch varieties that we uncovered. 
+
+
+A Bestiary of Bloch Varieties
+
+To a  Z^d-periodic weighted graph with  vertices V, we may  associated a
+periodic graph operator  that acts on l_2(V).   After Floquet transform,
+we obtain its  Bloch variety, which is an algebraic  hypersurface in T^d
+\times  R  whose projection  to  R  is  the  spectrum of  the  operator.
+Features  on Bloch  varieties such  as Dirac  (double) points,  critical
+points,  and  their  level   sets  (Fermi  varieties)  reflect  spectral
+properties of the operator.
+
+With  students Faust  and Robinison,  and using  the Brazos  cluster, we
+investigated  many   thousands  of  small  periodic   graphs,  recording
+invariants and  features of  their Bloch anf  Fermi varieties.   In this
+talk, I will briefly discuss the background and present some examples of
+interesting behavior of Bloch varieties that we uncovered.
