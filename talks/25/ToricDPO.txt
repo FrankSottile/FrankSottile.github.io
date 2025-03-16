@@ -1,0 +1,19 @@
+Toric compactification of periodic graph operators
+
+A periodic  graph is  a discretization of  a crystal,  with difference
+operators  being the  analog  of the  Schroedinger  equation.  In  the
+1990's    Gieseker,    Knorrer,    and   Trubowicz    used    toroidal
+compactifications  to  study  operators  for a  particular  family  of
+2-dimensional   periodic   graphs.    Since  then,   the   theoretical
+underpinnings   of   toric   varieties  has   advanced   considerably.
+Similarly, many researchers in mathematical  physics have begun to use
+some aspects of toric varieties  and more generally algebraic geometry
+and commutative algebra in their work.
+
+In this talk, I will sketch some of the algebraic-geometric aspects of
+periodic graph  operators, and then discuss  how some of these  may be
+extended  to  certain projective  toric  varieties  associated to  the
+operator.  This  is joint  work with Matthew  Faust, Jordy  Lopez, and
+Stephen Shipman.
+
+
