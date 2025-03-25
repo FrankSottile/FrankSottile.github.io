@@ -1,6 +1,4 @@
 2025
-     Set up end-of-term undergraduate research symposium
- 21 11:00 IPAM zoom meeting
  22-23  UH Undergraduate mathematics conference
  24-27 Tianyi Yu's visit
  24-27 External review
@@ -21,6 +19,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
  6-11 Oberwolfach Toric Varieties
  14 Faculty Senate
  16 9 AM Ernst
+    Noon Lunch with honors students
  23 12:30 PM N Day Prelim
  30 Tell Eva Donnelly  dates for AG 25 (for hotel)
 May
@@ -55,6 +54,14 @@ October
  18-19 AMS Meeting in St. Louis University
  20-24 AIM SQuaRE
 November 10-15 ICERM Computation in Representation Theory
+   November 2025         December 2025          January 2026
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1      1  2  3  4  5  6               1  2  3
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30 31
+30
 December 15-17 Conference for Alicia Dickenstein Buenos Aires: http://mate.dm.uba.ar/~coalaga/
 2026
  January
@@ -69,7 +76,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 15 16 17 18 19 20 21  15 16 17 18 19 20 21  12 13 14 15 16 17 18
 22 23 24 25 26 27 28  22 23 24 25 26 27 28  19 20 21 22 23 24 25
                       29 30 31              26 27 28 29 30
- March 9-13 SPring Break TAMU
+ March 9-13 Spring Break TAMU
  April 5: Easter (Avoid)
  June 8-12 Edinburgh
  July  
