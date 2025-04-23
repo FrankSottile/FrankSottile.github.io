@@ -1,0 +1,10 @@
+Platonic solids in the next dimension
+
+We will discuss the six regular solids in dimension 4,
+including building a projection of the 4-cube, along
+with viewing some other models. 
+
+Visual abstract:  https://franksottile.github.io/talks/17/4D/index.html
+
+Instructions for making a 4-cube:
+https://franksottile.github.io/research/stories/hyperCube/index.html
