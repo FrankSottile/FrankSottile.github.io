@@ -1,0 +1,108 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title: graph.eps
+%%Creator: Frank Sottile
+%%Pages:  1
+%%BoundingBox: 0 0 129 129
+%%EndComments
+20 dict begin
+%10 dict begin
+gsave
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Draws box from (a,b) to (c,d) 
+/BOX {/d exch def /c exch def /b exch def /a exch def 
+        a b moveto c b lineto c d lineto a d lineto closepath} def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%30 35 translate 3 3 scale 1 setlinewidth 1 0 1 setrgbcolor 0 0 129 129 BOX stroke
+%
+%
+0 0 129 129 BOX clip
+
+%%%%  41 + 2 = 129/3 
+/unit 41 def
+/ax {unit 0.28 mul} def
+/ay {unit 0.26 mul} def
+/bx {unit 0.60 mul} def
+/by {unit 0.62 mul} def
+
+/rad 1.8 def
+/arr {newpath 0 0 moveto unit 0 rlineto -4 2 rmoveto 4 -2 rlineto -4 -2 rlineto stroke} def
+/fdom {0 0 0.7 setrgbcolor
+       0.8 setlinewidth
+       newpath
+        ax ay moveto bx by lineto stroke
+       0 0.3 1 setrgbcolor
+        0.7 setlinewidth
+       newpath
+        ax ay moveto ax unit add  0 rlineto 
+%        ax ay moveto bx unit add by lineto
+%	bx by moveto unit   0 rlineto 
+	bx by moveto ax unit add  ay lineto 
+       stroke
+       0.3 0 1 setrgbcolor
+       newpath
+        ax ay moveto 0 ay unit add rlineto 
+        ax ay moveto bx  by unit add lineto
+%	bx by moveto 0   unit rlineto 
+%	bx by moveto ax  ay unit add lineto 
+	stroke
+
+       0 setlinewidth
+       1 1 0.2 setrgbcolor
+       ax ay   rad 0 360 arc fill
+       bx by   rad 0 360 arc fill
+       0.8 setlinewidth
+       1 0 1 setrgbcolor
+       ax ay   rad 0 360 arc stroke
+       bx by   rad 0 360 arc stroke } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 setlinejoin
+1 setlinecap
+0.7 setlinewidth
+0 0 1 setrgbcolor
+
+
+unit neg  unit neg  translate
+3 3 translate
+
+%
+%   These are the 'grid' lines
+%
+[0.2 1.8] 0 setdash
+0.7 1 0 setrgbcolor
+%0 1 0 setrgbcolor
+0.9 setlinewidth
+newpath
+0 1 4 {/u exch def  0   u unit mul moveto 4.5 unit mul   0 rlineto stroke   } for
+0 1 4 {/u exch def  u unit mul   0 moveto  0  4.5 unit mul rlineto stroke   } for
+stroke
+[ ] 0 setdash
+
+0.7 1 1 setrgbcolor
+0 setlinewidth 
+newpath unit 2 mul unit 2 mul moveto  unit 0 rlineto 0 unit rlineto unit neg 0 rlineto closepath fill
+
+0 1 4  {/u exch def  gsave  0  unit u mul translate
+        0 1 4  {/t exch def  gsave unit t mul 0 translate fdom grestore } for
+         grestore} for 
+
+0.7 setlinewidth
+[2 2] 0 setdash
+1 0 0 setrgbcolor
+newpath unit 2 mul unit 2 mul moveto  unit 0 rlineto 0 unit rlineto unit neg 0 rlineto closepath  stroke
+[ ] 0 setdash
+
+gsave
+0.7 setlinewidth
+0 0 0 setrgbcolor
+unit 2 mul unit 2 mul translate arr
+90 rotate arr
+0 setlinewidth
+0 0 1.5 0 360 arc fill
+grestore
+
+showpage
+grestore
+end
+%%EOF

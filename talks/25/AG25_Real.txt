@@ -1,0 +1,15 @@
+Non-standard reality, an arbitrage opportunity
+
+Abstract.  In  the real world,  it is common to  encounter a
+need to study real algebraic varieties computationally, when
+the  real structure  is  nonstandard.   Such alternate  real
+structures come  from an  antiholomorphic involution  on the
+ambient  complex space.   Symbolic  methods  to handle  such
+alternate  reality are  either lacking  or require  a costly
+reformulation as a standard real object.
+
+Numerical algebraic  geometry should be able  to avoid these
+pitfalls, as the  real points (in any model  of reality) are
+just those  fixed under  the antiholomorphic  involution.  I
+will illustrate  some of  these ideas  with examples  I have
+encountered in my own work.

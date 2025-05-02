@@ -1,0 +1,77 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title: hexagonal_graph.eps
+%%Creator: Frank Sottile
+%%Pages:  1
+%%BoundingBox: 0 0 86 60
+%%EndComments
+10 dict begin
+gsave
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Draws box from (a,b) to (c,d) 
+/BOX {/d exch def /c exch def /b exch def /a exch def 
+        a b moveto c b lineto c d lineto a d lineto closepath} def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%10 20 translate 3 3 scale 1 setlinewidth 1 0 1 setrgbcolor 0 0 86 60 BOX stroke
+0 0 86 60 BOX clip
+
+/step 15 def
+/xsl {step 3 sqrt mul 2 div} def
+/ysl {step 2 div} def
+/rad 1.8 def
+/arr {newpath 0 0 moveto 2 xsl mul 0 rlineto -4 2 rmoveto 4 -2 rlineto -4 -2 rlineto stroke
+      newpath 0 0 moveto  xsl  ysl step add rlineto stroke
+      gsave  xsl  ysl step add  translate  60 rotate
+      newpath -4 2 moveto 4 -2 rlineto -4 -2 rlineto stroke  grestore
+     } def
+
+/fdom {0 0 1 setrgbcolor
+       0.7 setlinewidth
+       newpath xsl  0  moveto  0 ysl rlineto xsl -2 div  ysl 2 div rlineto xsl 2 div  ysl -2 div rmoveto 
+               xsl ysl rlineto 0 ysl rlineto      0      ysl neg   rmoveto xsl 2 div  ysl -2 div rlineto stroke   
+       0 setlinewidth
+       1 1 0.2 setrgbcolor
+       xsl       ysl       rad 0 360 arc fill
+       xsl 2 mul ysl 2 mul rad 0 360 arc fill
+       0.8 setlinewidth
+       1 0 1 setrgbcolor
+       xsl       ysl       rad 0 360 arc stroke
+       xsl 2 mul ysl 2 mul rad 0 360 arc stroke } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 setlinejoin
+1 setlinecap
+0.7 setlinewidth
+0 0 1 setrgbcolor
+
+xsl -3.2 mul -4 translate
+
+0.7 1 1 setrgbcolor
+0 setlinewidth 
+newpath xsl 5 mul  step 1.5 mul moveto  xsl 2 mul 0 rlineto xsl  ysl step add rlineto
+        xsl -2 mul 0 rlineto closepath fill
+
+0 1 2  {/u exch def  gsave  xsl u mul  ysl step add u mul translate
+         0 1 5  {/t exch def  gsave xsl 2 mul t mul  0 translate fdom grestore } for
+         grestore} for 
+
+0.7 setlinewidth
+[2 2] 0 setdash
+1 0 0 setrgbcolor
+newpath xsl 5 mul  step 1.5 mul moveto  xsl 2 mul 0 rlineto xsl  ysl step add rlineto
+        xsl -2 mul 0 rlineto closepath stroke
+
+
+
+[ ] 0 setdash
+0.7 setlinewidth
+0 0 0 setrgbcolor
+xsl 5 mul  step 1.5 mul  translate
+arr
+0 setlinewidth
+0 0 1.5 0 360 arc fill
+	
+showpage
+grestore
+end
+%%EOF

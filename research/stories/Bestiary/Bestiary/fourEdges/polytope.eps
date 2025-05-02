@@ -1,0 +1,161 @@
+%!PS-Adobe-3.0 EPSF
+%%Title: Hex_Polytope.eps
+%%Creator:  Frank Sottile
+%%Pages: 1
+%%BoundingBox: 0 0 400 400
+%%EndComments
+25 dict begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Axes
+%
+/Ax [-3  2.5] def
+/Ay [-2.0  2.0] def
+/Az [-1.0  3.0] def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Points to be drawn in a polytope
+%
+/Points [ [-2 0 0] [-1 -1 0] [-1 0 0] [-1 1 0] [0 -1 0] [0 0 0] [0 1 0] [1 -1 0] [1 0 0] [1 1 0] [2 0 0] [0 0 1]  [0 0 2] ]  def
+%             0        1         2        3        4       5       6       7        8       9      10      11        12
+/Apex {Points 12 get 2 get} def
+/Polytope [ 0 3 9 10 7 12 ]  def
+/dDots [ 0 3 6 7 9 10 12 ]  def
+/bDots [ 1 2 4 5 8 11 ]  def
+%
+% Indices of edges to draw
+%
+/Edges [ [0 1] [0 3] [1 7] [3 9] [9 10] [7 10] [0 12] [1 12] [3 12] [9 12] [7 12] [10 12] ]  def
+%          0     1     2     3     4      5      6      7      8      9      10      11
+/dEdges [ 1 3 4 5 6 8 9 10 11 ]  def
+/bEdges [ 0 2 7 ]  def
+/fEdges [ 9 ]  def
+/sfEdg  [ 8 11 ]  def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+/sc 0.7 def
+/edge 1.0 def
+/rad edge 2.5 mul def
+%
+%  This is the linear projection map  R^3 --> R^2.
+%
+/x [ -29.3 -9.8 ] def
+/y [ 34.5 -7 ] def
+/z [ 0.0 46.0 ] def
+%
+% The Colors
+%
+/polytopeColor {1 0.5 1 } def
+%/polytopeColor {0 1 1 } def
+/edgeColor {0 0 1} def
+/backEdgeColor {0.2 0.2 1} def
+/dotsColor {0 0.7 0} def
+/backDotsColor  {0.3 0.6 0.3} def
+%
+%  The linear map  pt takes an array of length 3 and produces the corresponding point
+%
+/pt {1 dict begin
+       /pts exch def 
+       pts 0 get x 0 get mul  pts 1 get y 0 get mul  pts 2 get z 0 get mul add add sc mul
+       pts 0 get x 1 get mul  pts 1 get y 1 get mul  pts 2 get z 1 get mul add add sc mul
+     } def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Returns x1 + t*(y1-x1)  x2 + t*(y2-x2) : x1 x2 y1 y2 t conv
+%  x1 y1 x2 y2 t conv
+/conv {/t exch def /y2 exch def /x2 exch def /y1 exch def /x1 exch def
+       x2 x1 sub t mul x1 add   y2 y1 sub t mul y1 add  } def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Draws box from (a,b) to (c,d)
+/BOX {/d exch def /c exch def /b exch def /a exch def
+        a b moveto c b lineto c d lineto a d lineto closepath} def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%10 50 translate 3 3 scale 1 1 0 setrgbcolor
+0 0 400 400 BOX clip %stroke
+%
+4 4 scale
+50 20 translate
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     From here on, it is the program
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Axes
+%
+edge 2 div setlinewidth
+0 0 0 setrgbcolor
+newpath [Ax 0 get  0  0 ] pt moveto [Ax 1 get  0  0 ] pt lineto stroke
+newpath [ 0  Ay 0 get 0 ] pt moveto [ 0  Ay 1 get 0 ] pt lineto stroke
+newpath [ 0  0  Az 0 get] pt moveto [ 0  0  Az 1 get] pt lineto stroke
+%  Polytope outline
+%
+0 setlinewidth
+polytopeColor setrgbcolor
+newpath Points Polytope 0 get get pt moveto
+        Polytope {1 dict begin /n exch def  Points n get pt lineto } forall closepath fill
+%
+%  Edges behind the polytope
+%
+[1.5 1] 0 setdash
+edge 0.5 mul setlinewidth
+backEdgeColor  setrgbcolor
+bEdges {2 dict begin /n exch def /Edgen {Edges n get} def
+       newpath Points Edgen 0 get get pt moveto Points Edgen 1 get get pt lineto stroke} forall
+[] 0 setdash
+%
+% Axes behind the polytope
+%
+% first mask for the vertical edge
+%
+edge 3 mul setlinewidth
+polytopeColor setrgbcolor
+newpath 0 edge 2 mul moveto 0  z 1 get Apex mul 0.4 mul sc mul lineto stroke
+%
+% Now draw the axes
+%
+[1 2] 0 setdash
+edge 3 div setlinewidth
+0.2 0.2 0.2 setrgbcolor
+newpath [Ax 0 get  0  0 ] pt moveto [Ax 1 get  0  0 ] pt lineto stroke
+newpath [ 0  Ay 0 get 0 ] pt moveto [ 0  Ay 1 get 0 ] pt lineto stroke
+newpath [ 0  0  Az 0 get] pt moveto [ 0  0  Az 1 get] pt lineto stroke
+[] 0 setdash
+%
+%  Dot behind the polytope
+%
+0 setlinewidth
+backDotsColor setrgbcolor
+bDots { 1 dict begin /n exch def Points n get pt rad 0.7 mul 0 360 arc fill } forall
+%
+% Front edges masking everything behind
+%
+edge 4 mul setlinewidth
+polytopeColor setrgbcolor
+fEdges {2 dict begin /n exch def /Edgen {Edges n get} def
+       newpath Points Edgen 0 get get pt  Points Edgen 1 get get pt  0.08 conv moveto 
+               Points Edgen 0 get get pt  Points Edgen 1 get get pt  0.92 conv lineto stroke } forall
+%
+sfEdg   {2 dict begin /n exch def /Edgen {Edges n get} def
+       newpath Points Edgen 0 get get pt  Points Edgen 1 get get pt  0.1 conv moveto 
+               Points Edgen 0 get get pt  Points Edgen 1 get get pt  0.7 conv lineto stroke } forall
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Draws the Edges
+%
+edge setlinewidth
+edgeColor setrgbcolor
+dEdges {2 dict begin /n exch def /Edgen {Edges n get} def
+        newpath Points Edgen 0 get get pt moveto Points Edgen 1 get get pt lineto stroke} forall
+%
+%  Draws the dots
+%
+0 setlinewidth
+dotsColor setrgbcolor
+dDots { 1 dict begin /n exch def Points n get pt rad 0 360 arc fill } forall
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+showpage
+grestore
+end
+%%EOF

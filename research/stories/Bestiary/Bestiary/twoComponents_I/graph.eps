@@ -1,0 +1,131 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title: twoComponents_graph.eps
+%%Creator: Frank Sottile
+%%Pages:  1
+%%BoundingBox: 0 0 242 122 
+%%EndComments
+10 dict begin
+gsave
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    Draws box from (a,b) to (c,d) 
+/BOX {/d exch def /c exch def /b exch def /a exch def 
+        a b moveto c b lineto c d lineto a d lineto closepath} def
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%10 40 translate 2 2 scale 1 setlinewidth 1 0 1 setrgbcolor 0 0 242 122 BOX stroke
+%
+0 0 242 122 BOX clip
+
+/step 20 def
+/xsl {step 3 sqrt mul 2 div} def
+/ysl {step 2 div} def
+/rad 1.8 def
+/arr {newpath 0 0 moveto 2 xsl mul 0 rlineto -4 2 rmoveto 4 -2 rlineto -4 -2 rlineto stroke
+      newpath 0 0 moveto  xsl  ysl step add rlineto stroke
+      gsave  xsl  ysl step add  translate  60 rotate
+      newpath -4 2 moveto 4 -2 rlineto -4 -2 rlineto stroke  grestore
+     } def
+
+/fdom {0 0.1 0.8 setrgbcolor
+       0.8 setlinewidth
+        newpath xsl       ysl         moveto  xsl 2 mul  step 2 mul rlineto stroke
+        newpath xsl       ysl         moveto  xsl 3 mul  ysl        rlineto stroke
+        newpath xsl 4 mul ysl 2 mul   moveto  xsl  ysl neg rlineto stroke
+        newpath xsl 3 mul ysl 5 mul   moveto  xsl  ysl neg rlineto stroke
+        newpath xsl 4 mul step 2 mul  moveto  xsl 2 mul  step 2 mul rlineto stroke
+        newpath xsl 4 mul step 2 mul  moveto  xsl 3 mul  ysl rlineto stroke
+
+      1 0 0.8 setrgbcolor
+        newpath xsl 2 mul ysl 2 mul  moveto  xsl  ysl neg rlineto stroke
+        newpath xsl 3 mul ysl        moveto  xsl 2 mul  step 2 mul rlineto stroke
+        newpath xsl 3 mul ysl        moveto   xsl 3 mul  ysl        rlineto stroke
+
+        newpath xsl 2 mul ysl 4 mul  moveto   xsl 3 mul  ysl        rlineto stroke
+        newpath xsl 5 mul ysl 5 mul  moveto   xsl        ysl neg    rlineto stroke
+        newpath  xsl 2 mul ysl 4 mul       moveto  xsl 2 mul  step 2 mul rlineto stroke
+
+	
+      0 setlinewidth
+       1 1 0.2 setrgbcolor
+       xsl       ysl          rad 0 360 arc fill 
+       xsl 4 mul step 2 mul   rad 0 360 arc fill
+       %
+       xsl 2 mul ysl 4 mul rad 0 360 arc fill
+       xsl 3 mul ysl       rad 0 360 arc fill
+
+       %
+       0.7 1 0.7 setrgbcolor
+       xsl 2 mul ysl 2 mul rad 0 360 arc fill
+       xsl 5 mul ysl 5 mul rad 0 360 arc fill
+       %
+       xsl 3 mul step 2.5 mul rad 0 360 arc fill
+       xsl 4 mul step        rad 0 360 arc fill
+
+       
+       0.8 setlinewidth
+       1 0 1 setrgbcolor
+       xsl       step 0.5 mul rad 0 360 arc stroke
+       xsl 3 mul step 2.5 mul rad 0 360 arc stroke
+       xsl 4 mul step         rad 0 360 arc stroke
+       xsl 4 mul step 2 mul   rad 0 360 arc stroke
+       
+       0 0.6 0.5 setrgbcolor
+       xsl 2 mul ysl 2 mul  rad 0 360 arc stroke
+       xsl 2 mul ysl 4 mul  rad 0 360 arc stroke
+       xsl 3 mul ysl        rad 0 360 arc stroke
+       xsl 5 mul ysl 5 mul rad 0 360 arc stroke
+
+%       [2 2] 0 setdash
+%       newpath 0 0 moveto xsl 4 mul 0 rlineto xsl 2 mul step 3 mul rlineto xsl -4 mul 0  rlineto closepath stroke
+%       [] 0 setdash
+      } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 setlinejoin
+1 setlinecap
+0.7 setlinewidth
+0 0 1 setrgbcolor
+
+xsl -11.5 mul ysl -3 mul translate
+
+gsave
+0 setlinewidth 
+
+1 1 0.5 setrgbcolor
+newpath xsl 18 mul ysl 6 mul moveto  xsl 4 mul 0 rlineto xsl 2 mul ysl 6 mul rlineto
+        xsl -4 mul 0 rlineto closepath fill
+
+
+0.7 1 1 setrgbcolor
+newpath xsl 14 mul ysl 6 mul moveto  xsl 2 mul 0 rlineto xsl  ysl 3 mul rlineto
+        xsl -2 mul 0 rlineto closepath fill
+
+
+0.7 setlinewidth
+[2 2] 0 setdash
+1 0 0 setrgbcolor
+newpath xsl 14 mul ysl 6 moveto  xsl 2 mul 0 rlineto xsl  ysl 3 mul rlineto
+        xsl -2 mul 0 rlineto closepath stroke
+
+
+
+[ ] 0 setdash
+0.7 setlinewidth
+0 0 0 setrgbcolor
+
+xsl 14 mul ysl 6 mul  translate
+arr
+0 setlinewidth
+0 0 1.5 0 360 arc fill
+grestore
+
+0 1 2  {/u exch def  gsave  xsl 2 mul u mul  step 3 mul u mul translate
+         1 1 5  {/t exch def  gsave xsl 4 mul t mul  0 translate fdom grestore } for
+         grestore} for 
+
+
+
+showpage
+grestore
+end
+%%EOF
