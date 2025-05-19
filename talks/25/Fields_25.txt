@@ -1,5 +1,15 @@
+Algebraic Aspects of Periodic Operators
 
+Frank Sottile  I: Background
 
-Natural questions concerning the spectra of operators on periodic graphs, including tight-binding models in quantum mechanics, are expressed in terms of module endomorphisms and polynomials.  Hence these problems are amenable to study using ideas from commutative algebra and algebraic geometry.  This is a new application of algebra with interesting and consequential open problems.  We will present the background, introduce the basic ideas and questions in this area, and present problems that are ripe for further study by the participants.
+Natural questions concerning the spectra of operators on periodic
+graphs, including tight-binding models in quantum mechanics, are
+expressed in terms of module endomorphisms and polynomials.
+Hence these problems are amenable to study using ideas from
+commutative algebra and algebraic geometry.  This is a new
+application of algebra with interesting and consequential open
+problems.  We will present the background, introduce the basic
+ideas and questions in this area, and present problems that are
+ripe for further study by the participants.
 
 
