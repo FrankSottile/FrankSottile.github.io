@@ -13,3 +13,10 @@ ideas and questions in this area, and present problems that are
 ripe for further study by the participants.
 
 
+Second Lecture:
+
+Stephen Shipman  Consequences of reducible dispersion polynmial
+
+Matthew Faust    Isospectrality (parameter identification) of Bloch/Fermi Variety
+
+Frank Sottile    Commutative algebra of (H(z)-\lambda I)
