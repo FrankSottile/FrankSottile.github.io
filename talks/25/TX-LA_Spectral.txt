@@ -1,0 +1,7 @@
+Families of graphs whose Bloch varieties are perfect Morse functions
+
+A Bloch variety of a Z^d periodic graph with m orbits of vertices has at least 2^d m critical points. (These are at the corner points.)
+
+I will describe two families of Z^d periodic graphs whose Bloch varieties have only these critical points.  Such graphs satisfy Kuchment's Spectral Edges nondegeneracy conjecture.
+
+This is joint work with Matthew Faust.
