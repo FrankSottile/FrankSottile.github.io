@@ -1,14 +1,15 @@
 2025
 
 August
- 11 11:00 Meet Student
-    15:00 Faculty Senate
  21 8 AM Dentist
  25 First day of classes
  27 16:30 AMS town hall
- 29 Talkj in MPHA seminar
+ 29 Talk in MPHA seminar
 September 
- 3 Noon PUFC lunch
+  3 Noon PUFC lunch
+  8 12:30 Churchill interview
+ 11 4 PM  Marshall intrview
+ 19 Talk in ACS
 26-28 SIAM TX-LA, Austin
 29-30 DiPrima Lecture
  29- October 3 Sarah at Orsay
@@ -22,7 +23,6 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 31                                                                
 October 
   2 Noon PUFC lunch
-  6-10 Real Algebraic Geometry and Interactions  Nice
  18-19 Sarah and Frank at the AMS Meeting in St. Louis University
  20-24 Montreal
 November
