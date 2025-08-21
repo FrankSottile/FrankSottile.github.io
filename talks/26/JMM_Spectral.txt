@@ -1,0 +1,3 @@
+Periodic graphs whose band functions are perfect Morse functions
+
+For a periodic graph G
