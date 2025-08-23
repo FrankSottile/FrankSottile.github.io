@@ -1,3 +1,14 @@
-Periodic graphs whose band functions are perfect Morse functions
+Families of graphs satisfying the spectral edges conjecture
 
-For a periodic graph G
+A Bloch variety of a Z^d periodic graph with m orbits of vertices
+and  isolated  critical  points  has  at  least  2^d  m  critical
+points.  (These  occur  over  the  corner  points,  those  points
+satisfying z^2=1.)
+
+I will describe  two families of Z^d periodic  graphs whose Bloch
+varieties have  only these critical points.   Such graphs satisfy
+Kuchment's  spectral edges  nondegeneracy conjecture.   The first
+family  are  graphs  whose  Newton  polytope  has  base  a  cross
+polytope, while the second are given in terms of the graph.
+
+This is joint work with Matthew Faust.

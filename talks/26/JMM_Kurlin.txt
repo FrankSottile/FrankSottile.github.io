@@ -1,1 +1,12 @@
-Algebraic geometry of periodic graphs
+Algebraic geometry of periodic graph operators
+
+Understanding the spectrum of the Schr\"odinger operator in a periodic
+medium is a  fundamental problem in mathematical physics  that is best
+approached using methods from analysis.   The discrete version of this
+concerns operators on periodic graphs.   In this discrete version, the
+primary  objects  are real  algebraic  varieties,  and thus  algebraic
+geometry  becomes   relevant  for  the  study   of  discrete  periodic
+operators.   The purpose  of  this talk  will be  to  explain this  to
+algebraic  geometers, and  describe  some results  obtained from  this
+perspective, as  well as some computational  and combinatorial aspects
+of this study.
