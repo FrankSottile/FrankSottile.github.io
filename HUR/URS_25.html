@@ -115,7 +115,15 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <tr><td></td>
-    <td>The Material Point Method (MPM) is a numerical method useful for efficiently simulating large deformation solids problems that are typically difficult for other numerical methods like Finite Element Methods (FEM). However, issues with the original MPM formulation such as cell crossing instability and an inadequate handling of prestress often lead to unwanted oscillations and other errors like incorrect computed wave speeds. In recent years, the Dual Domain Material Point (DDMP) and Local Stress Difference (LSD) enhancements to MPM were introduced to mitigate both of these issues respectively, and such enhancements have allowed the application of MPM to more difficult problems.</td> 
+    <td>The Material Point Method (MPM) is a numerical method useful for efficiently simulating large deformation solids
+    problems that are typically difficult for other numerical methods like Finite Element Methods (FEM). However, issues
+    with the original MPM formulation such as cell crossing instability and an inadequate handling of prestress often lead
+    to unwanted oscillations and other errors like incorrect computed wave speeds. In recent years, the Dual Domain
+    Material Point (DDMP) and Local Stress Difference (LSD) enhancements to MPM were introduced to mitigate both of these
+      issues respectively, and such enhancements have allowed the application of MPM to more difficult problems.<br>
+     <br>
+In this poster, we present MPM simulations of an exploding steel spherical shell which make use of the aforementioned DDMP and LSD enhancements. Achieving physical fragmentation behavior for this problem has proven difficult in the past, but such simulations (when paired with a custom mesh and particle distribution) are seen to yield qualitatively similar results to an experiment. Additionally, Discontinuous Galerkin (DG) simulations are performed on the canonical flow over cylinder problem. Ultimately, these simulations are preliminary validating steps toward eventually coupling DG and MPM in fluid-structure interaction simulations (DG for the fluid, MPM for the structure).
+    </td> 
   </tr>
   <!---------------------------------------------------------------------------------------------------->
  
