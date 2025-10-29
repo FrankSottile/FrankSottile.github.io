@@ -1,0 +1,216 @@
+%HW09.tex
+%
+% Ninth Homework for Graduate Algebra
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\KK}{{\mathbb K}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\PP}{{\mathbb P}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\TT}{{\mathbb T}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\calA}{{\mathcal A}}
+\newcommand{\calC}{{\mathcal C}}
+\newcommand{\calG}{{\mathcal G}}
+\newcommand{\calAb}{{\mathcal Ab}}
+\newcommand{\be}{{\bf e}}
+\newcommand{\bfi}{{\bf i}}
+\newcommand{\bfj}{{\bf j}}
+
+\newcommand{\Aut}{\mbox{Aut}}
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\Mor}{\mbox{Mor}}
+\newcommand{\ab}{\mbox{ab}}
+\newcommand{\spec}{\mbox{spec}}
+\newcommand{\cone}{\mbox{cone}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+\newcommand{\msp}{\hspace{8pt}}
+%\newcommand{\Square}{\raisebox{-2pt}{\includegraphics{images/Square.eps}}}
+\newcommand{\Square}{\raisebox{-2pt}{\Large$\square$}}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .69}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{590pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{\TAMU{{\sl #1}}}
+\def\defcolor#1{\TAMU{#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra \ \ Autumn 2025\vspace{1pt}\\
+Frank Sottile\vspace{2pt}\\
+\Large 30 October 2025 \hfill
+\sf
+ Ninth Homework\makebox[20pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\barsn
+
+\noindent\Maroon{{\sf Hand in at the start of class, Thursday 6 November:}}
+
+\noindent\Cyan{While the statements are long, they are mostly exercises in the definitions, and should have short answers.}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $p\in\NN$ be a prime.
+  For positive integers $n<m$ we have the natural surjection $\ZZ/p^n\ZZ \twoheadleftarrow \ZZ/p^m\ZZ$ induced by
+  the inclusions $p^n\ZZ\supset p^m\ZZ$.  These form an inverse system.
+  Define the \demph{$p$-adic integers} \defcolor{$\widehat{\ZZ}_p$} to be the  limit of this inverse system,
+  \[
+  \widehat{\ZZ}_p\ \vcentcolon=\  \lim_{\longleftarrow} \ZZ/p^n\ZZ\,.
+  \]
+  Using the universal property of inverse limits (or a direct construction), show that the natural map
+  $\ZZ\to {\ZZ}_p$ induced by the surjections $\ZZ\twoheadrightarrow \ZZ/p^n\ZZ$ is in injection.
+
+  Lang and Dr.\ Witherspoon define more general inverse limits over partially ordered sets.
+  Let \defcolor{$\PP$} be the set of positive integers, which forms a poset under divisibility.
+  Under $m\mapsto m\ZZ$, the set of free abelian subgroups of $\ZZ$  is a poset (opposite to $\PP$), and
+  the collection of quotients $\ZZ/m\ZZ \twoheadleftarrow \ZZ/mn\ZZ$ forms an inverse  directed system indexed by $\PP$.
+  Define
+  \[
+  \defcolor{\widehat{\ZZ}}\ \vcentcolon=\ \lim_{\longleftarrow} \ZZ/m\ZZ\ , \mbox{\quad the inverse limit along $\PP$.}
+  \]
+  Show that as before there is a natural injection  $\ZZ\hookrightarrow \widehat{\ZZ}$ and for every prime number $p$ there is similarly
+  an injection  $\widehat{\ZZ}_p \hookrightarrow \widehat{\ZZ}$ compatible with the map of the first part.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  \Magenta{Double question}  Let $A$, $B$, $C$, and $D$ be abelian groups with group homomorphisms
+  \[
+     f\colon A\to B\quad\mbox{ and }\quad
+     g\colon A\to C\quad\mbox{ and }\quad
+     h\colon B\to D\quad\mbox{ and }\quad
+     k\colon C\to D\ .
+   \]     
+\begin{enumerate}
+  \item Show that  the construction of the fiber product $B\times_D C$ from Lang is in fact a fiber product of abelian groups
+    over $D$.  (E.g.\ show that it satisfies the universal property.)
+  
+  \item Show that the pullback of a surjective homomorphism is surjective.
+  
+  \item Show that the construction of the fiber coproduct (pushout) $B\otimes_A C$ from Lang is in fact a fiber coproduct of
+    abelian groups. (E.g.\ show that it satisfies the universal property.)
+  
+  \item Show that the pushout of an  injective homomorphism is injective.
+
+  \item Is there any relation between the fiber product and fiber coproduct (of abelian groups)?  
+\end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Let $\calC$ be a locally small category (for objects $A,B$ of $\calC$, $\Mor(A,B)$ is a set).
+  \begin{enumerate}
+    \item Show that for every object $A$ of $\calC$, $\Mor(A,A)$ is a monoid under composition.
+    \item For every object $A$ of $\calC$, let $\defcolor{\Aut(A)}\subset \Mor(A,A)$ be its subset of automorphisms.
+          Show that $\Aut(A)$ forms a group.
+   \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \Magenta{Continued on the other side}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G$ be a fixed group.
+  Show that the following forms a category:
+  The objects are all $G$-sets (sets $S$ equipped with an action of $G$).
+  For two $G$ sets $S,T$, $\Mor(S,T)$ consists of all functions $\phi\colon S\to T$ such that
+  \[
+     \phi(g.s)\ =\ g.\phi(s) \qquad \mbox{for all }g\in G\mbox{ and } s\in S\,.
+  \]
+  Composition is composition of functions.   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $\calG$ be the category of all groups and $\calAb$ the category of abelian groups.
+  For each group $G$, define $\ab(G)\vcentcolon= G/[G,G]$, where $[G,G]$ is the commutator group of $G$.
+  \begin{enumerate}
+    \item
+      For a group homomorphism $\phi\colon G\to H$, show that $\phi$ induces a homomorphism
+      $\ab(\phi)$ from $\ab(G)$ to $\ab(H)$.
+      
+    \item
+      Prove that $\ab$ is a functor from $\calG$ to $\calAb$.  (This is the \demph{abelianization functor}.)
+
+    \item
+      As every abelian group is a group, show that we have a forgetful function $\iota$ from  $\calAb$ to $\calG$.
+      Show that $\ab$ is adjoint to $\iota$.    
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   Show that every nonidentity element of a free group has infinite order.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $F$ be a free group and let $n\in\PP$.
+  Define $N$ to be the subgroup generated by all $n$-th powers of elements of
+  $F$, $N=\langle x^n \mid x\in F\rangle$.
+  Show that $N$ is a normal subgroup of $F$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $G$ and $H$ be groups.
+  Show that their free product $G*H$ is a coproduct in the category of groups.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+      
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
