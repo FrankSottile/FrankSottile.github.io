@@ -1,0 +1,32 @@
+Computational Algebraic Geometry
+Math 648
+Frank Sottile
+Winter 2025
+
+   This course will cover the basics of computational algebraic geometry,
+including the core algorithms in the subject, as well as introduce
+some of the most common algebraic varieties which occur in applications.
+We will gain familiarity with software for algebraic geometry, including
+the systems Macaulay 2, Singular, Bertini, and HomotopyContinuation.jl.
+Students will complete a final project in the subject which will be presented
+to the class in lieu of a final exam.   Grading will be based on final projects
+and some written/computer work through the term.
+
+I hope to cover the following topics:
+
+ - Algebraic-Geometric Dictionary
+ - Resultants and elimination
+ - Groebner bases, including algorithms based on Groebner bases
+ - Solving polynomial systems symbolically.      
+ - Some structural properties of algebraic varieties
+ - Real root counting.  Sturm's theorem.  Fewnomial theory
+ - Solving systems of polynomial equations using 
+    numerical continuation
+ - Certification of numerical solutions.  
+ - Numerical algebraic geometry.  Witness sets and numerical 
+     irreducible decomposition
+ - Toric ideals
+ - Toric degenerations and Khovanskii bases
+
+
+
