@@ -1,7 +1,8 @@
-Computational Algebraic Geometry
 Math 648
+Computational Algebraic Geometry
 Frank Sottile
-Winter 2025
+Winter 2026
+Tu-Th 3:55-5:10 PM
 
    This course will cover the basics of computational algebraic geometry,
 including the core algorithms in the subject, as well as introduce
@@ -14,7 +15,7 @@ and some written/computer work through the term.
 
 I hope to cover the following topics:
 
- - Algebraic-Geometric Dictionary
+ - Algebraic-geometric dictionary
  - Resultants and elimination
  - Groebner bases, including algorithms based on Groebner bases
  - Solving polynomial systems symbolically.      
