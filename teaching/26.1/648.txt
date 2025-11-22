@@ -3,6 +3,7 @@ Computational Algebraic Geometry
 Frank Sottile
 Winter 2026
 Tu-Th 3:55-5:10 PM
+https://franksottile.github.io/teaching/26.1/648.html
 
    This course will cover the basics of computational algebraic geometry,
 including the core algorithms in the subject, as well as introduce
