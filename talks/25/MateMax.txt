@@ -1,0 +1,14 @@
+Toric Geometry of Periodic Operators
+
+The Laplacian of a Z^d-periodic  graph, or more generally of
+a   Schroedinger   operator,   has   spectrum   (generalized
+eigenvalues) that is a union  of intervals in the real line.
+More   structure   is   revealed   from   the   vantage   of
+representations of Z^d:  The operator becomes a  map of free
+modules over the  character ring and the  spectrum becomes a
+real algebraic hypersurface in a torus, with a natural toric
+compactification.  Many natural questions about the spectrum
+become   accessible   using   the  tools   of   our   trade:
+computational, combinatorial,  and real  algebraic geometry.
+I will sketch  the background and discuss  some results from
+this perspective.

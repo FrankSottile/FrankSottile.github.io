@@ -1,0 +1,14 @@
+Webs and Maximally Inflected Curves ?
+
+This  poster will  present a  surprising and  conjectural connection
+between  maximally   inflected  plane  curves  of   degree  d+2  and
+sl_3-webs.  Under a natural identification of each with 3xd standard
+tableaux,  the web  appears to  encode  the topology  of the  curve,
+including its  Welschinger invariant.   This behavior  persists when
+the  flexes  (ramification points)  collide,  and  the webs  acquire
+ramification data (a refinement of 'collapsed' webs).
+
+While  this   relation  is  somewhat  conjectural,   it  would  have
+remarkable  consequences in  real  algebraic  geometry and  enriched
+enumerative geometry.   This represents  joint work  with Brazelton,
+Karp, Levinson, and McKean.
