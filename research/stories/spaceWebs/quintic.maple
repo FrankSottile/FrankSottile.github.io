@@ -1,0 +1,202 @@
+#quintic.maple
+#
+#  This file will try to study the W22 and W21 webs of maximally inflected quintic curves in RP^3
+#
+interface(quiet=true):
+with(LinearAlgebra):
+with(Groebner):
+with(plots):
+with(ArrayTools):
+#
+#  Set up the tolerance for integer truncation, and set the Digits appropriately for this
+#
+tol:=12:         # This is the tolerance for deciding is something is zero  (< 10^{-tol})
+tc:=20:          # The integer truncation of a float:   10^{-tc}*truncate(float * 10^tc)
+Digits:=3*tc+5:  # The digits of precision for calculations
+#
+#  Initiate random number generator
+#
+die  := rand(-10..10):
+mdie := rand(-3..3):
+#
+####################################################################################################
+makeDifference := proc(Poly)
+#
+#  Intelligently replaces a polynomial Poly in s with (Poly(s)-Poly(t))/(s-t).
+#
+ global s,t:
+ local ii, newPoly:
+ newPoly:=0:
+ for ii from 1 to degree(Poly) do
+   newPoly := newPoly + expand(simplify((s^ii-t^ii)/(s-t)))*coeff(Poly,s^ii):
+ end do:
+ return(newPoly)
+end proc:
+####################################################################################################
+integerize := proc(A,tc)
+#
+#  Truncates a complex number to a rational number
+#
+  return (trunc(Re(A*10^(tc)))+ I* trunc(Im(A*10^(tc))))/10^(tc):
+end proc:
+####################################################################################################
+integerizeSeq := proc(ASeq,tc)
+#
+#  Truncates a complex number to a rational number
+#
+  local ii:
+  return ([seq( integerize(ASeq[ii],tc), ii=1..nops(ASeq))] ):
+end proc:
+####################################################################################################
+toCircle := proc(a,b)
+ local cplx:
+ cplx := (I*b - a)/(I*a-b):
+ return([ Re(cplx), Im(cplx)])
+end proc:
+####################################################################################################
+
+
+
+####################################################################################################
+#
+#  Set up the generic Schubert problem of a codim - 4 plane in the space spanned by the rational quintic curve
+#
+monomialCurve:=Vector([ 1, s,   s^2,   s^3,   s^4, s^5]):
+#
+M:=Matrix([[ 1, s,   s^2,   s^3,   s^4,   s^5],
+           [ 0, 1, 2*s  , 3*s^2, 4*s^3, 5*s^4],
+           [ 0, 0, 1    , 3*s  , 6*s^2,10*s^3],
+           [ 0, 0, 0    , 1    , 4*s  ,10*s^2],
+           [ 1, 0, a    , c    , e    , g    ],
+           [ 0, 1, b    , d    , f    , h    ]]):
+#
+#NullSpace(Matrix([ [1,0,a,c,e,g],[0,1,b,d,f,h] ])); quit;
+#
+#  The map whose kernel is the codim-4 plane  spanned by [1,0,a,c,e,g],[0,1,b,d,f,h]
+#
+CM:=Matrix([[-a,-b,1,0,0,0],
+            [-c,-d,0,1,0,0],
+            [-e,-f,0,0,1,0],
+            [-g,-h,0,0,0,1]]):
+#
+#  Schubert condition to have a flex at s (osculating 4-plane meets 2-plane spanned by [1,0,a,c,e,g],[0,1,b,d,f,h])
+#
+F:=Determinant(M):
+#
+#  Points where we fix flexes
+#
+Flexes:=[-2, -3/4, -1/3, 1/5, 6/7, 7/6, 3/2, 4]:
+
+# Flexes, 
+Vals:=[]:
+for i in Flexes do
+ Vals:=[Vals[],[i,1]]:
+od:
+FPc := [seq(toCircle(Vals[ii][]), ii=1..8)]:
+FPp  := pointplot( FPc, symbol=circle,color=red):
+#
+#  Set up the Groebner basis
+#
+G:=Basis([seq(subs(s=Flexes[ii],F),ii=1..8)],tdeg(a,d,c,f,e,g,h,b)):
+#
+#
+G:=FGLM(G,tdeg(a,d,c,f,e,g,h,b),plex(e,g,h,a,d,c,f,b)):
+#
+# Solve it to get the 14 solutions
+#
+bS := [seq(solve(G[1]=0),ii=1..14)]:
+fS := [fsolve(G[2]=0)];
+cS := integerizeSeq([seq( solve(subs(f=fS[ii],G[3])=0), ii=1..14 ) ],tc):
+dS := integerizeSeq([seq( solve(subs(f=fS[ii],G[4])=0), ii=1..14 ) ],tc):
+aS := integerizeSeq([seq( solve(subs(f=fS[ii],G[5])=0), ii=1..14 ) ],tc):
+hS := integerizeSeq([seq( solve(subs(f=fS[ii],G[6])=0), ii=1..14 ) ],tc):
+gS := integerizeSeq([seq( solve(subs(f=fS[ii],G[7])=0), ii=1..14 ) ],tc):
+eS := integerizeSeq([seq( solve(subs(f=fS[ii],G[8])=0), ii=1..14 ) ],tc):
+fS := integerizeSeq(fS,tc):
+#
+#
+#  Make the projection matrix for a solution
+#
+#for i from 14 to 14 do 
+i:=14;
+
+CMat:=Matrix(evalm(subs(h=hS[i], g=gS[i], f=fS[i], e=eS[i], d=dS[i], c=cS[i], b=bS[i], a=aS[i], CM))):
+#
+#  Rational curve in P^3
+#
+myCurve := CMat . monomialCurve:
+myCurveP := diff(myCurve, s):
+
+#
+W40 := factor(Determinant( Concatenate(2, myCurve, myCurveP, diff(myCurveP, s), diff( diff(myCurveP, s), s) ) )):
+W22 := factor(Determinant( Concatenate(2, myCurve, myCurveP, subs(s=t,myCurve), subs(s=t, myCurveP) )) ):
+W22 := primpart(W22/(s-t)^4):
+
+W31 := factor(Determinant( Concatenate(2, myCurve, myCurveP, diff(myCurveP, s), subs(s=t,myCurve) ) )):
+W31 := primpart(W31/(s-t)^3):
+
+Fst := W31^4/W40^2:
+
+####################################################################################################
+# Finding zeroes of W31
+#
+A31 :=expand(subs(s=x+II*y, t = x - II*y, W31)):
+A31 := Basis([A31, II^2+1], plex(a,y,II))[2]:
+
+# y=0 is a solution; this gives the flexes
+GB := Basis([coeffs(A31,II)], plex(x,y)):
+GBRes := simplify(GB[1]/y):
+GB := Basis([GB[], GBRes], plex(x,y)):
+#
+#  The polynomial is in y^2  (e.g. it is a real point)
+#
+#
+#  Taking advantage of Male's quick ability to compute real solutions
+#
+Ys:=[fsolve(GB[1]=0, y)]:
+W31z:=[]:
+for ys in Ys do
+  xs := solve( subs(y=ys, GB[2]) = 0, x );
+  W31z := [ W31z[], xs+ I*ys ]:
+end do:
+
+W31pts := []:
+for pt in W31z do
+  if evalf(Im(pt)) > -10^(-6) then
+    W31pts := [W31pts[], [pt,1]]:
+  end if:
+end do:
+
+W31c  := [seq(toCircle(W31pts[ii][]), ii=1..nops(W31pts))]:
+W31p  := pointplot( W31c, symbol=circle,color=red):
+
+#
+#Magic, upper half plane to circle, then rectilinear substitution 
+#
+#
+Fxy :=  numer(simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  Fst))):
+W22xy :=  numer(simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  W22))):
+
+I31 := Im(Fxy):
+R31 := Re(Fxy):
+
+Digits := 16:
+
+A := implicitplot( W22xy, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
+B := plot([ cos(th), sin(th), th=0..2*Pi], color=blue):
+
+fName22 := sprintf("%d_22.gif", i):
+fName31 := sprintf("%d_31.gif", i):
+
+lprint(fName31);
+
+plotsetup(gif,plotoutput=fName22,plotoptions=`height=500,width=500`):
+display(A,FPp, B,  axes=none, scaling=constrained);
+C := implicitplot( I31, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
+DC := implicitplot( R31>0, x=-1.2..1.2, y=-1.2..1.2, filledregions=true, coloring=[yellow,cyan], color=yellow):
+
+plotsetup(gif,plotoutput=fName31,plotoptions=`height=500,width=500`):
+display( B, C,DC,FPp, W31p,  axes=none, scaling=constrained);
+
+
+#end do;
