@@ -105,7 +105,7 @@ G:=FGLM(G,tdeg(a,d,c,f,e,g,h,b),plex(e,g,h,a,d,c,f,b)):
 # Solve it to get the 14 solutions
 #
 bS := [seq(solve(G[1]=0),ii=1..14)]:
-fS := [fsolve(G[2]=0)];
+fS := [fsolve(G[2]=0)]:
 cS := integerizeSeq([seq( solve(subs(f=fS[ii],G[3])=0), ii=1..14 ) ],tc):
 dS := integerizeSeq([seq( solve(subs(f=fS[ii],G[4])=0), ii=1..14 ) ],tc):
 aS := integerizeSeq([seq( solve(subs(f=fS[ii],G[5])=0), ii=1..14 ) ],tc):
@@ -118,7 +118,7 @@ fS := integerizeSeq(fS,tc):
 #  Make the projection matrix for a solution
 #
 #for i from 14 to 14 do 
-i:=14;
+i:=1;
 
 CMat:=Matrix(evalm(subs(h=hS[i], g=gS[i], f=fS[i], e=eS[i], d=dS[i], c=cS[i], b=bS[i], a=aS[i], CM))):
 #
@@ -128,14 +128,16 @@ myCurve := CMat . monomialCurve:
 myCurveP := diff(myCurve, s):
 
 #
-W40 := factor(Determinant( Concatenate(2, myCurve, myCurveP, diff(myCurveP, s), diff( diff(myCurveP, s), s) ) )):
+W40 := primpart(Determinant( Concatenate(2, myCurve, myCurveP, diff(myCurveP, s), diff( diff(myCurveP, s), s) ) )):
 W22 := factor(Determinant( Concatenate(2, myCurve, myCurveP, subs(s=t,myCurve), subs(s=t, myCurveP) )) ):
 W22 := primpart(W22/(s-t)^4):
 
 W31 := factor(Determinant( Concatenate(2, myCurve, myCurveP, diff(myCurveP, s), subs(s=t,myCurve) ) )):
 W31 := primpart(W31/(s-t)^3):
 
+
 Fst := W31^4/W40^2:
+
 
 ####################################################################################################
 # Finding zeroes of W31
@@ -156,7 +158,7 @@ GB := Basis([GB[], GBRes], plex(x,y)):
 Ys:=[fsolve(GB[1]=0, y)]:
 W31z:=[]:
 for ys in Ys do
-  xs := solve( subs(y=ys, GB[2]) = 0, x );
+  xs := solve( subs(y=ys, GB[2]) = 0, x ):
   W31z := [ W31z[], xs+ I*ys ]:
 end do:
 
@@ -174,8 +176,8 @@ W31p  := pointplot( W31c, symbol=circle,color=red):
 #Magic, upper half plane to circle, then rectilinear substitution 
 #
 #
-Fxy :=  numer(simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  Fst))):
-W22xy :=  numer(simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  W22))):
+Fxy :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  Fst)):
+W22xy :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  W22)):
 
 I31 := Im(Fxy):
 R31 := Re(Fxy):
@@ -185,15 +187,15 @@ Digits := 16:
 A := implicitplot( W22xy, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
 B := plot([ cos(th), sin(th), th=0..2*Pi], color=blue):
 
-fName22 := sprintf("%d_22.gif", i):
+#fName22 := sprintf("%d_22.gif", i):
 fName31 := sprintf("%d_31.gif", i):
 
 lprint(fName31);
 
-plotsetup(gif,plotoutput=fName22,plotoptions=`height=500,width=500`):
-display(A,FPp, B,  axes=none, scaling=constrained);
+#plotsetup(gif,plotoutput=fName22,plotoptions=`height=500,width=500`):
+#display(A,FPp, B,  axes=none, scaling=constrained);
 C := implicitplot( I31, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
-DC := implicitplot( R31>0, x=-1.2..1.2, y=-1.2..1.2, filledregions=true, coloring=[yellow,cyan], color=yellow):
+DC := implicitplot( R31<0, x=-1.2..1.2, y=-1.2..1.2, filledregions=true, coloring=[yellow,cyan], color=yellow):
 
 plotsetup(gif,plotoutput=fName31,plotoptions=`height=500,width=500`):
 display( B, C,DC,FPp, W31p,  axes=none, scaling=constrained);
