@@ -1,0 +1,116 @@
+%HW1.tex
+%
+% First Homework for Computational Algebraic Geometry
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amssymb,amsmath}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=595pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\KK}{{\mathbb K}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\calI}{{\mathcal I}}
+\newcommand{\calV}{{\mathcal V}}
+\newcommand{\be}{{\bf e}}
+
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\spec}{\mbox{spec}}
+\newcommand{\cone}{\mbox{cone}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\smallskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{590pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+
+\def\demph#1{\Maroon{{\sl #1}}}
+\def\defcolor#1{\Maroon{#1}}
+
+\begin{document}
+\LARGE
+\noindent
+Math 648: 
+Computational Algebraic Geometry\vspace{2pt}\\
+Frank Sottile\vspace{2pt}\\
+20 January 2026\hfill
+\Large\sf
+ First Homework\makebox[40pt][l]{\ }
+\large\vspace{10pt}
+
+\barsl
+
+%\normalsize
+
+\begin{center}
+\begin{minipage}[t]{560pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\Maroon{{\large\sf   Please hand these into Frank on Tuesday, January 27.}}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose that $X$ and $Y$ are varieties in $\KK^n$.
+      Prove that $X\cap Y$ and $X\cup Y$ are varieties.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+  Let $\KK^{m\times n}$ be the set of $m\times n$ matrices over $\KK$.
+  Let $0\leq r \leq \min\{m,n\}$.
+    \begin{itemize}
+       \item[(a)] Show that the set of matrices of rank at most $r$ is an algebraic variety.
+       \item[(b)] When $\KK$ is infinite, show that the set of matrices of rank exactly $r$
+         is not an algebraic variety when $r>0$. 
+    \end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Let $I$ be an ideal of $\KK[x_1, \dotsc, x_n]$. 
+      Show that 
+\[
+   \sqrt{I}\ :=\ 
+   \{f\in\KK[x_1, \dotsc, x_n]\mid f^N\in I,\ \mbox{for some }N\in\NN\}
+\]
+is an ideal, is radical, and is the smallest radical ideal containing $I$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{minipage}\qquad
+\end{center}
+
+\end{document}
