@@ -1,0 +1,16 @@
+Monodromy in the Osculating Schubert Calculus
+
+An  important special  case of  Schubert calculus  for the  Grassmannian
+concerns flags osculating the rational normal curve, which is equivalent
+to the  Bethe Ansatz  in the  Gaudin model for  gl_n.  The  most natural
+family of  these problems are  indexed by partitions \lambda.   Liao and
+Rybnikov  recently studied  a subgroup  of the  monodromy group  for the
+Bethe Ansatz  equivalent to the action  of the cactus group  on standard
+Young tableau of shape \lambda.  When \lambda is a hook or is symmetric,
+they  showed that  it  was  not 2-transitive,  but  was otherwise  giant
+(contains the alternating group).
+
+I will describe  this background and then give  some geometric arguments
+which  refine their  work on  hooks and  symmetric partitions,  and then
+[resent  some computational  evidence that  Harris's principle  holds in
+that the monodromy is a large as possible.

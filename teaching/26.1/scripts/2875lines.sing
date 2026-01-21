@@ -1,0 +1,67 @@
+// 2875lines.sing
+//
+//  This file studies the lines on a quintic surface in 4-space.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//    We need some extra functionality provided by these libraries
+LIB "matrix.lib"; 
+LIB "linalg.lib"; 
+LIB "random.lib";
+int Ti=timer;
+intvec cycles;
+//    redSB computes a reduced Groebner basis
+option(redSB);
+system("random", 101);
+//
+//   Make a ring of characteristic zero with a randon cubic polynomial
+ring R = 65521, (w,x,z,y), dp;
+poly F = randomid(maxideal(5),1,65521)[1] + randomid(maxideal(4),1,65521)[1]
+       + randomid(maxideal(3),1,65521)[1] + randomid(maxideal(2),1,65521)[1]
+       + randomid(maxideal(1),1,65521)[1] + random(0,65521);
+//
+// Now make a ring whose coordinates parametrize lines in space
+//
+ring S = 65521, (a,b,c,d,e,f,l), dp;
+// 
+// A line in 4-space is spanned a point    p = [a, b, e, 0] 
+//  in the x-y-z plane and a direction     v = [c, d, f, 1] 
+// It is parametrised by  p + l*v
+//  We substitute a parametrization of the line into our cubic
+//
+map QuinticOnLine = R, a+l*c, b+l*d, e+l*f, l;
+poly G = QuinticOnLine(F);
+//
+//  Extracts the coefficients of powers of l in G; these must vanish 
+//   for the line to lie in the quintic, and they will be equations for 
+//   the general line to lie on our specific quintic.  
+//  This is a matrix and the call 'minor' is a tricky way to create
+//   an ideal of its entries.
+//
+ideal LoC = minor(coeffs(G, l), 1);
+//
+// Now we create the coordinate ring for lines, with variables a,b,c,d,e,f 
+//
+ring T = 65521, (a,b,c,d,e,f), dp;
+ideal Lines = imap(S,LoC);
+//
+// std computes a Groebner basis for Lines
+//
+Lines = std(Lines);
+//Lines;
+dim(Lines);
+mult(Lines);
+timer-Ti;
+cycles = 0;
+poly f = randEliminant ( Lines );
+timer-Ti;
+int i;
+list Factors;
+Factors = factorize(f,2)[1];
+for (i=1; i<=size(Factors[1]); i++)
+{
+  cycles[i] = deg(Factors[1][i]);
+}
+
+cycles;
+
+timer-Ti;

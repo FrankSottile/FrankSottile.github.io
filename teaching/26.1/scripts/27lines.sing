@@ -1,0 +1,68 @@
+// 27lines.sing
+//
+//  This file studies the lines on a cubic surface in 3-space.
+//
+//
+//    We need some extra functionality provided by these libraries
+LIB "linalg.lib"; 
+LIB "random.lib";
+int Ti=timer;
+intvec cycles;
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Computes an eliminant for the zero-dimensional ideal G, starting with a random linear polynomial
+//    having coefficients between 0 and 10.  The eliminant is artificially in the first variable var(1)
+//
+proc randEliminant ( ideal G )
+{
+  poly g = sparsepoly(1,1,3,10);
+  ideal B = kbase(G);  
+  return(charpoly(coeffs(reduce(g*B,G),B), varstr(1)));
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//    redSB computes a reduced Groebner basis
+option(redSB);
+system("random",210);
+//
+//   Make a ring of characteristic zero with a randon cubic polynomial
+ring R = 0, (x,z,y), dp;
+poly F = randomid(maxideal(3),1,19)[1] + randomid(maxideal(2),1,19)[1]
+       + randomid(maxideal(1),1,19)[1] + random(-20,20);
+//
+// Now make a ring whose coordinates parametrize lines in space
+//
+ring S = 0, (a,b,c,d,l), dp;
+//
+// A line in 3-space is spanned a point  p = [a, b, 0] 
+//  in the x-y plane and a direction     v = [c, d, 1] 
+// It is parametrised by  p + l*v
+//  We substitute a parametrization of the line into our cubic
+//
+map CubicOnLine = R, a+l*c, b+l*d, l;
+poly G = CubicOnLine(F);
+//
+//  Extracts the coefficients of powers of l in G; these must vanish 
+//   for the line to lie in the cubic, and they will be equations for 
+//   the general line to lie on our specific cubic.  
+//  This is a matrix and the call 'minor' is a tricky way to create
+//   an ideal of its entries.
+//
+ideal LoC = minor(coeffs(G, l), 1);
+//
+// Now we create the coordinate ring for lines, with variables a,b,c,d 
+//
+ring T = 0, (a,b,c,d), dp;
+ideal Lines = imap(S,LoC);
+//
+// std computes a Groebner basis for Lines
+//
+Lines = std(Lines);
+//Lines;
+dim(Lines);
+mult(Lines);
+timer-Ti;
+//  makes it easier to read the polynomial
+short=0;   
+randEliminant ( Lines );
+
+timer-Ti;
