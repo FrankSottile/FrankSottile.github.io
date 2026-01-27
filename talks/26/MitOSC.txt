@@ -13,4 +13,5 @@ they  showed that  it  was  not 2-transitive,  but  was otherwise  giant
 I will describe  this background and then give  some geometric arguments
 which  refine their  work on  hooks and  symmetric partitions,  and then
 [resent  some computational  evidence that  Harris's principle  holds in
-that the monodromy is a large as possible.
+that the monodromy is as large as  possible. This is based on joint work
+with Leonid Rybnikov (UdeM).

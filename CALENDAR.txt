@@ -4,11 +4,10 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                        1  2  3  4  5  6  7  
                        8  9 10 11 12 13 14  
                       15 16 17 18 19 20 21  
-      20 21 22 23 24  22 23 24 25 26 27 28  
+                  24  22 23 24 25 26 27 28  
 25 26 27 28 29 30 31                
 2026
  January   
- 27 Abstract for Savannah
  28 8AM Dentist
  26-31 Ikenna visits
  31 Term on AMS JMM Program committee ends
@@ -21,24 +20,32 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
                       29 30 31              26 27 28 29 30
  31- F4 Visit BYU
 February
- 1-14 Woo visits
+ 2-6 Woo visits
  14 Math Sat Fair
     Table and talk
  20 C Bibby
  23/25/27 Sarah at Oberwolfach  (9:10/10:20-11:10)
  26 Geller Lecture, Francis Su
  March
- 2-6 ? trip to the Midwest ?
+  -14 trip to the Midwest 
+  Decide on Itenberg conference
  9-13 Spring Break TAMU
  10 Talk at MSU Spectral Theory Seminar
+ 17  8 AM Breakfast JKW room 102
+ 18 12-1 U Club PUFC
  16 PJK sub?
+ 31 8 AM Breakfast JKW room 102
+    12-1 U Club PUFC
 
  28-9 AMS Sectional in Savannah.  
  April 5: Easter (Avoid)
+  Gombe symposium
  11-12 LSU undergraduate research conference
  17-19  TAGS
  20-24 PJK sub?
+ 22/23 DRP final talks
  29 HURAC meeting
+ May 18 6:30 AM
  June 8-12 Edinburgh: Visit Esterov?
  12 CIMPA General Assembly
       May 2026             June 2026             July 2026
@@ -51,7 +58,7 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 31
  July  
     6-10 MEGA, Durham, UK
-    11 noon VIenna FoCM editorial board meeting
+    11 noon Vienna FoCM editorial board meeting
     8--18 FoCM Vienna
     22-30 ICM Philadelphia
  Aug 9-15 Eclipse in Majorica
