@@ -1,0 +1,15 @@
+//
+//  small_big.sing
+//
+//   Try without option(redSB);
+//
+option(redSB);
+ring R = 0, (x,y,z), dp;
+ideal I = x*y^3+x*z^3+x-1, y*z^3+y*x^3+y-1, z*x^3+z*y^3+z-1;
+std(I);
+print("Let us change ordering to degree lex");
+ring S = 0, (x,y,z), Dp;
+std(imap(R,I));
+print("Let us change ordering to lex");
+ring T = 0, (x,y,z), lp;
+std(imap(R,I));
