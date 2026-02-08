@@ -1,0 +1,129 @@
+%HW2.tex
+%
+% Second Homework for Computational Algebraic Geometry
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amssymb,amsmath}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=595pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\KK}{{\mathbb K}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\calI}{{\mathcal I}}
+\newcommand{\calV}{{\mathcal V}}
+\newcommand{\be}{{\bf e}}
+
+\newcommand{\Hom}{\mbox{Hom}}
+\newcommand{\spec}{\mbox{spec}}
+\newcommand{\cone}{\mbox{cone}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\smallskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{590pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{590pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+
+\def\demph#1{\Maroon{{\sl #1}}}
+\def\defcolor#1{\Maroon{#1}}
+
+\begin{document}
+\LARGE
+\noindent
+Math 648: 
+Computational Algebraic Geometry\vspace{2pt}\\
+Frank Sottile\vspace{2pt}\\
+10 February 2026\hfill
+\Large\sf
+ Second Homework\makebox[40pt][l]{\ }
+\large\vspace{10pt}
+
+\barsl
+
+%\normalsize
+
+\begin{center}
+\begin{minipage}[t]{560pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\Maroon{{\large\sf   Please hand these into Frank on Tuesday 17 February 2026.}}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  
+  A quartic surface in 4-space is defined by two linearly independent quadratic polynomials $F=G=0$ in four variables.
+  A line in 4-space may be represented by a point $p=(a,b,c,0)$ and a direction vector $v=(e,f,g,1)$ (six coordinates), and
+  parameterized by $\lambda\mapsto p+\lambda v$.
+  Evaluating $F$ and $G$ at $p+\lambda v$ gives two quadratic polynomials in $\lambda$.
+  The line $p+\lambda v$ lies on the quartic surface $\calV(F,G)$ exactly when the six coefficients of $\lambda$ in these
+  two quadratic polynomials vanish.
+
+  Modify (including the comments) the file for the 27 lines to compute the number of lines on such a quartic surface in
+  4-space.
+  How many lines did you find?
+  Explain this computation and what you learned in a paragraph (hand in with the other problems)
+  and email the resulting Macaulay2 or Singular script to   Sottile.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item   Show that the radical of a monomial ideal is a monomial ideal, and that a monomial ideal is radical if and only if it
+     has square-free generators. 
+     (Square-free means that no variable occurs to a power greater than 1.)\newline
+     \Violet{A monomial ideal is {\sl square-free} when it has square-free generators.}
+
+    Show that if an ideal $I$ has a square-free initial ideal, then $I$ is radical.
+       Give an example to show that the converse of this statement is false.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\item Suppose that $x_1\prec x_2\prec \dotsb$.  \Red{{\sf This is the reverse from other problems.}}\vspace{-3pt}
+    \begin{enumerate}
+    \item Use Buchberger's algorithm to compute by hand the reduced Gr\"obner basis for $\langle x_1+x_2, x_1x_2\rangle$,
+           and for $\langle x_1+x_2+x_3, x_1x_2+x_1x_3+x_2x_3, x_1x_2x_3\rangle$ with respect to the degree
+           reverse lexicographic order.
+    \item Do the same for the lexicographic order.
+    \item  These polynomials are the \Blue{{\sl elementary symmetric polynomials} $e_k(x_1,\dotsc,x_n)$} for $k\leq n$ when $n=2,3$.
+      Generalize this to arbitrary $n$.
+ \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}\qquad
+\end{center}
+
+\end{document}
