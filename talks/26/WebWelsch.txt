@@ -1,0 +1,20 @@
+Welschinger signs and webs of maximally inflected curves
+ 
+A 3-dimensional subspace f of real polynomials defines a map f : P^1 -> P^2
+whose image is a rational plane  curve.  It is maximally inflected when all
+of its flexes are real, equivalently, when its Wronski determinant has only
+real roots.   We associate two  a priori distinct signs  (\pm 1) to  f: the
+Welschinger invariant of  the rational curve and the degree  of the Wronski
+map at f.  Extensive computation suggests that these signs coincide.  While
+studying this  conjecture we were led  to a deeper conjecture:  We define a
+mixed Wronskian, a function P^1 ->  P^1.  The inverse image of the positive
+reals encodes the real geometry of  f and conjecturally is an object called
+a web.  We conjecture that known bijections between webs and standard Young
+tableaux and between  tableaux and maximally inflected  curves recovers the
+curve.
+
+This talk will explain this  picture with compelling evidence and beautiful
+pictures.  It  is joint  work with Brazelton,  Karp, Le,  Levinson, McKean,
+Peltola, and Speyer.
+
+
