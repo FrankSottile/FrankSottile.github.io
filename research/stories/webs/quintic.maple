@@ -117,8 +117,8 @@ fS := integerizeSeq(fS,tc):
 #
 #  Make the projection matrix for a solution
 #
-#for i from 14 to 14 do 
-i:=1;
+#
+for i from 1 to 14 do 
 
 CMat:=Matrix(evalm(subs(h=hS[i], g=gS[i], f=fS[i], e=eS[i], d=dS[i], c=cS[i], b=bS[i], a=aS[i], CM))):
 #
@@ -138,6 +138,8 @@ W31 := primpart(W31/(s-t)^3):
 
 Fst := W31^4/W40^2:
 
+# Ian's sugestion
+ILst := W31^2/W22/W40:
 
 ####################################################################################################
 # Finding zeroes of W31
@@ -153,7 +155,7 @@ GB := Basis([GB[], GBRes], plex(x,y)):
 #  The polynomial is in y^2  (e.g. it is a real point)
 #
 #
-#  Taking advantage of Male's quick ability to compute real solutions
+#  Taking advantage of Maple's quick ability to compute real solutions
 #
 Ys:=[fsolve(GB[1]=0, y)]:
 W31z:=[]:
@@ -172,33 +174,49 @@ end do:
 W31c  := [seq(toCircle(W31pts[ii][]), ii=1..nops(W31pts))]:
 W31p  := pointplot( W31c, symbol=circle,color=red):
 
+####################################################################################################
 #
 #Magic, upper half plane to circle, then rectilinear substitution 
 #
 #
-Fxy :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  Fst)):
+Fxy   :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  Fst)):
+ILxy  :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  ILst)):
 W22xy :=  simplify(subs( t = (I+x+I*y)/(I*x-y+1),  s = (-I+x-I*y)/(-I*x - y + 1),  W22)):
 
+R22 := Re(W22xy):
+
+
+Arg31 := argument(-1*Fxy):
 I31 := Im(Fxy):
 R31 := Re(Fxy):
 
+# Ian Le's suggestion
+ArgIL := argument(-1*ILxy):
+IIL := Im(ILxy):
+RIL := Re(ILxy):
+
 Digits := 16:
 
-A := implicitplot( W22xy, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
-B := plot([ cos(th), sin(th), th=0..2*Pi], color=blue):
+A22 := implicitplot( R22, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan, thickness=2):
+Cir := plot([ cos(th), sin(th), th=0..2*Pi], color=blue, thickness=3):
 
-#fName22 := sprintf("%d_22.gif", i):
+fName22 := sprintf("%d_22.gif", i):
 fName31 := sprintf("%d_31.gif", i):
+fNameIL := sprintf("%d_IL.gif", i):
 
-lprint(fName31);
+plotsetup(gif,plotoutput=fName22,plotoptions=`height=300,width=300`):
+display(A22,FPp, Cir,  axes=none, scaling=constrained);
 
-#plotsetup(gif,plotoutput=fName22,plotoptions=`height=500,width=500`):
-#display(A,FPp, B,  axes=none, scaling=constrained);
-C := implicitplot( I31, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan):
-DC := implicitplot( R31<0, x=-1.2..1.2, y=-1.2..1.2, filledregions=true, coloring=[yellow,cyan], color=yellow):
+#A31 := implicitplot( Arg31, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan, signchange=false, thickness=2):
+#plotsetup(gif,plotoutput=fName31,plotoptions=`height=300,width=300`):
+#display(A31, Cir,FPp, W31p,  axes=none, scaling=constrained);
 
-plotsetup(gif,plotoutput=fName31,plotoptions=`height=500,width=500`):
-display( B, C,DC,FPp, W31p,  axes=none, scaling=constrained);
+#AIL := implicitplot( ArgIL, x=-1.2..1.2, y=-1.2..1.2, grid=[100,100], color=cyan, signchange=false, thickness=2):
+#plotsetup(gif,plotoutput=fNameIL,plotoptions=`height=300,width=300`):
+#display(Cir,  AIL, FPp, W31p,  axes=none, scaling=constrained);
 
 
-#end do;
+time();
+#
+end do;
+
