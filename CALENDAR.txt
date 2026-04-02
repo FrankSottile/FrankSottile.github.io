@@ -2,41 +2,44 @@
  March
   Decide on Itenberg conference
 
-     March 2026            April 2026       
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
-                                1  2  3  4  
-                       5  6  7  8  9 10 11  
-                      12 13 14 15 16 17 18  
-                      19 20 21 22 23 24 25  
-   30 31              26 27 28 29 30        
-
  April 2  FYGSS 5:30-6:30 PM
   5: Easter (Avoid)
   Gombe symposium   ?????
   7 7:45 AM
   8 6 PM Bethancourt Ballroom (grad event)
+ 10: Pick up car at Airport in the morning (after EC meeting).
  11-12 LSU undergraduate research conference
  17-19  TAGS
  20-24 PJK sub?
  22/23 DRP final talks
  25/6 CombinaTexas
  29 HURAC meeting
+     April 2026             May 2026        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+          1  2  3  4                  1  2  
+ 5  6  7  8  9 10 11   3  4  5  6  7  8  9  
+12 13 14 15 16 17 18  10 11 12 13 14 15 16  
+19 20 21 22 23 24 25  17 18 19 20 21 22 23  
+26 27 28 29 30        24 25 26 27 28 29 30  
+                      31                    
+
  May 
   1 11-12:30 Pooja exam
   8 9 AM Graduation
  18 6:30 AM Least favourite Birthday present
  25-30 Matt, Taylor, and Wencai collaboration
  May 31- June 14 Edinburgh: Visit Esterov?
- 12 CIMPA General Assembly
+ June 
+ 12 CIMPA General Assembly ? Lille ?
  17 Wed 3 PM Dentist
-      May 2026             June 2026             July 2026
-Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
-                1  2      1  2  3  4  5  6            1  2  3  4
- 3  4  5  6  7  8  9   7  8  9 10 11 12 13   5  6  7  8  9 10 11
-10 11 12 13 14 15 16  14 15 16 17 18 19 20  12 13 14 15 16 17 18
-17 18 19 20 21 22 23  21 22 23 24 25 26 27  19 20 21 22 23 24 25
-24 25 26 27 28 29 30  28 29 30              26 27 28 29 30 31
-31
+     June 2026             July 2026        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+    1  2  3  4  5  6            1  2  3  4  
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11  
+14 15 16 17 18 19 20  12 13 14 15 16 17 18  
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  
+28 29 30              26 27 28 29 30 31     
+                                            
  July  
     6-10 MEGA, Durham, UK
     11 noon Vienna FoCM editorial board meeting
