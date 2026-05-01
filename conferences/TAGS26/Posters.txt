@@ -1,0 +1,6 @@
+
+Hasitha Geekiyanage
+The Serre-Swan Correspondence: From Geometry to Algebra
+
+A brief non-technical abstract is as follows:
+This poster explores a classical connection between geometry and algebra; focusing on the Serre--Swan correspondence, which shows that geometric objects such as vector bundles can be studied through algebraic objects called projective modules. The goal is to highlight how this correspondence allows ideas from algebra to be used in understanding geometric objects.
