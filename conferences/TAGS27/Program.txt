@@ -1,0 +1,112 @@
+<!---------------------------------------------------------------------------------------------------->
+ <b>Conference Program</b>
+   &nbsp; &nbsp;  &nbsp; &nbsp; <a href="abstracts.html"><b>Abstracts</b></a><br>
+
+<table border=1 cellspacing="5">
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Friday, 17 April</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr>
+    <td>17:00&ndash;17:30 PM</td>
+    <td>Arrival and Registration</td>
+    <td>Ground floor of <a href="http://wikimapia.org/6170/John-R-Blocker-Building">Blocker Building</a></td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>17:30&ndash;18:30 </td>
+    <td>Catered Dinner on site</td><td><a href="https://aromaindiannepalesecuisine.com/">Aroma Indian &amp; Nepalese Cusine</a></td>
+  </tr>
+  <!-------------------------------------------------->
+  <tr>
+    <td>18:30&ndash;18:35 </td>
+    <td>Opening Remarks</td><td></td>
+  </tr>
+ <!-------------------------------------------------->
+  <tr>
+    <td>18:35&ndash;19:35 </td>
+    <td> Justin Lacini </td><td><a href="abstracts.html#JL">Syzygies and singularities of secant varieties of
+	    smooth projective varieties</a></td>
+  </tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Saturday, 18 April</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr>
+    <td> 8:30&ndash;9:00</td>
+    <td>Registration and Coffee </td><td>Ground floor of <a href="http://wikimapia.org/6170/John-R-Blocker-Building">Blocker Building</td>
+  </tr>
+   <tr>
+    <td> 9:00&ndash;10:00</td>
+    <td>  Kevin Tucker </td><td><a href="abstracts.html#KT">Plus-pure thresholds of some cusp-like singularities</a></td>
+  </tr>
+  <tr>
+    <td> 10:00&ndash;10:30</td>
+    <td>  Break </td><td></td>
+  </tr>
+  <tr>
+    <td> 10:30&ndash;11:30</td>
+    <td>  Sarah Frei  </td><td><a href="abstracts.html#SF">Rationality in arithmetic families</a></td>
+  </tr>
+   <tr>
+    <td> 11:30&ndash;11:45</td>
+    <td>  Students meet with speakers</td><td>Blocker 166</td>
+  </tr>
+   <tr>
+    <td> 11:45&ndash;14:30</td>
+    <td>  Lunch &nbsp; </td><td>Local Restaurants</td>
+  </tr>
+  <tr>
+    <td> 14:30&ndash;15:30</td>
+    <td> Rachel Webb </td><td><a href="abstracts.html#RW">Twisted weighted stable maps</a></td>
+  </tr>
+  <tr>
+    <td> 15:30&ndash;16:00</td>
+    <td> Break </td><td></td>
+  </tr>
+  <tr>
+    <td> 16:00&ndash;17:00</td>
+    <td> Hunter Spink </td><td><a href="abstracts.html#HS">The Quasisymmetric flag variety</a></td>
+  </tr>
+  <tr>
+    <td> 17:00&ndash;17:15</td>
+    <td>   Students meet with speakers </td><td>Blocker 166</td>
+  </tr>
+  <tr>
+   <tr>
+    <td> 18:00&ndash;19:00</td>
+    <td>  Reception and <a href="posters.html">Poster Session</a> </td><td></td>
+  </tr>
+  <tr>
+    <td> 19:00&mdash;  </td>
+    <td>  Catered Dinner on site </td><td><a href="https://napaflats.com/">Napa Flats</a></td>
+  </tr>
+  <!---------------------------------------------------------------------------------------------------->
+  <tr><th colspan=3 align=left> Sunday, 19 April</th></tr>
+  <!---------------------------------------------------------------------------------------------------->
+   <tr>
+    <td> 9:00&ndash;9:30</td>
+   <td> Coffee </td><td></td>
+  </tr> 
+   <tr>
+    <td> 9:30&ndash;10:30</td>
+    <td> Jackson Morrow </td><td><a href="abstracts.html#JM">Arithmetic differential equations and unlikely intersections</a></td>
+  </tr>
+  <tr>
+    <td> 10:30&ndash;11:00</td>
+    <td> Break </td><td></td>
+  </tr>
+  <tr>
+    <td>  11:00&ndash;12:00</td>
+    <td> Joe Kileel </td><td><a href="abstracts.html#JK">Covering numbers and norming sets of real algebraic varieties</a></td>
+  </tr>
+
+  <tr>
+    <td>  12:00&ndash;12:05</td>
+    <td> Closing Remarks </td><td></td>
+  </tr>
+ <tr>
+     <td> 12:05&ndash;12:20</td>
+    <td>   Students meet with speakers </td><td>Blocker 166</td>
+  </tr>
+
+
+</table>
