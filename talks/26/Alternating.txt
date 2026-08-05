@@ -1,0 +1,10 @@
+Alternating monodromy from an involution
+
+We give a simple geometric  condition on an involution which
+implies  that a  corresponding imprimitive  Galois/monodromy
+group is alternating. We use this to determine the monodromy
+group  of an  unmixed system  of reciprocal  polynomials and
+show how  it explains examples from the  applied mathematics
+literature with alternating monodromy.   This is joint work
+with Timothy Duff and Josef Schicho.
+

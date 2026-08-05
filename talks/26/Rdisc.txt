@@ -1,0 +1,15 @@
+Reciprocal Disccriminants
+
+Motivated by applications and  the classical theory of A-discriminants
+of Gel'fand, Kapranov, and Zelevinsky,  we develop the basic theory of
+discriminants   of   multivariate   reciprocal   polynomials.    These
+reciprocal  discriminants  parameterize  reciprocal  polynomials  that
+define   a  singular   hypersurface.   We   show  that   a  reciprocal
+discriminant has  a rich combinatorial  structure.  It is  a reducible
+hypersurface  whose   components  are  dual  varieties   to  Chebyshev
+subvarieties which correspond to certain layers in a toric arrangement
+associated to the exponents of the reciprocal polynomials.  The layers
+which contribute correspond to certain matroidal decompositions of the
+exponents.
+
+This is joint work with Trevor Karn and Simon Telen.
