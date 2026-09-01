@@ -1,0 +1,14 @@
+Algebraic Geometry and Discrete Periodic Operators
+
+Spectral theory of  operators on a periodic medium is  a topic in
+mathematical physics having deep interactions with analysis.  Its
+discretization,  operators   on  periodic   graphs,  additionally
+communicates  with discrete  mathematics and  algebraic geometry.
+Many natural aspects of  discrete periodic operators are directly
+understood  in  terms  of   algebraic  geometry  and  some  basic
+questions are  answered using standard techniques  from algebraic
+geometry.
+
+My talk will explain some  algebraic aspects of discrete periodic
+operators,  illustrating  how  the   interactions  flow  in  both
+directions, to the benefit of both disciplines.
