@@ -1,0 +1,168 @@
+%HW03.tex
+%
+% Third Homework for Honors Algebra I  (415H)
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}   %  Change this for your write-up
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\op}{\textrm{op}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .69}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{560pt}
+\Indigo{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{560pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{{\color{Maroon}#1}}
+\def\defcolor#1{{\color{Maroon}#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra 415H \ \ Autumn 2026\vspace{2pt}\\
+{\color{magenta}Your Name}\vspace{2pt}\\
+\Large 3 September 2026 \hfill
+\sf
+ Third Homework\makebox[40pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\noindent
+I also recommend talkng with other students, and I am able to give hints to public posts in Piazza.
+
+\noindent
+\barsn
+
+\noindent\Maroon{{\sf Hand in at the start of class, Thursday 10 September:}} 
+
+
+\begin{enumerate}
+\setcounter{enumi}{14}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G$ be a group and $a\in G$.
+  Prove that $(a^{-1})^{-1}=a$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G,H$ be groups and suppose that $\varphi\colon G\to H$ is a group isomorphism.
+  Show that the inverse function $\varphi^{-1}\colon H\to G$ is also a group isomorphism.
+  (Recall that ``inverse'' here refers to the compositional inverse.)
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
+  Let $G$ be a group.
+  An isomorphism $\varphi\colon G\to G$ is called an \demph{automorphism} of $G$.
+  Using the previous exercise, and maybe Exercise 6, show that the set $\Aut(G)$ of automorphisms of a group $G$ is
+  itself a group.
+  This is called the \demph{automorphism group of $G$}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  In class, we showed that $\Aut(\ZZ_2)=\{e\}$ consists of a single element, while
+  $\Aut(\ZZ_3)$ consists of two elements (and hence is isomorphic to $\ZZ_2$).
+  In Exercise 8, you showed that there are two groups of order four (up to isomorphism); one is isomorphic to $\ZZ_4$ or
+  to $U_4$, while the other, $V$, has the property that $a\in V\Rightarrow a^2=e$.
+  Determine $\Aut(\ZZ_4)$ and $\Aut(V)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+   Give a proof of the angle sum formulas for sine and cosine using right triangles and similar triangles.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+   Suppose that $G$ is a finite group.
+   Let $A\subset G$ be a {\it subset} of $G$ with $|A|> \frac{1}{2}|G|$.
+   Prove that for every $g\in G$ there are $a,b\in A$ with $g=ab$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Recall (from beginning Calculus)  the everywhere convergent power series expressions for the exponential, sine, and
+  cosine functions.
+  Use them to deduce Euler's formula:  $e^{i\theta}=\cos(\theta)+ i\, \sin(\theta)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  For any $a,b\in \RR+$, show that $(\RR_a,+,0)$ is isomorphic to $(\RR_b,+,0)$ by exhibiting an explicit isomorphism.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Suppose that $G$ and $H$ are groups with the same order, $|G|=|H|$, but that $G$ is abelian while $H$ is not.
+  Show that $H$ is not isomorphic to $G$.
+
+  Use this to show that for every integer $n>1$, there are at least two nonisomorphic groups of order $2n$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
