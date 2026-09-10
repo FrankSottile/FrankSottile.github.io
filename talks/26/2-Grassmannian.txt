@@ -1,0 +1,20 @@
+A Littlewood-Richardson Rule for 2-Grassmannian Permutations
+
+Giving  a  manifestly positive  formula  for  the structure  constants
+arising  from  the  multiplication  of two  Schubert  classes  in  the
+cohomology  of a  flag manifold  is  a long-standing  open problem  in
+algebraic combinatorics.   This has  only seen limited  progress. Most
+results have restrictions on both classes that are multiplied, and the
+only formula with a restriction on  only one is the Pieri-type formula
+that is 30 years old.
+
+In  this  talk,  I  will  describe  formulas,  in  both  ordinary  and
+equivariant  cohomology,   for  the   coefficients  that   arise  when
+multiplying a Schubert class by one pulled back from a Grassmannian of
+2-planes.   This  uses  geometric   constructions  including  a  novel
+description of certain positroid varieties.  The cohomological formula
+identifies  each   coefficient  as   particular  Littlewood-Richardson
+coefficient on a Grassmannian of k-planes, for some k, not necessarily
+equal to 2.
+
+This is joint work with Changzheng Li and Mingzhi Yang.

@@ -1,0 +1,12 @@
+Real Oddities
+
+We all  have an intuitive  familiarity with the real  numbers, as
+they are  used to measure  time, space, and any  other continuous
+quantity.  Indeed, the  real numbers are a  foundation for higher
+mathematics (e.g. Calculus) and  its applications.  As such, they
+warrant a  more careful  study, which reveals  some paradoxically
+odd aspects of this otherwise familiar object.
+
+In this discussion, we will explore  some of these odd, but basic
+aspects  of the  real numbers  including the  Cantor Set  and the
+Devil's Staircase.
