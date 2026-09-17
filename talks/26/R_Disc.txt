@@ -1,4 +1,4 @@
-Reciprocal Disccriminants
+Reciprocal Discriminants
 
 Motivated by applications and  the classical theory of A-discriminants
 of Gel'fand, Kapranov, and Zelevinsky,  we develop the basic theory of
