@@ -48,7 +48,7 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
   <!---------------------------------------------------------------------------------------------------->
   <tr>
     <td>Stephen Abkin</td><td>&nbsp;</td>
-    <td><a href="#SA"></a></td>
+    <td><a href="#SA">Sign-Switched Antithetic Coupling for Signed Gradient-Particle Methods</a></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <!---------------------------------------------------------------------------------------------------->
@@ -78,13 +78,13 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
   <!-------------------------------------------------------------------------------- -------------------->
   <tr>
     <td>Marcus Lapina</td><td>&nbsp;</td>
-    <td><a href="#ML"></a></td>
+    <td><a href="#ML">Connections Between Hypergraph and Vector Parking Functions</a></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <!---------------------------------------------------------------------------------------------------->
   <tr>
     <td>Uihyeon Lee</td><td>&nbsp;</td>
-    <td><a href="#UL"></a></td>
+    <td><a href="#UL">Asymptotic Behavior of <i>N</i>-gons Under Cyclic Snap Operation</a></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <!---------------------------------------------------------------------------------------------------->
@@ -139,11 +139,29 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
    <!---------------------------------------------------------------------------------------------------->
   <tr>
     <td width=180pt><a name="SA">Stephen Abkin</a></td>
-    <td><font color="FF00FF"></font></td>
+    <td><font color="FF00FF">Sign-Switched Antithetic Coupling for Signed Gradient-Particle Methods</font></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <tr><td></td>
-    <td></td> 
+    <td>Particle methods approximate solutions of differential equations using moving particles.
+      Each particle carries a positive or negative weight, indicating whether it adds to or subtracts from the reconstructed solution.
+      Random movements represent diffusion, but they also introduce sampling error.
+      Averaging several simulations reduces this error at the cost of more computation.
+      We study how to obtain accurate averages with fewer simulations for one-dimensional equations describing transport and diffusion.
+      We run simulations in pairs and match their particles by position.
+      Particles with weights of the same sign receive opposite random movements, while those with opposite signs receive the same movement.
+      This helps the random fluctuations in the two solutions cancel when averaged.
+      Each simulation on its own retains the same distribution of results as an independent run.
+      With particle positions and partners fixed, we prove that this rule minimizes the random variation contributed by each matched pair at
+      the final diffusion step.
+      We also calculate the reduction exactly.
+      In tests on Burgers' equation, our method reaches a common accuracy target in about 40% less time than matching only particles with
+      weights of the same sign.
+      Further tests show how the benefit varies with the starting solution, observation time, and equation.
+
+
+
+</td> 
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <!---------------------------------------------------------------------------------------------------->
@@ -245,11 +263,20 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
   <!---------------------------------------------------------------------------------------------------->
   <tr>
     <td width=180pt><a name="ML">Marcus Lapina</a></td>
-    <td><font color="FF00FF"></font></td>
+    <td><font color="FF00FF">Connections Between Hypergraph and Vector Parking Functions</font></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <tr><td></td>
-    <td></td> 
+    <td>
+      Parking functions are well-studied objects in the field of combinatorics.
+      There are many ways to generalize these objects.
+      We work with two ways to generalize them: hypergraph parking functions and vector parking functions.
+      Our main goal is to classify which types of hypergraphs, or more specifically multihypergraphs, have the property that
+      their set of hypergraph parking functions are the same as the set of vector parking.
+      This is a generalization of a theorem of Gaydarov and Hopkins from 2016.
+      This classification is motivated by chip-firing and the problem of counting superstable configurations on a
+      hypergraph/multihypergraph which have a one-to-one correspondence with hypergraph parking functions.
+    </td> 
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <!---------------------------------------------------------------------------------------------------->
@@ -258,11 +285,15 @@ Pizza and refreshments will be provided, and the symposium is co-sponsored by th
   <!---------------------------------------------------------------------------------------------------->
   <tr>
     <td width=180pt><a name="UL">Uihyeon Lee</a></td>
-    <td><font color="FF00FF"></font></td>
+    <td><font color="FF00FF">Asymptotic Behavior of <i>N</i>-gons Under Cyclic Snap Operation</font></td>
   </tr>
   <!---------------------------------------------------------------------------------------------------->
   <tr><td></td>
-    <td></td> 
+    <td>For any <i>N</i>-gon with <i>N</i>&gt;3, we define the 'snap' operation, which takes a vertex <i>v<sub>i</sub></i>
+	  to the midpoint of the diagonal of its adjacent vertices.
+	  We show that if we cyclically repeat this operation infinitely many times, the vertices of the <i>N</i>-gon
+	  will converge to one point defined by a convex combination its vertices.
+	  Moreover, we show that the area of a convex quadrilateral under this process halves at each iteration.</td> 
   </tr>
   <!---------------------------------------------------------------------------------------------------->
  <!---------------------------------------------------------------------------------------------------->
@@ -387,6 +418,6 @@ Generously supported by the Smith fund and the Department of Mathematics at Texa
 <!---------------------------------------------------------------------------------------------------->
 <hr>
 <!---------------------------------------------------------------------------------------------------->
-<p>Last modified: Wed Sep 30 07:13:06 CDT 2026 by sottile</p>  
+<p>Last modified: Fri Oct 02 10:50:19 CDT 2026 by sottile</p>  
 </BODY>
 </HTML>
