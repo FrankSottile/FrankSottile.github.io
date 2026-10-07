@@ -1,0 +1,210 @@
+%HW07.tex
+%
+% Sixth Homework for Honors Algebra I  (415H)
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}   %  Change this for your write-up
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\op}{\textrm{op}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .49}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{560pt}
+\Indigo{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{560pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{\TAMU{{\sl #1}}}
+\def\defcolor#1{\TAMU{#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra 415H \ \ Autumn 2026\vspace{2pt}\\
+{\color{magenta}Your Name}\vspace{2pt}\\
+\Large 8 October 2026 \hfill
+\sf
+ Seventh Homework\makebox[40pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\noindent
+I also recommend talking with other students, and I am able to give hints to public posts in Piazza.
+
+\noindent
+\barsn
+
+\noindent\TAMU{{\sf Hand in at the start of class, Thursday 15 October:}} 
+
+
+\begin{enumerate}
+\setcounter{enumi}{45}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Suppose that $G$ is a finite group of order $n$.
+  Prove that every element $a\in G$ satisfies $a^n=e$.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $H$ and $K$ be subgroups of a group $G$.
+  Define the relation \defcolor{$\sim$} on $G$ by \defcolor{$a\sim b$} if and only if there are $h\in H$ and $k\in K$ such that
+  $a=hbk$.
+  \begin{enumerate}
+    \item
+      Prove that $\sim$ is an equivalence relation.
+    \item
+      Describe the equivalence class $[a]$ in a succinct form.
+    \item
+      Supppose that $G=S_3$ and $H=K=\{e, (1,2)\}$.
+      Find all $\sim$ equivalence classes.
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G$ be a group.  Earlier we defined the \demph{center} of $G$ to be the subgroup
+  \[
+     \defcolor{C(G)}\ \vcentcolon=\ \{ g\in G \mid gh=hg \mbox{ for all }h\in G\}\,.
+  \]
+  \begin{enumerate}
+    \item
+      What is the center of the group $D_4=\langle \sigma,\rho\rangle$, where $\sigma$ is a reflection and $\rho$ is the
+      rotation through an angle of $\pi/2$?
+
+    \item
+      Prove that the center of a group is a normal subgroup.
+      
+    \item
+      Identify $D_4/C(D_4)$.
+      
+    \item
+      Prove that if the quotient group $G/C(G)$ is cyclic, then $G$ is abelian.
+  \end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $H$ be a subgroup of a group $G$ and $a,b\in G$.
+  For each of the following, prove or give a counter example.
+
+  {\quad}\quad  \makebox[3in][l]{(a) If $aH=bH$, then $Ha=Hb$.}
+  \ 
+   (b) If $a^{-1}H=b^{-1}H$, then $Ha=Hb$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Show that a finite group cannot be written as a union of two of its subgroups.
+
+  What if we replace ``two'' by ``three''?   (Prove or give a counter example.)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G,H$ be groups.
+  Define the function $\varphi\colon G\times H \to G$ given by $(g,h)\mapsto g$.
+  Show that this is a homomorphism.
+  Determine its kernel.
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Two elements $a$ abnd $b$ of a group $G$ are \demph{conjugate} if there is an element $g\in G$ such that $a=gbg^{-1}$
+  (this is an equivalence relation whose equivalence classes are called conjugacy classes).
+  Determine all the conjugacy classes in $S_3$ and in $S_4$.
+  There is a hard way to figure this out and an easy way.
+
+  If you understand the easy way, or think about your answer, you should be able to conjecture (and prove) what are the
+  conjugacy classes in \demph{any} given symmetric group $S_n$, which I ask for you to do.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $H,K$ be subgroups of a group $G$.
+  We say that \demph{$H$ is conjugate to $K$} if there exists $g\in G$ such that $H = gKg^{-1}$.
+  Show that conjugacy is an equivalence relation on the set of subgroups of $G$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $G$ be a group.
+  Let \defcolor{$\Aut(G)$} be the set of automorphisms of $G$.
+  \begin{enumerate}
+    \item
+       Show that $\Aut(G)$ is a group under function composition.
+
+     \item
+       Show that the set of inner automorphisms forms a subgroup of  $\Aut(G)$, and that it is normal.
+  \end{enumerate}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
