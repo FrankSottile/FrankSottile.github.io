@@ -1,14 +1,11 @@
 2026
 
 October
-  8 Fly to GaTech.  They will cover my hotel in Atlanta
-     1 PM Arborist for tree removal (Top Point Tree)
- 10-11 AMS SE Sectional, Kennesaw State University
- 12 October URS
  13 2 PM Meet Jake and Yi Sheng
  19-23 AIM
  20/21 Goldwater Scholarships
  26 Math Club
+ 28 10:30 Astronaut Day event and Luncheon
  27/8/9  Graduate school panel
     31 - November 1  TX-LA SMU
         Plenary talk
@@ -28,6 +25,7 @@ November
     Math Club
  10 4-5 Dale's Prelim
  18  AMUSE
+     REU panel
  20 Carlos Arreche
 December
   1 & 3  5:15--6:30  DRP talks
@@ -51,7 +49,7 @@ January 12-15 JMM
  Arrive at ICERM on the 19th.
  20 start at ICERM in the first 2 months
  20-22 opening workshop
-
+ 27 Evening BIMSA AG seminar
 
 February
  15-19 ICERM Workshop (algebraic distance optimisation)
@@ -75,6 +73,7 @@ April
  16-18 TAGS
  19  8 AM Dentist
  19-22 Extended systems and boundary conditions
+ 23-25 MAAG Georgia Tech
 May  3-6 Response Functions, ....
 24-27  Algebraic Varieties and Electron Structure
 June 6-11 Culmination workshop
