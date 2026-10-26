@@ -1,7 +1,6 @@
 2026
 
 October
- 19-23 AIM
  20/21 Goldwater Scholarships
  25 Meet Matt F
  28 10:30 Astronaut Day event and Luncheon
@@ -12,9 +11,9 @@ October
 Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
                        1  2  3  4  5  6  7  
                        8  9 10 11 12 13 14  
-               16 17  15 16 17 18 19 20 21  
-18 19 20 21 22 23 24  22 23 24 25 26 27 28  
-25 26 27 28 29 30 31  29 30                 
+                      15 16 17 18 19 20 21  
+                      22 23 24 25 26 27 28  
+   26 27 28 29 30 31  29 30                 
 
 November
   2-6  Simons workshop in Berkeley
@@ -23,7 +22,7 @@ November
    1-2 PM PUFC committee Meeting
     Math Club
  10 4-5 Dale's Prelim
- 11 21:45 - 3:30 Thomas hardin's Prelim
+ 11 1:45 - 3:30 Thomas Hardin's Prelim
  18  AMUSE
      REU panel ???
  20 Carlos Arreche
@@ -46,14 +45,13 @@ Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 
 Spring 2027
 January 12-15 JMM
- Arrive at ICERM on the 19th.
+ Arrive at ICERM on the 19th.  
  20 start at ICERM in the first 2 months
  20-22 opening workshop
- 27 Evening BIMSA AG seminar
 
 February
  15-19 ICERM Workshop (algebraic distance optimisation)
- 22-26 Geller Lecrture in this week
+ 22-26 Geller Lecture in this week
 March 8 - June  IPAM Program on Algebraic Geometry and Chemistry
  9-12 Opening workshop
  15-19 ICERM workshop
