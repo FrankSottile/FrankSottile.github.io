@@ -1,0 +1,192 @@
+%HW11.tex
+%
+% Eleventh Homework for Honors Algebra I  (415H)
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}   %  Change this for your write-up
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\GG}{{\mathbb G}}
+\newcommand{\HH}{{\mathbb H}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\Bij}{\textrm{Bij}}
+\newcommand{\op}{\textrm{op}}
+\newcommand{\bi}{{\bf i}}
+\newcommand{\bj}{{\bf j}}
+\newcommand{\bk}{{\bf k}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .49}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{560pt}
+\Indigo{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{560pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{\TAMU{{\sl #1}}}
+\def\defcolor#1{\TAMU{#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra 415H \ \ Autumn 2026\vspace{2pt}\\
+{\color{magenta}Your  @#$%^&*(   Name}\vspace{2pt}\\
+\Large 5 November 2026 \hfill
+\sf
+ Eleventh Homework\makebox[40pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\noindent
+I also recommend talking with other students, and I am able to give hints to public posts in Piazza.
+
+\noindent
+\barsn
+
+\noindent\TAMU{{\sf Hand in at the start of class, Thursday 12 November:}} 
+
+
+
+
+\begin{enumerate}
+\setcounter{enumi}{74}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+   For each of the following sets $R$ with the indicated binary operations, decide whether $R$
+   is a ring. Justify your answers.
+   \begin{enumerate}
+   \item  $R \vcentcolon= \{a \bi \mid a \in \RR\}$, under addition and multiplication of complex numbers.
+     (Here,  $\bi$ is a square root of $-1$.)
+
+   \item $R \vcentcolon= \{a + b\sqrt{2}\mid a, b \in\ZZ\}$, under addition and multiplication of real numbers.
+   \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item
+   Describe the units (elements with multiplicative inverses) in the rings
+   $\ZZ$, $\QQ$, $\ZZ\times\QQ$, $\ZZ_{15}$, and $\ZZ_p$, where $p$ is a prime number.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item
+   The \demph{Quaternion Algebra} \defcolor{$\HH$} is, as an abelian group, 
+   \[
+      \RR \oplus \RR\bi \oplus \RR\bj \oplus \RR\bk
+       \ =\ \{ a + b\bi + c\bj + d\bk \mid a,b,c,d\in\RR\}\,.
+   \]
+   (It is an $\RR$-vector space with basis $1, \bi, \bj, \bk$.)
+   Its multiplication is given by the multiplication of $\bi,\bj,\bk$ as elements of the
+   quaternion group $Q_8$, and extended by linearity in $\RR$.
+   Thus $(3+4\bi)\cdot(2-5\bj) = 6 +8\bi -15 \bj -20\bi\bj= 6 +8\bi -15 \bj -20\bk$.
+
+   Verify that if $ a + b\bi + c\bj + d\bk \neq 0$, then its inverse is given by
+   \[
+   \frac{ a - b\bi - c\bj - d\bk}{a^2+b^2+c^2+d^2}\ .
+   \]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Consider the matrix ring $M_2(\ZZ_2)$.
+  Determine its order (the number of elements in $M_2(\ZZ_2)$.
+  List all the units in this ring.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $R$ be a ring.
+  Show that the set of units in $R$ forms a group under multiplication.
+  (This is a case in which you must show that multiplication of units is closed, as there is not necessarily an ambient
+  group.)
+
+  This set of units is written variously as $R^*$ or $R^\times$ or $\GG_m(R)$ (the last is for the ``multiplicative
+  group of $R$'').
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+   Identify $\GG_m(\ZZ_{15})$, $\GG_m(\ZZ_7)$, and $\GG_m(M_2(\ZZ_2))$ as familiar groups.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+

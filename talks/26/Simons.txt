@@ -1,0 +1,10 @@
+Algebraic Geometry and Discrete Periodic Operators
+
+When  viewed from  the  representation theory  of Z^d,  the
+spectrum of an  operator on a Z^d-periodic  graph becomes a
+real-algebraic hypersurface in (S^1)^d x R.  This opens the
+door to methods from algebraic geometry for use in spectral
+theory.   While  this  perspective  is not  new,  there  is
+renewed interest  in it,  to the  benefit of  both spectral
+theory and  algebraic geometry.  My talk  will discuss some
+recent work in this direction.
