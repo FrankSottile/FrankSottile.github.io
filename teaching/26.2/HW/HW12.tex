@@ -1,0 +1,187 @@
+%HW12.tex
+%
+% Twelfth Homework for Honors Algebra I  (415H)
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}   %  Change this for your write-up
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\FF}{{\mathbb F}}
+\newcommand{\GG}{{\mathbb G}}
+\newcommand{\HH}{{\mathbb H}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\Bij}{\textrm{Bij}}
+\newcommand{\op}{\textrm{op}}
+\newcommand{\Mat}{\textrm{Mat}}
+\newcommand{\bi}{{\bf i}}
+\newcommand{\bj}{{\bf j}}
+\newcommand{\bk}{{\bf k}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .49}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{560pt}
+\Indigo{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{560pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{\TAMU{{\sl #1}}}
+\def\defcolor#1{\TAMU{#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra 415H \ \ Autumn 2026\vspace{2pt}\\
+$%^&* {\color{magenta}Your Name}\vspace{2pt}\\
+\Large 12 November 2026 \hfill
+\sf
+ Twelfth Homework\makebox[40pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\noindent
+I also recommend talking with other students, and I am able to give hints to public posts in Piazza.
+
+\noindent
+\barsn
+
+\noindent\TAMU{{\sf Hand in at the start of class, Thursday 19 November:}} 
+
+
+%\Red{{\Large At most 6 problems!}}
+
+
+\begin{enumerate}
+\setcounter{enumi}{80}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item
+   Let $S$ be a set and $B\vcentcolon = 2^S$, the collection of subsets of $S$.
+   For subsets $X$, $Y$ of $S$, define
+   \[
+   X+Y\ \vcentcolon =\ X\cup Y \smallsetminus X\cap Y
+   \qquad\mbox{and}\qquad
+   X \cdot Y \vcentcolon=\ X\cap Y\,.
+   \]
+   Show that with these operations $B$ forms a ring.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item  We discussed how the unit quaternions act on $\RR^3=\RR\bi + \RR\bj+\RR\bk$ by conjugation.
+   Give $3\times 3$ matrices (in the ordered basis $\bi,\bj,\bk$ for the action) of the unit quaternions:
+   \[
+   1\,,\ \bi\,,\ \bj\,,\ \bk\,,\
+   \sin(\phi)\cos(\theta)\bi+ \sin(\phi)\cos(\theta)\bj+ \cos(\phi)\bk\,,\
+   a+b\bi+c\bj+d\bk\,.
+   \]
+   (For the last, note that $a^2+b^2+c^2+d^2=1$, as it is a unit quaternion.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item  Let $R$ be a ring with the following property:
+   For all $r\in R$, there is an $s\in R$ with $rsr=r$.
+   \begin{enumerate}
+     \item Show that $R$ has no zero-divisors.
+     \item Show that $srs=s$ (where $r,s$ are as above).
+     \item Show that $R$ is a division ring.
+   \end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item  An element of a ring $R$ is \demph{idempotent} if $e^e=e$
+   \begin{enumerate}
+   \item  Show that if a ring $R$ consists only of idempotent elements, then $R$ is commuative.
+   \item  Show that a division ring $D$ has exactly two idempotent elements.
+   \item  Let $R=\Mat_{3\times 3}(\RR)$.   Exhibit a non-zero, non-identity idempotent $e$ in $R$.
+   \item  Let $e$ be an idempotent in a ring $R$.
+     Show that $1-e$ is an idempotent and that $e(1-e)=0$.
+   \end{enumerate}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item  Let $p$ be a prime.
+   Show that $1$ and $p-1$ are the only elements of $\ZZ_p=\FF_p$ that are their own multiplicative inverses.
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
