@@ -2,7 +2,7 @@
 
    November 2026
 Su Mo Tu We Th Fr Sa
-15 16 17 18 19 20 21
+   16 17 18 19 20 21
 22 23 24 25 26 27 28
 29 30
 November
@@ -55,11 +55,10 @@ April
  3/4 TXAM-UH-LSU Undergraduate Mathematics Conference at TAMU
  5-9 Simons Center workshop
  16-18 TAGS
- 19  8 AM Dentist
+ 19  8 AM Dentist  Must move
  19-22 Extended systems and boundary conditions
- 23-25 MAAG Georgia Tech
 May  3-6 Response Functions, ....
- 5 9:30-10:30 HURAC meeting
+ 5 9:30-10:30 HURAC meeting zoom
 24-27  Algebraic Varieties and Electron Structure
 June 6-11 Culmination workshop
 
