@@ -1,0 +1,181 @@
+%HW13.tex
+%
+% Thirteenth Homework for Honors Algebra I  (415H)
+% Frank Sottile
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{multicol,amsfonts, amssymb,  mathtools,amsmath}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{colordvi,graphicx}
+\headheight=8pt
+%
+\topmargin=-75pt
+\textheight=720pt   \textwidth=560pt
+\oddsidemargin=-60pt \evensidemargin=-60pt
+
+\pagestyle{empty}   %  Change this for your write-up
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\FF}{{\mathbb F}}
+\newcommand{\GG}{{\mathbb G}}
+\newcommand{\HH}{{\mathbb H}}
+\newcommand{\NN}{{\mathbb N}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\Aut}{\textrm{Aut}}
+\newcommand{\Bij}{\textrm{Bij}}
+\newcommand{\op}{\textrm{op}}
+\newcommand{\Mat}{\textrm{Mat}}
+\newcommand{\bi}{{\bf i}}
+\newcommand{\bj}{{\bf j}}
+\newcommand{\bk}{{\bf k}}
+
+\newcommand{\vect}[2]{(\begin{smallmatrix}#1\\#2\end{smallmatrix})}
+
+\def\Color#1#2{\special{color push cmyk #1}#2\special{color pop}}
+%\def\Indigo#1{\Color{.42 1. 0. .49}{#1}}
+\def\Indigo#1{\Color{1. .95 .05 .4}{#1}}
+\def\MyViolet#1{\Color{.6 1. 0. .15}{#1}}
+\def\TAMU#1{\Color{.15 1. .39 .49}{#1}}
+
+\newcommand{\barsl}{\noindent\begin{minipage}[t]{590pt}
+\Indigo{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\MyViolet{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Blue{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Green{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Yellow{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Orange{\rule{590pt}{1.2pt}}\vspace{-5.7mm}\\
+\Red{\rule{590pt}{1.2pt}}\bigskip
+\end{minipage}}
+
+
+\newcommand{\barsn}{\noindent\begin{minipage}[t]{560pt}
+\Indigo{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\MyViolet{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Blue{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Green{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Yellow{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Orange{\rule{560pt}{1.1pt}}\vspace{-4.5mm}\\
+\Red{\rule{560pt}{1.1pt}}\bigskip
+\end{minipage}}
+
+\def\demph#1{\TAMU{{\sl #1}}}
+\def\defcolor#1{\TAMU{#1}}
+
+\begin{document}
+\LARGE 
+\noindent
+Algebra 415H \ \ Autumn 2026\vspace{2pt}\\
+!@#$%^&{\color{magenta}Your Name}\vspace{2pt}\\
+\Large 19 November 2026 \hfill
+\sf
+ Thirteenth Homework\makebox[40pt][l]{\ }
+\normalsize\vspace{10pt}
+
+\noindent
+Write your answers neatly, in complete sentences.  
+I highly recommend recopying your work before handing it in.
+Correct and crisp proofs are greatly appreciated; oftentimes your work can be shortened and made clearer.
+
+\noindent
+I also recommend talking with other students, and I am able to give hints to public posts in Piazza.
+
+\noindent
+\barsn
+
+\noindent\TAMU{{\sf Hand in to my mailbox, by Tuesday, 1 December, by 4 PM CST:}} 
+
+
+%\Red{{\Large At most 6 problems!}}
+
+
+\begin{enumerate}
+\setcounter{enumi}{85}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  
+  (a) Show that $1$ and $-1$ are the only solutions to $x^2-1=0$ in $\ZZ_p$, where $p$ is a prime.
+
+  
+  (b)  Prove Wilson's theorem:  A positive integer $n$ is prime if and only if $(n{-}1)! \equiv -1$ mod $n$.
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  What is the largest product of distinct prime numbers 
+  that divides $n^{37}-n$ for every integer $n>1$?
+  (A correct answer includes an argument/proof.)
+  Is this the largest such integer dividing every  $n^{37}-n$  (not necessarily a product of distinct primes)?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item
+   Find the remainder of $5^{128}$ when divided by 14.
+   (Show your work; this is best done by hand.) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item
+   Let $p$ be a prime number and suppose that $R$ is a commutative ring of characteristic $p$.
+   \begin{enumerate}
+   \item   Prove that for all $r,s\in R$,
+     \[    (r+s)^p\ =\ r^p + s^p\,.  \]
+     For this, you will need to argue that the binomial theorem/formula holds in $R$, or in every commutative ring. 
+   \item
+     Let $\varphi\colon R\to R$ be the function defined by $\varphi(r)=r^p$ for $r\in R$.
+     Prove that $\varphi$ is a ring homomorphism.
+     It is called the \demph{Frobenius homomorphism}.
+  \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+  Let $R\vcentcolon= \ZZ[\sqrt{2}]=\{ a + b\sqrt{2} \mid a,b\in\ZZ\}$.
+  Show that $3- 2\sqrt{2}$ has a multiplicative inverse in $R$.
+
+  Show that $R$ is an integral domain and describe the field of quotients of $R$.
+
+  Can you describe all invertible elements in $R$?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ 
